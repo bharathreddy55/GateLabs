@@ -72,14 +72,8 @@ export const Layout = {
         <div class="flex-1 pl-[18rem] flex flex-col min-h-screen pr-2 py-2">
           <!-- Header -->
           <header id="layout-header" class="h-16 border border-slate-200/40 dark:border-white/[0.06] bg-white/70 dark:bg-slate-900/40 backdrop-blur-md sticky top-4 z-20 flex items-center justify-between px-6 rounded-2xl transition-colors duration-300 shadow-md">
-            <div class="flex items-center gap-4">
+            <div>
               <h2 class="font-display font-extrabold text-lg text-slate-800 dark:text-white capitalize tracking-tight">${activePage.replace('-', ' ')}</h2>
-              <!-- Command Palette Trigger Button -->
-              <button id="cmd-k-trigger" class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-xl border border-slate-200/60 dark:border-white/[0.08] bg-slate-100/50 dark:bg-slate-950/40 text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition-all text-xs">
-                <i class="fa-solid fa-magnifying-glass text-[11px]"></i>
-                <span>Search or jump to...</span>
-                <span class="kbd-badge">Ctrl K</span>
-              </button>
             </div>
             
             <div class="flex items-center gap-4">
@@ -101,43 +95,6 @@ export const Layout = {
           <main id="sub-page-container" class="flex-1 pt-6 page-enter">
             ${contentHtml}
           </main>
-        </div>
-
-        <!-- Command Palette Modal -->
-        <div id="cmd-k-modal" class="command-palette-backdrop hidden">
-          <div class="command-palette-modal">
-            <div class="p-4 border-b border-slate-200 dark:border-slate-800 flex items-center gap-3 bg-slate-50/50 dark:bg-slate-900/50">
-              <i class="fa-solid fa-magnifying-glass text-primary-500 text-base"></i>
-              <input type="text" id="cmd-k-input" placeholder="Type a command or page name..." class="w-full bg-transparent text-sm font-semibold text-slate-800 dark:text-white focus:outline-none placeholder-slate-400">
-              <button id="close-cmd-modal" class="kbd-badge hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer">ESC</button>
-            </div>
-            <div id="cmd-k-list" class="p-2 max-h-72 overflow-y-auto flex flex-col gap-1 text-xs font-semibold">
-              <a href="#/dashboard" class="cmd-item flex items-center justify-between p-3 rounded-xl hover:bg-primary-500/10 hover:text-primary-500 transition-all text-slate-700 dark:text-slate-300">
-                <span class="flex items-center gap-3"><i class="fa-solid fa-chart-pie"></i> Dashboard</span>
-                <span class="kbd-badge">Alt 1</span>
-              </a>
-              <a href="#/assistant" class="cmd-item flex items-center justify-between p-3 rounded-xl hover:bg-primary-500/10 hover:text-primary-500 transition-all text-slate-700 dark:text-slate-300">
-                <span class="flex items-center gap-3"><i class="fa-solid fa-brain"></i> AI Assistant</span>
-                <span class="kbd-badge">Alt 2</span>
-              </a>
-              <a href="#/practice" class="cmd-item flex items-center justify-between p-3 rounded-xl hover:bg-primary-500/10 hover:text-primary-500 transition-all text-slate-700 dark:text-slate-300">
-                <span class="flex items-center gap-3"><i class="fa-solid fa-cubes"></i> Practice Questions</span>
-                <span class="kbd-badge">Alt 3</span>
-              </a>
-              <a href="#/mock-test" class="cmd-item flex items-center justify-between p-3 rounded-xl hover:bg-primary-500/10 hover:text-primary-500 transition-all text-slate-700 dark:text-slate-300">
-                <span class="flex items-center gap-3"><i class="fa-solid fa-pen-to-square"></i> Mock Test Simulator</span>
-                <span class="kbd-badge">Alt 4</span>
-              </a>
-              <a href="#/analytics" class="cmd-item flex items-center justify-between p-3 rounded-xl hover:bg-primary-500/10 hover:text-primary-500 transition-all text-slate-700 dark:text-slate-300">
-                <span class="flex items-center gap-3"><i class="fa-solid fa-sliders"></i> Mistake Analytics</span>
-                <span class="kbd-badge">Alt 5</span>
-              </a>
-              <a href="#/about" class="cmd-item flex items-center justify-between p-3 rounded-xl hover:bg-primary-500/10 hover:text-primary-500 transition-all text-slate-700 dark:text-slate-300">
-                <span class="flex items-center gap-3"><i class="fa-solid fa-circle-info"></i> About GateLabs</span>
-                <span class="kbd-badge">Alt 6</span>
-              </a>
-            </div>
-          </div>
         </div>
 
         <!-- Settings Modal -->
@@ -200,53 +157,6 @@ export const Layout = {
       }
     });
 
-    // Command Palette Logic
-    const cmdModal = document.getElementById('cmd-k-modal');
-    const cmdInput = document.getElementById('cmd-k-input');
-    const cmdTrigger = document.getElementById('cmd-k-trigger');
-
-    const openCmdModal = () => {
-      cmdModal?.classList.remove('hidden');
-      cmdInput?.focus();
-    };
-
-    const closeCmdModal = () => {
-      cmdModal?.classList.add('hidden');
-    };
-
-    const closeCmdBtn = document.getElementById('close-cmd-modal');
-
-    cmdTrigger?.addEventListener('click', openCmdModal);
-    closeCmdBtn?.addEventListener('click', closeCmdModal);
-
-    // Auto-close modal when any command item link is clicked
-    document.querySelectorAll('#cmd-k-list a').forEach(item => {
-      item.addEventListener('click', closeCmdModal);
-    });
-
-    window.addEventListener('keydown', (e) => {
-      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
-        e.preventDefault();
-        openCmdModal();
-      }
-      if (e.key === 'Escape' && cmdModal && !cmdModal.classList.contains('hidden')) {
-        closeCmdModal();
-      }
-    });
-
-    cmdModal?.addEventListener('click', (e) => {
-      if (e.target === cmdModal) closeCmdModal();
-    });
-
-    // Filter cmd items on search input
-    cmdInput?.addEventListener('input', (e) => {
-      const q = e.target.value.toLowerCase();
-      document.querySelectorAll('#cmd-k-list .cmd-item').forEach(item => {
-        const text = item.textContent.toLowerCase();
-        item.style.display = text.includes(q) ? 'flex' : 'none';
-      });
-    });
-
     // Settings modal bindings
     const settingsBtn = document.getElementById('settings-btn');
     const settingsModal = document.getElementById('settings-modal');
@@ -304,9 +214,5 @@ export const Layout = {
     if (headerTitle) {
       headerTitle.textContent = activePage.replace('-', ' ');
     }
-
-    // Force close command palette modal on route update
-    const cmdModal = document.getElementById('cmd-k-modal');
-    cmdModal?.classList.add('hidden');
   }
 };
