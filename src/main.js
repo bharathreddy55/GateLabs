@@ -10,6 +10,7 @@ import { Practice } from './pages/Practice';
 import { MockTest } from './pages/MockTest';
 import { Analytics } from './pages/Analytics';
 import { About } from './pages/About';
+import { Formulas } from './pages/Formulas';
 
 // Import Layout Component
 import { Layout } from './components/Layout';
@@ -25,6 +26,7 @@ const routes = {
   '/': { component: LandingPage, requiresAuth: false, name: 'home' },
   '/about': { component: About, requiresAuth: false, name: 'about' },
   '/dashboard': { component: Dashboard, requiresAuth: true, name: 'dashboard' },
+  '/formulas': { component: Formulas, requiresAuth: true, name: 'formulas' },
   '/assistant': { component: Assistant, requiresAuth: true, name: 'assistant' },
   '/practice': { component: Practice, requiresAuth: true, name: 'practice' },
   '/mock-test': { component: MockTest, requiresAuth: true, name: 'mock-test' },

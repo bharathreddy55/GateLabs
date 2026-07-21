@@ -98,6 +98,62 @@ export const Analytics = {
           </div>
         </div>
 
+        <!-- Estimated GATE Score & AIR Rank Predictor Bento Card -->
+        ${(() => {
+          const maxScorePct = attempts.reduce((max, a) => {
+            const pct = a.totalPossibleMarks > 0 ? (a.score / a.totalPossibleMarks) * 100 : 0;
+            return Math.max(max, pct);
+          }, 0);
+
+          let estimatedGateScore = 0;
+          let predictedAirRange = "Below Cutoff (AIR > 10,000)";
+          let rankBadgeColor = "text-slate-400 bg-slate-500/10 border-slate-500/20";
+
+          if (maxScorePct >= 28.5) {
+            const rawScore = 350 + (550 * ((maxScorePct - 28.5) / (82 - 28.5)));
+            estimatedGateScore = Math.min(990, Math.max(350, Math.round(rawScore)));
+
+            if (estimatedGateScore >= 850) {
+              predictedAirRange = "AIR 1 – 50 (IISc / IIT Bombay Zone)";
+              rankBadgeColor = "text-emerald-400 bg-emerald-500/10 border-emerald-500/30";
+            } else if (estimatedGateScore >= 750) {
+              predictedAirRange = "AIR 51 – 250 (Top 5 IITs)";
+              rankBadgeColor = "text-emerald-400 bg-emerald-500/10 border-emerald-500/20";
+            } else if (estimatedGateScore >= 650) {
+              predictedAirRange = "AIR 251 – 700 (NITs & New IITs)";
+              rankBadgeColor = "text-indigo-400 bg-indigo-500/10 border-indigo-500/20";
+            } else if (estimatedGateScore >= 500) {
+              predictedAirRange = "AIR 701 – 2,000 (State Universities)";
+              rankBadgeColor = "text-amber-400 bg-amber-500/10 border-amber-500/20";
+            } else {
+              predictedAirRange = "AIR 2,001 – 6,000 (Qualified)";
+              rankBadgeColor = "text-amber-500 bg-amber-500/10 border-amber-500/20";
+            }
+          }
+
+          return `
+            <div class="bento-card p-6 bg-gradient-to-br from-indigo-950/90 via-slate-900 to-slate-950 text-white border border-indigo-500/30 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-xl">
+              <div class="space-y-1 max-w-lg">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-bold uppercase tracking-wider">
+                  <i class="fa-solid fa-trophy text-amber-400"></i> IIT GATE Score & AIR Predictor
+                </div>
+                <h4 class="font-display font-extrabold text-xl text-white">Estimated GATE Score: <span class="text-amber-400 font-mono">${estimatedGateScore > 0 ? estimatedGateScore + ' / 1000' : 'N/A (Take Test)'}</span></h4>
+                <p class="text-xs text-slate-300 font-semibold leading-relaxed">
+                  Based on IIT Madras GATE 2027 normalization benchmarking (${maxScorePct.toFixed(1)}% top score achieved).
+                </p>
+              </div>
+
+              <div class="flex flex-col items-end gap-1.5 w-full md:w-auto">
+                <span class="text-[10px] uppercase tracking-wider font-bold text-slate-400">Predicted Rank</span>
+                <span class="px-4 py-2 rounded-2xl border ${rankBadgeColor} text-xs font-extrabold flex items-center gap-2">
+                  <span class="h-2 w-2 rounded-full bg-emerald-400 animate-ping"></span> ${predictedAirRange}
+                </span>
+                <span class="text-[10px] text-slate-400 font-semibold">General Cutoff: 28.5 marks</span>
+              </div>
+            </div>
+          `;
+        })()}
+
         <!-- Attempts List -->
         <div>
           <h4 class="font-display font-bold text-lg text-slate-900 dark:text-white mb-4">

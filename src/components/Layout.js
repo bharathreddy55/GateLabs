@@ -41,6 +41,9 @@ export const Layout = {
             <a href="#/mock-test" class="${getLinkClass('mock-test')}">
               <i class="fa-solid fa-pen-to-square text-lg"></i> Mock Tests
             </a>
+            <a href="#/formulas" class="${getLinkClass('formulas')}">
+              <i class="fa-solid fa-book-bookmark text-lg"></i> Formula Deck
+            </a>
             <a href="#/analytics" class="${getLinkClass('analytics')}">
               <i class="fa-solid fa-sliders text-lg"></i> Mistake Analysis
             </a>

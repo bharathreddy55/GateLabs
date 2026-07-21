@@ -241,45 +241,75 @@ export const MockTest = {
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 flex-1 relative">
-          <!-- Floating Virtual Calculator (light styled) -->
-          <div id="calculator-widget" class="fixed z-50 w-72 bg-white rounded-2xl shadow-2xl p-4 border border-slate-300 animate-fade-in ${this.isCalcOpen ? '' : 'hidden'}"
+          <!-- Floating TCS iON Scientific Calculator -->
+          <div id="calculator-widget" class="fixed z-50 w-80 bg-slate-900 text-white rounded-2xl shadow-2xl p-4 border border-slate-700 animate-fade-in ${this.isCalcOpen ? '' : 'hidden'}"
                style="${this.calcLeft !== undefined && this.calcTop !== undefined ? `left: ${this.calcLeft}px; top: ${this.calcTop}px; transform: none;` : 'top: 6rem; left: 50%; transform: translateX(-50%);'}">
-            <div id="calculator-header" class="flex items-center justify-between border-b border-slate-200 pb-2 mb-3 cursor-grab select-none active:cursor-grabbing">
-              <span class="text-xs font-bold text-slate-700 pointer-events-none"><i class="fa-solid fa-calculator mr-1"></i> Virtual Calculator</span>
-              <button id="close-calc" type="button" class="text-slate-400 hover:text-slate-600 transition-colors">
+            <div id="calculator-header" class="flex items-center justify-between border-b border-slate-800 pb-2 mb-3 cursor-grab select-none active:cursor-grabbing">
+              <span class="text-xs font-bold text-slate-300 pointer-events-none flex items-center gap-1.5">
+                <i class="fa-solid fa-calculator text-primary-400"></i> TCS iON Scientific Calculator
+              </span>
+              <button id="close-calc" type="button" class="text-slate-400 hover:text-white transition-colors">
                 <i class="fa-solid fa-xmark"></i>
               </button>
             </div>
             
-            <div class="bg-slate-100 rounded-xl p-3 mb-3 text-right">
-              <span id="calc-display" class="font-mono text-xl text-slate-800 truncate block">${this.calcInput}</span>
+            <!-- Dual Screen Display -->
+            <div class="bg-slate-950 rounded-xl p-3 mb-3 text-right border border-slate-800">
+              <span id="calc-angle-indicator" class="text-[10px] font-bold text-primary-400 uppercase tracking-wider float-left">${this.calcAngleMode || 'Deg'}</span>
+              <span id="calc-display-sub" class="text-[10px] font-mono text-slate-500 block truncate leading-tight">${this.calcSubDisplay || ''}</span>
+              <span id="calc-display" class="font-mono text-xl font-bold text-white truncate block leading-tight mt-0.5">${this.calcInput || '0'}</span>
             </div>
             
-            <div class="grid grid-cols-4 gap-2">
-              <button class="calc-btn bg-slate-200 text-slate-700" data-calc="sqrt">√</button>
-              <button class="calc-btn bg-slate-200 text-slate-700" data-calc="pow">x²</button>
-              <button class="calc-btn bg-slate-200 text-slate-700" data-calc="log">ln</button>
-              <button class="calc-btn bg-slate-200 text-slate-700" data-calc="C">C</button>
-              
-              <button class="calc-btn bg-slate-100 text-slate-800" data-calc="7">7</button>
-              <button class="calc-btn bg-slate-100 text-slate-800" data-calc="8">8</button>
-              <button class="calc-btn bg-slate-100 text-slate-800" data-calc="9">9</button>
-              <button class="calc-btn bg-primary-100 text-primary-600" data-calc="/">/</button>
-              
-              <button class="calc-btn bg-slate-100 text-slate-800" data-calc="4">4</button>
-              <button class="calc-btn bg-slate-100 text-slate-800" data-calc="5">5</button>
-              <button class="calc-btn bg-slate-100 text-slate-800" data-calc="6">6</button>
-              <button class="calc-btn bg-primary-100 text-primary-600" data-calc="*">*</button>
-              
-              <button class="calc-btn bg-slate-100 text-slate-800" data-calc="1">1</button>
-              <button class="calc-btn bg-slate-100 text-slate-800" data-calc="2">2</button>
-              <button class="calc-btn bg-slate-100 text-slate-800" data-calc="3">3</button>
-              <button class="calc-btn bg-primary-100 text-primary-600" data-calc="-">-</button>
-              
-              <button class="calc-btn bg-slate-100 text-slate-800" data-calc="0">0</button>
-              <button class="calc-btn bg-slate-100 text-slate-800" data-calc=".">.</button>
-              <button class="calc-btn bg-emerald-600 text-white col-span-2" data-calc="=">=</button>
-              <button class="calc-btn bg-primary-100 text-primary-600 col-start-4 row-start-5" data-calc="+">+</button>
+            <!-- Keypad Grid -->
+            <div class="grid grid-cols-5 gap-1.5 text-xs font-semibold">
+              <!-- Row 1: Memory & Modes -->
+              <button class="calc-btn bg-slate-800 hover:bg-slate-700 text-amber-400" data-calc="deg-rad">${this.calcAngleMode === 'Rad' ? 'Rad' : 'Deg'}</button>
+              <button class="calc-btn bg-slate-800 hover:bg-slate-700 text-indigo-300" data-calc="mc">MC</button>
+              <button class="calc-btn bg-slate-800 hover:bg-slate-700 text-indigo-300" data-calc="mr">MR</button>
+              <button class="calc-btn bg-slate-800 hover:bg-slate-700 text-indigo-300" data-calc="ms">MS</button>
+              <button class="calc-btn bg-slate-800 hover:bg-slate-700 text-indigo-300" data-calc="m+">M+</button>
+
+              <!-- Row 2: Scientific Trig -->
+              <button class="calc-btn bg-slate-800 hover:bg-slate-700 text-slate-300" data-calc="sin">sin</button>
+              <button class="calc-btn bg-slate-800 hover:bg-slate-700 text-slate-300" data-calc="cos">cos</button>
+              <button class="calc-btn bg-slate-800 hover:bg-slate-700 text-slate-300" data-calc="tan">tan</button>
+              <button class="calc-btn bg-slate-800 hover:bg-slate-700 text-slate-300" data-calc="asin">asin</button>
+              <button class="calc-btn bg-rose-600/80 hover:bg-rose-600 text-white font-bold" data-calc="C">C</button>
+
+              <!-- Row 3: Log & Power -->
+              <button class="calc-btn bg-slate-800 hover:bg-slate-700 text-slate-300" data-calc="log">log</button>
+              <button class="calc-btn bg-slate-800 hover:bg-slate-700 text-slate-300" data-calc="ln">ln</button>
+              <button class="calc-btn bg-slate-800 hover:bg-slate-700 text-slate-300" data-calc="sqrt">√x</button>
+              <button class="calc-btn bg-slate-800 hover:bg-slate-700 text-slate-300" data-calc="pow2">x²</button>
+              <button class="calc-btn bg-rose-500/30 hover:bg-rose-500/50 text-rose-300" data-calc="back">⌫</button>
+
+              <!-- Row 4: Math ops & Numpad 7-9 -->
+              <button class="calc-btn bg-slate-800 hover:bg-slate-700 text-slate-300" data-calc="fact">n!</button>
+              <button class="calc-btn bg-slate-800/80 hover:bg-slate-700 text-white font-bold" data-calc="7">7</button>
+              <button class="calc-btn bg-slate-800/80 hover:bg-slate-700 text-white font-bold" data-calc="8">8</button>
+              <button class="calc-btn bg-slate-800/80 hover:bg-slate-700 text-white font-bold" data-calc="9">9</button>
+              <button class="calc-btn bg-indigo-600 hover:bg-indigo-500 text-white font-bold" data-calc="/">/</button>
+
+              <!-- Row 5: Numpad 4-6 -->
+              <button class="calc-btn bg-slate-800 hover:bg-slate-700 text-slate-300" data-calc="mod">mod</button>
+              <button class="calc-btn bg-slate-800/80 hover:bg-slate-700 text-white font-bold" data-calc="4">4</button>
+              <button class="calc-btn bg-slate-800/80 hover:bg-slate-700 text-white font-bold" data-calc="5">5</button>
+              <button class="calc-btn bg-slate-800/80 hover:bg-slate-700 text-white font-bold" data-calc="6">6</button>
+              <button class="calc-btn bg-indigo-600 hover:bg-indigo-500 text-white font-bold" data-calc="*">*</button>
+
+              <!-- Row 6: Numpad 1-3 -->
+              <button class="calc-btn bg-slate-800 hover:bg-slate-700 text-slate-300" data-calc="pi">π</button>
+              <button class="calc-btn bg-slate-800/80 hover:bg-slate-700 text-white font-bold" data-calc="1">1</button>
+              <button class="calc-btn bg-slate-800/80 hover:bg-slate-700 text-white font-bold" data-calc="2">2</button>
+              <button class="calc-btn bg-slate-800/80 hover:bg-slate-700 text-white font-bold" data-calc="3">3</button>
+              <button class="calc-btn bg-indigo-600 hover:bg-indigo-500 text-white font-bold" data-calc="-">-</button>
+
+              <!-- Row 7: 0, decimal, =, + -->
+              <button class="calc-btn bg-slate-800 hover:bg-slate-700 text-slate-300" data-calc="e">e</button>
+              <button class="calc-btn bg-slate-800/80 hover:bg-slate-700 text-white font-bold" data-calc="0">0</button>
+              <button class="calc-btn bg-slate-800/80 hover:bg-slate-700 text-white font-bold" data-calc=".">.</button>
+              <button class="calc-btn bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold" data-calc="=">=</button>
+              <button class="calc-btn bg-indigo-600 hover:bg-indigo-500 text-white font-bold" data-calc="+">+</button>
             </div>
           </div>
 
@@ -1204,39 +1234,95 @@ export const MockTest = {
   },
 
   handleCalculator(val, display) {
-    if (val === 'C') {
-      this.calcInput = '0';
-    } else if (val === '=') {
-      try {
-        const cleanExp = this.calcInput.replace(/sqrt\(/g, 'Math.sqrt(').replace(/log\(/g, 'Math.log(');
-        const isSafe = /^[\d.+\-*/()Math.sqrtlog]+$/.test(cleanExp);
-        if (!isSafe) throw new Error("Invalid characters");
-        const result = this.safeEvaluate(cleanExp);
-        this.calcInput = String(parseFloat(result.toFixed(6)));
-      } catch (err) {
-        this.calcInput = 'Error';
-      }
-    } else if (val === 'sqrt') {
-      if (this.calcInput === '0' || this.calcInput === 'Error') {
-        this.calcInput = 'Math.sqrt(';
+    if (!this.calcInput || this.calcInput === 'Error') this.calcInput = '0';
+    if (!this.calcAngleMode) this.calcAngleMode = 'Deg';
+    if (this.calcMemory === undefined) this.calcMemory = 0;
+
+    const angleIndicator = document.getElementById('calc-angle-indicator');
+    const subDisplay = document.getElementById('calc-display-sub');
+
+    try {
+      if (val === 'C') {
+        this.calcInput = '0';
+        this.calcSubDisplay = '';
+      } else if (val === 'back') {
+        if (this.calcInput.length > 1) {
+          this.calcInput = this.calcInput.slice(0, -1);
+        } else {
+          this.calcInput = '0';
+        }
+      } else if (val === 'deg-rad') {
+        this.calcAngleMode = this.calcAngleMode === 'Deg' ? 'Rad' : 'Deg';
+        if (angleIndicator) angleIndicator.textContent = this.calcAngleMode;
+      } else if (val === 'mc') {
+        this.calcMemory = 0;
+        showToast("Memory Cleared", "info");
+      } else if (val === 'mr') {
+        this.calcInput = String(this.calcMemory);
+      } else if (val === 'ms') {
+        this.calcMemory = parseFloat(this.calcInput) || 0;
+        showToast(`Memory Stored: ${this.calcMemory}`, "success");
+      } else if (val === 'm+') {
+        this.calcMemory += parseFloat(this.calcInput) || 0;
+        showToast(`Memory: ${this.calcMemory}`, "info");
+      } else if (['sin', 'cos', 'tan', 'asin'].includes(val)) {
+        let num = parseFloat(this.calcInput);
+        if (isNaN(num)) num = 0;
+        let angle = this.calcAngleMode === 'Deg' ? (num * Math.PI) / 180 : num;
+        let res = 0;
+        if (val === 'sin') res = Math.sin(angle);
+        if (val === 'cos') res = Math.cos(angle);
+        if (val === 'tan') res = Math.tan(angle);
+        if (val === 'asin') res = this.calcAngleMode === 'Deg' ? (Math.asin(num) * 180) / Math.PI : Math.asin(num);
+        this.calcSubDisplay = `${val}(${num})`;
+        this.calcInput = String(parseFloat(res.toFixed(8)));
+      } else if (val === 'log') {
+        let num = parseFloat(this.calcInput);
+        this.calcSubDisplay = `log10(${num})`;
+        this.calcInput = String(parseFloat(Math.log10(num).toFixed(8)));
+      } else if (val === 'ln') {
+        let num = parseFloat(this.calcInput);
+        this.calcSubDisplay = `ln(${num})`;
+        this.calcInput = String(parseFloat(Math.log(num).toFixed(8)));
+      } else if (val === 'sqrt') {
+        let num = parseFloat(this.calcInput);
+        this.calcSubDisplay = `√(${num})`;
+        this.calcInput = String(parseFloat(Math.sqrt(num).toFixed(8)));
+      } else if (val === 'pow2') {
+        let num = parseFloat(this.calcInput);
+        this.calcSubDisplay = `(${num})²`;
+        this.calcInput = String(parseFloat(Math.pow(num, 2).toFixed(8)));
+      } else if (val === 'fact') {
+        let num = parseInt(this.calcInput);
+        let fact = 1;
+        for (let i = 1; i <= Math.min(num, 170); i++) fact *= i;
+        this.calcSubDisplay = `${num}!`;
+        this.calcInput = String(fact);
+      } else if (val === 'pi') {
+        this.calcInput = String(parseFloat(Math.PI.toFixed(8)));
+      } else if (val === 'e') {
+        this.calcInput = String(parseFloat(Math.E.toFixed(8)));
+      } else if (val === 'mod') {
+        this.calcInput += '%';
+      } else if (val === '=') {
+        this.calcSubDisplay = this.calcInput + ' =';
+        const cleanExp = this.calcInput.replace(/%/g, '%');
+        // Evaluate expression using Function
+        const res = Function(`"use strict"; return (${cleanExp})`)();
+        this.calcInput = String(parseFloat(Number(res).toFixed(6)));
       } else {
-        this.calcInput = 'Math.sqrt(' + this.calcInput + ')';
+        if (this.calcInput === '0') {
+          this.calcInput = val;
+        } else {
+          this.calcInput += val;
+        }
       }
-    } else if (val === 'pow') {
-      this.calcInput = this.calcInput + '**2';
-    } else if (val === 'log') {
-      this.calcInput = 'Math.log(';
-    } else {
-      if (this.calcInput === '0' || this.calcInput === 'Error') {
-        this.calcInput = val;
-      } else {
-        this.calcInput += val;
-      }
+    } catch (err) {
+      this.calcInput = 'Error';
     }
-    
-    if (display) {
-      display.textContent = this.calcInput;
-    }
+
+    if (display) display.textContent = this.calcInput;
+    if (subDisplay) subDisplay.textContent = this.calcSubDisplay || '';
   },
 
   async loadAttemptHistory() {
