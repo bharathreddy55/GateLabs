@@ -7,6 +7,16 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    sourcemap: true
+    sourcemap: true,
+    chunkSizeWarningLimit: 600,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          firebase: ['firebase/app', 'firebase/firestore', 'firebase/auth'],
+          chart: ['chart.js'],
+          pdfjs: ['pdfjs-dist']
+        }
+      }
+    }
   }
 });

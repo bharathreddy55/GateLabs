@@ -774,47 +774,55 @@ export const Practice = {
     this.updateStatus('generating', 75, generateMore ? "AI generating new similar questions..." : "Gemini AI extracting and structuring questions...");
     
     try {
-      const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
       const systemPrompt = `You are a professional GATE computer science instructor.
 You are given text extracted from a study guide or past exam.
 Perform the following:
 1. Identify any multiple-choice questions (MCQs) in the text and extract them exactly.
 2. ${generateMore ? 'Generate 3 NEW, high-quality, similar practice questions based on the key topics in the text.' : 'If there are fewer than 3 questions in the text, generate similar NEW high-quality GATE questions to output a list of 3-5 questions total.'}
-3. For each question, construct a valid JSON object matching this schema exactly:
-{
-  "subject": "Name of GATE CS Subject. It MUST be EXACTLY one of: 'Engineering Mathematics', 'Digital Logic', 'Computer Organization & Architecture (COA)', 'Programming & Data Structures', 'Algorithms', 'Theory of Computation (TOC)', 'Compiler Design', 'Operating Systems', 'Databases (DBMS)', 'Computer Networks (CN)', 'General Aptitude'",
-  "topic": "General Syllabus Topic name (e.g. 'Deadlocks', 'Regular Expressions')",
-  "difficulty": "Easy", "Medium", or "Hard",
-  "marks": 1 or 2,
-  "year": null or number,
-  "question": "The question text, formatted clearly. Use simple notation.",
-  "options": [
-    "Option A text",
-    "Option B text",
-    "Option C text",
-    "Option D text"
-  ],
-  "correctAnswer": 0, 1, 2, or 3 (0-indexed index of correct option),
-  "explanation": "Extensive step-by-step logical solution explaining why this option is correct."
-}
-Return ONLY a valid JSON array of these objects. Do not wrap it in markdown code blocks or add any other text.`;
+3. For each question, construct a valid JSON object matching this schema:
+[
+  {
+    "subject": "Operating Systems",
+    "topic": "Deadlocks",
+    "difficulty": "Medium",
+    "marks": 2,
+    "year": 2025,
+    "question": "Question text here",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "correctAnswer": 0,
+    "explanation": "Step-by-step reasoning"
+  }
+]
+Return ONLY a valid JSON array. Do not wrap in markdown code blocks.`;
 
-      const response = await fetch(url, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          contents: [{
-            role: 'user',
-            parts: [
-              { text: systemPrompt },
-              { text: "SOURCE TEXT CONTEXT:\n" + text.substring(0, 15000) } // Cap text content to fit token budget comfortably
-            ]
-          }],
-          generationConfig: {
-            responseMimeType: "application/json"
-          }
-        })
-      });
+      const reqPayload = {
+        model: 'gemini-1.5-flash',
+        contents: [{
+          role: 'user',
+          parts: [
+            { text: systemPrompt },
+            { text: "SOURCE TEXT CONTEXT:\n" + text.substring(0, 15000) }
+          ]
+        }]
+      };
+
+      const localKey = localStorage.getItem('gemini_api_key');
+      let response;
+
+      if (localKey) {
+        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${localKey}`;
+        response = await fetch(url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(reqPayload)
+        });
+      } else {
+        response = await fetch('/api/gemini', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(reqPayload)
+        });
+      }
 
       if (!response.ok) {
         throw new Error(`Gemini API returned code ${response.status}`);

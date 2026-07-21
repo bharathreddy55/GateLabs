@@ -44,6 +44,9 @@ export const Layout = {
             <a href="#/analytics" class="${getLinkClass('analytics')}">
               <i class="fa-solid fa-sliders text-lg"></i> Mistake Analysis
             </a>
+            <a href="#/about" class="${getLinkClass('about')}">
+              <i class="fa-solid fa-circle-info text-lg"></i> About GateLabs
+            </a>
           </nav>
 
           <div class="p-4 border-t border-slate-200/40 dark:border-white/[0.06] flex flex-col gap-2">
@@ -128,6 +131,10 @@ export const Layout = {
               <a href="#/analytics" class="cmd-item flex items-center justify-between p-3 rounded-xl hover:bg-primary-500/10 hover:text-primary-500 transition-all text-slate-700 dark:text-slate-300">
                 <span class="flex items-center gap-3"><i class="fa-solid fa-sliders"></i> Mistake Analytics</span>
                 <span class="kbd-badge">Alt 5</span>
+              </a>
+              <a href="#/about" class="cmd-item flex items-center justify-between p-3 rounded-xl hover:bg-primary-500/10 hover:text-primary-500 transition-all text-slate-700 dark:text-slate-300">
+                <span class="flex items-center gap-3"><i class="fa-solid fa-circle-info"></i> About GateLabs</span>
+                <span class="kbd-badge">Alt 6</span>
               </a>
             </div>
           </div>

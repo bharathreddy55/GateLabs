@@ -771,11 +771,11 @@ export const MockTest = {
         let newLeft = initialLeft + dx;
         let newTop = initialTop + dy;
 
-        const maxLeft = window.innerWidth - (calcWidget.offsetWidth || 288);
-        const maxTop = window.innerHeight - (calcWidget.offsetHeight || 300);
+        const maxLeft = Math.max(10, window.innerWidth - (calcWidget.offsetWidth || 288) - 10);
+        const maxTop = Math.max(10, window.innerHeight - (calcWidget.offsetHeight || 300) - 10);
 
-        newLeft = Math.max(0, Math.min(maxLeft, newLeft));
-        newTop = Math.max(0, Math.min(maxTop, newTop));
+        newLeft = Math.max(10, Math.min(maxLeft, newLeft));
+        newTop = Math.max(10, Math.min(maxTop, newTop));
 
         calcWidget.style.transform = 'none';
         calcWidget.style.left = `${newLeft}px`;

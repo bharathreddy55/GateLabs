@@ -18,21 +18,30 @@ export const Dashboard = {
       avgAccuracy = Math.round(attempts.reduce((acc, curr) => acc + curr.accuracy, 0) / mockTestsTaken);
     }
     
-    // Generate 365-day Heatmap cells (52 weeks x 7 days)
+    // Generate 120-day Heatmap cells based on real user test attempts
+    const attemptDatesCount = {};
+    attempts.forEach(att => {
+      if (att.timestamp) {
+        const dateStr = new Date(att.timestamp).toISOString().split('T')[0];
+        attemptDatesCount[dateStr] = (attemptDatesCount[dateStr] || 0) + 1;
+      }
+    });
+
     const generateHeatmapDays = () => {
       const days = [];
       const today = new Date();
-      // Generate 120 days for a compact clean view
       for (let i = 119; i >= 0; i--) {
         const d = new Date(today);
         d.setDate(d.getDate() - i);
-        // Simulate intensity based on pseudo activity for visually appealing UI
-        const seed = (i * 7 + 3) % 5;
+        const dateKey = d.toISOString().split('T')[0];
+        const count = attemptDatesCount[dateKey] || 0;
+        
         let bgClass = 'bg-slate-100 dark:bg-slate-800/40';
-        if (seed === 1) bgClass = 'bg-emerald-500/30 dark:bg-emerald-500/30';
-        if (seed === 2) bgClass = 'bg-emerald-500/60 dark:bg-emerald-500/60';
-        if (seed === 3) bgClass = 'bg-emerald-500 dark:bg-emerald-400';
-        days.push(`<div class="w-3 h-3 rounded-xs ${bgClass} transition-all hover:scale-125" title="${d.toDateString()}"></div>`);
+        if (count === 1) bgClass = 'bg-emerald-500/40 dark:bg-emerald-500/40';
+        else if (count === 2) bgClass = 'bg-emerald-500/70 dark:bg-emerald-500/70';
+        else if (count >= 3) bgClass = 'bg-emerald-500 dark:bg-emerald-400 shadow-sm shadow-emerald-500/50';
+
+        days.push(`<div class="w-3 h-3 rounded-xs ${bgClass} transition-all hover:scale-125 cursor-pointer" title="${d.toDateString()}: ${count} test session(s)"></div>`);
       }
       return days.join('');
     };

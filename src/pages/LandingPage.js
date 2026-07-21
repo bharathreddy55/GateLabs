@@ -20,6 +20,7 @@ export const LandingPage = {
           </div>
 
           <div class="flex items-center gap-4">
+            <a href="#/about" class="hidden sm:inline-flex text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400 px-3 py-2 transition-colors">About</a>
             <!-- Theme Toggle -->
             <button id="theme-toggle-btn" class="p-2 rounded-xl border border-slate-200/60 dark:border-white/[0.08] hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500 dark:text-slate-400 hover:scale-105 active:scale-95 transition-all select-none bg-white/50 dark:bg-slate-950/30">
               <i id="theme-sun" class="fa-solid fa-sun ${sunIconClass}"></i>
@@ -51,8 +52,8 @@ export const LandingPage = {
             <button id="hero-get-started" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-bold text-white bg-gradient-to-r from-primary-600 to-indigo-600 hover:from-primary-500 hover:to-indigo-500 active:scale-95 rounded-xl shadow-lg shadow-primary-500/25 transition-all">
               Start Studying Free <i class="fa-solid fa-arrow-right"></i>
             </button>
-            <a href="#features-section" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-bold text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-800/80 hover:bg-slate-100 dark:hover:bg-slate-800/60 rounded-xl transition-all">
-              Explore Features
+            <a href="#about-section" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-bold text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-800/80 hover:bg-slate-100 dark:hover:bg-slate-800/60 rounded-xl transition-all">
+              About GateLabs
             </a>
           </div>
         </div>
@@ -88,6 +89,63 @@ export const LandingPage = {
               </div>
               <h3 class="font-display font-bold text-xl text-slate-900 dark:text-white mb-2 tracking-tight">Detailed Analytics</h3>
               <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed font-semibold">Analyze errors and timing, track accuracy trends, and receive personal study plans based on your strong and weak areas.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- About Section -->
+        <div id="about-section" class="mt-32 w-full text-left scroll-mt-24 border-t border-slate-200/60 dark:border-white/[0.06] pt-20">
+          <div class="glass-panel p-8 sm:p-12 rounded-3xl relative overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div class="space-y-6">
+                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-primary-500/10 text-primary-600 dark:text-primary-400 border border-primary-500/20">
+                  <i class="fa-solid fa-graduation-cap"></i> About GateLabs
+                </span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 dark:text-white tracking-tight">
+                  Built by Engineering Aspirants, For Engineering Aspirants
+                </h2>
+                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-semibold">
+                  GateLabs was conceived to eliminate friction in GATE preparation. Traditional question banks lack instant clarification and performance analytics. GateLabs combines authentic Computer-Based Test (CBT) simulation with Gemini AI assistance to give candidates an unparalleled competitive edge.
+                </p>
+                <div class="grid grid-cols-2 gap-4 pt-2">
+                  <div class="p-4 rounded-2xl bg-white/60 dark:bg-slate-900/60 border border-slate-200/40 dark:border-white/[0.04]">
+                    <div class="font-display font-extrabold text-2xl text-primary-600 dark:text-primary-400">100%</div>
+                    <div class="text-xs font-semibold text-slate-500 dark:text-slate-400 mt-1">CBT Simulation</div>
+                  </div>
+                  <div class="p-4 rounded-2xl bg-white/60 dark:bg-slate-900/60 border border-slate-200/40 dark:border-white/[0.04]">
+                    <div class="font-display font-extrabold text-2xl text-indigo-600 dark:text-indigo-400">AI</div>
+                    <div class="text-xs font-semibold text-slate-500 dark:text-slate-400 mt-1">Powered Explanations</div>
+                  </div>
+                </div>
+                <div>
+                  <a href="#/about" class="inline-flex items-center gap-2 font-bold text-sm text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors">
+                    Learn more about our architecture & vision <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="glass-card p-6 rounded-2xl border border-slate-200/50 dark:border-white/[0.06]">
+                  <i class="fa-solid fa-layer-group text-2xl text-primary-500 mb-3"></i>
+                  <h4 class="font-bold text-base text-slate-900 dark:text-white mb-1">Subject Mastery</h4>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 font-semibold">Data Structures, Algorithms, OS, DBMS, Computer Networks, TOC, and more.</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl border border-slate-200/50 dark:border-white/[0.06]">
+                  <i class="fa-solid fa-clock text-2xl text-indigo-500 mb-3"></i>
+                  <h4 class="font-bold text-base text-slate-900 dark:text-white mb-1">Time Analytics</h4>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 font-semibold">Track average speed per question and optimize time distribution during tests.</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl border border-slate-200/50 dark:border-white/[0.06]">
+                  <i class="fa-solid fa-calculator text-2xl text-emerald-500 mb-3"></i>
+                  <h4 class="font-bold text-base text-slate-900 dark:text-white mb-1">Scientific Calculator</h4>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 font-semibold">Draggable, official GATE interface calculator for realistic practice.</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl border border-slate-200/50 dark:border-white/[0.06]">
+                  <i class="fa-solid fa-user-shield text-2xl text-amber-500 mb-3"></i>
+                  <h4 class="font-bold text-base text-slate-900 dark:text-white mb-1">Secure & Local</h4>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 font-semibold">User data stored securely with Firebase Authentication integration.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

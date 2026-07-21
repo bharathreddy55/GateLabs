@@ -9,6 +9,7 @@ import { Assistant } from './pages/Assistant';
 import { Practice } from './pages/Practice';
 import { MockTest } from './pages/MockTest';
 import { Analytics } from './pages/Analytics';
+import { About } from './pages/About';
 
 // Import Layout Component
 import { Layout } from './components/Layout';
@@ -22,6 +23,7 @@ initTheme();
 // Route Configuration
 const routes = {
   '/': { component: LandingPage, requiresAuth: false, name: 'home' },
+  '/about': { component: About, requiresAuth: false, name: 'about' },
   '/dashboard': { component: Dashboard, requiresAuth: true, name: 'dashboard' },
   '/assistant': { component: Assistant, requiresAuth: true, name: 'assistant' },
   '/practice': { component: Practice, requiresAuth: true, name: 'practice' },
