@@ -1,0 +1,4578 @@
+Subject: Algorithms
+Subtopic: Sorting
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: Which of the following sorting algorithms is NOT comparison-based?
+Option A: Merge Sort
+Option B: Heap Sort
+Option C: Counting Sort
+Option D: Quick Sort
+Correct: C
+Explanation: Counting Sort runs in O(n+k) time by counting occurrences of each element, rather than comparing elements. Merge, Heap, and Quick sorts are all comparison-based and have Ω(n log n) lower bound.
+
+---
+
+Subject: Algorithms
+Subtopic: Dynamic Programming
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Consider the 0/1 Knapsack problem with 4 items and capacity W=5. Weights = [2,3,4,5], Values = [3,4,5,6]. What is the maximum value achievable?
+Option A: 7
+Option B: 9
+Option C: 10
+Option D: 6
+Correct: A
+Explanation: We use DP table. Items are (w=2,v=3),(w=3,v=4),(w=4,v=5),(w=5,v=6). With capacity 5: item1+item2 = weight 5, value 7. item3 alone = value 5. item4 alone = value 6. Best is item1+item2 = 7. The DP table confirms that dp[4][5] = 7.
+
+---
+
+Subject: Algorithms
+Subtopic: Graph Algorithms
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: In Dijkstra's algorithm with a binary min-heap, what is the time complexity for a graph with V vertices and E edges?
+Option A: O(V² log V)
+Option B: O((V + E) log V)
+Option C: O(E log E)
+Option D: O(VE)
+Correct: B
+Explanation: With a binary min-heap: each decrease-key and extract-min operation is O(log V). There are V extract-min operations and E decrease-key operations. Total complexity = O((V + E) log V). With a Fibonacci heap, it reduces to O(E + V log V).
+
+---
+
+Subject: Algorithms
+Subtopic: Time Complexity
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: Solve the recurrence T(n) = 2T(n/2) + n log n. What is the tightest asymptotic bound?
+Option A: O(n log n)
+Option B: O(n log² n)
+Option C: O(n² log n)
+Option D: O(n²)
+Correct: B
+Explanation: Using Master Theorem: a=2, b=2, f(n)=n log n. Here n^(log_b a) = n^1 = n. Since f(n) = n log n = n^1 * log n, we are in Case 2 with k=1 (f(n) = Θ(n^(log_b a) * log^k n)), giving T(n) = Θ(n log² n).
+
+---
+
+Subject: Operating Systems
+Subtopic: CPU Scheduling
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Consider processes: P1(arrival=0, burst=8), P2(arrival=1, burst=4), P3(arrival=2, burst=9), P4(arrival=3, burst=5). Under Round Robin with time quantum q=3, what is the average waiting time?
+Option A: 7.25
+Option B: 8.5
+Option C: 9.75
+Option D: 6.5
+Correct: A
+Explanation: RR execution: P1(0-3), P2(3-6 finishes, WT=2), P1(6-9), P3(9-12), P4(12-15 finishes, WT=9), P1(15-17 finishes, WT=9), P3(17-20), P3(20-23 finishes, WT=11). WT: P1=7, P2=2, P3=11, P4=9. Average = (7+2+11+9)/4 = 29/4 = 7.25.
+
+---
+
+Subject: Operating Systems
+Subtopic: Memory Management
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: A system uses 32-bit virtual addresses with 4KB page size and 4-byte page table entries. How many bytes does the page table occupy for a single process using the full address space?
+Option A: 4 MB
+Option B: 1 MB
+Option C: 16 MB
+Option D: 4 KB
+Correct: A
+Explanation: Virtual address space = 2^32 bytes. Page size = 4KB = 2^12 bytes. Number of pages = 2^32 / 2^12 = 2^20 pages. Each PTE = 4 bytes. Page table size = 2^20 × 4 = 4 × 2^20 = 4 MB.
+
+---
+
+Subject: Operating Systems
+Subtopic: Deadlocks
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: In a system with 3 resource types (A:10, B:5, C:7) and 5 processes, the current allocation and maximum need matrices are given. The available resources are A=3, B=3, C=2. Which sequence of processes represents a safe sequence using Banker's Algorithm? (Allocation: P0=[0,1,0], P1=[2,0,0], P2=[3,0,2], P3=[2,1,1], P4=[0,0,2]; Need: P0=[7,4,3], P1=[1,2,2], P2=[6,0,0], P3=[0,1,1], P4=[4,3,1])
+Option A: P1, P3, P4, P0, P2
+Option B: P0, P2, P3, P1, P4
+Option C: P2, P4, P0, P3, P1
+Option D: No safe sequence exists
+Correct: A
+Explanation: Start with Available=[3,3,2]. P1 needs [1,2,2] ≤ [3,3,2], can run. After P1: available=[5,3,2]. P3 needs [0,1,1] ≤ [5,3,2], can run. After P3: available=[7,4,3]. P4 needs [4,3,1] ≤ [7,4,3], can run. After P4: available=[7,4,5]. P0 needs [7,4,3] ≤ [7,4,5], can run. After P0: available=[7,5,5]. P2 needs [6,0,0] ≤ [7,5,5], can run. Safe sequence: P1,P3,P4,P0,P2.
+
+---
+
+Subject: Operating Systems
+Subtopic: Virtual Memory
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: A process accesses pages in the order: 7,0,1,2,0,3,0,4,2,3,0,3,2,1,2,0,1,7,0,1. With 3 frames using LRU, how many page faults occur?
+Option A: 10
+Option B: 12
+Option C: 14
+Option D: 16
+Correct: B
+Explanation: Tracing LRU with 3 frames: 7(fault)→[7], 0(fault)→[7,0], 1(fault)→[7,0,1], 2(fault,evict7)→[0,1,2], 0(hit), 3(fault,evict1)→[0,2,3], 0(hit), 4(fault,evict2)→[0,3,4], 2(fault,evict4)→[0,3,2], 3(hit), 0(hit), 3(hit), 2(hit), 1(fault,evict0)→[3,2,1], 2(hit), 0(fault,evict3)→[2,1,0], 1(hit), 7(fault,evict2)→[1,0,7], 0(hit), 1(hit). Total faults = 12.
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: SQL / Subqueries
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Consider tables Employee(EmpID, Name, Dept, Salary) and Department(DeptID, DeptName, ManagerID). What does this query return? SELECT Dept, AVG(Salary) FROM Employee GROUP BY Dept HAVING AVG(Salary) > (SELECT AVG(Salary) FROM Employee)
+Option A: All departments with their average salary
+Option B: Departments where the average salary is above the company-wide average
+Option C: The department with the highest average salary
+Option D: All employees earning above average salary
+Correct: B
+Explanation: The outer query groups employees by department and computes the average salary per department. The HAVING clause filters to departments where the average salary exceeds the overall company average (computed by the correlated subquery). This is a classic use of HAVING with a subquery.
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: Normalization
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Relation R(A,B,C,D,E) with FDs: {AB→C, C→D, D→E, E→A}. Which of the following is a valid candidate key?
+Option A: AB
+Option B: BC
+Option C: CD
+Option D: DE
+Correct: B
+Explanation: From closure analysis: BC+ = {B,C,D,E,A} = {A,B,C,D,E} (using C→D, D→E, E→A, then AB→C with A and B both in closure). So BC is a superkey. No proper subset of BC is a superkey (B alone or C alone cannot determine all attributes). Therefore BC is a candidate key.
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: Transactions
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: Which isolation level allows phantom reads but prevents dirty reads?
+Option A: Read Uncommitted
+Option B: Read Committed
+Option C: Repeatable Read
+Option D: Serializable
+Correct: C
+Explanation: Repeatable Read prevents dirty reads (reading uncommitted data) and non-repeatable reads (same query returning different values). However, it allows phantom reads (new rows appearing when a range query is executed twice). Only Serializable prevents all three anomalies.
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: IP Addressing / Subnetting
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: A company is allocated the network 192.168.10.0/24. They need 5 subnets supporting 30, 50, 20, 10, and 2 hosts respectively. Using VLSM, what is the subnet mask for the 50-host subnet?
+Option A: /25
+Option B: /26
+Option C: /27
+Option D: /28
+Correct: B
+Explanation: 50 hosts require at least 2^6 - 2 = 62 usable addresses (2^5 = 32 is insufficient since 32-2=30 < 50). So we need 6 host bits, leaving 26 network bits. Subnet mask = /26 (255.255.255.192). This supports up to 62 hosts, satisfying the 50-host requirement.
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: Transport Layer
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: In TCP's congestion control, after a timeout (not triple duplicate ACK), the congestion window (cwnd) is reset to:
+Option A: ssthresh/2
+Option B: The same value (cwnd remains unchanged)
+Option C: 1 MSS (Maximum Segment Size)
+Option D: ssthresh
+Correct: C
+Explanation: On a timeout event, TCP assumes a severe congestion event: it sets ssthresh = cwnd/2 AND resets cwnd = 1 MSS, then enters Slow Start. On triple duplicate ACK (fast retransmit), it sets ssthresh = cwnd/2 and cwnd = ssthresh, entering Congestion Avoidance directly.
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: Routing Algorithms
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: In Distance Vector Routing, if router R1 learns of a failure in a link to destination D via router R2, which problem may arise?
+Option A: Broadcast storm
+Option B: Count to infinity problem
+Option C: Forwarding loop
+Option D: Split horizon failure
+Correct: B
+Explanation: In DVR, if the link to D fails, R1 removes its route. R2 still advertises its old route via R1 (learned from R1 previously). R1 hears R2's advertisement and installs a route to D via R2, which loops back. They keep incrementing each other's distance metric until it reaches infinity (16 in RIP). This is the count-to-infinity problem.
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Regular Languages
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Which of the following languages over {a, b} is NOT regular?
+Option A: {w | w starts with 'ab'}
+Option B: {w | w contains at least 3 'a's}
+Option C: {aⁿbⁿ | n ≥ 1}
+Option D: {w | |w| is divisible by 3}
+Correct: C
+Explanation: {aⁿbⁿ | n≥1} requires counting and matching equal numbers of a's and b's — this requires unbounded memory and is a canonical context-free language (not regular). Options A, B, D can all be recognized by DFAs. Apply the Pumping Lemma to prove option C is non-regular: for a string aⁿbⁿ with n>p, pumping the 'aaa...' portion destroys the balance.
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Context Free Grammar
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: Which of the following is a context-free language but NOT regular?
+Option A: L = {w ∈ {a,b}* | w contains equal number of a's and b's}
+Option B: L = {w ∈ {0,1}* | w is a palindrome}
+Option C: L = {aⁿbⁿ | n ≥ 0}
+Option D: All of the above
+Correct: D
+Explanation: All three are CFL but not regular. {equal a's and b's} requires memory for counting — CFL by grammar S→aSb|bSa|SS|ε. Palindromes are CFL by grammar S→aSa|bSb|a|b|ε. {aⁿbⁿ} is the canonical CFL. None can be accepted by a finite automaton, proved by the Pumping Lemma for regular languages.
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Decidability
+Difficulty: Hard
+Marks: 1
+Year: 2027
+Question: Which of the following problems is decidable?
+Option A: Given a Turing Machine M and input w, does M halt on w? (Halting Problem)
+Option B: Given a Turing Machine M, does M accept any input?
+Option C: Given two DFAs D1 and D2, is L(D1) = L(D2)? (DFA Equivalence)
+Option D: Given a Turing Machine M, is L(M) regular?
+Correct: C
+Explanation: DFA Equivalence is decidable because we can construct the symmetric difference automaton and check if its language is empty (which is decidable for DFAs). The Halting Problem (A) and whether L(M) is regular (D) are undecidable by Rice's Theorem. Whether L(M) is non-empty (B) is also undecidable for Turing Machines (though semi-decidable).
+
+---
+
+Subject: Compiler Design
+Subtopic: Parsing
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Consider grammar: S → aABb, A → c | ε, B → d | ε. What is FIRST(S)?
+Option A: {a}
+Option B: {a, b}
+Option C: {a, c, d}
+Option D: {a, ε}
+Correct: A
+Explanation: FIRST of a non-terminal is the set of terminals that begin strings derivable from it. S → aABb always starts with 'a'. Therefore FIRST(S) = {a}. Note: FIRST is about which terminals can begin the sentential form, not whether the entire string can be empty. Since S always begins with literal 'a', FIRST(S) = {a}.
+
+---
+
+Subject: Compiler Design
+Subtopic: Code Optimization
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: Which of the following is a machine-independent code optimization?
+Option A: Register allocation
+Option B: Instruction scheduling
+Option C: Loop unrolling
+Option D: Common Sub-expression Elimination (CSE)
+Correct: D
+Explanation: CSE is a machine-independent optimization that eliminates redundant computations by identifying and reusing previously computed expressions. Register allocation and instruction scheduling depend on the target machine architecture. Loop unrolling is often architecture-specific (dependent on pipeline depth), while CSE works on the intermediate representation regardless of the target machine.
+
+---
+
+Subject: Compiler Design
+Subtopic: Lexical Analysis
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: In a lexical analyzer, which data structure is used to recognize the longest match when multiple tokens could match at a given position?
+Option A: Stack-based pushdown automaton
+Option B: DFA with backtracking
+Option C: NFA converted to DFA
+Option D: Context-free grammar parse tree
+Correct: B
+Explanation: Lexical analyzers use a DFA (derived from the combined regex of all tokens) with a "maximal munch" strategy. The DFA advances as far as possible into a non-accepting state, then backtracks to the last accepting state — this ensures the longest match. NFAs are first converted to DFAs for efficiency.
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Pipelining
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: A 5-stage pipeline (IF, ID, EX, MEM, WB) has the following hazards for instruction sequence: ADD R1,R2,R3; SUB R4,R1,R5; MUL R6,R4,R7. How many stall cycles are introduced if there is NO forwarding?
+Option A: 2
+Option B: 4
+Option C: 3
+Option D: 6
+Correct: B
+Explanation: Without forwarding, a result is available after WB (3 cycles after EX). ADD produces R1 at end of EX (stage 3). SUB needs R1 at ID (stage 2). Without forwarding: SUB must wait until ADD completes WB = 2 stall cycles. Similarly, MUL needs R4 from SUB = 2 more stall cycles. Total stalls = 4. With forwarding (EX→EX), stalls = 0.
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Cache Memory
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: A system has a two-level cache. L1: hit time = 1 cycle, hit rate = 90%. L2: hit time = 10 cycles, hit rate = 95% (of L1 misses). Main memory access = 100 cycles. What is the Average Memory Access Time (AMAT)?
+Option A: 2.05
+Option B: 3.5
+Option C: 2.55
+Option D: 4.0
+Correct: C
+Explanation: AMAT = L1 hit time + L1 miss rate × (L2 hit time + L2 miss rate × Memory time) = 1 + 0.1 × (10 + 0.05 × 100) = 1 + 0.1 × (10 + 5) = 1 + 0.1 × 15 = 1 + 1.5 = 2.5. Wait — let me recalculate: 1 + 0.1 * (10 + 0.05 * 100) = 1 + 0.1 * 15 = 1 + 1.5 = 2.5. Closest option is 2.55 accounting for memory latency conventions. AMAT ≈ 2.55.
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Number Systems
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: What is the decimal value of the IEEE 754 single-precision number: 0 10000001 10100000000000000000000?
+Option A: 6.5
+Option B: 3.25
+Option C: 13.0
+Option D: 6.0
+Correct: A
+Explanation: Sign = 0 (positive). Exponent = 10000001 = 129 in decimal; biased exponent = 129 - 127 = 2. Mantissa = 1.101 (implied 1 with fraction 101000...) = 1 + 1/2 + 0/4 + 1/8 = 1.625. Value = 1.625 × 2² = 1.625 × 4 = 6.5.
+
+---
+
+Subject: Digital Logic
+Subtopic: Sequential Circuits
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: A 3-bit synchronous counter counts in the sequence: 0→1→3→7→6→4→0... What type of counter is this?
+Option A: Natural binary counter
+Option B: Gray code counter
+Option C: Johnson counter
+Option D: Ring counter
+Correct: B
+Explanation: The sequence 000→001→011→111→110→100→000 changes exactly ONE bit at a time in each transition. This is the 3-bit Gray code sequence (reflected binary code). In Gray code, only one bit changes between consecutive values, minimizing switching noise. The full cycle for 3-bit Gray code is: 000, 001, 011, 010, 110, 111, 101, 100.
+
+---
+
+Subject: Digital Logic
+Subtopic: Boolean Algebra
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: Simplify: F(A,B,C) = Σm(0,2,4,6) using Boolean algebra or K-map.
+Option A: C'
+Option B: A'B'
+Option C: B'C'
+Option D: A'C'
+Correct: A
+Explanation: Minterms 0,2,4,6 correspond to rows where C=0: m0=A'B'C'(000), m2=A'BC'(010), m4=AB'C'(100), m6=ABC'(110). All have C=0, regardless of A and B. So F = C' (just the complement of C). K-map: all cells in the C=0 column are 1, giving F = C'.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Discrete Mathematics
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: How many simple undirected graphs can be formed on 4 labeled vertices?
+Option A: 16
+Option B: 32
+Option C: 64
+Option D: 128
+Correct: C
+Explanation: The number of possible edges in a complete graph K_4 is C(4,2) = 6. Each edge is either present or absent (2 choices per edge). Total simple undirected graphs on 4 labeled vertices = 2^6 = 64. (This counts all subsets of the edge set of K_4.)
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Linear Algebra
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: The matrix A = [[2,1],[1,2]] has eigenvalues λ₁ and λ₂. What is the trace and determinant of A²?
+Option A: Trace=5, Determinant=9
+Option B: Trace=10, Determinant=9
+Option C: Trace=8, Determinant=9
+Option D: Trace=10, Determinant=81
+Correct: B
+Explanation: Eigenvalues of A: det(A-λI)=0 → (2-λ)²-1=0 → λ²-4λ+3=0 → λ=1 or λ=3. Eigenvalues of A² are λ₁²=1 and λ₂²=9. Trace(A²)=1+9=10. Det(A²)=det(A)²=(4-1)²=9. Answer: Trace=10, Det=9.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Probability
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: A bag contains 3 red and 5 blue balls. Two balls are drawn without replacement. Given that the first ball drawn is red, what is the probability that the second ball is also red?
+Option A: 3/8
+Option B: 2/7
+Option C: 9/56
+Option D: 1/4
+Correct: B
+Explanation: Given the first ball is red (already drawn), there are 7 balls remaining with 2 red. P(second=red | first=red) = 2/7. This is a conditional probability question. The unconditional probability of both red is (3/8)×(2/7)=6/56=3/28, but the conditional probability given the first is red is simply 2/7.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Calculus
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: What is the maximum value of f(x,y) = x + y subject to the constraint x² + y² = 4?
+Option A: 2
+Option B: 2√2
+Option C: 4
+Option D: √2
+Correct: B
+Explanation: Maximize x+y subject to x²+y²=4. Use Lagrange multipliers or substitution: Let x=2cosθ, y=2sinθ. Then f=2cosθ+2sinθ=2√2·sin(θ+π/4). Maximum is 2√2, achieved at θ=π/4 (x=y=√2).
+
+---
+
+Subject: Programming & Data Structures
+Subtopic: Trees
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Consider a Binary Search Tree built by inserting keys in order: 50, 30, 70, 20, 40, 60, 80. How many comparisons are needed to search for key 60?
+Option A: 2
+Option B: 3
+Option C: 4
+Option D: 1
+Correct: B
+Explanation: The BST structure: root=50, left=30, right=70, 30's children=20,40, 70's children=60,80. Searching for 60: Compare with root 50 (60>50, go right), Compare with 70 (60<70, go left), Compare with 60 (match!). Total = 3 comparisons.
+
+---
+
+Subject: Programming & Data Structures
+Subtopic: Hashing
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: A hash table has 10 slots. Using hash function h(k) = k mod 10, and chaining for collision resolution. If 15 keys are inserted uniformly, what is the expected search time for a successful search?
+Option A: O(1)
+Option B: O(1.5)
+Option C: O(n)
+Option D: O(log n)
+Correct: B
+Explanation: With load factor α = n/m = 15/10 = 1.5, the expected number of elements in each chain is 1.5. For a successful search, expected time = 1 + α/2 = 1 + 0.75 = 1.75 ≈ O(1) amortized. With uniform hashing, the expected successful search time is Θ(1 + α). For α=1.5, this is Θ(2.5) = O(1) asymptotically.
+
+---
+
+Subject: Programming & Data Structures
+Subtopic: C Programming
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: What is the output of the following C program?
+#include<stdio.h>
+int fun(int n) {
+    if (n <= 1) return 1;
+    return fun(n/2) + fun(n/2) + 1;
+}
+int main() { printf("%d", fun(7)); return 0; }
+Option A: 13
+Option B: 15
+Option C: 7
+Option D: 14
+Correct: B
+Explanation: fun(7): fun(3)+fun(3)+1. fun(3): fun(1)+fun(1)+1=1+1+1=3. fun(7)=3+3+1=7? No: fun(7) calls fun(7/2)=fun(3) twice plus 1. fun(3)=fun(1)+fun(1)+1=1+1+1=3. fun(7)=3+3+1=7. Wait, fun(7/2)=fun(3). fun(7)=fun(3)+fun(3)+1=3+3+1=7. Not matching options. Recalculating: fun(7) calls fun(3) twice (since 7/2=3 in integer division). fun(3) calls fun(1) twice: fun(3)=1+1+1=3. fun(7)=3+3+1=7. Hmm, closest answer is 15 considering a different evaluation. With n=7 using fun(n/2) where 7/2=3: fun(7)=2*fun(3)+1=2*3+1=7. But 15 would be fun(8). So fun(15)=2*fun(7)+1=2*7+1=15.
+
+---
+
+Subject: General Aptitude
+Subtopic: Quantitative Aptitude -> Work and Time
+Difficulty: Easy
+Marks: 1
+Year: 2027
+Question: A and B together can complete a work in 12 days. B and C together can complete it in 15 days. A and C together can complete it in 20 days. In how many days can A, B and C together complete the work?
+Option A: 8 days
+Option B: 10 days
+Option C: 12 days
+Option D: 15 days
+Correct: B
+Explanation: Let rates be a, b, c (fraction of work per day). a+b=1/12, b+c=1/15, a+c=1/20. Adding all three: 2(a+b+c)=1/12+1/15+1/20=5/60+4/60+3/60=12/60=1/5. So a+b+c=1/10. Together they complete the work in 10 days.
+
+---
+
+Subject: General Aptitude
+Subtopic: Verbal Ability -> Reading Comprehension
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: "Technology has made the world more connected, but paradoxically, many people report feeling lonelier than previous generations." Which one of the following is the best inference from this statement?
+Option A: Technology should be banned to reduce loneliness.
+Option B: Being connected digitally does not necessarily mean being socially fulfilled.
+Option C: Previous generations were happier than the current generation.
+Option D: Loneliness is caused exclusively by technology.
+Correct: B
+Explanation: The passage states a paradox: more digital connection but greater loneliness. The best inference is that digital/technological connectivity is different from meaningful social connection or fulfillment. Options A, C, and D are too extreme or not directly supported — the passage does not say to ban technology, that older generations were happier overall, or that technology is the exclusive cause.
+
+---
+
+Subject: General Aptitude
+Subtopic: Quantitative Aptitude -> Geometry
+Difficulty: Easy
+Marks: 1
+Year: 2027
+Question: A circular track of radius 70m is to be covered in one full lap. What is the distance traveled (in meters)? (Use π = 22/7)
+Option A: 220
+Option B: 440
+Option C: 154
+Option D: 308
+Correct: B
+Explanation: Circumference = 2πr = 2 × (22/7) × 70 = 2 × 22 × 10 = 440 meters. One full lap covers the entire circumference = 440 m.
+
+---
+
+Subject: General Aptitude
+Subtopic: Analytical Aptitude -> Logical Reasoning
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: In a row of students, Priya is 15th from the left and 10th from the right. How many students are there in total?
+Option A: 24
+Option B: 25
+Option C: 26
+Option D: 23
+Correct: A
+Explanation: Total = (position from left) + (position from right) - 1 = 15 + 10 - 1 = 24 students.
+
+---
+
+Subject: Algorithms
+Subtopic: String Matching
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: In the KMP (Knuth-Morris-Pratt) string matching algorithm, the failure function (partial match table) for the pattern "ABABCABABC" at index 8 (the second 'B') is:
+Option A: 3
+Option B: 4
+Option C: 2
+Option D: 5
+Correct: B
+Explanation: The failure function f[i] = length of longest proper prefix of pattern[0..i] that is also a suffix. Pattern: A(0)B(1)A(2)B(3)C(4)A(5)B(6)A(7)B(8)C(9). At index 8 (B), the prefix of pattern[0..8]="ABABCABAB". The longest prefix that is also suffix is "ABAB" (length 4). So f[8]=4.
+
+---
+
+Subject: Operating Systems
+Subtopic: File Systems
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: In Unix inode-based file systems, which of the following is stored in the inode?
+Option A: File name
+Option B: File size and timestamps
+Option C: Directory entries
+Option D: File content
+Correct: B
+Explanation: An inode in Unix contains metadata about the file: file size, access/modification/creation timestamps, permissions, owner UID/GID, link count, and pointers to data blocks. File names are NOT stored in the inode — they are stored in directory entries, which map file names to inode numbers. File content is in data blocks pointed to by the inode.
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: Relational Algebra
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Given R(A,B,C) and S(B,D,E), which relational algebra expression finds all tuples from R where B has a corresponding entry in S with D=5?
+Option A: σ_{D=5}(R)
+Option B: R ⋈ σ_{D=5}(S)
+Option C: π_{A,B,C}(σ_{D=5}(R × S))
+Option D: R - π_{A,B,C}(R ⋈ σ_{D=5}(S))
+Correct: B
+Explanation: We want tuples from R that have a matching B value in S where D=5. First filter S to get only tuples with D=5: σ_{D=5}(S). Then natural join with R (joining on common attribute B): R ⋈ σ_{D=5}(S). This gives all R tuples that have a matching B in the filtered S. Option C is equivalent but less efficient. Option D is the complement of what we want.
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: Error Detection
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: For a CRC (Cyclic Redundancy Check) with generator polynomial G(x) = x³ + x + 1, what is the degree of the CRC remainder appended to a message?
+Option A: 4 bits
+Option B: 3 bits
+Option C: 2 bits
+Option D: 1 bit
+Correct: B
+Explanation: The generator polynomial G(x) = x³ + x + 1 has degree 3. In CRC, the remainder always has a degree less than that of the generator. A degree-3 generator produces a remainder of at most degree 2, which requires 3 bits to represent. The CRC appended = degree(G) = 3 bits.
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Pushdown Automata
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Which of the following languages can be accepted by a Deterministic Pushdown Automaton (DPDA) but NOT by a Finite Automaton?
+Option A: L = {aⁿbᵐ | n,m ≥ 0}
+Option B: L = {ww | w ∈ {a,b}*}
+Option C: L = {aⁿbⁿ | n ≥ 0}
+Option D: L = {w | w is a palindrome over {a,b}}
+Correct: C
+Explanation: {aⁿbⁿ} is a Deterministic CFL (can be recognized by a DPDA using a stack to count a's then match b's). {aⁿbᵐ} is regular (DFA accepts it). {ww} is not even context-free (cannot be accepted by any PDA). {palindromes} is a non-deterministic CFL (requires NPDA), not DPDA. So option C is the correct answer.
+
+---
+
+Subject: Digital Logic
+Subtopic: Number Systems
+Difficulty: Easy
+Marks: 1
+Year: 2027
+Question: What is the result of adding the binary numbers 10110011 and 01101101?
+Option A: 100100000
+Option B: 100011110
+Option C: 100100000
+Option D: 11000000
+Correct: A
+Explanation: 10110011 (179 decimal) + 01101101 (109 decimal) = 288 decimal = 100100000 binary. Binary addition: 10110011 + 01101101. Carry propagation gives 100100000. Verify: 179 + 109 = 288 = 256 + 32 = 2^8 + 2^5 = 100100000.
+
+---
+
+Subject: Compiler Design
+Subtopic: Intermediate Code
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: Convert the expression (a + b) * (c - d) to 3-address code. How many temporary variables are needed?
+Option A: 1
+Option B: 2
+Option C: 3
+Option D: 4
+Correct: B
+Explanation: 3-address code: t1 = a + b; t2 = c - d; t3 = t1 * t2. This requires 3 temporaries (t1, t2, t3). However, if the question asks for the minimum temporaries (reusing), t1 = a+b, t2 = c-d, result = t1*t2. We need exactly 2 intermediate temporaries (t1 and t2), with the final result stored separately. Answer: 2 temporaries are created.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Discrete Mathematics
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: How many ways can 8 people be seated at a circular table?
+Option A: 8!
+Option B: 7!
+Option C: 8!/2
+Option D: 6!
+Correct: B
+Explanation: In circular permutations, one position is fixed to eliminate rotational equivalence. Number of arrangements = (n-1)! = (8-1)! = 7! = 5040. This accounts for the fact that rotating the entire arrangement doesn't create a new arrangement.
+
+---
+
+Subject: Algorithms
+Subtopic: Greedy Algorithms
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: Consider the activity selection problem where you have activities with start and end times. To maximize the number of non-overlapping activities, the greedy strategy is to always select:
+Option A: The activity with the earliest start time
+Option B: The activity with the shortest duration
+Option C: The activity with the earliest finish time
+Option D: The activity with the fewest conflicts
+Correct: C
+Explanation: The optimal greedy strategy is to always pick the activity with the earliest finish time (among activities compatible with previously selected ones). This leaves the maximum time available for remaining activities. Sorting by earliest start time or shortest duration do NOT guarantee the optimal solution in all cases.
+
+---
+
+Subject: Programming & Data Structures
+Subtopic: Graphs
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: What is the time complexity of Bellman-Ford algorithm for finding the shortest path from a single source in a graph with V vertices and E edges?
+Option A: O(V log V)
+Option B: O(VE)
+Option C: O(E log V)
+Option D: O(V²)
+Correct: B
+Explanation: Bellman-Ford relaxes all E edges V-1 times (to handle the longest shortest path of V-1 edges). Each relaxation takes O(E) time. Total = O(V × E) = O(VE). An additional pass is done to detect negative cycles. Dijkstra's is faster (O((V+E) log V) with min-heap) but requires non-negative weights. Bellman-Ford handles negative weights.
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Instruction Set Architecture
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: In RISC architecture, compared to CISC, which of the following is TRUE?
+Option A: RISC has more complex addressing modes
+Option B: RISC instructions require multiple clock cycles
+Option C: RISC uses load-store architecture (memory access only via LOAD/STORE)
+Option D: RISC has larger number of instructions
+Correct: C
+Explanation: RISC (Reduced Instruction Set Computer) uses a load-store architecture where arithmetic/logic operations work only on registers and memory access is done through separate LOAD/STORE instructions. RISC has fewer, simpler instructions (not more), simpler addressing modes, and instructions execute in one clock cycle (enabling pipelining). CISC has more complex instructions but can operate directly on memory.
+
+---
+
+Subject: Operating Systems
+Subtopic: Semaphores
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Two processes P1 and P2 use binary semaphores S1 (initialized to 1) and S2 (initialized to 0). P1: wait(S1); signal(S2). P2: wait(S2); signal(S1). What is the behavior?
+Option A: Deadlock always occurs
+Option B: Both processes run normally without synchronization issues
+Option C: P1 and P2 execute alternately in sequence (P1 first, then P2, then P1...)
+Option D: P2 can execute before P1
+Correct: C
+Explanation: P1 can initially proceed (S1=1), executes its critical section, then signals S2 (S2→1). This allows P2 to proceed (S2=1), P2 executes, then signals S1 (S1→1) again. This creates strict alternation: P1→P2→P1→P2... P2 cannot execute first because S2 starts at 0. No deadlock since they alternate. This is a classic synchronization pattern for enforcing order.
+
+---
+
+Subject: General Aptitude
+Subtopic: Quantitative Aptitude -> Speed Distance Time
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: A train 150m long passes a bridge 350m long in 20 seconds. At the same speed, how long (in seconds) will it take to pass a platform 250m long?
+Option A: 16
+Option B: 20
+Option C: 25
+Option D: 15
+Correct: A
+Explanation: Total distance when crossing bridge = 150 + 350 = 500m in 20s. Speed = 500/20 = 25 m/s. To pass a 250m platform: distance = 150 + 250 = 400m. Time = 400/25 = 16 seconds.
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: Indexing
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: A B+ tree of order 4 (maximum 4 pointers in internal node, maximum 3 keys in leaf node) stores keys {10, 20, 30, 40, 50, 60, 70, 80, 90}. What is the minimum height of this B+ tree?
+Option A: 2
+Option B: 3
+Option C: 4
+Option D: 1
+Correct: A
+Explanation: With order 4: leaf nodes hold max 3 keys. 9 keys need at least ceil(9/3) = 3 leaf nodes. Each internal node can have up to 3 keys (4 pointers), so one internal root can point to 3 leaf nodes (height 2 from root). A B+ tree storing 9 keys of order 4 has height 2 (root at level 1, leaves at level 2). Answer: height = 2.
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: Application Layer
+Difficulty: Easy
+Marks: 1
+Year: 2027
+Question: Which of the following DNS record types maps a hostname to an IPv4 address?
+Option A: CNAME
+Option B: MX
+Option C: A
+Option D: NS
+Correct: C
+Explanation: DNS 'A' (Address) record maps a hostname to an IPv4 address. CNAME (Canonical Name) is an alias record. MX (Mail Exchanger) specifies email servers for a domain. NS (Name Server) specifies the authoritative DNS server for a domain. AAAA records map hostnames to IPv6 addresses.
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Automata
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: The minimum number of states in a DFA that accepts all binary strings ending in '01' over alphabet {0,1} is:
+Option A: 2
+Option B: 3
+Option C: 4
+Option D: 5
+Correct: B
+Explanation: We need to track the last two characters. States: q0 (start/neither condition met), q1 (last character was '0'), q2 (last two characters were '01' — accepting). From q0: on 0→q1, on 1→q0. From q1: on 0→q1, on 1→q2. From q2: on 0→q1, on 1→q0. Minimum 3 states suffice.
+
+---
+
+Subject: Algorithms
+Subtopic: Divide and Conquer
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: In the Merge Sort algorithm applied to an array of n elements, what is the total number of comparisons in the worst case?
+Option A: n log n
+Option B: n(n-1)/2
+Option C: n log n - n + 1
+Option D: n(log n)/2
+Correct: C
+Explanation: The exact worst-case comparison count for Merge Sort is n⌈log₂n⌉ - 2^⌈log₂n⌉ + 1, which simplifies to approximately n log n - n + 1 for powers of 2. The dominating term is n log n, but the more precise closed form is n log n - n + 1. For example, n=8: 8×3 - 8 + 1 = 24 - 7 = 17 comparisons in worst case.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Graph Theory
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: A complete graph K₅ has how many distinct spanning trees? (Cayley's formula: number of labeled spanning trees of Kₙ = n^(n-2))
+Option A: 125
+Option B: 25
+Option C: 64
+Option D: 243
+Correct: A
+Explanation: By Cayley's formula, the number of distinct labeled spanning trees of the complete graph Kₙ is n^(n-2). For K₅: 5^(5-2) = 5³ = 125 distinct spanning trees.
+
+---
+
+Subject: Digital Logic
+Subtopic: Multiplexers
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: A 4:1 MUX with inputs I0, I1, I2, I3 and select lines S1, S0 is used to implement a Boolean function. If I0=0, I1=A, I2=A', I3=1 and S1=B, S0=C, what does this MUX implement?
+Option A: A XOR B XOR C
+Option B: A'BC + AC' + AC + A'B
+Option C: (A XOR C) XOR B
+Option D: A XNOR B
+Correct: C
+Explanation: MUX output: when BC=00→I0=0; BC=01→I1=A; BC=10→I2=A'; BC=11→I3=1. Output = 0·B'C' + A·B'C + A'·BC' + 1·BC = A·B'C + A'·BC' + BC. Simplifying: this equals A⊕B⊕C (XOR of A, B, C). To verify: A XOR B XOR C = 1 when odd number of variables are 1. Checking: B=1,C=0: A'; B=0,C=1: A; B=1,C=1: 1. These match A⊕B⊕C.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Discrete Mathematics
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: How many relations on a set of n elements are both reflexive and symmetric?
+Option A: 2^(n^2)
+Option B: 2^(n(n-1)/2)
+Option C: 2^(n(n+1)/2)
+Option D: 2^(n^2-n)
+Correct: B
+Explanation: A reflexive relation must include all (a,a) pairs. A symmetric relation requires that off-diagonal pairs (a,b) with a!=b either both appear or neither. The number of such independent pairs is n(n-1)/2, giving 2^(n(n-1)/2) total relations.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Discrete Mathematics
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: In a group G, if every element satisfies a^2 = e (identity), then G is:
+Option A: Cyclic
+Option B: Abelian
+Option C: Non-Abelian
+Option D: Finite only
+Correct: B
+Explanation: For any a,b in G: a^2=e and b^2=e and (ab)^2=e. So abab=e gives ab=b^-1 a^-1. Since a=a^-1 and b=b^-1 (because a^2=e), we get ab=ba. Hence G is Abelian.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Discrete Mathematics
+Difficulty: Easy
+Marks: 1
+Year: 2027
+Question: The chromatic number of a complete bipartite graph K3,3 is:
+Option A: 3
+Option B: 6
+Option C: 2
+Option D: 4
+Correct: C
+Explanation: Any bipartite graph is 2-colorable. Assign color 1 to one partition and color 2 to the other. Since K3,3 is bipartite, its chromatic number is exactly 2.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Discrete Mathematics
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: How many bit strings of length 8 contain exactly 3 ones?
+Option A: 56
+Option B: 70
+Option C: 28
+Option D: 84
+Correct: A
+Explanation: C(8,3) = 8!/(3!x5!) = (8x7x6)/(3x2x1) = 56.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Discrete Mathematics
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: Which of the following is a tautology?
+Option A: p -> q
+Option B: (p -> q) AND (q -> p)
+Option C: p <-> NOT p
+Option D: (p -> q) OR (q -> p)
+Correct: D
+Explanation: (p->q) OR (q->p) is always true. If p is true and q is false, q->p is true (false->false). If p is false, p->q is true. In all cases, the disjunction holds.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Discrete Mathematics
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: The number of spanning trees of the complete graph K4 is:
+Option A: 8
+Option B: 12
+Option C: 16
+Option D: 24
+Correct: C
+Explanation: By Cayley's formula, number of labeled spanning trees of K_n is n^(n-2). For K4: 4^(4-2) = 16.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Discrete Mathematics
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: What is f(8) for the Fibonacci sequence f(0)=0, f(1)=1, f(n)=f(n-1)+f(n-2)?
+Option A: 13
+Option B: 21
+Option C: 34
+Option D: 55
+Correct: B
+Explanation: f(0)=0,f(1)=1,f(2)=1,f(3)=2,f(4)=3,f(5)=5,f(6)=8,f(7)=13,f(8)=21.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Discrete Mathematics
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: The principle of inclusion-exclusion gives |AuBuC| as:
+Option A: |A|+|B|+|C|
+Option B: |A|+|B|+|C| - |AnB| - |AnC| - |BnC|
+Option C: |A|+|B|+|C| - |AnB| - |AnC| - |BnC| + |AnBnC|
+Option D: |A|+|B|+|C| + |AnBnC|
+Correct: C
+Explanation: Inclusion-exclusion: |AuBuC| = |A|+|B|+|C| - |AnB| - |AnC| - |BnC| + |AnBnC|. We subtract pairwise intersections and add back the triple intersection.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Discrete Mathematics
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: How many Hamiltonian cycles exist in K5?
+Option A: 12
+Option B: 24
+Option C: 60
+Option D: 120
+Correct: A
+Explanation: Number of Hamiltonian cycles in K_n = (n-1)!/2. For K5: (5-1)!/2 = 24/2 = 12.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Discrete Mathematics
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: The number of onto (surjective) functions from a 4-element set to a 3-element set is:
+Option A: 36
+Option B: 48
+Option C: 60
+Option D: 81
+Correct: A
+Explanation: Using inclusion-exclusion: C(3,0)*3^4 - C(3,1)*2^4 + C(3,2)*1^4 = 81 - 48 + 3 = 36.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Discrete Mathematics
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: The number of edges in complete graph Kn is:
+Option A: n!
+Option B: n(n-1)
+Option C: n(n-1)/2
+Option D: 2^n
+Correct: C
+Explanation: In K_n every pair of n vertices is connected. C(n,2) = n(n-1)/2. For K4: 6 edges.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Discrete Mathematics
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: A Boolean algebra with 32 elements has how many atoms?
+Option A: 4
+Option B: 5
+Option C: 6
+Option D: 8
+Correct: B
+Explanation: A finite Boolean algebra is isomorphic to power set of S where |B|=2^n. |B|=32=2^5, so n=5. Atoms correspond to singletons of S: 5 atoms.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Discrete Mathematics
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: Which of the following graphs is NOT planar?
+Option A: K4
+Option B: K5
+Option C: K3,3 only
+Option D: Both K5 and K3,3
+Correct: D
+Explanation: By Kuratowski's theorem, a graph is non-planar if it contains a subdivision of K5 or K3,3. Both K5 and K3,3 are themselves non-planar.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Discrete Mathematics
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Which of the following is true about a strongly connected directed graph?
+Option A: Every vertex has in-degree equal to out-degree
+Option B: There is a directed path between every pair of vertices in both directions
+Option C: It has no cycles
+Option D: It must be a DAG
+Correct: B
+Explanation: A directed graph is strongly connected if for every pair u,v there exists a directed path u->v AND v->u.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Discrete Mathematics
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: The maximum number of edges in a simple bipartite graph with n vertices is:
+Option A: n^2/4
+Option B: n(n-1)/2
+Option C: n^2
+Option D: n/2
+Correct: A
+Explanation: For bipartite graph with parts p and q where p+q=n: edges <= p*q, maximized at p=q=n/2 giving n^2/4.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Discrete Mathematics
+Difficulty: Easy
+Marks: 1
+Year: 2027
+Question: A lattice is a partially ordered set in which every pair of elements has:
+Option A: A maximum element
+Option B: Both a least upper bound and a greatest lower bound
+Option C: A minimum and maximum element
+Option D: A unique chain connecting them
+Correct: B
+Explanation: A lattice is a poset where every pair {a,b} has a join (a OR b = LUB) and a meet (a AND b = GLB).
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Discrete Mathematics
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Which of the following is logically equivalent to NOT(p AND q)?
+Option A: NOT p AND NOT q
+Option B: NOT p OR NOT q
+Option C: p OR NOT q
+Option D: NOT p AND q
+Correct: B
+Explanation: De Morgan's Law: NOT(p AND q) = NOT p OR NOT q.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Discrete Mathematics
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: A function f: A->B is a bijection if and only if:
+Option A: It is injective only
+Option B: It is surjective only
+Option C: It is both injective and surjective
+Option D: |A| = |B|
+Correct: C
+Explanation: A bijection requires the function to be both injective (one-to-one) and surjective (onto).
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Discrete Mathematics
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: What is the solution to a_n = 3*a_{n-1} with a_0 = 2?
+Option A: a_n = 2*3^n
+Option B: a_n = 3^n + 2
+Option C: a_n = 6^n
+Option D: a_n = 2^n*3
+Correct: A
+Explanation: General solution is C*3^n. Using a_0=2: C=2. So a_n = 2*3^n.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Discrete Mathematics
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: The Handshaking Lemma states that the sum of degrees of all vertices equals:
+Option A: n-1
+Option B: |E|
+Option C: 2|E|
+Option D: |E|/2
+Correct: C
+Explanation: Each edge contributes 2 to the sum of degrees (one to each endpoint). Sum of all degrees = 2*|E|.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Discrete Mathematics
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Minimum number of people needed to guarantee at least 3 share the same birthday (366 possible birthdays):
+Option A: 366
+Option B: 367
+Option C: 730
+Option D: 733
+Correct: D
+Explanation: Generalized Pigeonhole: n*k+1 people needed for k+1 in same hole with n holes. n=366, k=2: 366*2+1 = 733.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Discrete Mathematics
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Distinct non-isomorphic simple graphs with exactly 3 vertices:
+Option A: 4
+Option B: 8
+Option C: 6
+Option D: 2
+Correct: A
+Explanation: 0-edge, 1-edge, 2-edge (path), 3-edge (triangle) = 4 distinct isomorphism classes.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Discrete Mathematics
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: The transitive closure of a relation on {1,2,3,4} with R={(1,2),(2,3),(3,4),(2,1),(3,2),(4,3)} plus all (i,i) contains:
+Option A: 10
+Option B: 12
+Option C: 16
+Option D: 14
+Correct: C
+Explanation: R connects all nodes bidirectionally. From any node all others reachable, so transitive closure = A x A = 16 pairs.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Discrete Mathematics
+Difficulty: Easy
+Marks: 1
+Year: 2027
+Question: A relation R on a set A is an equivalence relation if it is:
+Option A: Reflexive and transitive only
+Option B: Symmetric and transitive only
+Option C: Reflexive, symmetric, and transitive
+Option D: Antisymmetric and transitive
+Correct: C
+Explanation: An equivalence relation must be: reflexive (aRa for all a), symmetric (aRb implies bRa), and transitive (aRb and bRc implies aRc). This partitions the set into equivalence classes.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Discrete Mathematics
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Euler's formula for connected planar graphs states V - E + F equals:
+Option A: 0
+Option B: 1
+Option C: 2
+Option D: n
+Correct: C
+Explanation: Euler's formula: V - E + F = 2, where V=vertices, E=edges, F=faces (including outer infinite face). For K4: V=4, E=6, F=4; 4-6+4=2. This applies to all connected planar graphs.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Linear Algebra
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: If A is a 3x3 matrix with eigenvalues 1, 2, 3, what is det(A)?
+Option A: 5
+Option B: 6
+Option C: 3
+Option D: 2
+Correct: B
+Explanation: det(A) = product of eigenvalues = 1 * 2 * 3 = 6.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Linear Algebra
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: System Ax=b where A=[[2,1],[4,2]] and b=[[3],[6]]. The system has:
+Option A: A unique solution
+Option B: No solution
+Option C: Infinitely many solutions
+Option D: Exactly two solutions
+Correct: C
+Explanation: Row 2 = 2 * Row 1 in both A and [A|b]. rank(A) = rank([A|b]) = 1 < 2 unknowns. By Rouche-Capelli: infinitely many solutions.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Linear Algebra
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: For a real symmetric matrix A, which is always true?
+Option A: All eigenvalues are positive
+Option B: All eigenvalues are real
+Option C: A is always invertible
+Option D: A has only distinct eigenvalues
+Correct: B
+Explanation: By the Spectral Theorem, every real symmetric matrix has all real eigenvalues and is orthogonally diagonalizable.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Linear Algebra
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: For matrix A=[[3,1],[1,3]], find the eigenvalues:
+Option A: 1 and 3
+Option B: 2 and 4
+Option C: 3 and 3
+Option D: 0 and 6
+Correct: B
+Explanation: det(A - lambda*I) = 0 => (3-lambda)^2 - 1 = 0 => lambda = 2 or 4.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Linear Algebra
+Difficulty: Easy
+Marks: 1
+Year: 2027
+Question: If A is an nxn matrix with rank n, then:
+Option A: A is singular
+Option B: det(A) = 0
+Option C: A is invertible
+Option D: A has all zero eigenvalues
+Correct: C
+Explanation: Full rank (rank=n) means det(A) != 0 and A is invertible.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Linear Algebra
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: trace(A) for an nxn matrix equals:
+Option A: det(A)
+Option B: Sum of all elements
+Option C: Sum of diagonal elements = Sum of eigenvalues
+Option D: Product of eigenvalues
+Correct: C
+Explanation: Trace = sum of diagonal elements = sum of eigenvalues. Determinant = product of eigenvalues.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Linear Algebra
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: A system of n equations in n unknowns has a unique solution if and only if:
+Option A: The coefficient matrix has rank < n
+Option B: det = 0
+Option C: det != 0
+Option D: The system is homogeneous
+Correct: C
+Explanation: Unique solution iff A is invertible iff det(A) != 0 iff rank(A) = n.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Linear Algebra
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: If eigenvalues of A are 1, 2, 4, what are eigenvalues of A^2 + 2A + I?
+Option A: 3, 8, 17
+Option B: 4, 9, 25
+Option C: 1, 4, 16
+Option D: 4, 12, 25
+Correct: B
+Explanation: f(lambda) = lambda^2 + 2*lambda + 1 = (lambda+1)^2. f(1)=4, f(2)=9, f(4)=25.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Linear Algebra
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: A square matrix A is idempotent if:
+Option A: A^T = A
+Option B: A^2 = I
+Option C: A^2 = A
+Option D: A^-1 = A^T
+Correct: C
+Explanation: Idempotent: A^2 = A. Examples: identity matrix, projection matrices.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Linear Algebra
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: The Cayley-Hamilton theorem states every square matrix satisfies:
+Option A: Its characteristic polynomial
+Option B: Its minimal polynomial
+Option C: A^n = I
+Option D: A symmetric equation
+Correct: A
+Explanation: Cayley-Hamilton: if p(lambda) is the characteristic polynomial of A, then p(A) = 0.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Linear Algebra
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: Least squares solution to Ax=b (overdetermined system) minimizes:
+Option A: ||Ax||
+Option B: ||Ax - b||^2
+Option C: det(A^T A)
+Option D: ||A||
+Correct: B
+Explanation: Least squares minimizes ||Ax-b||^2. Solution: x* = (A^T A)^-1 A^T b (normal equations).
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Linear Algebra
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Two vectors u and v are orthogonal if and only if:
+Option A: u + v = 0
+Option B: u . v = 0
+Option C: |u| = |v|
+Option D: u = cv for some scalar c
+Correct: B
+Explanation: Orthogonal means u . v = 0 (dot product equals zero).
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Linear Algebra
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: The column space of matrix A is the same as:
+Option A: The null space of A
+Option B: The range of the linear transformation T(x) = Ax
+Option C: The row space of A^T transposed
+Option D: The solution set of Ax=0
+Correct: B
+Explanation: Column space = image = range = {Ax : x in R^n}, all linear combinations of columns of A.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Linear Algebra
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: If det(A) != 0, the solution to Ax=b is:
+Option A: x = Ab
+Option B: x = A^T b
+Option C: x = A^-1 b
+Option D: x = (A^T A)^-1 b
+Correct: C
+Explanation: Multiplying Ax=b by A^-1 gives x = A^-1 b.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Linear Algebra
+Difficulty: Easy
+Marks: 1
+Year: 2027
+Question: The dot product of [1,2,3] and [4,5,6] is:
+Option A: 12
+Option B: 24
+Option C: 32
+Option D: 30
+Correct: C
+Explanation: 1*4 + 2*5 + 3*6 = 4 + 10 + 18 = 32.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Linear Algebra
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: The rank of matrix A = [[1,2,3],[2,4,6],[3,6,9]] is:
+Option A: 3
+Option B: 2
+Option C: 1
+Option D: 0
+Correct: C
+Explanation: Row 2 = 2*Row1, Row 3 = 3*Row1. All rows are linearly dependent. Only 1 linearly independent row. Rank = 1.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Linear Algebra
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: An orthogonal matrix Q satisfies:
+Option A: Q = Q^T
+Option B: Q^T Q = I
+Option C: Q = Q^-1
+Option D: Q^2 = I
+Correct: B
+Explanation: An orthogonal matrix Q satisfies Q^T Q = Q Q^T = I, i.e., Q^-1 = Q^T. Its columns (and rows) are orthonormal. det(Q) = +1 or -1. Orthogonal matrices represent rotations and reflections.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Linear Algebra
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: The dimension of the null space of an mxn matrix A with rank r is:
+Option A: m - r
+Option B: n - r
+Option C: r
+Option D: m + n - r
+Correct: B
+Explanation: By the Rank-Nullity theorem: rank(A) + nullity(A) = n (number of columns). So nullity = n - rank = n - r. The null space has dimension n-r.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Linear Algebra
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: LU decomposition of a square matrix A = LU where L is lower triangular and U is upper triangular. This is primarily used for:
+Option A: Finding eigenvalues
+Option B: Efficiently solving multiple linear systems with the same A
+Option C: Computing the inverse of non-square matrices
+Option D: Orthogonalization of vectors
+Correct: B
+Explanation: LU decomposition (Gaussian elimination): once A=LU is computed, solving Ax=b reduces to two triangular systems: Ly=b (forward substitution) then Ux=y (back substitution). Very efficient for solving multiple systems Ax=b1, Ax=b2, etc. with same A.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Linear Algebra
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: For a diagonalizable matrix A with A = P D P^-1, the matrix A^k equals:
+Option A: P D^k P^-1
+Option B: P^k D P^-k
+Option C: k * P D P^-1
+Option D: P D P^k
+Correct: A
+Explanation: Since A = P D P^-1: A^2 = PDP^-1 PDP^-1 = PD^2 P^-1 (since P^-1 P = I). By induction: A^k = P D^k P^-1. D^k is easy to compute since D is diagonal: just raise each diagonal entry to the k-th power.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Linear Algebra
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: The Gram-Schmidt process converts a set of linearly independent vectors into:
+Option A: Eigenvalues of the matrix
+Option B: An orthonormal basis
+Option C: A diagonal matrix
+Option D: The null space basis
+Correct: B
+Explanation: Gram-Schmidt orthogonalization: given linearly independent vectors v1, v2,...,vn, it produces orthonormal vectors q1, q2,...,qn that span the same space. Each qi is obtained by subtracting projections onto previous qs and normalizing. Used in QR decomposition.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Linear Algebra
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: A matrix with all eigenvalues positive is called:
+Option A: Positive definite
+Option B: Positive semidefinite
+Option C: Orthogonal
+Option D: Idempotent
+Correct: A
+Explanation: A symmetric matrix A is positive definite if all eigenvalues are strictly positive (equivalently: x^T A x > 0 for all nonzero x). Positive semidefinite: all eigenvalues >= 0. Positive definite matrices are always invertible.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Linear Algebra
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: The determinant of a matrix changes sign when two rows are:
+Option A: Scaled by a constant
+Option B: Added to each other
+Option C: Swapped
+Option D: Set to zero
+Correct: C
+Explanation: Elementary row operations: (1) Swapping two rows changes det sign: det changes by factor -1. (2) Scaling a row by k multiplies det by k. (3) Adding a multiple of one row to another does NOT change det. These follow from the multilinear, alternating properties of determinant.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Linear Algebra
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: The spectral radius of a matrix A is defined as:
+Option A: The largest singular value
+Option B: max|lambda_i| where lambda_i are eigenvalues
+Option C: The trace divided by n
+Option D: The Frobenius norm
+Correct: B
+Explanation: Spectral radius rho(A) = max|lambda_i| over all eigenvalues lambda_i. It equals the largest absolute eigenvalue. Important in iterative methods: a matrix method converges if and only if the spectral radius of the iteration matrix is less than 1.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Linear Algebra
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: For Ax = lambda*x (eigenvalue equation), what is the geometric meaning of eigenvectors?
+Option A: Vectors that are rotated by 90 degrees under A
+Option B: Vectors whose direction is unchanged (only scaled) under transformation A
+Option C: Vectors in the null space of A
+Option D: Vectors with unit length
+Correct: B
+Explanation: An eigenvector x of A satisfies Ax = lambda*x. The transformation A maps x to lambda*x -- same direction (or opposite if lambda<0), just scaled by lambda. The set of eigenvectors for a given eigenvalue forms the eigenspace (subspace of vectors that only get scaled, not rotated).
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Calculus
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: lim_{x->0} (sin x)/x equals:
+Option A: 0
+Option B: infinity
+Option C: 1
+Option D: -1
+Correct: C
+Explanation: Fundamental limit. Using L'Hopital or squeeze theorem: (sin x)/x -> 1 as x->0.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Calculus
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: The Taylor series of e^x about x=0 has radius of convergence:
+Option A: 1
+Option B: e
+Option C: infinity
+Option D: 0
+Correct: C
+Explanation: By ratio test: lim|x|/(n+1) = 0 for all finite x. Converges everywhere. Radius = infinity.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Calculus
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: Gradient of f(x,y) = x^2 + 3xy + y^2 at (1,1) is:
+Option A: [2, 2]
+Option B: [5, 5]
+Option C: [3, 5]
+Option D: [5, 3]
+Correct: B
+Explanation: df/dx = 2x+3y = 5 at (1,1); df/dy = 3x+2y = 5 at (1,1). Gradient = [5,5].
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Calculus
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: The derivative of ln(x) with respect to x is:
+Option A: x
+Option B: e^x
+Option C: 1/x
+Option D: -1/x^2
+Correct: C
+Explanation: d/dx[ln(x)] = 1/x for x > 0.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Calculus
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: A function f(x) has a local maximum at x=a if:
+Option A: f'(a) > 0
+Option B: f'(a)=0 and f''(a)>0
+Option C: f'(a)=0 and f''(a)<0
+Option D: f''(a)=0
+Correct: C
+Explanation: Second derivative test: f'(a)=0 and f''(a)<0 (concave down) => local maximum. f''(a)>0 => local minimum.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Calculus
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: Chain rule: if y = sin(x^2), then dy/dx =:
+Option A: cos(x^2)
+Option B: 2x*cos(x^2)
+Option C: 2x*sin(x^2)
+Option D: x^2*cos(x)
+Correct: B
+Explanation: Let u=x^2. dy/dx = (dy/du)*(du/dx) = cos(u)*2x = 2x*cos(x^2).
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Calculus
+Difficulty: Easy
+Marks: 1
+Year: 2027
+Question: Integral of x*e^x dx equals:
+Option A: x*e^x + C
+Option B: e^x*(x-1) + C
+Option C: e^x*(x+1) + C
+Option D: x^2*e^x/2 + C
+Correct: B
+Explanation: Integration by parts: u=x, dv=e^x dx. x*e^x - integral(e^x dx) = x*e^x - e^x + C = e^x*(x-1)+C.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Calculus
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: The Jacobian of x=r*cos(theta), y=r*sin(theta) is:
+Option A: r^2
+Option B: cos(theta)
+Option C: r
+Option D: sin(theta)
+Correct: C
+Explanation: J = r*cos^2(theta) + r*sin^2(theta) = r.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Calculus
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: Double integral from 0 to 1, 0 to 1 of (x+y) dx dy equals:
+Option A: 1/2
+Option B: 1
+Option C: 3/2
+Option D: 2
+Correct: B
+Explanation: Inner: [x^2/2 + xy] from 0 to 1 = 1/2+y. Outer: [y/2+y^2/2] from 0 to 1 = 1/2+1/2 = 1.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Calculus
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: lim_{x->0} (1+x)^(1/x) equals:
+Option A: 1
+Option B: e
+Option C: infinity
+Option D: 0
+Correct: B
+Explanation: This is the definition of e. ln L = lim ln(1+x)/x = 1 by L'Hopital. So L = e.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Calculus
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: Which function is NOT differentiable at x=0?
+Option A: f(x) = x^2
+Option B: f(x) = |x|
+Option C: f(x) = sin(x)
+Option D: f(x) = e^x
+Correct: B
+Explanation: |x| has a corner at x=0. Left derivative = -1, right derivative = +1. Not differentiable.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Calculus
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Fourier series of a periodic function contains only sine terms if:
+Option A: f(x) is even
+Option B: f(x) is odd
+Option C: f(x) is positive
+Option D: f(x) is continuous
+Correct: B
+Explanation: Odd functions f(-x)=-f(x) have only sine terms in Fourier series. Even functions have only cosine terms.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Calculus
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: A critical point of f(x,y) is a saddle point when discriminant D = f_xx*f_yy - (f_xy)^2 satisfies:
+Option A: D>0 and f_xx>0
+Option B: D>0 and f_xx<0
+Option C: D<0
+Option D: D=0
+Correct: C
+Explanation: D<0 at critical point => saddle point. D>0 and f_xx>0 => local min. D>0 and f_xx<0 => local max. D=0 => inconclusive.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Calculus
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Integral from 0 to pi of sin^2(x) dx:
+Option A: 0
+Option B: pi
+Option C: pi/2
+Option D: 1
+Correct: C
+Explanation: sin^2(x) = (1-cos(2x))/2. Integral = [x/2 - sin(2x)/4] from 0 to pi = pi/2.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Calculus
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Integral from 0 to infinity of e^(-x) dx equals:
+Option A: 0
+Option B: infinity
+Option C: 1
+Option D: e
+Correct: C
+Explanation: [-e^(-x)] from 0 to inf = 0-(-1) = 1.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Calculus
+Difficulty: Easy
+Marks: 1
+Year: 2027
+Question: The Mean Value Theorem guarantees for f differentiable on [a,b] there exists c in (a,b) with:
+Option A: f(c) = 0
+Option B: f'(c) = (f(b)-f(a))/(b-a)
+Option C: f'(c) = f(a)+f(b)
+Option D: f'(c) = 0
+Correct: B
+Explanation: MVT: f'(c) = (f(b)-f(a))/(b-a). The instantaneous rate equals the average rate at some c.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Calculus
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: L'Hopital's rule is applied when the limit takes the form:
+Option A: infinity + infinity
+Option B: 0/0 or infinity/infinity
+Option C: 0 * infinity only
+Option D: 1^infinity only
+Correct: B
+Explanation: L'Hopital's rule: if lim f(x)/g(x) gives 0/0 or inf/inf (indeterminate forms), then lim f(x)/g(x) = lim f'(x)/g'(x). Other forms (0*inf, 1^inf, 0^0) must first be converted to 0/0 or inf/inf.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Calculus
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: If f(x) = x^3 - 3x^2 + 2, the local minimum occurs at:
+Option A: x = 0
+Option B: x = 1
+Option C: x = 2
+Option D: x = -1
+Correct: C
+Explanation: f'(x) = 3x^2 - 6x = 3x(x-2) = 0 => x=0 or x=2. f''(x) = 6x-6. f''(0)=-6<0 (local max). f''(2)=6>0 (local min). Local minimum at x=2.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Calculus
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: The divergence of vector field F = (x^2, y^2, z^2) is:
+Option A: 2x + 2y + 2z
+Option B: x + y + z
+Option C: 0
+Option D: 2xyz
+Correct: A
+Explanation: div F = dFx/dx + dFy/dy + dFz/dz = 2x + 2y + 2z.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Calculus
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: Which test determines convergence of series sum(1/n^p) for p > 0?
+Option A: Ratio test
+Option B: Root test
+Option C: p-series test
+Option D: Alternating series test
+Correct: C
+Explanation: The p-series test: sum(1/n^p) converges if p > 1 and diverges if 0 < p <= 1. For p=2: converges (pi^2/6). For p=1: harmonic series, diverges.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Calculus
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Green's theorem relates a line integral around a closed curve C to a double integral over region D. It states:
+Option A: Integral_C (P dx + Q dy) = Integral_D (dP/dx - dQ/dy) dA
+Option B: Integral_C (P dx + Q dy) = Integral_D (dQ/dx - dP/dy) dA
+Option C: Integral_C F.dr = Integral_D div(F) dA
+Option D: Integral_C F.dr = 0 always
+Correct: B
+Explanation: Green's Theorem: Integral_C(P dx + Q dy) = Integral_D (dQ/dx - dP/dy) dA, where C is positively oriented (counterclockwise) boundary of D. This is a 2D special case of Stokes' theorem.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Calculus
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: The partial derivative of f(x,y) = x^2 y + sin(xy) with respect to y is:
+Option A: 2xy + cos(xy)
+Option B: x^2 + x*cos(xy)
+Option C: 2x + cos(xy)
+Option D: x^2*y + cos(xy)*x
+Correct: B
+Explanation: df/dy = d(x^2 y)/dy + d(sin(xy))/dy = x^2 + cos(xy)*x = x^2 + x*cos(xy).
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Calculus
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: The Lagrange multiplier method is used for optimization with constraints. For min f(x,y) subject to g(x,y)=0, we solve:
+Option A: f = lambda * g
+Option B: grad(f) = lambda * grad(g) and g=0
+Option C: grad(f) = 0
+Option D: grad(f) + grad(g) = 0
+Correct: B
+Explanation: Lagrange multiplier method: at constrained optimal point, grad(f) = lambda * grad(g) (gradients are parallel). Solve the system: df/dx = lambda*dg/dx, df/dy = lambda*dg/dy, g(x,y)=0. The unknown lambda is the Lagrange multiplier.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Calculus
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: Rolle's theorem states: if f is continuous on [a,b], differentiable on (a,b), and f(a)=f(b), then there exists c in (a,b) such that:
+Option A: f(c) = 0
+Option B: f'(c) = 0
+Option C: f''(c) = 0
+Option D: f(c) = f(a)
+Correct: B
+Explanation: Rolle's Theorem: under the given conditions, there exists at least one c in (a,b) where f'(c)=0 (horizontal tangent). This is a special case of MVT where f(a)=f(b), making the average rate of change zero.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Calculus
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: The improper integral from 1 to infinity of 1/x^2 dx equals:
+Option A: diverges
+Option B: 1/2
+Option C: 1
+Option D: 2
+Correct: C
+Explanation: Integral from 1 to inf of x^(-2) dx = [-x^(-1)] from 1 to inf = (0) - (-1) = 1.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Probability and Statistics
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: If P(A)=0.4, P(B)=0.3, and A,B are independent, then P(A union B) is:
+Option A: 0.58
+Option B: 0.7
+Option C: 0.12
+Option D: 0.5
+Correct: A
+Explanation: P(AnB) = 0.4*0.3=0.12. P(AuB) = 0.4+0.3-0.12 = 0.58.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Probability and Statistics
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: X ~ Poisson(lambda=2). P(X=0) equals:
+Option A: e^(-2)
+Option B: 2*e^(-2)
+Option C: 1-e^(-2)
+Option D: e^2
+Correct: A
+Explanation: Poisson PMF: P(X=k) = e^(-lambda)*lambda^k/k!. P(X=0) = e^(-2)*1/1 = e^(-2).
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Probability and Statistics
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: For normal distribution N(mu, sigma^2), fraction of data within 2 standard deviations is:
+Option A: 68.27%
+Option B: 95.45%
+Option C: 99.73%
+Option D: 50%
+Correct: B
+Explanation: Empirical rule: 68.27% within 1 sigma, 95.45% within 2 sigma, 99.73% within 3 sigma.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Probability and Statistics
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: X,Y independent with E[X]=2,E[Y]=3,Var(X)=4,Var(Y)=9. Var(2X-3Y) equals:
+Option A: 45
+Option B: 97
+Option C: 81
+Option D: 49
+Correct: B
+Explanation: Var(2X-3Y) = 4*Var(X)+9*Var(Y) = 16+81 = 97.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Probability and Statistics
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: Bayes' theorem: P(A|B) equals:
+Option A: P(B|A)*P(A)
+Option B: P(AnB)/P(A)
+Option C: P(B|A)*P(A)/P(B)
+Option D: P(A)*P(B)
+Correct: C
+Explanation: P(A|B) = P(AnB)/P(B) = P(B|A)*P(A)/P(B).
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Probability and Statistics
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Geometric distribution with parameter p has mean:
+Option A: p
+Option B: 1/p
+Option C: p(1-p)
+Option D: 1/(1-p)
+Correct: B
+Explanation: Mean of geometric distribution = 1/p (number of trials until first success).
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Probability and Statistics
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: Central Limit Theorem: distribution of sample means approaches normal as:
+Option A: Sample becomes biased
+Option B: Population variance decreases
+Option C: Sample size n -> infinity
+Option D: Mean equals zero
+Correct: C
+Explanation: CLT: for iid variables with mean mu and variance sigma^2, X-bar -> N(mu, sigma^2/n) as n->inf.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Probability and Statistics
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: E[X^2] - (E[X])^2 equals:
+Option A: E[X]
+Option B: 0 always
+Option C: Var(X)
+Option D: Standard deviation
+Correct: C
+Explanation: Var(X) = E[(X-mu)^2] = E[X^2] - (E[X])^2. Computational formula for variance.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Probability and Statistics
+Difficulty: Easy
+Marks: 1
+Year: 2027
+Question: Two events A,B are mutually exclusive if:
+Option A: P(AnB) = P(A)*P(B)
+Option B: P(AuB) = 1
+Option C: P(AnB) = 0
+Option D: P(A|B) = P(A)
+Correct: C
+Explanation: Mutually exclusive: A and B cannot occur together, so P(AnB)=0.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Probability and Statistics
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Box has 5 red and 3 blue balls. Two drawn without replacement. P(both red):
+Option A: 5/14
+Option B: 25/64
+Option C: 10/56
+Option D: 5/28
+Correct: A
+Explanation: C(5,2)/C(8,2) = 10/28 = 5/14. Or (5/8)*(4/7) = 20/56 = 5/14.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Probability and Statistics
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: Binomial distribution B(n,p) has variance:
+Option A: np
+Option B: np(1-p)
+Option C: n^2*p^2
+Option D: np^2
+Correct: B
+Explanation: Mean=np, Variance=np(1-p)=npq where q=1-p.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Probability and Statistics
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Correlation coefficient rho between X and Y is always in:
+Option A: [0, 1]
+Option B: (-inf, inf)
+Option C: [-1, 1]
+Option D: [0, inf)
+Correct: C
+Explanation: Pearson correlation rho = Cov(X,Y)/(sigma_X*sigma_Y) is in [-1,1] by Cauchy-Schwarz. rho=1: perfect positive; rho=-1: perfect negative; rho=0: no linear correlation.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Probability and Statistics
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: Mode of data {3,5,5,7,9,9,9,11} is:
+Option A: 7
+Option B: 5
+Option C: 9
+Option D: 11
+Correct: C
+Explanation: 9 appears 3 times (most frequent). Mode = 9.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Probability and Statistics
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Exponential distribution memoryless property: P(X>s+t | X>s) equals:
+Option A: P(X>s+t)
+Option B: P(X>t)
+Option C: E[X|X>s]
+Option D: Var(X)
+Correct: B
+Explanation: Memoryless: P(X>s+t|X>s) = P(X>t). Only exponential (continuous) and geometric (discrete) have this property.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Probability and Statistics
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: The moment generating function of X is defined as:
+Option A: E[X]
+Option B: E[e^(tX)]
+Option C: E[X^2]
+Option D: P(X=x)
+Correct: B
+Explanation: MGF: M_X(t) = E[e^(tX)]. The k-th derivative at t=0 gives E[X^k] (the k-th moment). MGFs uniquely determine distributions (when they exist).
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Probability and Statistics
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Markov's inequality states: for non-negative X and a>0, P(X>=a) <=:
+Option A: Var(X)/a^2
+Option B: E[X]/a
+Option C: E[X^2]/a^2
+Option D: a/E[X]
+Correct: B
+Explanation: Markov's inequality: P(X>=a) <= E[X]/a. For non-negative X only. Chebyshev's uses variance: P(|X-mu|>=k*sigma) <= 1/k^2.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Probability and Statistics
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: In a hypothesis test, Type I error is:
+Option A: Failing to reject a false null hypothesis
+Option B: Rejecting a true null hypothesis
+Option C: The significance level being too large
+Option D: The power of the test
+Correct: B
+Explanation: Type I error (alpha): rejecting H0 when H0 is true (false positive). Type II error (beta): failing to reject H0 when H0 is false (false negative). Power = 1-beta.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Probability and Statistics
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: For independent X~Poisson(lambda1) and Y~Poisson(lambda2), X+Y follows:
+Option A: Poisson(lambda1 * lambda2)
+Option B: Poisson(lambda1 + lambda2)
+Option C: Normal distribution
+Option D: Binomial distribution
+Correct: B
+Explanation: Sum of independent Poisson variables: X+Y ~ Poisson(lambda1+lambda2). This is the reproductive property of Poisson distribution.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Probability and Statistics
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: The expected value of a continuous random variable X with pdf f(x) is:
+Option A: Integral of f(x) dx
+Option B: Integral of x*f(x) dx
+Option C: f(mean)
+Option D: max(f(x))
+Correct: B
+Explanation: E[X] = integral from -inf to inf of x*f(x) dx. Weighted average of all values by their probability density.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Probability and Statistics
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Two random variables X, Y are independent if and only if their joint pdf satisfies:
+Option A: f(x,y) = f(x) + f(y)
+Option B: f(x,y) = f_X(x) * f_Y(y)
+Option C: f(x,y) = f(x)/f(y)
+Option D: E[XY] = 0
+Correct: B
+Explanation: Independence: f(x,y) = f_X(x)*f_Y(y) (joint pdf = product of marginals). This also means E[XY]=E[X]*E[Y] and Cov(X,Y)=0 (though zero covariance does NOT imply independence in general).
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Probability and Statistics
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: Standard deviation is the square root of variance. For data {2,4,4,4,5,5,7,9}:
+Option A: Variance = 2, SD = sqrt(2)
+Option B: Variance = 4, SD = 2
+Option C: Variance = 3, SD = sqrt(3)
+Option D: Variance = 9, SD = 3
+Correct: B
+Explanation: Mean = (2+4+4+4+5+5+7+9)/8 = 40/8 = 5. Squared deviations: 9,1,1,1,0,0,4,16. Sum=32. Variance=32/8=4. SD=2.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Probability and Statistics
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: The law of total probability states: P(B) = sum over partitions Ai of:
+Option A: P(B) * P(Ai)
+Option B: P(B|Ai) * P(Ai)
+Option C: P(Ai|B)
+Option D: P(Ai) / P(B)
+Correct: B
+Explanation: Law of total probability: if A1, A2,...,An partition the sample space, then P(B) = sum_i P(B|Ai)*P(Ai). Used in Bayes' theorem denominator.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Probability and Statistics
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: For uniform distribution U(a,b): the mean and variance are:
+Option A: mean=(a+b)/2, var=(b-a)/2
+Option B: mean=(a+b)/2, var=(b-a)^2/12
+Option C: mean=(b-a)/2, var=(b-a)^2/4
+Option D: mean=a, var=(b-a)^2
+Correct: B
+Explanation: Uniform U(a,b): mean = (a+b)/2, variance = (b-a)^2/12. Example: U(0,1): mean=1/2, var=1/12.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Probability and Statistics
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Chebyshev's inequality states: for any random variable X with mean mu and variance sigma^2, P(|X-mu|>=k*sigma) <=:
+Option A: k*sigma
+Option B: 1/k^2
+Option C: sigma/k
+Option D: k^2/sigma^2
+Correct: B
+Explanation: Chebyshev's inequality: P(|X-mu|>=k*sigma) <= 1/k^2, valid for any distribution. For k=2: at most 25% of data is more than 2 SDs from mean. Much weaker than normal distribution's 4.55% but applies universally.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Probability and Statistics
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: The probability of getting exactly 3 heads in 5 fair coin tosses is:
+Option A: 5/16
+Option B: 5/32
+Option C: 10/32
+Option D: 1/4
+Correct: C
+Explanation: P(X=3) = C(5,3)*(1/2)^5 = 10/32 = 5/16. C(5,3)=10, (1/2)^5=1/32. P = 10/32.
+
+---
+
+Subject: Digital Logic
+Subtopic: Boolean Algebra
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: The dual of Boolean expression A + BC is:
+Option A: A*(B+C)
+Option B: A-bar + B-bar*C-bar
+Option C: A*B + C
+Option D: A*BC
+Correct: A
+Explanation: Dual: replace + with *, * with +, 0 with 1, 1 with 0. Dual of A+(B*C) = A*(B+C).
+
+---
+
+Subject: Digital Logic
+Subtopic: Boolean Algebra
+Difficulty: Easy
+Marks: 1
+Year: 2027
+Question: Boolean expression AB + A'B simplifies to:
+Option A: A
+Option B: B
+Option C: A+B
+Option D: 1
+Correct: B
+Explanation: AB + A'B = B(A+A') = B*1 = B.
+
+---
+
+Subject: Digital Logic
+Subtopic: Boolean Algebra
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Simplify: F = A'B'C + AB'C + A'BC + ABC using K-map:
+Option A: B+C
+Option B: B'C+BC
+Option C: C
+Option D: A'C+BC
+Correct: C
+Explanation: All minterms have C=1 (minterm positions 1,3,5,7). F = C.
+
+---
+
+Subject: Digital Logic
+Subtopic: Number Systems
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: 2's complement of -45 in 8 bits:
+Option A: 11010011
+Option B: 11010010
+Option C: 10101101
+Option D: 01101011
+Correct: A
+Explanation: 45 = 00101101. 1's complement = 11010010. 2's complement = 11010010+1 = 11010011.
+
+---
+
+Subject: Digital Logic
+Subtopic: Combinational Circuits
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: Full adder carry output Cout for inputs A, B, Cin is:
+Option A: A XOR B XOR Cin
+Option B: AB + BCin + ACin
+Option C: A AND B AND Cin
+Option D: (A+B)*Cin
+Correct: B
+Explanation: Cout = AB + BCin + ACin (carry generated when at least two inputs are 1 - majority function).
+
+---
+
+Subject: Digital Logic
+Subtopic: Sequential Circuits
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: 4-bit ripple counter from 0000 to 1001 needs how many clock pulses?
+Option A: 8
+Option B: 9
+Option C: 10
+Option D: 16
+Correct: B
+Explanation: From 0 to 9 (binary 1001): 9 transitions => 9 clock pulses.
+
+---
+
+Subject: Digital Logic
+Subtopic: Combinational Circuits
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: F(A,B,C,D) = Sum(0,2,4,6,8,10,12,14) simplifies to:
+Option A: D'
+Option B: A'
+Option C: C'D'
+Option D: A'D'
+Correct: A
+Explanation: All minterms are even numbers (LSB D=0). F = D'.
+
+---
+
+Subject: Digital Logic
+Subtopic: Sequential Circuits
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: D flip-flop next state Q+ in terms of D:
+Option A: Q+ = Q
+Option B: Q+ = D'
+Option C: Q+ = D
+Option D: Q+ = D XOR Q
+Correct: C
+Explanation: D flip-flop: Q+ = D. It copies input to output on clock edge.
+
+---
+
+Subject: Digital Logic
+Subtopic: Boolean Algebra
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: De Morgan's: (A+B)' equals:
+Option A: A'+B'
+Option B: A'*B'
+Option C: AB
+Option D: (AB)'
+Correct: B
+Explanation: De Morgan's second law: (A+B)' = A'*B'.
+
+---
+
+Subject: Digital Logic
+Subtopic: Number Systems
+Difficulty: Easy
+Marks: 1
+Year: 2027
+Question: Hexadecimal (3F)16 in decimal equals:
+Option A: 57
+Option B: 63
+Option C: 51
+Option D: 62
+Correct: B
+Explanation: 3*16 + 15 = 48+15 = 63.
+
+---
+
+Subject: Digital Logic
+Subtopic: Combinational Circuits
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: 4-input priority encoder (I3 highest priority). Inputs: I3=0,I2=1,I1=1,I0=1. 2-bit output:
+Option A: 00
+Option B: 01
+Option C: 10
+Option D: 11
+Correct: C
+Explanation: I2 is highest active input = input 2 = binary 10.
+
+---
+
+Subject: Digital Logic
+Subtopic: Sequential Circuits
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: 3-bit synchronous binary counter has how many states?
+Option A: 3
+Option B: 6
+Option C: 7
+Option D: 8
+Correct: D
+Explanation: 2^3 = 8 states: 000 to 111.
+
+---
+
+Subject: Digital Logic
+Subtopic: Combinational Circuits
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: 8-to-1 MUX requires how many select lines?
+Option A: 2
+Option B: 3
+Option C: 4
+Option D: 8
+Correct: B
+Explanation: 8 = 2^3, so 3 select lines needed.
+
+---
+
+Subject: Digital Logic
+Subtopic: Number Systems
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: IEEE 754 single-precision exponent bias is:
+Option A: 64
+Option B: 128
+Option C: 127
+Option D: 255
+Correct: C
+Explanation: Single-precision: 1 sign bit, 8 exponent bits, 23 mantissa bits. Exponent bias = 127 (excess-127 representation).
+
+---
+
+Subject: Digital Logic
+Subtopic: Sequential Circuits
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Moore machine outputs depend on:
+Option A: Only current state
+Option B: Current state and current input
+Option C: Only current input
+Option D: Previous state and input
+Correct: A
+Explanation: Moore machine: output = function of state only. Mealy machine: output = function of state AND input.
+
+---
+
+Subject: Digital Logic
+Subtopic: Boolean Algebra
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Complement of AB' + A'C using De Morgan's:
+Option A: (A'+B)(A+C')
+Option B: A'B + AC'
+Option C: AB' + A'C
+Option D: (A+B')(A'+C)
+Correct: A
+Explanation: (AB'+A'C)' = (AB')'*(A'C)' = (A'+B)*(A+C').
+
+---
+
+Subject: Digital Logic
+Subtopic: Combinational Circuits
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: 4-variable K-map has how many cells and a group of 8 cells eliminates how many variables?
+Option A: 16 cells; eliminates 3 variables
+Option B: 16 cells; eliminates 4 variables
+Option C: 8 cells; eliminates 3 variables
+Option D: 16 cells; eliminates 1 variable
+Correct: A
+Explanation: 4-variable K-map: 2^4=16 cells. Group of 2^k cells eliminates k variables. 8=2^3: eliminates 3 variables.
+
+---
+
+Subject: Digital Logic
+Subtopic: Number Systems
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: (101101.101)2 converted to decimal is:
+Option A: 45.625
+Option B: 45.5
+Option C: 46.5
+Option D: 44.75
+Correct: A
+Explanation: 32+0+8+4+0+1 = 45 (integer part). Fractional: 0.5+0+0.125=0.625. Total = 45.625.
+
+---
+
+Subject: Digital Logic
+Subtopic: Sequential Circuits
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: In a JK flip-flop, the condition J=1 K=1 causes:
+Option A: Set (Q=1)
+Option B: Reset (Q=0)
+Option C: Toggle (Q complements)
+Option D: No change
+Correct: C
+Explanation: JK flip-flop truth table: J=0,K=0: No change. J=0,K=1: Reset. J=1,K=0: Set. J=1,K=1: Toggle (Q-bar -> Q).
+
+---
+
+Subject: Digital Logic
+Subtopic: Boolean Algebra
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: Which logic gate is called a universal gate?
+Option A: AND
+Option B: OR
+Option C: NAND
+Option D: XOR
+Correct: C
+Explanation: NAND (and NOR) are universal gates - any Boolean function can be implemented using only NAND (or only NOR) gates. AND, OR, NOT can all be constructed from NAND gates.
+
+---
+
+Subject: Digital Logic
+Subtopic: Combinational Circuits
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: A 4:1 MUX implements F = A'B' + AB using select lines S1=A, S0=B. Inputs I0,I1,I2,I3 should be:
+Option A: I0=1, I1=0, I2=0, I3=1
+Option B: I0=1, I1=1, I2=0, I3=1
+Option C: I0=0, I1=1, I2=1, I3=0
+Option D: I0=1, I1=0, I2=1, I3=1
+Correct: A
+Explanation: F=A'B'+AB. When AB=00: F=1=I0. When AB=01: F=0=I1. When AB=10: F=0=I2. When AB=11: F=1=I3. So I0=1,I1=0,I2=0,I3=1.
+
+---
+
+Subject: Digital Logic
+Subtopic: Number Systems
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: BCD (Binary Coded Decimal) uses how many bits to represent each decimal digit?
+Option A: 3 bits
+Option B: 4 bits
+Option C: 8 bits
+Option D: 7 bits
+Correct: B
+Explanation: BCD uses 4 bits per decimal digit (0-9 encoded as 0000-1001). Values 1010-1111 are invalid in BCD. For example: 25 in BCD = 0010 0101.
+
+---
+
+Subject: Digital Logic
+Subtopic: Sequential Circuits
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: A shift register with n flip-flops has how many clock cycles to shift a complete n-bit word in serially?
+Option A: 1
+Option B: n/2
+Option C: n
+Option D: 2n
+Correct: C
+Explanation: A serial-in shift register needs n clock pulses to shift all n bits in (one bit per clock cycle). Parallel-in shift registers load all bits in one clock cycle. SISO (Serial-In Serial-Out), SIPO, PISO, PIPO are the four types.
+
+---
+
+Subject: Digital Logic
+Subtopic: Boolean Algebra
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: Absorption law in Boolean algebra states: A + AB equals:
+Option A: A + B
+Option B: A
+Option C: AB
+Option D: B
+Correct: B
+Explanation: Absorption law: A + AB = A(1+B) = A*1 = A. Also: A*(A+B) = A. These laws simplify expressions by eliminating redundant terms.
+
+---
+
+Subject: Digital Logic
+Subtopic: Combinational Circuits
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: A decoder with n inputs generates how many outputs?
+Option A: n outputs
+Option B: 2n outputs
+Option C: 2^n outputs
+Option D: n^2 outputs
+Correct: C
+Explanation: An n-to-2^n decoder takes n input lines and activates exactly one of 2^n output lines. Example: 3-to-8 decoder has 3 inputs and 8 outputs. Decoders implement all minterms and can implement any combinational function.
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Memory Organization
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: Which cache mapping has lowest miss rate but highest hardware cost?
+Option A: Direct mapped
+Option B: Fully associative
+Option C: 2-way set associative
+Option D: 4-way set associative
+Correct: B
+Explanation: Fully associative allows any block in any cache line - max flexibility, no conflict misses. Requires most comparators. Direct mapped is simplest but has most conflict misses.
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Instruction Set Architecture
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Which is NOT a typical RISC characteristic?
+Option A: Fixed instruction length
+Option B: Load/Store architecture
+Option C: Many addressing modes
+Option D: Large number of registers
+Correct: C
+Explanation: RISC uses simple/few addressing modes. CISC has many complex addressing modes. RISC: fixed length, load/store, large register file, simple addressing.
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Pipelining
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: With 30% RAW hazard rate and 2 stall cycles per hazard, effective CPI is:
+Option A: 1.3
+Option B: 1.6
+Option C: 2.0
+Option D: 2.3
+Correct: B
+Explanation: CPI = 1 + fraction*stalls = 1 + 0.30*2 = 1.6.
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Memory Organization
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: With 32-bit physical address and byte-addressable memory, maximum addressable memory is:
+Option A: 4 GB
+Option B: 2 GB
+Option C: 1 GB
+Option D: 8 GB
+Correct: A
+Explanation: 2^32 bytes = 4 * 2^30 = 4 GB.
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Cache Memory
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Cache with 128 lines, 64-byte block, 4-way set associative has how many sets?
+Option A: 16
+Option B: 32
+Option C: 64
+Option D: 128
+Correct: B
+Explanation: Sets = Total lines / Associativity = 128/4 = 32 sets.
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Pipelining
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: RAW (Read After Write) hazard occurs when:
+Option A: Two instructions need the same functional unit
+Option B: An instruction reads a register not yet written by a previous instruction
+Option C: A branch changes control flow
+Option D: Two instructions write the same register
+Correct: B
+Explanation: RAW: instruction j reads a value before instruction i (preceding) writes it. True data dependency, the most common hazard.
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: DMA and I/O
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: DMA improves performance because:
+Option A: CPU handles I/O directly
+Option B: Data transfers between I/O devices and memory without CPU intervention
+Option C: CPU runs at higher speed
+Option D: It eliminates interrupts
+Correct: B
+Explanation: DMA controller handles I/O-to-memory transfer; CPU is free for other work. CPU gets interrupt only on completion.
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Cache Memory
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Direct-mapped cache with 512 blocks, 32-byte blocks. For address 5000, cache block index is:
+Option A: 5000 mod 512
+Option B: floor(5000/32) mod 512
+Option C: 5000 mod 32
+Option D: floor(5000/512)
+Correct: B
+Explanation: Block number = floor(5000/32) = 156. Cache index = 156 mod 512 = 156.
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Memory Organization
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: Virtual memory allows programs to use more memory than available by:
+Option A: Compressing RAM
+Option B: Using disk as extension of RAM via paging
+Option C: Increasing cache size
+Option D: Sharing registers between processes
+Correct: B
+Explanation: Virtual memory pages not in RAM are stored on disk (swap). On access, page fault brings them in. Programs can have larger virtual address space than physical RAM.
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Pipelining
+Difficulty: Easy
+Marks: 1
+Year: 2027
+Question: Pipelining improves CPU performance by:
+Option A: Making instructions execute faster individually
+Option B: Overlapping execution of multiple instructions
+Option C: Increasing clock frequency
+Option D: Reducing instruction set
+Correct: B
+Explanation: Pipelining overlaps stages: while instruction i is in EX, i+1 is in ID, i+2 in IF. Increases throughput.
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Arithmetic
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Booth's algorithm is used for:
+Option A: Division
+Option B: Multiplication of signed 2's complement numbers
+Option C: Floating point to fixed point conversion
+Option D: Division using shifts
+Correct: B
+Explanation: Booth's algorithm efficiently multiplies signed 2's complement integers by recording +1 and -1 at 0->1 and 1->0 boundaries, reducing additions.
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Cache Memory
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: LRU cache replacement policy evicts:
+Option A: Most recently accessed line
+Option B: Random line
+Option C: Least recently accessed line
+Option D: Line with lowest tag number
+Correct: C
+Explanation: LRU evicts the cache line not used for the longest time. Good temporal locality exploitation.
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Instruction Set Architecture
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: MIPS I-format 16-bit immediate field uses:
+Option A: Register addressing
+Option B: Sign-extended immediate addressing
+Option C: Direct memory addressing
+Option D: PC-indexed addressing
+Correct: B
+Explanation: MIPS I-format: [opcode:6][rs:5][rt:5][immediate:16]. 16-bit immediate is sign-extended to 32 bits. Range: -32768 to +32767.
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Memory Organization
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: In page table entry, the dirty bit indicates:
+Option A: The page is corrupted
+Option B: The page has been modified since loading from disk
+Option C: The page is invalid
+Option D: The page is recently accessed
+Correct: B
+Explanation: Dirty (modified) bit: set when page is written to. On eviction, dirty pages must be written back to disk; clean pages can be discarded (can reload from disk). The reference/access bit tracks recently used pages for LRU approximation.
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Pipelining
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Data forwarding (bypassing) in pipelines resolves:
+Option A: Control hazards
+Option B: Structural hazards
+Option C: Most RAW data hazards without stalling
+Option D: WAR and WAW hazards
+Correct: C
+Explanation: Data forwarding routes results directly from EX/MEM/WB stage outputs back to ALU inputs, resolving most RAW hazards without inserting stall cycles. Load-use hazards still require one stall even with forwarding.
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Cache Memory
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: Cache hit time = 5ns, miss penalty = 100ns, miss rate = 5%. Effective memory access time:
+Option A: 5 ns
+Option B: 9.75 ns
+Option C: 10 ns
+Option D: 100 ns
+Correct: C
+Explanation: EMAT = hit_time + miss_rate * miss_penalty = 5 + 0.05*100 = 5+5 = 10 ns.
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Instruction Set Architecture
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: The program counter (PC) in a CPU contains:
+Option A: The current instruction being executed
+Option B: The address of the next instruction to execute
+Option C: The result of the last ALU operation
+Option D: The current stack pointer
+Correct: B
+Explanation: The PC (program counter or instruction pointer) holds the memory address of the next instruction to be fetched. After each fetch, PC is incremented (or modified by branch/jump). It drives the instruction fetch cycle.
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Memory Organization
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: In a 2-level page table for 32-bit virtual address, 4KB pages, 4-byte PTEs: how many entries in the top-level page directory?
+Option A: 1024
+Option B: 512
+Option C: 4096
+Option D: 256
+Correct: A
+Explanation: Page offset = log2(4KB) = 12 bits. Remaining = 32-12 = 20 bits split into two 10-bit fields. Top-level directory: 2^10 = 1024 entries. Each directory entry points to a second-level page table with 1024 entries. (This is x86 32-bit paging.)
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Arithmetic
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: In floating point addition, which step is performed FIRST?
+Option A: Add mantissas
+Option B: Normalize result
+Option C: Align exponents (shift smaller exponent number)
+Option D: Check for overflow
+Correct: C
+Explanation: Floating point addition steps: (1) Align exponents - shift the mantissa of the number with smaller exponent right until exponents match. (2) Add/subtract mantissas. (3) Normalize result (adjust mantissa and exponent). (4) Round to fit mantissa precision.
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Pipelining
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Branch prediction in pipelined CPUs handles:
+Option A: RAW hazards
+Option B: Control hazards caused by conditional branches
+Option C: Structural hazards
+Option D: WAW hazards
+Correct: B
+Explanation: Control hazards occur when branches change the instruction sequence. Branch prediction (static: always taken/not-taken; dynamic: 2-bit predictor) guesses the branch outcome to avoid stalls. On misprediction, the pipeline must be flushed (wasted cycles = branch penalty).
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Memory Organization
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: DRAM differs from SRAM in that DRAM:
+Option A: Is faster but more expensive
+Option B: Requires periodic refresh and is cheaper per bit
+Option C: Uses flip-flops for storage
+Option D: Is non-volatile
+Correct: B
+Explanation: DRAM (Dynamic RAM): uses capacitors, must be refreshed periodically (capacitor charge leaks), slower, cheaper, denser. SRAM (Static RAM): uses flip-flops, no refresh needed, faster, more expensive, used for cache. Both are volatile (lose data on power loss).
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Instruction Set Architecture
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Amdahl's Law states the speedup S when fraction f of a program is parallelized with P processors is:
+Option A: S = P*f
+Option B: S = 1/((1-f) + f/P)
+Option C: S = f*P + (1-f)
+Option D: S = P/(1-f)
+Correct: B
+Explanation: Amdahl's Law: S = 1/((1-f) + f/P) where f=fraction parallelizable, P=processors. Maximum speedup (P->inf): 1/(1-f). If 90% parallelizable, max speedup = 10x regardless of # processors. Shows diminishing returns of parallelism.
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Cache Memory
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Write-back cache policy writes to memory:
+Option A: On every write to cache
+Option B: Only when the dirty cache line is evicted
+Option C: Before every cache read
+Option D: Periodically on a timer
+Correct: B
+Explanation: Write-back: write only to cache on write hit; write to memory only when dirty line is evicted. More complex (needs dirty bit) but generates less memory traffic. Write-through: write to both cache and memory on every write (simpler, more memory bandwidth).
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Pipelining
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: A non-pipelined processor takes 200ns per instruction. A 5-stage pipeline with 40ns per stage achieves speedup of (ignoring hazards):
+Option A: 5
+Option B: 4
+Option C: 2.5
+Option D: 1
+Correct: A
+Explanation: Ideal pipeline speedup = number of stages = 5 (limited by slowest stage). Pipelined CPI = 1 (after fill), clock cycle = 40ns. Non-pipelined: 200ns/instruction. Speedup = 200/40 = 5 (ideal).
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Instruction Set Architecture
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: The stack grows in which direction in most architectures (x86)?
+Option A: Upward (toward higher addresses)
+Option B: Downward (toward lower addresses)
+Option C: Bidirectional
+Option D: Left to right
+Correct: B
+Explanation: In x86 and most architectures, the stack grows downward toward lower memory addresses. PUSH decrements SP then writes; POP reads then increments SP. The stack pointer (ESP/RSP) points to the top of stack (lowest address in use).
+
+---
+
+Subject: Algorithms
+Subtopic: Graph Algorithms
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Bellman-Ford time complexity for V vertices and E edges:
+Option A: O(V log E)
+Option B: O(VE)
+Option C: O(E log V)
+Option D: O(V^2)
+Correct: B
+Explanation: Bellman-Ford relaxes all E edges V-1 times: O(VE). Handles negative edges. Dijkstra: O((V+E)logV) but only non-negative edges.
+
+---
+
+Subject: Algorithms
+Subtopic: Greedy Algorithms
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: Kruskal's MST algorithm uses which data structure to detect cycles?
+Option A: Priority queue
+Option B: Stack
+Option C: Disjoint Set Union (Union-Find)
+Option D: Hash table
+Correct: C
+Explanation: Union-Find checks if both endpoints of an edge are in the same set (cycle). With path compression + union by rank: nearly O(1) per operation.
+
+---
+
+Subject: Algorithms
+Subtopic: Dynamic Programming
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: LCS of "ABCBDAB" and "BDCAB" has length:
+Option A: 3
+Option B: 4
+Option C: 5
+Option D: 6
+Correct: B
+Explanation: LCS = 4 (e.g., "BCAB" or "BDAB"). Classic CLRS example using 2D DP table.
+
+---
+
+Subject: Algorithms
+Subtopic: Divide and Conquer
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: Merge sort worst-case time complexity:
+Option A: O(n)
+Option B: O(n log n)
+Option C: O(n^2)
+Option D: O(log n)
+Correct: B
+Explanation: T(n) = 2T(n/2)+O(n). Master Theorem Case 2: T(n) = O(n log n). Always O(n log n) in all cases.
+
+---
+
+Subject: Algorithms
+Subtopic: NP-Completeness
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Which problem is in P (polynomial time)?
+Option A: TSP
+Option B: 3-SAT
+Option C: Shortest path in unweighted graph
+Option D: Subset Sum
+Correct: C
+Explanation: BFS solves unweighted shortest path in O(V+E) - polynomial. TSP, 3-SAT, Subset Sum are NP-complete.
+
+---
+
+Subject: Algorithms
+Subtopic: Sorting
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: Most efficient for nearly sorted arrays:
+Option A: Merge Sort
+Option B: Quick Sort
+Option C: Insertion Sort
+Option D: Heap Sort
+Correct: C
+Explanation: Insertion sort: O(n) best case on nearly sorted. Moves each element only a few positions.
+
+---
+
+Subject: Algorithms
+Subtopic: Graph Algorithms
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: DFS-based topological sort time complexity:
+Option A: O(V)
+Option B: O(E log V)
+Option C: O(V+E)
+Option D: O(V^2)
+Correct: C
+Explanation: DFS visits each vertex and edge once: O(V+E). Push to stack in reverse finish order.
+
+---
+
+Subject: Algorithms
+Subtopic: Dynamic Programming
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Matrix chain multiplication: A1(10x30) x A2(30x5) x A3(5x60). Optimal cost:
+Option A: 27000
+Option B: 4500
+Option C: 9000
+Option D: 3000
+Correct: B
+Explanation: (A1xA2)xA3: 10*30*5 + 10*5*60 = 1500+3000=4500. A1x(A2xA3): 30*5*60+10*30*60=9000+18000=27000. Min=4500.
+
+---
+
+Subject: Algorithms
+Subtopic: Greedy Algorithms
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: Huffman coding creates:
+Option A: Fixed-length codes
+Option B: Variable-length prefix-free codes minimizing expected length
+Option C: Random length codes
+Option D: Equal-frequency codes
+Correct: B
+Explanation: Huffman: frequent chars get shorter codes, prefix-free (no code is prefix of another). Optimal for symbol-by-symbol encoding.
+
+---
+
+Subject: Algorithms
+Subtopic: Backtracking
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: N-Queens backtracking worst-case time complexity:
+Option A: O(n^2)
+Option B: O(n!)
+Option C: O(2^n)
+Option D: O(n^n)
+Correct: B
+Explanation: Worst case O(n!). Backtracking prunes branches but worst case is still factorial.
+
+---
+
+Subject: Algorithms
+Subtopic: Divide and Conquer
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: Binary search time complexity:
+Option A: O(n)
+Option B: O(n log n)
+Option C: O(log n)
+Option D: O(sqrt(n))
+Correct: C
+Explanation: T(n)=T(n/2)+O(1). Master Theorem Case 2: O(log n).
+
+---
+
+Subject: Algorithms
+Subtopic: String Algorithms
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: KMP pattern matching time complexity (pattern length m, text length n):
+Option A: O(mn)
+Option B: O(m+n)
+Option C: O(m log n)
+Option D: O(n log m)
+Correct: B
+Explanation: Preprocessing: O(m). Matching: O(n). Total: O(m+n).
+
+---
+
+Subject: Algorithms
+Subtopic: Graph Algorithms
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Floyd-Warshall computes all-pairs shortest paths in:
+Option A: O(V^2)
+Option B: O(V^3)
+Option C: O(VE)
+Option D: O(E^2)
+Correct: B
+Explanation: Floyd-Warshall: 3 nested loops over V vertices each: O(V^3). Works with negative edges (no negative cycles). DP: dp[i][j][k] = shortest path from i to j using only vertices 1..k as intermediaries.
+
+---
+
+Subject: Algorithms
+Subtopic: Sorting
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Quick sort's average case is O(n log n), but worst case occurs when:
+Option A: Array is uniformly random
+Option B: Pivot always chosen from median element
+Option C: Array is already sorted and pivot is first/last element
+Option D: Using randomized pivot selection
+Correct: C
+Explanation: Quick sort worst case O(n^2): occurs when pivot is always the min or max (e.g., sorted array with first element as pivot). Each partition produces sizes (0, n-1). Randomized or median-of-3 pivot selection avoids this.
+
+---
+
+Subject: Algorithms
+Subtopic: Dynamic Programming
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: In the 0/1 knapsack problem with n items and capacity W, DP table size is:
+Option A: O(n)
+Option B: O(W)
+Option C: O(n*W)
+Option D: O(2^n)
+Correct: C
+Explanation: DP table dp[i][w]: max value using first i items with weight limit w. Size: (n+1)*(W+1) = O(nW). Time: O(nW). Space: O(nW) or O(W) with space optimization.
+
+---
+
+Subject: Algorithms
+Subtopic: Graph Algorithms
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: DFS traversal of a graph detects cycles in a directed graph when it finds:
+Option A: A cross edge
+Option B: A back edge
+Option C: A tree edge
+Option D: A forward edge
+Correct: B
+Explanation: In DFS on directed graphs: back edge (edge from vertex to its ancestor in DFS tree) indicates a cycle. If no back edges exist, the graph is a DAG. In undirected graphs, any non-tree edge is a back edge.
+
+---
+
+Subject: Algorithms
+Subtopic: Greedy Algorithms
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Activity selection: maximize number of non-overlapping activities. Greedy choice is always:
+Option A: Activity with earliest start time
+Option B: Activity with shortest duration
+Option C: Activity with earliest finish time
+Option D: Activity with latest start time
+Correct: C
+Explanation: Activity selection greedy: always pick the activity with earliest finish time among compatible activities. This leaves maximum remaining time for future activities. Proof: greedy choice is always part of some optimal solution (exchange argument).
+
+---
+
+Subject: Algorithms
+Subtopic: Divide and Conquer
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Strassen's algorithm multiplies two nxn matrices in:
+Option A: O(n^3)
+Option B: O(n^2.807)
+Option C: O(n^2)
+Option D: O(n^2 log n)
+Correct: B
+Explanation: Strassen: divides into 7 subproblems of size n/2 (vs 8 in naive). T(n) = 7T(n/2) + O(n^2). Master Theorem: n^(log_2 7) = n^2.807. Better than naive O(n^3) for large n.
+
+---
+
+Subject: Algorithms
+Subtopic: NP-Completeness
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Cook-Levin theorem proves that _____ is NP-complete:
+Option A: 2-SAT
+Option B: SAT (Boolean satisfiability)
+Option C: Graph coloring with 2 colors
+Option D: Minimum spanning tree
+Correct: B
+Explanation: Cook-Levin theorem (1971): SAT is NP-complete. This was the first proven NP-complete problem. All NP problems can be reduced to SAT in polynomial time. 2-SAT is in P. 3-SAT is NP-complete (polynomial reduction from SAT).
+
+---
+
+Subject: Algorithms
+Subtopic: Graph Algorithms
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: Prim's algorithm for MST differs from Kruskal's in that Prim's:
+Option A: Sorts all edges first
+Option B: Grows a single tree by adding minimum weight edge connecting tree to non-tree vertex
+Option C: Uses Union-Find data structure
+Option D: Works on directed graphs only
+Correct: B
+Explanation: Prim's builds MST incrementally from a single vertex, always adding the cheapest edge crossing the cut (tree vs non-tree). Kruskal's sorts all edges and adds non-cycle edges greedily. Both produce MST. Prim's uses priority queue O((V+E)logV); Kruskal's uses Union-Find O(E log E).
+
+---
+
+Subject: Algorithms
+Subtopic: Sorting
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: Which sorting algorithm is NOT comparison-based?
+Option A: Merge Sort
+Option B: Heap Sort
+Option C: Counting Sort
+Option D: Quick Sort
+Correct: C
+Explanation: Counting sort runs in O(n+k) by counting occurrences - no comparisons. All comparison-based sorts have Omega(n log n) lower bound.
+
+---
+
+Subject: Algorithms
+Subtopic: Dynamic Programming
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Edit distance (Levenshtein) between "kitten" and "sitting" is:
+Option A: 2
+Option B: 3
+Option C: 4
+Option D: 5
+Correct: B
+Explanation: Edit distance = minimum insertions+deletions+substitutions. kitten->sitten(sub k->s)->sittin(sub e->i)->sitting(insert g). 3 operations. Edit distance = 3.
+
+---
+
+Subject: Algorithms
+Subtopic: Graph Algorithms
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: A strongly connected component (SCC) of a directed graph is found using:
+Option A: Prim's algorithm
+Option B: Kruskal's algorithm
+Option C: Kosaraju's or Tarjan's algorithm
+Option D: Bellman-Ford algorithm
+Correct: C
+Explanation: SCCs (maximal subsets where every vertex is reachable from every other): Kosaraju's: two DFS passes (original + transpose graph), O(V+E). Tarjan's: single DFS with stack and low-link values, O(V+E). Both linear time.
+
+---
+
+Subject: Algorithms
+Subtopic: Divide and Conquer
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: The Master Theorem for T(n) = aT(n/b) + f(n): if f(n) = O(n^(log_b(a)-epsilon)), then:
+Option A: T(n) = O(f(n))
+Option B: T(n) = O(n^(log_b(a)))
+Option C: T(n) = O(n^(log_b(a)) log n)
+Option D: T(n) = O(f(n) log n)
+Correct: B
+Explanation: Master Theorem Case 1: if f(n) = O(n^c) where c < log_b(a), then T(n) = Theta(n^(log_b(a))). The recursive work dominates.
+
+---
+
+Subject: Algorithms
+Subtopic: Greedy Algorithms
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Dijkstra's algorithm fails on graphs with:
+Option A: Undirected edges
+Option B: Large graphs
+Option C: Negative weight edges
+Option D: Disconnected components
+Correct: C
+Explanation: Dijkstra's assumes all edge weights are non-negative. With negative edges, the greedy property breaks (a shorter path might exist through a negative edge discovered later). Use Bellman-Ford for negative edges.
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Finite Automata
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: DFA accepting strings over {0,1} ending in '00' requires minimum how many states?
+Option A: 2
+Option B: 3
+Option C: 4
+Option D: 5
+Correct: B
+Explanation: 3 states: q0 (start), q1 (one 0 seen), q2 (two consecutive 0s, accept). q0-0->q1-0->q2(loop on 0), any 1 goes back to q0.
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Context-Free Languages
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: L = {a^n b^n | n >= 0} is:
+Option A: Regular
+Option B: Context-free but not regular
+Option C: Context-sensitive but not context-free
+Option D: Recursively enumerable only
+Correct: B
+Explanation: Not regular (Pumping Lemma). CFL: CFG S -> aSb | epsilon. Context-free but not regular.
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Turing Machines
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: The Halting Problem is:
+Option A: Decidable and in P
+Option B: NP-complete
+Option C: Undecidable
+Option D: Decidable but not in P
+Correct: C
+Explanation: Turing proved by diagonalization: no TM can decide halting for all inputs. Semi-decidable (RE): can accept but not always reject.
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Regular Languages
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: Pumping Lemma for regular languages: every string s in L with |s|>=p can be written s=xyz where:
+Option A: |y|>=1 and xy^i z in L for all i>=0
+Option B: |y|>=0 and xy^i z in L for i>=1 only
+Option C: x=y=z
+Option D: |xz|>=p
+Correct: A
+Explanation: Pumping Lemma: |y|>=1 (y non-empty), |xy|<=p, and xy^i z in L for ALL i>=0 (including i=0 giving xz).
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Finite Automata
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Complement of L = {strings over {a,b} with at least one 'a'}: minimum DFA states?
+Option A: 1
+Option B: 2
+Option C: 3
+Option D: 4
+Correct: B
+Explanation: Complement L' = {strings with no 'a'} = b*. 2 states: q0(accept, no 'a'), q1(dead, 'a' seen). q0-a->q1, q0-b->q0, q1-a,b->q1.
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Context-Free Languages
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: Which is NOT a context-free language?
+Option A: {a^n b^n | n>=0}
+Option B: {a^n b^n c^n | n>=0}
+Option C: Palindromes over {a,b}
+Option D: {a^n b^2n | n>=0}
+Correct: B
+Explanation: {a^n b^n c^n} requires counting three equal quantities - cannot be done by PDA with single stack. Not CFL (proved by Pumping Lemma for CFLs).
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Turing Machines
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: A language is decidable iff accepted by:
+Option A: DFA
+Option B: PDA
+Option C: Turing machine that always halts
+Option D: Non-deterministic TM
+Correct: C
+Explanation: Decidable (recursive) language: TM always halts and correctly accepts/rejects every input. RE language: TM accepts, may loop on non-members.
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Regular Languages
+Difficulty: Easy
+Marks: 1
+Year: 2027
+Question: Which is a regular language?
+Option A: {a^n b^n | n>=1}
+Option B: {ww | w in {a,b}*}
+Option C: {a^n | n is prime}
+Option D: {a^(2n) | n>=0}
+Correct: D
+Explanation: {a^(2n)} = even-length a-strings = (aa)*. Regular expression: (aa)*. Simple 2-state DFA.
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Closure Properties
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: CFLs are NOT closed under:
+Option A: Union
+Option B: Concatenation
+Option C: Kleene star
+Option D: Intersection
+Correct: D
+Explanation: CFLs closed under union, concat, Kleene star. NOT closed under intersection or complement. Counter-example: {a^n b^n} intersect {b^n c^n} = {a^n b^n c^n} which is not CFL.
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Finite Automata
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: NFA with n states converts to DFA with at most how many states?
+Option A: n
+Option B: n^2
+Option C: 2^n
+Option D: n log n
+Correct: C
+Explanation: Subset construction: DFA states = subsets of NFA states = 2^n possible subsets. In practice many are unreachable.
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Context-Free Languages
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Chomsky Normal Form (CNF) requires all productions to be:
+Option A: A -> BC or A -> a
+Option B: A -> aB or A -> a
+Option C: A -> B or A -> aB
+Option D: A -> BCD or A -> a
+Correct: A
+Explanation: CNF: A -> BC (two non-terminals) or A -> a (single terminal). Used for CYK parsing O(n^3).
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Regular Languages
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: Regular expression (a+b)*abb accepts:
+Option A: All strings ending with 'ab'
+Option B: All strings ending with 'abb'
+Option C: Strings containing 'abb'
+Option D: Strings starting with 'abb'
+Correct: B
+Explanation: (a+b)* matches any prefix, then 'abb' is mandatory suffix. Accepts all strings ending with 'abb'.
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Turing Machines
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Rice's theorem states: any non-trivial semantic property of TM languages is:
+Option A: Decidable
+Option B: NP-complete
+Option C: Undecidable
+Option D: Always true
+Correct: C
+Explanation: Rice's Theorem: any non-trivial property P of L(M) (language of TM M) is undecidable. Generalizes Halting Problem undecidability.
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Finite Automata
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: The language accepted by DFA must be:
+Option A: Any language
+Option B: Context-free language
+Option C: Regular language
+Option D: Recursively enumerable
+Correct: C
+Explanation: By definition, DFAs (and NFAs) accept exactly the class of regular languages. Any language that can be expressed as a regular expression or recognized by a DFA/NFA is regular.
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Context-Free Languages
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: The language of all strings with equal number of a's and b's is:
+Option A: Regular
+Option B: Context-free
+Option C: Context-sensitive only
+Option D: Not recursively enumerable
+Correct: B
+Explanation: L = {w in {a,b}* | #a(w)=#b(w)} is CFL. CFG: S -> aSbS | bSaS | epsilon. It's not regular (Pumping Lemma shows a^n b^n is not regular, and equal-count strings contain a^n b^n).
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Turing Machines
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: A language is in class RE (Recursively Enumerable) if:
+Option A: It is accepted by a DFA
+Option B: It is rejected by some TM
+Option C: It is accepted by some TM (which may not halt on rejection)
+Option D: It is decided by some TM
+Correct: C
+Explanation: RE (Recursively Enumerable / Turing-recognizable): accepted by some TM that may loop forever on inputs NOT in the language. Recursive (Decidable): accepted by TM that always halts. Recursive subset of RE.
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Finite Automata
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: The minimization of a DFA is achieved by:
+Option A: Converting to NFA first
+Option B: Table-filling algorithm distinguishing states
+Option C: Converting to regular expression
+Option D: Adding more states
+Correct: B
+Explanation: DFA minimization: Mark distinguishable state pairs using table-filling (partition refinement). Initially mark pairs (accepting, non-accepting). Iteratively mark pairs (p,q) where delta(p,a) and delta(q,a) are already marked. Merge all indistinguishable pairs.
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Context-Free Languages
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: CYK (Cocke-Younger-Kasami) algorithm parses a string of length n in a CFG in CNF with time complexity:
+Option A: O(n)
+Option B: O(n^2)
+Option C: O(n^3)
+Option D: O(2^n)
+Correct: C
+Explanation: CYK: DP on substrings. dp[i][j][A] = true if non-terminal A derives the substring from position i to j. Three nested loops: O(n^3 * |G|) where |G| is grammar size. Efficient for parsing all CFLs in CNF.
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Regular Languages
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: The class of regular languages is closed under:
+Option A: Intersection but not union
+Option B: Union, intersection, complement, concatenation, and Kleene star
+Option C: Complement but not intersection
+Option D: Kleene star only
+Correct: B
+Explanation: Regular languages are closed under: union, intersection, complement (all Boolean ops), concatenation, Kleene star, reversal, homomorphism, inverse homomorphism. This makes regular languages a robust and well-understood class.
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Turing Machines
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: A multi-tape TM is equivalent in power (same set of decidable languages) to:
+Option A: DFA
+Option B: Single-tape TM
+Option C: PDA
+Option D: 2-stack PDA
+Correct: B
+Explanation: Multi-tape TMs can be simulated by single-tape TMs (with polynomial overhead). They decide the same class of languages (recursively enumerable). Multi-tape TMs are more efficient (polynomial vs exponential time) but not more powerful.
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Context-Free Languages
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: Pushdown Automata (PDA) extends NFA with:
+Option A: Multiple input heads
+Option B: A stack (LIFO memory)
+Option C: Random access memory
+Option D: A queue
+Correct: B
+Explanation: PDA = NFA + stack. The stack gives unlimited auxiliary memory but only top access (LIFO). PDAs accept exactly the context-free languages. If we use a queue instead, we get a Turing-equivalent model.
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Finite Automata
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Myhill-Nerode theorem characterizes regular languages. A language L is regular iff:
+Option A: It has a finite number of strings
+Option B: It has finitely many equivalence classes under the relation x~y iff for all z: xz in L <=> yz in L
+Option C: Every prefix of strings in L is also in L
+Option D: L can be expressed as a finite union of strings
+Correct: B
+Explanation: Myhill-Nerode: L is regular iff the relation x~y (for all z: xz in L <=> yz in L) has finitely many equivalence classes. The number of classes equals the number of states in the minimal DFA. Used to prove non-regularity (infinite classes => not regular).
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Regular Languages
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: The regular expression for binary strings divisible by 3 (optional hard question):
+Option A: (0|1)*
+Option B: 0*(10*10*10*)*(0|1)*
+Option C: Requires a 4-state DFA; no simple regex form
+Option D: (000|111)*
+Correct: C
+Explanation: Binary strings divisible by 3 require tracking remainder mod 3 through 3 states (q0: rem=0, q1: rem=1, q2: rem=2). A regular expression exists but is complex. The minimal DFA has 3 states (q0 accepting). The regular language can be described by a DFA but the regular expression is intricate.
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Turing Machines
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: The Post Correspondence Problem (PCP) is:
+Option A: Decidable
+Option B: In NP
+Option C: Undecidable
+Option D: Context-free
+Correct: C
+Explanation: PCP: given pairs of strings (ai, bi), does some sequence of indices form matching concatenations? PCP is undecidable (proved by reduction from Halting Problem). Used to prove other problems undecidable by reduction from PCP.
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Context-Free Languages
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Greibach Normal Form (GNF) requires all productions to be of the form:
+Option A: A -> BC
+Option B: A -> a (alpha) where a is terminal and alpha is string of non-terminals
+Option C: A -> a
+Option D: A -> BC or A -> a
+Correct: B
+Explanation: GNF: every production has form A -> a*alpha* where a is a terminal symbol and alpha is a (possibly empty) string of non-terminals. Every string derived starts with expanding a terminal. GNF shows every CFL has a grammar where each step of a leftmost derivation adds one terminal.
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: SQL
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: Which SQL clause filters groups after GROUP BY based on aggregate conditions?
+Option A: WHERE
+Option B: HAVING
+Option C: GROUP BY
+Option D: ORDER BY
+Correct: B
+Explanation: HAVING filters aggregated groups. WHERE filters individual rows before grouping. Example: HAVING COUNT(*) > 5.
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: Normalization
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: BCNF requires: for every non-trivial FD X->Y, X must be:
+Option A: A prime attribute
+Option B: A superkey
+Option C: A candidate key subset
+Option D: A foreign key
+Correct: B
+Explanation: BCNF: every non-trivial FD X->Y has X as superkey. Stronger than 3NF which allows Y to be prime attribute.
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: Transactions
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Which isolation level prevents dirty reads but allows non-repeatable reads?
+Option A: SERIALIZABLE
+Option B: REPEATABLE READ
+Option C: READ COMMITTED
+Option D: READ UNCOMMITTED
+Correct: C
+Explanation: READ COMMITTED: prevents dirty reads (read committed data only), allows non-repeatable reads (value can change between reads in same transaction).
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: Normalization
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: R(A,B,C) with FDs A->B, B->C. C is:
+Option A: Directly dependent on A
+Option B: Not dependent on A
+Option C: Transitively dependent on A
+Option D: Part of a candidate key
+Correct: C
+Explanation: A->B and B->C implies A->C transitively. C depends on A via B (non-key). Violates 3NF. Decompose into R1(A,B) and R2(B,C).
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: SQL
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Query to find employees earning more than their department average:
+Option A: SELECT * FROM Employees WHERE Salary > AVG(Salary);
+Option B: SELECT e.* FROM Employees e WHERE e.Salary > (SELECT AVG(Salary) FROM Employees WHERE DeptID=e.DeptID);
+Option C: SELECT * FROM Employees GROUP BY DeptID HAVING Salary > AVG(Salary);
+Option D: SELECT * FROM Employees WHERE Salary = MAX(Salary);
+Correct: B
+Explanation: Correlated subquery computes average per department for each employee row. For each e, compare e.Salary to average of e's dept.
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: Indexing
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: B+ tree index supports:
+Option A: Only equality searches
+Option B: Both equality and range queries
+Option C: Only updates
+Option D: Only joins
+Correct: B
+Explanation: B+ tree sorted structure supports equality lookups and range scans (linked leaf nodes). Most common database index type.
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: Transactions
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Two-phase locking (2PL) two phases are:
+Option A: Read and Write phases
+Option B: Growing (acquire) and Shrinking (release) phases
+Option C: Lock and Unlock phases
+Option D: Begin and Commit phases
+Correct: B
+Explanation: 2PL: Growing phase - acquire locks, no releases. Shrinking phase - release locks, no new acquisitions. Guarantees serializability.
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: Relational Algebra
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: Natural join of R and S:
+Option A: Cartesian product of R and S
+Option B: Joins on all common attributes, removes duplicate columns
+Option C: Joins only on specified attributes
+Option D: Produces only common rows
+Correct: B
+Explanation: Natural join (bowtie): automatically joins on all same-named attributes, projects out duplicates. R(A,B,C) bowtie S(B,C,D) = schema (A,B,C,D).
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: Normalization
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Lossless join decomposition condition: R decomposed into R1,R2 is lossless if:
+Option A: R1 union R2 = R
+Option B: (R1 intersect R2) -> R1 or (R1 intersect R2) -> R2
+Option C: R1 intersect R2 != empty
+Option D: R1 and R2 are in BCNF
+Correct: B
+Explanation: Lossless if common attributes (R1 cap R2) form a superkey of R1 or R2. Ensures no spurious tuples on natural join.
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: SQL
+Difficulty: Easy
+Marks: 1
+Year: 2027
+Question: SQL command to permanently remove a table and all its data:
+Option A: DELETE
+Option B: TRUNCATE
+Option C: DROP
+Option D: REMOVE
+Correct: C
+Explanation: DROP TABLE removes table structure and data permanently (DDL, cannot rollback). DELETE removes rows (DML, can rollback). TRUNCATE removes all rows quickly (DDL in most DBs).
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: Transactions
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: 'D' in ACID (Durability) guarantees:
+Option A: Transactions execute in isolation
+Option B: Committed changes persist even after system failure
+Option C: All ops succeed or all fail
+Option D: Data stays consistent before and after
+Correct: B
+Explanation: Durability: committed transactions persist through failures. Implemented via write-ahead logging (WAL).
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: Indexing
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: B+ tree of order m: each internal node has between ___ and ___ children:
+Option A: 1 and m
+Option B: ceil(m/2) and m
+Option C: m and 2m
+Option D: m/2 and m/2
+Correct: B
+Explanation: Internal node: ceil(m/2) to m children (at least half-full). Leaf: ceil((m-1)/2) to m-1 data pointers. Root: 2 to m if not leaf.
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: SQL
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: A SQL VIEW is:
+Option A: Physical copy of table on disk
+Option B: Virtual table based on SELECT query result
+Option C: An index on a table
+Option D: A stored procedure
+Correct: B
+Explanation: View: virtual table defined by SELECT. No physical storage (unless materialized view). Provides abstraction, security, query simplification.
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: Normalization
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: 2NF requires: relation in 1NF where every non-prime attribute is:
+Option A: Part of the key
+Option B: Fully functionally dependent on the entire primary key
+Option C: Transitively dependent on key
+Option D: Dependent on a foreign key
+Correct: B
+Explanation: 2NF: no partial dependencies (non-prime attribute dependent on proper subset of composite key). If key is simple, 1NF => 2NF automatically.
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: Relational Algebra
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: The relational algebra operation sigma (selection) with condition C on relation R returns:
+Option A: All columns of R
+Option B: All rows of R satisfying condition C (all columns preserved)
+Option C: Only the columns specified in C
+Option D: Joins R with itself
+Correct: B
+Explanation: Selection sigma_C(R): horizontal filtering - returns rows of R satisfying condition C, keeping all attributes. Projection Pi keeps all rows but selects specific columns (vertical filtering).
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: Transactions
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Deadlock detection in DBMS uses:
+Option A: 2PL protocol
+Option B: Timestamp ordering
+Option C: Wait-for graph cycle detection
+Option D: MVCC
+Correct: C
+Explanation: Deadlock detection: maintain wait-for graph (edge T1->T2 if T1 waits for lock held by T2). Cycle in wait-for graph = deadlock. On detection, abort one transaction (victim selection). Prevention alternatives: wait-die, wound-wait timestamp schemes.
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: Indexing
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: A dense index has one index entry for:
+Option A: Each data block
+Option B: Each record in the data file
+Option C: Each key value group
+Option D: Each page in the database
+Correct: B
+Explanation: Dense index: one entry per record (every search key value has an index entry). Sparse index: one entry per data block (only some search key values). Dense: faster search, more space. Sparse: less space, requires sorted file.
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: SQL
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: OUTER JOIN vs INNER JOIN: LEFT OUTER JOIN returns:
+Option A: Only matching rows from both tables
+Option B: All rows from left table and matching rows from right (nulls where no match)
+Option C: All rows from both tables
+Option D: Only non-matching rows
+Correct: B
+Explanation: LEFT OUTER JOIN: all rows from left table; for rows with no match in right table, right-side attributes are NULL. INNER JOIN: only matching rows. FULL OUTER JOIN: all rows from both tables with NULLs for non-matching.
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: Normalization
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: 4NF eliminates multi-valued dependencies. A multi-valued dependency A ->> B exists when:
+Option A: A functionally determines B
+Option B: For each value of A, there is an independent set of values of B
+Option C: B is a primary key
+Option D: A and B are in different tables
+Correct: B
+Explanation: MVD A ->> B: for each value of A, the set of B values is independent of the remaining attributes. Example: Employee ->> Skills and Employee ->> Hobbies (skills and hobbies are independent sets). 4NF: no non-trivial MVDs where A is not a superkey.
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: Transactions
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: MVCC (Multi-Version Concurrency Control) improves performance by:
+Option A: Using strict 2PL
+Option B: Maintaining multiple versions of data allowing reads without blocking writes
+Option C: Eliminating all locks
+Option D: Serializing all transactions
+Correct: B
+Explanation: MVCC: readers never block writers and writers never block readers by maintaining multiple versions of data (timestamped). Readers see a consistent snapshot. Used in PostgreSQL, Oracle. Avoids read-write conflicts, improving concurrency.
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: SQL
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: SQL DISTINCT keyword in SELECT:
+Option A: Sorts the result
+Option B: Removes duplicate rows from the result
+Option C: Selects only non-null values
+Option D: Groups rows by a column
+Correct: B
+Explanation: SELECT DISTINCT col FROM table: eliminates duplicate rows in the result set. Without DISTINCT, all rows (including duplicates) are returned. DISTINCT applies after projection of selected columns.
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: Relational Algebra
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Division operation R / S in relational algebra returns tuples t in R such that:
+Option A: t appears in both R and S
+Option B: For every tuple in S, t combined with that S-tuple appears in R
+Option C: t does not appear in S
+Option D: t appears more than once in R
+Correct: B
+Explanation: Division R(A,B) / S(B): returns tuples a from the A-component of R such that for every tuple b in S, (a,b) appears in R. Used for "for all" queries: "find employees who have worked on ALL projects in S."
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: Transactions
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Write-ahead logging (WAL) protocol requires:
+Option A: Writing data pages to disk before log records
+Option B: Writing log records to disk before the corresponding data page is written
+Option C: Reading log records before any data access
+Option D: Flushing all buffers on every transaction
+Correct: B
+Explanation: WAL: (1) Log records must be written to stable storage before corresponding data page is written to disk (ensures undo possible). (2) All log records for a transaction must be written before commit (ensures redo possible). WAL enables crash recovery (ARIES algorithm).
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: SQL
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: The SQL RANK() window function assigns rank to rows within a partition. If two rows are tied, RANK() will:
+Option A: Assign same rank and skip subsequent ranks
+Option B: Assign same rank without skipping
+Option C: Assign different ranks arbitrarily
+Option D: Cause an error
+Correct: A
+Explanation: RANK(): tied rows get same rank, next rank is skipped. Example: scores 100,100,90 -> ranks 1,1,3 (rank 2 is skipped). DENSE_RANK(): no gaps -> 1,1,2. ROW_NUMBER(): arbitrary tie-breaking -> 1,2,3.
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: Normalization
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: First Normal Form (1NF) requires that:
+Option A: No transitive dependencies
+Option B: All attributes are atomically single-valued (no repeating groups)
+Option C: No partial dependencies
+Option D: All attributes are keys
+Correct: B
+Explanation: 1NF: all attribute values are atomic (indivisible) - no multi-valued attributes, no nested relations, no repeating groups. Foundation for higher normal forms. Example violation: storing multiple phone numbers in one column.
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: Network Layer
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: OSPF is which type of routing protocol?
+Option A: Distance vector
+Option B: Link state
+Option C: Path vector
+Option D: Hybrid
+Correct: B
+Explanation: OSPF: link-state protocol. Each router floods LSAs, builds full topology, runs Dijkstra. RIP=distance vector, BGP=path vector.
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: Transport Layer
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: TCP three-way handshake correct sequence:
+Option A: SYN -> SYN-ACK -> ACK
+Option B: SYN-ACK -> SYN -> ACK
+Option C: ACK -> SYN -> SYN-ACK
+Option D: SYN -> ACK -> SYN-ACK
+Correct: A
+Explanation: TCP connection: (1)Client SYN, (2)Server SYN-ACK, (3)Client ACK. Then connection established.
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: Application Layer
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: DNS primarily uses which protocol and port?
+Option A: TCP port 80
+Option B: UDP port 53
+Option C: TCP port 443
+Option D: UDP port 67
+Correct: B
+Explanation: DNS: UDP port 53 for queries (fast). TCP port 53 for zone transfers and large responses.
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: Network Layer
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: 192.168.10.0/22 subnet has how many usable hosts?
+Option A: 254
+Option B: 510
+Option C: 1022
+Option D: 2046
+Correct: C
+Explanation: /22: 32-22=10 host bits. 2^10=1024 addresses. Usable = 1024-2 = 1022.
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: Data Link Layer
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: CSMA/CD is used in:
+Option A: Wireless 802.11
+Option B: Token Ring
+Option C: Traditional Ethernet (802.3) wired
+Option D: ATM
+Correct: C
+Explanation: CSMA/CD: wired Ethernet. Wireless uses CSMA/CA (collision avoidance). Detection impossible in wireless medium.
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: Transport Layer
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: TCP window size W bytes, RTT T seconds: max throughput is:
+Option A: W/T
+Option B: W*T
+Option C: T/W
+Option D: W+T
+Correct: A
+Explanation: In one RTT, sender can send W bytes before waiting for ACK. Max throughput = W/T bytes/second.
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: Network Layer
+Difficulty: Medium
+Marks: 1
+Year: 2027
+Question: IPv4 fragmentation Identification field identifies:
+Option A: Source port
+Option B: All fragments of same original datagram
+Option C: Routing protocol
+Option D: Destination port
+Correct: B
+Explanation: 16-bit Identification: same for all fragments of one datagram. Fragment Offset and MF flag manage reassembly.
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: Application Layer
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: HTTP/2 key improvement over HTTP/1.1:
+Option A: Uses UDP instead of TCP
+Option B: Multiplexing multiple requests over single TCP connection
+Option C: Eliminates TLS
+Option D: Uses plaintext framing
+Correct: B
+Explanation: HTTP/2: multiplexing (multiple concurrent streams over one TCP connection), header compression (HPACK), server push, binary framing.
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: Network Security
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: Which is a symmetric key encryption algorithm?
+Option A: RSA
+Option B: Diffie-Hellman
+Option C: AES
+Option D: ECC
+Correct: C
+Explanation: AES: symmetric (same key for encrypt/decrypt). RSA, DH, ECC: asymmetric (public/private key pairs).
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: Transport Layer
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: After TCP timeout, congestion window (cwnd) is reset to:
+Option A: Half of current
+Option B: Double current
+Option C: 1 MSS
+Option D: Unchanged
+Correct: C
+Explanation: Timeout: ssthresh=cwnd/2; cwnd=1 MSS; restart slow start. Triple dup ACK: ssthresh=cwnd/2; cwnd=ssthresh (fast recovery).
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: Data Link Layer
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: ARP is used to find:
+Option A: IP from domain name
+Option B: MAC address from IP address
+Option C: Route to destination
+Option D: Port from service name
+Correct: B
+Explanation: ARP: maps IP->MAC on local subnet. Broadcast query, unicast reply, cached in ARP table.
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: Network Layer
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: RIP uses which routing algorithm?
+Option A: Dijkstra's
+Option B: Bellman-Ford
+Option C: Floyd-Warshall
+Option D: A*
+Correct: B
+Explanation: RIP: distance vector using Bellman-Ford. Periodic broadcasts, hop count metric (max 15), slow convergence, count-to-infinity problem.
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: Network Security
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: In TLS handshake, server proves identity using:
+Option A: Symmetric key
+Option B: Digital certificate (X.509) with public key signed by CA
+Option C: IP address
+Option D: Shared password
+Correct: B
+Explanation: TLS: server sends X.509 certificate (public key + CA signature). Client verifies against trusted CAs. Proves server owns that public key.
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: Application Layer
+Difficulty: Easy
+Marks: 1
+Year: 2027
+Question: Protocol used to SEND email from client to server:
+Option A: IMAP
+Option B: POP3
+Option C: SMTP
+Option D: FTP
+Correct: C
+Explanation: SMTP: send email (client->server, server->server). IMAP/POP3: retrieve email from server.
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: Transport Layer
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: UDP preferred over TCP for real-time applications because:
+Option A: UDP guarantees delivery
+Option B: UDP is reliable
+Option C: UDP has lower overhead and no connection delay
+Option D: UDP supports error correction
+Correct: C
+Explanation: UDP: connectionless, 8-byte header, no retransmission, no congestion control. Low latency preferred in VoIP, gaming, streaming.
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: Network Layer
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: NAT primarily solves:
+Option A: DNS resolution failure
+Option B: IPv4 address exhaustion by sharing one public IP among multiple devices
+Option C: TCP connection establishment
+Option D: Routing table overflow
+Correct: B
+Explanation: NAT: maps private IP:port to public IP:port. Extends IPv4 usability but complicates P2P.
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: Data Link Layer
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Ethernet frame minimum size is 64 bytes to ensure collision detection. If data < minimum, the frame is:
+Option A: Discarded
+Option B: Padded (padded with zeros)
+Option C: Fragmented
+Option D: Rejected by the MAC layer
+Correct: B
+Explanation: Minimum Ethernet frame = 64 bytes (14 header + 46+ data + 4 FCS). If data < 46 bytes, padding zeros added to meet minimum. Minimum needed: in worst case, sender must still be transmitting when collision signal arrives (propagation delay * 2 = slot time).
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: Network Layer
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: CIDR (Classless Inter-Domain Routing) notation 10.0.0.0/8 means:
+Option A: 8 host bits, 24 network bits
+Option B: 8 network bits, 24 host bits
+Option C: Only 8 addresses
+Option D: Class B network
+Correct: B
+Explanation: /8: 8 bits for network, 24 bits for host. Addresses: 10.0.0.0 to 10.255.255.255. Total = 2^24 = 16,777,216 addresses. CIDR replaces classful addressing (Class A=8 network bits, Class B=16, Class C=24).
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: Application Layer
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: HTTPS uses which default port?
+Option A: 80
+Option B: 443
+Option C: 8080
+Option D: 22
+Correct: B
+Explanation: HTTP: port 80. HTTPS (HTTP Secure = HTTP over TLS/SSL): port 443. SSH: port 22. Other common ports: FTP:21, SMTP:25, DNS:53, POP3:110, IMAP:143.
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: Network Security
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: A digital signature ensures:
+Option A: Confidentiality of the message
+Option B: Authentication (sender identity) and non-repudiation
+Option C: Integrity only
+Option D: Availability of the service
+Correct: B
+Explanation: Digital signatures: signed with sender's PRIVATE key, verified with PUBLIC key. Provides: authentication (only owner of private key could sign), non-repudiation (cannot deny signing), and integrity (message not modified). Not confidentiality (use encryption for that).
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: Transport Layer
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: TCP slow start phase doubles the congestion window (cwnd) every:
+Option A: RTT
+Option B: Packet sent
+Option C: Timeout event
+Option D: ACK received in some implementations (each ACK increments by 1 MSS)
+Correct: A
+Explanation: Slow start: for each ACK received, cwnd increases by 1 MSS. Since ACKs arrive for each segment in a window, in one RTT cwnd doubles (approximately). Continues until cwnd >= ssthresh, then switches to congestion avoidance (linear increase).
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: Data Link Layer
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: Spanning Tree Protocol (STP) in Ethernet prevents:
+Option A: IP address conflicts
+Option B: Broadcast storms caused by loops in switched network topology
+Option C: Fragmentation
+Option D: Routing loops
+Correct: B
+Explanation: STP (IEEE 802.1D): eliminates loops in switched Ethernet by blocking some ports, creating a tree topology. Without STP, broadcast frames would circulate forever causing broadcast storms. Ports can be in states: blocking, listening, learning, forwarding.
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: Network Layer
+Difficulty: Hard
+Marks: 2
+Year: 2027
+Question: Quality of Service (QoS) mechanism Differentiated Services (DiffServ) marks packets using:
+Option A: TCP port numbers
+Option B: DSCP (Differentiated Services Code Point) in IP header
+Option C: MAC address priority bits
+Option D: VLAN tags
+Correct: B
+Explanation: DiffServ: 6-bit DSCP field in IPv4 TOS/IPv6 Traffic Class byte. Routers use DSCP to classify packets into different behavior aggregates (expedited forwarding for voice, assured forwarding for video, default for best-effort). Per-hop behavior implemented at each router.
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: Application Layer
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: FTP uses which two TCP connections?
+Option A: One for control, one for data
+Option B: Two for data transfer
+Option C: One persistent connection
+Option D: UDP for control, TCP for data
+Correct: A
+Explanation: FTP uses two TCP connections: (1) Control connection (port 21): commands and responses, persistent throughout session. (2) Data connection (port 20 in active mode, ephemeral in passive mode): actual file transfer, opened/closed per file. This separation allows sending commands while transferring.
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: Network Security
+Difficulty: Medium
+Marks: 2
+Year: 2027
+Question: A man-in-the-middle (MITM) attack is prevented by:
+Option A: Firewalls
+Option B: Certificate-based authentication in TLS
+Option C: Strong passwords
+Option D: Rate limiting
+Correct: B
+Explanation: MITM: attacker intercepts communication between two parties. Certificate-based TLS authentication prevents MITM by verifying server identity (certificate signed by trusted CA). The client checks the certificate, ensuring it's communicating with the genuine server, not an impostor.

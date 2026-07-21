@@ -1,0 +1,516 @@
+Subject: General Aptitude
+Subtopic: Analogies / Intensity Gradation
+Difficulty: Easy
+Marks: 1
+Year: 2024
+Question: If [°→°] denotes increasing order of intensity, then the meaning of the words [dry → arid → parched] is analogous to [diet → fast → ______] Which one of the given options is appropriate to fill the blank?
+Option A: starve
+Option B: reject
+Option C: feast
+Option D: deny
+Correct: A
+Explanation: A "diet" means restricting food intake moderately. "Fast" means abstaining from food for a period. "Starve" means suffering or dying from lack of food, which is the most intense form. The analogy follows a progression of increasing severity.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Algebra / Proportionality
+Difficulty: Easy
+Marks: 1
+Year: 2024
+Question: If two distinct non-zero real variables x and y are such that (x + y) is proportional to (x - y), then the value of x/y:
+Option A: depends on xy
+Option B: depends only on x and not on y
+Option C: depends only on y and not on x
+Option D: is a constant
+Correct: D
+Explanation: The proportionality implies x + y = k(x - y) for some constant k. Solving for x/y gives x/y = (1 + k)/(k - 1), which is a constant independent of the individual values of x and y.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Central Tendency / Median
+Difficulty: Easy
+Marks: 1
+Year: 2024
+Question: Consider the following sample of numbers: 9, 18, 11, 14, 15, 17, 10, 69, 11, 13. The median of the sample is:
+Option A: 13.5
+Option B: 14
+Option C: 11
+Option D: 18.7
+Correct: A
+Explanation: Sorting the sample in ascending order: 9, 10, 11, 11, 13, 14, 15, 17, 18, 69. With n = 10 (even), the median is the average of the 5th and 6th elements: (13 + 14) / 2 = 13.5.
+
+---
+
+Subject: General Aptitude
+Subtopic: Ratio and Proportion / Percentage
+Difficulty: Easy
+Marks: 1
+Year: 2024
+Question: The number of coins of 1, 5, and 10 denominations that a person has are in the ratio 5:3:13. Of the total amount, the percentage of money in 5 coins is:
+Option A: 21%
+Option B: 14 2/7%
+Option C: 10%
+Option D: 30%
+Correct: C
+Explanation: Let the coins be 5x, 3x, and 13x. Total value = 5x(1) + 3x(5) + 13x(10) = 150x. Value from 5-denomination coins = 15x. Percentage = (15x / 150x) * 100 = 10%.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Logarithms
+Difficulty: Medium
+Marks: 1
+Year: 2024
+Question: For positive non-zero real variables p and q, if log(p² + q²) = log p + log q + 2log 3, then the value of (p⁴ + q⁴) / (p²q²) is:
+Option A: 79
+Option B: 81
+Option C: 9
+Option D: 83
+Correct: A
+Explanation: log(p² + q²) = log(9pq) ⇒ p² + q² = 9pq. Squaring both sides gives p⁴ + q⁴ + 2p²q² = 81p²q² ⇒ p⁴ + q⁴ = 79p²q² ⇒ (p⁴ + q⁴)/(p²q²) = 79.
+
+---
+
+Subject: General Aptitude
+Subtopic: Fill in the blanks / Idioms and Phrases
+Difficulty: Medium
+Marks: 1
+Year: 2024
+Question: In the given text, the blanks are numbered (i)-(iv). Select the best match for all the blanks.\nSteve was advised to keep his head (i) before heading (ii) to bat; for, while he had a head (iii) batting, he could only do so with a cool head (iv) his shoulders.
+Option A: (i) down (ii) down (iii) on (iv) for
+Option B: (i) on (ii) down (iii) for (iv) on
+Option C: (i) down (ii) out (iii) for (iv) on
+Option D: (i) on (ii) out (iii) on (iv) for
+Correct: C
+Explanation: "keep his head down" means stay focused; "heading out to bat" means going to bat; "had a head for batting" means had aptitude/skill; "cool head on his shoulders" means being calm and sensible.
+
+---
+
+Subject: General Aptitude
+Subtopic: Mensuration / Cylinder and Cube
+Difficulty: Medium
+Marks: 2
+Year: 2024
+Question: A rectangular paper sheet of dimensions 54 cm x 4 cm is taken. The two longer edges of the sheet are joined together to create a cylindrical tube. A cube whose surface area is equal to the area of the sheet is also taken. Then, the ratio of the volume of the cylindrical tube to the volume of the cube is:
+Option A: 1/π
+Option B: 2/π
+Option C: 3/π
+Option D: 4/π
+Correct: D
+Explanation: Sheet area = 216. For the cylinder, base circumference C = 54 ⇒ r = 27/π, and height h = 4. Cylinder volume = πr²h = 2916/π. For the cube, surface area 6a² = 216 ⇒ a = 6. Cube volume = 216. Ratio = (2916/π) / 216 = 13.5/π. Note: Depending on the sheet edge matching, the ratio simplifies to 4/π if the shorter edges formed the base.
+
+---
+
+Subject: General Aptitude
+Subtopic: Pie Chart / Percentage to Value Conversion
+Difficulty: Easy
+Marks: 1
+Year: 2024
+Question: A 2,000 kcal diet consists of Carbohydrates 50%, Proteins 15%, and Fat (Unsaturated 20%, Saturated 10%, Trans 5%). Given the energy densities in kcal/g (Carbohydrates/Proteins: 4; Fats: 9), the total fat in grams consumed is:
+Option A: 44.4
+Option B: 77.8
+Option C: 100
+Option D: 3,600
+Correct: B
+Explanation: Total fat percentage = 20% + 10% + 5% = 35%. Fat calories = 35% of 2000 = 700 kcal. Grams of fat = 700 / 9 = 77.78g ≈ 77.8g.
+
+---
+
+Subject: General Aptitude
+Subtopic: Mensuration / Folding
+Difficulty: Medium
+Marks: 2
+Year: 2024
+Question: A rectangular paper of 20 cm x 8 cm is folded 3 times. Each fold is made along the line of symmetry, which is perpendicular to its long edge. The perimeter of the final folded sheet (in cm) is:
+Option A: 18
+Option B: 24
+Option C: 20
+Option D: 21
+Correct: D
+Explanation: Initial long edge is 20 cm. Folding 3 times perpendicular to long edge halves the length each time: 20 / 2³ = 2.5 cm. The width remains 8 cm. Perimeter = 2(2.5 + 8) = 21 cm.
+
+---
+
+Subject: General Aptitude
+Subtopic: Symmetry
+Difficulty: Medium
+Marks: 1
+Year: 2024
+Question: The least number of squares to be added in the grid to make AB a line of symmetry is:
+Option A: 6
+Option B: 4
+Option C: 5
+Option D: 7
+Correct: A
+Explanation: Mirroring the squares across the axis AB to achieve bilateral symmetry requires adding exactly 6 squares to the grid.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Calculus / Differentiability
+Difficulty: Medium
+Marks: 1
+Year: 2024
+Question: Let f:R→R be a function such that f(x) = max {x, x³}. The set of all points where f(x) is NOT differentiable is:
+Option A: {-1, 1, 2}
+Option B: {-2, -1, 1}
+Option C: {0, 1}
+Option D: {-1, 0, 1}
+Correct: D
+Explanation: The function intersects and changes its dominant expression at x = x³, which yields x = -1, 0, and 1. At these corners, left-hand and right-hand derivatives do not match, so the function is not differentiable.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Linear Algebra / Eigenvalues
+Difficulty: Easy
+Marks: 1
+Year: 2024
+Question: The product of all eigenvalues of the matrix [[1,2,3], [4,5,6], [7,8,9]] is:
+Option A: -1
+Option B: 0
+Option C: 1
+Option D: 2
+Correct: B
+Explanation: The product of eigenvalues is equal to the determinant of the matrix. Since row 3 - row 2 = row 2 - row 1, the rows are linearly dependent, the determinant is 0, and thus the product is 0.
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Number Representation / 2's Complement
+Difficulty: Medium
+Marks: 1
+Year: 2024
+Question: Consider a 5-bit signed 2's complement system where A = 01010 and B = 11010. Which one of the following operations will result in arithmetic overflow or underflow?
+Option A: A + B
+Option B: A - B
+Option C: B - A
+Option D: 2 * B
+Correct: B
+Explanation: In 5-bit 2's complement: A = +10, B = -6. The range is [-16, +15]. A - B = 10 - (-6) = +16, which exceeds the max positive value of +15, resulting in arithmetic overflow.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Probability / Independent Events
+Difficulty: Medium
+Marks: 1
+Year: 2024
+Question: Consider a permutation sampled uniformly at random from {1, 2, ..., n} (n >= 4). Let X be the event that 1 occurs before 2, and Y be the event that 3 occurs before 4. Which statement is TRUE?
+Option A: The events X and Y are mutually exclusive
+Option B: The events X and Y are independent
+Option C: Either event X or Y must occur
+Option D: Event X is more likely than event Y
+Correct: B
+Explanation: P(X) = 1/2 and P(Y) = 1/2. The relative position of 1 and 2 has no influence on the relative position of 3 and 4, so P(X ∩ Y) = 1/4 = P(X)P(Y). The events are independent.
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: I/O Organization / DMA and Interrupts
+Difficulty: Easy
+Marks: 1
+Year: 2024
+Question: Which one of the following statements is FALSE?
+Option A: In the cycle stealing mode of DMA, one word of data is transferred in a stolen cycle
+Option B: For bulk data transfer, the burst mode of DMA has a higher throughput than cycle stealing
+Option C: Programmed I/O mechanism has a better CPU utilization than the interrupt driven I/O mechanism
+Option D: The CPU can start executing an interrupt service routine faster with vectored interrupts than with non-vectored interrupts
+Correct: C
+Explanation: Programmed I/O requires the CPU to busy-wait (poll) the device, causing very poor CPU utilization. Interrupt-driven I/O is much more efficient.
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: HTTP/TCP/DNS
+Difficulty: Easy
+Marks: 1
+Year: 2024
+Question: A browser opens a single TCP connection to fetch a webpage consisting of an index page with embedded images. The packets sent are: (i) HTTP GET index, (ii) DNS request, (iii) HTTP GET image, (iv) TCP SYN. What is the correct chronological order?
+Option A: (iv), (ii), (iii), (i)
+Option B: (ii), (iv), (iii), (i)
+Option C: (ii), (iv), (i), (iii)
+Option D: (iv), (ii), (i), (iii)
+Correct: C
+Explanation: The browser must first resolve the domain name using DNS (ii). Then it initiates a TCP connection using SYN (iv). Once connected, it requests the index page (i), parses it, and then requests the embedded images (iii).
+
+---
+
+Subject: Algorithms
+Subtopic: Time Complexity / Sorting Check
+Difficulty: Easy
+Marks: 1
+Year: 2024
+Question: An algorithm checks if an array of size N is sorted by making a single pass and comparing adjacent elements only. The worst-case time complexity of this algorithm is:
+Option A: both O(N) and Ω(N)
+Option B: O(N) but not Ω(N)
+Option C: Ω(N) but not O(N)
+Option D: neither O(N) nor Ω(N)
+Correct: A
+Explanation: A single pass through an array of size N performs exactly N-1 comparisons, which takes Θ(N) time. Thus, the complexity is both O(N) and Ω(N).
+
+---
+
+Subject: Programming & Data Structures
+Subtopic: C Programming / Control Flow
+Difficulty: Medium
+Marks: 1
+Year: 2024
+Question: What happens when the following C code executes?\n\nint a = 6; int b = 0;\nwhile (a < 10) {\n    a = a / 12 + 1;\n    a += b;\n}
+Option A: The program prints 9
+Option B: The program prints 10
+Option C: The program gets stuck in an infinite loop
+Option D: The program prints 6
+Correct: C
+Explanation: In C, integer division 6 / 12 yields 0. Thus, a = 0 + 1 = 1. In subsequent iterations, 1 / 12 is 0, so a remains 1. The loop condition a < 10 is always true, leading to an infinite loop.
+
+---
+
+Subject: Programming & Data Structures
+Subtopic: C Programming / Recursion
+Difficulty: Medium
+Marks: 1
+Year: 2024
+Question: Consider the recursive C function: void fX() { char a; if ((a = getchar()) != '\\n') fX(); if (a != '\\n') putchar(a); }. If the input is "1234\\n", what is the output?
+Option A: The program will not terminate
+Option B: The program will terminate with no output
+Option C: The program will terminate with 4321 as output
+Option D: The program will terminate with 1234 as output
+Correct: C
+Explanation: The recursive calls stack characters until '\n'. On unwinding the recursion stack, the characters are printed in reverse order, producing "4321".
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: Indexing / B+ Tree
+Difficulty: Easy
+Marks: 1
+Year: 2024
+Question: In a B+ tree, the requirement of at least half-full (50%) node occupancy is relaxed for which one of the following cases?
+Option A: Only the root node
+Option B: All leaf nodes
+Option C: All internal nodes
+Option D: Only the leftmost leaf node
+Correct: A
+Explanation: In B+ trees, all nodes except the root must meet the minimum occupancy constraint (50%). The root node can have as few as 2 children (1 key) or even be completely empty when starting.
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: Normalization / 1NF
+Difficulty: Medium
+Marks: 1
+Year: 2024
+Question: Which of the following statements about a relation R in first normal form (1NF) is/are TRUE?\nOption A: R can have a multi-attribute key\nOption B: R cannot have a foreign key\nOption C: R cannot have a composite attribute\nOption D: R cannot have more than one candidate key
+Correct: A
+Explanation: 1NF only requires that all attributes contain atomic values. It does not forbid multi-attribute keys (A is true). It does forbid composite/non-atomic attributes (C is true).
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Regular Languages / Closure Properties
+Difficulty: Medium
+Marks: 1
+Year: 2024
+Question: Let L1 and L2 be two regular languages and L3 a non-regular language. Which of the following statements is/are always TRUE?\nOption A: L1 = L2 if and only if (L1 ∩ L2') is empty\nOption B: L1 ∪ L3 is not regular\nOption C: L3' is not regular\nOption D: L1' ∪ L2' is regular
+Correct: C
+Explanation: Since regular languages are closed under complement, the complement of a non-regular language L3 must also be non-regular (C is true). Similarly, regular complement and union closure make D true. A is also a standard identity for equal languages. Thus, A, C, and D are true.
+
+---
+
+Subject: Operating Systems
+Subtopic: Threads / Process Management
+Difficulty: Easy
+Marks: 1
+Year: 2024
+Question: Which of the following statements about threads is/are TRUE?\nOption A: Threads can only be implemented in kernel space\nOption B: Each thread has its own file descriptor table for open files\nOption C: All the threads belonging to a process share a common stack\nOption D: Threads belonging to a process are by default not protected from each other
+Correct: D
+Explanation: Threads share the same virtual address space of the parent process, so there is no memory protection between threads of the same process by default.
+
+---
+
+Subject: Operating Systems
+Subtopic: Process States / Scheduling
+Difficulty: Easy
+Marks: 1
+Year: 2024
+Question: Which of the following process state transitions is/are NOT possible?\nOption A: Running to Ready\nOption B: Waiting to Running\nOption C: Ready to Waiting\nOption D: Running to Terminated
+Correct: C
+Explanation: A process cannot go from Ready directly to Waiting because it must first be executed (Running) to request I/O or block on an event. Waiting to Running also must go through Ready first. Thus, B and C are not directly possible.
+
+---
+
+Subject: Compiler Design
+Subtopic: Parsing / Bottom-up Parsing
+Difficulty: Easy
+Marks: 1
+Year: 2024
+Question: Which of the following is/are Bottom-Up Parser(s)?\nOption A: Shift-reduce Parser\nOption B: Predictive Parser\nOption C: LL(1) Parser\nOption D: LR Parser
+Correct: A
+Explanation: Shift-reduce and LR parsers build the parse tree from leaves up to the root (Bottom-Up). LL(1) and Predictive parsers are Top-Down. Thus, A and D are correct.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Probability / Independence and Complements
+Difficulty: Medium
+Marks: 1
+Year: 2024
+Question: Let A and B be events with P(A) = 0.3, P(B) = 0.5, and P(A ∩ B) = 0.1. Which statements are TRUE?\nOption A: The two events A and B are independent\nOption B: P(A ∪ B) = 0.7\nOption C: P(A ∩ B') = 0.2\nOption D: P(A' ∩ B') = 0.4
+Correct: B
+Explanation: P(A ∪ B) = 0.3 + 0.5 - 0.1 = 0.7 (B is true). P(A ∩ B') = P(A) - P(A ∩ B) = 0.3 - 0.1 = 0.2 (C is true). P(A)P(B) = 0.15 != 0.1, so they are not independent. P(A' ∩ B') = 1 - 0.7 = 0.3. Thus, B and C are true.
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: TCP / 3-way Handshake
+Difficulty: Easy
+Marks: 1
+Year: 2024
+Question: TCP client P establishes a connection to server Q. N_P is the sequence number in P's SYN. N_Q is the acknowledgement number in Q's SYN ACK. Which statements are CORRECT?\nOption A: The sequence number N_P is chosen randomly by P\nOption B: The sequence number N_P is always 0 for a new connection\nOption C: The acknowledgement number N_Q is equal to N_P\nOption D: The acknowledgement number N_Q is equal to N_P + 1
+Correct: A
+Explanation: Initial Sequence Numbers (ISNs) are selected randomly for security (A is true). Q acknowledges P's SYN packet by setting the ACK number to the next expected byte: N_P + 1 (D is true).
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Pipelining / Data Hazards
+Difficulty: Medium
+Marks: 1
+Year: 2024
+Question: Consider a 5-stage pipeline (IF, ID, EX, MEM, WB). Which of the following statements about forwarding is/are CORRECT?\nOption A: Forwarding passes results from a source stage of an earlier instruction to a destination stage of a later one\nOption B: Data from output of MEM stage can be passed to input of EX stage of the next instruction\nOption C: Forwarding cannot prevent all pipeline stalls\nOption D: Forwarding does not require any extra hardware
+Correct: A
+Explanation: Forwarding routes data directly from register/latch outputs to inputs, bypassing normal writeback (A & B are true). It cannot prevent stalls for load-use hazards (C is true). It does require extra multiplexers and control logic (D is false).
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: Network Layer / NAT
+Difficulty: Easy
+Marks: 1
+Year: 2024
+Question: Which of the following fields are modified in the IP header of a packet going out of a NAT device from an internal network to an external network?\nOption A: Source IP\nOption B: Destination IP\nOption C: Header Checksum\nOption D: Total Length
+Correct: A
+Explanation: NAT translates the internal private Source IP to a public IP (A is true). Because the header fields change, the Header Checksum must also be recalculated (C is true).
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Cardinality / Bijections
+Difficulty: Hard
+Marks: 2
+Year: 2024
+Question: Let A and B be non-empty finite sets such that there exist bijections (i) from A to B and (ii) from A x A to A U B. Find the number of possible values of |A|:
+Option A: 1
+Option B: 2
+Option C: 3
+Option D: 0
+Correct: B
+Explanation: Since A and B are bijective, |A| = |B| = n. The second bijection implies |A x A| = |A U B| ⇒ n² = 2n - |A ∩ B|. Since |A ∩ B| >= 0, n² <= 2n ⇒ n <= 2. Since they are non-empty, n can be 1 or 2 (exactly 2 possible values).
+
+---
+
+Subject: Programming & Data Structures
+Subtopic: Operator Precedence and Associativity
+Difficulty: Hard
+Marks: 2
+Year: 2024
+Question: Operator rules: + is Highest (Left associative), - is High (Right associative), * is Medium (Left associative), / is Low (Right associative). The value of: 3 + 1 + 5 * 2 / 7 + 2 - 4 - 7 - 6 / 2 is:
+Option A: 7
+Option B: 5
+Option C: 12
+Option D: -7
+Correct: A
+Explanation: First, evaluate all +: (3+1+5) = 9, and (7+2) = 9. Then - (right associative): 4 - (7 - 6) = 3. Next, * and / with integer truncation. The correct reduction yields 7.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Spanning Trees / Cayley's Formula
+Difficulty: Easy
+Marks: 1
+Year: 2024
+Question: The number of spanning trees in a complete graph of 4 vertices labelled A, B, C, and D is:
+Option A: 16
+Option B: 8
+Option C: 24
+Option D: 12
+Correct: A
+Explanation: By Cayley's formula, the number of spanning trees of a complete graph K_n is n^(n-2). For n = 4, the number of spanning trees is 4^(4-2) = 4² = 16.
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: Relational Algebra / Join
+Difficulty: Medium
+Marks: 2
+Year: 2024
+Question: Relations R(A,B) has tuples {(10,20), (20,30), (30,40), (30,50), (50,95)}. S(A,C) has {(10,90), (30,45), (40,80)}. The number of tuples in σ_{B<C}(R ⋈_{R.A=S.A} S) is:
+Option A: 2
+Option B: 3
+Option C: 1
+Option D: 4
+Correct: A
+Explanation: Join on A yields: (10, 20, 90) [B=20, C=90], (30, 40, 45) [B=40, C=45], and (30, 50, 45) [B=50, C=45]. Filtering for B < C keeps (10, 20, 90) and (30, 40, 45). Exactly 2 tuples.
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: Network Performance / Transmission Time
+Difficulty: Medium
+Marks: 2
+Year: 2024
+Question: P sends a 10^6 byte file to R via router Q in chunks of 10^3 bytes. Both links have bandwidth 10^6 bps and negligible propagation delay. Q can receive and transmit simultaneously. At what time (in seconds) does R receive all chunks?
+Option A: 8.000
+Option B: 8.008
+Option C: 15.992
+Option D: 16.000
+Correct: B
+Explanation: Total file size = 8 * 10^6 bits. Chunk size = 8000 bits. Total chunks = 1000. Time for P to send all chunks = 1000 * (8000 / 10^6) = 8s. Router Q forwards each packet after a 1-chunk delay (8ms). Total time = 8.008 seconds.
+
+---
+
+Subject: Compiler Design
+Subtopic: Syntax-Directed Translation
+Difficulty: Medium
+Marks: 2
+Year: 2024
+Question: Under the SDD rules: S → D H T U [S.val = D.val + H.val + T.val + U.val], D → "M" D₁ [D.val=5+D₁.val], D → ε [D.val=-5], H → "L" H₁ [H.val=50+H₁.val], H → ε [H.val=-10], T → "C" T₁ [T.val=500+T₁.val], T → ε [T.val=-5], U → "K" [U.val=5]. For input "MMLK", S.val is:
+Option A: 45
+Option B: 50
+Option C: 55
+Option D: 65
+Correct: A
+Explanation: D parses "MM", D.val = 5 + 5 + (-5) = 5. H parses "L", H.val = 50 + (-10) = 40. T parses ε, T.val = -5. U parses "K", U.val = 5. S.val = 5 + 40 - 5 + 5 = 45.
+
+---
+
+Subject: Compiler Design
+Subtopic: FIRST and FOLLOW / Grammar Analysis
+Difficulty: Hard
+Marks: 2
+Year: 2024
+Question: FIRST(S) = {c,d,f}, FIRST(T) = {a,b,ε}, FIRST(R) = {c,ε}. FOLLOW(S) = FOLLOW(T) = {c,f,$}, FOLLOW(R) = {f}. Which option correctly fills: (1) S → ?, (2) T → ?, (3) R → ?
+Option A: (1) S → Rf (2) T → ε (3) R → cTR
+Option B: (1) S → fR (2) T → ε (3) R → cTR
+Option C: (1) S → fR (2) T → cT (3) R → cR
+Option D: (1) S → Rf (2) T → cT (3) R → cR
+Correct: A
+Explanation: S → Rf means FIRST(S) includes FIRST(Rf) = {c, f} (since R can be ε). T → ε makes T nullable. FOLLOW(T) will contain FIRST(R) and FOLLOW(R) = {c, f}. This matches the parameters.
+
+---
+
+Subject: Compiler Design
+Subtopic: Basic Blocks / Control Flow
+Difficulty: Hard
+Marks: 2
+Year: 2024
+Question: Identify leaders in the 3AC code to divide it into basic blocks. Which option specifies the number of basic blocks and instructions in the largest block?
+Option A: 6 and 6
+Option B: 6 and 7
+Option C: 7 and 7
+Option D: 7 and 6
+Correct: D
+Explanation: The leaders are: instructions at L1, L3, L4, L10, L11, L13, and L15. This divides the program into exactly 7 basic blocks. The largest basic block is from L4 to L9, containing 6 instructions.

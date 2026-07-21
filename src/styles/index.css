@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-size: 110%;
+  }
+  body {
+    @apply transition-all duration-300 bg-slate-50 text-slate-800 dark:bg-[#080d16] dark:text-slate-100 font-sans;
+  }
+}
+
+/* Custom Premium Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-200 dark:bg-slate-800/80 rounded-full hover:bg-slate-300 dark:hover:bg-slate-700/80 transition-all;
+}
+
+/* Frosted Glassmorphism Panels */
+.glass-panel {
+  @apply bg-white/75 dark:bg-slate-900/40 backdrop-blur-xl border border-slate-200/50 dark:border-white/[0.06] shadow-xl shadow-slate-100/10 dark:shadow-2xl dark:shadow-black/40 transition-all duration-300;
+}
+
+.glass-card {
+  @apply bg-white/60 dark:bg-slate-900/30 backdrop-blur-md border border-slate-200/40 dark:border-white/[0.04] shadow-lg transition-all duration-300 hover:shadow-xl;
+}
+
+/* Neon Focus Inputs */
+.glass-input {
+  @apply w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-white/[0.08] bg-white/40 dark:bg-slate-950/40 focus:border-primary-500 dark:focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20 dark:focus:ring-primary-500/25 transition-all duration-200 text-sm;
+}
+
+/* Interactive Glows */
+.glow-primary {
+  box-shadow: 0 0 30px -5px rgba(99, 102, 241, 0.35);
+}
+
+.glow-emerald {
+  box-shadow: 0 0 30px -5px rgba(16, 185, 129, 0.3);
+}
+
+.glow-rose {
+  box-shadow: 0 0 30px -5px rgba(244, 63, 94, 0.3);
+}
+
+/* Gradient Typography */
+.text-gradient-purple {
+  @apply bg-gradient-to-r from-primary-500 via-indigo-500 to-purple-600 bg-clip-text text-transparent;
+}
+
+.text-gradient-cyber {
+  @apply bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent;
+}
+
+/* Micro-Animations & Page Transitions */
+.page-enter {
+  @apply animate-slide-up;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom virtual calculator styles */
+.calc-btn {
+  @apply text-sm font-semibold p-2.5 rounded-lg transition-all duration-150 hover:scale-95 active:scale-90 select-none;
+}
+
+/* Fullscreen Assessment Mode overrides */
+body.fullscreen-exam {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+body.fullscreen-exam aside {
+  display: none !important;
+}
+body.fullscreen-exam header {
+  display: none !important;
+}
+body.fullscreen-exam div.pl-64,
+body.fullscreen-exam div.pl-\[18rem\] {
+  padding-left: 0 !important;
+}
+body.fullscreen-exam main {
+  padding: 1.5rem !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  background-color: #ffffff !important;
+}
+
+/* Shimmer Loaders */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer-loading {
+  background: linear-gradient(90deg, rgba(255,255,255,0.02) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.02) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Linear-SaaS Bento Grid Utilities */
+.bento-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.bento-card {
+  @apply relative overflow-hidden rounded-3xl bg-white/70 dark:bg-[#0f172a]/70 backdrop-blur-xl border border-slate-200/60 dark:border-white/[0.08] shadow-sm hover:shadow-xl transition-all duration-300 hover:border-primary-500/40 hover:-translate-y-0.5;
+}
+
+.bento-card-gradient {
+  background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(99, 102, 241, 0.08), transparent 40%);
+}
+
+.command-palette-backdrop {
+  @apply fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-md flex items-start justify-center pt-20 px-4 animate-fade-in;
+}
+
+.command-palette-modal {
+  @apply w-full max-w-xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 rounded-2xl shadow-2xl overflow-hidden transform transition-all duration-200;
+}
+
+.kbd-badge {
+  @apply inline-flex items-center px-1.5 py-0.5 text-[10px] font-mono font-semibold text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 rounded border border-slate-200 dark:border-slate-700 shadow-sm;
+}
+

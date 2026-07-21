@@ -1,0 +1,490 @@
+Subject: General Aptitude
+Subtopic: Ratio and Proportion
+Difficulty: Easy
+Marks: 1
+Year: 2021
+Question: The ratio of boys to girls in a class is 7 to 3. Among the options below, an acceptable value for the total number of students in the class is:
+Option A: 21
+Option B: 37
+Option C: 50
+Option D: 73
+Correct: C
+Explanation: The ratio of boys to girls is 7:3. The total number of students must be a multiple of the sum of the ratio parts (7 + 3 = 10). Therefore, the total number of students must be a multiple of 10. From the options, only 50 is a multiple of 10.
+
+---
+
+Subject: General Aptitude
+Subtopic: Geometrical Shapes
+Difficulty: Easy
+Marks: 1
+Year: 2021
+Question: A polygon is convex if, for every pair of points, P and Q belonging to the polygon, the line segment PQ lies completely inside or on the polygon. Which one of the following is NOT a convex polygon?
+Option A: [Image of a triangle]
+Option B: [Image of a square]
+Option C: [Image of a regular pentagon]
+Option D: [Image of a concave arrow-like shape]
+Correct: D
+Explanation: Options A, B, and C are examples of convex polygons (triangle, square, pentagon). Option D is a concave polygon because it has an inward indentation. A line segment connecting two points on the boundary can lie outside the polygon.
+
+---
+
+Subject: General Aptitude
+Subtopic: Grammar and Sentence Correction / Ambiguity
+Difficulty: Easy
+Marks: 1
+Year: 2021
+Question: Consider the following sentences:
+(i) Everybody in the class is prepared for the exam.
+(ii) Babu invited Danish to his home because he enjoys playing chess.
+Which of the following is the CORRECT observation about the above two sentences?
+Option A: (i) is grammatically correct and (ii) is unambiguous
+Option B: (i) is grammatically incorrect and (ii) is unambiguous
+Option C: (i) is grammatically correct and (ii) is ambiguous
+Option D: (i) is grammatically incorrect and (ii) is ambiguous
+Correct: C
+Explanation: Sentence (i) is a perfectly standard English sentence. Sentence (ii) suffers from a pronoun reference ambiguity. The reader cannot be sure who "he" is. Therefore, (i) is correct, and (ii) is ambiguous.
+
+---
+
+Subject: General Aptitude
+Subtopic: Analogies
+Difficulty: Easy
+Marks: 1
+Year: 2021
+Question: _____ is to surgery as writer is to _____
+Which one of the following options maintains a similar logical relation in the above sentence?
+Option A: Plan, outline
+Option B: Hospital, library
+Option C: Doctor, book
+Option D: Medicine, grammar
+Correct: C
+Explanation: The sentence fills in as "Doctor is to surgery as writer is to book". A "doctor" is the professional who performs "surgery". Similarly, a "writer" is the professional who creates a "book". This maintains the logical relation of professional to their primary action/product.
+
+---
+
+Subject: General Aptitude
+Subtopic: Mensuration
+Difficulty: Medium
+Marks: 2
+Year: 2021
+Question: We have 2 rectangular sheets of paper, M and N, of dimensions 6 cm x 1 cm each. Sheet M is rolled to form an open cylinder by bringing the short edges of the sheet together. Sheet N is cut into equal square patches and assembled to form the largest possible closed cube. Assuming the ends of the cylinder are closed, the ratio of the volume of the cylinder to that of the cube is
+Option A: π/2
+Option B: 3/π
+Option C: 9/π
+Option D: 3π
+Correct: C
+Explanation: The key is to correctly identify the dimensions of the cylinder and the cube. For the cylinder, the height is the short side (1 cm) and the circumference is the long side (6 cm). For the cube, the 6 cm² sheet is divided into 6 squares of 1 cm² each, making a cube of side 1 cm. The ratio of the volumes is (9/π) : 1 = 9/π.
+
+---
+
+Subject: General Aptitude
+Subtopic: Profit and Loss
+Difficulty: Medium
+Marks: 2
+Year: 2021
+Question: Details of prices of two items P and Q are presented in the above table. The ratio of cost of item P to cost of item Q is 3:4. Discount is calculated as the difference between the marked price and the selling price. The profit percentage is calculated as the ratio of the difference between selling price and cost, to the cost (Profit % = (Selling price - Cost)/Cost * 100). The discount on item Q, as a percentage of its marked price, is
+Option A: 25
+Option B: 12.5
+Option C: 10
+Option D: 5
+Correct: C
+Explanation: The cost price of Q is found using the ratio with P (CP of Q = 7200). Then, the selling price of Q is derived from the given profit percentage of 25% (SP = 9000). Finally, the discount percentage is calculated from the marked price (10000) and the derived selling price (9000) resulting in 10% discount.
+
+---
+
+Subject: General Aptitude
+Subtopic: Probability
+Difficulty: Medium
+Marks: 2
+Year: 2021
+Question: There are five bags each containing identical sets of ten distinct chocolates. One chocolate is picked from each bag. The probability that at least two chocolates are identical is
+Option A: 0.3024
+Option B: 0.4235
+Option C: 0.6976
+Option D: 0.8125
+Correct: C
+Explanation: The probability of at least two identical items is 1 minus the probability of all items being distinct. Since the chocolates in each bag are identical sets, the total outcomes are 10^5. The number of outcomes for all distinct is 10P5 = 30240. The answer is 1 - 0.3024 = 0.6976.
+
+---
+
+Subject: General Aptitude
+Subtopic: Syllogisms
+Difficulty: Easy
+Marks: 1
+Year: 2021
+Question: Given below are two statements 1 and 2, and two conclusions I and II.
+Statement 1: All bacteria are microorganisms.
+Statement 2: All pathogens are microorganisms.
+Conclusion I: Some pathogens are bacteria.
+Conclusion II: All pathogens are not bacteria.
+Based on the above statements and conclusions, which one of the following options is logically CORRECT?
+Option A: Only conclusion I is correct
+Option B: Only conclusion II is correct
+Option C: Either conclusion I or II is correct.
+Option D: Neither conclusion I nor II is correct.
+Correct: D
+Explanation: The statements do not establish any connection between "bacteria" and "pathogens". They both are just types of "microorganisms". Therefore, we cannot definitively conclude that some pathogens are bacteria, nor can we conclude that all pathogens are not bacteria. The relationship is unknown.
+
+---
+
+Subject: General Aptitude
+Subtopic: Reading Comprehension / Summary
+Difficulty: Easy
+Marks: 1
+Year: 2021
+Question: Some people suggest anti-obesity measures (AOM) such as displaying calorie information in restaurant menus. Such measures sidestep addressing the core problems that cause obesity: poverty and income inequality.
+Which one of the following statements summarizes the passage?
+Option A: The proposed AOM addresses the core problems that cause obesity.
+Option B: If obesity reduces, poverty will naturally reduce, since obesity causes poverty.
+Option C: AOM are addressing the core problems and are likely to succeed.
+Option D: AOM are addressing the problem superficially.
+Correct: D
+Explanation: The key phrase is "sidestep addressing the core problems". This implies that AOM are not solving the underlying issues of poverty and income inequality. They are only dealing with the surface-level manifestation of the problem (obesity). Thus, they are superficial.
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Closure Properties of Languages
+Difficulty: Medium
+Marks: 1
+Year: 2021
+Question: Suppose that L1 is a regular language and L2 is a context-free language. Which one of the following languages is NOT necessarily context-free?
+Option A: L1 ∩ L2
+Option B: L1 · L2
+Option C: L1 - L2
+Option D: L1 ∪ L2
+Correct: C
+Explanation: CFLs are closed under union, concatenation, and intersection with a regular language. They are not closed under intersection or difference with another CFL. Since L2 is a CFL, L1 - L2 is not guaranteed to be a CFL.
+
+---
+
+Subject: Algorithms
+Subtopic: Analysis of Algorithms / Finding Min-Max
+Difficulty: Medium
+Marks: 1
+Year: 2021
+Question: Let P be an array containing n integers. Let t be the lowest upper bound on the number of comparisons of the array elements, required to find the minimum and maximum values in an arbitrary array of n elements. Which one of the following choices is correct?
+Option A: t > 2n - 2
+Option B: t > 3 [n/2] and t ≤ 2n - 2
+Option C: t > n and t ≤ 3 [n/2]
+Option D: t > [log2(n)] and t ≤ n
+Correct: C
+Explanation: The optimal algorithm compares elements in pairs. It requires roughly 3n/2 comparisons in the worst case. This is greater than n and less than 2n-2. The tightest bound is n < t ≤ 3⌊n/2⌋.
+
+---
+
+Subject: Algorithms
+Subtopic: Asymptotic Analysis
+Difficulty: Easy
+Marks: 1
+Year: 2021
+Question: Consider the following three functions.
+f1 = 10n
+f2 = nlog n
+f3 = n√n
+Which one of the following options arranges the functions in the increasing order of asymptotic growth rate?
+Option A: f3, f2, f1
+Option B: f2, f1, f3
+Option C: f1, f2, f3
+Option D: f2, f3, f1
+Correct: C
+Explanation: The functions are compared by their dominant terms. n grows slower than n log n, and n log n grows slower than n√n = n^{1.5}. Constants like 10 do not affect the asymptotic growth rate.
+
+---
+
+Subject: Compiler Design
+Subtopic: Runtime Environment / Activation Tree
+Difficulty: Easy
+Marks: 1
+Year: 2021
+Question: Consider the following statements.
+S1: The sequence of procedure calls corresponds to a preorder traversal of the activation tree.
+S2: The sequence of procedure returns corresponds to a postorder traversal of the activation tree.
+Which one of the following options is correct?
+Option A: S1 is true and S2 is false
+Option B: S1 is false and S2 is true
+Option C: S1 is true and S2 is true
+Option D: S1 is false and S2 is false
+Correct: C
+Explanation: The activation tree models the calling sequence. A preorder traversal (root, then subtrees) exactly mimics the order of procedure calls. A postorder traversal (subtrees, then root) exactly mimics the order of procedure returns.
+
+---
+
+Subject: Compiler Design
+Subtopic: Parsing / Syntax Analysis
+Difficulty: Medium
+Marks: 1
+Year: 2021
+Question: Consider the following statements.
+S1: Every SLR(1) grammar is unambiguous but there are certain unambiguous grammars that are not SLR(1).
+S2: For any context-free grammar, there is a parser that takes at most O(n³) time to parse a string of length n.
+Which one of the following options is correct?
+Option A: S1 is true and S2 is false
+Option B: S1 is false and S2 is true
+Option C: S1 is true and S2 is true
+Option D: S1 is false and S2 is false
+Correct: C
+Explanation: S1 is a standard statement about the relationship between SLR(1) and unambiguous grammars. S2 refers to the CYK (Cocke-Younger-Kasami) algorithm, which is a general O(n³) parsing algorithm for any context-free grammar.
+
+---
+
+Subject: Digital Logic
+Subtopic: Number Systems
+Difficulty: Easy
+Marks: 1
+Year: 2021
+Question: Let the representation of a number in base 3 be 210. What is the hexadecimal representation of the number?
+Option A: 15
+Option B: 21
+Option C: D2
+Option D: 528
+Correct: A
+Explanation: First, convert from base 3 to decimal. 2*9 + 1*3 + 0 = 21. Then, convert decimal 21 to hexadecimal which is 0x15.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Discrete Mathematics / Propositional Logic
+Difficulty: Medium
+Marks: 1
+Year: 2021
+Question: Let p and q be two propositions. Consider the following two formulae in propositional logic.
+S1: (-p ∧ (p ∨ q)) → q
+S2: q → (-p ∧ (p ∨ q))
+Which one of the following choices is correct?
+Option A: Both S1 and S2 are tautologies.
+Option B: S1 is a tautology but S2 is not a tautology.
+Option C: S1 is not a tautology but S2 is a tautology.
+Option D: Neither S1 nor S2 is a tautology.
+Correct: B
+Explanation: S1 simplifies to (-p ∧ q) → q, which is a tautology. S2 simplifies to q → (-p ∧ q), which is only true if p is false, so it is not a tautology.
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: Network Layer / ARP
+Difficulty: Easy
+Marks: 1
+Year: 2021
+Question: Consider the following two statements.
+S1: Destination MAC address of an ARP reply is a broadcast address.
+S2: Destination MAC address of an ARP request is a broadcast address.
+Which one of the following choices is correct?
+Option A: Both S1 and S2 are true.
+Option B: S1 is true and S2 is false.
+Option C: S1 is false and S2 is true.
+Option D: Both S1 and S2 are false.
+Correct: C
+Explanation: ARP requests are broadcast (MAC = FF:FF:FF:FF:FF:FF) so that all hosts on the subnet receive them. ARP replies are unicast directly to the requester MAC address.
+
+---
+
+Subject: Algorithms
+Subtopic: Sorting
+Difficulty: Easy
+Marks: 1
+Year: 2021
+Question: Consider the following array.
+23 32 45 69 72 73 89 97
+Which algorithm out of the following options uses the least number of comparisons (among the array elements) to sort the above array in ascending order?
+Option A: Selection sort
+Option B: Mergesort
+Option C: Insertion sort
+Option D: Quicksort using the last element as pivot
+Correct: C
+Explanation: Insertion sort has a best-case complexity of O(n) (specifically n-1 comparisons) when the array is already sorted. The other algorithms perform significantly more comparisons.
+
+---
+
+Subject: Programming & Data Structures
+Subtopic: Binary Search Tree
+Difficulty: Medium
+Marks: 1
+Year: 2021
+Question: A binary search tree T contains n distinct elements. What is the time complexity of picking an element in T that is smaller than the maximum element in T?
+Option A: Θ(n log n)
+Option B: Θ(n)
+Option C: Θ(log n)
+Option D: Θ(1)
+Correct: D
+Explanation: The root of the BST is guaranteed to be smaller than the maximum element (as long as n > 1). Thus, picking it takes constant time Θ(1).
+
+---
+
+Subject: Operating Systems
+Subtopic: Memory Management / Paging
+Difficulty: Medium
+Marks: 2
+Year: 2021
+Question: In the context of operating systems, which of the following statements is/are correct with respect to paging?
+Option A: Paging helps solve the issue of external fragmentation.
+Option B: Page size has no impact on internal fragmentation.
+Option C: Paging incurs memory overheads.
+Option D: Multi-level paging is necessary to support pages of different sizes.
+Correct: A
+Explanation: Paging eliminates external fragmentation but introduces internal fragmentation. It incurs overhead for page tables. Multi-level paging is a technique to reduce memory overhead, not to support variable page sizes.
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Decidability
+Difficulty: Medium
+Marks: 1
+Year: 2021
+Question: Let {M} denote an encoding of an automaton M. Suppose that Σ = {0, 1}. Which of the following languages is/are NOT recursive?
+Option A: L = {〈M〉| M is a DFA such that L(M) = ∅}
+Option B: L = {〈M〉| M is a DFA such that L(M)= Σ*}
+Option C: L = {〈M〉| M is a PDA such that L(M) = ∅}
+Option D: L = {〈M〉| M is a PDA such that L(M)= Σ*}
+Correct: D
+Explanation: All problems related to DFAs are decidable. Emptiness for PDAs is decidable. However, universality for PDAs (L(M) = Σ*) is a classic undecidable (non-recursive) problem.
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: Recovery Management
+Difficulty: Hard
+Marks: 2
+Year: 2021
+Question: Suppose a database system crashes again while recovering from a previous crash. Assume checkpointing is not done by the database either during the transactions or during recovery. Which of the following statements is/are correct?
+Option A: The same undo and redo list will be used while recovering again.
+Option B: The system cannot recover any further.
+Option C: All the transactions that are already undone and redone will not be recovered again.
+Option D: The database will become inconsistent.
+Correct: A
+Explanation: A crash during recovery does not make the system unrecoverable. Recovery is idempotent; re-applying the operations from the log will result in a consistent database. The undo and redo lists are determined from the log, and they remain the same.
+
+---
+
+Subject: Operating Systems
+Subtopic: System Calls
+Difficulty: Medium
+Marks: 2
+Year: 2021
+Question: Which of the following standard C library functions will always invoke a system call when executed from a single-threaded process in a UNIX/Linux operating system?
+Option A: exit
+Option B: malloc
+Option C: sleep
+Option D: strlen
+Correct: A
+Explanation: exit and sleep directly interact with the kernel to manage the process's lifecycle and scheduling. malloc interacts with the kernel only when it needs more memory from the OS. strlen is a user-space string operation.
+
+---
+
+Subject: Operating Systems
+Subtopic: File Systems / Directory Implementation
+Difficulty: Medium
+Marks: 2
+Year: 2021
+Question: Consider a file system with a linear list directory implementation. Each directory is a list of nodes, where each node contains the file name along with the file metadata, such as the list of pointers to the data blocks. Consider a given directory foo. Which of the following operations will necessarily require a full scan of foo for successful completion?
+Option A: Creation of a new file in foo
+Option B: Deletion of an existing file from foo
+Option C: Renaming of an existing file in foo
+Option D: Opening of an existing file in foo
+Correct: A
+Explanation: To create a new file in a linear list directory, the system must check if a file with the same name already exists to ensure name uniqueness. This verification process requires checking all existing entries, requiring a full scan. Other operations can stop early once the target is found.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Discrete Mathematics / Graph Theory
+Difficulty: Easy
+Marks: 1
+Year: 2021
+Question: In an undirected connected planar graph G, there are eight vertices and five faces. The number of edges in G is:
+Option A: 11
+Option B: 12
+Option C: 13
+Option D: 14
+Correct: A
+Explanation: Using Euler's formula for connected planar graphs: V - E + F = 2. Given V = 8 and F = 5, we have 8 - E + 5 = 2, which gives E = 11.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Probability and Statistics / Exponential Distribution
+Difficulty: Medium
+Marks: 1
+Year: 2021
+Question: The lifetime of a component of a certain type is a random variable whose probability density function is exponentially distributed with parameter 2. For a randomly picked component of this type, the probability that its lifetime exceeds the expected lifetime (rounded to 2 decimal places) is:
+Option A: 0.37
+Option B: 0.50
+Option C: 0.63
+Option D: 0.18
+Correct: A
+Explanation: For parameter λ = 2, Expected value E[X] = 1/λ = 0.5. Probability P(X > 0.5) = e^(-λ * 0.5) = e^(-1) ≈ 0.3678. Rounded to 2 decimal places, this is 0.37.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Discrete Mathematics / Combinatorics
+Difficulty: Medium
+Marks: 2
+Year: 2021
+Question: There are 6 jobs with distinct difficulty levels, and 3 computers with distinct processing speeds. Each job is assigned to a computer such that the fastest computer gets the toughest job, the slowest computer gets the easiest job, and every computer gets at least one job. The number of ways in which this can be done is:
+Option A: 65
+Option B: 81
+Option C: 16
+Option D: 32
+Correct: A
+Explanation: Fixed assignments: C1 gets toughest (J6) and C3 gets easiest (J1). 4 jobs remain for 3 computers. Total ways = 3^4 = 81. Exclude cases where C2 gets zero jobs (assigned to C1 and C3 only = 2^4 = 16). Valid ways = 81 - 16 = 65.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Calculus / Limits
+Difficulty: Easy
+Marks: 1
+Year: 2021
+Question: Evaluate the limit: lim x→3 (√(2x+22) - 4) / (x+3). The value (rounded to 2 decimal places) is:
+Option A: 0.22
+Option B: 0.50
+Option C: 0.12
+Option D: 0.33
+Correct: A
+Explanation: Substitute x = 3 directly: Numerator = √(6+22) - 4 = √28 - 4 ≈ 5.2915 - 4 = 1.2915. Denominator = 6. Limit ≈ 1.2915 / 6 ≈ 0.2152. Rounded to 2 decimal places, this is 0.22.
+
+---
+
+Subject: Programming & Data Structures
+Subtopic: Stack and Queue
+Difficulty: Easy
+Marks: 1
+Year: 2021
+Question: Consider the following sequence of stack operations: push(54); push(52); pop(); push(55); push(62); s = pop(); and queue operations: enqueue(21); enqueue(24); dequeue(); enqueue(28); enqueue(32); q = dequeue(). The value of s + q is:
+Option A: 86
+Option B: 78
+Option C: 92
+Option D: 114
+Correct: A
+Explanation: Stack pops 62 (s=62). Queue dequeues 21 first, then next dequeue returns 24 (q=24). s + q = 62 + 24 = 86.
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Cache Memory / Direct Mapping
+Difficulty: Easy
+Marks: 1
+Year: 2021
+Question: A direct-mapped cache of size 32 KB has a block size of 64 bytes. If the physical address size is 32 bits, the size of the tag field is:
+Option A: 17 bits
+Option B: 15 bits
+Option C: 19 bits
+Option D: 21 bits
+Correct: A
+Explanation: Block size = 64 bytes (6 offset bits). Number of blocks = 32 KB / 64 B = 512 (9 index bits). Tag bits = 32 - 9 - 6 = 17 bits.
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: Relational Algebra / Query Optimization
+Difficulty: Medium
+Marks: 2
+Year: 2021
+Question: A relation r(A,B) has 1200 tuples. Attribute A has integer values in [6, 20] (15 values), and attribute B has values in [1, 20] (20 values). Assuming A and B are independently distributed, the estimated number of tuples in the output of σ(A>10)∨(B=18)(r) is:
+Option A: 820
+Option B: 600
+Option C: 720
+Option D: 940
+Correct: A
+Explanation: P(A>10) = 10/15 = 2/3. P(B=18) = 1/20. P(A>10 ∨ B=18) = 2/3 + 1/20 - (2/3 * 1/20) = 40/60 + 3/60 - 2/60 = 41/60. Estimated tuples = 1200 * 41/60 = 820.

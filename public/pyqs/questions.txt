@@ -1,0 +1,27 @@
+Subject: Operating Systems
+Subtopic: Disk Scheduling Algorithms
+Difficulty: Easy
+Marks: 1
+Year: 2026
+Question: Which disk scheduling algorithm is also known as the elevator algorithm?
+Option A: FCFS
+Option B: SSTF
+Option C: SCAN
+Option D: LOOK
+Correct: C
+Explanation: SCAN algorithm is called elevator algorithm because it moves the head from one end to another, servicing requests along the way, just like an elevator.
+
+---
+
+Subject: Operating Systems
+Subtopic: Disk Scheduling Algorithms
+Difficulty: Medium
+Marks: 2
+Year: 2026
+Question: Suppose a disk queue has requests for I/O block on cylinders: 98, 183, 37, 122, 14, 124, 65, 67. The head is initially at cylinder 53. Under SSTF algorithm, what is the total head movement?
+Option A: 236 cylinders
+Option B: 640 cylinders
+Option C: 208 cylinders
+Option D: 320 cylinders
+Correct: A
+Explanation: Under SSTF (Shortest Seek Time First), cylinder movements are: 53 -> 65 -> 67 -> 37 -> 14 -> 98 -> 122 -> 124 -> 183. Total seek distance = 12 + 2 + 30 + 23 + 84 + 24 + 2 + 59 = 236 cylinders.

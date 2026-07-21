@@ -1,0 +1,447 @@
+Subject: General Aptitude
+Subtopic: Verbal Ability -> Grammar / Comparison
+Difficulty: Easy
+Marks: 1
+Year: 2021
+Question: Gauri said that she can play the keyboard _____ her sister.
+Option A: as well as
+Option B: as better as
+Option C: as nicest as
+Option D: as worse as
+Correct: A
+Explanation: The correct comparative structure is "as well as" for expressing equal ability. "As better as" is a double comparative error; "as nicest as" uses a superlative incorrectly; "as worse as" is also grammatically incorrect.
+
+---
+
+Subject: General Aptitude
+Subtopic: Quantitative Aptitude -> Geometry / 3D Geometry
+Difficulty: Easy
+Marks: 1
+Year: 2021
+Question: If θ is the angle, in degrees, between the longest diagonal of a cube and any one of the edges of the cube, then cos θ =
+Option A: 1/2
+Option B: 1/√3
+Option C: 1/√2
+Option D: √3/2
+Correct: B
+Explanation: Let the cube side be a. The body diagonal has length a√3 and direction (a,a,a). An edge along the x-axis has direction (a,0,0). cos θ = (a*a + 0 + 0) / (a√3 * a) = a² / (a²√3) = 1/√3.
+
+---
+
+Subject: General Aptitude
+Subtopic: Quantitative Aptitude -> Algebra
+Difficulty: Easy
+Marks: 1
+Year: 2021
+Question: If (x - 1/2)² - (x - 3/2)² = x + 2, then the value of x is:
+Option A: 2
+Option B: 4
+Option C: 6
+Option D: 8
+Correct: B
+Explanation: Using a² - b² = (a-b)(a+b): [(x - 1/2) - (x - 3/2)] * [(x - 1/2) + (x - 3/2)] = x + 2 ⇒ [1] * [2x - 2] = x + 2 ⇒ 2x - 2 = x + 2 ⇒ x = 4.
+
+---
+
+Subject: General Aptitude
+Subtopic: Verbal Ability -> Analogies
+Difficulty: Easy
+Marks: 1
+Year: 2021
+Question: Pen: Write :: Knife: _____
+Option A: Vegetables
+Option B: Sharp
+Option C: Cut
+Option D: Blunt
+Correct: C
+Explanation: The logical relationship is "Object : Function". A pen's function is to write, and a knife's function is to cut.
+
+---
+
+Subject: General Aptitude
+Subtopic: Verbal Ability -> Reading Comprehension / Inference
+Difficulty: Medium
+Marks: 1
+Year: 2021
+Question: Listening to music during exercise improves performance and reduces discomfort. Scientists researched whether listening to music while studying can help students learn better and the results were inconclusive. Students who needed external stimulation for studying fared worse, while students who did not need any external stimulation benefited from music. Which statement is the CORRECT inference?
+Option A: Listening to music has no effect on learning and a positive effect on physical exercise.
+Option B: Listening to music has a clear positive effect both on physical exercise and on learning.
+Option C: Listening to music has a clear positive effect on physical exercise. Music has a positive effect on learning only in some students.
+Option D: Listening to music has a clear positive effect on learning in all students. Music has a positive effect only in some students who exercise.
+Correct: C
+Explanation: The passage asserts a clear positive effect of music on exercise. For studying/learning, the result is inconclusive because some students benefit while others perform worse, meaning it has a positive effect only in some students.
+
+---
+
+Subject: General Aptitude
+Subtopic: Quantitative Aptitude -> Ratio and Proportion
+Difficulty: Easy
+Marks: 1
+Year: 2021
+Question: The number of students in three classes is in the ratio 3:13:6. If 18 students are added to each class, the ratio changes to 15:35:21. The total number of students in all three classes in the beginning was:
+Option A: 22
+Option B: 66
+Option C: 88
+Option D: 110
+Correct: C
+Explanation: Let initial students be 3x, 13x, 6x. Then (3x+18)/(13x+18) = 15/35 = 3/7 ⇒ 7(3x+18) = 3(13x+18) ⇒ 21x + 126 = 39x + 54 ⇒ 18x = 72 ⇒ x = 4. Total initial students = 22x = 22 * 4 = 88.
+
+---
+
+Subject: General Aptitude
+Subtopic: Logical Reasoning -> Ordering / Ranking
+Difficulty: Medium
+Marks: 1
+Year: 2021
+Question: Six students P, Q, R, S, T and U, with distinct heights, compare heights. Observations: (I) S is taller than R. (II) Q is the shortest of all. (III) U is taller than only one student. (IV) T is taller than S but is not the tallest. The number of students taller than R is the same as the number of students shorter than:
+Option A: T
+Option B: R
+Option C: S
+Option D: P
+Correct: C
+Explanation: Height order (shortest to tallest): Q < U < R < S < T < P. Taller than R: S, T, P (3 students). Shorter than S: Q, U, R (3 students). So the number matches for S.
+
+---
+
+Subject: Algorithms
+Subtopic: Minimum Spanning Tree
+Difficulty: Medium
+Marks: 1
+Year: 2021
+Question: Let G be a connected undirected weighted graph. S1: There exists a minimum weight edge in G which is present in every minimum spanning tree of G. S2: If every edge in G has distinct weight, then G has a unique minimum spanning tree. Which choice is correct?
+Option A: Both S1 and S2 are true.
+Option B: S1 is true and S2 is false.
+Option C: S1 is false and S2 is true.
+Option D: Both S1 and S2 are false.
+Correct: C
+Explanation: S1 is false because if there are multiple minimum weight edges, different MSTs may choose different ones. S2 is true because distinct edge weights guarantee a unique MST.
+
+---
+
+Subject: Programming & Data Structures
+Subtopic: Heap
+Difficulty: Easy
+Marks: 1
+Year: 2021
+Question: Let H be a binary min-heap consisting of n elements implemented as an array. What is the worst case time complexity of an optimal algorithm to find the maximum element in H?
+Option A: Θ(1)
+Option B: Θ(log n)
+Option C: Θ(n)
+Option D: Θ(n log n)
+Correct: C
+Explanation: In a min-heap, the maximum element is located in the leaf nodes. There are approximately n/2 leaves, so finding the maximum requires scanning all of them, which takes Θ(n) time.
+
+---
+
+Subject: Compiler Design
+Subtopic: Phases of Compiler
+Difficulty: Easy
+Marks: 1
+Year: 2021
+Question: Consider the C code: int main() { Integer x; return 0; }. Which compiler phase will throw an error?
+Option A: Lexical analyzer
+Option B: Syntax analyzer
+Option C: Semantic analyzer
+Option D: Machine dependent optimizer
+Correct: C
+Explanation: "Integer" is parsed as a valid identifier lexically and syntactically. However, during semantic analysis, the compiler checks types and raises an error since "Integer" is an undefined type in C.
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: IEEE 754 Floating Point
+Difficulty: Medium
+Marks: 1
+Year: 2021
+Question: What is the exponent and mantissa of the smallest normalized positive number represented in the IEEE 754 single-precision standard?
+Option A: exponent = 00000000 and mantissa = 00000000000000000000000
+Option B: exponent = 00000000 and mantissa = 00000000000000000000001
+Option C: exponent = 00000001 and mantissa = 00000000000000000000000
+Option D: exponent = 00000001 and mantissa = 00000000000000000000001
+Correct: C
+Explanation: Smallest normalized exponent is 1 (00000001 in binary) and mantissa is 0 (with an implied leading 1). Exponent 0 is reserved for denormalized numbers.
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: Relational Model / Foreign Keys
+Difficulty: Easy
+Marks: 1
+Year: 2021
+Question: Consider statements: S1: A relation scheme can have at most one foreign key. S2: A foreign key in R cannot be used to refer to tuples of R. Which choice is correct?
+Option A: Both S1 and S2 are true.
+Option B: S1 is true and S2 is false.
+Option C: S1 is false and S2 is true.
+Option D: Both S1 and S2 are false.
+Correct: D
+Explanation: A relation can have multiple foreign keys. A foreign key can also reference the same relation (e.g. self-referencing manager_id to employee_id).
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: TCP / 3-Way Handshake
+Difficulty: Easy
+Marks: 1
+Year: 2021
+Question: Host P sends a TCP connection request with SYN=1, SEQ=X, ACK=0. Q accepts the connection. Which choice represents the header information in the segment sent by Q to P?
+Option A: SYN bit = 1, SEQ number = X+1, ACK bit = 0, ACK number = Y, FIN bit = 0
+Option B: SYN bit = 0, SEQ number = X+1, ACK bit = 0, ACK number = Y, FIN bit = 1
+Option C: SYN bit = 1, SEQ number = Y, ACK bit = 1, ACK number = X+1, FIN bit = 0
+Option D: SYN bit = 1, SEQ number = Y, ACK bit = 1, ACK number = X, FIN bit = 0
+Correct: C
+Explanation: Q replies with a SYN-ACK packet: SYN=1, ACK=1, with its own initial sequence Y, and acknowledgment number X+1 (acknowledging P's SYN sequence number X).
+
+---
+
+Subject: Algorithms
+Subtopic: Binary Search
+Difficulty: Easy
+Marks: 1
+Year: 2021
+Question: What is the worst-case number of arithmetic operations performed by recursive binary search on a sorted array of size n?
+Option A: Θ(√n)
+Option B: Θ(log₂(n))
+Option C: Θ(n²)
+Option D: Θ(n)
+Correct: B
+Explanation: Binary search repeatedly halves the search space. The recurrence relation is T(n) = T(n/2) + O(1), which solves to Θ(log n).
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Regular Languages / DFA
+Difficulty: Medium
+Marks: 1
+Year: 2021
+Question: Let L be a regular language accepted by a minimal DFA with k states. Which of the following languages must necessarily be accepted by a minimal DFA with k states?
+Option A: L - {01}
+Option B: L ∪ {01}
+Option C: {0,1}* - L
+Option D: L · L
+Correct: C
+Explanation: The complement of L (which is {0,1}* - L) can be accepted by the same DFA by swapping its accepting and non-accepting states. Thus, it requires exactly the same number of states (k).
+
+---
+
+Subject: Programming & Data Structures
+Subtopic: C Programming / Arrays / Pointers
+Difficulty: Medium
+Marks: 2
+Year: 2021
+Question: In the C program: int arr[4][5]; (initialize arr[i][j] = 10*i + j); what is the output of printf("%d", *(arr[1] + 9))?
+Option A: 14
+Option B: 19
+Option C: 24
+Option D: 29
+Correct: C
+Explanation: arr[1] points to row 1, col 0. Adding 9 to this pointer steps forward 9 integers in memory. Since each row has 5 elements, arr[1] + 9 points to row 2, col 4 (arr[2][4]). The value is 10*2 + 4 = 24.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Set Theory / Functions
+Difficulty: Medium
+Marks: 2
+Year: 2021
+Question: Let S1: Set of all n x n matrices with entries from {a, b, c}. S2: Set of all functions from {0, 1, 2, ..., n² - 1} to {0, 1, 2}. Which is correct?
+Option A: There does not exist a bijection from S1 to S2.
+Option B: There exists a surjection from S1 to S2.
+Option C: There exists a bijection from S1 to S2.
+Option D: There does not exist an injection from S1 to S2.
+Correct: C
+Explanation: The size of S1 is 3^(n²). The size of S2 is 3^(n²). Since both sets are finite and have the same cardinality, there exists a bijection between them (and thus, surjection and injection also exist). So B and C are correct.
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Closure Properties of Languages
+Difficulty: Medium
+Marks: 2
+Year: 2021
+Question: Let L1 be regular and L2 be context-free. Which language(s) is/are context-free?
+Option A: L1 ∩ L2
+Option B: L1 ∪ L2
+Option C: L1 ∪ (L2 ∪ L2)
+Option D: (L1 ∩ L2) ∪ (L1 ∩ L2)
+Correct: B
+Explanation: CFLs are closed under union (B, C) and closed under intersection with regular languages (A, D). Thus, all four options are context-free.
+
+---
+
+Subject: Compiler Design
+Subtopic: Intermediate Representation
+Difficulty: Easy
+Marks: 1
+Year: 2021
+Question: Which of the following is/are NOT an intermediate representation of the source program?
+Option A: Three address code
+Option B: Abstract Syntax Tree (AST)
+Option C: Control Flow Graph (CFG)
+Option D: Symbol table
+Correct: D
+Explanation: Three address code, AST, and CFG are intermediate representations. The symbol table is a compiler data structure for managing identifiers, not a program representation form.
+
+---
+
+Subject: Operating Systems
+Subtopic: CPU Scheduling
+Difficulty: Medium
+Marks: 2
+Year: 2021
+Question: Which statement(s) is/are correct in the context of CPU scheduling?
+Option A: Turnaround time includes waiting time.
+Option B: The goal is to only maximize CPU utilization and minimize throughput.
+Option C: Round-robin policy can be used even when the CPU time required by each of the processes is not known apriori.
+Option D: Implementing preemptive scheduling needs hardware support.
+Correct: A
+Explanation: Turnaround time = Burst time + Waiting time (A is true). Round-robin schedules without knowing process burst times in advance (C is true). CPU throughput should be maximized, not minimized. So A and C are correct.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Propositional Logic
+Difficulty: Hard
+Marks: 2
+Year: 2021
+Question: Consider: S: ((P∧Q)→R)→((P∧Q)→(Q→R)). Which choice(s) is/are correct?
+Option A: S is neither a tautology nor a contradiction.
+Option B: S is a tautology.
+Option C: S is a contradiction.
+Option D: The antecedent of S is logically equivalent to the consequent of S.
+Correct: B
+Explanation: The antecedent simplifies to ¬P∨¬Q∨R. The consequent (P∧Q)→(Q→R) also simplifies to ¬P∨¬Q∨R. Since both sides are equivalent, S has form X→X, which is a tautology. Thus, B and D are correct.
+
+---
+
+Subject: Programming & Data Structures
+Subtopic: Graph Traversal / Tree Traversal
+Difficulty: Easy
+Marks: 2
+Year: 2021
+Question: Let A be the set of first 3 elements in BFS starting from root of a 7-node complete binary tree. Let B be the set of first 3 elements in DFS (preorder). What is the value of |A - B|?
+Option A: 1
+Option B: 0
+Option C: 2
+Option D: 3
+Correct: A
+Explanation: Complete binary tree nodes: 1 (root), 2 (left), 3 (right), 4, 5, 6, 7. BFS: 1, 2, 3 (A = {1,2,3}). DFS (preorder): 1, 2, 4 (B = {1,2,4}). A - B = {3}, so |A - B| = 1.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Linear Algebra
+Difficulty: Medium
+Marks: 2
+Year: 2021
+Question: P is a 4 x 5 matrix such that every solution of Px = 0 is a scalar multiple of [2 5 4 3 1]ᵀ. The rank of P is:
+Option A: 4
+Option B: 1
+Option C: 3
+Option D: 5
+Correct: A
+Explanation: The solution space is spanned by one vector, so the nullity of P is 1. By the Rank-Nullity Theorem, Rank(P) = Columns - Nullity = 5 - 1 = 4.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Calculus
+Difficulty: Easy
+Marks: 2
+Year: 2021
+Question: Let f: R -> R be continuous on [-3, 3] and differentiable on (-3, 3) with f'(x) <= 2. If f(-3) = 7, then f(3) is at most:
+Option A: 19
+Option B: 12
+Option C: 14
+Option D: 21
+Correct: A
+Explanation: By Mean Value Theorem, (f(3) - f(-3)) / (3 - (-3)) = f'(c) <= 2 ⇒ f(3) - 7 <= 2 * 6 = 12 ⇒ f(3) <= 19.
+
+---
+
+Subject: Programming & Data Structures
+Subtopic: Huffman Coding / Prefix Codes
+Difficulty: Hard
+Marks: 2
+Year: 2021
+Question: What is the minimum length of the encoded string for abbcadddeee where prefix-free codes are used and earlier dictionary symbols have length <= later ones of same frequency?
+Option A: 23
+Option B: 21
+Option C: 25
+Option D: 30
+Correct: A
+Explanation: Frequencies: c:1, a:2, b:2, d:3, e:3. To minimize length while keeping a length <= b and d length <= e, the optimal lengths are a=2, b=2, c=3, d=2, e=2. Total encoded length = 2*2 + 2*2 + 1*3 + 3*2 + 3*2 = 23.
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Cache Memory / Write Policies
+Difficulty: Medium
+Marks: 2
+Year: 2021
+Question: S1: Read misses in a write-through L1 cache do not result in writebacks of dirty lines to the L2. S2: Write allocate policy must be used in conjunction with write-through caches. Which is correct?
+Option A: S1 is true and S2 is false
+Option B: S1 is false and S2 is true
+Option C: S1 is true and S2 is true
+Option D: S1 is false and S2 is false
+Correct: A
+Explanation: Write-through caches do not have dirty lines because writes always update both L1 and L2 simultaneously, so read misses never trigger writebacks (S1 true). Write allocate is typically paired with write-back caches, not write-through (S2 false).
+
+---
+
+Subject: Digital Logic
+Subtopic: Mealy Machine / Finite State Machine
+Difficulty: Hard
+Marks: 2
+Year: 2021
+Question: A Mealy machine replaces the first 1 of any subsequence of consecutive 1s with a 0. What are the Boolean expressions for next state t and output y in terms of current state s and input b?
+Option A: t = s + b, y = s b
+Option B: t = b, y = s b
+Option C: t = b, y = s b
+Option D: t = s + b, y = s b
+Correct: B
+Explanation: If input b=0, next state t=0 and output y=0. If input b=1, next state t=1. This gives t = b. Output y is 1 only when we are already in a block of 1s (s=1) and current input is 1 (b=1), giving y = s b.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Probability / Expected Value
+Difficulty: Medium
+Marks: 2
+Year: 2021
+Question: QuesA: Prob 0.8, Marks 10. QuesB: Prob 0.5, Marks 20. If first is wrong, total is 0. If first is correct, second wrong gives first marks. If both correct, total is sum. To maximize expected marks, which order is best?
+Option A: First QuesA and then QuesB. Expected marks 14.
+Option B: First QuesB and then QuesA. Expected marks 14.
+Option C: First QuesB and then QuesA. Expected marks 22.
+Option D: First QuesA and then QuesB. Expected marks 16.
+Correct: D
+Explanation: Expectation A then B = 0.8 * [0.5 * 30 + 0.5 * 10] = 0.8 * 20 = 16. Expectation B then A = 0.5 * [0.8 * 30 + 0.2 * 20] = 0.5 * 28 = 14. So A then B is best.
+
+---
+
+Subject: Compiler Design
+Subtopic: Code Optimization / CSE
+Difficulty: Hard
+Marks: 2
+Year: 2021
+Question: Optimize C code with Common Sub-expression Elimination:\nz = x + 3 + y->f1 + y->f2;\nfor (i = 0; i < 200; i = i + 2) {\n    if (z > i) { p = p + x + 3; q = q + y->f1; }\n    else { p = p + y->f2; q = q + x + 3; }\n}\nThe additions and dereferences in the optimized code are:
+Option A: 403 and 102
+Option B: 203 and 2
+Option C: 303 and 102
+Option D: 303 and 2
+Correct: B
+Explanation: CSE pre-computes x+3, y->f1, and y->f2 before the loop, requiring 2 dereferences total. The loop runs 100 times. Pre-computations take 3 additions (including z computation), and the loop performs 2 additions per iteration. Total additions = 3 + 100 * 2 = 203.
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: SQL / Subqueries
+Difficulty: Easy
+Marks: 1
+Year: 2021
+Question: SQL: select deptId, count(*) from emp where gender = "female" and salary > (select avg(salary) from emp) group by deptId. This query gives female employees whose salary is greater than the average salary of:
+Option A: employees in the department.
+Option B: employees in the company.
+Option C: female employees in the department.
+Option D: female employees in the company.
+Correct: B
+Explanation: The subquery (select avg(salary) from emp) calculates the average salary of all employees in the entire employee table (the company). Therefore, Option B is correct.

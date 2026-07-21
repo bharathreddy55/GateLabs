@@ -1,0 +1,330 @@
+Subject: General Aptitude
+Subtopic: Verbal Ability -> Vocabulary / Sentence Completion
+Difficulty: Easy
+Marks: 1
+Year: 2025
+Question: Despite his initial hesitation, Rehman's _____ to contribute to the success of the project never wavered.\nSelect the most appropriate option to complete the sentence.
+Option A: ambivalence
+Option B: satisfaction
+Option C: resolve
+Option D: revolve
+Correct: C
+Explanation: "Resolve" means firm determination. The sentence states his determination "never wavered" despite initial hesitation, making "resolve" the correct choice.
+
+---
+
+Subject: General Aptitude
+Subtopic: Logical Reasoning -> Inference / Verbal Logic
+Difficulty: Easy
+Marks: 1
+Year: 2025
+Question: Based only on the conversation below, identify the logically correct inference:\n"Even if I had known that you were in the hospital, I would not have gone there to see you", Ramya told Josephine.
+Option A: Ramya knew that Josephine was in the hospital.
+Option B: Ramya did not know that Josephine was in the hospital.
+Option C: Ramya and Josephine were once close friends; but now, they are not.
+Option D: Josephine was in the hospital due to an injury to her leg.
+Correct: B
+Explanation: The counterfactual conditional "Even if I had known..." implies that Ramya did not actually know Josephine was in the hospital.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Matrices / Linear Algebra
+Difficulty: Medium
+Marks: 1
+Year: 2025
+Question: If A is a diagonal matrix diag(√5, √5), then which ONE of the following is A⁸?
+Option A: (25 0) / (0 25)
+Option B: (125 0) / (0 125)
+Option C: (625 0) / (0 625)
+Option D: (3125 0) / (0 3125)
+Correct: C
+Explanation: For a diagonal matrix A, A⁸ has diagonal entries of (√5)⁸ = 5⁴ = 625. Thus, A⁸ = diag(625, 625).
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Calculus / Integration
+Difficulty: Medium
+Marks: 1
+Year: 2025
+Question: The value of x such that x > 1, satisfying the equation ∫₁ˣ t ln t dt = 1/4 is:
+Option A: √e
+Option B: e
+Option C: e²
+Option D: e - 1
+Correct: A
+Explanation: Integrating by parts gives [(t²/2) ln t - t²/4] from 1 to x = (x²/2) ln x - x²/4 + 1/4. Setting this equal to 1/4 gives (x²/2)(ln x - 1/2) = 0. Since x > 1, ln x = 1/2 ⇒ x = √e.
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: ARP / TCP
+Difficulty: Easy
+Marks: 1
+Year: 2025
+Question: Consider the following statements:\n(i) Address Resolution Protocol (ARP) provides a mapping from an IP address to the corresponding hardware (link-layer) address.\n(ii) A single TCP segment from S to R cannot carry both data and an acknowledgement for a segment from R to S.\nWhich ONE of the following is CORRECT?
+Option A: Both (i) and (ii) are TRUE
+Option B: (i) is TRUE and (ii) is FALSE
+Option C: (i) is FALSE and (ii) is TRUE
+Option D: Both (i) and (ii) are FALSE
+Correct: B
+Explanation: ARP maps IP to MAC (i is true). TCP allows piggybacking where a single packet carries both data and ACK (ii is false).
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: Routing Protocols
+Difficulty: Easy
+Marks: 1
+Year: 2025
+Question: Match the routing protocols:\nList I: (i) Distance vector routing, (ii) Link state routing\nList II: (a) Bellman-Ford, (b) Dijkstra\nWhich matches correctly?
+Option A: (i) – (a) and (ii) – (b)
+Option B: (i) – (a) and (ii) – (a)
+Option C: (i) – (b) and (ii) – (a)
+Option D: (i) – (b) and (ii) – (b)
+Correct: A
+Explanation: Distance vector routing uses the Bellman-Ford algorithm to compute routing tables. Link state routing uses Dijkstra's algorithm to compute shortest paths.
+
+---
+
+Subject: Programming & Data Structures
+Subtopic: C Strings / Pointers
+Difficulty: Medium
+Marks: 1
+Year: 2025
+Question: What is the output of the following C program?\n\n#include <stdio.h>\nvoid stringcopy(char *, char *);\nint main() {\n    char a[30] = "@#Hello World!";\n    stringcopy(a, a + 2);\n    printf("%s\\n", a);\n    return 0;\n}\nvoid stringcopy(char *s, char *t) {\n    while (*t)\n        *s++ = *t++;\n}
+Option A: @#Hello World!
+Option B: Hello World!
+Option C: ello World!
+Option D: Hello World!
+Correct: B
+Explanation: `a+2` points to the substring "Hello World!". The function `stringcopy` copies characters from `a+2` to `a` iteratively, overwriting the leading "@#" with "Hello World!".
+
+---
+
+Subject: Algorithms
+Subtopic: Analysis of Algorithms
+Difficulty: Easy
+Marks: 1
+Year: 2025
+Question: Consider an unordered list of N distinct integers. What is the minimum number of element comparisons required to find an integer in the list that is NOT the largest in the list?
+Option A: 1
+Option B: N - 1
+Option C: N
+Option D: 2N - 1
+Correct: A
+Explanation: Comparing any two distinct elements, the smaller of the two is guaranteed to not be the largest. Hence, only 1 comparison is required.
+
+---
+
+Subject: Compiler Design
+Subtopic: Intermediate Code Generation / Backpatching
+Difficulty: Medium
+Marks: 1
+Year: 2025
+Question: Consider the following statements about the use of backpatching in a compiler:\n(I) Backpatching can be used to generate code for Boolean expressions in one pass.\n(II) Backpatching can be used to generate code for flow-of-control statements in one pass.\nWhich ONE of the following options is CORRECT?
+Option A: Only (I) is correct.
+Option B: Only (II) is correct.
+Option C: Both (I) and (II) are correct.
+Option D: Neither (I) nor (II) is correct.
+Correct: C
+Explanation: Backpatching is a standard technique used in one-pass compilers to generate intermediate code for both boolean expressions and control flow statements by leaving target labels blank and filling them in later.
+
+---
+
+Subject: Compiler Design
+Subtopic: Syntax Directed Translation / Attributes
+Difficulty: Hard
+Marks: 2
+Year: 2025
+Question: Given the syntax directed translation rules:\nRule 1: R → AB {B.i = R.i - 1; A.i = B.i; R.i = A.i + 1;}\nRule 2: P → CD {P.i = C.i + D.i; D.i = C.i + 2;}\nRule 3: Q → EF {Q.i = E.i + F.i;}\nWhich is CORRECT?
+Option A: Rule 1 is S-attributed and L-attributed; Rule 2 is S-attributed and not L-attributed; Rule 3 is neither S-attributed nor L-attributed
+Option B: Rule 1 is neither S-attributed nor L-attributed; Rule 2 is S-attributed and L-attributed; Rule 3 is S-attributed and L-attributed
+Option C: Rule 1 is neither S-attributed nor L-attributed; Rule 2 is not S-attributed and is L-attributed; Rule 3 is S-attributed and L-attributed
+Option D: Rule 1 is S-attributed and not L-attributed; Rule 2 is not S-attributed and is L-attributed; Rule 3 is S-attributed and L-attributed
+Correct: C
+Explanation: Rule 1 has inherited attributes (B.i and A.i) so it's not S-attributed, and A.i depends on right sibling B.i, so it's not L-attributed either. Rule 2 has D.i inheriting from left sibling C.i (L-attributed, not S-attributed). Rule 3 has only synthesized attributes (both S-attributed and L-attributed).
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Decidability / CFGs
+Difficulty: Medium
+Marks: 1
+Year: 2025
+Question: Let G1, G2 be Context Free Grammars (CFGs) and R be a regular expression. Which ONE among the following questions is decidable?
+Option A: Is L(G1) = L(G2)?
+Option B: Is L(G1) ∩ L(G2) = ∅?
+Option C: Is L(G1) = L(R)?
+Option D: Is L(G1) = ∅?
+Correct: D
+Explanation: Emptiness of context-free languages (Is L(G) = ∅) is decidable. Equivalence of CFGs (A), intersection emptiness (B), and equivalence with a regular language (C) are all undecidable.
+
+---
+
+Subject: Operating Systems
+Subtopic: CPU Scheduling / SRTF
+Difficulty: Hard
+Marks: 2
+Year: 2025
+Question: Processes P1, P2, P3, P4 arrive at times 0, 1, 2, and 8 ms respectively, with burst times of 10, 13, 6, and 9 ms. Under Shortest Remaining Time First (SRTF) scheduling, the average turnaround time in milliseconds is:
+Option A: 22
+Option B: 15
+Option C: 37
+Option D: 19
+Correct: D
+Explanation: SRTF timeline: P1 runs [0-2], P3 runs [2-8] (completes), P1 runs [8-16] (completes), P4 runs [16-25] (completes), P2 runs [25-38] (completes). Turnaround times: P1=16-0=16; P2=38-1=37; P3=8-2=6; P4=25-8=17. Average = 76 / 4 = 19 ms.
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Closure Properties of Languages
+Difficulty: Medium
+Marks: 2
+Year: 2025
+Question: Match the languages and closure properties:\nList I: (i) Context free languages, (ii) Recursive languages, (iii) Regular languages\nList II: (a) Closed under union, (b) Not closed under complementation, (c) Closed under intersection\nWhich options are CORRECT?
+Option A: (i) – (a), (ii) – (b), and (iii) – (c)
+Option B: (i) – (b), (ii) – (a), and (iii) – (c)
+Option C: (i) – (b), (ii) – (c), and (iii) – (a)
+Option D: (i) – (a), (ii) – (c), and (iii) – (b)
+Correct: B
+Explanation: Context free languages (i) are not closed under complementation (b). Recursive languages (ii) are closed under union (a) and intersection (c). Regular languages (iii) are closed under union, complement, and intersection (c). Hence, B and C are correct matches.
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Booth's Algorithm
+Difficulty: Hard
+Marks: 2
+Year: 2025
+Question: Signed 2's complement numbers M = 1100 1101 1110 1101 and Q = 1010 0100 1010 1010 are multiplied using Booth's algorithm. The total number of addition and subtraction operations performed is:
+Option A: 13
+Option B: 11
+Option C: 15
+Option D: 12
+Correct: A
+Explanation: Appending 0 to the right of Q gives 1010 0100 1010 1010 0. Scanning pairs from right to left shows transitions: 7 subtractions (1 to 0 transitions) and 6 additions (0 to 1 transitions), giving 13 operations.
+
+---
+
+Subject: Programming & Data Structures
+Subtopic: C Programming / Euclidean Algorithm
+Difficulty: Easy
+Marks: 1
+Year: 2025
+Question: What is the output of the following C code segment?\n\nint x=126, y=105;\ndo {\n    if (x>y) x=x-y;\n    else y=y-x;\n} while (x!=y);\nprintf("%d", x);
+Option A: 21
+Option B: 7
+Option C: 42
+Option D: 3
+Correct: A
+Explanation: The code implements the Euclidean algorithm for GCD. The loop calculates GCD(126, 105) through repeated subtraction, exiting when x == y = 21.
+
+---
+
+Subject: Digital Logic
+Subtopic: Counters / Ripple Counter
+Difficulty: Medium
+Marks: 1
+Year: 2025
+Question: In a 4-bit ripple counter, if the period of the waveform at the last flip-flop is 64 microseconds, then the frequency of the ripple counter input clock in kHz is:
+Option A: 250
+Option B: 500
+Option C: 125
+Option D: 1000
+Correct: A
+Explanation: A 4-bit counter divides the input clock frequency by 2⁴ = 16. The period at the last stage is 16 times the input clock period: 64 μs = 16 * T_clock ⇒ T_clock = 4 μs. Input frequency = 1 / 4 μs = 250 kHz.
+
+---
+
+Subject: Programming & Data Structures
+Subtopic: Binary Search Tree
+Difficulty: Easy
+Marks: 1
+Year: 2025
+Question: Suppose the values 10, -4, 15, 30, 20, 5, 60, 19 are inserted in that order into an empty binary search tree. The number of edges in the path from the node containing 19 to the root node is:
+Option A: 4
+Option B: 3
+Option C: 5
+Option D: 2
+Correct: A
+Explanation: The BST hierarchy built is: 10 (root) -> 15 -> 30 -> 20 -> 19. The path from 19 to root is: 19 - 20 - 30 - 15 - 10, which contains exactly 4 edges.
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: Stop-and-Wait / Channel Utilization
+Difficulty: Medium
+Marks: 1
+Year: 2025
+Question: Transmission is done using Stop-and-Wait. Frame size is 3000 bits. Bandwidth is 2000 bps, and propagation delay is 100 ms. If ACK size and processing delays are negligible, the channel utilization percentage is:
+Option A: 88.23
+Option B: 93.75
+Option C: 85.44
+Option D: 66.67
+Correct: A
+Explanation: Transmission time T_tx = 3000 / 2000 = 1.5s = 1500ms. Propagation delay T_p = 100ms. Channel utilization = T_tx / (T_tx + 2 * T_p) = 1500 / (1500 + 200) = 1500 / 1700 = 88.23%.
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Cache Memory / Direct Mapping
+Difficulty: Medium
+Marks: 1
+Year: 2025
+Question: For a direct-mapped cache, 4 bits are used for the tag field and 12 bits are used to index into a cache block. The size of each cache block is one byte. The sizes of the main memory and the cache memory in this system, respectively, are:
+Option A: 64 KB and 4 KB
+Option B: 128 KB and 16 KB
+Option C: 64 KB and 8 KB
+Option D: 128 KB and 6 KB
+Correct: A
+Explanation: Block offset = 0 bits (1 byte block). Total address bits = 4 (tag) + 12 (index) + 0 = 16 bits ⇒ Main memory = 2¹⁶ B = 64 KB. Cache has 2¹² = 4096 blocks of 1 byte each = 4 KB.
+
+---
+
+Subject: Compiler Design
+Subtopic: Parsing / LR Parsers
+Difficulty: Hard
+Marks: 2
+Year: 2025
+Question: Given the CFG G: S → Aa | bAc | dc | bda, A → d. Which statement is TRUE?
+Option A: G is neither LALR(1) nor SLR(1)
+Option B: G is CLR(1), not LALR(1)
+Option C: G is LALR(1), not SLR(1)
+Option D: G is LALR(1), also SLR(1)
+Correct: D
+Explanation: Rewriting the grammar by substituting A yields S → da | dc | bdc | bda. This grammar is unambiguous and has no shift-reduce or reduce-reduce conflicts in its LR(0) states, making it SLR(1) and LALR(1).
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Linear Algebra / LU Decomposition
+Difficulty: Medium
+Marks: 2
+Year: 2025
+Question: Consider a system of linear equations PX = Q where P has an LU decomposition P = LU. Which statement is/are TRUE?\nOption A: PX = Q can be solved by first solving LY = Q and then UX = Y.\nOption B: If P is invertible, then both L and U are invertible.\nOption C: If P is singular, then at least one of the diagonal elements of U is zero.\nOption D: If P is symmetric, then both L and U are symmetric.
+Correct: A
+Explanation: LU decomposition decomposes P into lower (L) and upper (U) triangular matrices. Solving LY=Q then UX=Y is the standard forward-backward substitution (A is true). Invertibility of P implies det(L) != 0 and det(U) != 0 (B is true). Singularity implies det(U) = 0, which for a triangular matrix means a diagonal element is zero (C is true).
+
+---
+
+Subject: Operating Systems
+Subtopic: Deadlock / Resource Allocation Graph
+Difficulty: Hard
+Marks: 2
+Year: 2025
+Question: In a system with single-instance resources R1, R2, R3, R4 and processes P1, P2, P3, P4, assignment edges are: R1→P1, R2→P2, R3→P3, R4→P4. Claim edges are: P1→R2, P2→R3, P3→R1, P2→R4, P4→R2. Which of the following makes the system deadlock-free?\nOption A: Aborting P1\nOption B: Aborting P3\nOption C: Aborting P2\nOption D: Aborting P1 and P4
+Correct: A
+Explanation: The wait-for graph has cycles P1→P2→P3→P1 and P2→P4→P2. Aborting P2 breaks both cycles (C). Aborting P1 and P4 breaks both cycles (D). Aborting P1 or P3 breaks the first cycle, and we must check if that leaves a deadlock. P2→P4→P2 is still a deadlock, so only aborting P2 or P1+P4 removes deadlock completely. Wait, aborting P1 alone leaves cycle P2→P4→P2. So C and D are the correct answers to completely clear deadlocks.
+
+---
+
+Subject: Compiler Design
+Subtopic: LL(1) Parsing / Ambiguity
+Difficulty: Medium
+Marks: 2
+Year: 2025
+Question: Consider two grammars G1 and G2:\nG1: S → if E then S | if E then S else S | a, E → b\nG2: S → if E then S | M, M → if E then M else S | c, E → b\nWhich of the following is/are CORRECT?\nOption A: G1 is not LL(1) and G2 is LL(1).\nOption B: G1 is LL(1) and G2 is not LL(1).\nOption C: G1 and G2 are not LL(1).\nOption D: G1 and G2 are ambiguous.
+Correct: A
+Explanation: G1 is ambiguous because of the dangling else problem (making it not LL(1)). G2 is the unambiguous version which resolves dangling else and is LL(1).

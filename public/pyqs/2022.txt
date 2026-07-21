@@ -1,0 +1,537 @@
+Subject: General Aptitude
+Subtopic: Vocabulary / Homophones
+Difficulty: Easy
+Marks: 1
+Year: 2022
+Question: The ___ is too high for it to be considered ___.
+Option A: fair / fare
+Option B: faer / fair
+Option C: fare / fare
+Option D: fare / fair
+Correct: D
+Explanation: "Fare" refers to the price charged for transportation or a service. "Fair" means reasonable, just, or acceptable. The sentence structure requires "fare" (price) as the subject and "fair" (reasonable) as the complement.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Calculus / Area under curve
+Difficulty: Easy
+Marks: 1
+Year: 2022
+Question: A function y(x) is defined in the interval [0,1] on the x-axis as: y(x) = {2 if 0 ≤ x < 1/3; 3 if 1/3 ≤ x < 3/4; 1 if 3/4 ≤ x ≤ 1}. Which one of the following is the area under the curve for the interval [0,1] on the x-axis?
+Option A: 5/6
+Option B: 6/5
+Option C: 13/6
+Option D: 6/13
+Correct: C
+Explanation: The area under a piecewise constant function is calculated by summing the product of each constant value with the length of its interval: 2(1/3) + 3(3/4 - 1/3) + 1(1 - 3/4) = 13/6.
+
+---
+
+Subject: General Aptitude
+Subtopic: Syllogisms / Logical Statements
+Difficulty: Easy
+Marks: 1
+Year: 2022
+Question: Given below are four statements.
+Statement 1: All students are inquisitive.
+Statement 2: Some students are inquisitive.
+Statement 3: No student is inquisitive.
+Statement 4: Some students are not inquisitive.
+From the given four statements, find the two statements that CANNOT BE TRUE simultaneously, assuming that there is at least one student in the class.
+Option A: Statement 1 and Statement 3
+Option B: Statement 1 and Statement 2
+Option C: Statement 2 and Statement 4
+Option D: Statement 3 and Statement 4
+Correct: A
+Explanation: "All students are inquisitive" contradicts "No student is inquisitive" because if there is at least one student in the class, both statements cannot be true simultaneously.
+
+---
+
+Subject: General Aptitude
+Subtopic: Reading Comprehension / Logical Inference
+Difficulty: Easy
+Marks: 1
+Year: 2022
+Question: Some people believe that "what gets measured, improves". Some others believe that "what gets measured, gets gamed". One possible reason for the difference in the beliefs is the work culture in organizations. In organizations with good work culture, metrics help improve outcomes. However, the same metrics are counterproductive in organizations with poor work culture. Which one of the following is the CORRECT logical inference based on the information in the above passage?
+Option A: Metrics are useful in organizations with poor work culture
+Option B: Metrics are useful in organizations with good work culture
+Option C: Metrics are always counterproductive in organizations with good work culture
+Option D: Metrics are never useful in organizations with good work culture
+Correct: B
+Explanation: The passage explicitly states that metrics help improve outcomes in organizations with good work culture.
+
+---
+
+Subject: General Aptitude
+Subtopic: Data Interpretation / Percentages
+Difficulty: Easy
+Marks: 1
+Year: 2022
+Question: In a recently conducted national entrance test, boys constituted 65% of those who appeared for the test. Girls constituted the remaining candidates and they accounted for 60% of the qualified candidates. Which one of the following is the correct logical inference based on the information provided in the above passage?
+Option A: Equal number of boys and girls qualified
+Option B: Equal number of boys and girls appeared for the test
+Option C: The number of boys who appeared for the test is less than the number of girls who appeared
+Option D: The number of boys who qualified the test is less than the number of girls who qualified
+Correct: D
+Explanation: Girls account for 60% of qualified candidates, while boys account for 40%. Since 60% > 40%, more girls qualified than boys.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Conditional Probability
+Difficulty: Medium
+Marks: 2
+Year: 2022
+Question: A box contains five balls of same size and shape. Three of them are green coloured balls and two of them are orange coloured balls. Balls are drawn from the box one at a time. If a green ball is drawn, it is not replaced. If an orange ball is drawn, it is replaced with another orange ball. First ball is drawn. What is the probability of getting an orange ball in the next draw?
+Option A: 1/2
+Option B: 8/25
+Option C: 19/50
+Option D: 23/50
+Correct: D
+Explanation: Using the law of total probability, we condition on the color of the first ball drawn. P(O2) = P(G1)P(O2|G1) + P(O1)P(O2|O1) = (3/5)(1/2) + (2/5)(2/5) = 23/50.
+
+---
+
+Subject: General Aptitude
+Subtopic: Spatial Reasoning / Geometry
+Difficulty: Medium
+Marks: 1
+Year: 2022
+Question: The corners and mid-points of the sides of a triangle are named using the distinct letters P, Q, R, S, T and U, but not necessarily in the same order. Consider the following statements: The line joining P and R is parallel to the line joining Q and S. P is placed on the side opposite to the corner T. S and U cannot be placed on the same side. Which one of the following statements is correct based on the above information?
+Option A: P cannot be placed at a corner
+Option B: S cannot be placed at a corner
+Option C: U cannot be placed at a mid-point
+Option D: R cannot be placed at a corner
+Correct: A
+Explanation: P must be a midpoint of the side opposite corner T because P is on the side opposite T. As P is a midpoint, P cannot be placed at a corner.
+
+---
+
+Subject: General Aptitude
+Subtopic: Spatial Reasoning / Geometry
+Difficulty: Medium
+Marks: 1
+Year: 2022
+Question: A plot of land must be divided between four families. They want their individual plots to be similar in shape, not necessarily equal in area. The land has equally spaced poles, marked as dots in the below figure. Two ropes, R1 and R2, are already present and cannot be moved. What is the least number of additional straight ropes needed to create the desired plots? A single rope can pass through three poles that are aligned in a straight line.
+Option A: 2
+Option B: 4
+Option C: 5
+Option D: 3
+Correct: D
+Explanation: The existing ropes and the added ropes create the division. The minimum number of additional ropes needed to divide the land into 4 similar shapes is 3.
+
+---
+
+Subject: Algorithms
+Subtopic: Asymptotic Notation
+Difficulty: Easy
+Marks: 1
+Year: 2022
+Question: Which one of the following statements is TRUE for all positive functions f(n)?
+Option A: f(n²) = θ(f(n²)), when f(n) is a polynomial
+Option B: f(n²) = o(f(n²))
+Option C: f(n²) = O(f(n²)), when f(n) is an exponential function
+Option D: f(n²) = Ω(f(n²))
+Correct: D
+Explanation: Any function is asymptotically bounded below by itself, i.e., f(n) = Ω(f(n)) is a universal identity. Therefore, f(n²) = Ω(f(n²)) is true for all positive functions f(n).
+
+---
+
+Subject: Compiler Design
+Subtopic: Parsing / Symbol Tables / Data Flow
+Difficulty: Medium
+Marks: 1
+Year: 2022
+Question: Which one of the following statements is TRUE?
+Option A: The LALR(1) parser for a grammar G cannot have reduce-reduce conflict if the LR(1) parser for G does not have reduce-reduce conflict.
+Option B: Symbol table is accessed only during the lexical analysis phase.
+Option C: Data flow analysis is necessary for run-time memory management.
+Option D: LR(1) parsing is sufficient for deterministic context-free languages.
+Correct: D
+Explanation: LR(1) parsing is powerful enough to handle all deterministic context-free languages (DCFLs). LALR(1) can introduce reduce-reduce conflicts due to merging states. Symbol tables are accessed during multiple compilation phases.
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: Normalization / BCNF
+Difficulty: Medium
+Marks: 1
+Year: 2022
+Question: In a relational data model, which one of the following statements is TRUE?
+Option A: A relation with only two attributes is always in BCNF.
+Option B: If all attributes of a relation are prime attributes, then the relation is in BCNF.
+Option C: Every relation has at least one non-prime attribute.
+Option D: BCNF decompositions preserve functional dependencies.
+Correct: A
+Explanation: For a relation with two attributes, any dependency X→Y will have X containing a candidate key. There are no transitive or partial dependencies, so it's always in BCNF.
+
+---
+
+Subject: Programming & Data Structures
+Subtopic: Linked Lists
+Difficulty: Easy
+Marks: 1
+Year: 2022
+Question: Consider the problem of reversing a singly linked list. Which one of the following statements is TRUE about the time complexity of algorithms that solve the above problem in O(1) space?
+Option A: The best algorithm for the problem takes θ(n) time in the worst case.
+Option B: The best algorithm for the problem takes θ(n log n) time in the worst case.
+Option C: The best algorithm for the problem takes θ(n²) time in the worst case.
+Option D: It is not possible to reverse a singly linked list in O(1) space.
+Correct: A
+Explanation: Reversing a linked list iteratively requires changing next pointers with three reference variables, taking O(1) extra space and θ(n) time in the worst case.
+
+---
+
+Subject: Programming & Data Structures
+Subtopic: Hashing
+Difficulty: Easy
+Marks: 1
+Year: 2022
+Question: Suppose we are given n keys, m hash table slots, and two simple uniform hash functions h₁ and h₂. Further suppose our hashing scheme uses h₁ for the odd keys and h₂ for the even keys. What is the expected number of keys in a slot?
+Option A: m/n
+Option B: n/m
+Option C: 2n/m
+Option D: n/(2m)
+Correct: B
+Explanation: By uniform hashing, the expected number of keys in any slot is total keys divided by total slots = n/m, regardless of split hash functions.
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: I/O / DMA
+Difficulty: Easy
+Marks: 1
+Year: 2022
+Question: Which one of the following facilitates transfer of bulk data from hard disk to main memory with the highest throughput?
+Option A: DMA based I/O transfer
+Option B: Interrupt driven I/O transfer
+Option C: Polling based I/O transfer
+Option D: Programmed I/O transfer
+Correct: A
+Explanation: DMA allows high-speed transfer directly between device and memory without CPU intervention, offering maximum throughput for bulk data.
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Number Representation / 2's Complement
+Difficulty: Medium
+Marks: 1
+Year: 2022
+Question: Let R1 and R2 be two 4-bit registers that store numbers in 2's complement form. For the operation R1+R2, which one of the following values of R1 and R2 gives an arithmetic overflow?
+Option A: R1 = 1011 and R2 = 1110
+Option B: R1 = 1100 and R2 = 1010
+Option C: R1 = 0011 and R2 = 0100
+Option D: R1 = 1001 and R2 = 1111
+Correct: B
+Explanation: In 4-bit 2's complement, 1100 = -4, 1010 = -6. Their sum is -10, which falls outside the valid range of [-8, +7], causing arithmetic overflow.
+
+---
+
+Subject: Operating Systems
+Subtopic: Process Synchronization / Semaphores
+Difficulty: Hard
+Marks: 1
+Year: 2022
+Question: Consider the following threads, T1, T2, and T3 executing on a single processor, synchronized using three binary semaphore variables, S1, S2, and S3, operated upon using standard wait() and signal(). The threads can be context switched in any order and at any time.\nT1: while(true) { wait(S3); print("C"); signal(S2); }\nT2: while(true) { wait(S1); print("B"); signal(S3); }\nT3: while(true) { wait(S2); print("A"); signal(S1); }\nWhich initialization of the semaphores would print the sequence BCABCA...?
+Option A: S1 = 1; S2 = 1; S3 = 1
+Option B: S1 = 1; S2 = 1; S3 = 0
+Option C: S1 = 1; S2 = 0; S3 = 0
+Option D: S1 = 0; S2 = 1; S3 = 1
+Correct: C
+Explanation: To print B first, S1 must be 1. T2 runs, prints B, and signals S3 (making S3=1), which unblocks T1 to print C and signal S2. This unblocks T3 to print A. Hence, initial values should be S1=1, S2=0, S3=0.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Matrices / Trace
+Difficulty: Easy
+Marks: 1
+Year: 2022
+Question: Consider the following two statements with respect to the matrices Aₘₓₙ, Bₙₓₘ, Cₘₓₙ and Dₙₓₘ.\nStatement 1: tr(AB) = tr(BA)\nStatement 2: tr(CD) = tr(DC)\nwhere tr() represents the trace of a matrix. Which one of the following holds?
+Option A: Statement 1 is correct and Statement 2 is wrong.
+Option B: Statement 1 is wrong and Statement 2 is correct.
+Option C: Both Statement 1 and Statement 2 are correct.
+Option D: Both Statement 1 and Statement 2 are wrong.
+Correct: C
+Explanation: The trace of a matrix product is commutative, i.e., tr(AB) = tr(BA) for any dimensions where products are defined.
+
+---
+
+Subject: Programming & Data Structures
+Subtopic: C Programming / Pointers
+Difficulty: Medium
+Marks: 1
+Year: 2022
+Question: What is printed by the following ANSI C program?\n\n#include <stdio.h>\nint main(int argc, char *argv[]) {\n    int x = 1, z[2] = {10, 11};\n    int *p = NULL;\n    p = &x;\n    *p = 10;\n    p = &z[1];\n    *(&z[0] + 1) += 3;\n    printf("%d, %d, %d\\n", x, z[0], z[1]);\n    return 0;\n}
+Option A: 1, 10, 11
+Option B: 1, 10, 14
+Option C: 10, 14, 11
+Option D: 10, 10, 14
+Correct: D
+Explanation: x is modified to 10. p = &z[1] is unused. *(&z[0] + 1) evaluates to z[1] and increases it by 3 (from 11 to 14). Output: 10, 10, 14.
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: IP Addressing / Subnets
+Difficulty: Medium
+Marks: 1
+Year: 2022
+Question: Consider an enterprise network with two Ethernet segments, a web server and a firewall, connected via three routers as shown below. What is the number of subnets inside the enterprise network?
+Option A: 3
+Option B: 12
+Option C: 6
+Option D: 8
+Correct: C
+Explanation: Each router interface to a point-to-point link or a LAN segment represents a distinct subnet. Based on the topology, there are 6 subnets in total.
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Languages / Recursive and RE Languages
+Difficulty: Medium
+Marks: 1
+Year: 2022
+Question: Which of the following statements is/are TRUE?\nOption A: Every subset of a recursively enumerable language is recursive.\nOption B: If a language L and its complement L̅ are both recursively enumerable, then L must be recursive.\nOption C: Complement of a context-free language must be recursive.\nOption D: If L1 and L2 are regular, then L1 ∩ L2 must be deterministic context-free.
+Correct: B
+Explanation: If both L and its complement are RE, then L is recursive. Complement of a CFL is recursive. If L1 and L2 are regular, their intersection is regular, which is a subset of DCFL. Thus, B, C, and D are all true.
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Cache Memory / Write Policies
+Difficulty: Medium
+Marks: 1
+Year: 2022
+Question: Let R1 and R2 be two set associative cache organizations that use LRU algorithm for cache block replacement. WB is a write back cache and WT is a write through cache. Which of the following statements is/are FALSE?\nOption A: Each cache block in WB and WT has a dirty bit.\nOption B: Every write hit in WB leads to a data transfer from cache to main memory.\nOption C: Eviction of a block from WT will not lead to data transfer from cache to main memory.\nOption D: A read miss in WB will never lead to eviction of a dirty block from WB.
+Correct: A
+Explanation: WT does not use dirty bits. WB does not write to main memory on a write hit (only on eviction). A read miss in WB can evict a dirty block. Thus, A, B, and D are false statements.
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: Relational Algebra / Division
+Difficulty: Medium
+Marks: 1
+Year: 2022
+Question: Consider the following three relations in a relational database.\nEmployee(eId, eName), Brand(bId, bName), Own(eId, bId)\nWhich of the following relational algebra expressions return the set of eIds who own all the brands?\nOption A: Πₑᵢₙ(Πₑᵢₙ,ₐᵢₙ(Own) / Πₐᵢₙ(Brand))\nOption B: Πₑᵢₙ(Own) - Πₑᵢₙ((Πₑᵢₙ(Own) × Πₐᵢₙ(Brand)) - Πₑᵢₙ,ₐᵢₙ(Own))\nOption C: Πₑᵢₙ(Πₑᵢₙ,ₐᵢₙ(Own) / Πₐᵢₙ(Own))\nOption D: Πₑᵢₙ((Πₑᵢₙ(Own) × Πₐᵢₙ(Own)) / Πₐᵢₙ(Brand))
+Correct: A
+Explanation: Relational division (/) is used to find entities associated with all entities in another set. Π(Own) / Π(Brand) finds the employees (eIds) who own all brands.
+
+---
+
+Subject: Operating Systems
+Subtopic: Deadlocks
+Difficulty: Medium
+Marks: 1
+Year: 2022
+Question: Which of the following statements is/are TRUE with respect to deadlocks?\nOption A: Circular wait is a necessary condition for the formation of deadlock.\nOption B: In a system where each resource has more than one instance, a cycle in its wait-for graph indicates the presence of a deadlock.\nOption C: If the current allocation of resources to processes leads the system to unsafe state, then deadlock will necessarily occur.\nOption D: In the resource-allocation graph of a system, if every edge is an assignment edge, then the system is not in deadlock state.
+Correct: A
+Explanation: Circular wait is a necessary condition. With multiple instances, a cycle does not guarantee deadlock. Unsafe states do not always lead to deadlock. If there are only assignment edges, no processes are waiting. Thus, A and D are true.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Group Properties
+Difficulty: Medium
+Marks: 1
+Year: 2022
+Question: Which of the following statements is/are TRUE for a group G?\nOption A: If for all x,y∈G, (xy)² = x²y², then G is commutative.\nOption B: If for all x∈G, x² = 1, then G is commutative. Here, 1 is the identity element of G.\nOption C: If the order of G is 2, then G is commutative.\nOption D: If G is commutative, then a subgroup of G need not be commutative.
+Correct: A
+Explanation: (xy)² = x²y² simplifies to yx = xy. x² = 1 implies every element is its own inverse, making the group abelian. A group of order 2 is cyclic, thus commutative. Subgroups of abelian groups are always abelian. Thus, A, B, and C are true.
+
+---
+
+Subject: Programming & Data Structures
+Subtopic: Binary Search Tree / Heap Array Representation
+Difficulty: Medium
+Marks: 1
+Year: 2022
+Question: Suppose a binary search tree with 1000 distinct elements is also a complete binary tree. The tree is stored using the array representation of binary heap trees. Assuming that the array indices start with 0, the 3rd largest element of the tree is stored at index ___.
+Option A: 997
+Option B: 998
+Option C: 999
+Option D: 1000
+Correct: A
+Explanation: In a complete binary tree stored in array representation, the largest element is at index n-1 (999), the second largest is at 998, and the third largest is at n-3 = 997.
+
+---
+
+Subject: Compiler Design
+Subtopic: LR Parsing / LR(0) Items
+Difficulty: Hard
+Marks: 1
+Year: 2022
+Question: Consider the augmented grammar: S' → S, S → S + R | R, R → R * P | P, P → (S) | id. If I₀ is the set of two LR(0) items {[S' → S], [S → S • + R]}, then goto(closure(I₀), +) contains exactly ___ items.
+Option A: 5
+Option B: 4
+Option C: 6
+Option D: 3
+Correct: A
+Explanation: goto(I₀, +) moves the dot: [S → S + • R]. The closure adds: [R → • R * P], [R → • P], [P → • (S)], [P → • id]. This results in exactly 5 items.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Graph Theory / Disconnected Graphs
+Difficulty: Easy
+Marks: 1
+Year: 2022
+Question: Consider a simple undirected graph of 10 vertices. If the graph is disconnected, then the maximum number of edges it can have is ___.
+Option A: 36
+Option B: 45
+Option C: 28
+Option D: 9
+Correct: A
+Explanation: The maximum number of edges in a disconnected graph on n vertices occurs when n-1 vertices form a complete graph and 1 vertex is isolated. Max edges = C(9,2) = 36.
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: Functional Dependencies / Keys
+Difficulty: Medium
+Marks: 1
+Year: 2022
+Question: Consider a relation R(A,B,C,D,E) with the following three functional dependencies: AB → C; BC → D; C → E. The number of superkeys in the relation R is ___.
+Option A: 4
+Option B: 8
+Option C: 2
+Option D: 16
+Correct: A
+Explanation: The candidate key is ABD. Any superkey must contain ABD. The remaining attributes are C and E, so the number of superkeys is 2² = 4 (namely: ABD, ABCD, ABDE, ABCDE).
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Partitions
+Difficulty: Medium
+Marks: 1
+Year: 2022
+Question: The number of arrangements of six identical balls in three identical bins is ___.
+Option A: 7
+Option B: 28
+Option C: 12
+Option D: 9
+Correct: A
+Explanation: This represents partitions of 6 into at most 3 parts. The partitions are: {6}, {5,1}, {4,2}, {4,1,1}, {3,3}, {3,2,1}, {2,2,2}, which gives exactly 7 arrangements.
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Cache Memory / Average Memory Access Time
+Difficulty: Medium
+Marks: 1
+Year: 2022
+Question: A cache memory that has a hit rate of 0.8 has an access latency 10 ns and miss penalty 100 ns. An optimization is done on the cache to reduce the miss rate. However, the optimization results in an increase of cache access latency to 15 ns, whereas the miss penalty is not affected. The minimum hit rate (rounded off to two decimal places) needed after the optimization such that it should not increase the average memory access time is ___.
+Option A: 0.85
+Option B: 0.90
+Option C: 0.75
+Option D: 0.80
+Correct: A
+Explanation: Initial AMAT = 10 + 0.2(100) = 30 ns. New AMAT = 15 + (1-H')(100). We need 15 + (1-H')(100) ≤ 30 ⇒ (1-H')(100) ≤ 15 ⇒ 1-H' ≤ 0.15 ⇒ H' ≥ 0.85.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Calculus / Limits
+Difficulty: Medium
+Marks: 1
+Year: 2022
+Question: The value of the following limit is ___: lim(x→0⁺) (1−e^(2√x))/√x
+Option A: -2
+Option B: 2
+Option C: 0
+Option D: 1
+Correct: A
+Explanation: Substitute t = √x. As x→0⁺, t→0⁺. The limit becomes lim(t→0⁺) (1-e^(2t))/t. Applying L'Hopital's rule: lim(t→0⁺) (-2e^(2t))/1 = -2.
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: DNS Resolution
+Difficulty: Easy
+Marks: 1
+Year: 2022
+Question: Consider the resolution of the domain name www.gate.org.in by a DNS resolver. Assume that no resource records are cached anywhere across the DNS servers and that iterative query mechanism is used in the resolution. The number of DNS query-response pairs involved in completely resolving the domain name is ___.
+Option A: 4
+Option B: 3
+Option C: 5
+Option D: 2
+Correct: A
+Explanation: The root DNS server returns .in TLD. The .in TLD returns .org.in TLD. The .org.in TLD returns gate.org.in authoritative DNS. The gate.org.in authoritative DNS returns the IP. This requires exactly 4 query-response pairs.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Generating Functions
+Difficulty: Hard
+Marks: 1
+Year: 2022
+Question: Which one of the following is the closed form for the generating function of the sequence {aₙ}ₙ≥₀ defined as: aₙ = {n+1, if n is odd; 1, otherwise}?
+Option A: x(1+x²)/(1-x²)² + 1/x
+Option B: x(3-x²)/(1-x²)² + 1/(1-x²)
+Option C: 2x/(1-x²)² + 1/x
+Option D: x/(1-x²)² + 1/x
+Correct: B
+Explanation: The generating function is F(x) = Σ aₙxⁿ = Σ x²ᵏ + Σ (2k+2)x²ᵏ⁺¹. This simplifies to F(x) = x(3-x²)/(1-x²)² + 1/(1-x²).
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Graph Theory / Adjacency Matrix
+Difficulty: Medium
+Marks: 1
+Year: 2022
+Question: Consider a simple undirected unweighted graph with at least three vertices. If A is the adjacency matrix of the graph, then the number of 3-cycles in the graph is given by the trace of:
+Option A: A³
+Option B: A³ divided by 2
+Option C: A³ divided by 3
+Option D: A³ divided by 6
+Correct: D
+Explanation: Each triangle (3-cycle) in a graph contributes exactly 6 to the trace of A³ (since the cycle can be traversed starting from 3 vertices in 2 directions). Therefore, the number of triangles is tr(A³) / 6.
+
+---
+
+Subject: Operating Systems
+Subtopic: Memory Management / Paging
+Difficulty: Medium
+Marks: 1
+Year: 2022
+Question: Which one of the following statements is FALSE?
+Option A: The TLB performs an associative search in parallel on all its valid entries using page number of incoming virtual address.
+Option B: If the virtual address of a word given by CPU has a TLB hit, but the subsequent search for the word results in a cache miss, then the word will always be present in the main memory.
+Option C: The memory access time using a given inverted page table is always same for all incoming virtual addresses.
+Option D: In a system that uses hashed page tables, if two distinct virtual addresses V1 and V2 map to the same value while hashing, then the memory access time of these addresses will not be the same.
+Correct: C
+Explanation: Access time for an inverted page table varies because it requires searching the table entries. It is not constant for all virtual addresses.
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: Concurrency Control / Conflict Equivalence
+Difficulty: Hard
+Marks: 1
+Year: 2022
+Question: Let R1(z) and W1(z) denote read and write operations on a data element z by a transaction T1, respectively. Consider the schedule S with four transactions: S: R4(x) R2(x) R3(x) R1(y) W1(y) W2(x) W3(y) R4(y). Which one of the following serial schedules is conflict equivalent to S?
+Option A: T1 → T3 → T4 → T2
+Option B: T1 → T4 → T3 → T2
+Option C: T4 → T1 → T3 → T2
+Option D: T3 → T1 → T4 → T2
+Correct: A
+Explanation: Conflict dependencies require: T1 before T3, T1 before T4, T3 before T4 (on y), and T4 before T2 (on x). This forces the unique serialization order: T1 → T3 → T4 → T2.
+
+---
+
+Subject: Digital Logic
+Subtopic: Decoders and Multiplexers
+Difficulty: Medium
+Marks: 1
+Year: 2022
+Question: Consider a digital display system (DDS) that displays the contents of register X. A 16-bit code word is used to load a word in X, either from S or from R. S is a 1024-word memory segment and R is a 32-word register file. Based on the value of mode bit M, T selects an input word to load in X. P and Q interface with the corresponding bits in the code word to choose the addressed word. Which one of the following represents the functionality of P, Q, and T?
+Option A: P is 10:1 multiplexer; Q is 5:1 multiplexer; T is 2:1 multiplexer
+Option B: P is 10:2¹⁰ decoder; Q is 5:2⁵ decoder; T is 2:1 encoder
+Option C: P is 10:2¹⁰ decoder; Q is 5:2⁵ decoder; T is 2:1 multiplexer
+Option D: P is 1:10 de-multiplexer; Q is 1:5 de-multiplexer; T is 2:1 multiplexer
+Correct: C
+Explanation: S has 1024 words (needs 10-to-1024 decoder, i.e., 10:2¹⁰). R has 32 words (needs 5-to-32 decoder, i.e., 5:2⁵). T selects between two inputs based on a control bit, which is a 2:1 multiplexer.

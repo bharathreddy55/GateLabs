@@ -1,0 +1,267 @@
+Subject: General Aptitude
+Subtopic: Verbal Ability -> Articles
+Difficulty: Easy
+Marks: 1
+Year: 2025
+Question: Ravi had _____ younger brother who taught at _____ university. He was widely regarded as _____ honorable man.\nSelect the option with the correct sequence of articles to fill in the blanks.
+Option A: a; a; an
+Option B: the; an; a
+Option C: a; an; a
+Option D: an; an; a
+Correct: A
+Explanation: 'Younger brother' starts with a consonant sound, so it takes 'a'. 'University' starts with the consonant sound 'yoo', so it takes 'a'. 'Honorable' starts with the vowel sound 'o' (the 'h' is silent), so it takes 'an'.
+
+---
+
+Subject: General Aptitude
+Subtopic: Logical Reasoning -> Blood Relations
+Difficulty: Easy
+Marks: 1
+Year: 2025
+Question: Consider the relationships among P, Q, R, S, and T:\nP is the brother of Q. S is the daughter of Q. T is the sister of S. R is the mother of Q.\nThe following statements are made based on the relationships given above:\n(1) R is the grandmother of S.\n(2) P is the uncle of S and T.\n(3) R has only one son.\n(4) Q has only one daughter.\nWhich one of the following options is correct?
+Option A: Both (1) and (2) are true.
+Option B: Both (1) and (3) are true.
+Option C: Only (3) is true.
+Option D: Only (4) is true.
+Correct: A
+Explanation: R is the mother of Q and Q is the parent of S and T, making R the grandmother of S (Statement 1 is true). P is the brother of Q, making him the uncle of Q's children S and T (Statement 2 is true). Q's gender is unknown, so R could have more than one son (Statement 3 is not necessarily true). Q has two daughters, S and T (Statement 4 is false).
+
+---
+
+Subject: General Aptitude
+Subtopic: Verbal Ability -> Reading Comprehension
+Difficulty: Easy
+Marks: 1
+Year: 2025
+Question: "I put the brown paper in my pocket along with the chalks, and possibly other things. I suppose every one must have reflected how primeval and how poetical are the things that one carries in one's pocket: the pocket-knife, for instance the type of all human tools, the infant of the sword. Once I planned to write a book of poems entirely about the things in my pocket. But I found it would be too long: and the age of the great epics is past." (From G.K. Chesterton's "A Piece of Chalk") Based only on the information provided in the above passage, which one of the following statements is true?
+Option A: The author of the passage carries a mirror in his pocket to reflect upon things.
+Option B: The author of the passage had decided to write a poem on epics.
+Option C: The pocket-knife is described as the infant of the sword.
+Option D: Epics are described as too inconvenient to write.
+Correct: C
+Explanation: The text explicitly states: "the pocket-knife, for instance the type of all human tools, the infant of the sword." The other choices are either false or not supported by the passage.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Functions / Set Theory
+Difficulty: Medium
+Marks: 1
+Year: 2025
+Question: g(.) is a function from A to B, f(.) is a function from B to C, and their composition defined as f(g(.)) is a mapping from A to C.\nIf f(.) and f(g(.)) are onto (surjective) functions, which ONE of the following is TRUE about the function g(.)?
+Option A: g(.) must be an onto (surjective) function.
+Option B: g(.) must be a one-to-one (injective) function.
+Option C: g(.) must be a bijective function, that is, both one-to-one and onto.
+Option D: g(.) is not required to be a one-to-one or onto function.
+Correct: D
+Explanation: Consider A={1,2}, B={x,y}, C={p}. Let g(1)=x, g(2)=x (not onto, not one-to-one). Let f(x)=p, f(y)=p (onto). Then f(g(1))=p, f(g(2))=p, which is onto. Hence, g(.) is not required to be injective or surjective.
+
+---
+
+Subject: Algorithms
+Subtopic: Minimum Spanning Tree / Shortest Path
+Difficulty: Easy
+Marks: 1
+Year: 2025
+Question: Let G be any undirected graph with positive edge weights, and T be a minimum spanning tree of G. For any two vertices, u and v, let d1(u,v) and d2(u,v) be the shortest distances between u and v in G and T, respectively. Which ONE of the options is CORRECT for all possible G, T, u and v?
+Option A: d1(u,v) = d2(u,v)
+Option B: d1(u,v) ≤ d2(u,v)
+Option C: d1(u,v) ≥ d2(u,v)
+Option D: d1(u,v) ≠ d2(u,v)
+Correct: B
+Explanation: Since T is a spanning tree, it is a subgraph of G. The shortest path in G considers all paths, including the path present in T. Therefore, the shortest path distance in G (d1) must be less than or equal to the distance in T (d2).
+
+---
+
+Subject: Theory of Computation (TOC)
+Subtopic: Context-Free Grammar / Languages
+Difficulty: Easy
+Marks: 1
+Year: 2025
+Question: Consider the following context-free grammar G, where S, A, and B are the variables (non-terminals), a and b are the terminal symbols, S is the start variable, and the rules of G are described as:\nS → aaB | Abb\nA → a | aA\nB → b | bB\nWhich ONE of the languages L(G) is accepted by G?
+Option A: L(G) = {a²bⁿ | n ≥ 1} ∪ {aⁿb² | n ≥ 1}
+Option B: L(G) = {aⁿb²ⁿ | n ≥ 1} ∪ {a²ⁿbⁿ | n ≥ 1}
+Option C: L(G) = {aⁿbⁿ | n ≥ 1}
+Option D: L(G) = {a²ⁿb²ⁿ | n ≥ 1}
+Correct: A
+Explanation: A generates aⁿ for n ≥ 1. B generates bⁿ for n ≥ 1. S → aaB generates a²bⁿ for n ≥ 1, while S → Abb generates aⁿb² for n ≥ 1. The union of these two sets represents the language accepted by G.
+
+---
+
+Subject: Computer Networks (CN)
+Subtopic: TCP / 3-Way Handshake
+Difficulty: Easy
+Marks: 1
+Year: 2025
+Question: Consider the 3-way handshaking protocol for TCP connection establishment. Let the three packets exchanged during the connection establishment be denoted as P1, P2, and P3, in order. Which of the following option(s) is/are TRUE with respect to TCP header flags that are set in the packets?
+Option A: P3: SYN = 1, ACK = 1
+Option B: P2: SYN = 1, ACK = 1
+Option C: P2: SYN = 0, ACK = 1
+Option D: P1: SYN = 1
+Correct: B
+Explanation: In a TCP 3-way handshake: P1 (SYN) has SYN=1, ACK=0. P2 (SYN-ACK) has SYN=1, ACK=1. P3 (ACK) has SYN=0, ACK=1. Therefore, B and D are true.
+
+---
+
+Subject: Digital Logic
+Subtopic: Number Systems / 2's Complement
+Difficulty: Medium
+Marks: 1
+Year: 2025
+Question: The number -6 can be represented as 1010 in 4-bit 2's complement representation. Which of the following is/are CORRECT 2's complement representation(s) of -6?
+Option A: 1000 1010 in 8-bits
+Option B: 1111 1010 in 8-bits
+Option C: 1000 0000 0000 1010 in 16-bits
+Option D: 1111 1111 1111 1010 in 16-bits
+Correct: B
+Explanation: To represent -6 in larger bit-widths, we sign-extend the MSB (which is 1). Extending to 8 bits gives 1111 1010, and extending to 16 bits gives 1111 1111 1111 1010. Therefore, B and D are correct.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Probability / Bayes' Theorem
+Difficulty: Medium
+Marks: 2
+Year: 2025
+Question: A box contains 5 coins: 4 regular coins and 1 fake coin. When a regular coin is tossed, the probability P(head) = 0.5 and for a fake coin, P(head) = 1. You pick a coin at random and toss it twice, and get two heads. The probability that the coin you have chosen is the fake coin is:
+Option A: 0.20
+Option B: 0.50
+Option C: 0.25
+Option D: 0.80
+Correct: B
+Explanation: Let F be fake and R be regular. P(F)=1/5, P(R)=4/5. P(2H|F) = 1, P(2H|R) = 0.25. By Bayes' theorem, P(F|2H) = P(2H|F)P(F) / [P(2H|F)P(F) + P(2H|R)P(R)] = (1 * 0.2) / (1 * 0.2 + 0.25 * 0.8) = 0.2 / 0.4 = 0.50.
+
+---
+
+Subject: Algorithms
+Subtopic: Sorting / Bubble Sort
+Difficulty: Easy
+Marks: 1
+Year: 2025
+Question: The Bubble Sort algorithm: fun(int A[n]){ for i=0 to n-2; for j=0 to n-i-2; if (A[j]>A[j+1]) swap; } is run on array A[0..29] of 30 distinct integers in descending order. The number of swap operations performed is:
+Option A: 435
+Option B: 450
+Option C: 465
+Option D: 420
+Correct: A
+Explanation: For an array of size n=30 in descending order (worst case), bubble sort performs exactly n(n-1)/2 swaps. Here, 30 * 29 / 2 = 435 swaps.
+
+---
+
+Subject: Programming & Data Structures
+Subtopic: Heap / Binary Tree
+Difficulty: Easy
+Marks: 1
+Year: 2025
+Question: The height of any rooted tree is defined as the maximum number of edges in the path from the root node to any leaf node. Suppose a Min-Heap T stores 32 keys. The height of T is:
+Option A: 5
+Option B: 4
+Option C: 6
+Option D: 3
+Correct: A
+Explanation: A min-heap with n keys is a complete binary tree. The height of a complete binary tree with n elements is ⌊log₂ n⌋. For n = 32, height = ⌊log₂ 32⌋ = 5.
+
+---
+
+Subject: Computer Organization & Architecture (COA)
+Subtopic: Instruction Format
+Difficulty: Medium
+Marks: 1
+Year: 2025
+Question: A processor has 64 general-purpose registers and 50 distinct instruction types. An instruction is encoded in 32-bits. What is the maximum number of bits that can be used to store the immediate operand for the instruction ADD R1, #25?
+Option A: 16
+Option B: 20
+Option C: 22
+Option D: 24
+Correct: B
+Explanation: Addressing 64 registers requires 6 bits (2^6=64). Specifying 50 instruction types requires 6 bits (2^6=64 >= 50). The instruction format uses 6 bits for opcode and 6 bits for the register operand, leaving 32 - 12 = 20 bits for the immediate value.
+
+---
+
+Subject: Operating Systems
+Subtopic: CPU Scheduling / Priority Scheduling
+Difficulty: Hard
+Marks: 2
+Year: 2025
+Question: Two processors M1 and M2 run 4 processes P1(20ms), P2(16ms), P3(25ms), and P4(10ms) arriving at t=0. Scheduling uses non-preemptive priority. M1 priority: P1 > P3 > P2 > P4. M2 priority: P2 > P3 > P4 > P1. A process is scheduled to a free processor if no higher priority process is waiting. What is the average waiting time of the processes in milliseconds?
+Option A: 9.00
+Option B: 8.75
+Option C: 6.50
+Option D: 7.50
+Correct: A
+Explanation: At t=0, P1 starts on M1 (runs until t=20) and P2 starts on M2 (runs until t=16). At t=16, M2 becomes free; P3 starts (runs until t=41) as it is higher priority than P4 on M2. At t=20, M1 becomes free; P4 starts (runs until t=30). Waiting times: P1=0, P2=0, P3=16, P4=20. Average = 36 / 4 = 9.00 ms.
+
+---
+
+Subject: Databases (DBMS)
+Subtopic: Relational Calculus / Tuple Relational Calculus
+Difficulty: Medium
+Marks: 1
+Year: 2025
+Question: Given teams(tid, tname) and players(pid, pname, tid), which tuple relational calculus (TRC) query returns the names of the players who play for the team with tname = 'MI'?
+Option A: { p.pname | p ∈ players ∧ ∃t (t ∈ teams ∧ p.tid = t.tid ∧ t.tname = 'MI') }
+Option B: { p.pname | p ∈ teams ∧ ∃t (t ∈ players ∧ p.tid = t.tid ∧ t.tname = 'MI') }
+Option C: { p.pname | p ∈ players ∧ ∃t (t ∈ teams ∧ t.tname = 'MI') }
+Option D: { p.pname | p ∈ teams ∧ ∃t (t ∈ players ∧ t.tname = 'MI') }
+Correct: A
+Explanation: The correct TRC query must output player names, iterating over the players relation (p ∈ players) and joining with the teams relation (t ∈ teams) on the condition p.tid = t.tid where t.tname = 'MI'. This matches option A.
+
+---
+
+Subject: Compiler Design
+Subtopic: Syntax Analysis / First and Follow Sets
+Difficulty: Medium
+Marks: 1
+Year: 2025
+Question: Which of the following statement(s) is/are TRUE while computing First and Follow during top-down parsing by a compiler?
+Option A: For a production A → ε, ε will be added to First(A).
+Option B: If there is any input right-end marker, it will be added to First(S), where S is the start symbol.
+Option C: For a production A → ε, ε will be added to Follow(A).
+Option D: If there is any input right-end marker, it will be added to Follow(S), where S is the start symbol.
+Correct: A
+Explanation: If A → ε, then ε belongs to First(A) (A is true). The right-end marker ($) is added to the Follow set of the start symbol S (D is true). Follow sets do not contain ε, and First sets do not contain $. Thus, A and D are true.
+
+---
+
+Subject: Engineering Mathematics
+Subtopic: Abstract Algebra / Groups and Monoids
+Difficulty: Hard
+Marks: 1
+Year: 2025
+Question: Let F be the set of functions from non-negative integers A to itself. For f1, f2 ∈ F, we define (f1 ⊙ f2)(n) = f1(n) + f2(n) for all n ∈ A. Which of the following is/are CORRECT about the mathematical structure (F, ⊙)?
+Option A: (F, ⊙) is an Abelian group.
+Option B: (F, ⊙) is an Abelian monoid.
+Option C: (F, ⊙) is a non-Abelian group.
+Option D: (F, ⊙) is a non-Abelian monoid.
+Correct: B
+Explanation: The structure is closed, associative, and commutative under pointwise addition. The identity is the zero function z(n)=0. However, inverses do not exist because functions map to non-negative integers (so no negative values are allowed). Hence, it is an Abelian monoid, not a group.
+
+---
+
+Subject: Operating Systems
+Subtopic: File Systems / Linked Allocation
+Difficulty: Hard
+Marks: 2
+Year: 2025
+Question: A 512MB disk has 64KB blocks. Linked allocation is used where each block reserves 4 bytes for the next pointer (NULL for last block). The space in bytes wasted due to internal fragmentation for a 1MB file is:
+Option A: 65468
+Option B: 65532
+Option C: 64
+Option D: 0
+Correct: A
+Explanation: Block size = 65536 bytes. Usable space per block = 65536 - 4 = 65532 bytes. File size = 1M = 1,048,576 bytes. Number of blocks = ceil(1,048,576 / 65,532) = 17 blocks. Total data capacity of 17 blocks = 17 * 65532 = 1,114,044 bytes. Wasted space in the last block (internal fragmentation) = 65532 - (1,048,576 - 16 * 65,532) = 65,532 - 64 = 65,468 bytes.
+
+---
+
+Subject: Operating Systems
+Subtopic: Memory Management / Page Replacement
+Difficulty: Hard
+Marks: 2
+Year: 2025
+Question: An optimal page replacement algorithm looks ahead only up to next 4 page references (including current). If pages are accessed in the order: 1, 3, 2, 4, 2, 3, 1, 2, 4, 3, 1, 4, and the system has three memory frames initially empty, the number of page faults is:
+Option A: 7
+Option B: 8
+Option C: 6
+Option D: 9
+Correct: A
+Explanation: Initial state: empty. 1, 3, 2 are loaded (3 faults, frames: [1,3,2]). Access 4 (fault): next 4 are 4, 2, 3, 1. Since 2 and 3 are used next, replace 1 or 2? Let's check which is used furthest. 2 is used immediately next, 3 next, 1 later. So replace 1 ⇒ [4,3,2]. Following this process: faults occur on steps 1(1), 2(3), 3(2), 4(4), 5(2), 6(3), 9(4). Total faults = 7.
