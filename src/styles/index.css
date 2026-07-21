@@ -41,24 +41,12 @@
 
 /* Interactive Glows */
 .glow-primary {
-  box-shadow: 0 0 30px -5px rgba(99, 102, 241, 0.35);
+  box-shadow: 0 0 25px -5px rgba(99, 102, 241, 0.25);
 }
 
-.glow-emerald {
-  box-shadow: 0 0 30px -5px rgba(16, 185, 129, 0.3);
-}
-
-.glow-rose {
-  box-shadow: 0 0 30px -5px rgba(244, 63, 94, 0.3);
-}
-
-/* Gradient Typography */
-.text-gradient-purple {
-  @apply bg-gradient-to-r from-primary-500 via-indigo-500 to-purple-600 bg-clip-text text-transparent;
-}
-
-.text-gradient-cyber {
-  @apply bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent;
+/* Unified Typography */
+.text-gradient-primary {
+  @apply bg-gradient-to-r from-slate-900 to-indigo-600 dark:from-white dark:to-indigo-400 bg-clip-text text-transparent;
 }
 
 /* Micro-Animations & Page Transitions */

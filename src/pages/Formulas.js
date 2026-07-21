@@ -147,19 +147,19 @@ export const Formulas = {
                   </div>
 
                   <!-- BACK: Formula / Solution -->
-                  <div class="absolute inset-0 bento-card p-6 flex flex-col justify-between backface-hidden rotate-y-180 bg-gradient-to-br from-indigo-950/90 via-slate-900 to-slate-950 text-white border border-indigo-500/40">
-                    <div class="flex items-center justify-between border-b border-indigo-500/30 pb-2">
-                      <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-wider flex items-center gap-1">
-                        <i class="fa-solid fa-square-check"></i> Formula & Key Solution
+                  <div class="absolute inset-0 bento-card p-6 flex flex-col justify-between backface-hidden rotate-y-180 bg-slate-900 text-white border border-slate-700">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+                      <span class="text-[10px] font-bold text-indigo-400 uppercase tracking-wider flex items-center gap-1">
+                        <i class="fa-solid fa-square-check text-indigo-400"></i> Formula & Key Solution
                       </span>
                       <span class="text-[10px] text-slate-400">${card.topic}</span>
                     </div>
 
-                    <div class="my-auto overflow-y-auto max-h-44 font-mono text-xs text-indigo-100 leading-relaxed whitespace-pre-line py-2">
+                    <div class="my-auto overflow-y-auto max-h-44 font-mono text-xs text-slate-200 leading-relaxed whitespace-pre-line py-2">
                       ${card.formula}
                     </div>
 
-                    <div class="flex items-center justify-between border-t border-indigo-500/30 pt-2 text-[10px] text-slate-400 font-bold">
+                    <div class="flex items-center justify-between border-t border-slate-800 pt-2 text-[10px] text-slate-400 font-bold">
                       <span class="text-slate-400">Answer Side</span>
                       <span class="text-indigo-300">Click to flip back &circlearrowleft;</span>
                     </div>

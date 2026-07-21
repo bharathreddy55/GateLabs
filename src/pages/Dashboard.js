@@ -19,27 +19,27 @@ export const Dashboard = {
     }
     
     // Generate 120-day Heatmap cells based on real user test attempts
-    const attemptDatesCount = {};
-    attempts.forEach(att => {
-      if (att.timestamp) {
-        const dateStr = new Date(att.timestamp).toISOString().split('T')[0];
-        attemptDatesCount[dateStr] = (attemptDatesCount[dateStr] || 0) + 1;
-      }
+    const attemptDateMap = {};
+    attempts.forEach(a => {
+      const dateKey = new Date(a.timestamp).toDateString();
+      attemptDateMap[dateKey] = (attemptDateMap[dateKey] || 0) + 1;
     });
 
     const generateHeatmapDays = () => {
       const days = [];
+      const totalDays = 112; // 16 weeks * 7 days
       const today = new Date();
-      for (let i = 119; i >= 0; i--) {
+
+      for (let i = totalDays - 1; i >= 0; i--) {
         const d = new Date(today);
         d.setDate(d.getDate() - i);
-        const dateKey = d.toISOString().split('T')[0];
-        const count = attemptDatesCount[dateKey] || 0;
-        
-        let bgClass = 'bg-slate-100 dark:bg-slate-800/40';
-        if (count === 1) bgClass = 'bg-emerald-500/40 dark:bg-emerald-500/40';
-        else if (count === 2) bgClass = 'bg-emerald-500/70 dark:bg-emerald-500/70';
-        else if (count >= 3) bgClass = 'bg-emerald-500 dark:bg-emerald-400 shadow-sm shadow-emerald-500/50';
+        const dateKey = d.toDateString();
+        const count = attemptDateMap[dateKey] || 0;
+
+        let bgClass = 'bg-slate-100 dark:bg-slate-800/60';
+        if (count === 1) bgClass = 'bg-indigo-500/30 dark:bg-indigo-500/30';
+        else if (count === 2) bgClass = 'bg-indigo-500/60 dark:bg-indigo-500/60';
+        else if (count >= 3) bgClass = 'bg-indigo-600 dark:bg-indigo-500 shadow-sm shadow-indigo-500/40';
 
         days.push(`<div class="w-3 h-3 rounded-xs ${bgClass} transition-all hover:scale-125 cursor-pointer" title="${d.toDateString()}: ${count} test session(s)"></div>`);
       }
@@ -48,12 +48,12 @@ export const Dashboard = {
 
     // Subject mastery list
     const subjectList = [
-      { name: 'Operating Systems', progress: 75, color: 'text-indigo-500', bg: 'bg-indigo-500' },
-      { name: 'Databases (DBMS)', progress: 82, color: 'text-emerald-500', bg: 'bg-emerald-500' },
-      { name: 'Computer Networks', progress: 60, color: 'text-amber-500', bg: 'bg-amber-500' },
-      { name: 'Algorithms', progress: 90, color: 'text-purple-500', bg: 'bg-purple-500' },
-      { name: 'Theory of Computation', progress: 68, color: 'text-cyan-500', bg: 'bg-cyan-500' },
-      { name: 'Eng. Mathematics', progress: 85, color: 'text-rose-500', bg: 'bg-rose-500' },
+      { name: 'Operating Systems', progress: 75 },
+      { name: 'Databases (DBMS)', progress: 82 },
+      { name: 'Computer Networks', progress: 60 },
+      { name: 'Algorithms', progress: 90 },
+      { name: 'Theory of Computation', progress: 68 },
+      { name: 'Eng. Mathematics', progress: 85 }
     ];
 
     return `
@@ -96,13 +96,13 @@ export const Dashboard = {
             <div class="bento-card p-4 flex flex-col justify-between">
               <div class="flex items-center justify-between">
                 <span class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider">Streak</span>
-                <div class="h-8 w-8 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-sm">
+                <div class="h-8 w-8 rounded-xl bg-indigo-500/10 text-indigo-500 flex items-center justify-center text-sm">
                   <i class="fa-solid fa-fire"></i>
                 </div>
               </div>
               <div class="mt-4">
                 <h4 class="font-display font-extrabold text-xl text-slate-900 dark:text-white">5 Days</h4>
-                <p class="text-[10px] text-emerald-500 font-bold mt-0.5"><i class="fa-solid fa-arrow-trend-up"></i> +2 this week</p>
+                <p class="text-[10px] text-indigo-400 font-bold mt-0.5"><i class="fa-solid fa-arrow-trend-up"></i> +2 this week</p>
               </div>
             </div>
 
@@ -110,7 +110,7 @@ export const Dashboard = {
             <div class="bento-card p-4 flex flex-col justify-between">
               <div class="flex items-center justify-between">
                 <span class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider">Study Time</span>
-                <div class="h-8 w-8 rounded-xl bg-primary-500/10 text-primary-500 flex items-center justify-center text-sm">
+                <div class="h-8 w-8 rounded-xl bg-indigo-500/10 text-indigo-500 flex items-center justify-center text-sm">
                   <i class="fa-solid fa-clock"></i>
                 </div>
               </div>
@@ -124,13 +124,13 @@ export const Dashboard = {
             <div class="bento-card p-4 flex flex-col justify-between">
               <div class="flex items-center justify-between">
                 <span class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider">Accuracy</span>
-                <div class="h-8 w-8 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-sm">
+                <div class="h-8 w-8 rounded-xl bg-indigo-500/10 text-indigo-500 flex items-center justify-center text-sm">
                   <i class="fa-solid fa-bullseye"></i>
                 </div>
               </div>
               <div class="mt-4">
                 <h4 class="font-display font-extrabold text-xl text-slate-900 dark:text-white">${mockTestsTaken > 0 ? avgAccuracy + '%' : '78%'}</h4>
-                <p class="text-[10px] text-emerald-500 font-bold mt-0.5"><i class="fa-solid fa-circle-check"></i> High Ranker</p>
+                <p class="text-[10px] text-indigo-400 font-bold mt-0.5"><i class="fa-solid fa-circle-check"></i> High Ranker</p>
               </div>
             </div>
 
@@ -138,7 +138,7 @@ export const Dashboard = {
             <div class="bento-card p-4 flex flex-col justify-between">
               <div class="flex items-center justify-between">
                 <span class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider">Mock Tests</span>
-                <div class="h-8 w-8 rounded-xl bg-purple-500/10 text-purple-500 flex items-center justify-center text-sm">
+                <div class="h-8 w-8 rounded-xl bg-indigo-500/10 text-indigo-500 flex items-center justify-center text-sm">
                   <i class="fa-solid fa-pen-nib"></i>
                 </div>
               </div>
@@ -180,10 +180,10 @@ export const Dashboard = {
                 <div class="flex flex-col gap-1">
                   <div class="flex items-center justify-between text-xs font-bold">
                     <span class="text-slate-700 dark:text-slate-300">${s.name}</span>
-                    <span class="${s.color}">${s.progress}%</span>
+                    <span class="text-indigo-500">${s.progress}%</span>
                   </div>
                   <div class="w-full bg-slate-100 dark:bg-slate-800/80 h-2 rounded-full overflow-hidden">
-                    <div class="${s.bg} h-full rounded-full transition-all duration-500" style="width: ${s.progress}%"></div>
+                    <div class="bg-indigo-600 dark:bg-indigo-500 h-full rounded-full transition-all duration-500" style="width: ${s.progress}%"></div>
                   </div>
                 </div>
               `).join('')}
@@ -202,7 +202,7 @@ export const Dashboard = {
           <div class="lg:col-span-2 bento-card p-6 flex flex-col justify-between">
             <div class="flex items-center justify-between border-b border-slate-100 dark:border-white/[0.04] pb-4">
               <div class="flex items-center gap-2">
-                <i class="fa-solid fa-calendar-days text-emerald-500"></i>
+                <i class="fa-solid fa-calendar-days text-indigo-500"></i>
                 <h4 class="font-display font-bold text-base text-slate-900 dark:text-white">Study Consistency Heatmap</h4>
               </div>
               <span class="text-xs text-slate-400 font-semibold">120 Days Overview</span>
@@ -218,9 +218,9 @@ export const Dashboard = {
               <span>Less Active</span>
               <div class="flex items-center gap-1.5">
                 <span class="w-2.5 h-2.5 rounded-xs bg-slate-100 dark:bg-slate-800"></span>
-                <span class="w-2.5 h-2.5 rounded-xs bg-emerald-500/30"></span>
-                <span class="w-2.5 h-2.5 rounded-xs bg-emerald-500/60"></span>
-                <span class="w-2.5 h-2.5 rounded-xs bg-emerald-500"></span>
+                <span class="w-2.5 h-2.5 rounded-xs bg-indigo-500/30"></span>
+                <span class="w-2.5 h-2.5 rounded-xs bg-indigo-500/60"></span>
+                <span class="w-2.5 h-2.5 rounded-xs bg-indigo-600"></span>
               </div>
               <span>More Active</span>
             </div>
@@ -237,7 +237,7 @@ export const Dashboard = {
             </div>
 
             <div class="flex flex-col gap-3 py-3">
-              <div class="p-3.5 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-xs flex gap-3">
+              <div class="p-3.5 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 text-xs flex gap-3">
                 <i class="fa-solid fa-triangle-exclamation text-amber-500 mt-0.5 text-sm"></i>
                 <div>
                   <p class="font-bold text-slate-800 dark:text-slate-200">Revise Paging Algorithms</p>
