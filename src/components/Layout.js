@@ -109,7 +109,7 @@ export const Layout = {
             <div class="p-4 border-b border-slate-200 dark:border-slate-800 flex items-center gap-3 bg-slate-50/50 dark:bg-slate-900/50">
               <i class="fa-solid fa-magnifying-glass text-primary-500 text-base"></i>
               <input type="text" id="cmd-k-input" placeholder="Type a command or page name..." class="w-full bg-transparent text-sm font-semibold text-slate-800 dark:text-white focus:outline-none placeholder-slate-400">
-              <span class="kbd-badge">ESC</span>
+              <button id="close-cmd-modal" class="kbd-badge hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer">ESC</button>
             </div>
             <div id="cmd-k-list" class="p-2 max-h-72 overflow-y-auto flex flex-col gap-1 text-xs font-semibold">
               <a href="#/dashboard" class="cmd-item flex items-center justify-between p-3 rounded-xl hover:bg-primary-500/10 hover:text-primary-500 transition-all text-slate-700 dark:text-slate-300">
@@ -214,7 +214,15 @@ export const Layout = {
       cmdModal?.classList.add('hidden');
     };
 
+    const closeCmdBtn = document.getElementById('close-cmd-modal');
+
     cmdTrigger?.addEventListener('click', openCmdModal);
+    closeCmdBtn?.addEventListener('click', closeCmdModal);
+
+    // Auto-close modal when any command item link is clicked
+    document.querySelectorAll('#cmd-k-list a').forEach(item => {
+      item.addEventListener('click', closeCmdModal);
+    });
 
     window.addEventListener('keydown', (e) => {
       if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
@@ -296,5 +304,9 @@ export const Layout = {
     if (headerTitle) {
       headerTitle.textContent = activePage.replace('-', ' ');
     }
+
+    // Force close command palette modal on route update
+    const cmdModal = document.getElementById('cmd-k-modal');
+    cmdModal?.classList.add('hidden');
   }
 };
