@@ -63,8 +63,8 @@ export const Dashboard = {
   activeTab: 'overview',
   syllabusActiveSubject: 'Engineering Mathematics',
   bookmarkActiveSubject: 'All',
-  flowchartSubject: 'All',
-  expandedNodes: { 'root': true, 'subj_Engineering Mathematics': true },
+  flowchartSelectedSubject: null,
+  expandedNodes: {},
   treeSearchQuery: '',
 
   async render() {
@@ -324,234 +324,268 @@ export const Dashboard = {
 
   async renderSyllabusTab(progress) {
     const syllabus = SUBJECT_SYLLABUS;
-    const query = (this.treeSearchQuery || '').toLowerCase().trim();
-    const activeSubFilter = this.flowchartSubject || 'All';
 
-    // Icon map for subjects
-    const subjectIcons = {
-      "Engineering Mathematics": "fa-solid fa-calculator",
-      "Digital Logic": "fa-solid fa-microchip",
-      "Computer Organization & Architecture (COA)": "fa-solid fa-bolt",
-      "Programming & Data Structures": "fa-solid fa-code",
-      "Algorithms": "fa-solid fa-diagram-project",
-      "Theory of Computation": "fa-solid fa-gears",
-      "Compiler Design": "fa-solid fa-file-code",
-      "Operating Systems": "fa-solid fa-desktop",
-      "Databases": "fa-solid fa-database",
-      "Computer Networks": "fa-solid fa-network-wired"
-    };
+    // Map GATE subjects to Neetcode-style DAG flow levels & prerequisites
+    const dagLevels = [
+      // Level 0: Root Prerequisite
+      [
+        { key: "Engineering Mathematics", title: "Engineering Mathematics", icon: "fa-calculator" }
+      ],
+      // Level 1: Foundations
+      [
+        { key: "Digital Logic", title: "Digital Logic", icon: "fa-microchip" },
+        { key: "Programming & Data Structures", title: "Programming & Data Structures", icon: "fa-code" }
+      ],
+      // Level 2: Core Computer Science
+      [
+        { key: "Computer Organization & Architecture (COA)", title: "COA & Architecture", icon: "fa-bolt" },
+        { key: "Algorithms", title: "Algorithms", icon: "fa-diagram-project" },
+        { key: "Theory of Computation", title: "Theory of Computation", icon: "fa-gears" }
+      ],
+      // Level 3: Systems Convergence
+      [
+        { key: "Operating Systems", title: "Operating Systems", icon: "fa-desktop" },
+        { key: "Databases", title: "Databases (DBMS)", icon: "fa-database" }
+      ],
+      // Level 4: Advanced Networks & Applications
+      [
+        { key: "Compiler Design", title: "Compiler Design", icon: "fa-file-code" },
+        { key: "Computer Networks", title: "Computer Networks", icon: "fa-network-wired" }
+      ]
+    ];
 
-    // Calculate total stats
+    // Calculate progress for each subject
+    const subjectStats = {};
     let totalTopicsAll = 0;
-    let totalCompleted = 0;
+    let totalCompletedAll = 0;
 
     Object.entries(syllabus).forEach(([subject, subdivisions]) => {
+      let subjTotal = 0;
+      let subjDone = 0;
+
       Object.entries(subdivisions).forEach(([subdiv, topics]) => {
         topics.forEach(t => {
+          subjTotal++;
           totalTopicsAll++;
           if (progress[`${subject}/${subdiv}/${t}`]) {
-            totalCompleted++;
+            subjDone++;
+            totalCompletedAll++;
           }
         });
       });
+
+      const percent = subjTotal > 0 ? Math.round((subjDone / subjTotal) * 100) : 0;
+      subjectStats[subject] = { total: subjTotal, done: subjDone, percent };
     });
 
-    const totalOverallPercent = totalTopicsAll > 0 ? Math.round((totalCompleted / totalTopicsAll) * 100) : 0;
-
-    // Filter subjects to display
-    const subjectsToRender = activeSubFilter === 'All'
-      ? Object.keys(syllabus)
-      : Object.keys(syllabus).filter(s => s === activeSubFilter);
+    const overallPercent = totalTopicsAll > 0 ? Math.round((totalCompletedAll / totalTopicsAll) * 100) : 0;
+    const selectedSubj = this.flowchartSelectedSubject;
+    const selectedSubjData = selectedSubj ? syllabus[selectedSubj] : null;
 
     return `
       <div class="flex flex-col gap-6 font-sans">
         
-        <!-- ===== FLOWCHART HEADER BANNER ===== -->
+        <!-- ===== NEETCODE / ROADMAP.SH STYLE HEADER BANNER ===== -->
         <div class="glass-panel p-6 rounded-3xl border border-slate-200/60 dark:border-white/[0.08] relative overflow-hidden shadow-sm">
-          <div class="h-28 -mx-6 -mt-6 bg-gradient-to-r from-slate-900 via-[#0a1224] to-slate-900 p-6 flex items-end justify-between border-b border-white/10 relative">
+          <div class="h-28 -mx-6 -mt-6 bg-gradient-to-r from-[#0f101d] via-[#3b38d8]/20 to-[#0f101d] p-6 flex items-end justify-between border-b border-white/10 relative">
             <div class="flex items-center gap-3.5 relative z-10">
-              <div class="h-12 w-12 rounded-2xl bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 flex items-center justify-center text-xl shadow-lg">
+              <div class="h-12 w-12 rounded-2xl bg-[#4338ca] text-white flex items-center justify-center text-xl shadow-lg border border-indigo-400/40">
                 <i class="fa-solid fa-diagram-project"></i>
               </div>
               <div>
                 <div class="flex items-center gap-2">
-                  <span class="text-[10px] font-mono font-bold uppercase tracking-wider text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-md border border-emerald-400/20">Flowchart Concept Map</span>
-                  <span class="text-[10px] font-mono text-slate-400">Root ──▶ Subject ──▶ Module ──▶ Topic Node</span>
+                  <span class="text-[10px] font-mono font-bold uppercase tracking-wider text-indigo-300 bg-indigo-500/20 px-2 py-0.5 rounded-md border border-indigo-400/30">Neetcode Flowchart Graph</span>
+                  <span class="text-[10px] font-mono text-slate-400">Prerequisite DAG Flow</span>
                 </div>
-                <h3 class="font-display font-extrabold text-xl text-white tracking-tight mt-0.5">GATE CS 2027 Syllabus Flowchart</h3>
+                <h3 class="font-display font-extrabold text-xl text-white tracking-tight mt-0.5">GATE CS 2027 Learning Roadmap</h3>
               </div>
             </div>
 
             <!-- Total counter pill -->
             <div class="hidden sm:flex items-center gap-3 px-4 py-2 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10 text-xs font-bold text-white relative z-10">
-              <span class="text-emerald-400 font-extrabold">${totalCompleted} / ${totalTopicsAll} Mastered</span>
+              <span class="text-indigo-300 font-extrabold">${totalCompletedAll} / ${totalTopicsAll} Mastered</span>
               <span class="text-slate-400">•</span>
-              <span class="text-emerald-400">${totalOverallPercent}%</span>
+              <span class="text-indigo-300">${overallPercent}% Overall</span>
             </div>
           </div>
 
-          <!-- Subject Selector Filter Pills & Search Bar -->
-          <div class="mt-6 flex flex-col gap-4">
-            <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1">
-              ${['All', ...Object.keys(syllabus)].map(sub => `
-                <button class="flowchart-sub-btn flex-shrink-0 px-4 py-2 rounded-2xl text-xs font-bold transition-all ${
-                  activeSubFilter === sub 
-                    ? 'btn-accent scale-105 shadow-md' 
-                    : 'glass-card text-slate-600 dark:text-slate-400 hover:accent-text'
-                }" data-subject="${sub}">
-                  ${sub}
-                </button>
-              `).join('')}
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-4 font-medium leading-relaxed">
+            Click any subject node card below to open its topic breakdown checklist. Connected arrows represent GATE prerequisite knowledge flow.
+          </p>
+        </div>
+
+        <!-- ===== NEETCODE FLOWCHART CANVAS ===== -->
+        <div class="glass-panel p-8 rounded-3xl border border-slate-200/60 dark:border-white/[0.08] relative overflow-x-auto bg-[#13141f] text-white min-h-[720px] shadow-2xl">
+          
+          <!-- SVG CONNECTOR ARROWS BACKDROP -->
+          <svg class="absolute inset-0 w-full h-full pointer-events-none z-0 overflow-visible" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <marker id="flow-arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#818cf8"/>
+              </marker>
+            </defs>
+
+            <!-- Curved Bézier Branch Connectors -->
+            <!-- Level 0 (Math) -> Level 1 (Digital Logic & DS) -->
+            <path d="M 500 120 C 500 170, 300 170, 300 220" stroke="#818cf8" stroke-width="3" fill="none" marker-end="url(#flow-arrow)"/>
+            <path d="M 500 120 C 500 170, 700 170, 700 220" stroke="#818cf8" stroke-width="3" fill="none" marker-end="url(#flow-arrow)"/>
+
+            <!-- Level 1 -> Level 2 (COA, Algo, TOC) -->
+            <path d="M 300 280 C 300 330, 220 330, 220 380" stroke="#818cf8" stroke-width="3" fill="none" marker-end="url(#flow-arrow)"/>
+            <path d="M 700 280 C 700 330, 500 330, 500 380" stroke="#818cf8" stroke-width="3" fill="none" marker-end="url(#flow-arrow)"/>
+            <path d="M 700 280 C 700 330, 780 330, 780 380" stroke="#818cf8" stroke-width="3" fill="none" marker-end="url(#flow-arrow)"/>
+
+            <!-- Level 2 -> Level 3 (OS & DBMS Convergence) -->
+            <path d="M 220 440 C 220 490, 350 490, 350 540" stroke="#818cf8" stroke-width="3" fill="none" marker-end="url(#flow-arrow)"/>
+            <path d="M 500 440 C 500 490, 350 490, 350 540" stroke="#818cf8" stroke-width="3" fill="none" marker-end="url(#flow-arrow)"/>
+            <path d="M 500 440 C 500 490, 650 490, 650 540" stroke="#818cf8" stroke-width="3" fill="none" marker-end="url(#flow-arrow)"/>
+            <path d="M 780 440 C 780 490, 650 490, 650 540" stroke="#818cf8" stroke-width="3" fill="none" marker-end="url(#flow-arrow)"/>
+
+            <!-- Level 3 -> Level 4 (Compiler & CN) -->
+            <path d="M 350 600 C 350 640, 350 640, 350 670" stroke="#818cf8" stroke-width="3" fill="none" marker-end="url(#flow-arrow)"/>
+            <path d="M 650 600 C 650 640, 650 640, 650 670" stroke="#818cf8" stroke-width="3" fill="none" marker-end="url(#flow-arrow)"/>
+          </svg>
+
+          <!-- FLOWCHART NODES GRID CONTAINER -->
+          <div class="flex flex-col items-center gap-16 min-w-[950px] relative z-10 py-6">
+
+            <!-- LEVEL 0: ROOT PREREQUISITE (Engineering Math) -->
+            <div class="flex items-center justify-center w-full">
+              ${this.renderNeetcodeNodeCard(dagLevels[0][0], subjectStats[dagLevels[0][0].key])}
             </div>
 
-            <div class="relative flex-1">
-              <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-slate-400 text-xs"></i>
-              <input type="text" id="flowchart-search" placeholder="Search flowchart node (e.g., Deadlocks, Master Theorem, Page Table)..." value="${this.treeSearchQuery || ''}" class="glass-input pl-9 text-xs font-semibold">
+            <!-- LEVEL 1: FOUNDATIONS (Digital Logic & Programming DS) -->
+            <div class="flex items-center justify-center gap-48 w-full">
+              ${dagLevels[1].map(node => this.renderNeetcodeNodeCard(node, subjectStats[node.key])).join('')}
             </div>
+
+            <!-- LEVEL 2: CORE COMPUTER SCIENCE (COA, Algorithms, TOC) -->
+            <div class="flex items-center justify-center gap-24 w-full">
+              ${dagLevels[2].map(node => this.renderNeetcodeNodeCard(node, subjectStats[node.key])).join('')}
+            </div>
+
+            <!-- LEVEL 3: SYSTEMS CONVERGENCE (OS & DBMS) -->
+            <div class="flex items-center justify-center gap-40 w-full">
+              ${dagLevels[3].map(node => this.renderNeetcodeNodeCard(node, subjectStats[node.key])).join('')}
+            </div>
+
+            <!-- LEVEL 4: ADVANCED APPLICATIONS (Compiler Design & CN) -->
+            <div class="flex items-center justify-center gap-40 w-full">
+              ${dagLevels[4].map(node => this.renderNeetcodeNodeCard(node, subjectStats[node.key])).join('')}
+            </div>
+
           </div>
         </div>
 
-        <!-- ===== FLOWCHART GRAPH CANVAS ===== -->
-        <div class="glass-panel p-8 rounded-3xl border border-slate-200/60 dark:border-white/[0.08] relative overflow-x-auto min-h-[550px] bg-[#070c16] text-white">
-          
-          <div class="flex flex-col items-center gap-10 min-w-[750px] relative py-2">
-
-            <!-- 🌳 CENTRAL ROOT NODE: GATE CS 2027 -->
-            <div class="flex flex-col items-center justify-center relative z-10 select-none">
-              <div class="px-8 py-4.5 rounded-3xl bg-gradient-to-r from-slate-900 via-emerald-950 to-slate-900 border-2 border-emerald-500/60 text-white shadow-2xl shadow-emerald-500/20 flex items-center gap-4 group hover:scale-105 transition-all">
-                <div class="h-12 w-12 rounded-2xl bg-emerald-500 text-slate-950 flex items-center justify-center text-xl font-extrabold shadow-lg">
+        <!-- ===== TOPIC INSPECTOR MODAL DRAWER ===== -->
+        <div id="neetcode-topic-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/70 backdrop-blur-md ${selectedSubj ? '' : 'hidden'} px-4 animate-fade-in">
+          <div class="w-full max-w-2xl bg-[#0f1424] text-white rounded-3xl p-7 shadow-2xl border border-indigo-500/40 flex flex-col gap-5 max-h-[85vh] overflow-hidden">
+            
+            <!-- Modal Header -->
+            <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+              <div class="flex items-center gap-3">
+                <div class="h-10 w-10 rounded-2xl bg-[#4338ca] text-white flex items-center justify-center text-base shadow-md">
                   <i class="fa-solid fa-graduation-cap"></i>
                 </div>
                 <div>
-                  <span class="text-[10px] font-mono font-bold uppercase tracking-wider text-emerald-400">CENTRAL ROOT NODE</span>
-                  <h4 class="font-display font-extrabold text-base tracking-tight text-white">GATE Computer Science 2027</h4>
-                  <p class="text-[11px] text-slate-300 font-medium">${totalCompleted} of ${totalTopicsAll} Topics Mastered (${totalOverallPercent}%)</p>
+                  <span class="text-[10px] font-mono text-indigo-400 uppercase tracking-wider font-bold">Node Topic Inspector</span>
+                  <h3 class="font-display font-extrabold text-lg tracking-tight text-white">${selectedSubj || ''}</h3>
                 </div>
               </div>
 
-              <!-- Root Flowchart Connector Line -->
-              <div class="flex flex-col items-center my-2">
-                <div class="w-0.5 h-8 bg-gradient-to-b from-emerald-500 to-teal-400"></div>
-                <i class="fa-solid fa-chevron-down text-teal-400 text-xs -mt-1 animate-bounce"></i>
-              </div>
+              <button id="close-neetcode-modal" type="button" class="h-8 w-8 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white flex items-center justify-center text-sm transition-all">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
             </div>
 
-            <!-- SUBJECT FLOW BRANCHES -->
-            <div class="flex flex-col gap-10 w-full">
-              ${subjectsToRender.map(subject => {
-                const subdivisions = syllabus[subject];
-                const nodeKey = `subj_${subject}`;
-                const isSubjExpanded = query.length > 0 || (this.expandedNodes[nodeKey] !== false);
-                const iconClass = subjectIcons[subject] || "fa-solid fa-book";
-
-                // Stats
-                let subjTotal = 0;
-                let subjDone = 0;
-                Object.entries(subdivisions).forEach(([subdiv, topics]) => {
-                  topics.forEach(t => {
-                    subjTotal++;
-                    if (progress[`${subject}/${subdiv}/${t}`]) subjDone++;
-                  });
-                });
-
-                const subjPercent = subjTotal > 0 ? Math.round((subjDone / subjTotal) * 100) : 0;
+            <!-- Topic Checklist Content -->
+            <div class="flex-1 overflow-y-auto pr-1 flex flex-col gap-6 no-scrollbar">
+              ${selectedSubjData ? Object.entries(selectedSubjData).map(([subdiv, topics]) => {
+                let subdivDone = topics.filter(t => progress[`${selectedSubj}/${subdiv}/${t}`]).length;
+                let subdivPercent = topics.length > 0 ? Math.round((subdivDone / topics.length) * 100) : 0;
 
                 return `
-                  <!-- SUBJECT FLOWCARD NODE -->
-                  <div class="flex flex-col gap-4 p-6 rounded-3xl bg-[#0d1527]/90 border border-slate-800 shadow-xl relative overflow-hidden group hover:border-emerald-500/40 transition-all">
-                    
-                    <!-- Subject Node Header -->
-                    <div class="flex items-center justify-between border-b border-slate-800 pb-4">
-                      <div class="flex items-center gap-3">
-                        <div class="h-10 w-10 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-base border border-emerald-500/20 shadow-sm">
-                          <i class="${iconClass}"></i>
-                        </div>
-                        <div>
-                          <span class="text-[10px] font-mono text-emerald-400 uppercase tracking-wider font-bold">SUBJECT FLOW BRANCH</span>
-                          <h4 class="font-display font-extrabold text-sm text-white">${subject}</h4>
-                        </div>
-                      </div>
-
-                      <div class="flex items-center gap-3">
-                        <span class="text-xs font-mono font-bold text-emerald-400 bg-emerald-500/10 px-3.5 py-1 rounded-full border border-emerald-500/20">
-                          ${subjDone} / ${subjTotal} Mastered (${subjPercent}%)
-                        </span>
-                        <button type="button" class="flow-toggle-btn h-8 w-8 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 flex items-center justify-center text-xs transition-all select-none" data-node="${nodeKey}">
-                          <i class="fa-solid ${isSubjExpanded ? 'fa-minus' : 'fa-plus'}"></i>
-                        </button>
-                      </div>
+                  <div class="flex flex-col gap-3 p-4 rounded-2xl bg-[#151c30] border border-slate-800/90">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+                      <span class="font-display font-bold text-xs text-indigo-200 flex items-center gap-2">
+                        <span class="h-2 w-2 rounded-full bg-indigo-400"></span> ${subdiv}
+                      </span>
+                      <span class="text-[10px] font-mono text-indigo-300 bg-indigo-500/10 px-2.5 py-0.5 rounded-full border border-indigo-500/20">
+                        ${subdivDone} / ${topics.length} (${subdivPercent}%)
+                      </span>
                     </div>
 
-                    <!-- SUBDIVISIONS & TOPIC NODES FLOWCHART -->
-                    <div class="${isSubjExpanded ? '' : 'hidden'} grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-2">
-                      ${Object.entries(subdivisions).map(([subdiv, topics]) => {
-                        let subdivDone = topics.filter(t => progress[`${subject}/${subdiv}/${t}`]).length;
-                        let subdivTotal = topics.length;
-
-                        // Query match
-                        const matchingTopics = query
-                          ? topics.filter(t => t.toLowerCase().includes(query) || subdiv.toLowerCase().includes(query) || subject.toLowerCase().includes(query))
-                          : topics;
-
-                        if (query && matchingTopics.length === 0) return '';
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
+                      ${topics.map(t => {
+                        const key = `${selectedSubj}/${subdiv}/${t}`;
+                        const isChecked = !!progress[key];
 
                         return `
-                          <!-- MODULE FLOW CARD -->
-                          <div class="flex flex-col gap-3 p-4 rounded-2xl bg-[#121c33] border border-slate-800/80 hover:border-teal-500/40 transition-all relative">
-                            
-                            <!-- Module Node Header -->
-                            <div class="flex items-center justify-between border-b border-slate-800/60 pb-2">
-                              <span class="font-display font-bold text-xs text-slate-200 flex items-center gap-2">
-                                <span class="h-2 w-2 rounded-full bg-teal-400"></span> ${subdiv}
-                              </span>
-                              <span class="text-[10px] font-mono text-teal-300 bg-teal-500/10 px-2 py-0.5 rounded">
-                                ${subdivDone}/${subdivTotal}
-                              </span>
+                          <label class="flex items-center justify-between p-2.5 rounded-xl border transition-all cursor-pointer select-none ${
+                            isChecked
+                              ? 'bg-emerald-950/40 border-emerald-500/50 text-emerald-200'
+                              : 'bg-slate-900/70 border-slate-800 text-slate-300 hover:border-indigo-500/40'
+                          }">
+                            <div class="flex items-center gap-2.5 min-w-0">
+                              <input type="checkbox" class="syllabus-topic-chk h-4 w-4 rounded border-slate-700 text-[#10b981] focus:ring-[#10b981] bg-transparent cursor-pointer" data-key="${key}" ${isChecked ? 'checked' : ''}>
+                              <span class="text-xs font-semibold truncate ${isChecked ? 'line-through opacity-75' : ''}">${t}</span>
                             </div>
-
-                            <!-- LEAF TOPIC NODES (FLOWCHART NODES) -->
-                            <div class="flex flex-col gap-2 pt-1">
-                              ${matchingTopics.map(t => {
-                                const key = `${subject}/${subdiv}/${t}`;
-                                const isChecked = !!progress[key];
-
-                                return `
-                                  <div class="flow-leaf-node p-2.5 rounded-xl border transition-all flex items-center justify-between gap-2 cursor-pointer select-none ${
-                                    isChecked
-                                      ? 'bg-emerald-950/50 border-emerald-500/60 text-emerald-200 shadow-sm shadow-emerald-500/10'
-                                      : 'bg-slate-900/60 border-slate-800 text-slate-300 hover:border-slate-700 hover:bg-slate-900'
-                                  }" data-key="${key}">
-                                    
-                                    <div class="flex items-center gap-2.5 min-w-0">
-                                      <span class="h-5 w-5 rounded-md flex items-center justify-center text-xs flex-shrink-0 ${
-                                        isChecked ? 'bg-emerald-500 text-slate-950 font-bold' : 'border border-slate-700 text-transparent'
-                                      }">
-                                        ✓
-                                      </span>
-                                      <span class="text-xs font-semibold truncate ${isChecked ? 'line-through opacity-80' : ''}">${t}</span>
-                                    </div>
-
-                                    <span class="text-[9px] font-mono font-bold px-2 py-0.5 rounded flex-shrink-0 ${
-                                      isChecked ? 'bg-emerald-400/20 text-emerald-300' : 'bg-slate-800 text-slate-400'
-                                    }">
-                                      ${isChecked ? 'Mastered' : 'To Study'}
-                                    </span>
-                                  </div>
-                                `;
-                              }).join('')}
-                            </div>
-
-                          </div>
+                            <span class="text-[9px] font-mono font-bold px-2 py-0.5 rounded flex-shrink-0 ${
+                              isChecked ? 'bg-emerald-500/20 text-emerald-300' : 'bg-slate-800 text-slate-400'
+                            }">
+                              ${isChecked ? 'Mastered' : 'To Study'}
+                            </span>
+                          </label>
                         `;
                       }).join('')}
                     </div>
-
                   </div>
                 `;
-              }).join('')}
+              }).join('') : ''}
+            </div>
+
+            <!-- Footer -->
+            <div class="pt-3 border-t border-slate-800 flex justify-end">
+              <button id="done-neetcode-modal" type="button" class="px-5 py-2.5 rounded-2xl btn-accent text-white text-xs font-bold shadow-md active:scale-95 transition-all">
+                Done
+              </button>
             </div>
 
           </div>
+        </div>
+
+      </div>
+    `;
+  },
+
+  renderNeetcodeNodeCard(node, stats) {
+    const total = stats ? stats.total : 0;
+    const done = stats ? stats.done : 0;
+    const percent = stats ? stats.percent : 0;
+
+    return `
+      <!-- NEETCODE INDIGO NODE CARD -->
+      <div class="neetcode-node-card w-64 p-4 rounded-2xl bg-[#4338ca] hover:bg-[#3730a3] border border-indigo-300/30 text-white shadow-xl shadow-indigo-950/40 cursor-pointer select-none transition-all duration-200 hover:scale-105 group relative" data-subject="${node.key}">
+        
+        <!-- Title & Icon -->
+        <div class="flex items-center justify-between mb-2.5">
+          <div class="flex items-center gap-2 min-w-0">
+            <i class="fa-solid ${node.icon} text-indigo-200 text-xs"></i>
+            <h4 class="font-display font-extrabold text-xs tracking-tight text-white truncate">${node.title}</h4>
+          </div>
+          <span class="text-[10px] font-mono font-extrabold text-indigo-100 bg-white/10 px-2 py-0.5 rounded-full flex-shrink-0">
+            ${done}/${total}
+          </span>
+        </div>
+
+        <!-- Neetcode White Progress Bar Capsule -->
+        <div class="w-full h-2 rounded-full bg-white/25 overflow-hidden border border-white/20">
+          <div class="h-full bg-white transition-all duration-300 shadow-sm" style="width: ${percent}%"></div>
+        </div>
+
+        <div class="flex items-center justify-between mt-2 text-[9.5px] font-mono text-indigo-200">
+          <span>${percent}% Mastered</span>
+          <span class="group-hover:translate-x-0.5 transition-transform">Inspect &rarr;</span>
         </div>
       </div>
     `;
@@ -758,50 +792,34 @@ export const Dashboard = {
         });
       }
     } else if (this.activeTab === 'syllabus') {
-      // Subject Filter Pills click event
-      document.querySelectorAll('.flowchart-sub-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          this.flowchartSubject = btn.getAttribute('data-subject');
+      // Neetcode Node Card Click -> open Topic Inspector Modal
+      document.querySelectorAll('.neetcode-node-card').forEach(card => {
+        card.addEventListener('click', () => {
+          this.flowchartSelectedSubject = card.getAttribute('data-subject');
           this.refresh();
         });
       });
 
-      // Flowchart Branch Expand/Collapse handler
-      document.querySelectorAll('.flow-toggle-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          e.stopPropagation();
-          const nodeKey = btn.getAttribute('data-node');
-          this.expandedNodes[nodeKey] = !(this.expandedNodes[nodeKey] !== false);
-          this.refresh();
-        });
-      });
+      // Close modal
+      const closeModal = () => {
+        this.flowchartSelectedSubject = null;
+        this.refresh();
+      };
 
-      // Flowchart Live Search Filter input
-      const flowSearch = document.getElementById('flowchart-search');
-      if (flowSearch) {
-        flowSearch.addEventListener('input', (e) => {
-          const val = e.target.value;
-          const cursor = e.target.selectionStart;
-          this.treeSearchQuery = val;
-          this.refresh();
-          const newFlowSearch = document.getElementById('flowchart-search');
-          if (newFlowSearch) {
-            newFlowSearch.focus();
-            newFlowSearch.setSelectionRange(cursor, cursor);
-          }
-        });
-      }
+      document.getElementById('close-neetcode-modal')?.addEventListener('click', closeModal);
+      document.getElementById('done-neetcode-modal')?.addEventListener('click', closeModal);
 
-      // Flow Leaf Node Click Handler (toggles mastered state)
+      // Topic Inspector Modal Checkbox changes
       const progress = await db.getSyllabusProgress();
-      document.querySelectorAll('.flow-leaf-node').forEach(node => {
-        node.addEventListener('click', async (e) => {
+      const chks = document.querySelectorAll('.syllabus-topic-chk');
+      chks.forEach(chk => {
+        chk.addEventListener('change', async (e) => {
           e.stopPropagation();
-          const key = node.getAttribute('data-key');
-          if (progress[key]) {
-            delete progress[key];
-          } else {
+          const key = chk.getAttribute('data-key');
+          if (chk.checked) {
             progress[key] = true;
+          } else {
+            delete progress[key];
           }
           await db.saveSyllabusProgress(progress);
           const attempts = await db.getAttempts();
