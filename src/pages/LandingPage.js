@@ -30,272 +30,192 @@ export const LandingPage = {
 
     return `
       <!-- Navbar -->
-      <nav class="fixed top-4 left-4 right-4 z-40 bg-white/70 dark:bg-slate-900/40 backdrop-blur-xl border border-slate-200/40 dark:border-white/[0.06] rounded-2xl shadow-lg transition-all duration-300">
+      <nav class="fixed top-4 left-4 right-4 z-40 bg-white/80 dark:bg-[#161618]/80 backdrop-blur-2xl border border-black/[0.05] dark:border-white/[0.08] rounded-3xl shadow-sm transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <div class="flex items-center gap-2.5">
-            <div class="h-10 w-10 rounded-xl bg-gradient-to-tr from-primary-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-primary-500/20">
-              <i class="fa-solid fa-graduation-cap text-white text-xl"></i>
+          <div class="flex items-center gap-3">
+            <div class="h-9 w-9 rounded-2xl bg-[#0071e3] dark:bg-[#2997ff] flex items-center justify-center text-white shadow-md">
+              <i class="fa-solid fa-graduation-cap text-base"></i>
             </div>
-            <span class="font-display font-extrabold text-xl tracking-tight bg-gradient-to-r from-slate-900 to-slate-700 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">GateLabs</span>
+            <span class="font-display font-extrabold text-lg tracking-tight text-slate-900 dark:text-white">GateLabs</span>
           </div>
 
-          <div class="flex items-center gap-4">
-            <a href="#/about" class="hidden sm:inline-flex text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400 px-3 py-2 transition-colors">About</a>
-            <!-- Theme Toggle -->
-            <button id="theme-toggle-btn" class="p-2 rounded-xl border border-slate-200/60 dark:border-white/[0.08] hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500 dark:text-slate-400 hover:scale-105 active:scale-95 transition-all select-none bg-white/50 dark:bg-slate-950/30">
+          <div class="flex items-center gap-3">
+            <button id="theme-toggle-btn" class="p-2 rounded-xl border border-black/5 dark:border-white/10 hover:bg-black/5 dark:hover:bg-white/10 text-slate-500 dark:text-[#86868b] transition-all select-none">
               <i id="theme-sun" class="fa-solid fa-sun ${sunIconClass}"></i>
               <i id="theme-moon" class="fa-solid fa-moon ${moonIconClass}"></i>
             </button>
-            <button id="nav-login-btn" class="hidden sm:inline-flex text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white px-4 py-2 transition-colors">Sign In</button>
-            <button id="nav-register-btn" class="inline-flex items-center justify-center px-4.5 py-2 text-sm font-bold text-white bg-gradient-to-r from-primary-600 to-indigo-600 hover:from-primary-500 hover:to-indigo-500 active:scale-95 rounded-xl shadow-md hover:shadow-lg transition-all">Get Started</button>
+
+            <button id="nav-login-btn" class="hidden sm:inline-flex text-xs font-bold text-slate-600 dark:text-[#86868b] hover:text-slate-900 dark:hover:text-white px-4 py-2 transition-colors">Sign In</button>
+            <button id="nav-register-btn" class="inline-flex items-center justify-center px-5 py-2.5 text-xs font-bold text-white bg-[#0071e3] dark:bg-[#2997ff] hover:scale-102 active:scale-95 rounded-full shadow-md transition-all">Get Started</button>
           </div>
         </div>
       </nav>
 
-      <!-- Hero Section -->
-      <main class="flex-1 pt-36 pb-20 px-6 max-w-7xl mx-auto w-full flex flex-col items-center justify-center text-center">
-        <!-- Glow accents -->
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary-500/10 dark:bg-primary-600/5 rounded-full blur-[100px] pointer-events-none -z-10"></div>
+      <!-- Hero Presentation -->
+      <section class="min-h-screen pt-36 pb-20 px-6 flex flex-col justify-center items-center text-center relative overflow-hidden bg-[#f5f5f7] dark:bg-[#000000]">
         
-        <div class="animate-fade-in">
-          <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold bg-primary-50 text-primary-600 dark:bg-primary-950/40 dark:text-primary-400 border border-primary-100/50 dark:border-primary-900/35 mb-6">
-            <span class="h-1.5 w-1.5 rounded-full bg-primary-500 animate-ping"></span>
-            Prepare for GATE CS & IT 2027
-          </span>
-          <h1 class="font-display font-extrabold text-4xl sm:text-6xl tracking-tight text-slate-950 dark:text-white leading-[1.15] max-w-4xl mx-auto">
-            Supercharge Your GATE Prep With <span class="text-gradient-purple">AI Intelligence</span>
+        <div class="max-w-4xl mx-auto space-y-6 relative z-10">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-black/5 dark:border-white/10 bg-white/60 dark:bg-white/5 backdrop-blur-md shadow-sm">
+            <span class="h-2 w-2 rounded-full bg-[#0071e3] dark:bg-[#2997ff] animate-ping"></span>
+            <span class="text-xs font-extrabold text-[#0071e3] dark:text-[#2997ff] tracking-tight">GATE CS 2027 Simulator Engine</span>
+          </div>
+
+          <h1 class="font-display font-extrabold text-5xl md:text-7xl text-slate-900 dark:text-white tracking-tight leading-[1.1]">
+            Master GATE CS with <br/>
+            <span class="text-[#0071e3] dark:text-[#2997ff]">Apple-Grade Precision.</span>
           </h1>
-          <p class="mt-6 text-base text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed font-semibold">
-            Practice questions, build custom mock tests, analyze mistakes with visual metrics, and clear doubts with your personal AI Study Assistant.
+
+          <p class="text-base md:text-lg text-slate-500 dark:text-[#86868b] max-w-2xl mx-auto font-medium leading-relaxed">
+            Topic-driven mock test generator, interactive syllabus concept maps, daily streak trackers, and AI assistant — built without clutter.
           </p>
-          <div class="mt-10 flex flex-col sm:flex-row gap-4 items-center justify-center">
-            <button id="hero-get-started" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-bold text-white bg-gradient-to-r from-primary-600 to-indigo-600 hover:from-primary-500 hover:to-indigo-500 active:scale-95 rounded-xl shadow-lg shadow-primary-500/25 transition-all">
-              Start Studying Free <i class="fa-solid fa-arrow-right"></i>
+
+          <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <button id="hero-get-started" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 text-sm font-bold text-white bg-[#0071e3] dark:bg-[#2997ff] hover:scale-105 active:scale-95 rounded-full shadow-lg transition-all">
+              <span>Start Preparation Now</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
             </button>
-            <a href="#about-section" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-bold text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-800/80 hover:bg-slate-100 dark:hover:bg-slate-800/60 rounded-xl transition-all">
-              About GateLabs
-            </a>
           </div>
         </div>
 
-        <!-- Features Grid -->
-        <div id="features-section" class="mt-32 w-full text-left scroll-mt-24">
-          <h2 class="font-display font-extrabold text-3xl text-slate-900 dark:text-white text-center tracking-tight">Engineered for High-Scorers</h2>
-          <p class="text-slate-500 dark:text-slate-455 text-center mt-2 max-w-lg mx-auto text-sm font-semibold">Everything you need to master concepts, organize schedules, and review weak areas.</p>
-          
-          <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Feature 1 -->
-            <div class="glass-card p-8 rounded-2xl hover:-translate-y-1 hover:border-primary-500/30 hover:shadow-xl dark:hover:shadow-primary-500/5 transition-all duration-300 group">
-              <div class="h-12 w-12 rounded-xl bg-primary-100 dark:bg-primary-950/50 text-primary-600 dark:text-primary-400 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform shadow-md shadow-primary-500/5">
-                <i class="fa-solid fa-brain"></i>
-              </div>
-              <h3 class="font-display font-bold text-xl text-slate-900 dark:text-white mb-2 tracking-tight">AI Study Assistant</h3>
-              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed font-semibold">Resolve complex doubts, view step-by-step algorithms, and seek concept explanations with reference materials.</p>
+        <!-- 3 Feature Highlight Bento Cards -->
+        <div class="max-w-6xl mx-auto mt-20 grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10 w-full">
+          <div class="glass-panel p-8 rounded-3xl border border-black/[0.05] dark:border-white/[0.08] flex flex-col gap-4 text-left">
+            <div class="h-12 w-12 rounded-2xl bg-blue-500/10 text-[#0071e3] dark:text-[#2997ff] flex items-center justify-center text-xl">
+              🎯
             </div>
+            <h3 class="font-display font-extrabold text-lg text-slate-900 dark:text-white">CBT Exam Simulator</h3>
+            <p class="text-xs text-slate-500 dark:text-[#86868b] font-medium leading-relaxed">Exact GATE exam interface matching standard paper palettes, countdown timers, and virtual calculator.</p>
+          </div>
 
-            <!-- Feature 2 -->
-            <div class="glass-card p-8 rounded-2xl hover:-translate-y-1 hover:border-primary-500/30 hover:shadow-xl dark:hover:shadow-primary-500/5 transition-all duration-300 group">
-              <div class="h-12 w-12 rounded-xl bg-indigo-100 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform shadow-md shadow-indigo-500/5">
-                <i class="fa-solid fa-cubes"></i>
-              </div>
-              <h3 class="font-display font-bold text-xl text-slate-900 dark:text-white mb-2 tracking-tight">Smart Mock Tests</h3>
-              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed font-semibold">Build custom mock tests filterable by subject, topic, difficulty, or year. Simulate the authentic computer-based GATE test environment.</p>
+          <div class="glass-panel p-8 rounded-3xl border border-black/[0.05] dark:border-white/[0.08] flex flex-col gap-4 text-left">
+            <div class="h-12 w-12 rounded-2xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-xl">
+              ⚡
             </div>
+            <h3 class="font-display font-extrabold text-lg text-slate-900 dark:text-white">Syllabus Mind Maps</h3>
+            <p class="text-xs text-slate-500 dark:text-[#86868b] font-medium leading-relaxed">Checklist mind maps across Engineering Mathematics, Operating Systems, Computer Networks, and DBMS.</p>
+          </div>
 
-            <!-- Feature 3 -->
-            <div class="glass-card p-8 rounded-2xl hover:-translate-y-1 hover:border-primary-500/30 hover:shadow-xl dark:hover:shadow-primary-500/5 transition-all duration-300 group">
-              <div class="h-12 w-12 rounded-xl bg-emerald-100 dark:bg-emerald-950/50 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform shadow-md shadow-emerald-500/5">
-                <i class="fa-solid fa-chart-line"></i>
-              </div>
-              <h3 class="font-display font-bold text-xl text-slate-900 dark:text-white mb-2 tracking-tight">Detailed Analytics</h3>
-              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed font-semibold">Analyze errors and timing, track accuracy trends, and receive personal study plans based on your strong and weak areas.</p>
+          <div class="glass-panel p-8 rounded-3xl border border-black/[0.05] dark:border-white/[0.08] flex flex-col gap-4 text-left">
+            <div class="h-12 w-12 rounded-2xl bg-purple-500/10 text-purple-500 flex items-center justify-center text-xl">
+              🤖
             </div>
+            <h3 class="font-display font-extrabold text-lg text-slate-900 dark:text-white">AI Assistant</h3>
+            <p class="text-xs text-slate-500 dark:text-[#86868b] font-medium leading-relaxed">Instant step-by-step math solver and concept explanations powered by Google Gemini API.</p>
           </div>
         </div>
-
-        <!-- About Section -->
-        <div id="about-section" class="mt-32 w-full text-left scroll-mt-24 border-t border-slate-200/60 dark:border-white/[0.06] pt-20">
-          <div class="glass-panel p-8 sm:p-12 rounded-3xl relative overflow-hidden">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div class="space-y-6">
-                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-primary-500/10 text-primary-600 dark:text-primary-400 border border-primary-500/20">
-                  <i class="fa-solid fa-graduation-cap"></i> About GateLabs
-                </span>
-                <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 dark:text-white tracking-tight">
-                  Built by Engineering Aspirants, For Engineering Aspirants
-                </h2>
-                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-semibold">
-                  GateLabs was conceived to eliminate friction in GATE preparation. Traditional question banks lack instant clarification and performance analytics. GateLabs combines authentic Computer-Based Test (CBT) simulation with Gemini AI assistance to give candidates an unparalleled competitive edge.
-                </p>
-                <div class="grid grid-cols-2 gap-4 pt-2">
-                  <div class="p-4 rounded-2xl bg-white/60 dark:bg-slate-900/60 border border-slate-200/40 dark:border-white/[0.04]">
-                    <div class="font-display font-extrabold text-2xl text-primary-600 dark:text-primary-400">100%</div>
-                    <div class="text-xs font-semibold text-slate-500 dark:text-slate-400 mt-1">CBT Simulation</div>
-                  </div>
-                  <div class="p-4 rounded-2xl bg-white/60 dark:bg-slate-900/60 border border-slate-200/40 dark:border-white/[0.04]">
-                    <div class="font-display font-extrabold text-2xl text-indigo-600 dark:text-indigo-400">AI</div>
-                    <div class="text-xs font-semibold text-slate-500 dark:text-slate-400 mt-1">Powered Explanations</div>
-                  </div>
-                </div>
-                <div>
-                  <a href="#/about" class="inline-flex items-center gap-2 font-bold text-sm text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors">
-                    Learn more about our architecture & vision <i class="fa-solid fa-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div class="glass-card p-6 rounded-2xl border border-slate-200/50 dark:border-white/[0.06]">
-                  <i class="fa-solid fa-layer-group text-2xl text-primary-500 mb-3"></i>
-                  <h4 class="font-bold text-base text-slate-900 dark:text-white mb-1">Subject Mastery</h4>
-                  <p class="text-xs text-slate-500 dark:text-slate-400 font-semibold">Data Structures, Algorithms, OS, DBMS, Computer Networks, TOC, and more.</p>
-                </div>
-                <div class="glass-card p-6 rounded-2xl border border-slate-200/50 dark:border-white/[0.06]">
-                  <i class="fa-solid fa-clock text-2xl text-indigo-500 mb-3"></i>
-                  <h4 class="font-bold text-base text-slate-900 dark:text-white mb-1">Time Analytics</h4>
-                  <p class="text-xs text-slate-500 dark:text-slate-400 font-semibold">Track average speed per question and optimize time distribution during tests.</p>
-                </div>
-                <div class="glass-card p-6 rounded-2xl border border-slate-200/50 dark:border-white/[0.06]">
-                  <i class="fa-solid fa-calculator text-2xl text-emerald-500 mb-3"></i>
-                  <h4 class="font-bold text-base text-slate-900 dark:text-white mb-1">Scientific Calculator</h4>
-                  <p class="text-xs text-slate-500 dark:text-slate-400 font-semibold">Draggable, official GATE interface calculator for realistic practice.</p>
-                </div>
-                <div class="glass-card p-6 rounded-2xl border border-slate-200/50 dark:border-white/[0.06]">
-                  <i class="fa-solid fa-user-shield text-2xl text-amber-500 mb-3"></i>
-                  <h4 class="font-bold text-base text-slate-900 dark:text-white mb-1">Secure & Local</h4>
-                  <p class="text-xs text-slate-500 dark:text-slate-400 font-semibold">User data stored securely with Firebase Authentication integration.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
+      </section>
 
       <!-- Auth Modal -->
-      <div id="auth-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/40 dark:bg-slate-950/60 backdrop-blur-sm hidden animate-fade-in px-4">
-        <div class="w-full max-w-md glass-panel p-8 rounded-3xl relative shadow-2xl border border-white/10 glow-primary text-slate-900 dark:text-white">
+      <div id="auth-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 dark:bg-black/70 backdrop-blur-md hidden animate-fade-in px-4">
+        <div class="w-full max-w-md glass-panel p-8 rounded-3xl relative shadow-2xl text-slate-900 dark:text-white border border-black/10 dark:border-white/10">
           <button id="close-modal-btn" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
             <i class="fa-solid fa-xmark text-xl"></i>
           </button>
-          
-          <h2 id="modal-title" class="font-display font-extrabold text-2xl text-center tracking-tight">Sign In</h2>
-          <p id="modal-subtitle" class="text-xs text-slate-500 dark:text-slate-400 text-center mt-1.5 font-semibold">Access your GATE workspace</p>
-          
-          <form id="auth-form" class="mt-6 flex flex-col gap-4">
-            <div id="name-field-container" class="hidden">
-              <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Full Name</label>
-              <input type="text" id="auth-name" placeholder="John Doe" class="glass-input">
+
+          <div class="text-center mb-6">
+            <h2 id="auth-title" class="font-display font-extrabold text-2xl">Create Account</h2>
+            <p id="auth-subtitle" class="text-xs text-slate-500 dark:text-[#86868b] mt-1.5 font-medium">Join GateLabs to start tracking your syllabus and mock tests.</p>
+          </div>
+
+          <form id="auth-form" class="flex flex-col gap-4">
+            <div id="name-field" class="flex flex-col gap-1.5">
+              <label class="text-xs font-bold text-slate-400 uppercase tracking-wider">Full Name</label>
+              <input type="text" id="auth-name" placeholder="Bharath" class="glass-input font-semibold">
             </div>
-            
-            <div>
-              <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Email Address</label>
-              <input type="email" id="auth-email" required placeholder="name@domain.com" class="glass-input">
+
+            <div class="flex flex-col gap-1.5">
+              <label class="text-xs font-bold text-slate-400 uppercase tracking-wider">Email Address</label>
+              <input type="email" id="auth-email" required placeholder="aspirant@gate.edu" class="glass-input font-semibold">
             </div>
-            
-            <div>
-              <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Password</label>
-              <input type="password" id="auth-password" required placeholder="••••••••" class="glass-input">
+
+            <div class="flex flex-col gap-1.5">
+              <label class="text-xs font-bold text-slate-400 uppercase tracking-wider">Password</label>
+              <input type="password" id="auth-password" required placeholder="••••••••" class="glass-input font-semibold">
             </div>
-            
-            <button type="submit" id="auth-submit-btn" class="w-full mt-2 py-3.5 rounded-xl bg-gradient-to-r from-primary-600 to-indigo-600 hover:from-primary-500 hover:to-indigo-500 text-white font-bold text-sm shadow-lg shadow-primary-500/25 active:scale-98 transition-all flex items-center justify-center gap-2 duration-150">
-              <span id="submit-text">Sign In</span>
-              <i id="submit-spinner" class="fa-solid fa-spinner animate-spin hidden"></i>
+
+            <button type="submit" id="auth-submit-btn" class="w-full mt-2 py-3.5 rounded-full bg-[#0071e3] dark:bg-[#2997ff] text-white font-bold text-xs shadow-md active:scale-95 hover:scale-102 transition-all flex items-center justify-center gap-2">
+              <span id="submit-text">Sign Up</span>
+              <i id="submit-spinner" class="fa-solid fa-circle-notch fa-spin hidden"></i>
             </button>
           </form>
-          
-          <p class="text-xs text-center text-slate-550 dark:text-slate-400 mt-6">
-            <span id="toggle-auth-text" class="font-semibold">Don't have an account?</span>
-            <button id="toggle-auth-btn" class="text-primary-600 dark:text-primary-400 font-bold hover:underline">Sign Up</button>
-          </p>
-        </div>
-      </div>
-      
-      <!-- Footer -->
-      <footer class="border-t border-slate-200/40 dark:border-white/[0.06] py-8 bg-white/20 dark:bg-slate-950/10">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-[11px] text-slate-500 dark:text-slate-455 font-semibold">
-          <span>&copy; 2026 GATE Flow. All rights reserved. Built for GATE CS & IT 2027.</span>
-          <div class="flex gap-4">
-            <a href="#" class="hover:text-primary-600 transition-colors">Privacy Policy</a>
-            <a href="#" class="hover:text-primary-600 transition-colors">Terms of Service</a>
+
+          <div class="mt-6 text-center text-xs text-slate-500 dark:text-[#86868b] font-medium">
+            <span id="toggle-text">Already have an account?</span>
+            <button id="toggle-auth-btn" class="text-[#0071e3] dark:text-[#2997ff] font-bold hover:underline ml-1">Sign In</button>
           </div>
         </div>
-      </footer>
+      </div>
     `;
   },
 
   init() {
     const themeBtn = document.getElementById('theme-toggle-btn');
-    const sunIcon = document.getElementById('theme-sun');
-    const moonIcon = document.getElementById('theme-moon');
-    
-    // Theme Toggle Handler
     themeBtn?.addEventListener('click', () => {
-      const newTheme = toggleTheme();
-      if (newTheme === 'dark') {
-        sunIcon.classList.add('hidden');
-        moonIcon.classList.remove('hidden');
+      toggleTheme();
+      const theme = getTheme();
+      const sun = document.getElementById('theme-sun');
+      const moon = document.getElementById('theme-moon');
+      if (theme === 'dark') {
+        sun?.classList.add('hidden');
+        moon?.classList.remove('hidden');
+        moon?.classList.add('inline-block');
       } else {
-        sunIcon.classList.remove('hidden');
-        moonIcon.classList.add('hidden');
+        moon?.classList.add('hidden');
+        sun?.classList.remove('hidden');
+        sun?.classList.add('inline-block');
       }
     });
 
-    // Auth Modals Setup
     const authModal = document.getElementById('auth-modal');
-    const closeModalBtn = document.getElementById('close-modal-btn');
+    const closeBtn = document.getElementById('close-modal-btn');
     const navLoginBtn = document.getElementById('nav-login-btn');
     const navRegisterBtn = document.getElementById('nav-register-btn');
     const heroBtn = document.getElementById('hero-get-started');
-    
-    const modalTitle = document.getElementById('modal-title');
-    const modalSubtitle = document.getElementById('modal-subtitle');
-    const nameFieldContainer = document.getElementById('name-field-container');
+    const toggleAuthBtn = document.getElementById('toggle-auth-btn');
+
     const authForm = document.getElementById('auth-form');
-    const authName = document.getElementById('auth-name');
-    const authEmail = document.getElementById('auth-email');
-    const authPassword = document.getElementById('auth-password');
-    const authSubmitBtn = document.getElementById('auth-submit-btn');
+    const authTitle = document.getElementById('auth-title');
+    const authSubtitle = document.getElementById('auth-subtitle');
+    const nameField = document.getElementById('name-field');
     const submitText = document.getElementById('submit-text');
     const submitSpinner = document.getElementById('submit-spinner');
-    
-    const toggleAuthBtn = document.getElementById('toggle-auth-btn');
-    const toggleAuthText = document.getElementById('toggle-auth-text');
-    
-    let isSignUp = false;
+    const toggleText = document.getElementById('toggle-text');
+    const authEmail = document.getElementById('auth-email');
+    const authPassword = document.getElementById('auth-password');
+    const authName = document.getElementById('auth-name');
+    const authSubmitBtn = document.getElementById('auth-submit-btn');
 
-    const openModal = (registerMode = false) => {
-      isSignUp = registerMode;
-      authModal.classList.remove('hidden');
-      
+    let isSignUp = true;
+
+    const openModal = (signUpMode = true) => {
+      isSignUp = signUpMode;
       if (isSignUp) {
-        modalTitle.textContent = "Sign Up";
-        modalSubtitle.textContent = "Create your custom GATE workspace";
-        nameFieldContainer.classList.remove('hidden');
-        authName.required = true;
+        authTitle.textContent = "Create Account";
+        authSubtitle.textContent = "Join GateLabs to start tracking your syllabus and mock tests.";
+        nameField.classList.remove('hidden');
         submitText.textContent = "Sign Up";
-        toggleAuthText.textContent = "Already have an account?";
+        toggleText.textContent = "Already have an account?";
         toggleAuthBtn.textContent = "Sign In";
       } else {
-        modalTitle.textContent = "Sign In";
-        modalSubtitle.textContent = "Access your GATE workspace";
-        nameFieldContainer.classList.add('hidden');
-        authName.required = false;
+        authTitle.textContent = "Welcome Back";
+        authSubtitle.textContent = "Sign in to access your GateLabs dashboard.";
+        nameField.classList.add('hidden');
         submitText.textContent = "Sign In";
-        toggleAuthText.textContent = "Don't have an account?";
+        toggleText.textContent = "Don't have an account?";
         toggleAuthBtn.textContent = "Sign Up";
       }
+      authModal?.classList.remove('hidden');
     };
 
     const closeModal = () => {
-      authModal.classList.add('hidden');
-      authForm.reset();
+      authModal?.classList.add('hidden');
     };
 
     navLoginBtn?.addEventListener('click', () => openModal(false));
     navRegisterBtn?.addEventListener('click', () => openModal(true));
     heroBtn?.addEventListener('click', () => openModal(true));
-    closeModalBtn?.addEventListener('click', closeModal);
-    
+    closeBtn?.addEventListener('click', closeModal);
+
     authModal?.addEventListener('click', (e) => {
       if (e.target === authModal) closeModal();
     });
@@ -310,7 +230,6 @@ export const LandingPage = {
       const password = authPassword.value;
       const name = authName.value.trim();
 
-      // UI Loading state
       authSubmitBtn.disabled = true;
       submitSpinner.classList.remove('hidden');
       submitText.textContent = isSignUp ? "Creating Account..." : "Signing In...";
@@ -318,7 +237,7 @@ export const LandingPage = {
       try {
         if (isSignUp) {
           await auth.signUp(email, password, name);
-          showToast(`Welcome to GATE Flow, ${name || 'User'}!`, 'success');
+          showToast(`Welcome to GateLabs, ${name || 'User'}!`, 'success');
         } else {
           const user = await auth.signIn(email, password);
           showToast(`Welcome back, ${user.displayName || user.email}!`, 'success');

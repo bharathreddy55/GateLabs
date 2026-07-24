@@ -4,126 +4,136 @@ import { showToast } from '../utils/toast';
 
 export const Layout = {
   render(contentHtml, activePage = 'dashboard') {
-    const user = auth.currentUser || { displayName: 'GATE Aspirant', email: '' };
+    const user = auth.currentUser || { displayName: 'Bharath', email: 'aspirant@gate.edu' };
     const theme = getTheme();
     const sunIconClass = theme === 'dark' ? 'hidden' : 'inline-block';
     const moonIconClass = theme === 'dark' ? 'inline-block' : 'hidden';
 
     const getLinkClass = (pageName) => {
-      const base = "flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-200";
+      const base = "flex items-center gap-3 px-4 py-3 rounded-2xl text-xs font-bold transition-all duration-200 select-none";
       if (activePage === pageName) {
-        return `${base} bg-primary-600 text-white shadow-lg shadow-primary-600/20`;
+        return `${base} bg-[#0071e3] dark:bg-[#2997ff] text-white shadow-md shadow-[#0071e3]/20 dark:shadow-[#2997ff]/20`;
       }
-      return `${base} text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white`;
+      return `${base} text-slate-600 dark:text-[#86868b] hover:bg-black/5 dark:hover:bg-white/10 hover:text-slate-900 dark:hover:text-white`;
     };
 
     return `
-      <div class="min-h-screen flex bg-slate-50 dark:bg-[#080d16] transition-colors duration-300 p-4 gap-4">
-        <!-- Sidebar -->
-        <aside id="sidebar-container" class="w-64 fixed top-4 bottom-4 left-4 z-30 border border-slate-200/40 dark:border-white/[0.06] bg-white/80 dark:bg-slate-900/40 backdrop-blur-xl flex flex-col rounded-2xl transition-all duration-300 shadow-lg dark:shadow-2xl dark:shadow-black/20">
-          <div class="h-16 px-6 border-b border-slate-200/40 dark:border-white/[0.06] flex items-center gap-2.5">
-            <div class="h-9 w-9 rounded-xl bg-gradient-to-tr from-primary-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-primary-500/20">
-              <i class="fa-solid fa-graduation-cap text-white text-base"></i>
+      <div class="min-h-screen flex bg-[#f5f5f7] dark:bg-[#000000] transition-colors duration-300 p-4 gap-4">
+        <!-- Arc Browser / Raycast Inspired Sidebar -->
+        <aside id="sidebar-container" class="w-64 fixed top-4 bottom-4 left-4 z-30 border border-black/[0.05] dark:border-white/[0.08] bg-white/80 dark:bg-[#161618]/80 backdrop-blur-2xl flex flex-col rounded-3xl transition-all duration-300 shadow-sm">
+          <!-- Logo & Brand Header -->
+          <div class="h-16 px-6 border-b border-black/[0.04] dark:border-white/[0.06] flex items-center gap-3">
+            <div class="h-9 w-9 rounded-2xl bg-gradient-to-tr from-[#0071e3] to-[#2997ff] flex items-center justify-center shadow-md shadow-[#0071e3]/20 text-white">
+              <i class="fa-solid fa-graduation-cap text-base"></i>
             </div>
-            <span class="font-display font-bold text-lg tracking-tight bg-gradient-to-r from-slate-900 to-slate-700 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">GateLabs</span>
+            <div class="flex flex-col">
+              <span class="font-display font-extrabold text-base tracking-tight text-slate-900 dark:text-white">GateLabs</span>
+              <span class="text-[9px] font-semibold text-slate-400 dark:text-[#86868b] tracking-wider uppercase">Pro Preparation</span>
+            </div>
           </div>
 
-          <nav class="flex-1 px-4 py-6 flex flex-col gap-1.5">
+          <!-- Navigation Links -->
+          <nav class="flex-1 px-3.5 py-6 flex flex-col gap-1.5 overflow-y-auto no-scrollbar">
             <a href="#/dashboard" class="${getLinkClass('dashboard')}">
-              <i class="fa-solid fa-chart-pie text-lg"></i> Dashboard
+              <i class="fa-solid fa-chart-pie text-base w-5 text-center"></i> Dashboard
             </a>
             <a href="#/assistant" class="${getLinkClass('assistant')}">
-              <i class="fa-solid fa-brain text-lg"></i> AI Assistant
+              <i class="fa-solid fa-brain text-base w-5 text-center"></i> AI Assistant
             </a>
             <a href="#/practice" class="${getLinkClass('practice')}">
-              <i class="fa-solid fa-cubes text-lg"></i> Practice Qs
+              <i class="fa-solid fa-cubes text-base w-5 text-center"></i> Practice Qs
             </a>
             <a href="#/mock-test" class="${getLinkClass('mock-test')}">
-              <i class="fa-solid fa-pen-to-square text-lg"></i> Mock Tests
+              <i class="fa-solid fa-pen-to-square text-base w-5 text-center"></i> Mock Tests
             </a>
             <a href="#/formulas" class="${getLinkClass('formulas')}">
-              <i class="fa-solid fa-book-bookmark text-lg"></i> Formula Deck
+              <i class="fa-solid fa-book-bookmark text-base w-5 text-center"></i> Formula Deck
             </a>
             <a href="#/analytics" class="${getLinkClass('analytics')}">
-              <i class="fa-solid fa-sliders text-lg"></i> Mistake Analysis
+              <i class="fa-solid fa-sliders text-base w-5 text-center"></i> Mistake Analysis
             </a>
             <a href="#/about" class="${getLinkClass('about')}">
-              <i class="fa-solid fa-circle-info text-lg"></i> About GateLabs
+              <i class="fa-solid fa-circle-info text-base w-5 text-center"></i> About GateLabs
             </a>
           </nav>
 
-          <div class="p-4 border-t border-slate-200/40 dark:border-white/[0.06] flex flex-col gap-2">
-            <div class="flex items-center gap-3 px-2 py-1.5 rounded-xl bg-slate-100/40 dark:bg-slate-950/20 border border-slate-200/20 dark:border-white/[0.03]">
-              <div class="h-9 w-9 rounded-xl bg-gradient-to-tr from-primary-500 to-indigo-600 text-white flex items-center justify-center font-bold text-sm shadow-md">
-                ${user.displayName ? user.displayName.charAt(0).toUpperCase() : user.email.charAt(0).toUpperCase()}
+          <!-- User Profile & Action Pill -->
+          <div class="p-3 border-t border-black/[0.04] dark:border-white/[0.06] flex flex-col gap-2">
+            <div class="flex items-center gap-3 px-3 py-2 rounded-2xl bg-black/5 dark:bg-white/5 border border-black/[0.03] dark:border-white/[0.04]">
+              <div class="h-9 w-9 rounded-xl bg-gradient-to-tr from-[#0071e3] to-[#2997ff] text-white flex items-center justify-center font-bold text-xs shadow-sm">
+                ${user.displayName ? user.displayName.charAt(0).toUpperCase() : 'B'}
               </div>
               <div class="flex-1 min-w-0">
-                <p class="text-sm font-semibold text-slate-800 dark:text-slate-200 truncate">${user.displayName || 'User'}</p>
-                <p class="text-xs text-slate-400 dark:text-slate-500 truncate">${user.email}</p>
+                <p class="text-xs font-bold text-slate-900 dark:text-white truncate">${user.displayName || 'Bharath'}</p>
+                <p class="text-[10px] text-slate-400 dark:text-[#86868b] truncate">${user.email || 'aspirant@gate.edu'}</p>
               </div>
             </div>
-            <button id="settings-btn" class="w-full flex items-center gap-2.5 px-4 py-2.5 rounded-xl text-xs font-bold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/60 active:scale-98 transition-all select-none">
-              <i class="fa-solid fa-gear"></i> AI Config
-            </button>
-            <button id="logout-btn" class="w-full flex items-center gap-2.5 px-4 py-2.5 rounded-xl text-xs font-bold text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/20 active:scale-98 transition-all">
-              <i class="fa-solid fa-right-from-bracket"></i> Sign Out
-            </button>
+            
+            <div class="grid grid-cols-2 gap-1.5">
+              <button id="settings-btn" class="flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-[11px] font-bold text-slate-600 dark:text-[#86868b] hover:bg-black/5 dark:hover:bg-white/10 active:scale-95 transition-all select-none">
+                <i class="fa-solid fa-gear text-xs"></i> Config
+              </button>
+              <button id="logout-btn" class="flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-[11px] font-bold text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/20 active:scale-95 transition-all select-none">
+                <i class="fa-solid fa-right-from-bracket text-xs"></i> Sign Out
+              </button>
+            </div>
           </div>
         </aside>
 
         <!-- Main Body Wrapper -->
         <div class="flex-1 pl-[18rem] flex flex-col min-h-screen pr-2 py-2">
           <!-- Header -->
-          <header id="layout-header" class="h-16 border border-slate-200/40 dark:border-white/[0.06] bg-white/70 dark:bg-slate-900/40 backdrop-blur-md sticky top-4 z-20 flex items-center justify-between px-6 rounded-2xl transition-colors duration-300 shadow-md">
+          <header id="layout-header" class="h-16 border border-black/[0.05] dark:border-white/[0.08] bg-white/80 dark:bg-[#161618]/80 backdrop-blur-2xl sticky top-4 z-20 flex items-center justify-between px-6 rounded-3xl transition-colors duration-300 shadow-sm">
             <div>
-              <h2 class="font-display font-extrabold text-lg text-slate-800 dark:text-white capitalize tracking-tight">${activePage.replace('-', ' ')}</h2>
+              <h2 class="font-display font-extrabold text-base text-slate-900 dark:text-white capitalize tracking-tight">${activePage.replace('-', ' ')}</h2>
             </div>
             
             <div class="flex items-center gap-4">
               <!-- Theme Toggle -->
-              <button id="layout-theme-toggle" class="p-2 rounded-xl border border-slate-200/60 dark:border-white/[0.08] hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500 dark:text-slate-400 hover:scale-105 active:scale-95 transition-all select-none bg-white/50 dark:bg-slate-950/30">
+              <button id="layout-theme-toggle" class="p-2 rounded-xl border border-black/5 dark:border-white/10 hover:bg-black/5 dark:hover:bg-white/10 text-slate-500 dark:text-[#86868b] hover:scale-105 active:scale-95 transition-all select-none bg-white/50 dark:bg-black/20">
                 <i id="layout-theme-sun" class="fa-solid fa-sun ${sunIconClass}"></i>
                 <i id="layout-theme-moon" class="fa-solid fa-moon ${moonIconClass}"></i>
               </button>
               
-              <div class="h-6 w-px bg-slate-200 dark:bg-white/[0.08]"></div>
+              <div class="h-5 w-px bg-black/10 dark:bg-white/10"></div>
               
-              <span class="text-xs font-bold text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-950/40 px-3.5 py-1.5 rounded-xl border border-primary-100/50 dark:border-primary-900/35 flex items-center gap-1.5">
-                <span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span> GATE CS 2027
+              <span class="text-xs font-bold text-[#0071e3] dark:text-[#2997ff] bg-[#0071e3]/10 dark:bg-[#2997ff]/15 px-3.5 py-1.5 rounded-full border border-[#0071e3]/20 dark:border-[#2997ff]/30 flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-[#0071e3] dark:bg-[#2997ff] animate-ping"></span> GATE CS 2027
               </span>
             </div>
           </header>
 
-          <!-- Main Content view -->
+          <!-- Main Sub-page Canvas -->
           <main id="sub-page-container" class="flex-1 pt-6 page-enter">
             ${contentHtml}
           </main>
         </div>
 
-        <!-- Settings Modal -->
-        <div id="settings-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/40 dark:bg-slate-950/60 backdrop-blur-sm hidden animate-fade-in px-4">
+        <!-- AI Config Modal -->
+        <div id="settings-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 dark:bg-black/70 backdrop-blur-md hidden animate-fade-in px-4">
           <div class="w-full max-w-md glass-panel p-8 rounded-3xl relative shadow-2xl text-slate-900 dark:text-white border border-white/10 glow-primary">
             <button id="close-settings-modal" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
               <i class="fa-solid fa-xmark text-xl"></i>
             </button>
             
             <h2 class="font-display font-extrabold text-xl flex items-center gap-2">
-              <i class="fa-solid fa-gear text-primary-500"></i> AI Configuration
+              <i class="fa-solid fa-gear text-[#0071e3] dark:text-[#2997ff]"></i> AI Configuration
             </h2>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1.5 leading-relaxed">Configure your Gemini API key to extract questions from PDFs and generate new ones.</p>
+            <p class="text-xs text-slate-500 dark:text-[#86868b] mt-1.5 leading-relaxed font-medium">Configure your Gemini API key to extract questions from PDFs and generate new practice sets.</p>
             
             <form id="settings-form" class="mt-6 flex flex-col gap-4 text-xs font-semibold">
               <div>
                 <label class="block text-slate-400 uppercase mb-2 tracking-wider">Gemini API Key</label>
                 <input type="password" id="settings-api-key" placeholder="Enter your Gemini API key..." class="glass-input font-mono text-sm">
-                <span class="block text-[10px] text-slate-400 dark:text-slate-500 mt-2 font-normal leading-relaxed">
-                  Your key is stored securely in your browser's local storage and is only used to send direct requests to Google's Gemini API endpoints.
+                <span class="block text-[10px] text-slate-400 dark:text-[#86868b] mt-2 font-normal leading-relaxed">
+                  Your key is stored securely in your browser's local storage and is only used for direct requests to Google Gemini endpoints.
                 </span>
               </div>
               
-              <button type="submit" class="w-full mt-2 py-3.5 rounded-xl bg-gradient-to-r from-primary-600 to-indigo-600 hover:from-primary-500 hover:to-indigo-500 text-white font-bold text-sm shadow-lg shadow-primary-500/25 active:scale-98 transition-all duration-150">
-                Save Configuration
-              </button>
+              <div class="flex justify-end gap-3 mt-4">
+                <button type="button" id="cancel-settings" class="px-5 py-2.5 rounded-2xl border border-black/10 dark:border-white/10 text-slate-600 dark:text-slate-300 font-bold hover:bg-black/5 dark:hover:bg-white/10 transition-all">Cancel</button>
+                <button type="submit" class="px-6 py-2.5 rounded-2xl bg-[#0071e3] dark:bg-[#2997ff] text-white font-bold shadow-md hover:scale-102 active:scale-95 transition-all">Save Key</button>
+              </div>
             </form>
           </div>
         </div>
@@ -131,91 +141,88 @@ export const Layout = {
     `;
   },
 
-  init(activePage = 'dashboard') {
-    // Sign out button
-    const logoutBtn = document.getElementById('logout-btn');
-    logoutBtn?.addEventListener('click', async () => {
-      try {
-        await auth.signOut();
-        showToast("Signed out successfully.", "info");
-        window.location.hash = '#/';
-      } catch (err) {
-        showToast(err.message, "error");
-      }
-    });
+  updateNavigation(activePage) {
+    const sidebar = document.getElementById('sidebar-container');
+    if (!sidebar) return;
 
-    // Theme Toggle Handler
-    const themeBtn = document.getElementById('layout-theme-toggle');
-    const sunIcon = document.getElementById('layout-theme-sun');
-    const moonIcon = document.getElementById('layout-theme-moon');
-
-    themeBtn?.addEventListener('click', () => {
-      const newTheme = toggleTheme();
-      if (newTheme === 'dark') {
-        sunIcon.classList.add('hidden');
-        moonIcon.classList.remove('hidden');
+    const links = sidebar.querySelectorAll('nav a');
+    links.forEach(link => {
+      const href = link.getAttribute('href');
+      const pageName = href ? href.replace('#/', '') : '';
+      if (pageName === activePage) {
+        link.className = "flex items-center gap-3 px-4 py-3 rounded-2xl text-xs font-bold transition-all duration-200 select-none bg-[#0071e3] dark:bg-[#2997ff] text-white shadow-md shadow-[#0071e3]/20 dark:shadow-[#2997ff]/20";
       } else {
-        sunIcon.classList.remove('hidden');
-        moonIcon.classList.add('hidden');
+        link.className = "flex items-center gap-3 px-4 py-3 rounded-2xl text-xs font-bold transition-all duration-200 select-none text-slate-600 dark:text-[#86868b] hover:bg-black/5 dark:hover:bg-white/10 hover:text-slate-900 dark:hover:text-white";
       }
     });
 
-    // Settings modal bindings
+    const titleEl = document.querySelector('header h2');
+    if (titleEl) {
+      titleEl.textContent = activePage.replace('-', ' ');
+    }
+  },
+
+  init(activePage = 'dashboard') {
+    // Theme toggle binding
+    const themeBtn = document.getElementById('layout-theme-toggle');
+    themeBtn?.addEventListener('click', () => {
+      toggleTheme();
+      const theme = getTheme();
+      const sun = document.getElementById('layout-theme-sun');
+      const moon = document.getElementById('layout-theme-moon');
+      if (theme === 'dark') {
+        sun?.classList.add('hidden');
+        moon?.classList.remove('hidden');
+        moon?.classList.add('inline-block');
+      } else {
+        moon?.classList.add('hidden');
+        sun?.classList.remove('hidden');
+        sun?.classList.add('inline-block');
+      }
+    });
+
+    // Settings modal binding
     const settingsBtn = document.getElementById('settings-btn');
     const settingsModal = document.getElementById('settings-modal');
     const closeSettings = document.getElementById('close-settings-modal');
+    const cancelSettings = document.getElementById('cancel-settings');
     const settingsForm = document.getElementById('settings-form');
-    const settingsApiKey = document.getElementById('settings-api-key');
+    const apiKeyInput = document.getElementById('settings-api-key');
 
-    settingsBtn?.addEventListener('click', () => {
-      if (settingsApiKey) {
-        settingsApiKey.value = localStorage.getItem('gemini_api_key') || '';
-      }
+    const openSettings = () => {
+      apiKeyInput.value = localStorage.getItem('gemini_api_key') || '';
       settingsModal?.classList.remove('hidden');
-    });
+    };
 
-    closeSettings?.addEventListener('click', () => {
+    const closeSettingsModal = () => {
       settingsModal?.classList.add('hidden');
-    });
+    };
 
-    settingsModal?.addEventListener('click', (e) => {
-      if (e.target === settingsModal) {
-        settingsModal.classList.add('hidden');
-      }
-    });
+    settingsBtn?.addEventListener('click', openSettings);
+    closeSettings?.addEventListener('click', closeSettingsModal);
+    cancelSettings?.addEventListener('click', closeSettingsModal);
 
     settingsForm?.addEventListener('submit', (e) => {
       e.preventDefault();
-      const keyVal = settingsApiKey.value.trim();
-      if (keyVal) {
-        localStorage.setItem('gemini_api_key', keyVal);
-        showToast("Gemini API key saved successfully.", "success");
+      const key = apiKeyInput.value.trim();
+      if (key) {
+        localStorage.setItem('gemini_api_key', key);
+        showToast("Gemini API key saved successfully!", "success");
       } else {
         localStorage.removeItem('gemini_api_key');
-        showToast("Gemini API key cleared.", "info");
+        showToast("Gemini API key removed.", "info");
       }
-      settingsModal?.classList.add('hidden');
-    });
-  },
-
-  updateNavigation(activePage = 'dashboard') {
-    // Update navigation active links classes
-    const navLinks = document.querySelectorAll('nav a');
-    navLinks.forEach(link => {
-      const href = link.getAttribute('href') || '';
-      const page = href.split('#/')[1] || 'dashboard';
-      const base = "flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-200";
-      if (page === activePage) {
-        link.className = `${base} bg-primary-600 text-white shadow-lg shadow-primary-600/20`;
-      } else {
-        link.className = `${base} text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white`;
-      }
+      closeSettingsModal();
     });
 
-    // Update Header title text dynamically
-    const headerTitle = document.querySelector('header h2');
-    if (headerTitle) {
-      headerTitle.textContent = activePage.replace('-', ' ');
-    }
+    // Logout binding
+    const logoutBtn = document.getElementById('logout-btn');
+    logoutBtn?.addEventListener('click', async () => {
+      if (confirm("Are you sure you want to sign out?")) {
+        await auth.signOut();
+        showToast("Signed out successfully.", "info");
+        window.location.hash = '#/';
+      }
+    });
   }
 };

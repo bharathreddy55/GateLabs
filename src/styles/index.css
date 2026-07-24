@@ -4,14 +4,15 @@
 
 @layer base {
   html {
-    font-size: 110%;
+    font-size: 100%;
+    scroll-behavior: smooth;
   }
   body {
-    @apply transition-all duration-300 bg-slate-50 text-slate-800 dark:bg-[#080d16] dark:text-slate-100 font-sans;
+    @apply transition-colors duration-300 bg-[#f5f5f7] text-[#1d1d1f] dark:bg-[#000000] dark:text-[#f5f5f7] font-sans antialiased selection:bg-[#0071e3]/20 dark:selection:bg-[#2997ff]/30;
   }
 }
 
-/* Custom Premium Scrollbar */
+/* Custom Apple Minimal Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -22,31 +23,35 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-slate-200 dark:bg-slate-800/80 rounded-full hover:bg-slate-300 dark:hover:bg-slate-700/80 transition-all;
+  @apply bg-black/10 dark:bg-white/15 rounded-full hover:bg-black/20 dark:hover:bg-white/25 transition-colors;
 }
 
-/* Frosted Glassmorphism Panels */
+/* Apple-Inspired Translucent Glass Panels */
 .glass-panel {
-  @apply bg-white/75 dark:bg-slate-900/40 backdrop-blur-xl border border-slate-200/50 dark:border-white/[0.06] shadow-xl shadow-slate-100/10 dark:shadow-2xl dark:shadow-black/40 transition-all duration-300;
+  @apply bg-white/80 dark:bg-[#161618]/75 backdrop-blur-2xl border border-black/[0.05] dark:border-white/[0.08] shadow-sm hover:shadow-md transition-all duration-300;
 }
 
 .glass-card {
-  @apply bg-white/60 dark:bg-slate-900/30 backdrop-blur-md border border-slate-200/40 dark:border-white/[0.04] shadow-lg transition-all duration-300 hover:shadow-xl;
+  @apply bg-white/60 dark:bg-[#1c1c1e]/60 backdrop-blur-xl border border-black/[0.04] dark:border-white/[0.06] shadow-sm hover:shadow-md transition-all duration-300;
 }
 
-/* Neon Focus Inputs */
+/* Apple SF Input Controls */
 .glass-input {
-  @apply w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-white/[0.08] bg-white/40 dark:bg-slate-950/40 focus:border-primary-500 dark:focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20 dark:focus:ring-primary-500/25 transition-all duration-200 text-sm;
+  @apply w-full px-4 py-3 rounded-2xl border border-black/10 dark:border-white/10 bg-white/70 dark:bg-[#1c1c1e]/70 focus:border-[#0071e3] dark:focus:border-[#2997ff] focus:outline-none focus:ring-4 focus:ring-[#0071e3]/15 dark:focus:ring-[#2997ff]/20 transition-all duration-200 text-sm font-medium;
 }
 
-/* Interactive Glows */
+/* Apple SF Accent Glow */
 .glow-primary {
-  box-shadow: 0 0 25px -5px rgba(99, 102, 241, 0.25);
+  box-shadow: 0 10px 30px -10px rgba(0, 113, 227, 0.3);
 }
 
-/* Unified Typography */
-.text-gradient-primary {
-  @apply bg-gradient-to-r from-slate-900 to-indigo-600 dark:from-white dark:to-indigo-400 bg-clip-text text-transparent;
+/* Apple Minimal Typography */
+.text-apple-title {
+  @apply font-display font-extrabold tracking-tight text-slate-950 dark:text-white;
+}
+
+.text-apple-sub {
+  @apply font-medium text-slate-500 dark:text-[#86868b];
 }
 
 /* Micro-Animations & Page Transitions */
@@ -71,27 +76,27 @@ button,
   overflow-wrap: break-word !important;
 }
 
-/* Custom virtual calculator styles */
+/* Custom Virtual Calculator Buttons */
 .calc-btn {
-  @apply text-sm font-semibold p-2.5 rounded-lg transition-all duration-150 hover:scale-95 active:scale-90 select-none;
+  @apply text-sm font-semibold p-3 rounded-xl transition-all duration-150 hover:scale-95 active:scale-90 select-none;
 }
 
-/* Fullscreen Assessment Mode overrides */
+/* Fullscreen Exam Mode */
 body.fullscreen-exam {
   background-color: #ffffff !important;
   color: #000000 !important;
 }
 
-body.fullscreen-exam aside {
-  display: none !important;
-}
+body.fullscreen-exam aside,
 body.fullscreen-exam header {
   display: none !important;
 }
+
 body.fullscreen-exam div.pl-64,
 body.fullscreen-exam div.pl-\[18rem\] {
   padding-left: 0 !important;
 }
+
 body.fullscreen-exam main {
   padding: 1.5rem !important;
   max-width: 100% !important;
@@ -99,42 +104,19 @@ body.fullscreen-exam main {
   background-color: #ffffff !important;
 }
 
-/* Shimmer Loaders */
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
-
-.shimmer-loading {
-  background: linear-gradient(90deg, rgba(255,255,255,0.02) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.02) 75%);
-  background-size: 200% 100%;
-  animation: shimmer 1.5s infinite;
-}
-
-/* Linear-SaaS Bento Grid Utilities */
-.bento-grid {
-  display: grid;
-  gap: 1.25rem;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-}
-
+/* Bento Cards Layout */
 .bento-card {
-  @apply relative overflow-hidden rounded-3xl bg-white/70 dark:bg-[#0f172a]/70 backdrop-blur-xl border border-slate-200/60 dark:border-white/[0.08] shadow-sm hover:shadow-xl transition-all duration-300 hover:border-primary-500/40 hover:-translate-y-0.5;
-}
-
-.bento-card-gradient {
-  background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(99, 102, 241, 0.08), transparent 40%);
+  @apply relative overflow-hidden rounded-3xl bg-white/80 dark:bg-[#161618]/80 backdrop-blur-2xl border border-black/[0.05] dark:border-white/[0.08] shadow-sm hover:shadow-lg transition-all duration-300 hover:border-[#0071e3]/30 dark:hover:border-[#2997ff]/30;
 }
 
 .command-palette-backdrop {
-  @apply fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-md flex items-start justify-center pt-20 px-4 animate-fade-in;
+  @apply fixed inset-0 z-50 bg-black/40 dark:bg-black/70 backdrop-blur-md flex items-start justify-center pt-20 px-4 animate-fade-in;
 }
 
 .command-palette-modal {
-  @apply w-full max-w-xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 rounded-2xl shadow-2xl overflow-hidden transform transition-all duration-200;
+  @apply w-full max-w-xl bg-white dark:bg-[#1c1c1e] border border-black/10 dark:border-white/10 rounded-3xl shadow-2xl overflow-hidden transform transition-all duration-200;
 }
 
 .kbd-badge {
-  @apply inline-flex items-center px-1.5 py-0.5 text-[10px] font-mono font-semibold text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 rounded border border-slate-200 dark:border-slate-700 shadow-sm;
+  @apply inline-flex items-center px-2 py-0.5 text-[10px] font-mono font-semibold text-slate-500 dark:text-[#86868b] bg-slate-100 dark:bg-[#2c2c2e] rounded-md border border-black/5 dark:border-white/10;
 }
-
