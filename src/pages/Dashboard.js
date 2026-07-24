@@ -63,6 +63,9 @@ export const Dashboard = {
   activeTab: 'overview',
   syllabusActiveSubject: 'Engineering Mathematics',
   bookmarkActiveSubject: 'All',
+  expandedNodes: { 'root': true, 'subject_Engineering Mathematics': true },
+  expandedCallouts: {},
+  treeSearchQuery: '',
 
   async render() {
     const user = auth.currentUser;
@@ -322,74 +325,251 @@ export const Dashboard = {
 
   async renderSyllabusTab(progress) {
     const syllabus = SUBJECT_SYLLABUS;
-    const activeSubject = this.syllabusActiveSubject || Object.keys(syllabus)[0];
-    const subdivisions = syllabus[activeSubject];
+    const query = (this.treeSearchQuery || '').toLowerCase().trim();
 
-    let totalTopics = 0;
-    let completedTopics = 0;
-    Object.entries(subdivisions).forEach(([subdiv, topics]) => {
-      topics.forEach(t => {
-        totalTopics++;
-        if (progress[`${activeSubject}/${subdiv}/${t}`]) {
-          completedTopics++;
-        }
+    // Icon map for subjects
+    const subjectIcons = {
+      "Engineering Mathematics": "fa-solid fa-calculator",
+      "Digital Logic": "fa-solid fa-microchip",
+      "Computer Organization & Architecture (COA)": "fa-solid fa-bolt",
+      "Programming & Data Structures": "fa-solid fa-code",
+      "Algorithms": "fa-solid fa-diagram-project",
+      "Theory of Computation": "fa-solid fa-gears",
+      "Compiler Design": "fa-solid fa-file-code",
+      "Operating Systems": "fa-solid fa-desktop",
+      "Databases": "fa-solid fa-database",
+      "Computer Networks": "fa-solid fa-network-wired"
+    };
+
+    // Calculate total stats
+    let totalTopicsAll = 0;
+    let totalCompleted = 0;
+
+    Object.entries(syllabus).forEach(([subject, subdivisions]) => {
+      Object.entries(subdivisions).forEach(([subdiv, topics]) => {
+        topics.forEach(t => {
+          totalTopicsAll++;
+          if (progress[`${subject}/${subdiv}/${t}`]) {
+            totalCompleted++;
+          }
+        });
       });
     });
-    const progressPercent = totalTopics > 0 ? Math.round((completedTopics / totalTopics) * 100) : 0;
+
+    const totalOverallPercent = totalTopicsAll > 0 ? Math.round((totalCompleted / totalTopicsAll) * 100) : 0;
+    const isRootExpanded = query.length > 0 || !!this.expandedNodes['root'];
 
     return `
-      <div class="flex flex-col lg:flex-row gap-6">
-        <div class="lg:w-1/4 flex flex-col gap-2">
-          <h5 class="text-xs font-bold text-slate-400 dark:text-slate-400 uppercase tracking-wider px-2 mb-1">Subjects</h5>
-          <div class="flex flex-col gap-2 max-h-[500px] overflow-y-auto pr-1">
-            ${Object.keys(syllabus).map(sub => `
-              <button class="subject-select-btn text-left px-4 py-3 rounded-2xl text-xs font-bold transition-all border ${
-                activeSubject === sub 
-                  ? 'bg-[#10b981] border-transparent text-white shadow-md' 
-                  : 'bg-white/70 dark:bg-[#121a2b]/70 border-slate-200/50 dark:border-white/[0.05] text-slate-700 dark:text-slate-300 hover:bg-black/5 dark:hover:bg-white/10'
-              }" data-subject="${sub}">
-                ${sub}
+      <div class="flex flex-col gap-6 font-sans">
+        
+        <!-- ===== NOTION PAGE HEADER BANNER ===== -->
+        <div class="glass-panel p-6 rounded-3xl border border-slate-200/60 dark:border-white/[0.08] relative overflow-hidden shadow-sm">
+          <div class="h-28 -mx-6 -mt-6 bg-gradient-to-r from-slate-900 via-[#0d172a] to-slate-900 p-6 flex items-end justify-between border-b border-white/10 relative">
+            <div class="flex items-center gap-3 relative z-10">
+              <span class="text-3xl p-2.5 bg-white/10 backdrop-blur-md rounded-2xl border border-white/15 shadow-xl text-emerald-400">
+                🌳
+              </span>
+              <div>
+                <div class="flex items-center gap-2">
+                  <span class="text-[10px] font-mono font-bold uppercase tracking-wider text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-md border border-emerald-400/20">Notion Concept Tree</span>
+                  <span class="text-[10px] font-mono text-slate-400">Root-to-Leaf Hierarchy</span>
+                </div>
+                <h3 class="font-display font-extrabold text-xl text-white tracking-tight mt-0.5">GATE CS 2027 Syllabus Tree</h3>
+              </div>
+            </div>
+
+            <!-- Toolbar Controls -->
+            <div class="flex items-center gap-2 relative z-10">
+              <button id="tree-expand-all" type="button" class="px-3.5 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 active:scale-95 text-white text-[11px] font-bold backdrop-blur-md border border-white/10 transition-all select-none flex items-center gap-1.5">
+                <i class="fa-solid fa-folder-open text-xs"></i> Expand All
               </button>
-            `).join('')}
+              <button id="tree-collapse-all" type="button" class="px-3.5 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 active:scale-95 text-white text-[11px] font-bold backdrop-blur-md border border-white/10 transition-all select-none flex items-center gap-1.5">
+                <i class="fa-solid fa-folder text-xs"></i> Collapse All
+              </button>
+            </div>
+          </div>
+
+          <!-- Search Filter & Overall Progress Bar -->
+          <div class="mt-6 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
+            <div class="relative flex-1">
+              <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-slate-400 text-xs"></i>
+              <input type="text" id="tree-search-input" placeholder="Search tree nodes (e.g., Deadlocks, Paging, Master Theorem)..." value="${this.treeSearchQuery || ''}" class="glass-input pl-9 text-xs font-semibold">
+            </div>
+
+            <div class="flex items-center gap-3.5 px-4 py-2.5 rounded-2xl bg-black/5 dark:bg-white/5 border border-black/[0.04] dark:border-white/[0.05] flex-shrink-0">
+              <div class="h-9 w-9 rounded-xl bg-[#10b981]/15 text-[#10b981] flex items-center justify-center font-extrabold text-xs border border-[#10b981]/25">
+                ${totalOverallPercent}%
+              </div>
+              <div>
+                <p class="text-xs font-extrabold text-slate-900 dark:text-white">${totalCompleted} of ${totalTopicsAll} Topics Mastered</p>
+                <div class="w-36 h-1.5 bg-slate-200 dark:bg-white/10 rounded-full mt-1 overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-[#10b981] to-[#14b8a6] transition-all duration-300" style="width: ${totalOverallPercent}%"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="flex-1 glass-panel p-7 rounded-3xl relative overflow-hidden flex flex-col min-h-[480px] border border-slate-200/60 dark:border-white/[0.07]">
-          <div class="flex flex-col items-center justify-center text-center py-5 relative z-10">
-            <div class="h-16 w-16 rounded-full bg-[#10b981] text-white flex flex-col items-center justify-center shadow-lg relative border border-white/10 select-none">
-              <i class="fa-solid fa-network-wired text-base mb-0.5"></i>
-              <span class="text-[10px] font-extrabold tracking-wider">${progressPercent}%</span>
+        <!-- ===== NOTION ROOT TREE CONTAINER ===== -->
+        <div class="glass-panel p-6 rounded-3xl border border-slate-200/60 dark:border-white/[0.08] relative">
+
+          <!-- 🌳 ROOT NODE: GATE CS Master Syllabus -->
+          <div class="flex items-center justify-between p-3.5 rounded-2xl bg-slate-100/80 dark:bg-[#121a2b]/80 border border-slate-200/80 dark:border-white/[0.08] select-none cursor-pointer group hover:border-[#10b981]/50 transition-all tree-node-toggle" data-node="root">
+            <div class="flex items-center gap-3">
+              <span class="h-7 w-7 rounded-xl bg-[#10b981]/15 text-[#10b981] flex items-center justify-center text-xs font-bold transition-transform duration-200 ${isRootExpanded ? 'rotate-90' : ''}">
+                <i class="fa-solid fa-chevron-right"></i>
+              </span>
+              <span class="text-base">🌳</span>
+              <div>
+                <span class="font-display font-extrabold text-sm text-slate-900 dark:text-white tracking-tight">ROOT: GATE Computer Science & IT Master Syllabus</span>
+                <span class="text-[10px] text-slate-400 font-medium ml-2">(${Object.keys(syllabus).length} Core Subjects)</span>
+              </div>
             </div>
-            <h4 class="font-display font-extrabold text-base text-slate-900 dark:text-white mt-3">${activeSubject}</h4>
-            <p class="text-xs text-slate-400 dark:text-slate-400 mt-0.5 font-medium">${completedTopics} of ${totalTopics} topics studied</p>
+            <span class="text-xs font-extrabold accent-text px-3 py-1 rounded-full bg-[#10b981]/10 border border-[#10b981]/20">
+              ${totalCompleted}/${totalTopicsAll} Mastered (${totalOverallPercent}%)
+            </span>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-6 relative z-10">
-            ${Object.entries(subdivisions).map(([subdiv, topics]) => {
-              let subdivTotal = topics.length;
-              let subdivDone = topics.filter(t => progress[`${activeSubject}/${subdiv}/${t}`]).length;
-              let subdivPercent = subdivTotal > 0 ? Math.round((subdivDone / subdivTotal) * 100) : 0;
+          <!-- ROOT CHILDREN (SUBJECTS) -->
+          <div class="${isRootExpanded ? '' : 'hidden'} mt-3 pl-4 border-l-2 border-slate-200 dark:border-slate-800 ml-4 flex flex-col gap-3">
+            
+            ${Object.entries(syllabus).map(([subject, subdivisions]) => {
+              const subjKey = `subject_${subject}`;
+
+              // Calculate subject stats
+              let subjTotal = 0;
+              let subjDone = 0;
+              Object.entries(subdivisions).forEach(([subdiv, topics]) => {
+                topics.forEach(t => {
+                  subjTotal++;
+                  if (progress[`${subject}/${subdiv}/${t}`]) subjDone++;
+                });
+              });
+
+              // Check if search matches subject, subdivision or any topic
+              let subjMatch = !query || subject.toLowerCase().includes(query);
+              let hasChildMatch = false;
+
+              Object.entries(subdivisions).forEach(([subdiv, topics]) => {
+                if (subdiv.toLowerCase().includes(query)) hasChildMatch = true;
+                topics.forEach(t => {
+                  if (t.toLowerCase().includes(query)) hasChildMatch = true;
+                });
+              });
+
+              if (query && !subjMatch && !hasChildMatch) return '';
+
+              const isSubjExpanded = query.length > 0 || !!this.expandedNodes[subjKey];
+              const subjPercent = subjTotal > 0 ? Math.round((subjDone / subjTotal) * 100) : 0;
+              const iconClass = subjectIcons[subject] || "fa-solid fa-book";
 
               return `
-                <div class="glass-card p-5 border border-slate-200/50 dark:border-white/[0.05] bg-white/40 dark:bg-black/20 rounded-2xl flex flex-col gap-3 relative overflow-hidden">
-                  <div class="flex items-center justify-between border-b border-slate-200/40 dark:border-white/[0.05] pb-2.5">
-                    <div>
-                      <h5 class="font-display font-bold text-xs text-slate-900 dark:text-white">${subdiv}</h5>
-                      <p class="text-[10px] text-slate-400 dark:text-slate-400 mt-0.5 font-medium">${subdivDone} of ${subdivTotal} topics</p>
+                <!-- 📘 LEVEL 1 NODE: Subject -->
+                <div class="flex flex-col gap-2">
+                  <div class="flex items-center justify-between p-3 rounded-2xl bg-white/70 dark:bg-[#121a2b]/70 border border-slate-200/50 dark:border-white/[0.05] select-none cursor-pointer hover:bg-black/5 dark:hover:bg-white/5 transition-all tree-node-toggle" data-node="${subjKey}">
+                    <div class="flex items-center gap-2.5">
+                      <span class="h-6 w-6 rounded-lg bg-black/5 dark:bg-white/5 text-slate-500 dark:text-slate-400 flex items-center justify-center text-[10px] font-bold transition-transform duration-200 ${isSubjExpanded ? 'rotate-90' : ''}">
+                        <i class="fa-solid fa-chevron-right"></i>
+                      </span>
+                      <i class="${iconClass} accent-text text-sm w-5 text-center"></i>
+                      <span class="font-display font-extrabold text-xs text-slate-800 dark:text-white">${subject}</span>
+                      <span class="text-[10px] font-semibold text-slate-400">(${Object.keys(subdivisions).length} Modules)</span>
                     </div>
-                    <span class="text-[10px] font-bold text-[#10b981] bg-[#10b981]/10 px-2.5 py-0.5 rounded-full border border-[#10b981]/20">${subdivPercent}%</span>
+
+                    <div class="flex items-center gap-3">
+                      <div class="hidden sm:flex items-center gap-2">
+                        <div class="w-20 h-1.5 bg-slate-200 dark:bg-white/10 rounded-full overflow-hidden">
+                          <div class="h-full bg-gradient-to-r from-[#10b981] to-[#14b8a6]" style="width: ${subjPercent}%"></div>
+                        </div>
+                      </div>
+                      <span class="text-[10px] font-bold text-slate-600 dark:text-slate-300 bg-black/5 dark:bg-white/5 px-2.5 py-0.5 rounded-full border border-black/[0.04] dark:border-white/[0.05]">
+                        ${subjDone}/${subjTotal} (${subjPercent}%)
+                      </span>
+                    </div>
                   </div>
 
-                  <div class="flex flex-col gap-2 max-h-44 overflow-y-auto pr-1">
-                    ${topics.map(t => {
-                      const key = `${activeSubject}/${subdiv}/${t}`;
-                      const checked = progress[key] ? 'checked' : '';
-                      const activeTextClass = progress[key] ? 'text-slate-400 dark:text-slate-400 line-through font-normal' : 'text-slate-700 dark:text-slate-300 font-medium';
+                  <!-- SUBJECT CHILDREN (SUBDIVISIONS / MODULES) -->
+                  <div class="${isSubjExpanded ? '' : 'hidden'} pl-4 border-l-2 border-slate-200/80 dark:border-slate-800/80 ml-3 flex flex-col gap-2.5 mt-1">
+                    
+                    ${Object.entries(subdivisions).map(([subdiv, topics]) => {
+                      const subdivKey = `subdiv_${subject}_${subdiv}`;
+                      let subdivDone = topics.filter(t => progress[`${subject}/${subdiv}/${t}`]).length;
+                      let subdivTotal = topics.length;
+
+                      // Filter topics matching query
+                      const matchingTopics = query
+                        ? topics.filter(t => t.toLowerCase().includes(query) || subdiv.toLowerCase().includes(query) || subject.toLowerCase().includes(query))
+                        : topics;
+
+                      if (query && matchingTopics.length === 0) return '';
+
+                      const isSubdivExpanded = query.length > 0 || !!this.expandedNodes[subdivKey];
+                      const subdivPercent = subdivTotal > 0 ? Math.round((subdivDone / subdivTotal) * 100) : 0;
+
                       return `
-                        <label class="flex items-center gap-2.5 cursor-pointer select-none">
-                          <input type="checkbox" class="syllabus-topic-chk h-4 w-4 rounded-md border-slate-300 dark:border-white/10 text-[#10b981] focus:ring-[#10b981] bg-transparent transition-all" data-key="${key}" ${checked}>
-                          <span class="text-xs transition-colors duration-150 ${activeTextClass}">${t}</span>
-                        </label>
+                        <!-- 📑 LEVEL 2 NODE: Subdivision / Module -->
+                        <div class="flex flex-col gap-2">
+                          <div class="flex items-center justify-between p-2.5 rounded-xl bg-slate-50 dark:bg-[#0f1624] border border-slate-200/40 dark:border-white/[0.04] select-none cursor-pointer hover:bg-slate-100 dark:hover:bg-[#151f33] transition-all tree-node-toggle" data-node="${subdivKey}">
+                            <div class="flex items-center gap-2">
+                              <span class="h-5 w-5 rounded-md bg-black/5 dark:bg-white/5 text-slate-400 flex items-center justify-center text-[9px] font-bold transition-transform duration-200 ${isSubdivExpanded ? 'rotate-90' : ''}">
+                                <i class="fa-solid fa-chevron-right"></i>
+                              </span>
+                              <span class="text-xs">📂</span>
+                              <span class="font-display font-bold text-xs text-slate-700 dark:text-slate-200">${subdiv}</span>
+                            </div>
+
+                            <span class="text-[10px] font-bold ${subdivPercent === 100 ? 'text-emerald-500' : 'text-slate-400'}">
+                              ${subdivDone}/${subdivTotal} Topics (${subdivPercent}%)
+                            </span>
+                          </div>
+
+                          <!-- SUBDIVISION CHILDREN (LEAF TOPICS) -->
+                          <div class="${isSubdivExpanded ? '' : 'hidden'} pl-4 border-l-2 border-slate-200/60 dark:border-slate-800/60 ml-3 flex flex-col gap-1.5 py-1">
+                            ${matchingTopics.map(t => {
+                              const key = `${subject}/${subdiv}/${t}`;
+                              const isChecked = !!progress[key];
+                              const calloutKey = `callout_${key}`;
+                              const isCalloutOpen = !!this.expandedCallouts[calloutKey];
+
+                              return `
+                                <!-- 📄 LEVEL 3 LEAF NODE: Topic -->
+                                <div class="flex flex-col gap-1.5">
+                                  <div class="flex items-center justify-between px-3 py-2 rounded-xl border border-transparent hover:border-slate-200 dark:hover:border-white/10 hover:bg-white/50 dark:hover:bg-white/5 transition-all">
+                                    <label class="flex items-center gap-2.5 cursor-pointer select-none flex-1 min-w-0">
+                                      <input type="checkbox" class="syllabus-topic-chk h-4 w-4 rounded-md border-slate-300 dark:border-white/10 text-[#10b981] focus:ring-[#10b981] bg-transparent cursor-pointer transition-all" data-key="${key}" ${isChecked ? 'checked' : ''}>
+                                      <span class="text-xs transition-colors duration-150 truncate ${isChecked ? 'text-slate-400 dark:text-slate-500 line-through font-normal' : 'text-slate-800 dark:text-slate-200 font-semibold'}">
+                                        ${t}
+                                      </span>
+                                    </label>
+
+                                    <div class="flex items-center gap-2 flex-shrink-0">
+                                      <span class="text-[9px] font-extrabold px-2 py-0.5 rounded-md ${isChecked ? 'bg-emerald-500/10 text-emerald-500 border border-emerald-500/20' : 'bg-slate-100 dark:bg-white/5 text-slate-400'}">
+                                        ${isChecked ? 'Mastered ✓' : 'To Study'}
+                                      </span>
+                                      
+                                      <button type="button" class="tree-callout-toggle p-1 text-[10px] text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors" data-callout="${calloutKey}" title="Toggle Notion Notes Callout">
+                                        <i class="fa-solid fa-file-lines"></i>
+                                      </button>
+                                    </div>
+                                  </div>
+
+                                  <!-- Notion Callout Box (Collapsible Note) -->
+                                  <div class="${isCalloutOpen ? '' : 'hidden'} ml-7 p-3.5 rounded-2xl bg-slate-100/90 dark:bg-[#0f172a] border border-slate-200 dark:border-white/10 text-xs text-slate-700 dark:text-slate-300 animate-fade-in">
+                                    <div class="flex items-start gap-2.5">
+                                      <span class="text-base flex-shrink-0">💡</span>
+                                      <div class="flex-1 min-w-0">
+                                        <p class="font-bold text-slate-900 dark:text-white text-xs mb-1">Notion Study Note: ${t}</p>
+                                        <p class="text-[11px] leading-relaxed text-slate-600 dark:text-slate-400 font-medium">
+                                          High-yield topic in <b>${subject} (${subdiv})</b>. Make sure to review standard practice questions and formula deck cards for <b>${t}</b>.
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              `;
+                            }).join('')}
+                          </div>
+                        </div>
                       `;
                     }).join('')}
                   </div>
@@ -603,18 +783,66 @@ export const Dashboard = {
         });
       }
     } else if (this.activeTab === 'syllabus') {
-      const subjBtns = document.querySelectorAll('.subject-select-btn');
-      subjBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          this.syllabusActiveSubject = btn.getAttribute('data-subject');
+      // Tree Expand/Collapse Node handlers
+      document.querySelectorAll('.tree-node-toggle').forEach(el => {
+        el.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const nodeKey = el.getAttribute('data-node');
+          this.expandedNodes[nodeKey] = !this.expandedNodes[nodeKey];
           this.refresh();
         });
       });
 
+      // Notion Callout Note Toggle handlers
+      document.querySelectorAll('.tree-callout-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const calloutKey = btn.getAttribute('data-callout');
+          this.expandedCallouts[calloutKey] = !this.expandedCallouts[calloutKey];
+          this.refresh();
+        });
+      });
+
+      // Expand All button
+      document.getElementById('tree-expand-all')?.addEventListener('click', () => {
+        this.expandedNodes['root'] = true;
+        Object.keys(SUBJECT_SYLLABUS).forEach(sub => {
+          this.expandedNodes[`subject_${sub}`] = true;
+          Object.keys(SUBJECT_SYLLABUS[sub]).forEach(subdiv => {
+            this.expandedNodes[`subdiv_${sub}_${subdiv}`] = true;
+          });
+        });
+        this.refresh();
+      });
+
+      // Collapse All button
+      document.getElementById('tree-collapse-all')?.addEventListener('click', () => {
+        this.expandedNodes = { 'root': true };
+        this.refresh();
+      });
+
+      // Live Tree Search input
+      const treeSearch = document.getElementById('tree-search-input');
+      if (treeSearch) {
+        treeSearch.addEventListener('input', (e) => {
+          const val = e.target.value;
+          const cursor = e.target.selectionStart;
+          this.treeSearchQuery = val;
+          this.refresh();
+          const newTreeSearch = document.getElementById('tree-search-input');
+          if (newTreeSearch) {
+            newTreeSearch.focus();
+            newTreeSearch.setSelectionRange(cursor, cursor);
+          }
+        });
+      }
+
+      // Leaf Topic Checkbox handler
       const progress = await db.getSyllabusProgress();
       const chks = document.querySelectorAll('.syllabus-topic-chk');
       chks.forEach(chk => {
-        chk.addEventListener('change', async () => {
+        chk.addEventListener('change', async (e) => {
+          e.stopPropagation();
           const key = chk.getAttribute('data-key');
           if (chk.checked) {
             progress[key] = true;
