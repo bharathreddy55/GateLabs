@@ -1,6 +1,7 @@
 import { auth } from './config/firebase';
 import { initTheme } from './utils/theme';
 import { showToast } from './utils/toast';
+import { initAccentPalette } from './utils/accentTheme';
 
 // Import Pages
 import { LandingPage } from './pages/LandingPage';
@@ -18,8 +19,9 @@ import { Layout } from './components/Layout';
 // Styles
 import './styles/index.css';
 
-// Initialize global theme
+// Initialize global theme & accent palette (apply saved colors before first paint)
 initTheme();
+initAccentPalette();
 
 // Route Configuration
 const routes = {

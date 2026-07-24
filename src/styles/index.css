@@ -2,68 +2,118 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ===========================
+   DYNAMIC ACCENT COLOR SYSTEM
+   Controlled via CSS Custom Properties set by JS theme picker.
+   Defaults to Midnight Emerald & Mint Teal.
+   =========================== */
+:root {
+  --accent-from: #10b981;
+  --accent-to: #14b8a6;
+  --accent-mid: #0d9488;
+  --accent-glow: rgba(16, 185, 129, 0.25);
+  --accent-soft: rgba(16, 185, 129, 0.12);
+  --accent-border: rgba(16, 185, 129, 0.25);
+  --accent-text: #10b981;
+}
+
 @layer base {
   html {
-    font-size: 100%;
+    font-size: 90%;
     scroll-behavior: smooth;
   }
   body {
-    @apply transition-colors duration-300 bg-[#f5f5f7] text-[#1d1d1f] dark:bg-[#000000] dark:text-[#f5f5f7] font-sans antialiased selection:bg-[#0071e3]/20 dark:selection:bg-[#2997ff]/30;
+    @apply transition-colors duration-300 bg-[#f4f6f8] text-[#1e293b] dark:bg-[#080c14] dark:text-[#f1f5f9] font-sans antialiased;
+    selection-color: var(--accent-text);
   }
 }
 
-/* Custom Apple Minimal Scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
-::-webkit-scrollbar-track {
-  @apply bg-transparent;
-}
-
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { @apply bg-transparent; }
 ::-webkit-scrollbar-thumb {
-  @apply bg-black/10 dark:bg-white/15 rounded-full hover:bg-black/20 dark:hover:bg-white/25 transition-colors;
+  background-color: var(--accent-from);
+  opacity: 0.3;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accent-to);
+  opacity: 0.6;
 }
 
-/* Apple-Inspired Translucent Glass Panels */
+/* Glass Panels */
 .glass-panel {
-  @apply bg-white/80 dark:bg-[#161618]/75 backdrop-blur-2xl border border-black/[0.05] dark:border-white/[0.08] shadow-sm hover:shadow-md transition-all duration-300;
+  @apply bg-white/85 dark:bg-[#0d1320]/80 backdrop-blur-2xl border border-slate-200/60 dark:border-white/[0.07] shadow-sm hover:shadow-md transition-all duration-300;
 }
-
 .glass-card {
-  @apply bg-white/60 dark:bg-[#1c1c1e]/60 backdrop-blur-xl border border-black/[0.04] dark:border-white/[0.06] shadow-sm hover:shadow-md transition-all duration-300;
+  @apply bg-white/70 dark:bg-[#121a2b]/70 backdrop-blur-xl border border-slate-200/50 dark:border-white/[0.05] shadow-sm hover:shadow-md transition-all duration-300;
 }
 
-/* Apple SF Input Controls */
+/* Dynamic Accent Input Focus */
 .glass-input {
-  @apply w-full px-4 py-3 rounded-2xl border border-black/10 dark:border-white/10 bg-white/70 dark:bg-[#1c1c1e]/70 focus:border-[#0071e3] dark:focus:border-[#2997ff] focus:outline-none focus:ring-4 focus:ring-[#0071e3]/15 dark:focus:ring-[#2997ff]/20 transition-all duration-200 text-sm font-medium;
+  @apply w-full px-4 py-2.5 rounded-2xl border border-slate-200 dark:border-white/10 bg-white/70 dark:bg-[#121a2b]/70 focus:outline-none transition-all duration-200 text-xs font-medium;
+  --tw-ring-color: var(--accent-glow);
+}
+.glass-input:focus {
+  border-color: var(--accent-from);
+  box-shadow: 0 0 0 3px var(--accent-glow);
 }
 
-/* Apple SF Accent Glow */
+/* Glow effect using dynamic accent */
 .glow-primary {
-  box-shadow: 0 10px 30px -10px rgba(0, 113, 227, 0.3);
+  box-shadow: 0 10px 30px -10px var(--accent-glow);
 }
 
-/* Apple Minimal Typography */
+/* Dynamic Accent Utility Classes - used inline via CSS vars */
+.btn-accent {
+  background: linear-gradient(135deg, var(--accent-from), var(--accent-to));
+  color: white;
+  box-shadow: 0 4px 14px -4px var(--accent-glow);
+  transition: all 0.2s;
+}
+.btn-accent:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+.btn-accent:active {
+  transform: scale(0.97);
+}
+
+.nav-active {
+  background: linear-gradient(135deg, var(--accent-from), var(--accent-to));
+  color: white;
+  box-shadow: 0 4px 12px -4px var(--accent-glow);
+}
+
+.accent-text { color: var(--accent-text); }
+.accent-border { border-color: var(--accent-border); }
+.accent-bg-soft { background-color: var(--accent-soft); }
+
+/* Progress Bar Dynamic */
+.progress-accent {
+  background: linear-gradient(90deg, var(--accent-from), var(--accent-to));
+}
+
+/* Badge Active Indicator */
+.streak-badge {
+  background-color: var(--accent-soft);
+  border-color: var(--accent-border);
+  color: var(--accent-text);
+}
+
+/* Typography */
 .text-apple-title {
-  @apply font-display font-extrabold tracking-tight text-slate-950 dark:text-white;
+  @apply font-display font-extrabold tracking-tight text-slate-900 dark:text-white;
 }
-
 .text-apple-sub {
-  @apply font-medium text-slate-500 dark:text-[#86868b];
+  @apply font-medium text-slate-500 dark:text-slate-400;
 }
 
-/* Micro-Animations & Page Transitions */
-.page-enter {
-  @apply animate-slide-up;
-}
+/* Page Transitions */
+.page-enter { @apply animate-slide-up; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
 
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-/* Prevent text overflow in all buttons */
+/* Prevent text overflow */
 button,
 .calc-btn,
 .dashboard-tab-btn,
@@ -76,9 +126,14 @@ button,
   overflow-wrap: break-word !important;
 }
 
-/* Custom Virtual Calculator Buttons */
+/* Calculator Buttons */
 .calc-btn {
-  @apply text-sm font-semibold p-3 rounded-xl transition-all duration-150 hover:scale-95 active:scale-90 select-none;
+  @apply text-xs font-semibold p-2.5 rounded-xl transition-all duration-150 hover:scale-95 active:scale-90 select-none;
+}
+
+/* Bento Cards */
+.bento-card {
+  @apply relative overflow-hidden rounded-3xl bg-white/80 dark:bg-[#0d1320]/80 backdrop-blur-2xl border border-slate-200/60 dark:border-white/[0.07] shadow-sm hover:shadow-lg transition-all duration-300;
 }
 
 /* Fullscreen Exam Mode */
@@ -86,37 +141,34 @@ body.fullscreen-exam {
   background-color: #ffffff !important;
   color: #000000 !important;
 }
-
 body.fullscreen-exam aside,
-body.fullscreen-exam header {
-  display: none !important;
-}
-
+body.fullscreen-exam header { display: none !important; }
 body.fullscreen-exam div.pl-64,
-body.fullscreen-exam div.pl-\[18rem\] {
-  padding-left: 0 !important;
-}
-
+body.fullscreen-exam div.pl-\[18rem\] { padding-left: 0 !important; }
 body.fullscreen-exam main {
-  padding: 1.5rem !important;
+  padding: 1.25rem !important;
   max-width: 100% !important;
   width: 100% !important;
   background-color: #ffffff !important;
 }
 
-/* Bento Cards Layout */
-.bento-card {
-  @apply relative overflow-hidden rounded-3xl bg-white/80 dark:bg-[#161618]/80 backdrop-blur-2xl border border-black/[0.05] dark:border-white/[0.08] shadow-sm hover:shadow-lg transition-all duration-300 hover:border-[#0071e3]/30 dark:hover:border-[#2997ff]/30;
-}
-
+/* Command Palette */
 .command-palette-backdrop {
-  @apply fixed inset-0 z-50 bg-black/40 dark:bg-black/70 backdrop-blur-md flex items-start justify-center pt-20 px-4 animate-fade-in;
+  @apply fixed inset-0 z-50 bg-slate-950/50 dark:bg-black/80 backdrop-blur-md flex items-start justify-center pt-20 px-4 animate-fade-in;
 }
-
 .command-palette-modal {
-  @apply w-full max-w-xl bg-white dark:bg-[#1c1c1e] border border-black/10 dark:border-white/10 rounded-3xl shadow-2xl overflow-hidden transform transition-all duration-200;
+  @apply w-full max-w-xl bg-white dark:bg-[#0d1320] border border-slate-200 dark:border-white/10 rounded-3xl shadow-2xl overflow-hidden transform transition-all duration-200;
+}
+.kbd-badge {
+  @apply inline-flex items-center px-2 py-0.5 text-[10px] font-mono font-semibold text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-[#162032] rounded-md border border-slate-200 dark:border-white/10;
 }
 
-.kbd-badge {
-  @apply inline-flex items-center px-2 py-0.5 text-[10px] font-mono font-semibold text-slate-500 dark:text-[#86868b] bg-slate-100 dark:bg-[#2c2c2e] rounded-md border border-black/5 dark:border-white/10;
+/* Color Theme Picker Swatch */
+.theme-swatch {
+  @apply h-8 w-8 rounded-full cursor-pointer border-2 border-transparent hover:scale-110 active:scale-95 transition-all duration-150 shadow-sm;
+}
+.theme-swatch.active {
+  border-color: white;
+  box-shadow: 0 0 0 2px #1e293b, 0 0 0 4px white;
+  transform: scale(1.15);
 }
