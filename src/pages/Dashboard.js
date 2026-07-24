@@ -325,32 +325,32 @@ export const Dashboard = {
   async renderSyllabusTab(progress) {
     const syllabus = SUBJECT_SYLLABUS;
 
-    // Map GATE subjects to Neetcode-style DAG flow levels & prerequisites
+    // Map GATE 2027 10 Sections to Neetcode-style DAG flow levels & prerequisites
     const dagLevels = [
-      // Level 0: Root Prerequisite
+      // Level 0: Section 1 Root Prerequisite
       [
-        { key: "Engineering Mathematics", title: "Engineering Mathematics", icon: "fa-calculator" }
+        { key: "Section 1: Engineering Mathematics", title: "Sec 1: Engineering Mathematics", icon: "fa-calculator" }
       ],
       // Level 1: Foundations
       [
-        { key: "Digital Logic", title: "Digital Logic", icon: "fa-microchip" },
-        { key: "Programming & Data Structures", title: "Programming & Data Structures", icon: "fa-code" }
+        { key: "Section 2: Digital Logic", title: "Sec 2: Digital Logic", icon: "fa-microchip" },
+        { key: "Section 4: Programming and Data Structures", title: "Sec 4: C Prog & Data Structures", icon: "fa-code" }
       ],
       // Level 2: Core Computer Science
       [
-        { key: "Computer Organization & Architecture (COA)", title: "COA & Architecture", icon: "fa-bolt" },
-        { key: "Algorithms", title: "Algorithms", icon: "fa-diagram-project" },
-        { key: "Theory of Computation", title: "Theory of Computation", icon: "fa-gears" }
+        { key: "Section 3: Computer Organization and Architecture", title: "Sec 3: COA Architecture", icon: "fa-bolt" },
+        { key: "Section 5: Algorithms", title: "Sec 5: Algorithms", icon: "fa-diagram-project" },
+        { key: "Section 6: Theory of Computation", title: "Sec 6: Theory of Computation", icon: "fa-gears" }
       ],
       // Level 3: Systems Convergence
       [
-        { key: "Operating Systems", title: "Operating Systems", icon: "fa-desktop" },
-        { key: "Databases", title: "Databases (DBMS)", icon: "fa-database" }
+        { key: "Section 8: Operating System", title: "Sec 8: Operating System", icon: "fa-desktop" },
+        { key: "Section 9: Databases", title: "Sec 9: Databases (DBMS)", icon: "fa-database" }
       ],
       // Level 4: Advanced Networks & Applications
       [
-        { key: "Compiler Design", title: "Compiler Design", icon: "fa-file-code" },
-        { key: "Computer Networks", title: "Computer Networks", icon: "fa-network-wired" }
+        { key: "Section 7: Compiler Design", title: "Sec 7: Compiler Design", icon: "fa-file-code" },
+        { key: "Section 10: Computer Networks", title: "Sec 10: Computer Networks", icon: "fa-network-wired" }
       ]
     ];
 

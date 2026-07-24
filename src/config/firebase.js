@@ -1149,156 +1149,199 @@ export const isMockMode = useMock;
 export { firebaseConfig };
 
 export const SUBJECT_SYLLABUS = {
-  "Engineering Mathematics": {
+  "Section 1: Engineering Mathematics": {
     "Discrete Mathematics": [
       "Propositional Logic",
-      "Predicate Logic",
+      "First Order Logic",
       "Sets",
       "Relations",
       "Functions",
       "Partial Orders",
       "Lattices",
+      "Monoids",
       "Groups",
-      "Graph Theory",
-      "Trees",
-      "Combinatorics",
+      "Graphs: Connectivity",
+      "Graphs: Matching",
+      "Graphs: Colouring",
+      "Combinatorics: Counting",
       "Recurrence Relations",
-      "Mathematical Induction"
+      "Generating Functions"
     ],
     "Linear Algebra": [
       "Matrices",
-      "Matrix Operations",
-      "Rank of Matrix",
       "Determinants",
-      "Inverse of Matrix",
-      "Systems of Linear Equations",
-      "Eigenvalues",
-      "Eigenvectors"
+      "System of Linear Equations",
+      "Eigenvalues and Eigenvectors",
+      "LU Decomposition"
     ],
     "Calculus": [
       "Limits",
-      "Continuity",
-      "Differentiability",
-      "Partial Derivatives",
-      "Maxima and Minima"
+      "Continuity and Differentiability",
+      "Maxima and Minima",
+      "Mean Value Theorem",
+      "Integration"
     ],
-    "Probability & Statistics": [
-      "Probability",
-      "Conditional Probability",
-      "Bayes Theorem",
+    "Probability and Statistics": [
       "Random Variables",
-      "Mean",
-      "Variance",
-      "Standard Deviation",
+      "Uniform Distribution",
+      "Normal Distribution",
+      "Exponential Distribution",
+      "Poisson Distribution",
       "Binomial Distribution",
-      "Normal Distribution"
+      "Mean, Median, Mode & Standard Deviation",
+      "Conditional Probability",
+      "Bayes Theorem"
     ]
   },
-  "Digital Logic": {
-    "Number Systems & Codes": ["Number Systems", "Binary Arithmetic"],
-    "Boolean Algebra": ["Boolean Algebra", "Logic Gates", "Canonical Forms", "Karnaugh Maps (K-Map)"],
-    "Combinational Circuits": ["Combinational Circuits", "Multiplexers", "Demultiplexers", "Encoders", "Decoders", "Adders", "Subtractors", "Comparators"],
-    "Sequential Circuits": ["Sequential Circuits", "Flip-Flops", "Registers", "Counters", "Finite State Machines (FSM)", "Logic Families"]
+  "Section 2: Digital Logic": {
+    "Boolean Algebra & Minimization": [
+      "Boolean Algebra",
+      "Algebraic Minimization",
+      "Karnaugh Map (K-Map)",
+      "Tabular Method (Quine-McCluskey)"
+    ],
+    "Combinational & Sequential Circuits": [
+      "Design of Combinational Circuits",
+      "Design of Sequential Circuits",
+      "Flip-Flops & Counters",
+      "Finite State Machines (FSM)"
+    ],
+    "Number Representation & Arithmetic": [
+      "Fixed Point Representation",
+      "Floating Point Representation",
+      "Binary Arithmetic"
+    ]
   },
-  "Computer Organization & Architecture (COA)": {
-    "Machine Instructions & ALU": ["Machine Instructions", "Instruction Formats", "Addressing Modes", "ALU", "Data Path", "Control Unit", "CPU Organization"],
-    "Pipelining": ["Pipelining", "Pipeline Hazards", "Instruction-Level Parallelism"],
-    "Memory Hierarchy": ["Memory Hierarchy", "Cache Memory", "Virtual Memory", "Main Memory", "Secondary Storage"],
-    "I/O & Performance": ["Interrupts", "DMA", "I/O Organization", "Performance Metrics"]
+  "Section 3: Computer Organization and Architecture": {
+    "Instruction Set & Control Unit": [
+      "Instruction Set",
+      "Addressing Modes",
+      "Design of ALU",
+      "Hardwired Control Unit",
+      "Microprogrammed Control Unit"
+    ],
+    "Memory Hierarchy & I/O Interface": [
+      "Memory Interfacing & Hierarchy",
+      "Performance Metrics",
+      "Cache Memory Mapping",
+      "I/O Interface: Interrupts",
+      "I/O Interface: DMA"
+    ],
+    "Pipelining": [
+      "Instruction Pipelining",
+      "Pipeline Hazards"
+    ]
   },
-  "Programming & Data Structures": {
+  "Section 4: Programming and Data Structures": {
     "Programming": [
-      "C Programming Basics",
-      "Pointers",
-      "Arrays",
-      "Strings",
-      "Structures",
-      "Unions",
-      "Dynamic Memory Allocation",
-      "Recursion",
-      "File Handling"
+      "Programming in C",
+      "Recursion"
     ],
     "Data Structures": [
       "Arrays",
-      "Linked Lists",
       "Stacks",
       "Queues",
-      "Hash Tables",
+      "Linked Lists",
       "Trees",
-      "Binary Trees",
-      "Binary Search Trees",
-      "AVL Trees",
-      "Heaps",
-      "Tries",
-      "Graph Representation",
-      "Disjoint Sets"
+      "Binary Search Trees (BST)",
+      "Binary Heaps",
+      "Graphs"
     ]
   },
-  "Algorithms": {
-    "Analysis & Design Techniques": ["Asymptotic Analysis", "Time Complexity", "Space Complexity", "Recurrence Relations", "Divide and Conquer", "Greedy Algorithms", "Dynamic Programming", "Backtracking", "Branch and Bound"],
-    "Graph Algorithms": ["Graph Algorithms", "BFS", "DFS", "Topological Sort", "Dijkstra", "Bellman-Ford", "Floyd-Warshall", "Prim", "Kruskal"],
-    "String Matching & Complexity": ["String Matching", "Pattern Matching", "NP-Complete"]
-  },
-  "Theory of Computation (TOC)": {
-    "Automata & Languages": ["Languages", "Alphabets", "Strings", "Regular Expressions", "Finite Automata", "DFA", "NFA", "ϵ-NFA", "Regular Languages", "Pumping Lemma"],
-    "Context-Free Languages": ["Context-Free Grammar (CFG)", "Pushdown Automata (PDA)", "Parse Trees", "Ambiguity"],
-    "Turing Machines & Decidability": ["Turing Machines", "Recursive Languages", "Recursively Enumerable Languages", "Decidability", "Undecidability", "Church-Turing Thesis"]
-  },
-  "Compiler Design": {
-    "Lexical & Syntax Analysis": ["Lexical Analysis", "Tokens", "Regular Expressions", "Finite Automata", "Syntax Analysis", "Parsing", "LL Parser", "LR Parser", "SLR", "CLR", "LALR"],
-    "Translation & Run-time": ["Syntax Directed Translation", "Intermediate Code Generation", "Runtime Environment", "Symbol Table"],
-    "Optimization & Generation": ["Code Optimization", "Code Generation"]
-  },
-  "Operating Systems": {
-    "Processes & Scheduling": ["Operating System Functions", "Processes", "Threads", "CPU Scheduling", "Process Synchronization", "Semaphores", "Monitors", "Deadlocks"],
-    "Memory Management": ["Memory Management", "Paging", "Segmentation", "Virtual Memory"],
-    "Storage & Protection": ["File Systems", "Disk Scheduling", "I/O Systems", "Protection", "Security"]
-  },
-  "Databases (DBMS)": {
-    "Database Design": ["ER Model", "Relational Model", "Relational Algebra", "Relational Calculus", "SQL", "Integrity Constraints"],
-    "Database Tuning": ["Functional Dependencies", "Normalization"],
-    "Transaction & Recovery": ["Transactions", "ACID Properties", "Concurrency Control", "Locking Protocols", "Timestamp Protocol", "Recovery"],
-    "File Structures": ["Indexing", "B+ Trees", "Hashing"]
-  },
-  "Computer Networks (CN)": {
-    "Foundation & Physical/Link Layer": ["OSI Model", "TCP/IP Model", "Physical Layer", "Data Link Layer", "MAC Protocols", "Error Detection", "Error Correction", "Flow Control"],
-    "Network Layer": ["Network Layer", "IP Addressing", "Subnetting", "CIDR", "Routing Algorithms", "Distance Vector Routing", "Link State Routing"],
-    "Transport & Application Layer": ["Transport Layer", "UDP", "TCP", "Congestion Control", "Application Layer", "DNS", "HTTP", "FTP", "SMTP", "DHCP", "Network Security Basics"]
-  },
-  "General Aptitude": {
-    "Verbal Ability": [
-      "Grammar",
-      "Vocabulary",
-      "Reading Comprehension",
-      "Sentence Completion",
-      "Para Jumbles",
-      "Verbal Analogies",
-      "Critical Reasoning"
+  "Section 5: Algorithms": {
+    "Analysis & Searching/Sorting": [
+      "Searching",
+      "Sorting",
+      "Hashing",
+      "Asymptotic Worst Case Time & Space Complexity"
     ],
-    "Quantitative Aptitude": [
-      "Percentages",
-      "Profit & Loss",
-      "Ratio & Proportion",
-      "Time & Work",
-      "Time, Speed & Distance",
-      "Simple Interest",
-      "Compound Interest",
-      "Averages",
-      "Mixtures",
-      "Probability",
-      "Permutation & Combination",
-      "Geometry",
-      "Mensuration",
-      "Data Interpretation"
+    "Algorithm Design Techniques": [
+      "Greedy Algorithms",
+      "Dynamic Programming",
+      "Divide-and-Conquer"
     ],
-    "Analytical Aptitude": [
-      "Logical Reasoning",
-      "Blood Relations",
-      "Coding-Decoding",
-      "Directions",
-      "Series",
-      "Puzzles",
-      "Syllogisms"
+    "Graph Algorithms": [
+      "Graph Traversals (BFS/DFS)",
+      "Minimum Spanning Trees (Kruskal/Prim)",
+      "Shortest Paths (Dijkstra/Bellman-Ford/Floyd)"
+    ]
+  },
+  "Section 6: Theory of Computation": {
+    "Automata & Regular Languages": [
+      "Regular Expressions & Finite Automata",
+      "Regular Languages",
+      "Pumping Lemma for Regular Languages"
+    ],
+    "Context-Free & Turing Machines": [
+      "Context-Free Grammars (CFG)",
+      "Push-Down Automata (PDA)",
+      "Context-Free Languages",
+      "Pumping Lemma for CFL",
+      "Turing Machines & Undecidability"
+    ]
+  },
+  "Section 7: Compiler Design": {
+    "Analysis & Translation": [
+      "Lexical Analysis",
+      "Parsing (LL/LR)",
+      "Syntax-Directed Translation",
+      "Runtime Environments",
+      "Intermediate Code Generation"
+    ],
+    "Optimization & Data Flow": [
+      "Local Optimisation",
+      "Data Flow Analyses",
+      "Constant Propagation",
+      "Liveness Analysis",
+      "Common Subexpression Elimination"
+    ]
+  },
+  "Section 8: Operating System": {
+    "Process Management & Concurrency": [
+      "System Calls",
+      "Processes & Threads",
+      "Inter-Process Communication (IPC)",
+      "Concurrency & Synchronization",
+      "Deadlock"
+    ],
+    "Scheduling & Memory Management": [
+      "CPU & I/O Scheduling",
+      "Memory Management",
+      "Virtual Memory",
+      "File Systems"
+    ]
+  },
+  "Section 9: Databases": {
+    "Data Models & Relational Query": [
+      "ER-Model",
+      "Relational Model",
+      "Relational Algebra",
+      "Tuple Calculus",
+      "SQL",
+      "Integrity Constraints",
+      "Normal Forms (1NF, 2NF, 3NF, BCNF)"
+    ],
+    "Indexing & Transactions": [
+      "File Organization",
+      "Indexing: B and B+ Trees",
+      "Transactions & Concurrency Control"
+    ]
+  },
+  "Section 10: Computer Networks": {
+    "Layering & Data Link Layer": [
+      "Principles of Layering",
+      "Basics of Switching (Circuit, Packet, Virtual Circuit)",
+      "Performance Metrics",
+      "Data Link Layer: Error Detection",
+      "Medium Access Control (MAC)",
+      "Ethernet"
+    ],
+    "Routing, Transport & Application Layer": [
+      "Distance Vector & Link State Routing",
+      "IPv4: Fragmentation, CIDR Notation, NAT",
+      "TCP: Flow Control & Congestion Control",
+      "Socket API",
+      "DNS and HTTP"
     ]
   }
 };
