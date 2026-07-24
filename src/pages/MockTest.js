@@ -366,30 +366,101 @@ export const MockTest = {
           </div>
 
           <!-- Right Sidebar (Monospace Timer / Palette) -->
-          <div class="flex flex-col gap-6">
+          <div class="flex flex-col gap-5">
             <!-- Unstyled Monospace Timer (Nothing Style) -->
-            <div class="border border-slate-200 p-6 rounded-2xl flex flex-col items-center justify-center text-center bg-white">
+            <div class="border border-slate-200 p-5 rounded-2xl flex flex-col items-center justify-center text-center bg-white shadow-sm">
               <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Time Remaining</p>
-              <h3 id="sim-timer" class="font-mono text-xl font-medium text-slate-800 mt-2">${formatTimer(this.timeLeft)}</h3>
+              <h3 id="sim-timer" class="font-mono text-2xl font-bold text-slate-800 mt-1">${formatTimer(this.timeLeft)}</h3>
             </div>
 
-            <!-- Color Palette Panel -->
-            <div class="border border-slate-200 p-6 rounded-2xl flex-1 flex flex-col gap-4 bg-white">
-              <h4 class="font-display font-bold text-sm text-slate-900 border-b border-slate-100 pb-2">Question Palette</h4>
-              
-              <div class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-4 gap-2.5 overflow-y-auto max-h-[14rem]">
-                ${this.questions.map((qi, idx) => {
-                  const btnClass = this.getPaletteBtnClassString(qi.id, idx);
-                  return `
-                    <button class="palette-btn-select ${btnClass}" data-pindex="${idx}">
-                      ${idx + 1}
-                    </button>
-                  `;
-                }).join('')}
+            <!-- Color Palette Panel (Clean Layout - Zero Blank Whitespace) -->
+            <div class="border border-slate-200 p-5 rounded-2xl flex-1 flex flex-col justify-between bg-white shadow-sm">
+              <div>
+                <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-3">
+                  <h4 class="font-display font-bold text-sm text-slate-900">Question Palette</h4>
+                  <span class="text-[10px] font-bold text-slate-400">${this.questions.length} Qs</span>
+                </div>
+
+                <!-- Status Summary Legend Grid -->
+                <div class="grid grid-cols-2 gap-2 mb-4 text-[10px] font-bold">
+                  <div class="flex items-center justify-between px-2.5 py-1.5 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-200/50">
+                    <span class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-emerald-500"></span> Answered</span>
+                    <span class="font-mono font-extrabold text-xs">${statusCounts['answered'] + statusCounts['marked-answered']}</span>
+                  </div>
+                  <div class="flex items-center justify-between px-2.5 py-1.5 rounded-lg bg-rose-50 text-rose-700 border border-rose-200/50">
+                    <span class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-rose-500"></span> Not Ans.</span>
+                    <span class="font-mono font-extrabold text-xs">${statusCounts['not-answered']}</span>
+                  </div>
+                  <div class="flex items-center justify-between px-2.5 py-1.5 rounded-lg bg-purple-50 text-purple-700 border border-purple-200/50">
+                    <span class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-purple-500"></span> Marked</span>
+                    <span class="font-mono font-extrabold text-xs">${statusCounts['marked'] + statusCounts['marked-answered']}</span>
+                  </div>
+                  <div class="flex items-center justify-between px-2.5 py-1.5 rounded-lg bg-slate-100 text-slate-600 border border-slate-200/60">
+                    <span class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-slate-400"></span> Not Visited</span>
+                    <span class="font-mono font-extrabold text-xs">${statusCounts['not-visited']}</span>
+                  </div>
+                </div>
+
+                <!-- Clean Flex Question Buttons Grid -->
+                <div class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-4 gap-2 overflow-y-auto max-h-[18rem] pr-1">
+                  ${this.questions.map((qi, idx) => {
+                    const btnClass = this.getPaletteBtnClassString(qi.id, idx);
+                    return `
+                      <button class="palette-btn-select ${btnClass}" data-pindex="${idx}">
+                        ${idx + 1}
+                      </button>
+                    `;
+                  }).join('')}
+                </div>
               </div>
 
-              <button id="btn-submit-exam" class="w-full mt-auto py-3 rounded-xl bg-rose-600 hover:bg-rose-500 text-white text-xs font-bold shadow-md active:scale-95 transition-all">
-                Submit Test
+              <!-- Submit Button at bottom -->
+              <button id="btn-submit-exam" class="w-full mt-5 py-3 rounded-xl bg-rose-600 hover:bg-rose-500 text-white text-xs font-bold shadow-md active:scale-95 transition-all flex items-center justify-center gap-2 select-none">
+                <i class="fa-solid fa-paper-plane"></i> Submit Test
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Webpage Confirmation Modal on Submit -->
+        <div id="exam-submit-confirm-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/60 backdrop-blur-md hidden px-4 animate-fade-in">
+          <div class="w-full max-w-md bg-white rounded-3xl p-7 shadow-2xl border border-slate-200 text-slate-900 flex flex-col gap-5">
+            <div class="flex items-center gap-3">
+              <div class="h-11 w-11 rounded-2xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-xl flex-shrink-0">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+              </div>
+              <div>
+                <h3 class="font-display font-extrabold text-lg tracking-tight">Submit Test Confirmation</h3>
+                <p class="text-xs text-slate-500 font-medium">Are you sure you want to end your test?</p>
+              </div>
+            </div>
+
+            <!-- Stats Summary Box -->
+            <div class="grid grid-cols-3 gap-2.5 bg-slate-50 p-4 rounded-2xl border border-slate-100 text-center">
+              <div>
+                <p class="text-[10px] font-bold text-slate-400 uppercase">Answered</p>
+                <p class="font-display font-extrabold text-lg text-emerald-600 mt-0.5">${statusCounts['answered'] + statusCounts['marked-answered']}</p>
+              </div>
+              <div>
+                <p class="text-[10px] font-bold text-slate-400 uppercase">Unanswered</p>
+                <p class="font-display font-extrabold text-lg text-rose-600 mt-0.5">${statusCounts['not-answered'] + statusCounts['not-visited']}</p>
+              </div>
+              <div>
+                <p class="text-[10px] font-bold text-slate-400 uppercase">Marked</p>
+                <p class="font-display font-extrabold text-lg text-purple-600 mt-0.5">${statusCounts['marked'] + statusCounts['marked-answered']}</p>
+              </div>
+            </div>
+
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Once submitted, your answers will be evaluated and added to your <b>Mistake Analysis & Analytics</b>. You cannot change your responses after submitting.
+            </p>
+
+            <div class="flex items-center justify-end gap-3 pt-2">
+              <button id="cancel-submit-modal-btn" type="button" class="px-5 py-2.5 rounded-2xl border border-slate-200 text-slate-600 font-bold text-xs hover:bg-slate-100 transition-all select-none">
+                Resume Test
+              </button>
+              <button id="confirm-submit-modal-btn" type="button" class="px-6 py-2.5 rounded-2xl bg-rose-600 text-white font-bold text-xs hover:bg-rose-500 shadow-md active:scale-95 transition-all select-none flex items-center gap-1.5">
+                <i class="fa-solid fa-check"></i> Submit Exam Now
               </button>
             </div>
           </div>
@@ -701,10 +772,25 @@ export const MockTest = {
       }
     });
 
+    const submitModal = document.getElementById('exam-submit-confirm-modal');
+    const cancelSubmitBtn = document.getElementById('cancel-submit-modal-btn');
+    const confirmSubmitBtn = document.getElementById('confirm-submit-modal-btn');
+
     btnSubmit?.addEventListener('click', () => {
-      if (confirm("Are you sure you want to submit the exam?")) {
-        this.submitExam();
-      }
+      submitModal?.classList.remove('hidden');
+    });
+
+    cancelSubmitBtn?.addEventListener('click', () => {
+      submitModal?.classList.add('hidden');
+    });
+
+    confirmSubmitBtn?.addEventListener('click', () => {
+      submitModal?.classList.add('hidden');
+      this.submitExam();
+    });
+
+    submitModal?.addEventListener('click', (e) => {
+      if (e.target === submitModal) submitModal.classList.add('hidden');
     });
 
     // Palette navigation

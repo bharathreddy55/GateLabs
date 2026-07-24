@@ -175,6 +175,9 @@ export const Formulas = {
   },
 
   init() {
+    // Ensure page scrolls to top when landing on Formulas
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
     // Subject filter click handlers
     document.querySelectorAll('.formula-sub-pill').forEach(btn => {
       btn.addEventListener('click', () => {
@@ -183,19 +186,35 @@ export const Formulas = {
       });
     });
 
-    // Search input handler
+    // Search input handler - maintains focus & cursor position
     const searchInput = document.getElementById('formula-search');
-    searchInput?.addEventListener('input', (e) => {
-      this.searchQuery = e.target.value;
-      this.refresh();
-    });
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const val = e.target.value;
+        const cursor = e.target.selectionStart;
+        this.searchQuery = val;
+        this.refresh();
+        const newSearchInput = document.getElementById('formula-search');
+        if (newSearchInput) {
+          newSearchInput.focus();
+          newSearchInput.setSelectionRange(cursor, cursor);
+        }
+      });
+    }
 
-    // Flashcard 3D flip click handler
+    // Flashcard 3D flip click handler - toggles CSS class directly for 60fps 3D flip animation
     document.querySelectorAll('[data-cardid]').forEach(cardDom => {
       cardDom.addEventListener('click', () => {
         const id = cardDom.getAttribute('data-cardid');
         this.flippedCards[id] = !this.flippedCards[id];
-        this.refresh();
+        const innerFlip = cardDom.querySelector('.transform-style-3d');
+        if (innerFlip) {
+          if (this.flippedCards[id]) {
+            innerFlip.classList.add('rotate-y-180');
+          } else {
+            innerFlip.classList.remove('rotate-y-180');
+          }
+        }
       });
     });
   },
