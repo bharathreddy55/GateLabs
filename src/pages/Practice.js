@@ -755,24 +755,35 @@ export const Practice = {
 
   async processPdfBuffer(buffer, filename) {
     try {
-      this.updateStatus('parsing', 40, "Extracting text using PDF.js library...");
+      this.updateStatus('parsing', 20, "Extracting text using PDF.js library...");
       const pdf = await window.pdfjsLib.getDocument({ data: buffer }).promise;
       let text = '';
-      
-      const numPages = Math.min(15, pdf.numPages); // Cap parsing to first 15 pages for local storage efficiency
-      for (let i = 1; i <= numPages; i++) {
+
+      // Parse ALL pages — no artificial cap
+      const totalPages = pdf.numPages;
+      for (let i = 1; i <= totalPages; i++) {
         const page = await pdf.getPage(i);
         const textContent = await page.getTextContent();
-        const pageText = textContent.items.map(item => item.str).join(' ');
+        // Preserve line breaks by joining items with newlines when Y position changes significantly
+        let lastY = null;
+        let pageText = '';
+        for (const item of textContent.items) {
+          const y = item.transform ? item.transform[5] : null;
+          if (lastY !== null && y !== null && Math.abs(y - lastY) > 5) {
+            pageText += '\n';
+          }
+          pageText += item.str + ' ';
+          lastY = y;
+        }
         text += pageText + '\n';
-        
-        const prog = 40 + Math.round((i / numPages) * 20);
-        this.updateStatus('parsing', prog, `Extracted page ${i}/${numPages}...`);
+
+        const prog = 20 + Math.round((i / totalPages) * 35);
+        this.updateStatus('parsing', prog, `Extracted page ${i}/${totalPages}...`);
       }
 
       this.extractedText = text;
-      
-      // Proceed to Ingest/Generate questions from the text
+
+      // Proceed to ingest/generate questions from the text
       await this.runAiGenerator(text, false);
 
     } catch (err) {
@@ -783,10 +794,9 @@ export const Practice = {
 
   async runAiGenerator(text, generateMore = false) {
     const apiKey = localStorage.getItem('gemini_api_key');
-    
+
     if (!apiKey) {
       this.updateStatus('generating', 80, "Executing local rule-based regex fallback parser...");
-      // Execute local parser fallback
       setTimeout(() => {
         const fallbackQs = this.localRegexParse(text);
         this.parsedQuestions = fallbackQs;
@@ -797,83 +807,149 @@ export const Practice = {
       return;
     }
 
-    this.updateStatus('generating', 75, generateMore ? "AI generating new similar questions..." : "Gemini AI extracting and structuring questions...");
-    
-    try {
-      const systemPrompt = `You are a professional GATE computer science instructor.
-You are given text extracted from a study guide or past exam.
-Perform the following:
-1. Identify any multiple-choice questions (MCQs) in the text and extract them exactly.
-2. ${generateMore ? 'Generate 3 NEW, high-quality, similar practice questions based on the key topics in the text.' : 'If there are fewer than 3 questions in the text, generate similar NEW high-quality GATE questions to output a list of 3-5 questions total.'}
-3. For each question, construct a valid JSON object matching this schema:
+    this.updateStatus('generating', 60, generateMore ? "AI generating new similar questions..." : "Gemini AI extracting ALL questions from PDF...");
+
+    // ── Chunking strategy ──────────────────────────────────────────────
+    // Gemini 1.5 Flash can handle ~30k tokens per request.
+    // We use 20,000 char chunks (≈ 15k tokens) with 500 char overlap
+    // so questions split across chunk boundaries are still captured.
+    const CHUNK_SIZE = 20000;
+    const OVERLAP    = 500;
+    const chunks = [];
+
+    if (generateMore || text.length <= CHUNK_SIZE) {
+      chunks.push(text);
+    } else {
+      let pos = 0;
+      while (pos < text.length) {
+        chunks.push(text.substring(pos, pos + CHUNK_SIZE));
+        pos += CHUNK_SIZE - OVERLAP;
+      }
+    }
+
+    const systemPromptExtract = `You are a professional GATE computer science exam question extractor.
+You are given a segment of text extracted from a PDF (study guide, past exam, or notes).
+
+Your task:
+1. Extract EVERY multiple-choice question (MCQ) present in this text segment. Do NOT skip any.
+2. For questions where options are labelled (A) (B) (C) (D) or 1 2 3 4, extract them as the options array.
+3. If the correct answer is indicated (e.g. "Answer: B" or "Ans: 2"), use it as correctAnswer (0-indexed integer).
+4. If the correct answer is NOT given, set correctAnswer to 0 as a placeholder.
+5. If no complete MCQ is found in this segment, return an empty array [].
+
+Return ONLY a valid JSON array with this exact schema — no markdown, no explanation:
 [
   {
     "subject": "Operating Systems",
     "topic": "Deadlocks",
     "difficulty": "Medium",
-    "marks": 2,
+    "marks": 1,
+    "year": 2024,
+    "question": "Full question text here",
+    "options": ["Option A text", "Option B text", "Option C text", "Option D text"],
+    "correctAnswer": 0,
+    "explanation": "Brief explanation or leave empty string"
+  }
+]`;
+
+    const systemPromptGenerate = `You are a professional GATE computer science instructor.
+Based on the topics and concepts in the provided text, generate as many high-quality NEW GATE-style MCQ practice questions as possible (aim for at least 10-20).
+Return ONLY a valid JSON array — no markdown:
+[
+  {
+    "subject": "Operating Systems",
+    "topic": "Deadlocks",
+    "difficulty": "Medium",
+    "marks": 1,
     "year": 2025,
-    "question": "Question text here",
-    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "question": "Question text",
+    "options": ["A", "B", "C", "D"],
     "correctAnswer": 0,
     "explanation": "Step-by-step reasoning"
   }
-]
-Return ONLY a valid JSON array. Do not wrap in markdown code blocks.`;
+]`;
 
-      const reqPayload = {
-        model: 'gemini-1.5-flash',
-        contents: [{
-          role: 'user',
-          parts: [
-            { text: systemPrompt },
-            { text: "SOURCE TEXT CONTEXT:\n" + text.substring(0, 15000) }
-          ]
-        }]
-      };
+    const systemPrompt = generateMore ? systemPromptGenerate : systemPromptExtract;
 
-      const localKey = localStorage.getItem('gemini_api_key');
-      let response;
+    const localKey = apiKey;
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${localKey}`;
 
-      if (localKey) {
-        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${localKey}`;
-        response = await fetch(url, {
+    let allQuestions = [];
+
+    try {
+      for (let ci = 0; ci < chunks.length; ci++) {
+        const chunkLabel = chunks.length > 1 ? ` (chunk ${ci + 1}/${chunks.length})` : '';
+        this.updateStatus('generating',
+          60 + Math.round((ci / chunks.length) * 35),
+          `Gemini extracting questions${chunkLabel}...`);
+
+        const reqPayload = {
+          contents: [{
+            role: 'user',
+            parts: [
+              { text: systemPrompt },
+              { text: `PDF TEXT SEGMENT${chunkLabel}:\n\n${chunks[ci]}` }
+            ]
+          }],
+          generationConfig: {
+            temperature: 0.2,
+            maxOutputTokens: 8192
+          }
+        };
+
+        const response = await fetch(url, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(reqPayload)
         });
-      } else {
-        response = await fetch('/api/gemini', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(reqPayload)
-        });
+
+        if (!response.ok) {
+          console.warn(`Gemini chunk ${ci + 1} returned ${response.status} — skipping`);
+          continue;
+        }
+
+        const resData = await response.json();
+        const replyText = resData.candidates?.[0]?.content?.parts?.[0]?.text;
+        if (!replyText) continue;
+
+        // Strip accidental markdown code fences
+        const cleaned = replyText.trim().replace(/^```json\s*/i, '').replace(/```\s*$/i, '').trim();
+
+        try {
+          const list = JSON.parse(cleaned);
+          if (Array.isArray(list)) {
+            allQuestions.push(...list);
+          }
+        } catch (parseErr) {
+          console.warn(`Chunk ${ci + 1} JSON parse failed:`, parseErr.message);
+        }
       }
 
-      if (!response.ok) {
-        throw new Error(`Gemini API returned code ${response.status}`);
+      // Deduplicate by question text
+      const seen = new Set();
+      allQuestions = allQuestions.filter(q => {
+        const key = (q.question || '').trim().substring(0, 80);
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      });
+
+      if (allQuestions.length === 0) {
+        throw new Error("No questions could be extracted. The PDF may not contain MCQs or the text is unreadable.");
       }
 
-      const resData = await response.json();
-      const replyText = resData.candidates?.[0]?.content?.parts?.[0]?.text;
-      if (!replyText) {
-        throw new Error("Empty response from AI engine.");
-      }
-
-      const list = JSON.parse(replyText.trim());
-      if (!Array.isArray(list)) {
-        throw new Error("AI output was not structured as an array.");
-      }
-
-      this.parsedQuestions = list;
-      showToast(generateMore ? "AI generated 3 new questions!" : `AI extracted ${list.length} questions successfully!`, "success");
+      this.parsedQuestions = allQuestions;
+      showToast(generateMore
+        ? `AI generated ${allQuestions.length} new questions!`
+        : `Extracted ${allQuestions.length} questions from PDF ✓`,
+        "success");
       this.updateStatus('idle', 0, '');
       this.refresh();
 
     } catch (err) {
       console.error("AI parse failed:", err);
       showToast(`AI extraction failed: ${err.message}. Falling back to rule-based parser.`, "error");
-      
+
       // Fallback
       const fallbackQs = this.localRegexParse(text);
       this.parsedQuestions = fallbackQs;
@@ -907,22 +983,21 @@ Return ONLY a valid JSON array. Do not wrap in markdown code blocks.`;
       topic = "Cache Pipelining";
     }
 
-    // Logic-driven question extraction:
-    // Find segments in the text ending with '?'
-    const questionRegex = /([^.!?\n]{20,250}\?)/g;
+    // Extract ALL question-ending sentences (no cap)
+    const questionRegex = /([^.!?\n]{20,300}\?)/g;
     const matches = [];
     let match;
-    while ((match = questionRegex.exec(text)) !== null && matches.length < 3) {
+    while ((match = questionRegex.exec(text)) !== null) {
       const qText = match[1].trim();
       if (qText && !matches.includes(qText)) {
         matches.push(qText);
       }
     }
 
-    // If we couldn't find questions ending in '?', let's extract sentences containing key terms
+    // If we couldn't find questions ending in '?', extract sentences containing key terms
     if (matches.length < 2) {
-      const keySentenceRegex = /([^.!?\n]{30,200}\b(complexity|scheduling|paging|protocol|query|regular|matrix|cache)\b[^.!?\n]*[.!?])/gi;
-      while ((match = keySentenceRegex.exec(text)) !== null && matches.length < 3) {
+      const keySentenceRegex = /([^.!?\n]{30,200}\b(complexity|scheduling|paging|protocol|query|regular|matrix|cache|deadlock|semaphore|algorithm|grammar|automata)\b[^.!?\n]*[.!?])/gi;
+      while ((match = keySentenceRegex.exec(text)) !== null) {
         const qText = match[1].trim() + " What is the correct interpretation of this?";
         if (qText && !matches.includes(qText)) {
           matches.push(qText);
