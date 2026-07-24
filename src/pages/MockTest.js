@@ -151,7 +151,7 @@ export const MockTest = {
             </div>
           </div>
 
-          <button type="submit" class="w-full mt-4 py-3.5 rounded-xl bg-gradient-to-r from-primary-600 to-indigo-650 hover:from-primary-500 hover:to-indigo-550 text-white font-bold text-sm shadow-lg shadow-primary-500/25 active:scale-98 hover:scale-[1.01] transition-all">
+          <button type="submit" class="w-full mt-4 py-3.5 rounded-xl btn-accent text-white font-bold text-sm active:scale-98 hover:scale-[1.01] transition-all">
             Generate Mock Test
           </button>
         </form>
@@ -194,7 +194,7 @@ export const MockTest = {
             <p class="text-[10px] text-slate-405 mt-0.5 font-semibold">Equivalent to <span id="clock-duration-hours">2.0</span> hours</p>
           </div>
 
-          <button id="confirm-clock-duration" type="button" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-primary-600 to-indigo-650 hover:from-primary-500 hover:to-indigo-550 text-white font-bold text-xs shadow-lg active:scale-95 transition-all">
+          <button id="confirm-clock-duration" type="button" class="w-full py-3.5 rounded-xl btn-accent text-white font-bold text-xs shadow-lg active:scale-95 transition-all">
             Confirm Duration
           </button>
         </div>
@@ -358,7 +358,7 @@ export const MockTest = {
                 <button id="btn-prev" class="px-4 py-2.5 rounded-lg border border-slate-200 text-slate-600 text-xs font-bold hover:bg-slate-100 active:scale-95 transition-all">
                   Previous
                 </button>
-                <button id="btn-save-next" class="px-5 py-2.5 rounded-lg bg-primary-600 hover:bg-primary-500 text-white text-xs font-bold shadow-md active:scale-95 transition-all">
+                <button id="btn-save-next" class="px-5 py-2.5 rounded-lg btn-accent text-white text-xs font-bold shadow-md active:scale-95 transition-all">
                   Save & Next
                 </button>
               </div>

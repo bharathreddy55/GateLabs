@@ -111,7 +111,7 @@ export const Formulas = {
         <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1">
           ${subjects.map(s => `
             <button class="formula-sub-pill flex-shrink-0 px-4 py-2 rounded-2xl text-xs font-bold transition-all ${
-              this.activeSubject === s ? 'bg-primary-600 text-white shadow-md shadow-primary-500/25 scale-105' : 'glass-card text-slate-600 dark:text-slate-400 hover:text-primary-500'
+              this.activeSubject === s ? 'btn-accent scale-105' : 'glass-card text-slate-600 dark:text-slate-400 hover:accent-text'
             }" data-sub="${s}">
               ${s}
             </button>

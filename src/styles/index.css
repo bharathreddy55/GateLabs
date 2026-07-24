@@ -15,7 +15,75 @@
   --accent-soft: rgba(16, 185, 129, 0.12);
   --accent-border: rgba(16, 185, 129, 0.25);
   --accent-text: #10b981;
+
+  /* ── Legacy Tailwind primary-* bridge ──
+     Maps all old primary-500/600 color usages to the dynamic accent system.
+     This means all buttons, borders, text, etc. that used primary-* will
+     automatically follow the user's chosen theme without changing every JS file. */
+  --tw-color-primary-50:  rgba(16,185,129,0.06);
+  --tw-color-primary-100: rgba(16,185,129,0.12);
+  --tw-color-primary-200: rgba(16,185,129,0.20);
+  --tw-color-primary-300: rgba(16,185,129,0.40);
+  --tw-color-primary-400: rgba(16,185,129,0.65);
+  --tw-color-primary-500: var(--accent-from);
+  --tw-color-primary-600: var(--accent-from);
+  --tw-color-primary-700: var(--accent-mid);
 }
+
+@layer base {
+  /* Remap all primary-* Tailwind utility colour references to accent vars */
+
+  /* Text */
+  .text-primary-300 { color: color-mix(in srgb, var(--accent-from) 60%, white) !important; }
+  .text-primary-400 { color: color-mix(in srgb, var(--accent-from) 80%, white) !important; }
+  .text-primary-500 { color: var(--accent-from) !important; }
+  .text-primary-600 { color: var(--accent-from) !important; }
+  .text-primary-700 { color: var(--accent-mid) !important; }
+  .dark .text-primary-300 { color: color-mix(in srgb, var(--accent-from) 70%, white) !important; }
+  .dark .text-primary-400 { color: color-mix(in srgb, var(--accent-from) 85%, white) !important; }
+
+  /* Background */
+  .bg-primary-50  { background-color: var(--accent-soft) !important; }
+  .bg-primary-100 { background-color: var(--accent-soft) !important; }
+  .bg-primary-500 { background-color: var(--accent-from) !important; }
+  .bg-primary-600 { background-color: var(--accent-from) !important; }
+  .hover\:bg-primary-500:hover { background-color: var(--accent-from) !important; opacity: 0.85; }
+  .hover\:bg-primary-600:hover { background-color: var(--accent-from) !important; }
+
+  /* Background opacity variants */
+  .bg-primary-500\/10  { background-color: var(--accent-soft) !important; }
+  .bg-primary-500\/20  { background-color: color-mix(in srgb, var(--accent-from) 20%, transparent) !important; }
+  .bg-primary-600\/10  { background-color: var(--accent-soft) !important; }
+  .bg-primary-55\/10   { background-color: var(--accent-soft) !important; }
+
+  /* Gradient from/to */
+  .from-primary-500 { --tw-gradient-from: var(--accent-from) !important; }
+  .from-primary-600 { --tw-gradient-from: var(--accent-from) !important; }
+  .to-primary-600   { --tw-gradient-to:   var(--accent-to) !important; }
+  .hover\:from-primary-500:hover { --tw-gradient-from: color-mix(in srgb, var(--accent-from) 90%, white) !important; }
+
+  /* Border */
+  .border-primary-200\/50 { border-color: var(--accent-border) !important; }
+  .border-primary-500    { border-color: var(--accent-from) !important; }
+  .border-primary-500\/20 { border-color: var(--accent-border) !important; }
+  .border-primary-500\/30 { border-color: var(--accent-border) !important; }
+  .border-primary-500\/40 { border-color: var(--accent-border) !important; }
+  .hover\:border-primary-500\/40:hover { border-color: var(--accent-border) !important; }
+  .dark .border-primary-900\/30 { border-color: var(--accent-border) !important; }
+
+  /* Ring */
+  .ring-primary-500        { --tw-ring-color: var(--accent-glow) !important; }
+  .focus\:ring-primary-500:focus { box-shadow: 0 0 0 3px var(--accent-glow) !important; }
+
+  /* Shadow */
+  .shadow-primary-500\/25  { box-shadow: 0 4px 14px -4px var(--accent-glow) !important; }
+  .shadow-primary-600\/20  { box-shadow: 0 4px 14px -4px var(--accent-glow) !important; }
+
+  /* SVG fill / stroke */
+  .fill-primary-600   { fill: var(--accent-from) !important; }
+  .stroke-primary-600 { stroke: var(--accent-from) !important; }
+}
+
 
 @layer base {
   html {
@@ -51,12 +119,68 @@
 
 /* Dynamic Accent Input Focus */
 .glass-input {
-  @apply w-full px-4 py-2.5 rounded-2xl border border-slate-200 dark:border-white/10 bg-white/70 dark:bg-[#121a2b]/70 focus:outline-none transition-all duration-200 text-xs font-medium;
+  @apply w-full px-4 py-2.5 rounded-2xl border border-slate-200 dark:border-white/10 bg-white/70 dark:bg-[#121a2b]/70 focus:outline-none transition-all duration-200 text-xs font-medium text-slate-900 dark:text-slate-100;
   --tw-ring-color: var(--accent-glow);
 }
 .glass-input:focus {
   border-color: var(--accent-from);
   box-shadow: 0 0 0 3px var(--accent-glow);
+}
+.glass-input::placeholder {
+  @apply text-slate-400 dark:text-slate-500;
+}
+
+/* ===========================
+   SELECT / DROPDOWN MENUS
+   Native <select> + <option> colors fixed for light & dark.
+   =========================== */
+select.glass-input {
+  /* Keep native arrow, just fix colors */
+  appearance: auto;
+  -webkit-appearance: auto;
+  cursor: pointer;
+  /* Light mode */
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #1e293b;
+}
+select.glass-input option {
+  background-color: #ffffff;
+  color: #1e293b;
+  font-weight: 600;
+  padding: 6px 12px;
+}
+select.glass-input optgroup {
+  background-color: #f1f5f9;
+  color: #64748b;
+  font-weight: 700;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Dark mode overrides */
+.dark select.glass-input {
+  background-color: #121a2b;
+  color: #f1f5f9;
+  border-color: rgba(255,255,255,0.1);
+  color-scheme: dark;
+}
+.dark select.glass-input option {
+  background-color: #1a2540;
+  color: #f1f5f9;
+}
+.dark select.glass-input optgroup {
+  background-color: #0d1320;
+  color: #94a3b8;
+}
+
+/* ===========================
+   RADIO & CHECKBOX — Accent colored
+   =========================== */
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: var(--accent-from);
+  cursor: pointer;
 }
 
 /* Glow effect using dynamic accent */
@@ -163,12 +287,11 @@ body.fullscreen-exam main {
   @apply inline-flex items-center px-2 py-0.5 text-[10px] font-mono font-semibold text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-[#162032] rounded-md border border-slate-200 dark:border-white/10;
 }
 
-/* Color Theme Picker Swatch */
-.theme-swatch {
-  @apply h-8 w-8 rounded-full cursor-pointer border-2 border-transparent hover:scale-110 active:scale-95 transition-all duration-150 shadow-sm;
+/* Quick-pick palette buttons in Theme Studio */
+.quick-pick {
+  transition: transform 0.15s, border-color 0.15s;
 }
-.theme-swatch.active {
-  border-color: white;
-  box-shadow: 0 0 0 2px #1e293b, 0 0 0 4px white;
-  transform: scale(1.15);
+.quick-pick:hover {
+  transform: scale(1.08);
+  border-color: rgba(255,255,255,0.6) !important;
 }
