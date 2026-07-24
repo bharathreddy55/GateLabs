@@ -1,3 +1,5 @@
+import { showToast } from '../utils/toast';
+
 export const Formulas = {
   activeSubject: 'All',
   searchQuery: '',
@@ -10,158 +12,390 @@ export const Formulas = {
         id: 'f1',
         subject: 'Operating Systems',
         topic: 'Deadlocks',
-        concept: 'What are Coffman\'s 4 Necessary Conditions for Deadlock?',
-        formula: '1. Mutual Exclusion\n2. Hold and Wait\n3. No Preemption\n4. Circular Wait\n\nBanker\'s Algorithm Safety Check: Need = Max - Allocation. If Need ≤ Available, state is SAFE.',
-        mastered: false
+        icon: 'fa-solid fa-microchip',
+        weightage: 'High (2-3 Marks)',
+        concept: 'Coffman\'s Conditions & Banker\'s Safety Check',
+        mathLatex: 'Need[i][j] = Max[i][j] - Allocation[i][j] \\le Available[j]',
+        formula: `1. Mutual Exclusion
+2. Hold & Wait
+3. No Preemption
+4. Circular Wait
+
+• Banker's Safety Algorithm:
+  Need = Max - Allocation
+  State is SAFE if an execution sequence exists where Need ≤ Available.`,
       },
       {
         id: 'f2',
         subject: 'Operating Systems',
         topic: 'Memory Management',
-        concept: 'Page Table Size & Effective Access Time Formula',
-        formula: 'Page Table Size = (Number of Pages) × (Page Table Entry Size)\nNumber of Pages = Virtual Address Space / Page Size\nEAT = Hit Rate × (TLB + RAM) + Miss Rate × (TLB + 2 × RAM)',
-        mastered: false
+        icon: 'fa-solid fa-memory',
+        weightage: 'High (2-3 Marks)',
+        concept: 'Page Table Size & Effective Access Time (EAT)',
+        mathLatex: 'EAT = h \\cdot (t_{TLB} + t_{RAM}) + (1-h) \\cdot (t_{TLB} + 2 t_{RAM})',
+        formula: `• Number of Pages = Virtual Address Space / Page Size
+• Page Table Size = (Number of Pages) × (PTE Size)
+• Effective Access Time (Single-level Page Table):
+  EAT = h × (t_TLB + t_RAM) + (1 - h) × (t_TLB + 2 × t_RAM)
+  (where h = TLB hit ratio)`,
       },
-      // Algorithms
       {
         id: 'f3',
-        subject: 'Algorithms',
-        topic: 'Divide & Conquer',
-        concept: 'Master Theorem for Divide and Conquer Recurrences',
-        formula: 'For T(n) = a T(n/b) + f(n) where a ≥ 1, b > 1:\nCompare f(n) with n^(log_b(a)):\n1. If f(n) = O(n^(log_b(a) - ε)), then T(n) = Θ(n^(log_b(a)))\n2. If f(n) = Θ(n^(log_b(a))), then T(n) = Θ(n^(log_b(a)) log n)\n3. If f(n) = Ω(n^(log_b(a) + ε)), then T(n) = Θ(f(n))',
-        mastered: false
+        subject: 'Operating Systems',
+        topic: 'CPU Scheduling',
+        icon: 'fa-solid fa-clock-rotate-left',
+        weightage: 'Medium (1-2 Marks)',
+        concept: 'Turnaround Time & Waiting Time Formulas',
+        mathLatex: 'TAT = Completion - Arrival \\quad\\mid\\quad WT = TAT - Burst',
+        formula: `• Turnaround Time (TAT) = Completion Time - Arrival Time
+• Waiting Time (WT) = Turnaround Time - Burst Time
+• Response Time (RT) = First CPU Time - Arrival Time
+• Convoy Effect occurs in FCFS when CPU-bound process blocks I/O-bound processes.`,
       },
+
+      // Algorithms
       {
         id: 'f4',
         subject: 'Algorithms',
-        topic: 'Graph Algorithms',
-        concept: 'Single Source Shortest Path Time Complexities',
-        formula: 'Dijkstra (Binary Heap): O((V + E) log V)\nDijkstra (Array): O(V²)\nBellman-Ford (Handles negative edges): O(V × E)\nFloyd-Warshall (All Pairs Shortest Path): O(V³)',
-        mastered: false
+        topic: 'Divide & Conquer',
+        icon: 'fa-solid fa-code-branch',
+        weightage: 'High (2-3 Marks)',
+        concept: 'Master Theorem for Recurrences',
+        mathLatex: 'T(n) = a T(n/b) + f(n), \\quad a \\ge 1, b > 1',
+        formula: `Compare f(n) with n^(log_b a):
+
+1. If f(n) = O(n^(log_b a - ε))  ⇒  T(n) = Θ(n^(log_b a))
+2. If f(n) = Θ(n^(log_b a) · log^k n)  ⇒  T(n) = Θ(n^(log_b a) · log^(k+1) n)
+3. If f(n) = Ω(n^(log_b a + ε)) AND a·f(n/b) ≤ c·f(n)  ⇒  T(n) = Θ(f(n))`,
       },
-      // DBMS
       {
         id: 'f5',
-        subject: 'Databases (DBMS)',
-        topic: 'Normalization',
-        concept: 'Relational Normal Forms Hierarchy & Checking Rules',
-        formula: '1NF: Atomic values only\n2NF: 1NF + No partial dependency (Non-prime attribute dependent on proper subset of candidate key)\n3NF: 2NF + No transitive dependency (X → Y, X is candidate key or Y is prime)\nBCNF: For every X → Y, X MUST be a candidate key.',
-        mastered: false
+        subject: 'Algorithms',
+        topic: 'Graph Algorithms',
+        icon: 'fa-solid fa-diagram-project',
+        weightage: 'High (2 Marks)',
+        concept: 'Shortest Path & MST Time Complexities',
+        mathLatex: 'O((V + E) \\log V) \\quad\\text{vs}\\quad O(V \\cdot E)',
+        formula: `• Dijkstra (Binary Heap): O((V + E) log V)
+• Dijkstra (Array): O(V²)
+• Bellman-Ford (Negative Edge Weights): O(V × E)
+• Floyd-Warshall (All-Pairs): O(V³)
+• Kruskal's MST (Disjoint Sets): O(E log E)
+• Prim's MST (Min-Heap): O(E log V)`,
       },
-      // Computer Networks
+
+      // DBMS
       {
         id: 'f6',
-        subject: 'Computer Networks (CN)',
-        topic: 'TCP / IP & Flow Control',
-        concept: 'Sliding Window Protocol Efficiency & Channel Utilization',
-        formula: 'Propagation Delay (Tp) = Distance / Speed\nTransmission Delay (Tt) = Frame Size / Bandwidth\nParameter a = Tp / Tt\nStop-and-Wait Efficiency = 1 / (1 + 2a)\nGo-Back-N Efficiency = min(W, 1 + 2a) / (1 + 2a)',
-        mastered: false
+        subject: 'Databases (DBMS)',
+        topic: 'Normalization',
+        icon: 'fa-solid fa-database',
+        weightage: 'High (2-3 Marks)',
+        concept: 'Relational Normal Forms (1NF → BCNF)',
+        mathLatex: 'X \\to Y \\implies X \\text{ is Candidate Key (BCNF)}',
+        formula: `• 1NF: Atomic attributes only.
+• 2NF: 1NF + No Partial Dependency (Non-prime dependent on proper subset of Candidate Key).
+• 3NF: 2NF + No Transitive Dependency (For X → Y, X is Super Key OR Y is Prime).
+• BCNF: For EVERY non-trivial FD X → Y, X MUST be a Super Key.`,
       },
-      // Theory of Computation
       {
         id: 'f7',
-        subject: 'Theory of Computation (TOC)',
-        topic: 'Chomsky Hierarchy',
-        concept: 'Chomsky Hierarchy Languages & Automata Recognizers',
-        formula: 'Type 3 (Regular): Finite Automata (DFA/NFA)\nType 2 (Context-Free): Pushdown Automata (PDA)\nType 1 (Context-Sensitive): Linear Bounded Automata (LBA)\nType 0 (Unrestricted / RE): Turing Machine (TM)\nClosure: CFL closed under Union, Concatenation, Kleene Star. NOT closed under Intersection or Complement.',
-        mastered: false
+        subject: 'Databases (DBMS)',
+        topic: 'Transactions & Concurrency',
+        icon: 'fa-solid fa-list-check',
+        weightage: 'Medium (2 Marks)',
+        concept: 'Conflict Serializability & 2PL Rules',
+        mathLatex: 'S_1 \\equiv_c S_2 \\iff \\text{Precedence Graph is Acyclic}',
+        formula: `• Conflict Operations: Same item, different transactions, at least one is WRITE.
+• Conflict Serializable if Serialization / Precedence Graph has NO CYCLES.
+• Basic 2PL: Ensures Conflict Serializability (Growing phase → Shrinking phase).
+• Strict 2PL: All Exclusive Locks held until COMMIT (prevents cascading rollbacks).`,
       },
-      // Engineering Mathematics
+
+      // Computer Networks
       {
         id: 'f8',
+        subject: 'Computer Networks (CN)',
+        topic: 'Flow & Congestion Control',
+        icon: 'fa-solid fa-network-wired',
+        weightage: 'High (2 Marks)',
+        concept: 'Sliding Window Protocol Efficiency',
+        mathLatex: '\\eta = \\frac{W}{1 + 2a}, \\quad a = \\frac{T_p}{T_t}',
+        formula: `• Propagation Delay (Tp) = Distance / Speed
+• Transmission Delay (Tt) = Packet Size / Bandwidth
+• Efficiency Parameter: a = Tp / Tt
+• Stop-and-Wait Efficiency = 1 / (1 + 2a)
+• Go-Back-N (Window W) Efficiency = min(W, 1 + 2a) / (1 + 2a)
+• Selective Repeat Efficiency = min(W, 1 + 2a) / (1 + 2a) (Max W = 2^(n-1))`,
+      },
+      {
+        id: 'f9',
+        subject: 'Computer Networks (CN)',
+        topic: 'IP Subnetting & CIDR',
+        icon: 'fa-solid fa-globe',
+        weightage: 'High (2 Marks)',
+        concept: 'CIDR Subnetting & Usable IP Host Calculation',
+        mathLatex: 'N_{\\text{hosts}} = 2^{(32 - /n)} - 2',
+        formula: `• Given CIDR prefix /n:
+  - Subnet Mask = n consecutive 1s followed by (32 - n) 0s
+  - Total Addresses = 2^(32 - n)
+  - Usable Host IPs = 2^(32 - n) - 2 (subtract Network ID & Broadcast ID)
+• Subnet ID = IP Bitwise AND Subnet Mask
+• Broadcast ID = Subnet ID with host bits set to 1`,
+      },
+
+      // Theory of Computation
+      {
+        id: 'f10',
+        subject: 'Theory of Computation (TOC)',
+        topic: 'Chomsky Hierarchy',
+        icon: 'fa-solid fa-gears',
+        weightage: 'High (2-3 Marks)',
+        concept: 'Chomsky Hierarchy & Automata Recognizers',
+        mathLatex: 'L_3 \\subset L_2 \\subset L_1 \\subset L_0',
+        formula: `• Type 3 (Regular): Finite Automata (DFA / NFA)
+• Type 2 (Context-Free): Pushdown Automata (PDA)
+• Type 1 (Context-Sensitive): Linear Bounded Automata (LBA)
+• Type 0 (Unrestricted / RE): Turing Machine (TM)
+
+Closure Properties:
+• Regular: Closed under ALL (Union, Intersect, Comp, Kleene, Concatenation)
+• Context-Free: Closed under Union, Concatenation, Star. NOT under Intersect or Complement.`,
+      },
+      {
+        id: 'f11',
+        subject: 'Theory of Computation (TOC)',
+        topic: 'Regular Languages',
+        icon: 'fa-solid fa-shield-halved',
+        weightage: 'Medium (1-2 Marks)',
+        concept: 'Pumping Lemma for Regular Languages',
+        mathLatex: 'w = xyz \\quad\\text{s.t.}\\quad |xy| \\le p, |y| \\ge 1, \\forall i \\ge 0: xy^i z \\in L',
+        formula: `If L is regular, there exists pumping length p such that any string w ∈ L with |w| ≥ p can be split into w = xyz satisfying:
+1. |xy| ≤ p
+2. |y| ≥ 1
+3. xy^i z ∈ L for all i ≥ 0
+
+Used to PROVE a language is NOT regular by contradiction (e.g. L = {a^n b^n | n ≥ 0}).`,
+      },
+
+      // COA
+      {
+        id: 'f12',
+        subject: 'Computer Organization (COA)',
+        topic: 'Pipelining',
+        icon: 'fa-solid fa-bolt',
+        weightage: 'High (2 Marks)',
+        concept: 'Pipeline Speedup & Execution Time Ratio',
+        mathLatex: 'S_k = \\frac{n \\cdot k}{(k + n - 1)} \\xrightarrow{n \\to \\infty} k',
+        formula: `• Non-Pipelined Execution Time = n × k × τ
+• Pipelined Execution Time = (k + n - 1) × τ_p
+  (where k = number of segments, n = number of instructions)
+• Speedup S_k = (n × k × τ) / ((k + n - 1) × τ_p)
+• Ideal Speedup (n → ∞) = k (Number of pipeline stages)
+• CPI (Cycles Per Instruction) of Ideal Pipeline = 1`,
+      },
+      {
+        id: 'f13',
+        subject: 'Computer Organization (COA)',
+        topic: 'Cache Memory',
+        icon: 'fa-solid fa-hard-drive',
+        weightage: 'High (2 Marks)',
+        concept: 'Direct Mapping vs Set-Associative Cache Fields',
+        mathLatex: '\\text{CPU Address} = \\text{Tag} + \\text{Set/Index} + \\text{Block Offset}',
+        formula: `• Block Offset bits = log2(Block Size in bytes)
+• Direct Mapping Index bits = log2(Number of Lines in Cache)
+• K-way Set-Associative Set bits = log2(Number of Lines / K)
+• Tag bits = Main Memory Address Bits - (Index bits + Offset bits)
+• Tag Directory Size = (Number of Cache Lines) × (Tag bits + Valid/Dirty bits)`,
+      },
+
+      // Engineering Mathematics
+      {
+        id: 'f14',
         subject: 'Engineering Mathematics',
         topic: 'Linear Algebra',
+        icon: 'fa-solid fa-calculator',
+        weightage: 'High (2 Marks)',
         concept: 'Eigenvalues & Matrix Properties',
-        formula: 'Sum of Eigenvalues = Trace of Matrix (Sum of main diagonal elements)\nProduct of Eigenvalues = Determinant of Matrix (|A|)\nIf A is Symmetric → Eigenvalues are purely real.\nCayley-Hamilton Theorem: Every square matrix satisfies its own characteristic equation P(λ) = 0.',
-        mastered: false
+        mathLatex: '\\sum \\lambda_i = \\text{Trace}(A), \\quad \\prod \\lambda_i = \\det(A)',
+        formula: `• Sum of Eigenvalues = Trace(A) (Sum of main diagonal elements)
+• Product of Eigenvalues = Determinant det(A)
+• Eigenvalues of Triangular / Diagonal matrix are its diagonal elements.
+• If A is Symmetric  ⇒  Eigenvalues are purely REAL.
+• Cayley-Hamilton Theorem: Every square matrix satisfies its characteristic polynomial P(λ) = 0.`,
+      },
+      {
+        id: 'f15',
+        subject: 'Engineering Mathematics',
+        topic: 'Probability & Statistics',
+        icon: 'fa-solid fa-chart-line',
+        weightage: 'High (2 Marks)',
+        concept: 'Bayes\' Theorem & Poisson Distribution',
+        mathLatex: 'P(A|B) = \\frac{P(B|A) P(A)}{P(B)}, \\quad P(X=k) = \\frac{e^{-\\lambda} \\lambda^k}{k!}',
+        formula: `• Bayes' Theorem: P(A|B) = P(B|A) · P(A) / P(B)
+• Expectation E[X] = ∑ x P(x)
+• Variance Var(X) = E[X²] - (E[X])²
+• Binomial Distribution: Mean = n p, Variance = n p (1 - p)
+• Poisson Distribution: Mean = λ, Variance = λ
+  P(X = k) = (e^(-λ) · λ^k) / k!`,
+      },
+
+      // Compiler Design
+      {
+        id: 'f16',
+        subject: 'Compiler Design',
+        topic: 'Parsing & Syntax Analysis',
+        icon: 'fa-solid fa-file-code',
+        weightage: 'Medium (1-2 Marks)',
+        concept: 'FIRST & FOLLOW Sets for LL(1) Parsing',
+        mathLatex: '\\text{LL}(1) \\implies \\text{FIRST}(\\alpha) \\cap \\text{FIRST}(\\beta) = \\emptyset',
+        formula: `• FIRST(α): Set of terminals that begin strings derived from α.
+• FOLLOW(A): Set of terminals that can appear immediately to the right of A in any sentential form.
+  - $ is always in FOLLOW(S) where S is the start symbol.
+• LL(1) Parsing Table Conflict Check for A → α | β:
+  1. FIRST(α) ∩ FIRST(β) = ∅
+  2. If ε ∈ FIRST(α), then FIRST(β) ∩ FOLLOW(A) = ∅`,
       }
     ];
 
-    const subjects = ['All', 'Operating Systems', 'Algorithms', 'Databases (DBMS)', 'Computer Networks (CN)', 'Theory of Computation (TOC)', 'Engineering Mathematics'];
+    const subjects = [
+      'All',
+      'Operating Systems',
+      'Algorithms',
+      'Databases (DBMS)',
+      'Computer Networks (CN)',
+      'Theory of Computation (TOC)',
+      'Computer Organization (COA)',
+      'Engineering Mathematics',
+      'Compiler Design'
+    ];
 
     const filtered = flashcards.filter(c => {
       const matchSub = this.activeSubject === 'All' || c.subject === this.activeSubject;
-      const matchQ = !this.searchQuery || c.concept.toLowerCase().includes(this.searchQuery.toLowerCase()) || c.topic.toLowerCase().includes(this.searchQuery.toLowerCase());
+      const matchQ = !this.searchQuery ||
+        c.concept.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+        c.topic.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+        c.formula.toLowerCase().includes(this.searchQuery.toLowerCase());
       return matchSub && matchQ;
     });
 
     return `
-      <div class="flex flex-col gap-6 animate-fade-in font-sans pb-12">
-        <!-- Header -->
-        <div class="glass-panel p-8 rounded-3xl flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border border-slate-200/60 dark:border-white/[0.08]">
-          <div>
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-500 text-xs font-bold uppercase tracking-wider mb-2">
-              <i class="fa-solid fa-book-bookmark"></i> Quick Revision
+      <div class="flex flex-col gap-6 animate-fade-in font-sans pb-16">
+
+        <!-- ===== APPLE GLASSMORPHISM HEADER ===== -->
+        <div class="glass-panel p-8 rounded-3xl flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 border border-slate-200/60 dark:border-white/[0.08] relative overflow-hidden">
+          <!-- Background ambient glow -->
+          <div class="absolute -right-20 -top-20 w-80 h-80 bg-gradient-to-br from-[var(--accent-from)]/15 to-[var(--accent-to)]/15 rounded-full blur-3xl pointer-events-none"></div>
+
+          <div class="relative z-10 max-w-2xl">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold accent-text streak-badge border accent-border mb-3 shadow-sm">
+              <i class="fa-solid fa-book-bookmark"></i> Quick Revision Deck
             </div>
-            <h3 class="font-display font-extrabold text-2xl md:text-3xl text-slate-900 dark:text-white tracking-tight">
-              GATE CS Formula & Short Notes Deck
+            <h3 class="font-display font-extrabold text-2xl md:text-3xl text-slate-900 dark:text-white tracking-tight leading-tight">
+              GATE CS Formula & Theorem Deck
             </h3>
-            <p class="text-xs md:text-sm text-slate-500 dark:text-slate-400 mt-1 font-semibold">
-              Interactive flashcards for high-weightage formulas, theorems, and normal forms. Click any card to flip.
+            <p class="text-xs md:text-sm text-slate-500 dark:text-slate-400 mt-2 font-medium leading-relaxed">
+              Interactive 3D flashcards with LaTeX equations, step-by-step proofs, and high-weightage formulas for GATE CS 2027.
             </p>
           </div>
 
-          <div class="relative w-full md:w-72">
-            <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-slate-400 text-xs"></i>
-            <input type="text" id="formula-search" placeholder="Search formulas, e.g. Master Theorem..." value="${this.searchQuery}" class="glass-input pl-9 text-xs font-semibold">
+          <!-- Search & Counter Box -->
+          <div class="relative z-10 w-full lg:w-80 flex flex-col gap-3">
+            <div class="relative w-full">
+              <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-slate-400 text-xs"></i>
+              <input type="text" id="formula-search" placeholder="Search formulas, e.g. Master Theorem..." value="${this.searchQuery}" class="glass-input pl-9.5 text-xs font-semibold">
+            </div>
+
+            <div class="flex items-center justify-between px-4 py-2 rounded-2xl bg-black/5 dark:bg-white/5 border border-black/[0.04] dark:border-white/[0.05] text-[11px] font-bold text-slate-500 dark:text-slate-400">
+              <span class="flex items-center gap-1.5">
+                <i class="fa-solid fa-layer-group accent-text"></i> ${filtered.length} of ${flashcards.length} Cards
+              </span>
+              <span class="accent-text">Click card to flip ↺</span>
+            </div>
           </div>
         </div>
 
-        <!-- Subject Filter Pills -->
+        <!-- ===== SUBJECT FILTER PILLS ===== -->
         <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1">
           ${subjects.map(s => `
             <button class="formula-sub-pill flex-shrink-0 px-4 py-2 rounded-2xl text-xs font-bold transition-all ${
-              this.activeSubject === s ? 'btn-accent scale-105' : 'glass-card text-slate-600 dark:text-slate-400 hover:accent-text'
+              this.activeSubject === s ? 'btn-accent scale-105 shadow-md' : 'glass-card text-slate-600 dark:text-slate-400 hover:accent-text'
             }" data-sub="${s}">
               ${s}
             </button>
           `).join('')}
         </div>
 
-        <!-- Flashcards Grid -->
+        <!-- ===== 3D FLASHCARDS GRID ===== -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           ${filtered.map(card => {
             const isFlipped = !!this.flippedCards[card.id];
             return `
-              <div class="perspective-1000 h-72 cursor-pointer group" data-cardid="${card.id}">
+              <div class="perspective-1000 min-h-[19rem] cursor-pointer group" data-cardid="${card.id}">
                 <div class="relative w-full h-full duration-500 transform-style-3d transition-transform ${isFlipped ? 'rotate-y-180' : ''}">
-                  
-                  <!-- FRONT: Concept / Question -->
-                  <div class="absolute inset-0 bento-card p-6 flex flex-col justify-between backface-hidden border border-slate-200/60 dark:border-white/[0.08] group-hover:border-primary-500/40">
-                    <div class="flex items-center justify-between">
-                      <span class="text-[10px] font-bold text-primary-500 uppercase tracking-wider bg-primary-500/10 px-2.5 py-1 rounded-lg">${card.subject}</span>
-                      <span class="text-[10px] font-bold text-slate-400">${card.topic}</span>
+
+                  <!-- ── FRONT OF CARD (Question & Concept) ── -->
+                  <div class="absolute inset-0 bento-card p-6 flex flex-col justify-between backface-hidden border border-slate-200/70 dark:border-white/[0.08] group-hover:border-[var(--accent-from)]/50 group-hover:shadow-xl transition-all duration-300">
+                    
+                    <!-- Card Top Header -->
+                    <div class="flex items-center justify-between border-b border-slate-100 dark:border-white/[0.04] pb-3">
+                      <span class="inline-flex items-center gap-1.5 text-[10px] font-bold accent-text uppercase tracking-wider bg-[var(--accent-soft)] px-2.5 py-1 rounded-xl border border-[var(--accent-border)]">
+                        <i class="${card.icon}"></i> ${card.subject}
+                      </span>
+                      <span class="text-[10px] font-bold text-amber-500 bg-amber-500/10 px-2 py-0.5 rounded-lg border border-amber-500/20">
+                        ${card.weightage}
+                      </span>
                     </div>
 
-                    <div class="my-auto text-center px-2">
-                      <h4 class="font-display font-bold text-base text-slate-800 dark:text-white leading-snug">${card.concept}</h4>
-                      <p class="text-[11px] text-slate-400 dark:text-slate-500 mt-3 flex items-center justify-center gap-1 font-semibold">
-                        <i class="fa-solid fa-rotate text-xs animate-spin-slow"></i> Click card to reveal formula & answer
-                      </p>
+                    <!-- Card Body Concept -->
+                    <div class="my-auto py-4">
+                      <span class="text-[10px] font-bold uppercase text-slate-400 dark:text-slate-500 tracking-wider block mb-1">${card.topic}</span>
+                      <h4 class="font-display font-extrabold text-base text-slate-900 dark:text-white leading-snug tracking-tight">
+                        ${card.concept}
+                      </h4>
+
+                      <!-- LaTeX Formula Preview Badge -->
+                      <div class="mt-4 p-3 rounded-2xl bg-black/5 dark:bg-white/5 border border-black/[0.04] dark:border-white/[0.05] font-mono text-xs text-slate-700 dark:text-slate-300 overflow-x-auto no-scrollbar flex items-center justify-between">
+                        <span class="katex-render text-[11px] font-bold tracking-wide truncate">${card.mathLatex}</span>
+                        <i class="fa-solid fa-eye text-slate-400 text-xs flex-shrink-0 ml-2"></i>
+                      </div>
                     </div>
 
+                    <!-- Card Footer -->
                     <div class="flex items-center justify-between border-t border-slate-100 dark:border-white/[0.04] pt-3 text-[10px] text-slate-400 font-bold">
-                      <span>Question Side</span>
-                      <span class="text-indigo-500 group-hover:underline">Flip Card &rarr;</span>
+                      <span class="flex items-center gap-1">
+                        <span class="h-2 w-2 rounded-full bg-[var(--accent-from)]"></span> Concept Side
+                      </span>
+                      <span class="accent-text flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        Reveal Formula & Solution <i class="fa-solid fa-arrow-right"></i>
+                      </span>
                     </div>
                   </div>
 
-                  <!-- BACK: Formula / Solution -->
-                  <div class="absolute inset-0 bento-card p-6 flex flex-col justify-between backface-hidden rotate-y-180 bg-slate-900 text-white border border-slate-700">
-                    <div class="flex items-center justify-between border-b border-slate-800 pb-2">
-                      <span class="text-[10px] font-bold text-indigo-400 uppercase tracking-wider flex items-center gap-1">
-                        <i class="fa-solid fa-square-check text-indigo-400"></i> Formula & Key Solution
+                  <!-- ── BACK OF CARD (Formula & Solution) ── -->
+                  <div class="absolute inset-0 bento-card p-6 flex flex-col justify-between backface-hidden rotate-y-180 bg-[#0a0f1d] text-white border border-[var(--accent-from)]/40 shadow-2xl">
+                    
+                    <!-- Back Header -->
+                    <div class="flex items-center justify-between border-b border-slate-800/80 pb-3">
+                      <span class="text-[10px] font-extrabold accent-text uppercase tracking-wider flex items-center gap-1.5">
+                        <i class="fa-solid fa-square-check"></i> Formula & Key Solution
                       </span>
-                      <span class="text-[10px] text-slate-400">${card.topic}</span>
+                      <button class="copy-formula-btn h-7 px-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-slate-200 text-[10px] font-bold transition-all flex items-center gap-1" data-formula="${encodeURIComponent(card.formula)}">
+                        <i class="fa-solid fa-copy"></i> Copy
+                      </button>
                     </div>
 
-                    <div class="my-auto overflow-y-auto max-h-44 font-mono text-xs text-slate-200 leading-relaxed whitespace-pre-line py-2">
+                    <!-- Formula Content -->
+                    <div class="my-auto overflow-y-auto max-h-48 font-mono text-xs text-slate-200 leading-relaxed whitespace-pre-line py-2 pr-1 no-scrollbar">
                       ${card.formula}
                     </div>
 
-                    <div class="flex items-center justify-between border-t border-slate-800 pt-2 text-[10px] text-slate-400 font-bold">
-                      <span class="text-slate-400">Answer Side</span>
-                      <span class="text-indigo-300">Click to flip back &circlearrowleft;</span>
+                    <!-- Back Footer -->
+                    <div class="flex items-center justify-between border-t border-slate-800/80 pt-3 text-[10px] text-slate-400 font-bold">
+                      <span class="text-slate-400">${card.topic}</span>
+                      <span class="accent-text flex items-center gap-1">
+                        <i class="fa-solid fa-rotate-left"></i> Click to flip back
+                      </span>
                     </div>
                   </div>
 
@@ -175,8 +409,19 @@ export const Formulas = {
   },
 
   init() {
-    // Ensure page scrolls to top when landing on Formulas
     window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Render KaTeX for math latex badges if window.katex is loaded
+    if (window.katex) {
+      document.querySelectorAll('.katex-render').forEach(el => {
+        const latex = el.textContent;
+        try {
+          window.katex.render(latex, el, { throwOnError: false, displayMode: false });
+        } catch (e) {
+          // fallback plain text
+        }
+      });
+    }
 
     // Subject filter click handlers
     document.querySelectorAll('.formula-sub-pill').forEach(btn => {
@@ -186,7 +431,7 @@ export const Formulas = {
       });
     });
 
-    // Search input handler - maintains focus & cursor position
+    // Search input handler
     const searchInput = document.getElementById('formula-search');
     if (searchInput) {
       searchInput.addEventListener('input', (e) => {
@@ -202,9 +447,12 @@ export const Formulas = {
       });
     }
 
-    // Flashcard 3D flip click handler - toggles CSS class directly for 60fps 3D flip animation
+    // 3D Card flip handler
     document.querySelectorAll('[data-cardid]').forEach(cardDom => {
-      cardDom.addEventListener('click', () => {
+      cardDom.addEventListener('click', (e) => {
+        // Prevent flip if clicking copy button
+        if (e.target.closest('.copy-formula-btn')) return;
+
         const id = cardDom.getAttribute('data-cardid');
         this.flippedCards[id] = !this.flippedCards[id];
         const innerFlip = cardDom.querySelector('.transform-style-3d');
@@ -215,6 +463,17 @@ export const Formulas = {
             innerFlip.classList.remove('rotate-y-180');
           }
         }
+      });
+    });
+
+    // Copy formula to clipboard handler
+    document.querySelectorAll('.copy-formula-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const encoded = btn.getAttribute('data-formula');
+        const text = decodeURIComponent(encoded);
+        navigator.clipboard.writeText(text);
+        showToast('Formula copied to clipboard! 📋', 'success');
       });
     });
   },
