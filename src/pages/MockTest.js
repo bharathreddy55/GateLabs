@@ -4,7 +4,7 @@ import { showToast } from '../utils/toast';
 export const MockTest = {
   // Config state
   testMode: 'Subject', // 'Full-Length' or 'Subject'
-  selectedSubject: 'Operating Systems',
+  selectedSubject: 'Section 8: Operating System',
   subjectMode: 'Full', // 'Full' or 'Topic' (Topic-Driven)
   selectedTopic: '',
   requestedCount: 10,
@@ -35,19 +35,7 @@ export const MockTest = {
   },
 
   renderConfigScreen() {
-    const subjects = [
-      "Engineering Mathematics",
-      "Digital Logic",
-      "Computer Organization & Architecture (COA)",
-      "Programming & Data Structures",
-      "Algorithms",
-      "Theory of Computation (TOC)",
-      "Compiler Design",
-      "Operating Systems",
-      "Databases (DBMS)",
-      "Computer Networks (CN)",
-      "General Aptitude"
-    ];
+    const subjects = Object.keys(SUBJECT_SYLLABUS);
 
     return `
       <!-- Config Tab Bar -->

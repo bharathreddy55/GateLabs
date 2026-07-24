@@ -676,7 +676,11 @@ const mockFirestore = {
       setTimeout(() => {
         let list = [...localQs];
         if (filters.subject) {
-          list = list.filter(q => q.subject.toLowerCase() === filters.subject.toLowerCase());
+          const filterSub = filters.subject.toLowerCase().replace(/^section\s+\d+\:\s*/i, '');
+          list = list.filter(q => {
+            const qSub = (q.subject || '').toLowerCase().replace(/^section\s+\d+\:\s*/i, '');
+            return qSub === filterSub || filterSub.includes(qSub) || qSub.includes(filterSub);
+          });
         }
         if (filters.topics && filters.topics.length > 0) {
           const lowerTopics = filters.topics.map(t => t.toLowerCase());
