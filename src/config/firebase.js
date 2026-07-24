@@ -56,9 +56,47 @@ const DEFAULT_QUESTIONS = [
       "4 levels",
       "5 levels"
     ],
-    correctAnswer: 0,
+    type: "MCQ",
+    correctAnswer: 1,
     explanation: "Page size = 4KB = 2^12 bytes. PTE = 4 bytes = 2^2 bytes.\nMax entries per page table frame = page size / PTE = 4KB / 4B = 1024 = 2^10 entries.\nVirtual Address size = 32 bits.\nOffset size = 12 bits.\nRemaining bits for page directory/page tables = 32 - 12 = 20 bits.\nEach level of page table can resolve at most 10 bits (since each page frame holds 2^10 entries).\nTherefore, we need 20 / 10 = 2 levels. Thus, 2 levels are sufficient.",
     tags: ["Paging", "Multi-level Page Table"]
+  },
+  {
+    id: "q_msq1",
+    type: "MSQ",
+    subject: "Section 8: Operating System",
+    topic: "Process Management & Concurrency",
+    subtopic: "Deadlock",
+    difficulty: "Medium",
+    marks: 2,
+    year: 2023,
+    question: "Which of the following conditions MUST hold simultaneously for a deadlock to occur in a system? (Select ALL correct options)",
+    options: [
+      "Mutual Exclusion",
+      "Hold and Wait",
+      "Preemption allowed",
+      "Circular Wait"
+    ],
+    correctOptions: [0, 1, 3],
+    explanation: "Coffman's 4 necessary conditions for deadlock are: 1. Mutual Exclusion, 2. Hold and Wait, 3. No Preemption, 4. Circular Wait.",
+    tags: ["Deadlock", "Coffman Conditions"]
+  },
+  {
+    id: "q_nat1",
+    type: "NAT",
+    subject: "Section 1: Engineering Mathematics",
+    topic: "Linear Algebra",
+    subtopic: "Eigenvalues and Eigenvectors",
+    difficulty: "Hard",
+    marks: 2,
+    year: 2024,
+    question: "Consider a 3x3 matrix A with eigenvalues λ1 = 2, λ2 = -3, and λ3 = 5. What is the determinant of matrix A?",
+    options: [],
+    natMin: -30,
+    natMax: -30,
+    correctNat: -30,
+    explanation: "The determinant of a square matrix equals the product of its eigenvalues. Det(A) = 2 * (-3) * 5 = -30.",
+    tags: ["Eigenvalues", "Determinant"]
   },
   {
     id: "q3",

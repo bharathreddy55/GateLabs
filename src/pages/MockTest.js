@@ -314,20 +314,69 @@ export const MockTest = {
             </div>
 
             <div class="flex-1 p-6 overflow-y-auto bg-white">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="px-2.5 py-0.5 rounded text-[10px] font-mono font-extrabold uppercase tracking-wider ${
+                  q.type === 'MSQ' ? 'bg-purple-100 text-purple-700 border border-purple-300' :
+                  q.type === 'NAT' ? 'bg-amber-100 text-amber-800 border border-amber-300' :
+                  'bg-indigo-100 text-indigo-700 border border-indigo-300'
+                }">
+                  ${q.type || 'MCQ'} (${q.marks} Mark${q.marks > 1 ? 's' : ''})
+                </span>
+                ${q.type === 'MSQ' ? '<span class="text-[10px] font-bold text-slate-500">(Multiple Select: Select ALL correct options. No negative marking)</span>' : ''}
+                ${q.type === 'NAT' ? '<span class="text-[10px] font-bold text-slate-500">(Numerical Answer: Type number using virtual keypad below. No negative marking)</span>' : ''}
+              </div>
+
               <p class="text-sm font-semibold text-slate-800 whitespace-pre-line leading-relaxed">
                 ${q.question}
               </p>
 
-              <div class="flex flex-col gap-2.5 mt-6">
-                ${q.options.map((opt, oIdx) => {
-                  const isChecked = this.answers[q.id] === oIdx;
-                  return `
-                    <label class="flex items-start gap-3 p-4 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 transition-all cursor-pointer relative ${isChecked ? 'border-primary-500 bg-primary-50/10' : ''}">
-                      <input type="radio" name="sim-option" value="${oIdx}" ${isChecked ? 'checked' : ''} class="mt-0.5 text-primary-600 border-slate-300 focus:ring-primary-500">
-                      <span class="text-xs text-slate-700 leading-relaxed">${String.fromCharCode(65 + oIdx)}. ${opt}</span>
-                    </label>
-                  `;
-                }).join('')}
+              <!-- OPTION / INPUT AREA -->
+              <div class="mt-6">
+                ${q.type === 'NAT' ? `
+                  <!-- NAT NUMERICAL KEYPAD AREA -->
+                  <div class="flex flex-col gap-4 max-w-sm p-4 rounded-2xl bg-slate-50 border border-slate-200">
+                    <div>
+                      <label class="block text-xs font-bold text-slate-600 mb-1">Enter Answer Value:</label>
+                      <input type="text" id="nat-answer-input" readonly value="${this.answers[q.id] !== undefined ? this.answers[q.id] : ''}" placeholder="Click keypad to enter number" class="w-full text-center font-mono font-extrabold text-lg px-4 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 shadow-inner">
+                    </div>
+
+                    <!-- TCS iON Keypad Grid -->
+                    <div class="grid grid-cols-4 gap-1.5 font-mono">
+                      ${['7','8','9','C','4','5','6','⌫','1','2','3','-','0','.','00','OK'].map(k => `
+                        <button type="button" class="nat-keypad-btn p-2.5 rounded-xl bg-white border border-slate-200 hover:bg-slate-100 active:scale-95 text-xs font-extrabold text-slate-800 shadow-sm" data-key="${k}">
+                          ${k}
+                        </button>
+                      `).join('')}
+                    </div>
+                  </div>
+                ` : q.type === 'MSQ' ? `
+                  <!-- MSQ CHECKBOX OPTIONS -->
+                  <div class="flex flex-col gap-2.5">
+                    ${q.options.map((opt, oIdx) => {
+                      const userArr = Array.isArray(this.answers[q.id]) ? this.answers[q.id] : [];
+                      const isChecked = userArr.includes(oIdx);
+                      return `
+                        <label class="flex items-start gap-3 p-4 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 transition-all cursor-pointer relative ${isChecked ? 'border-purple-500 bg-purple-50/20' : ''}">
+                          <input type="checkbox" name="sim-option-msq" value="${oIdx}" ${isChecked ? 'checked' : ''} class="mt-0.5 text-purple-600 border-slate-300 rounded focus:ring-purple-500">
+                          <span class="text-xs text-slate-700 leading-relaxed">${String.fromCharCode(65 + oIdx)}. ${opt}</span>
+                        </label>
+                      `;
+                    }).join('')}
+                  </div>
+                ` : `
+                  <!-- MCQ RADIO OPTIONS -->
+                  <div class="flex flex-col gap-2.5">
+                    ${q.options.map((opt, oIdx) => {
+                      const isChecked = this.answers[q.id] === oIdx;
+                      return `
+                        <label class="flex items-start gap-3 p-4 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 transition-all cursor-pointer relative ${isChecked ? 'border-primary-500 bg-primary-50/10' : ''}">
+                          <input type="radio" name="sim-option" value="${oIdx}" ${isChecked ? 'checked' : ''} class="mt-0.5 text-primary-600 border-slate-300 focus:ring-primary-500">
+                          <span class="text-xs text-slate-700 leading-relaxed">${String.fromCharCode(65 + oIdx)}. ${opt}</span>
+                        </label>
+                      `;
+                    }).join('')}
+                  </div>
+                `}
               </div>
             </div>
 
@@ -703,15 +752,56 @@ export const MockTest = {
     const toggleCalc = document.getElementById('toggle-calc-btn');
     const closeCalc = document.getElementById('close-calc');
     const calcWidget = document.getElementById('calculator-widget');
-    const optRadios = document.getElementsByName('sim-option');
-
-    optRadios.forEach(radio => {
-      radio.addEventListener('click', (e) => {
-        const val = parseInt(e.target.value);
-        const qid = this.questions[this.currentIdx].id;
-        this.answers[qid] = val;
-      });
-    });
+    
+    // Option click / check handlers
+      const q = this.questions[this.currentIdx];
+      if (q) {
+        if (q.type === 'NAT') {
+          const natInput = document.getElementById('nat-answer-input');
+          document.querySelectorAll('.nat-keypad-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+              const k = btn.getAttribute('data-key');
+              let cur = natInput.value || '';
+              if (k === 'C') {
+                cur = '';
+              } else if (k === '⌫') {
+                cur = cur.slice(0, -1);
+              } else if (k === 'OK') {
+                // Done entering
+              } else {
+                cur += k;
+              }
+              natInput.value = cur;
+              if (cur.trim().length > 0) {
+                this.answers[q.id] = cur.trim();
+              } else {
+                delete this.answers[q.id];
+              }
+            });
+          });
+        } else if (q.type === 'MSQ') {
+          const msqInputs = document.getElementsByName('sim-option-msq');
+          msqInputs.forEach(input => {
+            input.addEventListener('change', () => {
+              const selectedVals = Array.from(msqInputs)
+                .filter(i => i.checked)
+                .map(i => parseInt(i.value));
+              if (selectedVals.length > 0) {
+                this.answers[q.id] = selectedVals;
+              } else {
+                delete this.answers[q.id];
+              }
+            });
+          });
+        } else {
+          const optionInputs = document.getElementsByName('sim-option');
+          optionInputs.forEach(input => {
+            input.addEventListener('change', (e) => {
+              this.answers[q.id] = parseInt(e.target.value);
+            });
+          });
+        }
+      }
 
     const getSelectedValue = () => {
       const checked = document.querySelector('input[name="sim-option"]:checked');
@@ -1137,30 +1227,86 @@ export const MockTest = {
 
     const mistakes = [];
 
+    // Evaluate marks & mistakes for MCQ, MSQ, and NAT
     this.questions.forEach(q => {
       const userAns = this.answers[q.id];
-      if (userAns === undefined || userAns === null) {
-        skippedCount++;
-      } else if (userAns === q.correctAnswer) {
-        correctCount++;
-        score += q.marks;
-      } else {
-        wrongCount++;
-        const deduction = q.marks / 3.0;
-        negativeMarks += deduction;
-        score -= deduction;
 
-        mistakes.push({
-          questionId: q.id,
-          question: q.question,
-          options: q.options,
-          correctAnswer: q.correctAnswer,
-          userAnswer: userAns,
-          explanation: q.explanation,
-          subject: q.subject,
-          topic: q.topic,
-          difficulty: q.difficulty
-        });
+      if (userAns === undefined || userAns === null || (Array.isArray(userAns) && userAns.length === 0) || userAns === '') {
+        skippedCount++;
+      } else if (q.type === 'MSQ') {
+        // MSQ: Array of checked indices must match q.correctOptions exactly (no partial credit, 0 negative marks)
+        const userArr = Array.isArray(userAns) ? [...userAns].sort() : [userAns];
+        const correctArr = Array.isArray(q.correctOptions) ? [...q.correctOptions].sort() : [q.correctAnswer];
+        const isMatch = userArr.length === correctArr.length && userArr.every((val, index) => val === correctArr[index]);
+
+        if (isMatch) {
+          correctCount++;
+          score += q.marks;
+        } else {
+          wrongCount++;
+          // No negative marking for MSQ in GATE!
+          mistakes.push({
+            questionId: q.id,
+            type: 'MSQ',
+            question: q.question,
+            options: q.options,
+            correctOptions: q.correctOptions,
+            userAnswer: userAns,
+            explanation: q.explanation,
+            subject: q.subject,
+            topic: q.topic,
+            difficulty: q.difficulty
+          });
+        }
+      } else if (q.type === 'NAT') {
+        // NAT: Numerical value must fall between natMin and natMax (0 negative marks)
+        const userNum = parseFloat(userAns);
+        const minVal = q.natMin !== undefined ? q.natMin : q.correctNat;
+        const maxVal = q.natMax !== undefined ? q.natMax : q.correctNat;
+        const isCorrect = !isNaN(userNum) && userNum >= minVal && userNum <= maxVal;
+
+        if (isCorrect) {
+          correctCount++;
+          score += q.marks;
+        } else {
+          wrongCount++;
+          // No negative marking for NAT in GATE!
+          mistakes.push({
+            questionId: q.id,
+            type: 'NAT',
+            question: q.question,
+            correctNat: q.correctNat ?? `${minVal} to ${maxVal}`,
+            userAnswer: userAns,
+            explanation: q.explanation,
+            subject: q.subject,
+            topic: q.topic,
+            difficulty: q.difficulty
+          });
+        }
+      } else {
+        // Standard MCQ
+        if (userAns === q.correctAnswer) {
+          correctCount++;
+          score += q.marks;
+        } else {
+          wrongCount++;
+          const deduction = q.marks / 3.0;
+          negativeMarks += deduction;
+          score -= deduction;
+
+          mistakes.push({
+            questionId: q.id,
+            type: 'MCQ',
+            question: q.question,
+            options: q.options,
+            correctAnswer: q.correctAnswer,
+            userAnswer: userAns,
+            explanation: q.explanation,
+            subject: q.subject,
+            topic: q.topic,
+            difficulty: q.difficulty
+          });
+        }
       }
     });
 

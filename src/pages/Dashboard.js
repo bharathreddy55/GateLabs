@@ -102,6 +102,8 @@ export const Dashboard = {
       tabContentHtml = this.renderMilestonesTab(streakDays, unlockedBadges, attempts);
     } else if (this.activeTab === 'bookmarks') {
       tabContentHtml = await this.renderBookmarksTab();
+    } else if (this.activeTab === 'backup') {
+      tabContentHtml = this.renderBackupTab();
     }
 
     return `
@@ -121,6 +123,9 @@ export const Dashboard = {
             </button>
             <button class="dashboard-tab-btn ${getTabBtnClass('bookmarks')}" data-tab="bookmarks">
               <i class="fa-solid fa-bookmark text-xs"></i> Review Center
+            </button>
+            <button class="dashboard-tab-btn ${getTabBtnClass('backup')}" data-tab="backup">
+              <i class="fa-solid fa-floppy-disk text-xs"></i> Data Backup
             </button>
           </div>
           
@@ -558,6 +563,70 @@ export const Dashboard = {
     `;
   },
 
+  renderBackupTab() {
+    return `
+      <div class="flex flex-col gap-6 font-sans">
+        
+        <div class="glass-panel p-6 rounded-3xl border border-slate-200/60 dark:border-white/[0.08] relative overflow-hidden shadow-sm">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="h-10 w-10 rounded-2xl btn-accent text-white flex items-center justify-center text-lg shadow-md">
+              <i class="fa-solid fa-cloud-arrow-down"></i>
+            </div>
+            <div>
+              <span class="text-[10px] font-mono font-bold uppercase tracking-wider accent-text">Data Security & Sync</span>
+              <h3 class="font-display font-extrabold text-xl text-slate-900 dark:text-white">Export & Restore Backup</h3>
+            </div>
+          </div>
+          <p class="text-xs text-slate-500 dark:text-slate-400 font-medium leading-relaxed">
+            Backup your entire GateLabs workspace including syllabus progress, custom formula flashcards, bookmarks, and test history into a single JSON file.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <!-- EXPORT CARD -->
+          <div class="glass-panel p-7 rounded-3xl border border-slate-200/60 dark:border-white/[0.08] flex flex-col justify-between gap-6 shadow-md">
+            <div class="flex flex-col gap-3">
+              <div class="h-12 w-12 rounded-2xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center justify-center text-xl">
+                <i class="fa-solid fa-file-export"></i>
+              </div>
+              <h4 class="font-display font-extrabold text-lg text-slate-900 dark:text-white">Export Workspace Backup</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                Download a lightweight JSON file containing all your GATE progress data so you never lose your hard work.
+              </p>
+            </div>
+
+            <button id="btn-export-backup" type="button" class="w-full py-3 rounded-2xl btn-accent text-white text-xs font-bold shadow-md hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-2">
+              <i class="fa-solid fa-download"></i> Download JSON Backup
+            </button>
+          </div>
+
+          <!-- IMPORT CARD -->
+          <div class="glass-panel p-7 rounded-3xl border border-slate-200/60 dark:border-white/[0.08] flex flex-col justify-between gap-6 shadow-md">
+            <div class="flex flex-col gap-3">
+              <div class="h-12 w-12 rounded-2xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 flex items-center justify-center text-xl">
+                <i class="fa-solid fa-file-import"></i>
+              </div>
+              <h4 class="font-display font-extrabold text-lg text-slate-900 dark:text-white">Restore Backup File</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                Select a previously saved GateLabs JSON backup file to restore your syllabus checklist, custom formulas, and test attempts.
+              </p>
+            </div>
+
+            <div>
+              <input type="file" id="backup-file-input" accept=".json" class="hidden">
+              <button id="btn-trigger-import" type="button" class="w-full py-3 rounded-2xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold shadow-md hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-2">
+                <i class="fa-solid fa-upload"></i> Upload & Restore JSON File
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    `;
+  },
+
   renderNeetcodeNodeCard(node, stats) {
     const total = stats ? stats.total : 0;
     const done = stats ? stats.done : 0;
@@ -826,6 +895,55 @@ export const Dashboard = {
           await evaluateBadges(attempts, progress);
           this.refresh();
         });
+      });
+    } else if (this.activeTab === 'backup') {
+      // Backup handlers
+      document.getElementById('btn-export-backup')?.addEventListener('click', () => {
+        const backupData = {
+          version: '1.0',
+          exportedAt: new Date().toISOString(),
+          syllabusProgress: JSON.parse(localStorage.getItem('gate_syllabus_progress') || '{}'),
+          bookmarks: JSON.parse(localStorage.getItem('gate_bookmarks') || '[]'),
+          attempts: JSON.parse(localStorage.getItem('gate_attempts') || '[]'),
+          customFormulas: JSON.parse(localStorage.getItem('gate_custom_formulas') || '[]')
+        };
+
+        const jsonStr = JSON.stringify(backupData, null, 2);
+        const blob = new Blob([jsonStr], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `GateLabs_Backup_${new Date().toISOString().slice(0, 10)}.json`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+
+        showToast("Backup exported successfully! ⚡", "success");
+      });
+
+      const fileInput = document.getElementById('backup-file-input');
+      document.getElementById('btn-trigger-import')?.addEventListener('click', () => fileInput?.click());
+      fileInput?.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          try {
+            const data = JSON.parse(event.target.result);
+            if (data.syllabusProgress) localStorage.setItem('gate_syllabus_progress', JSON.stringify(data.syllabusProgress));
+            if (data.bookmarks) localStorage.setItem('gate_bookmarks', JSON.stringify(data.bookmarks));
+            if (data.attempts) localStorage.setItem('gate_attempts', JSON.stringify(data.attempts));
+            if (data.customFormulas) localStorage.setItem('gate_custom_formulas', JSON.stringify(data.customFormulas));
+
+            showToast("Backup restored successfully! 🎉", "success");
+            this.refresh();
+          } catch (err) {
+            showToast("Failed to restore backup: Invalid JSON file", "error");
+          }
+        };
+        reader.readAsText(file);
       });
     } else if (this.activeTab === 'bookmarks') {
       const subSelect = document.getElementById('bookmark-subject-select');

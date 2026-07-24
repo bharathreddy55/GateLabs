@@ -258,6 +258,10 @@ Used to PROVE a language is NOT regular by contradiction (e.g. L = {a^n b^n | n 
       }
     ];
 
+    // Merge custom user-created formula cards from localStorage
+    const customCards = JSON.parse(localStorage.getItem('gate_custom_formulas') || '[]');
+    const allFlashcards = [...flashcards, ...customCards];
+
     const subjects = [
       'All',
       'Operating Systems',
@@ -267,11 +271,20 @@ Used to PROVE a language is NOT regular by contradiction (e.g. L = {a^n b^n | n 
       'Theory of Computation (TOC)',
       'Computer Organization (COA)',
       'Engineering Mathematics',
-      'Compiler Design'
+      'Compiler Design',
+      'Custom Cards'
     ];
 
-    const filtered = flashcards.filter(c => {
-      const matchSub = this.activeSubject === 'All' || c.subject === this.activeSubject;
+    const filtered = allFlashcards.filter(c => {
+      let matchSub = false;
+      if (this.activeSubject === 'All') {
+        matchSub = true;
+      } else if (this.activeSubject === 'Custom Cards') {
+        matchSub = c.isCustom === true;
+      } else {
+        matchSub = c.subject === this.activeSubject || c.subject.includes(this.activeSubject);
+      }
+
       const matchQ = !this.searchQuery ||
         c.concept.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
         c.topic.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
@@ -300,15 +313,20 @@ Used to PROVE a language is NOT regular by contradiction (e.g. L = {a^n b^n | n 
           </div>
 
           <!-- Search & Counter Box -->
-          <div class="relative z-10 w-full lg:w-80 flex flex-col gap-3">
-            <div class="relative w-full">
-              <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-slate-400 text-xs"></i>
-              <input type="text" id="formula-search" placeholder="Search formulas, e.g. Master Theorem..." value="${this.searchQuery}" class="glass-input pl-9.5 text-xs font-semibold">
+          <div class="relative z-10 w-full lg:w-96 flex flex-col gap-3">
+            <div class="flex gap-2">
+              <div class="relative flex-1">
+                <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-slate-400 text-xs"></i>
+                <input type="text" id="formula-search" placeholder="Search formulas..." value="${this.searchQuery}" class="glass-input pl-9 text-xs font-semibold">
+              </div>
+              <button id="btn-open-custom-formula" type="button" class="px-4 py-2.5 rounded-2xl btn-accent text-white text-xs font-bold shadow-md hover:scale-105 active:scale-95 transition-all flex items-center gap-1.5 flex-shrink-0">
+                <i class="fa-solid fa-plus"></i> Add Card
+              </button>
             </div>
 
             <div class="flex items-center justify-between px-4 py-2 rounded-2xl bg-black/5 dark:bg-white/5 border border-black/[0.04] dark:border-white/[0.05] text-[11px] font-bold text-slate-500 dark:text-slate-400">
               <span class="flex items-center gap-1.5">
-                <i class="fa-solid fa-layer-group accent-text"></i> ${filtered.length} of ${flashcards.length} Cards
+                <i class="fa-solid fa-layer-group accent-text"></i> ${filtered.length} of ${allFlashcards.length} Cards
               </span>
               <span class="accent-text">Click card to flip ↺</span>
             </div>
@@ -326,83 +344,112 @@ Used to PROVE a language is NOT regular by contradiction (e.g. L = {a^n b^n | n 
           `).join('')}
         </div>
 
-        <!-- ===== 3D FLASHCARDS GRID ===== -->
+        <!-- ===== 3D CARD GRID CANVAS ===== -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          ${filtered.map(card => {
-            const isFlipped = !!this.flippedCards[card.id];
-            return `
-              <div class="perspective-1000 min-h-[19rem] cursor-pointer group" data-cardid="${card.id}">
-                <div class="relative w-full h-full duration-500 transform-style-3d transition-transform ${isFlipped ? 'rotate-y-180' : ''}">
+          ${filtered.map(c => this.renderFormulaCard(c)).join('')}
+        </div>
 
-                  <!-- ── FRONT OF CARD (Question & Concept) ── -->
-                  <div class="absolute inset-0 bento-card p-6 flex flex-col justify-between backface-hidden border border-slate-200/70 dark:border-white/[0.08] group-hover:border-[var(--accent-from)]/50 group-hover:shadow-xl transition-all duration-300">
-                    
-                    <!-- Card Top Header -->
-                    <div class="flex items-center justify-between border-b border-slate-100 dark:border-white/[0.04] pb-3">
-                      <span class="inline-flex items-center gap-1.5 text-[10px] font-bold accent-text uppercase tracking-wider bg-[var(--accent-soft)] px-2.5 py-1 rounded-xl border border-[var(--accent-border)]">
-                        <i class="${card.icon}"></i> ${card.subject}
-                      </span>
-                      <span class="text-[10px] font-bold text-amber-500 bg-amber-500/10 px-2 py-0.5 rounded-lg border border-amber-500/20">
-                        ${card.weightage}
-                      </span>
-                    </div>
-
-                    <!-- Card Body Concept -->
-                    <div class="my-auto py-4">
-                      <span class="text-[10px] font-bold uppercase text-slate-400 dark:text-slate-500 tracking-wider block mb-1">${card.topic}</span>
-                      <h4 class="font-display font-extrabold text-base text-slate-900 dark:text-white leading-snug tracking-tight">
-                        ${card.concept}
-                      </h4>
-
-                      <!-- LaTeX Formula Preview Badge -->
-                      <div class="mt-4 p-3 rounded-2xl bg-black/5 dark:bg-white/5 border border-black/[0.04] dark:border-white/[0.05] font-mono text-xs text-slate-700 dark:text-slate-300 overflow-x-auto no-scrollbar flex items-center justify-between">
-                        <span class="katex-render text-[11px] font-bold tracking-wide truncate">${card.mathLatex}</span>
-                        <i class="fa-solid fa-eye text-slate-400 text-xs flex-shrink-0 ml-2"></i>
-                      </div>
-                    </div>
-
-                    <!-- Card Footer -->
-                    <div class="flex items-center justify-between border-t border-slate-100 dark:border-white/[0.04] pt-3 text-[10px] text-slate-400 font-bold">
-                      <span class="flex items-center gap-1">
-                        <span class="h-2 w-2 rounded-full bg-[var(--accent-from)]"></span> Concept Side
-                      </span>
-                      <span class="accent-text flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                        Reveal Formula & Solution <i class="fa-solid fa-arrow-right"></i>
-                      </span>
-                    </div>
-                  </div>
-
-                  <!-- ── BACK OF CARD (Formula & Solution) ── -->
-                  <div class="absolute inset-0 bento-card p-6 flex flex-col justify-between backface-hidden rotate-y-180 bg-[#0a0f1d] text-white border border-[var(--accent-from)]/40 shadow-2xl">
-                    
-                    <!-- Back Header -->
-                    <div class="flex items-center justify-between border-b border-slate-800/80 pb-3">
-                      <span class="text-[10px] font-extrabold accent-text uppercase tracking-wider flex items-center gap-1.5">
-                        <i class="fa-solid fa-square-check"></i> Formula & Key Solution
-                      </span>
-                      <button class="copy-formula-btn h-7 px-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-slate-200 text-[10px] font-bold transition-all flex items-center gap-1" data-formula="${encodeURIComponent(card.formula)}">
-                        <i class="fa-solid fa-copy"></i> Copy
-                      </button>
-                    </div>
-
-                    <!-- Formula Content -->
-                    <div class="my-auto overflow-y-auto max-h-48 font-mono text-xs text-slate-200 leading-relaxed whitespace-pre-line py-2 pr-1 no-scrollbar">
-                      ${card.formula}
-                    </div>
-
-                    <!-- Back Footer -->
-                    <div class="flex items-center justify-between border-t border-slate-800/80 pt-3 text-[10px] text-slate-400 font-bold">
-                      <span class="text-slate-400">${card.topic}</span>
-                      <span class="accent-text flex items-center gap-1">
-                        <i class="fa-solid fa-rotate-left"></i> Click to flip back
-                      </span>
-                    </div>
-                  </div>
-
+        <!-- ===== ADD CUSTOM FORMULA MODAL ===== -->
+        <div id="custom-formula-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/70 backdrop-blur-md hidden px-4 animate-fade-in">
+          <div class="w-full max-w-lg bg-white dark:bg-[#0f1424] text-slate-900 dark:text-white rounded-3xl p-7 shadow-2xl border border-slate-200 dark:border-indigo-500/40 flex flex-col gap-5">
+            <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
+              <div class="flex items-center gap-3">
+                <div class="h-10 w-10 rounded-2xl btn-accent text-white flex items-center justify-center text-base shadow-md">
+                  <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <div>
+                  <h4 class="font-display font-extrabold text-base tracking-tight">Create Custom Flashcard</h4>
+                  <p class="text-[11px] text-slate-500 dark:text-slate-400">Save personal formulas & notes to your 3D revision deck</p>
                 </div>
               </div>
-            `;
-          }).join('')}
+              <button id="close-custom-modal" type="button" class="h-8 w-8 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 text-slate-500 flex items-center justify-center text-xs">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+
+            <form id="custom-formula-form" class="flex flex-col gap-4">
+              <div>
+                <label class="block text-xs font-bold text-slate-600 dark:text-slate-300 mb-1">Subject</label>
+                <select id="custom-subject" class="glass-input text-xs font-bold" required>
+                  <option value="Operating Systems">Operating Systems</option>
+                  <option value="Algorithms">Algorithms</option>
+                  <option value="Databases (DBMS)">Databases (DBMS)</option>
+                  <option value="Computer Networks (CN)">Computer Networks (CN)</option>
+                  <option value="Theory of Computation (TOC)">Theory of Computation (TOC)</option>
+                  <option value="Computer Organization (COA)">Computer Organization (COA)</option>
+                  <option value="Engineering Mathematics">Engineering Mathematics</option>
+                  <option value="Compiler Design">Compiler Design</option>
+                </select>
+              </div>
+
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-xs font-bold text-slate-600 dark:text-slate-300 mb-1">Topic Name</label>
+                  <input type="text" id="custom-topic" placeholder="e.g. Deadlocks" class="glass-input text-xs" required>
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-slate-600 dark:text-slate-300 mb-1">Weightage Badge</label>
+                  <input type="text" id="custom-weightage" placeholder="e.g. High (2 Marks)" class="glass-input text-xs" required>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-slate-600 dark:text-slate-300 mb-1">Concept Title</label>
+                <input type="text" id="custom-concept" placeholder="e.g. Banker's Algorithm Safety Formula" class="glass-input text-xs font-bold" required>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-slate-600 dark:text-slate-300 mb-1">LaTeX Math Expression (Optional)</label>
+                <input type="text" id="custom-latex" placeholder="e.g. Need[i] = Max[i] - Allocation[i]" class="glass-input font-mono text-xs">
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-slate-600 dark:text-slate-300 mb-1">Formula & Notes (Text Body)</label>
+                <textarea id="custom-formula-text" rows="3" placeholder="Enter key formula, conditions, or step-by-step notes..." class="glass-input text-xs leading-relaxed" required></textarea>
+              </div>
+
+              <div class="pt-2 flex justify-end gap-2">
+                <button id="cancel-custom-modal" type="button" class="px-4 py-2 rounded-xl bg-slate-200 dark:bg-slate-800 text-xs font-bold">Cancel</button>
+                <button type="submit" class="px-5 py-2 rounded-xl btn-accent text-white text-xs font-bold shadow-md">Save Card</button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    `;
+  },
+
+  renderFormulaCard(card) {
+    const isFlipped = !!this.flippedCards[card.id];
+    return `
+      <div class="perspective-1000 min-h-[19rem] cursor-pointer group" data-cardid="${card.id}">
+        <div class="relative w-full h-full duration-500 transform-style-3d transition-transform ${isFlipped ? 'rotate-y-180' : ''}">
+          <!-- Front -->
+          <div class="absolute inset-0 bento-card p-6 flex flex-col justify-between backface-hidden border border-slate-200/70 dark:border-white/[0.08] group-hover:border-[var(--accent-from)]/50 transition-all">
+            <div class="flex items-center justify-between border-b border-slate-100 dark:border-white/[0.04] pb-3">
+              <span class="inline-flex items-center gap-1.5 text-[10px] font-bold accent-text uppercase tracking-wider bg-[var(--accent-soft)] px-2.5 py-1 rounded-xl">
+                <i class="${card.icon}"></i> ${card.subject}
+              </span>
+              <span class="text-[10px] font-bold text-amber-500">${card.weightage}</span>
+            </div>
+            <div class="my-auto py-4">
+              <span class="text-[10px] font-bold uppercase text-slate-400 tracking-wider">${card.topic}</span>
+              <h4 class="font-display font-extrabold text-base text-slate-900 dark:text-white">${card.concept}</h4>
+              <div class="mt-4 p-3 rounded-2xl bg-black/5 dark:bg-white/5 font-mono text-xs text-slate-700 dark:text-slate-300 katex-render" data-latex="${card.mathLatex}">
+                ${card.mathLatex}
+              </div>
+            </div>
+          </div>
+          <!-- Back -->
+          <div class="absolute inset-0 bento-card p-6 flex flex-col justify-between backface-hidden rotate-y-180 bg-[#0a0f1d] text-white border border-[var(--accent-from)]/40 shadow-2xl">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+              <span class="text-[10px] font-extrabold accent-text uppercase tracking-wider">Formula</span>
+              <button class="copy-formula-btn h-7 px-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-xs font-bold" data-formula="${encodeURIComponent(card.formula)}">Copy</button>
+            </div>
+            <div class="my-auto overflow-y-auto font-mono text-xs text-slate-200 whitespace-pre-line py-2">${card.formula}</div>
+          </div>
         </div>
       </div>
     `;
@@ -411,19 +458,59 @@ Used to PROVE a language is NOT regular by contradiction (e.g. L = {a^n b^n | n 
   init() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
-    // Render KaTeX for math latex badges if window.katex is loaded
     if (window.katex) {
-      document.querySelectorAll('.katex-render').forEach(el => {
-        const latex = el.textContent;
-        try {
-          window.katex.render(latex, el, { throwOnError: false, displayMode: false });
-        } catch (e) {
-          // fallback plain text
+      document.querySelectorAll('.katex-render').forEach(elem => {
+        const latex = elem.getAttribute('data-latex');
+        if (latex) {
+          try {
+            window.katex.render(latex, elem, { throwOnError: false, displayMode: false });
+          } catch (e) {
+            console.warn("KaTeX render error:", e);
+          }
         }
       });
     }
 
-    // Subject filter click handlers
+    const modal = document.getElementById('custom-formula-modal');
+    const btnOpen = document.getElementById('btn-open-custom-formula');
+    const btnClose = document.getElementById('close-custom-modal');
+    const btnCancel = document.getElementById('cancel-custom-modal');
+    const form = document.getElementById('custom-formula-form');
+
+    btnOpen?.addEventListener('click', () => modal?.classList.remove('hidden'));
+    const closeModal = () => modal?.classList.add('hidden');
+    btnClose?.addEventListener('click', closeModal);
+    btnCancel?.addEventListener('click', closeModal);
+
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const subject = document.getElementById('custom-subject').value;
+      const topic = document.getElementById('custom-topic').value;
+      const weightage = document.getElementById('custom-weightage').value;
+      const concept = document.getElementById('custom-concept').value;
+      const mathLatex = document.getElementById('custom-latex').value;
+      const formula = document.getElementById('custom-formula-text').value;
+
+      const newCard = {
+        id: 'custom_' + Date.now(),
+        isCustom: true,
+        subject,
+        topic,
+        icon: 'fa-solid fa-sparkles',
+        weightage,
+        concept,
+        mathLatex,
+        formula
+      };
+
+      const existing = JSON.parse(localStorage.getItem('gate_custom_formulas') || '[]');
+      existing.push(newCard);
+      localStorage.setItem('gate_custom_formulas', JSON.stringify(existing));
+
+      closeModal();
+      this.refresh();
+    });
+
     document.querySelectorAll('.formula-sub-pill').forEach(btn => {
       btn.addEventListener('click', () => {
         this.activeSubject = btn.getAttribute('data-sub');
