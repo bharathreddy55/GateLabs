@@ -796,6 +796,62 @@ const mockFirestore = {
         resolve(topics);
       }, 200);
     });
+  },
+
+  async getBookmarks() {
+    return new Promise((resolve) => {
+      resolve(JSON.parse(localStorage.getItem('gate_bookmarks') || '[]'));
+    });
+  },
+  async saveBookmark(question) {
+    return new Promise((resolve) => {
+      const list = JSON.parse(localStorage.getItem('gate_bookmarks') || '[]');
+      if (!list.some(q => q.id === question.id)) {
+        list.push(question);
+        localStorage.setItem('gate_bookmarks', JSON.stringify(list));
+      }
+      resolve(true);
+    });
+  },
+  async deleteBookmark(questionId) {
+    return new Promise((resolve) => {
+      const list = JSON.parse(localStorage.getItem('gate_bookmarks') || '[]');
+      const updated = list.filter(q => q.id !== questionId);
+      localStorage.setItem('gate_bookmarks', JSON.stringify(updated));
+      resolve(true);
+    });
+  },
+  async isBookmarked(questionId) {
+    return new Promise((resolve) => {
+      const list = JSON.parse(localStorage.getItem('gate_bookmarks') || '[]');
+      resolve(list.some(q => q.id === questionId));
+    });
+  },
+  async getSyllabusProgress() {
+    return new Promise((resolve) => {
+      resolve(JSON.parse(localStorage.getItem('gate_syllabus_progress') || '{}'));
+    });
+  },
+  async saveSyllabusProgress(progress) {
+    return new Promise((resolve) => {
+      localStorage.setItem('gate_syllabus_progress', JSON.stringify(progress));
+      resolve(progress);
+    });
+  },
+  async getUnlockedBadges() {
+    return new Promise((resolve) => {
+      resolve(JSON.parse(localStorage.getItem('gate_unlocked_badges') || '[]'));
+    });
+  },
+  async unlockBadge(badgeId) {
+    return new Promise((resolve) => {
+      const badges = JSON.parse(localStorage.getItem('gate_unlocked_badges') || '[]');
+      if (!badges.includes(badgeId)) {
+        badges.push(badgeId);
+        localStorage.setItem('gate_unlocked_badges', JSON.stringify(badges));
+      }
+      resolve(badges);
+    });
   }
 };
 
@@ -1027,6 +1083,62 @@ const realFirestore = {
     } catch (err) {
       console.error("Failed to seed questions:", err);
     }
+  },
+
+  async getBookmarks() {
+    return new Promise((resolve) => {
+      resolve(JSON.parse(localStorage.getItem('gate_bookmarks') || '[]'));
+    });
+  },
+  async saveBookmark(question) {
+    return new Promise((resolve) => {
+      const list = JSON.parse(localStorage.getItem('gate_bookmarks') || '[]');
+      if (!list.some(q => q.id === question.id)) {
+        list.push(question);
+        localStorage.setItem('gate_bookmarks', JSON.stringify(list));
+      }
+      resolve(true);
+    });
+  },
+  async deleteBookmark(questionId) {
+    return new Promise((resolve) => {
+      const list = JSON.parse(localStorage.getItem('gate_bookmarks') || '[]');
+      const updated = list.filter(q => q.id !== questionId);
+      localStorage.setItem('gate_bookmarks', JSON.stringify(updated));
+      resolve(true);
+    });
+  },
+  async isBookmarked(questionId) {
+    return new Promise((resolve) => {
+      const list = JSON.parse(localStorage.getItem('gate_bookmarks') || '[]');
+      resolve(list.some(q => q.id === questionId));
+    });
+  },
+  async getSyllabusProgress() {
+    return new Promise((resolve) => {
+      resolve(JSON.parse(localStorage.getItem('gate_syllabus_progress') || '{}'));
+    });
+  },
+  async saveSyllabusProgress(progress) {
+    return new Promise((resolve) => {
+      localStorage.setItem('gate_syllabus_progress', JSON.stringify(progress));
+      resolve(progress);
+    });
+  },
+  async getUnlockedBadges() {
+    return new Promise((resolve) => {
+      resolve(JSON.parse(localStorage.getItem('gate_unlocked_badges') || '[]'));
+    });
+  },
+  async unlockBadge(badgeId) {
+    return new Promise((resolve) => {
+      const badges = JSON.parse(localStorage.getItem('gate_unlocked_badges') || '[]');
+      if (!badges.includes(badgeId)) {
+        badges.push(badgeId);
+        localStorage.setItem('gate_unlocked_badges', JSON.stringify(badges));
+      }
+      resolve(badges);
+    });
   }
 };
 

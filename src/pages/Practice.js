@@ -55,6 +55,9 @@ export const Practice = {
       this.questions = [];
     }
 
+    const bookmarks = await db.getBookmarks();
+    this.bookmarkedIds = new Set(bookmarks.map(b => b.id));
+
     const subjects = Object.keys(SUBJECT_SYLLABUS);
     const difficulties = ["Easy", "Medium", "Hard"];
 
@@ -210,6 +213,10 @@ export const Practice = {
                     </button>
                     <button class="eli5-btn px-4 py-2.5 rounded-xl border border-indigo-500/30 bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-500/20 text-xs font-bold transition-all active:scale-95 flex items-center gap-1.5" data-qid="${q.id}">
                       <i class="fa-solid fa-wand-magic-sparkles text-indigo-500 animate-pulse"></i> Explain Like I'm 5
+                    </button>
+                    <button class="bookmark-btn px-4 py-2.5 rounded-xl border border-slate-200 dark:border-white/[0.08] bg-white/20 dark:bg-slate-900/20 text-slate-650 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-850 text-xs font-bold transition-all active:scale-95 flex items-center gap-1.5" data-qid="${q.id}">
+                      <i class="${this.bookmarkedIds.has(q.id) ? 'fa-solid fa-bookmark text-amber-500 animate-bounce-short' : 'fa-regular fa-bookmark'}"></i> 
+                      <span>${this.bookmarkedIds.has(q.id) ? 'Bookmarked' : 'Bookmark'}</span>
                     </button>
                   </div>
 
@@ -546,6 +553,25 @@ export const Practice = {
           eli5Btn?.addEventListener('click', () => {
             eli5Container?.classList.toggle('hidden');
           });
+        });
+
+        const bookmarkBtn = panel.querySelector('.bookmark-btn');
+        bookmarkBtn?.addEventListener('click', async () => {
+          const questionObj = this.questions.find(q => q.id === qid);
+          if (!questionObj) return;
+
+          const isBookmarked = this.bookmarkedIds.has(qid);
+          if (isBookmarked) {
+            await db.deleteBookmark(qid);
+            this.bookmarkedIds.delete(qid);
+            bookmarkBtn.innerHTML = `<i class="fa-regular fa-bookmark"></i> <span>Bookmark</span>`;
+            showToast("Bookmark removed", "info");
+          } else {
+            await db.saveBookmark(questionObj);
+            this.bookmarkedIds.add(qid);
+            bookmarkBtn.innerHTML = `<i class="fa-solid fa-bookmark text-amber-500 animate-bounce-short"></i> <span class="text-amber-500">Bookmarked</span>`;
+            showToast("Question bookmarked!", "success");
+          }
         });
       });
 

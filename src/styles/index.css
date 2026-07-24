@@ -58,6 +58,19 @@
   display: none;
 }
 
+/* Prevent text overflow in all buttons */
+button,
+.calc-btn,
+.dashboard-tab-btn,
+.subject-select-btn,
+.formula-sub-pill,
+.subj-btn,
+.diff-filter-btn {
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+}
+
 /* Custom virtual calculator styles */
 .calc-btn {
   @apply text-sm font-semibold p-2.5 rounded-lg transition-all duration-150 hover:scale-95 active:scale-90 select-none;

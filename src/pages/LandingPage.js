@@ -2,6 +2,26 @@ import { auth } from '../config/firebase';
 import { toggleTheme, getTheme } from '../utils/theme';
 import { showToast } from '../utils/toast';
 
+function getFriendlyAuthErrorMessage(err) {
+  const code = err.code || '';
+  const message = err.message || '';
+  
+  if (code === 'auth/email-already-in-use' || message.includes('auth/email-already-in-use')) {
+    return "An account with this email already exists. Please sign in instead.";
+  }
+  if (code === 'auth/weak-password' || message.includes('auth/weak-password')) {
+    return "Password is too weak. Please use at least 6 characters.";
+  }
+  if (code === 'auth/invalid-email' || message.includes('auth/invalid-email')) {
+    return "Invalid email format. Please check your email.";
+  }
+  if (code === 'auth/user-not-found' || code === 'auth/wrong-password' || code === 'auth/invalid-credential' || 
+      message.includes('auth/user-not-found') || message.includes('auth/wrong-password') || message.includes('auth/invalid-credential')) {
+    return "Incorrect email or password. Please try again.";
+  }
+  return message || "An unexpected authentication error occurred.";
+}
+
 export const LandingPage = {
   render() {
     const theme = getTheme();
@@ -306,7 +326,8 @@ export const LandingPage = {
         closeModal();
         window.location.hash = '#/dashboard';
       } catch (err) {
-        showToast(err.message, 'error');
+        const friendlyMessage = getFriendlyAuthErrorMessage(err);
+        showToast(friendlyMessage, 'error');
       } finally {
         authSubmitBtn.disabled = false;
         submitSpinner.classList.add('hidden');
