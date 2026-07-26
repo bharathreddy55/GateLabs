@@ -77,7 +77,7 @@ export const About = {
 
             <!-- Pillar 3 -->
             <div class="glass-card p-6 rounded-2xl border border-slate-200/60 dark:border-white/[0.08] hover:-translate-y-1 transition-all duration-300">
-              <div class="h-12 w-12 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl mb-4">
+              <div class="h-12 w-12 rounded-xl bg-primary-500/10 text-primary-500 flex items-center justify-center text-xl mb-4">
                 <i class="fa-solid fa-sliders"></i>
               </div>
               <h4 class="font-display font-bold text-lg text-slate-900 dark:text-white mb-2">Mistake Analytics</h4>

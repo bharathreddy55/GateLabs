@@ -345,7 +345,7 @@ export const Practice = {
                 <button id="generate-more-btn" class="px-4 py-2.5 text-xs font-bold text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800 rounded-xl hover:bg-indigo-50/20 transition-all flex items-center gap-1.5 select-none hover:scale-102 active:scale-95 duration-100">
                   <i class="fa-solid fa-wand-magic-sparkles"></i> Generate Similar Qs
                 </button>
-                <button id="import-all-btn" class="px-5 py-2.5 text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-500 rounded-xl shadow-md transition-all flex items-center gap-1.5 select-none hover:scale-102 active:scale-95 duration-100">
+                <button id="import-all-btn" class="px-5 py-2.5 text-xs font-bold text-white btn-accent rounded-xl shadow-md transition-all flex items-center gap-1.5 select-none hover:scale-102 active:scale-95 duration-100">
                   <i class="fa-solid fa-file-import"></i> Save to Practice Pool
                 </button>
               </div>

@@ -88,7 +88,7 @@ export const Dashboard = {
     const getTabBtnClass = (tabName) => {
       const base = "px-4 py-2.5 rounded-full text-xs font-bold transition-all flex items-center gap-2 select-none cursor-pointer";
       if (this.activeTab === tabName) {
-        return `${base} bg-[#10b981] text-white shadow-md`;
+        return `${base} bg-primary-500 text-white shadow-md`;
       }
       return `${base} text-slate-600 dark:text-slate-400 hover:bg-black/5 dark:hover:bg-white/10 hover:text-slate-900 dark:hover:text-white`;
     };
@@ -129,8 +129,8 @@ export const Dashboard = {
             </button>
           </div>
           
-          <div class="hidden md:flex items-center gap-2 px-4 py-2 bg-emerald-500/10 text-[#10b981] rounded-full border border-emerald-500/20 font-bold text-xs">
-            <i class="fa-solid fa-fire text-[#10b981] animate-pulse"></i>
+          <div class="hidden md:flex items-center gap-2 px-4 py-2 bg-primary-500/10 text-primary-500 rounded-full border border-emerald-500/20 font-bold text-xs">
+            <i class="fa-solid fa-fire text-primary-500 animate-pulse"></i>
             <span>${streakDays} Days</span>
           </div>
         </div>
@@ -149,13 +149,13 @@ export const Dashboard = {
         <!-- Header -->
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-200/50 dark:border-white/[0.05] pb-5">
           <div class="space-y-1">
-            <span class="text-xs font-extrabold uppercase tracking-widest text-[#10b981]">GATE CS 2027</span>
+            <span class="text-xs font-extrabold uppercase tracking-widest text-primary-500">GATE CS 2027</span>
             <h1 class="font-display font-extrabold text-2xl md:text-3xl text-slate-900 dark:text-white tracking-tight">
               ${greetingText}
             </h1>
           </div>
           <div class="flex items-center gap-3">
-            <a href="#/mock-test" class="px-5 py-2.5 rounded-full bg-[#10b981] text-white text-xs font-bold shadow-md hover:scale-102 active:scale-95 transition-all flex items-center gap-2">
+            <a href="#/mock-test" class="px-5 py-2.5 rounded-full bg-primary-500 text-white text-xs font-bold shadow-md hover:scale-102 active:scale-95 transition-all flex items-center gap-2">
               <i class="fa-solid fa-play text-xs"></i> Start Practice Exam
             </a>
           </div>
@@ -165,7 +165,7 @@ export const Dashboard = {
         <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
           
           <!-- Continue Learning Card -->
-          <div class="md:col-span-2 glass-panel p-7 rounded-3xl relative overflow-hidden flex flex-col justify-between border border-slate-200/60 dark:border-white/[0.07] group hover:border-[#10b981]/40">
+          <div class="md:col-span-2 glass-panel p-7 rounded-3xl relative overflow-hidden flex flex-col justify-between border border-slate-200/60 dark:border-white/[0.07] group hover:border-primary-500/40">
             <div class="flex items-start justify-between">
               <div>
                 <span class="text-xs font-extrabold text-slate-400 dark:text-slate-400 uppercase tracking-wider">Continue Learning</span>
@@ -174,17 +174,17 @@ export const Dashboard = {
                 </h3>
                 <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 font-medium">Topic: Virtual Memory & Page Tables</p>
               </div>
-              <span class="font-display font-extrabold text-2xl text-[#10b981]">75%</span>
+              <span class="font-display font-extrabold text-2xl text-primary-500">75%</span>
             </div>
 
             <div class="mt-6 space-y-3">
               <div class="w-full bg-black/5 dark:bg-white/10 h-2.5 rounded-full overflow-hidden p-0.5 border border-black/5 dark:border-white/5">
-                <div class="bg-[#10b981] h-full rounded-full transition-all duration-700 shadow-sm" style="width: 75%"></div>
+                <div class="bg-primary-500 h-full rounded-full transition-all duration-700 shadow-sm" style="width: 75%"></div>
               </div>
 
               <div class="flex items-center justify-between pt-1">
                 <span class="text-xs text-slate-400 dark:text-slate-400 font-semibold">12 of 16 subtopics completed</span>
-                <a href="#/practice" class="px-5 py-2 rounded-full bg-[#10b981] text-white text-xs font-bold shadow-md hover:scale-105 active:scale-95 transition-all">
+                <a href="#/practice" class="px-5 py-2 rounded-full bg-primary-500 text-white text-xs font-bold shadow-md hover:scale-105 active:scale-95 transition-all">
                   Resume &rarr;
                 </a>
               </div>
@@ -195,21 +195,21 @@ export const Dashboard = {
           <div class="glass-panel p-7 rounded-3xl flex flex-col justify-between border border-slate-200/60 dark:border-white/[0.07] bg-gradient-to-br from-emerald-500/10 via-transparent to-transparent relative overflow-hidden">
             <div class="flex items-center justify-between">
               <span class="text-xs font-extrabold text-slate-400 dark:text-slate-400 uppercase tracking-wider">Daily Streak</span>
-              <div class="h-9 w-9 rounded-2xl bg-[#10b981]/15 text-[#10b981] flex items-center justify-center text-lg shadow-sm">
+              <div class="h-9 w-9 rounded-2xl bg-primary-500/15 text-primary-500 flex items-center justify-center text-lg shadow-sm">
                 <i class="fa-solid fa-fire animate-pulse"></i>
               </div>
             </div>
 
             <div class="my-4">
               <h2 class="font-display font-extrabold text-3xl text-slate-900 dark:text-white flex items-baseline gap-2">
-                🔥 ${streakDays} <span class="text-base font-bold text-slate-400 dark:text-slate-400">Days</span>
+                🔥 ${streakDays} <span class="var(--accent-from)ase font-bold text-slate-400 dark:text-slate-400">Days</span>
               </h2>
               <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 font-medium">You are in the top 5% of consistent candidates this month.</p>
             </div>
 
-            <div class="pt-2 border-t border-slate-200/50 dark:border-white/[0.05] flex items-center justify-between text-xs font-bold text-[#10b981]">
+            <div class="pt-2 border-t border-slate-200/50 dark:border-white/[0.05] flex items-center justify-between text-xs font-bold text-primary-500">
               <span>Flame Active</span>
-              <span class="text-[10px] bg-[#10b981]/10 px-2.5 py-1 rounded-full border border-[#10b981]/20">Level 8 Scholar</span>
+              <span class="text-[10px] bg-primary-500/10 px-2.5 py-1 rounded-full border border-primary-500/20">Level 8 Scholar</span>
             </div>
           </div>
 
@@ -217,19 +217,19 @@ export const Dashboard = {
 
         <!-- Quick Actions Bento Grid -->
         <div class="space-y-3">
-          <h3 class="font-display font-extrabold text-base text-slate-900 dark:text-white tracking-tight">Quick Actions</h3>
+          <h3 class="font-display font-extrabold var(--accent-from)ase text-slate-900 dark:text-white tracking-tight">Quick Actions</h3>
           
           <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
             
-            <a href="#/formulas" class="glass-panel p-5 rounded-3xl flex flex-col items-center justify-center text-center gap-2.5 hover:border-[#10b981] hover:scale-102 active:scale-95 transition-all group shadow-sm">
-              <div class="h-11 w-11 rounded-2xl bg-emerald-500/10 text-[#10b981] flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+            <a href="#/formulas" class="glass-panel p-5 rounded-3xl flex flex-col items-center justify-center text-center gap-2.5 hover:border-primary-500 hover:scale-102 active:scale-95 transition-all group shadow-sm">
+              <div class="h-11 w-11 rounded-2xl bg-primary-500/10 text-primary-500 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
                 📖
               </div>
               <span class="font-display font-extrabold text-xs text-slate-900 dark:text-white">Notes</span>
               <span class="text-[10px] text-slate-400 dark:text-slate-400 font-medium">Formulas Deck</span>
             </a>
 
-            <a href="#/practice" class="glass-panel p-5 rounded-3xl flex flex-col items-center justify-center text-center gap-2.5 hover:border-[#10b981] hover:scale-102 active:scale-95 transition-all group shadow-sm">
+            <a href="#/practice" class="glass-panel p-5 rounded-3xl flex flex-col items-center justify-center text-center gap-2.5 hover:border-primary-500 hover:scale-102 active:scale-95 transition-all group shadow-sm">
               <div class="h-11 w-11 rounded-2xl bg-teal-500/10 text-teal-500 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
                 📝
               </div>
@@ -237,15 +237,15 @@ export const Dashboard = {
               <span class="text-[10px] text-slate-400 dark:text-slate-400 font-medium">Topic Questions</span>
             </a>
 
-            <a href="#/mock-test" class="glass-panel p-5 rounded-3xl flex flex-col items-center justify-center text-center gap-2.5 hover:border-[#10b981] hover:scale-102 active:scale-95 transition-all group shadow-sm">
-              <div class="h-11 w-11 rounded-2xl bg-emerald-500/10 text-[#10b981] flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+            <a href="#/mock-test" class="glass-panel p-5 rounded-3xl flex flex-col items-center justify-center text-center gap-2.5 hover:border-primary-500 hover:scale-102 active:scale-95 transition-all group shadow-sm">
+              <div class="h-11 w-11 rounded-2xl bg-primary-500/10 text-primary-500 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
                 🎯
               </div>
               <span class="font-display font-extrabold text-xs text-slate-900 dark:text-white">Mock Test</span>
               <span class="text-[10px] text-slate-400 dark:text-slate-400 font-medium">CBT Simulator</span>
             </a>
 
-            <a href="#/assistant" class="glass-panel p-5 rounded-3xl flex flex-col items-center justify-center text-center gap-2.5 hover:border-[#10b981] hover:scale-102 active:scale-95 transition-all group shadow-sm">
+            <a href="#/assistant" class="glass-panel p-5 rounded-3xl flex flex-col items-center justify-center text-center gap-2.5 hover:border-primary-500 hover:scale-102 active:scale-95 transition-all group shadow-sm">
               <div class="h-11 w-11 rounded-2xl bg-teal-500/10 text-teal-500 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
                 🤖
               </div>
@@ -253,8 +253,8 @@ export const Dashboard = {
               <span class="text-[10px] text-slate-400 dark:text-slate-400 font-medium">Gemini Assistant</span>
             </a>
 
-            <a href="#/analytics" class="glass-panel p-5 rounded-3xl flex flex-col items-center justify-center text-center gap-2.5 hover:border-[#10b981] hover:scale-102 active:scale-95 transition-all group shadow-sm">
-              <div class="h-11 w-11 rounded-2xl bg-emerald-500/10 text-[#10b981] flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+            <a href="#/analytics" class="glass-panel p-5 rounded-3xl flex flex-col items-center justify-center text-center gap-2.5 hover:border-primary-500 hover:scale-102 active:scale-95 transition-all group shadow-sm">
+              <div class="h-11 w-11 rounded-2xl bg-primary-500/10 text-primary-500 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
                 📊
               </div>
               <span class="font-display font-extrabold text-xs text-slate-900 dark:text-white">Analytics</span>
@@ -268,10 +268,10 @@ export const Dashboard = {
         <div class="glass-panel p-7 rounded-3xl flex flex-col gap-5 border border-slate-200/60 dark:border-white/[0.07]">
           <div class="flex items-center justify-between border-b border-slate-200/50 dark:border-white/[0.05] pb-4">
             <div>
-              <h3 class="font-display font-extrabold text-base text-slate-900 dark:text-white tracking-tight">Recent Exam Sessions</h3>
+              <h3 class="font-display font-extrabold var(--accent-from)ase text-slate-900 dark:text-white tracking-tight">Recent Exam Sessions</h3>
               <p class="text-xs text-slate-400 dark:text-slate-400 font-medium mt-0.5">Historical CBT mock test logs and performance metrics</p>
             </div>
-            <a href="#/analytics" class="text-xs font-bold text-[#10b981] hover:underline">Full History &rarr;</a>
+            <a href="#/analytics" class="text-xs font-bold text-primary-500 hover:underline">Full History &rarr;</a>
           </div>
 
           ${mockTestsTaken === 0 ? `
@@ -303,7 +303,7 @@ export const Dashboard = {
                       <td class="py-3 font-bold text-slate-900 dark:text-white">${att.score} / ${att.totalPossibleMarks}</td>
                       <td class="py-3">
                         <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold ${
-                          att.accuracy >= 75 ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20' :
+                          att.accuracy >= 75 ? 'bg-primary-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20' :
                           att.accuracy >= 50 ? 'bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20' :
                           'bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/20'
                         }">
@@ -312,7 +312,7 @@ export const Dashboard = {
                       </td>
                       <td class="py-3 text-slate-400 dark:text-slate-400">${new Date(att.timestamp).toLocaleDateString()}</td>
                       <td class="py-3 text-right">
-                        <a href="#/analytics?id=${att.id}" class="text-xs font-bold text-[#10b981] hover:underline">
+                        <a href="#/analytics?id=${att.id}" class="text-xs font-bold text-primary-500 hover:underline">
                           View &rarr;
                         </a>
                       </td>
@@ -489,7 +489,7 @@ export const Dashboard = {
             <!-- Modal Header -->
             <div class="flex items-center justify-between border-b border-slate-800 pb-4">
               <div class="flex items-center gap-3">
-                <div class="h-10 w-10 rounded-2xl bg-[#4338ca] text-white flex items-center justify-center text-base shadow-md">
+                <div class="h-10 w-10 rounded-2xl bg-[#4338ca] text-white flex items-center justify-center var(--accent-from)ase shadow-md">
                   <i class="fa-solid fa-graduation-cap"></i>
                 </div>
                 <div>
@@ -532,11 +532,11 @@ export const Dashboard = {
                               : 'bg-slate-900/70 border-slate-800 text-slate-300 hover:border-indigo-500/40'
                           }">
                             <div class="flex items-center gap-2.5 min-w-0">
-                              <input type="checkbox" class="syllabus-topic-chk h-4 w-4 rounded border-slate-700 text-[#10b981] focus:ring-[#10b981] bg-transparent cursor-pointer" data-key="${key}" ${isChecked ? 'checked' : ''}>
+                              <input type="checkbox" class="syllabus-topic-chk h-4 w-4 rounded border-slate-700 text-primary-500 focus:ring-primary-500 bg-transparent cursor-pointer" data-key="${key}" ${isChecked ? 'checked' : ''}>
                               <span class="text-xs font-semibold truncate ${isChecked ? 'line-through opacity-75' : ''}">${t}</span>
                             </div>
                             <span class="text-[9px] font-mono font-bold px-2 py-0.5 rounded flex-shrink-0 ${
-                              isChecked ? 'bg-emerald-500/20 text-emerald-300' : 'bg-slate-800 text-slate-400'
+                              isChecked ? 'bg-primary-500/20 text-emerald-300' : 'bg-slate-800 text-slate-400'
                             }">
                               ${isChecked ? 'Mastered' : 'To Study'}
                             </span>
@@ -587,7 +587,7 @@ export const Dashboard = {
           <!-- EXPORT CARD -->
           <div class="glass-panel p-7 rounded-3xl border border-slate-200/60 dark:border-white/[0.08] flex flex-col justify-between gap-6 shadow-md">
             <div class="flex flex-col gap-3">
-              <div class="h-12 w-12 rounded-2xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center justify-center text-xl">
+              <div class="h-12 w-12 rounded-2xl bg-primary-500/10 text-emerald-400 border border-emerald-500/20 flex items-center justify-center text-xl">
                 <i class="fa-solid fa-file-export"></i>
               </div>
               <h4 class="font-display font-extrabold text-lg text-slate-900 dark:text-white">Export Workspace Backup</h4>
@@ -678,7 +678,7 @@ export const Dashboard = {
       <div class="flex flex-col gap-6">
         <div class="glass-panel p-7 rounded-3xl border border-slate-200/60 dark:border-white/[0.07] flex flex-col md:flex-row items-center justify-between gap-6 bg-gradient-to-r from-emerald-500/10 via-transparent to-transparent">
           <div class="flex items-center gap-4">
-            <div class="h-14 w-14 rounded-2xl bg-[#10b981]/15 text-[#10b981] flex items-center justify-center text-2xl shadow-sm">
+            <div class="h-14 w-14 rounded-2xl bg-primary-500/15 text-primary-500 flex items-center justify-center text-2xl shadow-sm">
               <i class="fa-solid fa-fire animate-pulse"></i>
             </div>
             <div>
@@ -687,7 +687,7 @@ export const Dashboard = {
             </div>
           </div>
           <div>
-            <span class="px-4 py-2 bg-[#10b981]/10 text-[#10b981] rounded-full text-xs font-bold border border-[#10b981]/20">Streak Level 8</span>
+            <span class="px-4 py-2 bg-primary-500/10 text-primary-500 rounded-full text-xs font-bold border border-primary-500/20">Streak Level 8</span>
           </div>
         </div>
 
@@ -697,7 +697,7 @@ export const Dashboard = {
             ${badges.map(b => {
               const isUnlocked = unlockedSet.has(b.id);
               const cardClass = isUnlocked 
-                ? 'border-[#10b981]/30 bg-[#10b981]/5 shadow-sm' 
+                ? 'border-primary-500/30 bg-primary-500/5 shadow-sm' 
                 : 'opacity-50 border-slate-200/50 dark:border-white/5 bg-white/40 dark:bg-black/20';
 
               const iconClass = isUnlocked
@@ -771,10 +771,10 @@ export const Dashboard = {
             ${filtered.map((q, index) => `
               <div class="glass-panel p-5 rounded-3xl flex flex-col gap-3.5 border border-slate-200/60 dark:border-white/[0.07]" data-qid="${q.id}">
                 <div class="flex items-center justify-between border-b border-slate-200/40 dark:border-white/[0.05] pb-3">
-                  <span class="text-xs font-bold text-[#10b981] uppercase tracking-wider">${q.subject} &bull; ${q.topic}</span>
+                  <span class="text-xs font-bold text-primary-500 uppercase tracking-wider">${q.subject} &bull; ${q.topic}</span>
                   <div class="flex gap-2 flex-wrap">
                     <span class="text-[10px] font-bold bg-black/5 dark:bg-white/5 px-2.5 py-0.5 rounded-full text-slate-500 dark:text-slate-400">${q.difficulty}</span>
-                    <span class="text-[10px] font-bold bg-[#10b981]/10 text-[#10b981] px-2.5 py-0.5 rounded-full">${q.marks} Mark${q.marks > 1 ? 's' : ''}</span>
+                    <span class="text-[10px] font-bold bg-primary-500/10 text-primary-500 px-2.5 py-0.5 rounded-full">${q.marks} Mark${q.marks > 1 ? 's' : ''}</span>
                   </div>
                 </div>
 
@@ -783,14 +783,14 @@ export const Dashboard = {
                 <div class="flex flex-col gap-2 mt-1">
                   ${q.options.map((opt, optIdx) => `
                     <label class="glass-card flex items-start gap-3 p-3 rounded-2xl border border-slate-200/40 dark:border-white/[0.05] bg-white/40 dark:bg-black/20 cursor-pointer relative">
-                      <input type="radio" name="bookmark-option-${q.id}" value="${optIdx}" class="mt-0.5 text-[#10b981] border-slate-300 focus:ring-[#10b981]">
+                      <input type="radio" name="bookmark-option-${q.id}" value="${optIdx}" class="mt-0.5 text-primary-500 border-slate-300 focus:ring-primary-500">
                       <span class="text-xs text-slate-700 dark:text-slate-300 font-medium">${String.fromCharCode(65 + optIdx)}. ${opt}</span>
                     </label>
                   `).join('')}
                 </div>
 
                 <div class="flex items-center gap-3 mt-2 flex-wrap">
-                  <button class="bookmark-check-btn px-5 py-2 rounded-full bg-[#10b981] text-white text-xs font-bold shadow-md hover:scale-102 active:scale-95 transition-all">
+                  <button class="bookmark-check-btn px-5 py-2 rounded-full bg-primary-500 text-white text-xs font-bold shadow-md hover:scale-102 active:scale-95 transition-all">
                     Check Answer
                   </button>
                   <button class="bookmark-delete-btn px-4 py-2 rounded-full border border-rose-500/30 bg-rose-500/10 text-rose-600 dark:text-rose-400 text-xs font-bold hover:bg-rose-500/20 active:scale-95 transition-all flex items-center gap-1.5" data-qid="${q.id}">
@@ -802,7 +802,7 @@ export const Dashboard = {
                   <div class="inline-flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-bold text-xs">
                     <i class="fa-solid fa-square-check"></i> Explanation
                   </div>
-                  <div class="p-3.5 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-xs text-slate-700 dark:text-slate-300 whitespace-pre-line font-medium">
+                  <div class="p-3.5 rounded-2xl bg-primary-500/10 border border-emerald-500/20 text-xs text-slate-700 dark:text-slate-300 whitespace-pre-line font-medium">
                     Correct option: <span class="bookmark-correct-char font-extrabold text-emerald-600 dark:text-emerald-400">N/A</span>.
                     ${q.explanation || 'No explanation available.'}
                   </div>

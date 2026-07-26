@@ -33,8 +33,8 @@ export const LandingPage = {
       <nav class="fixed top-4 left-4 right-4 z-40 bg-white/85 dark:bg-[#0d1320]/80 backdrop-blur-2xl border border-slate-200/60 dark:border-white/[0.07] rounded-3xl shadow-sm transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <div class="flex items-center gap-3">
-            <div class="h-9 w-9 rounded-2xl bg-gradient-to-tr from-[#10b981] to-[#14b8a6] flex items-center justify-center text-white shadow-md">
-              <i class="fa-solid fa-graduation-cap text-base"></i>
+            <div class="h-9 w-9 rounded-2xl bg-gradient-to-tr from-primary-500 to-[#14b8a6] flex items-center justify-center text-white shadow-md">
+              <i class="fa-solid fa-graduation-cap var(--accent-from)ase"></i>
             </div>
             <span class="font-display font-extrabold text-lg tracking-tight text-slate-900 dark:text-white">GateLabs</span>
           </div>
@@ -46,7 +46,7 @@ export const LandingPage = {
             </button>
 
             <button id="nav-login-btn" class="hidden sm:inline-flex text-xs font-bold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white px-4 py-2 transition-colors">Sign In</button>
-            <button id="nav-register-btn" class="inline-flex items-center justify-center px-5 py-2 text-xs font-bold text-white bg-[#10b981] hover:bg-[#059669] hover:scale-102 active:scale-95 rounded-full shadow-md transition-all">Get Started</button>
+            <button id="nav-register-btn" class="inline-flex items-center justify-center px-5 py-2 text-xs font-bold text-white bg-primary-500 hover:bg-[#059669] hover:scale-102 active:scale-95 rounded-full shadow-md transition-all">Get Started</button>
           </div>
         </div>
       </nav>
@@ -56,13 +56,13 @@ export const LandingPage = {
         
         <div class="max-w-4xl mx-auto space-y-5 relative z-10">
           <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-slate-200 dark:border-white/10 bg-white/70 dark:bg-white/5 backdrop-blur-md shadow-sm">
-            <span class="h-2 w-2 rounded-full bg-[#10b981] animate-ping"></span>
-            <span class="text-xs font-extrabold text-[#10b981] tracking-tight">GATE CS 2027 Simulator Engine</span>
+            <span class="h-2 w-2 rounded-full bg-primary-500 animate-ping"></span>
+            <span class="text-xs font-extrabold text-primary-500 tracking-tight">GATE CS 2027 Simulator Engine</span>
           </div>
 
           <h1 class="font-display font-extrabold text-4xl md:text-6xl text-slate-900 dark:text-white tracking-tight leading-[1.1]">
             Master GATE CS with <br/>
-            <span class="text-[#10b981]">Emerald-Grade Precision.</span>
+            <span class="text-primary-500">Emerald-Grade Precision.</span>
           </h1>
 
           <p class="text-xs md:text-sm text-slate-500 dark:text-slate-400 max-w-2xl mx-auto font-medium leading-relaxed">
@@ -70,7 +70,7 @@ export const LandingPage = {
           </p>
 
           <div class="pt-3 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button id="hero-get-started" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 text-xs font-bold text-white bg-[#10b981] hover:bg-[#059669] hover:scale-105 active:scale-95 rounded-full shadow-lg transition-all">
+            <button id="hero-get-started" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 text-xs font-bold text-white bg-primary-500 hover:bg-[#059669] hover:scale-105 active:scale-95 rounded-full shadow-lg transition-all">
               <span>Start Preparation Now</span>
               <i class="fa-solid fa-arrow-right text-xs"></i>
             </button>
@@ -80,10 +80,10 @@ export const LandingPage = {
         <!-- 3 Feature Highlight Cards -->
         <div class="max-w-6xl mx-auto mt-16 grid grid-cols-1 md:grid-cols-3 gap-5 relative z-10 w-full">
           <div class="glass-panel p-7 rounded-3xl border border-slate-200/60 dark:border-white/[0.07] flex flex-col gap-3 text-left">
-            <div class="h-11 w-11 rounded-2xl bg-emerald-500/10 text-[#10b981] flex items-center justify-center text-xl">
+            <div class="h-11 w-11 rounded-2xl bg-primary-500/10 text-primary-500 flex items-center justify-center text-xl">
               🎯
             </div>
-            <h3 class="font-display font-extrabold text-base text-slate-900 dark:text-white">CBT Exam Simulator</h3>
+            <h3 class="font-display font-extrabold var(--accent-from)ase text-slate-900 dark:text-white">CBT Exam Simulator</h3>
             <p class="text-xs text-slate-500 dark:text-slate-400 font-medium leading-relaxed">Exact GATE exam interface matching standard paper palettes, countdown timers, and virtual calculator.</p>
           </div>
 
@@ -91,15 +91,15 @@ export const LandingPage = {
             <div class="h-11 w-11 rounded-2xl bg-teal-500/10 text-teal-500 flex items-center justify-center text-xl">
               ⚡
             </div>
-            <h3 class="font-display font-extrabold text-base text-slate-900 dark:text-white">Syllabus Mind Maps</h3>
+            <h3 class="font-display font-extrabold var(--accent-from)ase text-slate-900 dark:text-white">Syllabus Mind Maps</h3>
             <p class="text-xs text-slate-500 dark:text-slate-400 font-medium leading-relaxed">Checklist mind maps across Engineering Mathematics, Operating Systems, Computer Networks, and DBMS.</p>
           </div>
 
           <div class="glass-panel p-7 rounded-3xl border border-slate-200/60 dark:border-white/[0.07] flex flex-col gap-3 text-left">
-            <div class="h-11 w-11 rounded-2xl bg-emerald-500/10 text-[#10b981] flex items-center justify-center text-xl">
+            <div class="h-11 w-11 rounded-2xl bg-primary-500/10 text-primary-500 flex items-center justify-center text-xl">
               🤖
             </div>
-            <h3 class="font-display font-extrabold text-base text-slate-900 dark:text-white">AI Assistant</h3>
+            <h3 class="font-display font-extrabold var(--accent-from)ase text-slate-900 dark:text-white">AI Assistant</h3>
             <p class="text-xs text-slate-500 dark:text-slate-400 font-medium leading-relaxed">Instant step-by-step math solver and concept explanations powered by Google Gemini API.</p>
           </div>
         </div>
@@ -133,7 +133,7 @@ export const LandingPage = {
               <input type="password" id="auth-password" required placeholder="••••••••" class="glass-input font-semibold">
             </div>
 
-            <button type="submit" id="auth-submit-btn" class="w-full mt-2 py-3 rounded-full bg-[#10b981] text-white font-bold text-xs shadow-md active:scale-95 hover:scale-102 transition-all flex items-center justify-center gap-2">
+            <button type="submit" id="auth-submit-btn" class="w-full mt-2 py-3 rounded-full bg-primary-500 text-white font-bold text-xs shadow-md active:scale-95 hover:scale-102 transition-all flex items-center justify-center gap-2">
               <span id="submit-text">Sign Up</span>
               <i id="submit-spinner" class="fa-solid fa-circle-notch fa-spin hidden"></i>
             </button>
@@ -141,7 +141,7 @@ export const LandingPage = {
 
           <div class="mt-5 text-center text-xs text-slate-500 dark:text-slate-400 font-medium">
             <span id="toggle-text">Already have an account?</span>
-            <button id="toggle-auth-btn" class="text-[#10b981] font-bold hover:underline ml-1">Sign In</button>
+            <button id="toggle-auth-btn" class="text-primary-500 font-bold hover:underline ml-1">Sign In</button>
           </div>
         </div>
       </div>

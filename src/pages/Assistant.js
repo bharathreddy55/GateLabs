@@ -24,7 +24,7 @@ export const Assistant = {
         <!-- Header -->
         <div class="glass-panel p-4 rounded-3xl flex items-center justify-between border border-slate-200/60 dark:border-white/[0.07]">
           <div class="flex items-center gap-3">
-            <div class="h-9 w-9 rounded-2xl bg-[#10b981] text-white flex items-center justify-center text-base shadow-md">
+            <div class="h-9 w-9 rounded-2xl bg-primary-500 text-white flex items-center justify-center var(--accent-from)ase shadow-md">
               <i class="fa-solid fa-robot"></i>
             </div>
             <div>
@@ -34,7 +34,7 @@ export const Assistant = {
           </div>
 
           <div class="flex items-center gap-2">
-            <button id="btn-generate-qs" class="hidden sm:flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-full bg-[#10b981] text-white shadow-md hover:scale-102 active:scale-95 transition-all">
+            <button id="btn-generate-qs" class="hidden sm:flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-full bg-primary-500 text-white shadow-md hover:scale-102 active:scale-95 transition-all">
               <i class="fa-solid fa-wand-magic-sparkles"></i> Generate GATE Questions
             </button>
           </div>
@@ -44,7 +44,7 @@ export const Assistant = {
         <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1">
           <span class="text-xs font-bold text-slate-400 dark:text-slate-400 flex-shrink-0 px-2">Quick Prompts:</span>
           ${defaultTopics.map(t => `
-            <button class="quick-topic-btn flex-shrink-0 px-3.5 py-1.5 text-xs font-bold rounded-full border border-slate-200/60 dark:border-white/10 bg-white/60 dark:bg-[#121a2b]/60 hover:bg-[#10b981] hover:text-white dark:hover:bg-[#10b981] dark:hover:text-white transition-all text-slate-600 dark:text-slate-400" data-topic="${t}">
+            <button class="quick-topic-btn flex-shrink-0 px-3.5 py-1.5 text-xs font-bold rounded-full border border-slate-200/60 dark:border-white/10 bg-white/60 dark:bg-[#121a2b]/60 hover:bg-primary-500 hover:text-white dark:hover:bg-primary-500 dark:hover:text-white transition-all text-slate-600 dark:text-slate-400" data-topic="${t}">
               ${t}
             </button>
           `).join('')}
@@ -58,7 +58,7 @@ export const Assistant = {
         <!-- Input Bar -->
         <form id="assistant-form" class="glass-panel p-2 rounded-full flex items-center gap-2 border border-slate-200/60 dark:border-white/[0.07]">
           <input type="text" id="assistant-input" placeholder="Ask a GATE CS question or formula breakdown..." class="glass-input flex-1 border-0 bg-transparent focus:ring-0 text-xs px-4">
-          <button type="submit" class="px-5 py-2.5 rounded-full bg-[#10b981] text-white font-bold text-xs shadow-md active:scale-95 hover:scale-102 transition-all">
+          <button type="submit" class="px-5 py-2.5 rounded-full bg-primary-500 text-white font-bold text-xs shadow-md active:scale-95 hover:scale-102 transition-all">
             Send
           </button>
         </form>
@@ -71,7 +71,7 @@ export const Assistant = {
     if (isUser) {
       return `
         <div class="flex justify-end items-end gap-2">
-          <div class="max-w-[80%] bg-[#10b981] text-white px-4 py-2.5 rounded-3xl rounded-br-none text-xs font-medium leading-relaxed shadow-sm whitespace-pre-line">
+          <div class="max-w-[80%] bg-primary-500 text-white px-4 py-2.5 rounded-3xl rounded-br-none text-xs font-medium leading-relaxed shadow-sm whitespace-pre-line">
             ${msg.text}
           </div>
         </div>
@@ -79,7 +79,7 @@ export const Assistant = {
     }
     return `
       <div class="flex justify-start items-start gap-2.5">
-        <div class="h-7 w-7 rounded-xl bg-[#10b981]/15 text-[#10b981] flex items-center justify-center text-xs flex-shrink-0 mt-1 font-bold">
+        <div class="h-7 w-7 rounded-xl bg-primary-500/15 text-primary-500 flex items-center justify-center text-xs flex-shrink-0 mt-1 font-bold">
           <i class="fa-solid fa-robot"></i>
         </div>
         <div class="max-w-[85%] glass-card p-4 rounded-3xl rounded-tl-none border border-slate-200/40 dark:border-white/[0.05] bg-white/70 dark:bg-[#121a2b]/70 text-slate-800 dark:text-slate-200 text-xs leading-relaxed whitespace-pre-line font-medium shadow-sm">

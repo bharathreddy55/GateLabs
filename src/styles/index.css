@@ -262,8 +262,7 @@ button,
 
 /* Fullscreen Exam Mode */
 body.fullscreen-exam {
-  background-color: #ffffff !important;
-  color: #000000 !important;
+  @apply bg-[#f4f6f8] text-[#1e293b] dark:bg-[#080c14] dark:text-[#f1f5f9];
 }
 body.fullscreen-exam aside,
 body.fullscreen-exam header { display: none !important; }
@@ -273,7 +272,7 @@ body.fullscreen-exam main {
   padding: 1.25rem !important;
   max-width: 100% !important;
   width: 100% !important;
-  background-color: #ffffff !important;
+  @apply bg-[#f4f6f8] dark:bg-[#080c14] text-[#1e293b] dark:text-[#f1f5f9];
 }
 
 /* Command Palette */
