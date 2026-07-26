@@ -3,7 +3,14 @@ import { getTheme } from '../utils/theme';
 export const About = {
   async render() {
     return `
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-6 animate-fade-in space-y-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-6 animate-fade-in space-y-6">
+        <!-- Back Button -->
+        <div class="flex items-center">
+          <button id="btn-about-back" class="px-4 py-2 rounded-xl border border-slate-200 dark:border-white/10 text-slate-600 dark:text-slate-300 text-xs font-bold hover:bg-slate-100 dark:hover:bg-slate-800 transition-all flex items-center gap-1.5 active:scale-95 select-none">
+            <i class="fa-solid fa-arrow-left"></i> Go Back
+          </button>
+        </div>
+
         <!-- Hero Header -->
         <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white p-8 sm:p-12 border border-white/10 shadow-2xl">
           <div class="absolute -right-20 -top-20 w-96 h-96 bg-primary-500/20 rounded-full blur-3xl pointer-events-none"></div>
@@ -161,5 +168,9 @@ export const About = {
   async init() {
     // Scroll to top when loaded
     window.scrollTo(0, 0);
+
+    document.getElementById('btn-about-back')?.addEventListener('click', () => {
+      window.history.back();
+    });
   }
 };
