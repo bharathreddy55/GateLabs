@@ -743,6 +743,9 @@ const mockFirestore = {
         } else if (filters.difficulty) {
           list = list.filter(q => q.difficulty.toLowerCase() === filters.difficulty.toLowerCase());
         }
+        if (filters.year) {
+          list = list.filter(q => parseInt(q.year) === parseInt(filters.year));
+        }
         resolve(list);
       }, 400);
     });
@@ -991,6 +994,9 @@ const realFirestore = {
       // If limit is 'hard', we include all questions, so no filtering needed
     } else if (filters.difficulty) {
       list = list.filter(q => q.difficulty.toLowerCase() === filters.difficulty.toLowerCase());
+    }
+    if (filters.year) {
+      list = list.filter(q => parseInt(q.year) === parseInt(filters.year));
     }
     return list;
   },

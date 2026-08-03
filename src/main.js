@@ -12,6 +12,7 @@ import { MockTest } from './pages/MockTest';
 import { Analytics } from './pages/Analytics';
 import { About } from './pages/About';
 import { Formulas } from './pages/Formulas';
+import { PyqMocks } from './pages/PyqMocks';
 
 // Import Layout Component
 import { Layout } from './components/Layout';
@@ -32,6 +33,7 @@ const routes = {
   '/assistant': { component: Assistant, requiresAuth: true, name: 'assistant' },
   '/practice': { component: Practice, requiresAuth: true, name: 'practice' },
   '/mock-test': { component: MockTest, requiresAuth: true, name: 'mock-test' },
+  '/pyq-mocks': { component: PyqMocks, requiresAuth: true, name: 'pyq-mocks' },
   '/analytics': { component: Analytics, requiresAuth: true, name: 'analytics' }
 };
 
