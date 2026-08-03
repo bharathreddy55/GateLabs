@@ -24,7 +24,11 @@ export const Layout = {
     const userEmail = user.email || 'aspirant@gate.edu';
 
     return `
-      <div class="min-h-screen flex bg-[#f4f6f8] dark:bg-[#080c14] transition-colors duration-300 p-4 gap-4">
+      <div class="min-h-screen flex bg-[#f5f7fa] dark:bg-[#060a13] bg-grid transition-colors duration-300 p-4 gap-4 relative overflow-hidden">
+        
+        <!-- Ambient Glowing Background Orbs -->
+        <div class="absolute top-[-20%] left-[-20%] w-[60%] h-[60%] rounded-full bg-gradient-to-tr from-primary-500/10 to-indigo-500/10 blur-[150px] pointer-events-none"></div>
+        <div class="absolute bottom-[-20%] right-[-20%] w-[60%] h-[60%] rounded-full bg-gradient-to-tr from-indigo-500/10 to-purple-500/10 blur-[150px] pointer-events-none"></div>
 
         <!-- ======= SIDEBAR ======= -->
         <aside id="sidebar-container" class="w-64 fixed top-4 bottom-4 left-4 z-30 border border-slate-200/60 dark:border-white/[0.07] bg-white/85 dark:bg-[#0d1320]/80 backdrop-blur-2xl flex flex-col rounded-3xl transition-all duration-300 shadow-sm overflow-hidden">
@@ -94,7 +98,7 @@ export const Layout = {
               </button>
 
               <button id="settings-btn" title="Configure Gemini API" class="group flex flex-col items-center gap-1 py-2 px-1 rounded-xl hover:bg-black/5 dark:hover:bg-white/8 active:scale-95 transition-all select-none">
-                <span class="h-7 w-7 rounded-xl flex items-center justify-center bg-slate-100 dark:bg-white/10 text-slate-500 dark:text-slate-400 text-xs group-hover:scale-110 transition-transform">
+                <span class="h-7 w-7 rounded-xl flex items-center justify-center bg-slate-100 dark:bg-white/10 text-slate-505 dark:text-slate-400 text-xs group-hover:scale-110 transition-transform">
                   <i class="fa-solid fa-gear"></i>
                 </span>
                 <span class="text-[9px] font-bold text-slate-500 dark:text-slate-400 leading-none">Config</span>
@@ -111,7 +115,7 @@ export const Layout = {
         </aside>
 
         <!-- ======= MAIN BODY ======= -->
-        <div class="flex-1 pl-[18rem] flex flex-col min-h-screen pr-2 py-2">
+        <div class="flex-1 pl-[18rem] flex flex-col min-h-screen pr-2 py-2 relative z-10">
 
           <!-- Sticky Top Header -->
           <header id="layout-header" class="h-16 border border-slate-200/60 dark:border-white/[0.07] bg-white/85 dark:bg-[#0d1320]/80 backdrop-blur-2xl sticky top-4 z-20 flex items-center justify-between px-6 rounded-3xl transition-colors duration-300 shadow-sm">

@@ -7,7 +7,7 @@
 const STORAGE_KEY_FROM = 'gate_accent_from';
 const STORAGE_KEY_TO   = 'gate_accent_to';
 
-const DEFAULT = { from: '#10b981', to: '#14b8a6' };
+const DEFAULT = { from: '#6366f1', to: '#a855f7' };
 
 function hexToRgb(hex) {
   const r = parseInt(hex.slice(1, 3), 16);

@@ -319,3 +319,13 @@ body.fullscreen-exam main {
   animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
+/* Tech Grid Pattern Background */
+.bg-grid {
+  background-image: radial-gradient(rgba(99, 102, 241, 0.04) 1.5px, transparent 1.5px);
+  background-size: 32px 32px;
+}
+.dark .bg-grid {
+  background-image: radial-gradient(rgba(139, 92, 246, 0.05) 1.5px, transparent 1.5px);
+  background-size: 32px 32px;
+}
+

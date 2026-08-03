@@ -52,7 +52,11 @@ export const LandingPage = {
       </nav>
 
       <!-- Hero Presentation -->
-      <section class="min-h-screen pt-32 pb-16 px-6 flex flex-col justify-center items-center text-center relative overflow-hidden bg-[#f4f6f8] dark:bg-[#080c14]">
+      <section class="min-h-screen pt-32 pb-16 px-6 flex flex-col justify-center items-center text-center relative overflow-hidden bg-[#f5f7fa] dark:bg-[#060a13] bg-grid">
+        
+        <!-- Ambient Glowing Background Orbs -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-10 left-10 w-[300px] h-[300px] bg-indigo-500/10 rounded-full blur-[100px] pointer-events-none"></div>
         
         <div class="max-w-4xl mx-auto space-y-5 relative z-10">
           <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-slate-200 dark:border-white/10 bg-white/70 dark:bg-white/5 backdrop-blur-md shadow-sm">
@@ -62,7 +66,7 @@ export const LandingPage = {
 
           <h1 class="font-display font-extrabold text-4xl md:text-6xl text-slate-900 dark:text-white tracking-tight leading-[1.1]">
             Master GATE CS with <br/>
-            <span class="text-primary-500">Emerald-Grade Precision.</span>
+            <span class="text-gradient bg-gradient-to-r from-primary-500 to-indigo-500 bg-clip-text text-transparent">Quantum-Grade Precision.</span>
           </h1>
 
           <p class="text-xs md:text-sm text-slate-500 dark:text-slate-400 max-w-2xl mx-auto font-medium leading-relaxed">
