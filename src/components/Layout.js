@@ -61,6 +61,9 @@ export const Layout = {
             <a href="#/pyq-mocks" class="${getLinkClass('pyq-mocks')}">
               <i class="fa-solid fa-file-circle-check text-sm w-5 text-center"></i> PYQ Mock Papers
             </a>
+            <a href="#/community" class="${getLinkClass('community')}">
+              <i class="fa-solid fa-users text-sm w-5 text-center"></i> Community Hub
+            </a>
             <a href="#/formulas" class="${getLinkClass('formulas')}">
               <i class="fa-solid fa-book-bookmark text-sm w-5 text-center"></i> Formula Deck
             </a>
