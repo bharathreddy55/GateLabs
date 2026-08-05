@@ -109,6 +109,44 @@ export const Dashboard = {
     return `
       <div class="flex flex-col gap-6 animate-fade-in font-sans pb-12">
         
+        <!-- GATE 2027 Countdown Timer -->
+        <div class="glass-panel p-5 rounded-3xl border border-slate-200/60 dark:border-white/[0.07] bg-gradient-to-r from-primary-500/5 via-indigo-500/5 to-purple-500/5 flex flex-col md:flex-row items-center justify-between gap-5 relative overflow-hidden">
+          <div class="absolute -right-20 -top-20 w-48 h-48 bg-primary-500/10 rounded-full blur-2xl pointer-events-none"></div>
+          
+          <div class="flex items-center gap-4">
+            <div class="h-12 w-12 rounded-2xl bg-gradient-to-tr from-primary-500/10 to-indigo-650/10 text-primary-500 flex items-center justify-center text-xl flex-shrink-0">
+              <i class="fa-regular fa-clock"></i>
+            </div>
+            <div>
+              <h4 class="font-display font-extrabold text-sm text-slate-900 dark:text-white leading-tight">Countdown to GATE 2027</h4>
+              <p class="text-[10px] text-slate-405 dark:text-slate-400 mt-1 font-semibold">Standard exam schedule date: February 6, 2027. Gear up for your target AIR!</p>
+            </div>
+          </div>
+          
+          <!-- Live Digit Containers -->
+          <div class="flex items-center gap-2" id="gate-countdown-timer">
+            <div class="flex flex-col items-center">
+              <div class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-white/5 h-12 w-12 rounded-xl flex items-center justify-center font-display font-extrabold text-sm text-slate-900 dark:text-white shadow-sm" id="gate-days">00</div>
+              <span class="text-[8px] font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-500 mt-1">Days</span>
+            </div>
+            <span class="text-slate-400 font-extrabold text-sm">:</span>
+            <div class="flex flex-col items-center">
+              <div class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-white/5 h-12 w-12 rounded-xl flex items-center justify-center font-display font-extrabold text-sm text-slate-900 dark:text-white shadow-sm" id="gate-hours">00</div>
+              <span class="text-[8px] font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-500 mt-1">Hrs</span>
+            </div>
+            <span class="text-slate-400 font-extrabold text-sm">:</span>
+            <div class="flex flex-col items-center">
+              <div class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-white/5 h-12 w-12 rounded-xl flex items-center justify-center font-display font-extrabold text-sm text-slate-900 dark:text-white shadow-sm" id="gate-mins">00</div>
+              <span class="text-[8px] font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-500 mt-1">Mins</span>
+            </div>
+            <span class="text-slate-400 font-extrabold text-sm">:</span>
+            <div class="flex flex-col items-center">
+              <div class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-white/5 h-12 w-12 rounded-xl flex items-center justify-center font-display font-extrabold text-sm text-primary-500 shadow-sm animate-pulse" id="gate-secs">00</div>
+              <span class="text-[8px] font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-500 mt-1">Secs</span>
+            </div>
+          </div>
+        </div>
+        
         <!-- Segmented Control Bar -->
         <div class="glass-panel p-2 rounded-full flex items-center justify-between border border-slate-200/60 dark:border-white/[0.07]">
           <div class="flex flex-wrap gap-1">
@@ -158,44 +196,6 @@ export const Dashboard = {
             <a href="#/mock-test" class="px-5 py-2.5 rounded-full bg-primary-500 text-white text-xs font-bold shadow-md hover:scale-102 active:scale-95 transition-all flex items-center gap-2">
               <i class="fa-solid fa-play text-xs"></i> Start Practice Exam
             </a>
-          </div>
-        </div>
-
-        <!-- GATE 2027 Countdown Timer -->
-        <div class="glass-panel p-5 rounded-3xl border border-slate-200/60 dark:border-white/[0.07] bg-gradient-to-r from-primary-500/5 via-indigo-500/5 to-purple-500/5 flex flex-col md:flex-row items-center justify-between gap-5 relative overflow-hidden">
-          <div class="absolute -right-20 -top-20 w-48 h-48 bg-primary-500/10 rounded-full blur-2xl pointer-events-none"></div>
-          
-          <div class="flex items-center gap-4">
-            <div class="h-12 w-12 rounded-2xl bg-gradient-to-tr from-primary-500/10 to-indigo-650/10 text-primary-500 flex items-center justify-center text-xl flex-shrink-0">
-              <i class="fa-regular fa-clock"></i>
-            </div>
-            <div>
-              <h4 class="font-display font-extrabold text-sm text-slate-900 dark:text-white leading-tight">Countdown to GATE 2027</h4>
-              <p class="text-[10px] text-slate-400 dark:text-slate-500 mt-1 font-semibold">Standard exam schedule date: February 6, 2027. Gear up for your target AIR!</p>
-            </div>
-          </div>
-          
-          <!-- Live Digit Containers -->
-          <div class="flex items-center gap-2" id="gate-countdown-timer">
-            <div class="flex flex-col items-center">
-              <div class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-white/5 h-12 w-12 rounded-xl flex items-center justify-center font-display font-extrabold text-sm text-slate-900 dark:text-white shadow-sm" id="gate-days">00</div>
-              <span class="text-[8px] font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-500 mt-1">Days</span>
-            </div>
-            <span class="text-slate-400 font-extrabold text-sm">:</span>
-            <div class="flex flex-col items-center">
-              <div class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-white/5 h-12 w-12 rounded-xl flex items-center justify-center font-display font-extrabold text-sm text-slate-900 dark:text-white shadow-sm" id="gate-hours">00</div>
-              <span class="text-[8px] font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-500 mt-1">Hrs</span>
-            </div>
-            <span class="text-slate-400 font-extrabold text-sm">:</span>
-            <div class="flex flex-col items-center">
-              <div class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-white/5 h-12 w-12 rounded-xl flex items-center justify-center font-display font-extrabold text-sm text-slate-900 dark:text-white shadow-sm" id="gate-mins">00</div>
-              <span class="text-[8px] font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-500 mt-1">Mins</span>
-            </div>
-            <span class="text-slate-400 font-extrabold text-sm">:</span>
-            <div class="flex flex-col items-center">
-              <div class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-white/5 h-12 w-12 rounded-xl flex items-center justify-center font-display font-extrabold text-sm text-primary-500 shadow-sm animate-pulse" id="gate-secs">00</div>
-              <span class="text-[8px] font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-500 mt-1">Secs</span>
-            </div>
           </div>
         </div>
 
