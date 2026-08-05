@@ -161,6 +161,44 @@ export const Dashboard = {
           </div>
         </div>
 
+        <!-- GATE 2027 Countdown Timer -->
+        <div class="glass-panel p-5 rounded-3xl border border-slate-200/60 dark:border-white/[0.07] bg-gradient-to-r from-primary-500/5 via-indigo-500/5 to-purple-500/5 flex flex-col md:flex-row items-center justify-between gap-5 relative overflow-hidden">
+          <div class="absolute -right-20 -top-20 w-48 h-48 bg-primary-500/10 rounded-full blur-2xl pointer-events-none"></div>
+          
+          <div class="flex items-center gap-4">
+            <div class="h-12 w-12 rounded-2xl bg-gradient-to-tr from-primary-500/10 to-indigo-650/10 text-primary-500 flex items-center justify-center text-xl flex-shrink-0">
+              <i class="fa-regular fa-clock"></i>
+            </div>
+            <div>
+              <h4 class="font-display font-extrabold text-sm text-slate-900 dark:text-white leading-tight">Countdown to GATE 2027</h4>
+              <p class="text-[10px] text-slate-400 dark:text-slate-500 mt-1 font-semibold">Standard exam schedule date: February 6, 2027. Gear up for your target AIR!</p>
+            </div>
+          </div>
+          
+          <!-- Live Digit Containers -->
+          <div class="flex items-center gap-2" id="gate-countdown-timer">
+            <div class="flex flex-col items-center">
+              <div class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-white/5 h-12 w-12 rounded-xl flex items-center justify-center font-display font-extrabold text-sm text-slate-900 dark:text-white shadow-sm" id="gate-days">00</div>
+              <span class="text-[8px] font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-500 mt-1">Days</span>
+            </div>
+            <span class="text-slate-400 font-extrabold text-sm">:</span>
+            <div class="flex flex-col items-center">
+              <div class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-white/5 h-12 w-12 rounded-xl flex items-center justify-center font-display font-extrabold text-sm text-slate-900 dark:text-white shadow-sm" id="gate-hours">00</div>
+              <span class="text-[8px] font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-500 mt-1">Hrs</span>
+            </div>
+            <span class="text-slate-400 font-extrabold text-sm">:</span>
+            <div class="flex flex-col items-center">
+              <div class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-white/5 h-12 w-12 rounded-xl flex items-center justify-center font-display font-extrabold text-sm text-slate-900 dark:text-white shadow-sm" id="gate-mins">00</div>
+              <span class="text-[8px] font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-500 mt-1">Mins</span>
+            </div>
+            <span class="text-slate-400 font-extrabold text-sm">:</span>
+            <div class="flex flex-col items-center">
+              <div class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-white/5 h-12 w-12 rounded-xl flex items-center justify-center font-display font-extrabold text-sm text-primary-500 shadow-sm animate-pulse" id="gate-secs">00</div>
+              <span class="text-[8px] font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-500 mt-1">Secs</span>
+            </div>
+          </div>
+        </div>
+
         <!-- Top Cards -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
           
@@ -824,6 +862,8 @@ export const Dashboard = {
       });
     });
 
+    this.startGateCountdown();
+
     if (this.activeTab === 'overview') {
       const studyHoursData = await db.getStudyTime();
       const days = Object.keys(studyHoursData);
@@ -835,6 +875,9 @@ export const Dashboard = {
           this.studyChart.destroy();
         }
 
+        const style = getComputedStyle(document.documentElement);
+        const accentFrom = style.getPropertyValue('--accent-from').trim() || '#6366f1';
+
         this.studyChart = new Chart(canvas, {
           type: 'bar',
           data: {
@@ -842,11 +885,11 @@ export const Dashboard = {
             datasets: [{
               label: 'Study Hours',
               data: hours,
-              backgroundColor: 'rgba(16, 185, 129, 0.4)',
-              borderColor: 'rgba(16, 185, 129, 0.95)',
+              backgroundColor: accentFrom + '66', // Add opacity for fill
+              borderColor: accentFrom,
               borderWidth: 2,
               borderRadius: 12,
-              hoverBackgroundColor: 'rgba(16, 185, 129, 0.75)',
+              hoverBackgroundColor: accentFrom + 'bb',
             }]
           },
           options: {
@@ -1011,5 +1054,43 @@ export const Dashboard = {
       container.innerHTML = await this.render();
       await this.init();
     }
+  },
+
+  startGateCountdown() {
+    if (this.countdownInterval) clearInterval(this.countdownInterval);
+
+    const targetDate = new Date('February 6, 2027 09:00:00').getTime();
+
+    const updateTimer = () => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      const daysEl = document.getElementById('gate-days');
+      const hoursEl = document.getElementById('gate-hours');
+      const minsEl = document.getElementById('gate-mins');
+      const secsEl = document.getElementById('gate-secs');
+
+      if (distance < 0) {
+        if (daysEl) daysEl.innerText = '00';
+        if (hoursEl) hoursEl.innerText = '00';
+        if (minsEl) minsEl.innerText = '00';
+        if (secsEl) secsEl.innerText = '00';
+        clearInterval(this.countdownInterval);
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      if (daysEl) daysEl.innerText = String(days).padStart(2, '0');
+      if (hoursEl) hoursEl.innerText = String(hours).padStart(2, '0');
+      if (minsEl) minsEl.innerText = String(minutes).padStart(2, '0');
+      if (secsEl) secsEl.innerText = String(seconds).padStart(2, '0');
+    };
+
+    updateTimer();
+    this.countdownInterval = setInterval(updateTimer, 1000);
   }
 };
