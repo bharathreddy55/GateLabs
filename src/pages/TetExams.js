@@ -64,7 +64,7 @@ export const TetExams = {
               </div>
               <div class="flex items-center justify-between border-t border-slate-100 dark:border-white/[0.04] pt-4 mt-2">
                 <span class="text-xs text-slate-600 dark:text-slate-300 font-bold"><i class="fa-solid fa-circle-question text-indigo-500/80 mr-1"></i> 150 Questions</span>
-                <button id="btn-direct-tet-2" class="px-5 py-2.5 rounded-xl bg-indigo-650 text-white text-xs font-bold hover:scale-102 active:scale-95 transition-all flex items-center gap-1.5 shadow-md">
+                <button id="btn-direct-tet-2" class="px-5 py-2.5 rounded-xl bg-indigo-600 text-white text-xs font-bold hover:scale-102 active:scale-95 transition-all flex items-center gap-1.5 shadow-md">
                   <i class="fa-solid fa-play"></i> Start Exam
                 </button>
               </div>
