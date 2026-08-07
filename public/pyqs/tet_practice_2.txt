@@ -9,7 +9,6 @@ option b: సాంప్రదాయ అనువంశిక దృక్ప�
 option c: నడవడిక వాదం (Behaviorism)
 option d: పరిపక్వతా వాదం
 correct: A
-explanation: జీవితకాల వికాస దృక్పథం ప్రకారం వికాసం అనేది నిరంతరం సాగే ప్రక్రియ, ఇది అత్యంత అనుకూల మార్పులకు లోనయ్యే గుణాన్ని (Plasticity) కలిగి ఉంటుంది.
 ---
 subject: Child Development & Pedagogy
 topic: Piaget Conservation
@@ -22,7 +21,6 @@ option b: ఇంద్రియ చాలక దశ
 option c: పూర్వ ప్రచాలక దశ
 option d: అమూర్త ప్రచాలక దశ
 correct: A
-explanation: 8 సంవత్సరాల వయస్సు మూర్త ప్రచాలక దశకు (7-11 ఏళ్లు) చెందుతుంది. ఈ దశలో పిల్లవాడు ద్రవ్యరాశి లేదా పరిమాణ పరిరక్షణ భావనను సాధిస్తాడు.
 ---
 subject: Child Development & Pedagogy
 topic: Integrity vs Despair
@@ -35,7 +33,6 @@ option b: నమ్మకం (Trust)
 option c: చొరవ (Initiative)
 option d: ఉత్పత్తి పరత (Generativity)
 correct: A
-explanation: వృద్ధాప్యంలో (చివరి దశ) తన గత జీవితం పట్ల నిండు సంతృప్తి కలిగి ఉండటమే ఆత్మ సమగ్రత (Integrity).
 ---
 subject: Child Development & Pedagogy
 topic: Kohlberg Stage 6
@@ -48,7 +45,6 @@ option b: పూర్వ సాంప్రదాయ - దశ 2
 option c: సాంప్రదాయ - దశ 4
 option d: సాంప్రదాయ - మంచి బాలుడి దశ
 correct: A
-explanation: సార్వత్రిక నైతిక సూత్రాల దశలో (దశ 6) వ్యక్తి సమాజ చట్టాల కన్నా మానవ విలువలు, న్యాయానికే ప్రథమ ప్రాధాన్యత ఇస్తాడు.
 ---
 subject: Child Development & Pedagogy
 topic: ZPD
@@ -61,7 +57,6 @@ option b: పిల్లవాడు ఎప్పటికీ చేయలే�
 option c: పాఠశాలలో సాధించే ఐక్యూ మార్కులు
 option d: పరిపక్వత ద్వారా మాత్రమే పొందే సామర్థ్యం
 correct: A
-explanation: ZPD అనేది విద్యార్థి స్వతంత్ర సామర్థ్యానికి మరియు ఉపాధ్యాయులు లేదా ఇతరుల సహాయంతో సాధించగలిగే సామర్థ్యానికి మధ్య గల వ్యత్యాస క్షేత్రం.
 ---
 subject: Child Development & Pedagogy
 topic: Scaffolding
@@ -74,7 +69,6 @@ option b: మోడలింగ్
 option c: శాస్త్రీయ నిబంధనం
 option d: పునర్బలనం
 correct: A
-explanation: విద్యార్థి సొంతంగా ఆలోచించేలా తాత్కాలికంగా అందించే సహాయ మార్గాన్ని స్కాఫోల్డింగ్ (Scaffolding) అంటారు.
 ---
 subject: Child Development & Pedagogy
 topic: Self-Efficacy
@@ -87,7 +81,6 @@ option b: ఇతరులను అనుకరించడం
 option c: ఇతరుల నుండి పొందే బహుమతులు
 option d: శారీరక బలం
 correct: A
-explanation: సెల్ఫ్ ఎఫికసీ అనేది తన సామర్థ్యంపై మరియు తన విజయాలపై ఒక వ్యక్తికి ఉండే బలమైన స్వీయ నమ్మకం.
 ---
 subject: Child Development & Pedagogy
 topic: Negative Reinforcement
@@ -100,7 +93,6 @@ option b: ధనాత్మక పునర్బలనం
 option c: శిక్ష (Punishment)
 option d: విరమణ (Extinction)
 correct: A
-explanation: ప్రతికూల ఉద్దీపన లేదా బాధాకరమైన వస్తువును తొలగించి అనుకూల ప్రవర్తనను పెంచడాన్ని ఋణాత్మక పునర్బలనం అంటారు.
 ---
 subject: Child Development & Pedagogy
 topic: Law of Readiness
@@ -113,7 +105,6 @@ option b: అభ్యాస నియమం
 option c: ఫలిత నియమం
 option d: సామీప్య నియమం
 correct: A
-explanation: అభ్యసనం జరగడానికి విద్యార్థి యొక్క శారీరక మరియు మానసిక సన్నద్ధత అత్యంత కీలకం.
 ---
 subject: Child Development & Pedagogy
 topic: Fixed-Interval Schedule
@@ -126,7 +117,6 @@ option b: స్థిర నిష్పత్తి షెడ్యూల్
 option c: చర నిష్పత్తి షెడ్యూల్
 option d: చర కాల వ్యవధి షెడ్యూల్
 correct: A
-explanation: ఒక నిర్దిష్ట సమయం ముగిసిన తర్వాత ప్రతిఫలం లేదా పునర్బలనం అందించే పద్ధతి స్థిర కాల వ్యవధి షెడ్యూల్.
 ---
 subject: Child Development & Pedagogy
 topic: Insight Learning
@@ -139,7 +129,6 @@ option b: క్రమక్రమంగా దోషాలు తగ్గడ�
 option c: యాంత్రిక పునరావృతం
 option d: బాహ్య ప్రేరణపై ఆధారపడటం
 correct: A
-explanation: సమస్యలోని వివిధ అంశాల మధ్య గల సంబంధాలను చూసి హఠాత్తుగా మెరుపులా పరిష్కారం తట్టడం అంతర్దృష్టి అభ్యసనం.
 ---
 subject: Child Development & Pedagogy
 topic: Negative Transfer
@@ -152,7 +141,6 @@ option b: అనుకూల అభ్యసనాంతరణం
 option c: శూన్య అభ్యసనాంతరణం
 option d: ద్విపార్శ్వ అభ్యసనాంతరణం
 correct: A
-explanation: ఒక రంగంలో పొందిన అభ్యసనం వేరొక పని నేర్చుకోవడానికి అవరోధంగా నిలిస్తే అది ప్రతికూల అభ్యసనాంతరణం.
 ---
 subject: Child Development & Pedagogy
 topic: Extinction
@@ -165,7 +153,6 @@ option b: సామాన్యీకరణం
 option c: విచక్షణ
 option d: స్వతస్సిద్ధ పునరాగమనం
 correct: A
-explanation: నిబంధిత ఉద్దీపన తర్వాత అసలైన ఉద్దీపనను (ఆహారం) ఇవ్వకపోతే నిబంధిత స్పందన క్రమంగా కనుమరుగవుతుంది, దీనిని విరమణ (Extinction) అంటారు.
 ---
 subject: Child Development & Pedagogy
 topic: Bloom Analysis
@@ -178,7 +165,6 @@ option b: అవగాహన
 option c: సంశ్లేషణ
 option d: మూల్యాంకనం
 correct: A
-explanation: సమస్యలోని వివిధ అంతర్భాగాలను విడివిడిగా విశ్లేషించి సంబంధాలను స్థాపించడం విశ్లేషణ స్థాయికి చెందుతుంది.
 ---
 subject: Child Development & Pedagogy
 topic: Naturalization
@@ -191,7 +177,6 @@ option b: అనుకరణ
 option c: హస్తలాఘవం
 option d: ఉచ్చారణ
 correct: A
-explanation: మానసిక చలన రంగంలో అత్యున్నత స్థాయి సహజత్వీకరణం. ఇక్కడ నైపుణ్యం ఎంతో సునాయాసంగా, అలవాటుగా మారిపోతుంది.
 ---
 subject: Child Development & Pedagogy
 topic: IQ Calculation
@@ -204,7 +189,6 @@ option b: 100
 option c: 80
 option d: 110
 correct: A
-explanation: IQ = MA/CA \times 100 = 12/10 \times 100 = 120.
 ---
 subject: Child Development & Pedagogy
 topic: Bodily-Kinesthetic Intelligence
@@ -217,7 +201,6 @@ option b: దృశ్య-ప్రాంతీయ ప్రజ్ఞ
 option c: వైయక్తిక ప్రజ్ఞ
 option d: సంగీత ప్రజ్ఞ
 correct: A
-explanation: శరీరాన్ని సమన్వయంగా, వేగంగా నియంత్రించే శారీరక నైపుణ్యం లేదా ప్రజ్ఞను దేహ-చాలక ప్రజ్ఞ అంటారు.
 ---
 subject: Child Development & Pedagogy
 topic: Personality Tests
@@ -230,7 +213,6 @@ option b: రోర్షాక్ ఇంక్బ్లాట్ పరీక�
 option c: ఇతివృత్త గ్రహణ పరీక్ష (TAT)
 option d: వాక్య పూరణ పరీక్ష
 correct: A
-explanation: 16 PF అనేది ప్రశ్నావళి పద్ధతి (వ్యక్తిగత నివేదిక). మిగిలినవి అస్పష్ట చిత్రాల ఆధారంగా విశ్లేషించే ప్రక్షేపక పరీక్షలు.
 ---
 subject: Child Development & Pedagogy
 topic: Self-Regulation
@@ -243,7 +225,6 @@ option b: సహానుభూతి
 option c: సామాజిక అవగాహన
 option d: ఆత్మ విశ్వాసం
 correct: A
-explanation: భావోద్వేగాల తీవ్రతను అదుపులో ఉంచుకుని సరిగా స్పందించే సామర్థ్యమే స్వీయ నియంత్రణ.
 ---
 subject: Child Development & Pedagogy
 topic: Rationalization
@@ -256,7 +237,6 @@ option b: ప్రక్షేపణం
 option c: విలీనం
 option d: సర్దుబాటు
 correct: A
-explanation: సాధించలేకపోయిన విషయాన్ని చిన్నచూపు చూస్తూ తప్పుడు కారణాలతో సరిపెట్టుకోవడాన్ని సబబీకరణం (పుల్లని ద్రాక్ష) అంటారు.
 ---
 subject: Child Development & Pedagogy
 topic: Vygotsky Tools
@@ -269,7 +249,6 @@ option b: నైరూప్యమైనది, ప్రాముఖ్యత �
 option c: కేవలం అనుబంధంగా ఉండేది
 option d: శారీరక వికాసానికే పరిమితమైనది
 correct: A
-explanation: వైగోట్స్కీ ప్రకారం సమాజం, సంస్కృతి మరియు భాషలు పిల్లవాని ఆలోచనా వికాసాన్ని నిర్దేశిస్తాయి.
 ---
 subject: Child Development & Pedagogy
 topic: RTE Free Education
@@ -282,7 +261,6 @@ option b: 5 నుండి 10 సంవత్సరాలు
 option c: 3 నుండి 18 సంవత్సరాలు
 option d: 6 నుండి 18 సంవత్సరాలు
 correct: A
-explanation: 6 నుండి 14 సంవత్సరాల లోపు గల బాలలందరికీ ఉచిత ప్రాథమిక విద్య అందజేయాలని ఆర్టీఈ చట్టం పేర్కొంది.
 ---
 subject: Child Development & Pedagogy
 topic: RTE Work Days
@@ -295,7 +273,6 @@ option b: 220 రోజులు
 option c: 180 రోజులు
 option d: 250 రోజులు
 correct: A
-explanation: ప్రాథమిక పాఠశాలలు (1-5 తరగతులు) ఒక సంవత్సరంలో కనీసం 200 పనిదినాలు నడవాలి. ఉన్నత ప్రాథమికకు 220 రోజులు.
 ---
 subject: Child Development & Pedagogy
 topic: NCF 2005 Guidelines
@@ -308,7 +285,6 @@ option b: జ్ఞానాన్ని పాఠశాల బయటి జీ�
 option c: పరీక్షలను మరింత సరళంగా చేయడం
 option d: కంఠస్థం చేసే పద్ధతులకు స్వస్తి చెప్పడం
 correct: A
-explanation: ఎన్సీఎఫ్ ఎల్లప్పుడూ శిశు కేంద్రీకృత, అనుభవాల ఆధారిత విద్యను కోరుతుంది, పుస్తక కేంద్రీకృతాన్ని కాదు.
 ---
 subject: Child Development & Pedagogy
 topic: SMC Structure
@@ -321,7 +297,6 @@ option b: 50%
 option c: 60%
 option d: 33%
 correct: A
-explanation: పాఠశాల నిర్వహణ కమిటీలో కనీసం 75 శాతం మంది సభ్యులు విద్యార్థుల తల్లిదండ్రులు ఉండాలని చట్టం సూచిస్తుంది.
 ---
 subject: Child Development & Pedagogy
 topic: IEP Support
@@ -334,7 +309,6 @@ option b: పిల్లలందరికీ ఒకే రకమైన సి�
 option c: వారిని పాఠశాల నుండి వేరు చేయడం
 option d: పరీక్షల నుండి మినహాయింపు ఇవ్వడం
 correct: A
-explanation: ఐఈపీ అనగా ప్రత్యేక అవసరాలు ఉన్న ప్రతి బిడ్డ సామర్థ్యాలకు అనుగుణంగా తయారుచేసే ప్రత్యేక విద్యా ప్రణాళిక.
 ---
 subject: Child Development & Pedagogy
 topic: Dyscalculia
@@ -347,7 +321,6 @@ option b: అక్షరాలను సరిగా చదవలేకపో�
 option c: పెన్సిల్ సరిగా పట్టుకోలేకపోవడం
 option d: వినికిడి లోపం
 correct: A
-explanation: గణిత గణనలు, అంకెలు గుర్తించడం మరియు సమస్య సాధనలో ఇబ్బంది ఎదురవడాన్ని డిస్కాల్క్యులియా అంటారు.
 ---
 subject: Child Development & Pedagogy
 topic: CCE Weightage
@@ -360,7 +333,6 @@ option b: 40%
 option c: 60%
 option d: 50%
 correct: A
-explanation: ఏపీసీఈఈ నమూనా ప్రకారం ఎస్ఏకి 80 శాతం బరువు (మార్కులు), ఎఫ్ఏలన్నిటికీ కలిపి 20 శాతం కేటాయించబడింది.
 ---
 subject: Child Development & Pedagogy
 topic: Problem Solving Steps
@@ -373,7 +345,6 @@ option b: దత్తాంశ సేకరణ
 option c: పరికల్పనల రూపకల్పన
 option d: సరిచూడటం
 correct: A
-explanation: ఏదైనా సమస్యను పరిష్కరించడానికి ముందుగా ఆ సమస్య ఏమిటో స్పష్టంగా గుర్తించడం ప్రథమ సోపానం.
 ---
 subject: Child Development & Pedagogy
 topic: Micro Teaching Feedback
@@ -386,7 +357,6 @@ option b: 12 నిమిషాలు
 option c: 5 నిమిషాలు
 option d: 10 నిమిషాలు
 correct: A
-explanation: సూక్ష్మ బోధన సోపానాలలో ఫీడ్ బ్యాక్ సమయం 6 నిమిషాలు. మొత్తం బోధనా చక్రం 36 నిమిషాలు ఉంటుంది.
 ---
 subject: Language I
 topic: Reading Comprehension
@@ -401,7 +371,6 @@ option b: కఠిన మాటలు
 option c: మాయ మాటలు
 option d: స్తుతి వాక్యాలు
 correct: A
-explanation: మనిషి నోట ఎల్లప్పుడూ సత్యమైన వాక్యాలు పలకాలని పద్యం నిర్దేశిస్తుంది.
 ---
 subject: Language I
 topic: Reading Comprehension
@@ -414,7 +383,6 @@ option b: చంచలమైన మనస్సు
 option c: కోపంతో కూడిన మనస్సు
 option d: భయపడే మనస్సు
 correct: A
-explanation: విమల అనగా నిర్మలమైన, మతి అనగా బుద్ధి లేదా మనస్సు. కావున నిర్మల మనస్సు అని అర్థం.
 ---
 subject: Language I
 topic: Reading Comprehension
@@ -427,7 +395,6 @@ option b: అధర్మ మార్గం
 option c: సులువైన మార్గం
 option d: స్వార్థ మార్గం
 correct: A
-explanation: మనుషులు జీవితంలో ధర్మమార్గాన్ని అవలంబించి నడుచుకోవాలని కవి సూచిస్తున్నాడు.
 ---
 subject: Language I
 topic: Reading Comprehension
@@ -440,7 +407,6 @@ option b: త్యజించబడినది
 option c: నిందించబడినది
 option d: మరచిపోయినది
 correct: A
-explanation: పూజించబడిన లేదా పూజితము అనగా అందరి చేతా గౌరవము పొందినది అని అర్థం.
 ---
 subject: Language I
 topic: Reading Comprehension
@@ -453,7 +419,6 @@ option b: ఇతిహాస సాహిత్యం
 option c: నాటక సాహిత్యం
 option d: ప్రబంధ సాహిత్యం
 correct: A
-explanation: నీతిని, శీల సంపదను బోధించే పద్యాలు శతక లేదా నైతిక సాహిత్య ప్రక్రియల కిందికి వస్తాయి.
 ---
 subject: Language I
 topic: Sandhi
@@ -466,7 +431,6 @@ option b: అతి + అంత (సవర్ణదీర్ఘ సంధి)
 option c: అతీ + అంత (గుణ సంధి)
 option d: అత్య + అంత (అకార సంధి)
 correct: A
-explanation: అతి + అంత = అత్యంత. ఇ, ఉ, ఋ లకు అసవర్ణములైన అచ్చులు పరమైతే యణాదేశ సంధి వస్తుంది.
 ---
 subject: Language I
 topic: Sandhi
@@ -479,7 +443,6 @@ option b: వృద్ధి సంధి
 option c: యణాదేశ సంధి
 option d: సవర్ణదీర్ఘ సంధి
 correct: A
-explanation: మహా + ఋషి = మహర్షి. అకారానికి ఋ పరమైతే 'అర్' ఆదేశమగుట గుణ సంధి.
 ---
 subject: Language I
 topic: Samasamu
@@ -492,7 +455,6 @@ option b: మత్స్యము మరియు అవతారము - ద�
 option c: మత్స్యములకు అవతారము - షష్ఠీ తత్పురుష
 option d: మూడైన అవతారములు - ద్విగు
 correct: A
-explanation: మత్స్య అను సంజ్ఞానామం పూర్వపదంగా ఉంది కావున ఇది సంభావనా పూర్వపద కర్మధారయ సమాసం.
 ---
 subject: Language I
 topic: Samasamu
@@ -505,7 +467,6 @@ option b: ద్వంద్వ సమాసము
 option c: బహువ్రీహి సమాసము
 option d: రూపక సమాసము
 correct: A
-explanation: సంఖ్య పూర్వపదంగా గల సమాసం ద్విగు సమాసం. మూడు లోకముల సముదాయం కాబట్టి ద్విగు సమాసం.
 ---
 subject: Language I
 topic: Vibhakthulu
@@ -518,7 +479,6 @@ option b: తృతీయ విభక్తి
 option c: చతుర్థీ విభక్తి
 option d: షష్ఠీ విభక్తి
 correct: A
-explanation: కొరకు, కై చతుర్థి. నుండి, పట్టి, కంటే పంచమీ విభక్తి ప్రత్యయాలు.
 ---
 subject: Language I
 topic: Synonyms
@@ -531,7 +491,6 @@ option b: భాస్కరుడు, ఆర్క
 option c: భుజంగము, అహి
 option d: ఖగము, విహంగము
 correct: A
-explanation: సింహానికి కేసరి, హరి, మృగేంద్రుడు, పంచాస్యము అనేవి పర్యాయపదాలు.
 ---
 subject: Language I
 topic: Vikruthi
@@ -544,7 +503,6 @@ option b: నిప్పు
 option c: జ్వాల
 option d: సెగ
 correct: A
-explanation: అగ్ని అనే సంస్కృత పదానికి అగ్గి అనేది ప్రాకృత వికృతి రూపం.
 ---
 subject: Language I
 topic: Nanarthalu
@@ -557,7 +515,6 @@ option b: కావ్యం రాసేవాడు
 option c: శుక్రుడు (గ్రహం)
 option d: పండితుడు
 correct: A
-explanation: కవి అనగా పండితుడు, కావ్యం రాసేవాడు, శుక్ర గ్రహం కానీ సింహం కాదు.
 ---
 subject: Language I
 topic: Sabdamu
@@ -570,7 +527,6 @@ option b: నామవాచకం
 option c: తత్సమం
 option d: దేశ్యం
 correct: A
-explanation: ఒక ధ్వని లేదా గుసగుసల స్థితిని అనుకరించే పదం కాబట్టి అనుకరణ శబ్దం.
 ---
 subject: Language I
 topic: Vakyalu
@@ -583,7 +539,6 @@ option b: వర్తమానకాలిక వాక్యం
 option c: భవిష్యత్ కాలిక వాక్యం
 option d: ఆశ్చర్యార్థక వాక్యం
 correct: A
-explanation: పని పూర్తి అయినట్లు తెలుపుతుంది కావున ఇది భూతకాలిక వాక్యం.
 ---
 subject: Language I
 topic: Kriyalu
@@ -596,7 +551,6 @@ option b: శత్రర్థకం
 option c: చేదర్థకం
 option d: तुమున్నర్థకం
 correct: A
-explanation: భూతకాలిక అసమాపక క్రియలైన విరిగి, తిని, చదివి వంటి రూపాలను క్త్వార్థకం అంటారు.
 ---
 subject: Language I
 topic: Chandassu
@@ -609,7 +563,6 @@ option b: న-జ-భ-జ-జ-జ-ర
 option c: మ-స-జ-స-త-త-గ
 option d: స-భ-ర-మ-య-వ-ర
 correct: A
-explanation: ఉత్పలమాల పాదంలో భరనభభరవ అనే గణాలు వస్తాయి. యతి స్థానం 10వ అక్షరం.
 ---
 subject: Language I
 topic: Aksharalu
@@ -622,7 +575,6 @@ option b: ద్విత్వాక్షరం
 option c: సంశ్లేషాక్షరం
 option d: ద్విగువు
 correct: A
-explanation: ఒక హల్లు కింద వేరొక హల్లు ఒత్తు వచ్చి చేరితే దానిని సంయుక్తాక్షరం (ఉదా: క్త, ప్ర) అంటారు.
 ---
 subject: Language I
 topic: Grammar Author
@@ -635,7 +587,6 @@ option b: తిక్కన
 option c: చిన్నయ సూరి
 option d: హేమచంద్రుడు
 correct: A
-explanation: నన్నయ భట్టారకుడు తెలుగు భాషా వ్యాకరణాన్ని సంస్కృతంలో 'ఆంధ్ర శబ్ద చింతామణి' గా రాశారు.
 ---
 subject: Language I
 topic: Poetry compilation
@@ -648,7 +599,6 @@ option b: దేవులపల్లి కృష్ణశాస్త్రి
 option c: గుర్రం జాషువా
 option d: విశ్వనాథ సత్యనారాయణ
 correct: A
-explanation: అభ్యుదయ రచయితల సంఘ నేత శ్రీశ్రీ గారి ప్రసిద్ధ ఆధునిక వచన విప్లవ కవిత్వ సంపుటి మహాప్రస్థానం.
 ---
 subject: Language I
 topic: Dalits Poet
@@ -661,7 +611,6 @@ option b: బోయి భీమన్న
 option c: కుసుమ ధర్మన్న
 option d: కందుకూరి
 correct: A
-explanation: కాళిదాసు మేఘదూతానికి భిన్నంగా గబ్బిలాన్ని సందేశహారిగా చేసి దళితుల వేదనలను ప్రదర్శించిన కవి గుర్రం జాషువా.
 ---
 subject: Language I
 topic: Title Award
@@ -674,7 +623,6 @@ option b: సీపీ బ్రౌన్
 option c: గిడుగు రామ్మూర్తి
 option d: చిలకమర్తి
 correct: A
-explanation: అమృతాంజన్ సృష్టికర్త, ఆంధ్రపత్రిక స్థాపకుడు, దాత కాశీనాథుని నాగేశ్వరరావు గారికి 'విశ్వదాత' బిరుదు కలదు.
 ---
 subject: Language I
 topic: Movement Leader
@@ -687,7 +635,6 @@ option b: గురజాడ అప్పారావు
 option c: కందుకూరి వీరేశలింగం
 option d: చిన్నయ సూరి
 correct: A
-explanation: గ్రాంథిక భాషకు బదులుగా వ్యవహారంలో ఉన్న సరళ భాషను పాఠ్యగ్రంథాల్లో ప్రవేశపెట్టాలని పోరాడిన యోధుడు గిడుగు.
 ---
 subject: Language I
 topic: Pedagogy Dramatization
@@ -700,7 +647,6 @@ option b: కంఠస్థం చేసే సామర్థ్యం
 option c: వేగంగా రాసే నైపుణ్యం
 option d: నిశ్శబ్దంగా కూర్చోవడం
 correct: A
-explanation: నాటకంలో పాల్గొనడం వల్ల భావాలను చక్కగా వ్యక్తపరిచే ఆత్మాభివ్యక్తి మరియు సృజనాత్మకత మెరుగవుతాయి.
 ---
 subject: Language I
 topic: Pedagogy Productive Skills
@@ -713,7 +659,6 @@ option b: శ్రవణం & పఠనం
 option c: శ్రవణం & భాషణం
 option d: పఠనం & లేఖనం
 correct: A
-explanation: మన ఆలోచనలను భాషించడం లేదా రాయడం ద్వారా ఉత్పత్తి చేస్తాం కాబట్టి వీటిని ఉత్పత్తి నైపుణ్యాలు అంటారు.
 ---
 subject: Language I
 topic: Pedagogy Reading
@@ -726,7 +671,6 @@ option b: ప్రకాశ పఠనం
 option c: మౌన పఠనం
 option d: విస్తార పఠనం
 correct: A
-explanation: ఉపాధ్యాయుడు స్పష్టమైన ఉచ్చారణతో విద్యార్థులకు ఆదర్శంగా చేసే పఠనమే ఆదర్శ పఠనం.
 ---
 subject: Language I
 topic: Pedagogy Lesson Plan
@@ -739,7 +683,6 @@ option b: 6 సోపానాలు
 option c: 4 సోపానాలు
 option d: 7 సోపానాలు
 correct: A
-explanation: హెర్బార్ట్ పాఠ్య ప్రణాళిక తయారీకి ప్రవేశం, ప్రదర్శన, సంసర్గం, సూత్రీకరణ, అన్వయం అనే 5 సోపానాలను ఇచ్చారు.
 ---
 subject: Language I
 topic: Pedagogy Portfolio
@@ -752,7 +695,6 @@ option b: మార్కుల జాబితా మాత్రమే
 option c: హాజరు పట్టిక
 option d: ఉపాధ్యాయుల డైరీ
 correct: A
-explanation: విద్యార్థి కాలక్రమేణా సాధించిన అనేక సృజనాత్మక పత్రాల మరియు అభ్యసన సాక్ష్యాల సంకలనమే పోర్ట్‌ఫోలియో.
 ---
 subject: Language I
 topic: Pedagogy Visual Aid
@@ -765,7 +707,6 @@ option b: రేడియో
 option c: టేప్ రికార్డర్
 option d: మైక్
 correct: A
-explanation: ఫ్లాష్ కార్డులు మరియు బొమ్మల చార్టులు ప్రాథమిక తరగతి పిల్లలలో పదాల గుర్తింపును పెంపొందిస్తాయి.
 ---
 subject: Language I
 topic: Pedagogy Mother Tongue
@@ -778,7 +719,6 @@ option b: మహాత్మా గాంధీ
 option c: స్వామి వివేకానంద
 option d: డాక్టర్ సర్వేపల్లి రాధాకృష్ణన్
 correct: A
-explanation: మాతృభాష ప్రాముఖ్యతను గురించి చెబుతూ అది మనుషుల సహజ హృదయ స్పందన వంటిదని రవీంద్రులు అభివర్ణించారు.
 ---
 subject: Language II
 topic: Reading Comprehension
@@ -793,7 +733,6 @@ option b: The importance of rote memorization in exams
 option c: The rise of digital media and technology
 option d: How to pass language tests easily
 correct: A
-explanation: The text focuses on defining critical thinking and highlighting its shift and importance in modern educational frameworks.
 ---
 subject: Language II
 topic: Reading Comprehension
@@ -806,7 +745,6 @@ option b: Wealth and access to internet
 option c: Ability to memorize large datasets
 option d: Age and work experience
 correct: A
-explanation: The passage states that the capacity to think critically separates informed decision-makers from passive consumers of data.
 ---
 subject: Language II
 topic: Reading Comprehension
@@ -819,7 +757,6 @@ option b: Conceptualizing
 option c: Rote
 option d: Passivity
 correct: A
-explanation: 'Reflection' means serious thought or deep contemplation.
 ---
 subject: Language II
 topic: Reading Comprehension
@@ -832,7 +769,6 @@ option b: Analytical skills
 option c: Complex problem solving
 option d: Digital media
 correct: A
-explanation: The text states that education systems are shifting focus 'from rote memorization toward nurturing analytical minds'.
 ---
 subject: Language II
 topic: Reading Comprehension
@@ -845,7 +781,6 @@ option b: Inactive
 option c: Lazy
 option d: Neutral
 correct: A
-explanation: 'Active' is the direct opposite of 'passive'.
 ---
 subject: Language II
 topic: Parts of Speech
@@ -858,7 +793,6 @@ option b: Adjective
 option c: Conjunction
 option d: Preposition
 correct: A
-explanation: Here, 'harder' modifies the verb 'work', which makes it an adverb.
 ---
 subject: Language II
 topic: Articles
@@ -871,7 +805,6 @@ option b: the
 option c: an
 option d: No article
 correct: A
-explanation: 'University' starts with a consonant sound (/j/), hence 'a' is appropriate.
 ---
 subject: Language II
 topic: Prepositions
@@ -884,7 +817,6 @@ option b: for
 option c: from
 option d: in
 correct: A
-explanation: 'Since' is used to denote a specific starting point in time for a continuous action.
 ---
 subject: Language II
 topic: Active Passive Voice
@@ -897,7 +829,6 @@ option b: Who was written Gitanjali?
 option c: By whom Gitanjali is written?
 option d: The Gitanjali was written by who?
 correct: A
-explanation: Interrogative sentences starting with 'Who' convert to 'By whom' followed by auxiliary + object + V3.
 ---
 subject: Language II
 topic: Direct Indirect Speech
@@ -910,7 +841,6 @@ option b: She told me not to waste my precious time.
 option c: She asked me that don't waste your time.
 option d: She ordered me to not waste her time.
 correct: A
-explanation: Imperative negative commands/advice change using 'advised/warned + not + to-infinitive'.
 ---
 subject: Language II
 topic: Plurals
@@ -923,7 +853,6 @@ option b: Phenomenons
 option c: Phenomenas
 option d: Phenomenies
 correct: A
-explanation: 'Phenomenon' is a singular noun of Greek origin; its plural form is 'phenomena'.
 ---
 subject: Language II
 topic: Subject-Verb Agreement
@@ -936,7 +865,6 @@ option b: are
 option c: were
 option d: have
 correct: A
-explanation: If two titles represent the same single individual (marked by one article 'The'), they take a singular verb 'is'.
 ---
 subject: Language II
 topic: Synonyms
@@ -949,7 +877,6 @@ option b: Permanent
 option c: Eternal
 option d: Massive
 correct: A
-explanation: 'Ephemeral' means lasting for a very short time (transient/short-lived).
 ---
 subject: Language II
 topic: Antonyms
@@ -962,7 +889,6 @@ option b: Careful
 option c: Thorough
 option d: Detailed
 correct: A
-explanation: 'Meticulous' means showing extreme care; its opposite is careless or sloppy.
 ---
 subject: Language II
 topic: Spellings
@@ -975,7 +901,6 @@ option b: Beureaucracy
 option c: Bureaucracyy
 option d: Burocracy
 correct: A
-explanation: 'Bureaucracy' is spelled correctly.
 ---
 subject: Language II
 topic: Question Tags
@@ -988,7 +913,6 @@ option b: won't we?
 option c: don't we?
 option d: can't we?
 correct: A
-explanation: Suggestions starting with 'Let's' always take the question tag 'shall we?'.
 ---
 subject: Language II
 topic: Conditionals
@@ -1001,7 +925,6 @@ option b: will have
 option c: had
 option d: would
 correct: A
-explanation: Type 3 conditional takes 'had + V3' in the if-clause and 'would/could/might + have + V3' in the main clause.
 ---
 subject: Language II
 topic: Grammar Sentences
@@ -1014,7 +937,6 @@ option b: Scarcely he had reached the station than the train left.
 option c: Scarcely had he reached the station then the train left.
 option d: Scarcely he reached station when train left.
 correct: A
-explanation: 'Scarcely/Hardly' takes inversion of the helping verb ('had he') and is paired with 'when'.
 ---
 subject: Language II
 topic: Idioms
@@ -1027,7 +949,6 @@ option b: To waste electricity
 option c: To cause a fire by accident
 option d: To feel very exhausted
 correct: A
-explanation: Burning the midnight oil refers to working or studying late into the night.
 ---
 subject: Language II
 topic: Degrees of Comparison
@@ -1040,7 +961,6 @@ option b: Rahul is more intelligent than any student.
 option c: Rahul is intelligent among all students.
 option d: Rahul is very intelligent student.
 correct: A
-explanation: 'No other... as... as' comparative converts to superlative format: Subject + is + the most + adjective.
 ---
 subject: Language II
 topic: One Word Substitution
@@ -1053,7 +973,6 @@ option b: Democracy
 option c: Autocracy
 option d: Oligarchy
 correct: A
-explanation: Bureaucracy is a system of government in which most of the important decisions are taken by state officials.
 ---
 subject: Language II
 topic: Modals
@@ -1066,7 +985,6 @@ option b: might
 option c: could
 option d: would
 correct: A
-explanation: 'Must' or 'ought to' is used to express strong obligation or moral duty.
 ---
 subject: Language II
 topic: Pronunciation
@@ -1079,7 +997,6 @@ option b: S
 option c: C
 option d: Y
 correct: A
-explanation: The initial letter 'P' is silent in psychology (/saɪˈkɒl.ə.dʒi/).
 ---
 subject: Language II
 topic: Pedagogy CCE
@@ -1092,7 +1009,6 @@ option b: Term-end examination marks only
 option c: Memorization of grammar definitions
 option d: Essay writing contests only
 correct: A
-explanation: Continuous evaluation focuses on communicative abilities continuously as well as terminallly.
 ---
 subject: Language II
 topic: Pedagogy Skills
@@ -1105,7 +1021,6 @@ option b: Listening & Reading
 option c: Reading & Speaking
 option d: Listening & Writing
 correct: A
-explanation: Speaking and Writing are productive skills because they involve producing language active output.
 ---
 subject: Language II
 topic: Pedagogy Grammar
@@ -1118,7 +1033,6 @@ option b: Fluency in spoken English
 option c: Direct communication in the target language
 option d: Listening comprehension through audio tapes
 correct: A
-explanation: GTM focuses on rote rules, grammar precision, and translating literature.
 ---
 subject: Language II
 topic: Pedagogy Reading
@@ -1131,7 +1045,6 @@ option b: The physical size of the textbook font
 option c: The dictionary definitions of difficult words
 option d: The speed of reading aloud
 correct: A
-explanation: Schema theory states that reading involves matching text indicators to one's prior knowledge structure.
 ---
 subject: Language II
 topic: Pedagogy Remedial
@@ -1144,7 +1057,6 @@ option b: Are gifted and ahead of class
 option c: Consistently top the examination
 option d: Are absent on sports day
 correct: A
-explanation: Remedial classes provide support for students identified as lagging behind in basic areas.
 ---
 subject: Language II
 topic: Pedagogy Textbook
@@ -1157,7 +1069,6 @@ option b: Dense, uninterrupted paragraphs of text
 option c: Highly technical and archaic vocabulary
 option d: Only grammar rules without stories
 correct: A
-explanation: Contextual activities and illustrations are highly interactive and appropriate for primary learners.
 ---
 subject: Language II
 topic: Pedagogy CCE Tools
@@ -1170,7 +1081,6 @@ option b: Only multiple-choice end-term sheets
 option c: State rank cards
 option d: Punishment logs
 correct: A
-explanation: Portfolios and rubrics give comprehensive assessment variables across scholastic domains.
 ---
 subject: Mathematics
 topic: Decimals
@@ -1183,7 +1093,6 @@ option b: 318/1000
 option c: 318/999
 option d: 315/900
 correct: A
-explanation: 0.31818... = 318 - 3/990 = 315/990 = 7/22.
 ---
 subject: Mathematics
 topic: LCM HCF
@@ -1196,7 +1105,6 @@ option b: 24
 option c: 72
 option d: 60
 correct: A
-explanation: HCF \times LCM = n_1 \times n_2 => 12 \times 144 = 36 \times n_2 => n_2 = 12 \times 144/36 = 48.
 ---
 subject: Mathematics
 topic: Percentage Area
@@ -1209,7 +1117,6 @@ option b: 20%
 option c: 40%
 option d: 50%
 correct: A
-explanation: పెరుగుదల శాతం = 20 + 20 + 20 \times 20/100 = 40 + 4 = 44\%.
 ---
 subject: Mathematics
 topic: Successive Discounts
@@ -1222,7 +1129,6 @@ option b: ₹ 560
 option c: ₹ 600
 option d: ₹ 580
 correct: A
-explanation: అమ్మకపు ధర = 800 \times 0.9 \times 0.8 = 720 \times 0.8 = ₹ 576.
 ---
 subject: Mathematics
 topic: Averages
@@ -1235,7 +1141,6 @@ option b: 30
 option c: 32
 option d: 28
 correct: A
-explanation: తొలగించిన సంఖ్య = (5 సంఖ్యల మొత్తం) - (4 సంఖ్యల మొత్తం) = (5 \times 27) - (4 \times 25) = 135 - 100 = 35.
 ---
 subject: Mathematics
 topic: Triangle Angles
@@ -1248,7 +1153,6 @@ option b: 30°, 60°, 90°
 option c: 45°, 45°, 90°
 option d: 80°, 40°, 60°
 correct: A
-explanation: \angle A + \angle B + \angle C = 180° => 2B + B + 3B = 180° => 6B = 180° => B = 30°. A = 60°, C = 90°.
 ---
 subject: Mathematics
 topic: Mensuration
@@ -1261,7 +1165,6 @@ option b: 440 cm²
 option c: 1540 cm²
 option d: 616 cm²
 correct: A
-explanation: TSA = 2π r(r + h) = 2 \times 22/7 \times 7 \times (7 + 10) = 44 \times 17 = 748 cm².
 ---
 subject: Mathematics
 topic: Exponents
@@ -1274,7 +1177,6 @@ option b: 27/8
 option c: -8/27
 option d: 9/4
 correct: A
-explanation: \left(81/16\right)^{-3/4} = \left(16/81\right)^{3/4} = \left((2/3)^4\right)^{3/4} = (2/3)³ = 8/27.
 ---
 subject: Mathematics
 topic: Mensuration Cube
@@ -1287,7 +1189,6 @@ option b: 294 cm²
 option c: 49 cm²
 option d: 144 cm²
 correct: A
-explanation: భుజం a = \sqrt[3]{343} = 7 cm. ప్రక్కతల వైశాల్యం LSA = 4a² = 4 \times 49 = 196 cm².
 ---
 subject: Mathematics
 topic: Statistics Bounds
@@ -1300,7 +1201,6 @@ option b: m - u
 option c: m+u/2
 option d: 2u - m
 correct: A
-explanation: వర్గ మధ్య విలువ m = l+u/2 => 2m = l + u => l = 2m - u.
 ---
 subject: Mathematics
 topic: Compound Interest
@@ -1313,7 +1213,6 @@ option b: 20%
 option c: 5%
 option d: 12%
 correct: A
-explanation: A = P(1 + R/100)² => 1.21 = (1 + R/100)² => 1.1 = 1 + R/100 => R = 10\%.
 ---
 subject: Mathematics
 topic: Geometry Lines
@@ -1326,7 +1225,6 @@ option b: పూరకాలు (90°)
 option c: సంపూరకాలు (180°)
 option d: సంబంధం ఉండదు
 correct: A
-explanation: సమాంతర రేఖలను ఛేదనరేఖ ఖండించినప్పుడు ఏర్పడే ఏకాంతర అంతరకోణాలు ఎప్పుడూ సమానంగానే ఉంటాయి.
 ---
 subject: Mathematics
 topic: Algebra Identity
@@ -1339,7 +1237,6 @@ option b: 31
 option c: 81
 option d: 55
 correct: A
-explanation: (a+b+c)² = a²+b²+c² + 2(ab+bc+ca) => 9² = x + 2(26) => 81 = x + 52 => x = 29.
 ---
 subject: Mathematics
 topic: Equilateral Triangle
@@ -1352,7 +1249,6 @@ option b: 12 cm
 option c: 24 cm
 option d: 6 cm
 correct: A
-explanation: వైశాల్యం \frac{√3}{4} a² = 9√3 => a² = 36 => a = 6 cm. చుట్టుకొలత = 3a = 18 cm.
 ---
 subject: Mathematics
 topic: Prime Numbers
@@ -1365,7 +1261,6 @@ option b: 15
 option c: 21
 option d: 30
 correct: A
-explanation: 1 నుండి 100 వరకు ఖచ్చితంగా 25 ప్రధాన సంఖ్యలు ఉంటాయి.
 ---
 subject: Mathematics
 topic: Time and Work
@@ -1378,7 +1273,6 @@ option b: 8 రోజులు
 option c: 9 రోజులు
 option d: 10 రోజులు
 correct: A
-explanation: A సామర్థ్యం 1/12. B సామర్థ్యం = 1/12 \times 1.6 = 1.6/12 = 16/120 = 2/15 => రోజులు = 7.5 రోజులు.
 ---
 subject: Mathematics
 topic: Circle Area
@@ -1391,7 +1285,6 @@ option b: 3:4
 option c: 27:64
 option d: 81:256
 correct: A
-explanation: వృత్త వైశాల్యం A ∝ r². వైశాల్యాల నిష్పత్తి r_1² : r_2² = 3² : 4² = 9 : 16.
 ---
 subject: Mathematics
 topic: LCM HCF
@@ -1404,7 +1297,6 @@ option b: 108
 option c: 81
 option d: 36
 correct: A
-explanation: సంఖ్యలు x+y=45, x-y=9 => x=27, y=18. వాటి కసాగు LCM(27, 18) = 54.
 ---
 subject: Mathematics
 topic: Pythagoras Theorem
@@ -1417,7 +1309,6 @@ option b: 20 సెం.మీ
 option c: 18 సెం.మీ
 option d: 15 సెం.మీ
 correct: A
-explanation: మూడవ భుజం = √25² - 7² = √625 - 49 = √576 = 24 cm.
 ---
 subject: Mathematics
 topic: Algebra
@@ -1430,7 +1321,6 @@ option b: 3
 option c: 5
 option d: 7
 correct: A
-explanation: √169+27/169 = √196/169 = 14/13 = 1 + 1/13 => x = 1.
 ---
 subject: Mathematics
 topic: Number Systems
@@ -1443,7 +1333,6 @@ option b: పూర్ణాంకాల సమితి (Z)
 option c: సహజ సంఖ్యల సమితి (N)
 option d: సంకీర్ణ సంఖ్యలు
 correct: A
-explanation: అకరణీయ మరియు కరణీయ సంఖ్యల సమాహారాన్ని వాస్తవ సంఖ్యల సమితి (Real Numbers - R) అంటారు.
 ---
 subject: Mathematics
 topic: Polygons
@@ -1456,7 +1345,6 @@ option b: 6
 option c: 10
 option d: 12
 correct: A
-explanation: (n-2) \times 180° = 1080° => n-2 = 6 => n = 8.
 ---
 subject: Mathematics
 topic: Probability
@@ -1469,7 +1357,6 @@ option b: 1/3
 option c: 4/15
 option d: 6/11
 correct: A
-explanation: మొత్తం బంతులు = 4+5+6 = 15. తెల్లటి బంతులు = 6. సంభావ్యత = 6/15 = 2/5.
 ---
 subject: Mathematics
 topic: Cone Geometry
@@ -1482,7 +1369,6 @@ option b: 7 సెం.మీ
 option c: 6 సెం.మీ
 option d: 25 సెం.మీ
 correct: A
-explanation: l = √r² + h² = √3² + 4² = √25 = 5 cm.
 ---
 subject: Mathematics
 topic: Ramanujan
@@ -1495,7 +1381,6 @@ option b: ఆర్యభట్ట
 option c: భాస్కరాచార్య
 option d: శకుంతలా దేవి
 correct: A
-explanation: శ్రీనివాస రామానుజన్ సంఖ్యారంగంలో అద్భుతమైన రీసెర్చ్ చేసి డిసెంబర్ 22 (గణిత దినోత్సవం) కి గుర్తింపు తెచ్చారు.
 ---
 subject: Mathematics
 topic: Pedagogy Definitions
@@ -1508,7 +1393,6 @@ option b: అనుభవవాదం
 option c: యాంత్రిక వాదం
 option d: ప్రవర్తన వాదం
 correct: A
-explanation: గణితాన్ని కేవలం తర్క శాస్త్ర రూపంగా భావించే దృక్పథం లాజికల్ లేదా తార్కిక వాదం.
 ---
 subject: Mathematics
 topic: Pedagogy Connections
@@ -1521,7 +1405,6 @@ option b: కారణాలు చెప్పడం
 option c: వ్యక్తీకరించడం
 option d: ప్రాతినిధ్యపరచడం
 correct: A
-explanation: గణిత భావనలను ఇతర సబ్జెక్టులతో, నిజ జీవితంతో పోల్చి చూడటమే అనుసంధానం (Connections).
 ---
 subject: Mathematics
 topic: Pedagogy Rules
@@ -1534,7 +1417,6 @@ option b: ఉదాహరణ నుండి సూత్రం వైపు
 option c: మూర్తం నుండి అమూర్తం వైపు
 option d: ప్రత్యక్షం నుండి పరోక్షం వైపు
 correct: A
-explanation: నిగమనోపపత్తి అనగా మొదట సాధారణ సూత్రాన్ని ప్రకటించి దాని ద్వారా నిర్దిష్ట లెక్కలు సాధించడం.
 ---
 subject: Mathematics
 topic: Pedagogy Blocks
@@ -1547,7 +1429,6 @@ option b: చార్ట్ పేపర్
 option c: రోల్డ్ బోర్డు
 option d: ప్రొట్రాక్టర్
 correct: A
-explanation: డీన్స్ బ్లాకులు ప్రాథమిక పిల్లలకి ఒకట్లు, పదులు, వందల స్థాన విలువలను తాకడం ద్వారా ప్రయోగాత్మకంగా నేర్పుతాయి.
 ---
 subject: Mathematics
 topic: Pedagogy Place Value Error
@@ -1560,7 +1441,6 @@ option b: సున్నా మార్కులు ఇవ్వడం
 option c: తరగతి నుండి బయటకు పంపడం
 option d: బోర్డుపై 10 సార్లు రాయించడం
 correct: A
-explanation: విద్యార్థి ఇక్కడ స్థానవిలువల క్యారీ-ఓవర్ తప్పు చేసాడు కావున కాంక్రీట్ TLM తో భావనలను సరి చేయాలి.
 ---
 subject: Environmental Studies
 topic: RBC Lifespan
@@ -1573,7 +1453,6 @@ option b: 100 రోజులు
 option c: 60 రోజులు
 option d: 150 రోజులు
 correct: A
-explanation: ఎర్ర రక్త కణాల సగటు ఆయుర్దాయం సుమారుగా 120 రోజులు. ఇవి ప్లీహంలో నాశనమవుతాయి.
 ---
 subject: Environmental Studies
 topic: Plant vs Animal Cells
@@ -1586,7 +1465,6 @@ option b: కేంద్రకం
 option c: మైటోకాండ్రియా
 option d: సైటోప్లాజమ్
 correct: A
-explanation: వృక్ష కణాల చుట్టూ సెల్యులోజ్ కణకవచం ఉంటుంది మరియు కిరణజన్య సంయోగక్రియకు హరితరేణువులు ఉంటాయి.
 ---
 subject: Environmental Studies
 topic: Vitamin D
@@ -1599,7 +1477,6 @@ option b: స్కర్వీ
 option c: బెరి-బెరి
 option d: పెల్లాగ్రా
 correct: A
-explanation: విటమిన్ డి లోపం వల్ల క్యాల్షియం గ్రహించబడక ఎముకలు వంకర్లు తిరిగి రికెట్స్ వ్యాధి వస్తుంది.
 ---
 subject: Environmental Studies
 topic: Planets Category
@@ -1612,7 +1489,6 @@ option b: గురుడు (Jupiter)
 option c: శని (Saturn)
 option d: వరుణుడు (Neptune)
 correct: A
-explanation: సూర్యుడికి దగ్గరగా ఉన్న బుధుడు, శుక్రుడు, భూమి, కుజుడు (అంగారకుడు) రాతి పొర గల అంతర్గత గ్రహాలు.
 ---
 subject: Environmental Studies
 topic: Stratosphere
@@ -1625,7 +1501,6 @@ option b: ట్రోపో ఆవరణం
 option c: మెసో ఆవరణం
 option d: థర్మో ఆవరణం
 correct: A
-explanation: హానికరమైన సూర్య యూవీ కిరణాల నుండి రక్షించే ఓజోన్ పొర స్ట్రాటో ఆవరణంలో (20-30 కిమీ ఎత్తులో) ఉంటుంది.
 ---
 subject: Environmental Studies
 topic: Liquid Non-metal
@@ -1638,7 +1513,6 @@ option b: పాదరసం
 option c: అయోడిన్
 option d: క్లోరిన్
 correct: A
-explanation: గది ఉష్ణోగ్రత వద్ద ద్రవరూప లోహం పాదరసం (Mercury), ద్రవరూప అలోహం బ్రోమిన్ (Bromine).
 ---
 subject: Environmental Studies
 topic: Earth Sun Distance
@@ -1651,7 +1525,6 @@ option b: 100 మిలియన్ కి.మీ
 option c: 200 మిలియన్ కి.మీ
 option d: 50 మిలియన్ కి.మీ
 correct: A
-explanation: భూసూర్యుల సగటు దూరం 1 ఖగోళ ప్రమాణం లేదా సుమారుగా 149.6 మిలియన్ కిలోమీటర్లు.
 ---
 subject: Environmental Studies
 topic: Stomata
@@ -1664,7 +1537,6 @@ option b: వేరు బుడిపెలు
 option c: కాండం
 option d: పువ్వులు
 correct: A
-explanation: ఆకుల అడుగు భాగంలో ఉండే మైక్రోస్కోపిక్ పత్రరంధ్రాల (Stomata) గుండా అదనపు నీరు ఆవిరిగా మారుతుంది.
 ---
 subject: Environmental Studies
 topic: AP State Symbols
@@ -1677,7 +1549,6 @@ option b: రావి చెట్టు, పాలపిట్ట
 option c: మామిడి చెట్టు, పావురం
 option d: మర్రి చెట్టు, కొంగ
 correct: A
-explanation: ఏపీ అధికార వృక్షం వేప చెట్టు (Neem), రాష్ట్ర పక్షి రామచిలుక (Rose-ringed Parakeet).
 ---
 subject: Environmental Studies
 topic: World Water Day
@@ -1690,7 +1561,6 @@ option b: ఏప్రిల్ 22
 option c: మే 22
 option d: జూన్ 22
 correct: A
-explanation: నీటి ఆదా మరియు పరిరక్షణ ప్రాముఖ్యత కోసం మార్చి 22ను ప్రపంచ జల దినంగా జరుపుకుంటారు.
 ---
 subject: Environmental Studies
 topic: Heart Chambers
@@ -1703,7 +1573,6 @@ option b: 4 గదులు; ఎడమ కర్ణిక & ఎడమ జఠర�
 option c: 2 గదులు; కర్ణిక
 option d: 3 గదులు; జఠరిక
 correct: A
-explanation: మానవ గుండెలో 4 గదులుంటాయి. చెడు రక్తం (డీఆక్సిజనేటెడ్) కుడి కర్ణిక, కుడి జఠరిక ద్వారా ఊపిరితిత్తులకు వెళ్తుంది.
 ---
 subject: Environmental Studies
 topic: Blood Clotting
@@ -1716,7 +1585,6 @@ option b: విటమిన్ సి
 option c: విటమిన్ ఎ
 option d: హిమోగ్లోబిన్
 correct: A
-explanation: రక్తం త్వరగా గడ్డకట్టి స్రావాన్ని ఆపడానికి విటమిన్ కె మరియు ప్లాస్మా ప్రోటీన్ ఫైబ్రినోజెన్ అవసరం.
 ---
 subject: Environmental Studies
 topic: Free Education Article
@@ -1729,7 +1597,6 @@ option b: ఆర్టికల్ 19
 option c: ఆర్టికల్ 14
 option d: ఆర్టికల్ 32
 correct: A
-explanation: 86వ సవరణ (2002) ద్వారా ఆర్టికల్ 21A విద్యా హక్కును ప్రాథమిక జీవించే హక్కుగా చేర్చింది.
 ---
 subject: Environmental Studies
 topic: Parliament Houses
@@ -1742,7 +1609,6 @@ option b: విధానసభ మరియు విధానమండలి
 option c: సుప్రీంకోర్టు మరియు హైకోర్టు
 option d: క్యాబినెట్ మరియు సెక్రటేరియట్
 correct: A
-explanation: పార్లమెంటులో ఉభయ సభలైన లోక్‌సభ (ప్రజల సభ), రాజ్యసభ (రాష్ట్రాల మండలి) ఉంటాయి.
 ---
 subject: Environmental Studies
 topic: South Ganga
@@ -1755,7 +1621,6 @@ option b: కృష్ణా
 option c: పెన్నా
 option d: తుంగభద్ర
 correct: A
-explanation: భారతదేశంలో అతిపెద్ద ద్వీపకల్ప నది అయిన గోదావరిని ప్రాచీన విశాలత కారణంగా 'దక్షిణ గంగ' అంటారు.
 ---
 subject: Environmental Studies
 topic: Silent Valley Movement
@@ -1768,7 +1633,6 @@ option b: ఉత్తరాఖండ్
 option c: కర్ణాటక
 option d: అస్సాం
 correct: A
-explanation: పశ్చిమ కనుమలలోని కేరళ సైలెంట్ వ్యాలీ అడవుల్లో జలవిద్యుత్ ప్రాజెక్టుకు వ్యతిరేకంగా ఈ పర్యావరణ ఉద్యమం సాగింది.
 ---
 subject: Environmental Studies
 topic: Decomposers
@@ -1781,7 +1645,6 @@ option b: ఆకుపచ్చని మొక్కలు
 option c: శాకాహారులు
 option d: మాంసాహారులు
 correct: A
-explanation: చనిపోయిన సేంద్రీయ పదార్థాలను కుళ్ళింపజేసి భూమిలో కలిపే బ్యాక్టీరియాలు, శిలీంధ్రాలు విచ్ఛిన్నకారులు.
 ---
 subject: Environmental Studies
 topic: Pepsin
@@ -1794,7 +1657,6 @@ option b: నోరు
 option c: కాలేయం
 option d: పెద్ద పేగు
 correct: A
-explanation: జీర్ణాశయ గోడలలో గల జఠర గ్రంథులు ప్రోటీన్ల విచ్ఛిన్నానికి పెప్సిన్ ఎంజైమ్ ను స్రవిస్తాయి.
 ---
 subject: Environmental Studies
 topic: Malaria vector
@@ -1807,7 +1669,6 @@ option b: డెంగ్యూ
 option c: చికెన్గున్యా
 option d: ఫైలేరియా
 correct: A
-explanation: ప్లాస్మోడియం అనే పరాన్నజీవి వల్ల వచ్చే మలేరియా వ్యాధి ఆడ అనాఫిలిస్ దోమ ద్వారా వ్యాపిస్తుంది.
 ---
 subject: Environmental Studies
 topic: Goitre
@@ -1820,7 +1681,6 @@ option b: అనీమియా
 option c: రిక్కెట్స్
 option d: మరాస్మస్
 correct: A
-explanation: అయోడిన్ లోపించడం వల్ల థైరాయిడ్ హార్మోన్ ఉత్పత్తి తగ్గి గొంతు కింద గ్రంథి వాచి గాయిటర్ వస్తుంది.
 ---
 subject: Environmental Studies
 topic: Sushruta
@@ -1833,7 +1693,6 @@ option b: చరకుడు
 option c: ధన్వంతరి
 option d: నాగార్జునుడు
 correct: A
-explanation: క్రీస్తుపూర్వమే శస్త్రచికిత్స పద్ధతులు, ప్లాస్టిక్ సర్జరీ విధానాలు ప్రతిపాదించిన మహర్షి సుశ్రూతుడు.
 ---
 subject: Environmental Studies
 topic: Earthquakes
@@ -1846,7 +1705,6 @@ option b: బారోమీటర్ మరియు పాస్కల్
 option c: ఎనెమోమీటర్
 option d: థర్మోమీటర్
 correct: A
-explanation: భూకంప తరంగాల తీవ్రతను సీస్మోగ్రాఫ్ తో నమోదు చేసి, రిక్టర్ స్కేలు పాయింట్ల ఆధారంగా లెక్కిస్తారు.
 ---
 subject: Environmental Studies
 topic: Grama Sabha
@@ -1859,7 +1717,6 @@ option b: కేవలం వార్డు మెంబర్లు
 option c: సర్పంచ్ మరియు కార్యదర్శి మాత్రమే
 option d: ప్రభుత్వ ఉద్యోగులు మాత్రమే
 correct: A
-explanation: గ్రామ ఓటర్ల జాబితాలో నమోదై ఓటు హక్కు కలిగిన గ్రామ పౌరులందరూ గ్రామసభలో సభ్యులు.
 ---
 subject: Environmental Studies
 topic: Heliocentric Theory
@@ -1872,7 +1729,6 @@ option b: టోలెమీ
 option c: న్యూటన్
 option d: గెలీలియో
 correct: A
-explanation: సూర్యుడు కేంద్రంగా ఉండి గ్రహాలన్నీ తిరుగుతున్నాయని నికోలస్ కోపర్నికస్ నిరూపించారు (టోలెమీ భూకేంద్ర సిద్ధాంతాన్ని సవరించారు).
 ---
 subject: Environmental Studies
 topic: National Parks
@@ -1885,7 +1741,6 @@ option b: కాజీరంగా నేషనల్ పార్క్
 option c: గిర్ నేషనல் పార్క్
 option d: కన్హా నేషనల్ పార్క్
 correct: A
-explanation: 1936లో హేలీ నేషనల్ పార్క్ గా ప్రారంభమై ప్రస్తుతం జిమ్ కార్బెట్ గా పిలవబడుతున్నదే తొలి జాతీయ పార్క్.
 ---
 subject: Environmental Studies
 topic: Pedagogy Skill
@@ -1898,7 +1753,6 @@ option b: సైంటిఫిక్ నిబంధనలు కంఠస్�
 option c: పెద్ద వ్యాసాలు రాయడం
 option d: కేవలం పటాలకు రంగులు వేయడం
 correct: A
-explanation: పరిసరాల విజ్ఞానంలో నేర్చుకోవడం అనేది ప్రధానంగా చుట్టూ ఉన్న వస్తువులను పరిశీలించడం మరియు వర్గీకరించడం ద్వారా జరుగుతుంది.
 ---
 subject: Environmental Studies
 topic: Pedagogy Records
@@ -1911,7 +1765,6 @@ option b: సంచిత రికార్డు
 option c: హాజరు పట్టిక
 option d: రేటింగ్ స్కేల్
 correct: A
-explanation: విద్యార్థి ప్రవర్తన, ప్రత్యేక ప్రతిభ లేదా సంఘటనలను ఎప్పటికప్పుడు వివరణాత్మకంగా నమోదు చేసేదే ఉపాఖ్యాన రికార్డు (Anecdotal).
 ---
 subject: Environmental Studies
 topic: Pedagogy Project Steps
@@ -1924,7 +1777,6 @@ option b: ప్రణాళిక రచన -> అమలు చేయడం -> 
 option c: మూల్యాంకనం -> ప్రణాళిక -> అమలు -> పరిస్థితి
 option d: నివేదిక -> మూల్యాంకనం -> ప్రణాళిక -> అమలు
 correct: A
-explanation: కిల్ పాట్రిక్ ప్రాజెక్ట్ పద్ధతిలో మొదట ఉపాధ్యాయుడు పరిస్థితిని కల్పించి చివరగా నివేదిక సమర్పణ వరకూ ఇదే వరుస క్రమాన్ని పాటిస్తారు.
 ---
 subject: Environmental Studies
 topic: Pedagogy Survey
@@ -1937,7 +1789,6 @@ option b: కథా కథన పద్ధతి
 option c: ఉపన్యాస పద్ధతి
 option d: పుస్తక పఠనం
 correct: A
-explanation: ప్రజల నుండి సమాచారాన్ని ప్రశ్నావళి ద్వారా ప్రత్యక్షంగా సేకరించడానికి సర్వే లేదా క్షేత్ర అధ్యయనం అత్యంత ఉత్తమ మార్గం.
 ---
 subject: Environmental Studies
 topic: Pedagogy Dramatization
@@ -1950,4 +1801,3 @@ option b: కేవలం జ్ఞానము
 option c: గ్రహించడం మాత్రమే
 option d: శారీరక చలనం
 correct: A
-explanation: నాటక ప్రదర్శన భావోద్వేగాలను మార్చడంతో పాటు, నేర్చుకున్న కాలుష్య నివారణ జ్ఞానాన్ని సమాజంలో అన్వయించడాన్ని (Application) సూచిస్తుంది.

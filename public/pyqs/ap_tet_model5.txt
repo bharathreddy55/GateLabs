@@ -1,0 +1,1799 @@
+subject: Child Development & Pedagogy (1-30)
+topic: Bruner Symbolic Stage
+difficulty: Hard
+marks: 1
+year: 2026
+question: జెరోమ్ బ్రూనర్ సంజ్ఞానాత్మక ప్రతిపాదనల ప్రకారం 'సంకేతాత్మక ప్రాతినిధ్య దశ' (Symbolic Stage) కు చెందని అంశం ఏది?
+option a: వస్తువులతో ప్రత్యక్ష ప్రయోగాల ద్వారా ధారణ పొందడం
+option b: భాష మరియు అమూర్త సంకేతాల ద్వారా ఆలోచించడం
+option c: నైరూప్య ప్రతిపాదనలను విశ్లేషించడం
+option d: తార్కిక వర్గీకరణను సూత్రబద్ధం చేయడం
+correct: A
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Piaget Disequilibrium
+difficulty: Hard
+marks: 1
+year: 2026
+question: పియాజె ప్రతిపాదించిన 'సమతుల్యత' (Equilibration) ప్రక్రియలో ఆత్మీకరణం మరియు అనుగుణ్యతల మధ్య ఉత్పన్నమయ్యే సంజ్ఞానాత్మక క్లిష్టతను ఏమంటారు?
+option a: అసమతుల్యత (Disequilibrium)
+option b: కేంద్రీకరణ (Centration)
+option c: స్కీమా మార్పు
+option d: వికేంద్రీకరణ
+correct: A
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Erikson Inferiority
+difficulty: Hard
+marks: 1
+year: 2026
+question: ఎరిక్సన్ మనోసామాజిక సిద్ధాంతం ప్రకారం, 'ఉత్తర బాల్యావస్థ' లో శ్రమించే గుణానికి బదులుగా నిరాశ ఎదురైతే శేషించే ప్రతికూల వికాస పరిణామం:
+option a: న్యూనతాభావం (Inferiority)
+option b: సంధిగ్ధత
+option c: అపనమ్మకం
+option d: ఒంటరితనం
+correct: A
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Kohlberg Stage 6
+difficulty: Hard
+marks: 1
+year: 2026
+question: కొహెల్బర్గ్ నైతిక సిద్ధాంతంలోని 'సాంప్రదాయానంతర స్థాయి' లోని దశ 6 (Universal Ethical Principles) లో ప్రాథమిక సూత్రం ఏది?
+option a: సామాజిక చట్టాలకు అతీతంగా వ్యక్తిగత అంతరాత్మ మరియు మానవ హక్కులకు ప్రాధాన్యత ఇచ్చుట
+option b: వ్యక్తిగత హక్కులు మరియు చట్టబద్ధమైన ఒప్పందాలు
+option c: శిక్ష నుండి తప్పించుకొనుట
+option d: మంచి బాలుడిగా గుర్తింపు పొందడం
+correct: A
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Vygotsky Cultural Tools
+difficulty: Hard
+marks: 1
+year: 2026
+question: వైగోట్స్కీ ప్రకారం 'కల్చరల్ టూల్స్' (Cultural Tools) అనగా:
+option a: భాష, గణిత సంకేతాలు, మరియు ఆలోచనా రీతులు
+option b: కేవలం భౌతిక పరికరాలు
+option c: పాఠశాల మౌలిక వసతులు
+option d: జన్యుపరమైన సంకేతాలు
+correct: A
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Scaffolding Fading
+difficulty: Hard
+marks: 1
+year: 2026
+question: "స్కాఫోల్డింగ్" కి సంబంధించి ప్రాథమిక సూత్రాలలో సరియైన ప్రవచనాన్ని ఎంచుకోండి:
+option a: అభ్యసకుని ప్రగతికి అనుగుణంగా మద్దతు స్థాయిని క్రమంగా తగ్గించడం (Fading)
+option b: ప్రతి దశలోనూ ఒకే స్థాయి సహాయాన్ని అందించడం
+option c: సంపూర్ణ సమాధానాన్ని సిద్ధంగా అందించడం
+option d: విద్యార్థి స్వయంగా ప్రయత్నించకుండా నియంత్రించడం
+correct: A
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Bandura Retention
+difficulty: Hard
+marks: 1
+year: 2026
+question: బందూరా సిద్ధాంతంలో "ధారణ" (Retention) ప్రక్రియ వేటిపై ఆధారపడి ఉంటుంది?
+option a: సంకేతాత్మక సంకేతీకరణం మరియు మానసిక పునరావృతం
+option b: బాహ్య భౌతిక బహుమతులు
+option c: కేవలం దృశ్య ఉద్దీపనలు
+option d: మోటార్ సమన్వయం మాత్రమే
+correct: A
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Extinction Reinforcement
+difficulty: Hard
+marks: 1
+year: 2026
+question: ప్రయోగాత్మక నిబంధనంలో 'విరమణ' (Extinction) ఎప్పుడు త్వరగా సంభవిస్తుంది?
+option a: నిరంతర పునర్బలనం (Continuous Reinforcement) తర్వాత పునర్బలనం నిలిపివేస్తే
+option b: స్థిర నిష్పత్తి పునర్బలన షెడ్యూల్ తర్వాత
+option c: చర నిష్పత్తి షెడ్యూల్ నిలిపివేస్తే
+option d: చర కాల వ్యవధి తర్వాత
+correct: A
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Thorndike Law of Effect
+difficulty: Hard
+marks: 1
+year: 2026
+question: థార్న్డైక్ 'ఫలిత నియమం' (Law of Effect) ద్వారా విస్తరించబడిన ప్రధాన సిద్ధాంత భావన ఏది?
+option a: పునర్బలనం (Reinforcement) యొక్క ప్రాముఖ్యత
+option b: అనుకరణ
+option c: అంతర్దృష్టి
+option d: స్కాఫోల్డింగ్
+correct: A
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Operant Conditioning Punishment
+difficulty: Hard
+marks: 1
+year: 2026
+question: కార్యసాధక నిబంధనలో "ప్రతిస్పందన సంభావ్యతను తగ్గించే ప్రణాళిక" ఏది?
+option a: శిక్ష (Punishment)
+option b: రుణాత్మక పునర్బలనం
+option c: ధనాత్మక పునర్బలనం
+option d: షేపింగ్
+correct: A
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Gestalt Insight Restructuring
+difficulty: Hard
+marks: 1
+year: 2026
+question: గెస్టాల్ట్ సిద్ధాంతకర్తల ప్రకారం 'అంతర్దృష్టి' ఏర్పడటానికి అవసరమైన మానసిక ప్రక్రియ ఏది?
+option a: రంగ పునర్వ్యవస్థీకరణ (Restructuring of the Perceptual Field)
+option b: యాంత్రిక పునరావృతం
+option c: దోషాల లెక్కింపు
+option d: బాహ్య ప్రేరణల ఎంపిక
+correct: A
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Negative Transfer
+difficulty: Hard
+marks: 1
+year: 2026
+question: "ఒక భాష యొక్క వ్యాకరణ నియమాలు మరొక భాష నేర్చుకోవడంలో గందరగోళాన్ని సృష్టించడం" ఏ అభ్యసనాంతరణం?
+option a: ప్రతికూల అభ్యసనాంతరణం (Negative Transfer)
+option b: అనుకూల అభ్యసనాంతరణం
+option c: శూన్య అభ్యసనాంతరణం
+option d: ద్విపార్శ్వ అభ్యసనాంతరణం
+correct: A
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Pavlov Discrimination
+difficulty: Hard
+marks: 1
+year: 2026
+question: పావ్లోవ్ ప్రయోగంలో 'విచక్షణ' (Discrimination) అనగా:
+option a: రెండు సారూప్య ఉద్దీపనల మధ్య తేడాను గుర్తించి నిర్దిష్ట ఉద్దీపనకే స్పందించడం
+option b: అన్ని శబ్దాలకు స్పందించడం
+option c: స్పందన నాశనం కావడం
+option d: కొత్త ఉద్దీపనను సృష్టించడం
+correct: A
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Bloom Evaluation Creating
+difficulty: Hard
+marks: 1
+year: 2026
+question: బ్లూమ్స్ వర్గీకరణ ప్రకారం సంజ్ఞానాత్మక రంగంలోని 'మూల్యాంకనం / సృష్టింపు' స్థాయిలోని ప్రమాణాలు ఏమిటి?
+option a: అంతర్గత స్థిరత్వం మరియు బాహ్య ప్రమాణాల ఆధారంగా తీర్పు ఇవ్వడం / సరికొత్త ఆలోచనను రూపొందించడం
+option b: సమాచారాన్ని పునఃస్మరణ చేయడం
+option c: సమాచారాన్ని కేవలం వర్గీకరించడం
+option d: ఉదాహరణలు ఇవ్వడం
+correct: A
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Psychomotor Manipulation
+difficulty: Hard
+marks: 1
+year: 2026
+question: మానసిక చలన రంగంలో 'హస్తలాఘవం' (Manipulation) సూచించేది:
+option a: సూచనల ఆధారంగా సొంతంగా, సరియైన పద్ధతిలో పని చేయడం
+option b: కేవలం అనుకరించడం
+option c: అత్యంత వేగంగా స్వీయ పద్ధతిలో చేయడం
+option d: ఆచరణను నిలిపివేయడం
+correct: A
+---
+subject: Child Development & Pedagogy (1-30)
+topic: IQ Formula
+difficulty: Hard
+marks: 1
+year: 2026
+question: ప్రజ్ఞా లబ్ధి సూత్రంలో మానసిక వయస్సు (MA) స్థిరంగా ఉండి, శారీరక వయస్సు (CA) పెరిగితే IQ విలువ:
+option a: తగ్గుతుంది
+option b: పెరుగుతుంది
+option c: స్థిరంగా ఉంటుంది
+option d: సున్నా అవుతుంది
+correct: A
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Gardner Naturalistic Intelligence
+difficulty: Hard
+marks: 1
+year: 2026
+question: గార్డ్నర్ సిద్ధాంతం ప్రకారం ప్రకృతిలో నమూనాలను, వృక్షజాలం మరియు జంతుజాలాన్ని గుర్తించే వర్గీకరణ ప్రజ్ఞ ఏది?
+option a: ప్రకృతి సంబంధ ప్రజ్ఞ (Naturalistic Intelligence)
+option b: స్థానసంబంధ ప్రజ్ఞ
+option c: దేహ చాలక ప్రజ్ఞ
+option d: తార్కిక ప్రజ్ఞ
+correct: A
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Rorschach Inkblot Test
+difficulty: Hard
+marks: 1
+year: 2026
+question: 'వ్యక్తిత్వ మదింపు' కోసం వాడే రోర్షాక్ ఇంక్బ్లాట్ పరీక్షకు సంబంధించి సరియైనది:
+option a: 10 కార్డులు (5 నలుపు-తెలుపు, 2 నలుపు-ఎరుపు, 3 బహుళ వర్ణాలు)
+option b: 10 కార్డులు (అన్నీ రంగుల కార్డులే)
+option c: 30 కథల కార్డులు
+option d: 16 ప్రశ్నావళుల సమితి
+correct: A
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Emotional Intelligence Self-Awareness
+difficulty: Hard
+marks: 1
+year: 2026
+question: డానియల్ గోల్మన్ ప్రకారం 'ఉద్వేగ అవగాహన' (Self-Awareness) అనగా:
+option a: తన స్వంత ఉద్వేగాలు, బలాలు, బలహీనతలను ఖచ్చితంగా గుర్తించడం
+option b: ఇతరుల ప్రవర్తనను శాసించడం
+option c: కోపాన్ని అణచివేయడం
+option d: సామాజిక సంబంధాలను తెంచుకోవడం
+correct: A
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Defense Mechanisms Reaction Formation
+difficulty: Hard
+marks: 1
+year: 2026
+question: ఒక వ్యక్తి తనలోని అసమర్థతను కప్పిపుచ్చుకోవడానికి తీవ్రమైన వ్యతిరేక ధోరణిని వ్యక్తపరచడాన్ని ఏ రక్షక తంత్రం అంటారు?
+option a: విపరీత నిర్మాణం (Reaction Formation)
+option b: దమనం
+option c: ప్రక్షేపణం
+option d: విలీనం
+correct: A
+---
+subject: Child Development & Pedagogy (1-30)
+topic: RTE 2009 School Structure
+difficulty: Hard
+marks: 1
+year: 2026
+question: RTE చట్టం-2009 ప్రకారం ప్రాథమిక పాఠశాలల్లో నమోదు కాబడిన పిల్లల సంఖ్య 150 దాటితే ఉండాల్సిన నిర్మాణ సదుపాయం:
+option a: ఒక ప్రధానోపాధ్యాయుడు (Headmaster) మరియు కనీసం 5 గురు ఉపాధ్యాయులు
+option b: ఇద్దరు ప్రధానోపాధ్యాయులు
+option c: కేవలం 3 గురు ఉపాధ్యాయులు
+option d: నిష్పత్తి వర్తించదు
+correct: A
+---
+subject: Child Development & Pedagogy (1-30)
+topic: RTE Section 12(1)(c)
+difficulty: Hard
+marks: 1
+year: 2026
+question: RTE చట్టం-2009 లోని సెక్షన్ 12(1)(c) సూచించేది:
+option a: ప్రైవేటు ఎయిడెడ్ లేని పాఠశాలల్లో 25% సీట్లు బలహీన వర్గాలకు కేటాయించడం
+option b: ఉచిత మధ్యాహ్న భోజనం
+option c: ఉపాధ్యాయుల శిక్షణ
+option d: బోర్డు పరీక్షల నిర్వహణ
+correct: A
+---
+subject: Child Development & Pedagogy (1-30)
+topic: NCF 2005 Assessment
+difficulty: Hard
+marks: 1
+year: 2026
+question: NCF-2005 ప్రకారం మదింపు (Assessment) యొక్క ప్రాథమిక లక్ష్యం:
+option a: అభ్యసన లోపాలను గుర్తించి అభ్యసనాభివృద్ధికి తోడ్పడటం (Assessment for Learning)
+option b: ర్యాంకులు ఇవ్వడం
+option c: విద్యార్థులను విజేతలు/పరాజితులుగా వేరు చేయడం
+option d: కేవలం సర్టిఫికెట్లు జారీ చేయడం
+correct: A
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Samagra Siksha Scope
+difficulty: Hard
+marks: 1
+year: 2026
+question: 'సమగ్ర శిక్ష' పథకం పరిధిలో లేని విద్యా రంగు ఏది?
+option a: ఉన్నత విద్య (Higher University Education)
+option b: పూర్వ ప్రాథమిక విద్య
+option c: ప్రాథమిక విద్య
+option d: మాధ్యమిక విద్య
+correct: A
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Dysgraphia Strategies
+difficulty: Hard
+marks: 1
+year: 2026
+question: 'డిస్గ్రాఫియా' ఉన్న పిల్లల వికాసానికి ఉపయోగపడని వ్యూహం ఏది?
+option a: సుదీర్ఘమైన చేతిరాత అసైన్మెంట్లను తప్పనిసరి చేయడం
+option b: ఓరల్ అసైన్మెంట్లు ఇవ్వడం
+option c: టైపింగ్/వాయిస్ రికార్డింగ్ అనుమతించడం
+option d: రేఖల పరిమాణం ఉన్న కాగితాలను అందించడం
+correct: A
+---
+subject: Child Development & Pedagogy (1-30)
+topic: UDL Inclusive Education
+difficulty: Hard
+marks: 1
+year: 2026
+question: విలీన విద్య (Inclusive Education) లో 'యూనివర్సల్ డిజైన్ ఫర్ లెర్నింగ్' (UDL) ప్రతిపాదించేది:
+option a: అందరి విద్యార్థులకు వైవిధ్యమైన ప్రాతినిధ్యం, వ్యక్తీకరణ మరియు భాగస్వామ్య మార్గాలు కల్పించడం
+option b: ఒకే రకమైన బోధనా పద్ధతి అమలు చేయడం
+option c: ప్రత్యేక విద్యార్థులను వేరు చేయడం
+option d: కేవలం సాంకేతికతనే వాడటం
+correct: A
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Formative Assessment Written Works
+difficulty: Hard
+marks: 1
+year: 2026
+question: నిర్మాణాత్మక మూల్యాంకనం (FA) లో 'వ్రాత పనులు (Written Works)' కు కేటాయించిన భారం:
+option a: 10 మార్కులు
+option b: 20 మార్కులు
+option c: 15 మార్కులు
+option d: 5 మార్కులు
+correct: A
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Problem Solving Steps
+difficulty: Hard
+marks: 1
+year: 2026
+question: సమస్య పరిష్కార పద్ధతిలో సేకరించిన సమాచారాన్ని విశ్లేషించి సిద్ధాంతీకరించే సోపానం:
+option a: పరికల్పనల నిరూపణ / పరిశీలన
+option b: సమస్య ఎంపిక
+option c: పరికల్పనల రూపకల్పన
+option d: ఫలితాల సముదాయం
+correct: A
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Micro Teaching Cycle
+difficulty: Hard
+marks: 1
+year: 2026
+question: సూక్ష్మ బోధనలో 'ప్రణాళికా రచన' (Plan) నుండి 'పునఃబోధన' (Re-teach) వరకు ఒక పూర్తి చక్ర వ్యవధి:
+option a: 36 నిమిషాలు
+option b: 45 నిమిషాలు
+option c: 25 నిమిషాలు
+option d: 12 నిమిషాలు
+correct: A
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Social Constructivism Teacher Role
+difficulty: Hard
+marks: 1
+year: 2026
+question: సామాజిక నిర్మితవాదం (Social Constructivism) లో ఉపాధ్యాయుడి స్థానం:
+option a: సహ-అభ్యసకుడు మరియు సులభతరం చేసేవాడు (Co-learner & Facilitator)
+option b: సర్వాధికారి
+option c: కేవలం మూల్యాంకనదారుడు
+option d: జ్ఞాన ప్రదాత మాత్రమే
+correct: A
+---
+subject: Language I (31-60)
+topic: Telugu Sumatee Shatakam
+difficulty: Hard
+marks: 1
+year: 2026
+question: "తన కోపమె తన శత్రువు / తన శాంతమె తనకు రక్ష" అనే సుమతీ శతక పద్యం ప్రకారం మనిషికి నిజమైన శత్రువు మరియు రక్షణ వరుసగా:
+option a: కోపము, శాంతము
+option b: దుఃఖము, సంతోషము
+option c: దయ, శత్రువు
+option d: స్వర్గము, నరకము
+correct: A
+---
+subject: Language I (31-60)
+topic: Telugu Vocabulary Thathyamu
+difficulty: Hard
+marks: 1
+year: 2026
+question: 'తథ్యము' అనే పదానికి నిఘంటువు ప్రకారం అర్థం:
+option a: నిజము / సత్యము
+option b: అబద్ధము
+option c: సందేహము
+option d: ఊహ
+correct: A
+---
+subject: Language I (31-60)
+topic: Telugu Samasa Rupaka
+difficulty: Hard
+marks: 1
+year: 2026
+question: 'దయ చుట్టంబౌ' అను సమాస విగ్రహవాక్యం:
+option a: దయ అనెడి చుట్టము (రూపక సమాసము)
+option b: దయ కలిగిన చుట్టము
+option c: దయ మరియు చుట్టము
+option d: దయ యొక్క చుట్టము
+correct: A
+---
+subject: Language I (31-60)
+topic: Telugu Shatakam Makutam
+difficulty: Hard
+marks: 1
+year: 2026
+question: సుమతీ శతక పద్యానికి సంబంధించి, ఈ శతకం మరియు దీని మకుటం ఏమిటి?
+option a: సుమతీ శతకం; సుమతీ!
+option b: వేమన శతకం; విశ్వదాభిరామ వినురవేమ
+option c: దాశరథీ శతకం
+option d: కాళహస్తీశ్వర శతకం
+correct: A
+---
+subject: Language I (31-60)
+topic: Telugu Comprehension Swargam
+difficulty: Hard
+marks: 1
+year: 2026
+question: "తన సంతోషమె స్వర్గము" అనే పద్య భావం ప్రకారం స్వర్గము అనునది దేనిపై ఆధారపడి ఉంటుంది?
+option a: తన సంతోషముపై
+option b: సంపదపై
+option c: భౌతిక సౌఖ్యాలపై
+option d: ఇతరుల సహాయంపై
+correct: A
+---
+subject: Language I (31-60)
+topic: Telugu Sandhi Jagasthva
+difficulty: Hard
+marks: 1
+year: 2026
+question: 'దిగంతములు' పదానికి సరియైన విడదీసిన రూపం మరియు సంధి:
+option a: దిక్ + అంతములు (జశ్త్వ సంధి)
+option b: దిగ్ + అంతములు
+option c: దిగా + అంతములు
+option d: దిగ + అంతములు
+correct: A
+---
+subject: Language I (31-60)
+topic: Telugu Sandhi Yanadesa
+difficulty: Hard
+marks: 1
+year: 2026
+question: 'అత్యుత్సాహము' అను పదం ఏ సంధికి చెందుతుంది?
+option a: యణాదేశ సంధి (అతి + ఉత్సాహము)
+option b: గుణ సంధి
+option c: వృద్ధి సంధి
+option d: ఉత్వ సంధి
+correct: A
+---
+subject: Language I (31-60)
+topic: Telugu Samasa Saptarushulu
+difficulty: Hard
+marks: 1
+year: 2026
+question: 'సప్తర్షులు' విగ్రహవాక్యం వ్రాసి సమాసాన్ని గుర్తించండి:
+option a: ఏడు సంఖ్య గల ఋషులు - ద్విగు సమాసము
+option b: సప్త మరియు ఋషులు - ద్వంద్వ సమాసము
+option c: సప్త ఐన ఋషులు - కర్మధారయ
+option d: ఋషుల యొక్క సప్త - తత్పురుష
+correct: A
+---
+subject: Language I (31-60)
+topic: Telugu Samasa Bahuvreehi
+difficulty: Hard
+marks: 1
+year: 2026
+question: 'పద్మనాభుడు' (పద్మము నాభియందు కలవాడు - విష్ణువు) ఏ సమాసము?
+option a: బహువ్రీహి సమాసము
+option b: ద్విగు సమాసము
+option c: రూపక సమాసము
+option d: సంభావనా కర్మధారయ
+correct: A
+---
+subject: Language I (31-60)
+topic: Telugu Vibhakti Fifth
+difficulty: Hard
+marks: 1
+year: 2026
+question: 'చెట్టు నుండి పండు రాలెను' - ఇందులో 'నుండి' ఏ విభక్తి?
+option a: పంచమీ విభక్తి
+option b: తృతీయ విభక్తి
+option c: చతుర్థీ విభక్తి
+option d: షష్ఠీ విభక్తి
+correct: A
+---
+subject: Language I (31-60)
+topic: Telugu Vocabulary Kamalamu
+difficulty: Hard
+marks: 1
+year: 2026
+question: 'కమలము' పదానికి పర్యాయపదాల జత:
+option a: పద్మము, సరసీజము, నీరజము
+option b: శశి, ఇందుడు
+option c: ఖగము, విహంగము
+option d: అద్రి, నగము
+correct: A
+---
+subject: Language I (31-60)
+topic: Telugu Prakriti Vikriti
+difficulty: Hard
+marks: 1
+year: 2026
+question: 'రూపము' పదానికి ప్రకృతి - వికృతి జత:
+option a: రూపము - రూపు
+option b: రూపము - అందము
+option c: రూపము - ఆకారం
+option d: రూపము - వర్ణము
+correct: A
+---
+subject: Language I (31-60)
+topic: Telugu Nanaarthalu Hari
+difficulty: Hard
+marks: 1
+year: 2026
+question: 'హరి' పదానికి ఉన్న నానార్థాలలో సరిపడనిది:
+option a: కమలము (సరిపడదు)
+option b: విష్ణువు, కోతి, గుర్రము, సింహము
+option c: పచ్చని రంగు
+option d: సూర్యుడు
+correct: A
+---
+subject: Language I (31-60)
+topic: Telugu Anukarna Shabdam
+difficulty: Hard
+marks: 1
+year: 2026
+question: 'గిలగిల' అను పదం ఏ రకమైన ప్రయోగం?
+option a: అనుకరణ శబ్దం
+option b: తత్సమం
+option c: క్రియ
+option d: సర్వనామం
+correct: A
+---
+subject: Language I (31-60)
+topic: Telugu Vakya Apyarthaka
+difficulty: Hard
+marks: 1
+year: 2026
+question: 'అతడు చదివినా పరీక్ష రాయలేదు' - ఇది ఏ వాక్యం?
+option a: అప్యర్థక వాక్యం
+option b: చేదర్థక వాక్యం
+option c: హేత్వర్థక వాక్యం
+option d: క్వార్థక వాక్యం
+correct: A
+---
+subject: Language I (31-60)
+topic: Telugu Kriya Kvaarthakam
+difficulty: Hard
+marks: 1
+year: 2026
+question: 'వండి' అనునది ఏ రకమైన క్రియ?
+option a: క్వార్థకం (భూతకాల అసమాపక)
+option b: శత్రర్థకం
+option c: చేదర్థకం
+option d: తుమున్నర్థకం
+correct: A
+---
+subject: Language I (31-60)
+topic: Telugu Prosody Utpalamala
+difficulty: Hard
+marks: 1
+year: 2026
+question: 'ఉత్పలమాల' పద్యంలో యతి మైత్రి ఏ అక్షరాలకు చెల్లుతుంది?
+option a: 1 వ అక్షరానికి 10 వ అక్షరానికి
+option b: 1 వ అక్షరానికి 11 వ అక్షరానికి
+option c: 1 వ అక్షరానికి 14 వ అక్షరానికి
+option d: 1 వ అక్షరానికి 13 వ అక్షరానికి
+correct: A
+---
+subject: Language I (31-60)
+topic: Telugu Sanyuktaksharam
+difficulty: Hard
+marks: 1
+year: 2026
+question: ఒక హల్లుకు వేరొక హల్లు ఒత్తుగా చేరితే దాన్ని ఏమంటారు?
+option a: సంయుక్తాక్షరం
+option b: ద్విత్వాక్షరం
+option c: సంశ్లేషాక్షరం
+option d: పరుషము
+correct: A
+---
+subject: Language I (31-60)
+topic: Telugu Vyakaranam Chinnayasuri
+difficulty: Hard
+marks: 1
+year: 2026
+question: 'ఆంధ్ర శబ్ద చింతామణి' వ్యాకరణ గ్రంథానికి తెనుగున 'బాలవ్యాకరణం' రాసినది ఎవరు?
+option a: పరవస్తు చిన్నయ సూరి
+option b: నన్నయ
+option c: బహుజనపల్లి సీతారామాచార్యులు
+option d: గిడుగు
+correct: A
+---
+subject: Language I (31-60)
+topic: Telugu Literature Jnanapeetha
+difficulty: Hard
+marks: 1
+year: 2026
+question: 'విశ్వంభర' సుదీర్ఘ కవితా కావ్యానికి జ్ఞానపీఠ్ అవార్డు పొందిన తెలుగు రచయిత:
+option a: డాక్టర్ సి. నారాయణరెడ్డి (సిసారే)
+option b: విశ్వనాథ సత్యనారాయణ
+option c: రావూరి భరద్వాజ
+option d: శ్రీశ్రీ
+correct: A
+---
+subject: Language I (31-60)
+topic: Telugu Literature Manucharitra
+difficulty: Hard
+marks: 1
+year: 2026
+question: 'మనుచరిత్ర' ప్రబంధంలో కథానాయకుడు ఎవరు?
+option a: స్వరోచి
+option b: ప్రవరాఖ్యుడు
+option c: మనువు
+option d: వరూధిని
+correct: A
+---
+subject: Language I (31-60)
+topic: Telugu History Andhra Pitamahadu
+difficulty: Hard
+marks: 1
+year: 2026
+question: 'ఆంధ్ర పితామహుడు' అని ఎవరిని పిలుస్తారు?
+option a: మాడపాటి హనుమంతరావు
+option b: కొమర్రాజు లక్ష్మణరావు
+option c: గాడిచర్ల నాయకరావు
+option d: గిడుగు రామమూర్తి
+correct: A
+---
+subject: Language I (31-60)
+topic: Telugu Language Day
+difficulty: Hard
+marks: 1
+year: 2026
+question: 'గిడుగు రామమూర్తి పంతులు' జయంతి రోజున (ఆగస్టు 29) ఏ దినోత్సవం జరుపుకుంటారు?
+option a: తెలుగు భాషా దినోత్సవం
+option b: మాతృభాషా దినోత్సవం
+option c: విద్యా దినోత్సవం
+option d: సాహిత్య దినోత్సవం
+correct: A
+---
+subject: Language I (31-60)
+topic: Telugu Language Lab
+difficulty: Hard
+marks: 1
+year: 2026
+question: బోధనా పద్ధతుల్లో 'భాషా ప్రయోగశాల' యొక్క ప్రధాన ఉపయోగం:
+option a: ఉచ్ఛారణా దోషాలను సవరించి స్వయంగా సరిదిద్దుకోవడం
+option b: వ్యాకరణ సూత్రాలు రాయడం
+option c: నాటకాలు వేయడం
+option d: కంఠస్థం చేయడం
+correct: A
+---
+subject: Language I (31-60)
+topic: Telugu Listening Skills
+difficulty: Hard
+marks: 1
+year: 2026
+question: భాషా నైపుణ్యాలలో 'శ్రవణం' సమర్థవంతంగా జరగడానికి కావలసిన ప్రాథమిక షరతు:
+option a: అవధానం (Attention) మరియు అర్థగ్రహణ శక్తి
+option b: వేగంగా రాయడం
+option c: స్పష్టమైన చూపు
+option d: పుస్తకం ముందుండటం
+correct: A
+---
+subject: Language I (31-60)
+topic: Telugu Skimming Reading
+difficulty: Hard
+marks: 1
+year: 2026
+question: వాచకంలో ఉన్న విషయాలను వేగంగా, ముఖ్య భావనల కోసం మాత్రమే చదవడాన్ని (Skimming) ఏమంటారు?
+option a: విస్తార పఠనంలో భాగమైన స్కిమ్మింగ్
+option b: నిశిత పఠనం
+option c: ప్రకాశ పఠనం
+option d: ఆదర్శ పఠనం
+correct: A
+---
+subject: Language I (31-60)
+topic: Telugu CCE Academic Standards
+difficulty: Hard
+marks: 1
+year: 2026
+question: CCE విధానంలో 'విషయాల వారీగా నైపుణ్య సాధన' ను అంచనా వేసే పత్రం:
+option a: నిరంతర సాధనా సూచికలు (Academic Standards)
+option b: మార్కుల షీట్
+option c: హాజరు పట్టిక
+option d: ర్యాంకు కార్డ్
+correct: A
+---
+subject: Language I (31-60)
+topic: Telugu Teaching Strategy vs Method
+difficulty: Hard
+marks: 1
+year: 2026
+question: 'బోధనా పద్ధతి' (Teaching Method) మరియు 'బోధనా వ్యూహం' (Strategy) ల వ్యత్యాసంలో వ్యూహం అనగా:
+option a: లక్ష్య సాధన కోసం ఉపాధ్యాయుడు అనుసరించే విస్తృత ప్రణాళిక
+option b: కేవలం ఒక రోజు పాఠం
+option c: తరగతి గది అలంకరణ
+option d: గృహకార్యం ఇవ్వడం
+correct: A
+---
+subject: Language I (31-60)
+topic: Telugu Picture Stories Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: ప్రాథమిక స్థాయిలో 'చిత్ర కథల' (Picture Stories) యొక్క బోధనా ప్రాముఖ్యత:
+option a: భావ వ్యక్తీకరణ మరియు ఊహాశక్తి వికాసము
+option b: రంగులు వేయడం మాత్రమే
+option c: సమయం ఆదా కావడం
+option d: పాఠం తగ్గడం
+correct: A
+---
+subject: Language I (31-60)
+topic: Telugu Critical Thinking
+difficulty: Hard
+marks: 1
+year: 2026
+question: 'విమర్శనాత్మక ఆలోచన' (Critical Thinking) పెంపొందించే ప్రశ్నలు ఏ రకానికి చెందినవి?
+option a: ముక్త అంతం గల ప్రశ్నలు (Open-ended Questions)
+option b: ఏక సమాధాన ప్రశ్నలు
+option c: నిజా నిజాల ప్రశ్నలు
+option d: ఖాళీలు పూరించడం
+correct: A
+---
+subject: Language II (61-90)
+topic: English Primary Function of Language
+difficulty: Hard
+marks: 1
+year: 2026
+question: What is the primary function of language as stated in the passage about language as a system of symbols?
+option a: To establish and maintain complex social relationships
+option b: To transmit isolated bits of information only
+option c: To memorize grammar rules
+option d: To pass board examinations
+correct: A
+---
+subject: Language II (61-90)
+topic: English Vocabulary Arbitrary
+difficulty: Hard
+marks: 1
+year: 2026
+question: The word "ARBITRARY" in the context of language means:
+option a: Based on random choice or personal whim rather than reason or inherent connection
+option b: Fixed and unchangeable
+option c: Scientific and systematic
+option d: Written down in ancient books
+correct: A
+---
+subject: Language II (61-90)
+topic: English Comprehension Cognitive Patterns
+difficulty: Hard
+marks: 1
+year: 2026
+question: Language configures cognitive patterns in young minds through:
+option a: Cultural transmission and social interaction
+option b: Physical exercise
+option c: Rote memorization
+option d: Silent isolation
+correct: A
+---
+subject: Language II (61-90)
+topic: English Comprehension Language Nature
+difficulty: Hard
+marks: 1
+year: 2026
+question: Language is described as:
+option a: Dynamic, social, and ever-evolving
+option b: Static and unchanging
+option c: Primitive and simple
+option d: Artificial and rigid
+correct: A
+---
+subject: Language II (61-90)
+topic: English Word Forms Noun of Dynamic
+difficulty: Hard
+marks: 1
+year: 2026
+question: Identify the Noun form of "DYNAMIC":
+option a: Dynamism
+option b: Dynamically
+option c: Dynamize
+option d: Dynamos
+correct: A
+---
+subject: Language II (61-90)
+topic: English Parts of Speech Adverb
+difficulty: Hard
+marks: 1
+year: 2026
+question: Identify the correct Part of Speech for the underlined word: "She runs fast to catch the train." (fast)
+option a: Adverb
+option b: Noun
+option c: Verb
+option d: Adjective
+correct: A
+---
+subject: Language II (61-90)
+topic: English Articles Useful Metal
+difficulty: Hard
+marks: 1
+year: 2026
+question: Choose the correct Article: "Copper is ______ useful metal."
+option a: a
+option b: an
+option c: the
+option d: No article
+correct: A
+---
+subject: Language II (61-90)
+topic: English Prepositions Among
+difficulty: Hard
+marks: 1
+year: 2026
+question: Choose the correct Preposition: "He distributed the sweets ______ the children."
+option a: among
+option b: between
+option c: within
+option d: into
+correct: A
+---
+subject: Language II (61-90)
+topic: English Passive Voice Past Simple
+difficulty: Hard
+marks: 1
+year: 2026
+question: Change into Passive Voice: "The mechanic repaired the car."
+option a: The car was repaired by the mechanic.
+option b: The car is repaired by the mechanic.
+option c: The car has been repaired by the mechanic.
+option d: The car had been repaired by the mechanic.
+correct: A
+---
+subject: Language II (61-90)
+topic: English Indirect Speech Past Perfect
+difficulty: Hard
+marks: 1
+year: 2026
+question: Change into Indirect Speech: He said, "I have passed the test."
+option a: He said that he had passed the test.
+option b: He said that he has passed the test.
+option c: He told that he passed the test.
+option d: He says that he passed the test.
+correct: A
+---
+subject: Language II (61-90)
+topic: English Plurals Thesis
+difficulty: Hard
+marks: 1
+year: 2026
+question: Select the correct Plural form of 'Thesis':
+option a: Theses
+option b: Thesisen
+option c: Theseses
+option d: Thesis
+correct: A
+---
+subject: Language II (61-90)
+topic: English Subject Verb Agreement
+difficulty: Hard
+marks: 1
+year: 2026
+question: Fill in the blank: "Slow and steady ______ the race."
+option a: wins
+option b: win
+option c: winning
+option d: have won
+correct: A
+---
+subject: Language II (61-90)
+topic: English Synonyms Candid
+difficulty: Hard
+marks: 1
+year: 2026
+question: Choose the Synonym of "CANDID":
+option a: Frank / Open
+option b: Secretive
+option c: Deceitful
+option d: Reserved
+correct: A
+---
+subject: Language II (61-90)
+topic: English Antonyms Genuine
+difficulty: Hard
+marks: 1
+year: 2026
+question: Choose the Antonym of "GENUINE":
+option a: Fake / Spurious
+option b: Real
+option c: Authentic
+option d: Sincere
+correct: A
+---
+subject: Language II (61-90)
+topic: English Spelling Continuous
+difficulty: Hard
+marks: 1
+year: 2026
+question: Identify the correctly spelled word:
+option a: Continuous
+option b: Continuos
+option c: Continious
+option d: Contineous
+correct: A
+---
+subject: Language II (61-90)
+topic: English Question Tags Affirmative
+difficulty: Hard
+marks: 1
+year: 2026
+question: Select the correct Question Tag: "You are coming to school, ______?"
+option a: aren't you?
+option b: are you?
+option c: don't you?
+option d: isn't it?
+correct: A
+---
+subject: Language II (61-90)
+topic: English Conditionals First
+difficulty: Hard
+marks: 1
+year: 2026
+question: "If it rains, we will stay at home." - This is an example of:
+option a: First Conditional
+option b: Second Conditional
+option c: Third Conditional
+option d: Zero Conditional
+correct: A
+---
+subject: Language II (61-90)
+topic: English Word Order
+difficulty: Hard
+marks: 1
+year: 2026
+question: Identify the sentence with correct word order:
+option a: She always comes late.
+option b: Always she comes late.
+option c: She comes late always.
+option d: Late she comes always.
+correct: A
+---
+subject: Language II (61-90)
+topic: English Idioms Break the Ice
+difficulty: Hard
+marks: 1
+year: 2026
+question: Choose the appropriate meaning of the Idiom "Break the ice":
+option a: To start a conversation in a social setting
+option b: To freeze water
+option c: To break something fragile
+option d: To get angry
+correct: A
+---
+subject: Language II (61-90)
+topic: English Degrees of Comparison Superlative
+difficulty: Hard
+marks: 1
+year: 2026
+question: "Mount Everest is the highest peak in the world." - Degree of comparison:
+option a: Superlative Degree
+option b: Positive Degree
+option c: Comparative Degree
+option d: None of the above
+correct: A
+---
+subject: Language II (61-90)
+topic: English One Word Substitution Optimist
+difficulty: Hard
+marks: 1
+year: 2026
+question: "A person who looks at the bright side of things" is called:
+option a: Optimist
+option b: Pessimist
+option c: Atheist
+option d: Altruist
+correct: A
+---
+subject: Language II (61-90)
+topic: English Modal Verbs Permission
+difficulty: Hard
+marks: 1
+year: 2026
+question: Fill in with appropriate Modal: "______ I use your phone, please?"
+option a: May
+option b: Must
+option c: Should
+option d: Would
+correct: A
+---
+subject: Language II (61-90)
+topic: English Silent Letter Doubt
+difficulty: Hard
+marks: 1
+year: 2026
+question: Identify the Silent letter in "DOUBT":
+option a: B
+option b: D
+option c: U
+option d: T
+correct: A
+---
+subject: Language II (61-90)
+topic: English CCE Domains
+difficulty: Hard
+marks: 1
+year: 2026
+question: CCE in English emphasizes:
+option a: Continuous evaluation of both scholastic and co-scholastic domains
+option b: Written exams only
+option c: Memorizing essays
+option d: Annual rank list only
+correct: A
+---
+subject: Language II (61-90)
+topic: English Productive Skills
+difficulty: Hard
+marks: 1
+year: 2026
+question: Which skill is known as a "Productive Skill"?
+option a: Speaking & Writing
+option b: Listening
+option c: Reading
+option d: Listening & Reading
+correct: A
+---
+subject: Language II (61-90)
+topic: English Grammar Translation Method
+difficulty: Hard
+marks: 1
+year: 2026
+question: Grammar-Translation Method lays emphasis on:
+option a: Translation into mother tongue and explicit grammar rules
+option b: Spoken fluency
+option c: Direct communication
+option d: Listening drills
+correct: A
+---
+subject: Language II (61-90)
+topic: English Teaching Prose Primary Level
+difficulty: Hard
+marks: 1
+year: 2026
+question: Objective of teaching Prose at primary level:
+option a: Language comprehension, vocabulary development, and context understanding
+option b: Singing rhythm
+option c: Line-by-line translation only
+option d: Rote learning
+correct: A
+---
+subject: Language II (61-90)
+topic: English Phonics Method
+difficulty: Hard
+marks: 1
+year: 2026
+question: Phonics method helps in developing:
+option a: Reading and Pronunciation
+option b: Handwriting
+option c: Essay writing
+option d: Grammar rules
+correct: A
+---
+subject: Language II (61-90)
+topic: English TLM Purpose
+difficulty: Hard
+marks: 1
+year: 2026
+question: Teaching Learning Material (TLM) should be:
+option a: Contextual, durable, and directly linked to learning goals
+option b: Costly
+option c: Decoration item only
+option d: Imported
+correct: A
+---
+subject: Language II (61-90)
+topic: English Diagnostic Testing
+difficulty: Hard
+marks: 1
+year: 2026
+question: Diagnostic testing in English is used to:
+option a: Identify specific learning gaps of students
+option b: Award final grades
+option c: Rank students
+option d: Conduct sports selection
+correct: A
+---
+subject: Mathematics (91-120)
+topic: HCF 48 and 72
+difficulty: Hard
+marks: 1
+year: 2026
+question: 48 మరియు 72 ల గ.సా.భా (HCF) ఎంత?
+option a: 24
+option b: 12
+option c: 18
+option d: 36
+correct: A
+---
+subject: Mathematics (91-120)
+topic: LCM of Fractions
+difficulty: Hard
+marks: 1
+year: 2026
+question: 2/3, 4/5, 6/7 ల క.సా.గు (LCM) ఎంత?
+option a: 12
+option b: 12/105
+option c: 12/1
+option d: 24
+correct: A
+---
+subject: Mathematics (91-120)
+topic: Diagonal of Rectangle
+difficulty: Hard
+marks: 1
+year: 2026
+question: ఒక దీర్ఘచతురస్రం పొడవు 8 సెం.మీ, వెడల్పు 6 సెం.మీ అయిన దాని కర్ణం పొడవు ఎంత?
+option a: 10 సెం.మీ
+option b: 14 సెం.మీ
+option c: 12 సెం.మీ
+option d: 16 సెం.మీ
+correct: A
+---
+subject: Mathematics (91-120)
+topic: Cost Price from Profit Percentage
+difficulty: Hard
+marks: 1
+year: 2026
+question: 20% లాభంతో ఒక వస్తువును Rs. 600 కి అమ్మితే, దాని కొన్నవెల ఎంత?
+option a: Rs. 500
+option b: Rs. 480
+option c: Rs. 520
+option d: Rs. 550
+correct: A
+---
+subject: Mathematics (91-120)
+topic: Average of First Five Primes
+difficulty: Hard
+marks: 1
+year: 2026
+question: మొదటి 5 ప్రధాన సంఖ్యల సగటు ఎంత?
+option a: 5.6
+option b: 5.0
+option c: 6.2
+option d: 4.8
+correct: A
+---
+subject: Mathematics (91-120)
+topic: Third Angle of Triangle
+difficulty: Hard
+marks: 1
+year: 2026
+question: త్రిభుజంలో రెండు కోణాలు 50 డిగ్రీలు, 60 డిగ్రీలు అయితే మూడవ కోణం ఎంత?
+option a: 70 డిగ్రీలు
+option b: 80 డిగ్రీలు
+option c: 90 డిగ్రీలు
+option d: 60 డిగ్రీలు
+correct: A
+---
+subject: Mathematics (91-120)
+topic: Area of Circle from Circumference
+difficulty: Hard
+marks: 1
+year: 2026
+question: ఒక వృత్త పరిధి 44 సెం.మీ అయిన దాని వైశాల్యం ఎంత?
+option a: 154 సెం.మీ చదరం
+option b: 88 సెం.మీ చదరం
+option c: 308 సెం.మీ చదరం
+option d: 616 సెం.మీ చదరం
+correct: A
+---
+subject: Mathematics (91-120)
+topic: Exponential Equation
+difficulty: Hard
+marks: 1
+year: 2026
+question: 3^(x+1) = 27 అయితే x విలువ ఎంత?
+option a: 2
+option b: 3
+option c: 1
+option d: 4
+correct: A
+---
+subject: Mathematics (91-120)
+topic: Volume of Cube
+difficulty: Hard
+marks: 1
+year: 2026
+question: ఘనం భుజం 5 సెం.మీ అయిన దాని ఘనపరిమాణం ఎంత?
+option a: 125 సెం.మీ గడి
+option b: 150 సెం.మీ గడి
+option c: 100 సెం.మీ గడి
+option d: 75 సెం.మీ గడి
+correct: A
+---
+subject: Mathematics (91-120)
+topic: Bar Graph Column Width
+difficulty: Hard
+marks: 1
+year: 2026
+question: బార్ గ్రాఫ్లో స్థంభాల వెడల్పు ఎలా ఉండాలి?
+option a: సమానంగా ఉండాలి
+option b: మారుతూ ఉండాలి
+option c: ఎత్తుపై ఆధారపడి ఉండాలి
+option d: సంబంధం లేదు
+correct: A
+---
+subject: Mathematics (91-120)
+topic: Simple Interest
+difficulty: Hard
+marks: 1
+year: 2026
+question: Rs. 1000 పై 5% వడ్డీ రేటుతో 2 సంవత్సరాలకు అయ్యే సాధారణ వడ్డీ ఎంత?
+option a: Rs. 100
+option b: Rs. 150
+option c: Rs. 50
+option d: Rs. 200
+correct: A
+---
+subject: Mathematics (91-120)
+topic: Supplementary Angles
+difficulty: Hard
+marks: 1
+year: 2026
+question: సంపూరక కోణాల (Supplementary Angles) మొత్తం ఎంత?
+option a: 180 డిగ్రీలు
+option b: 90 డిగ్రీలు
+option c: 360 డిగ్రీలు
+option d: 270 డిగ్రీలు
+correct: A
+---
+subject: Mathematics (91-120)
+topic: Algebraic Identity
+difficulty: Hard
+marks: 1
+year: 2026
+question: (a+b)^2 - (a-b)^2 విలువ ఎంత?
+option a: 4ab
+option b: 2(a^2+b^2)
+option c: 2ab
+option d: a^2-b^2
+correct: A
+---
+subject: Mathematics (91-120)
+topic: Perimeter of Equilateral Triangle
+difficulty: Hard
+marks: 1
+year: 2026
+question: సమబాహు త్రిభుజం భుజం 6 సెం.మీ అయిన దాని చుట్టుకొలత ఎంత?
+option a: 18 సెం.మీ
+option b: 12 సెం.మీ
+option c: 36 సెం.మీ
+option d: 24 సెం.మీ
+correct: A
+---
+subject: Mathematics (91-120)
+topic: Smallest Prime Number
+difficulty: Hard
+marks: 1
+year: 2026
+question: అతిచిన్న ప్రధాన సంఖ్య ఏది?
+option a: 2
+option b: 1
+option c: 3
+option d: 0
+correct: A
+---
+subject: Mathematics (91-120)
+topic: Time and Work A and B
+difficulty: Hard
+marks: 1
+year: 2026
+question: ఒక పనిని A 6 రోజుల్లో, B 12 రోజుల్లో చేయగలరు. ఇద్దరూ కలిసి ఎన్ని రోజుల్లో పూర్తి చేస్తారు?
+option a: 4 రోజులు
+option b: 8 రోజులు
+option c: 5 రోజులు
+option d: 6 రోజులు
+correct: A
+---
+subject: Mathematics (91-120)
+topic: Line Segment End Points
+difficulty: Hard
+marks: 1
+year: 2026
+question: రేఖాగణితంలో 'రేఖాఖండం' (Line Segment) కి ఎన్ని అంత్య బిందువులు ఉంటాయి?
+option a: 2
+option b: 1
+option c: 0
+option d: అపరిమితం
+correct: A
+---
+subject: Mathematics (91-120)
+topic: Ratio Proportion
+difficulty: Hard
+marks: 1
+year: 2026
+question: 2:3 = 6:x అయితే x విలువ ఎంత?
+option a: 9
+option b: 8
+option c: 12
+option d: 4
+correct: A
+---
+subject: Mathematics (91-120)
+topic: Volume of Cylinder
+difficulty: Hard
+marks: 1
+year: 2026
+question: స్థూపం ఘనపరిమాణం యొక్క సూత్రం:
+option a: pi*r^2*h
+option b: 2*pi*r*h
+option c: (1/3)*pi*r^2*h
+option d: 2*pi*r*(r+h)
+correct: A
+---
+subject: Mathematics (91-120)
+topic: Square Root of Decimal
+difficulty: Hard
+marks: 1
+year: 2026
+question: sqrt(0.09) విలువ ఎంత?
+option a: 0.3
+option b: 0.03
+option c: 0.003
+option d: 3.0
+correct: A
+---
+subject: Mathematics (91-120)
+topic: Negative Integers Ordering
+difficulty: Hard
+marks: 1
+year: 2026
+question: -3 కంటే పెద్దదైన రుణ పూర్ణాంకం ఏది?
+option a: -2
+option b: -4
+option c: -5
+option d: -10
+correct: A
+---
+subject: Mathematics (91-120)
+topic: Sum of Quadrilateral Angles
+difficulty: Hard
+marks: 1
+year: 2026
+question: చతుర్భుజంలోని అంతర కోణాల మొత్తం ఎంత?
+option a: 360 డిగ్రీలు
+option b: 180 డిగ్రీలు
+option c: 540 డిగ్రీలు
+option d: 270 డిగ్రీలు
+correct: A
+---
+subject: Mathematics (91-120)
+topic: Set Union
+difficulty: Hard
+marks: 1
+year: 2026
+question: A = {1, 2}, B = {2, 3} అయితే A U B ఎంత?
+option a: {1, 2, 3}
+option b: {2}
+option c: {1, 3}
+option d: { }
+correct: A
+---
+subject: Mathematics (91-120)
+topic: Surface Area of Sphere
+difficulty: Hard
+marks: 1
+year: 2026
+question: గోళం (Sphere) యొక్క ఉపరితల వైశాల్యం యొక్క సూత్రం:
+option a: 4*pi*r^2
+option b: 2*pi*r^2
+option c: (4/3)*pi*r^3
+option d: pi*r^2
+correct: A
+---
+subject: Mathematics (91-120)
+topic: Pythagoras Theorem
+difficulty: Hard
+marks: 1
+year: 2026
+question: పైథాగరస్ సిద్ధాంతం ఏ త్రిభుజానికి వర్తిస్తుంది?
+option a: లంబకోణ త్రిభుజం
+option b: సమబాహు త్రిభుజం
+option c: లఘుకోణ త్రిభుజం
+option d: అధికకోణ త్రిభుజం
+correct: A
+---
+subject: Mathematics (91-120)
+topic: Inductive Method Teaching
+difficulty: Hard
+marks: 1
+year: 2026
+question: అగమనాత్మక పద్ధతిలో బోధన దేనితో ప్రారంభమవుతుంది?
+option a: ఉదాహరణలతో
+option b: సూత్రాలతో
+option c: నిర్వచనాలతో
+option d: సమస్య పరిష్కారంతో
+correct: A
+---
+subject: Mathematics (91-120)
+topic: Academic Standard Knowledge
+difficulty: Hard
+marks: 1
+year: 2026
+question: విద్యార్థి గణిత సూత్రాలను గుర్తుకు తెచ్చుకుంటే అది ఏ విద్యా ప్రమాణం?
+option a: విషయ అవగాహన / జ్ఞానము
+option b: అనుసంధానం
+option c: వ్యక్తీకరణ
+option d: ప్రశంస
+correct: A
+---
+subject: Mathematics (91-120)
+topic: TLM Place Value
+difficulty: Hard
+marks: 1
+year: 2026
+question: ప్రాథమిక స్థాయిలో 'స్థాన విలువలు' బోధించడానికి వాడే పరికరం:
+option a: అబాకస్
+option b: ప్రొట్రాక్టర్
+option c: కంపాస్
+option d: గ్రాఫ్
+correct: A
+---
+subject: Mathematics (91-120)
+topic: Diagnostic Test Purpose
+difficulty: Hard
+marks: 1
+year: 2026
+question: లోప నిర్ధారణ పరీక్ష (Diagnostic Test) ముఖ్య ఉద్దేశ్యం:
+option a: అభ్యసన లోపాలను గుర్తించడం
+option b: మార్కులు వేయడం
+option c: నెక్స్ట్ క్లాస్కి ప్రమోట్ చేయడం
+option d: ర్యాంకులు ఇవ్వడం
+correct: A
+---
+subject: Mathematics (91-120)
+topic: Deductive Method Time Saving
+difficulty: Hard
+marks: 1
+year: 2026
+question: గణితంలో బోధనా సమయాన్ని ఆదా చేసే పద్ధతి:
+option a: నిగమనాత్మక పద్ధతి (Deductive)
+option b: అగమనాత్మక పద్ధతి
+option c: ప్రయోగశాలా పద్ధతి
+option d: ప్రాజెక్ట్ పద్ధతి
+correct: A
+---
+subject: Environmental Studies (121-150)
+topic: Blood pH
+difficulty: Hard
+marks: 1
+year: 2026
+question: మానవ రక్తం యొక్క సాధారణ pH విలువ ఎంత మరియు అది ఏ స్వభావాన్ని కలిగి ఉంటుంది?
+option a: 7.35-7.45 (పాక్షిక క్షార స్వభావం)
+option b: 6.0 (ఆమ్ల స్వభావం)
+option c: 8.5 (తీవ్ర క్షార స్వభావం)
+option d: 5.5 (ఆమ్ల స్వభావం)
+correct: A
+---
+subject: Environmental Studies (121-150)
+topic: Stomata Guard Cells
+difficulty: Hard
+marks: 1
+year: 2026
+question: మొక్కలలో పత్రరంధ్రాలు తెరుచుకోవడానికి మరియు మూసుకోవడానికి సహాయపడే ఖనిజ మూలకం మరియు కణాలు:
+option a: పొటాషియం (K+) మరియు రక్షక కణాలు (Guard Cells)
+option b: సోడియం మరియు దారువు
+option c: కాల్షియం మరియు ఫ్లోయమ్
+option d: ఐరన్ మరియు బాహ్యచర్మం
+correct: A
+---
+subject: Environmental Studies (121-150)
+topic: Vitamin B12 Deficiency
+difficulty: Hard
+marks: 1
+year: 2026
+question: 'విటమిన్ బి12' (సయానోకోబాలమిన్) లోపం వల్ల కలిగే తీవ్రమైన రక్తహీనత రకం:
+option a: పర్నిషియస్ అనీమియా (Pernicious Anemia)
+option b: సికిల్ సెల్ అనీమియా
+option c: అప్లాస్టిక్ అనీమియా
+option d: మరాస్మస్
+correct: A
+---
+subject: Environmental Studies (121-150)
+topic: CFCs Ozone Depletion
+difficulty: Hard
+marks: 1
+year: 2026
+question: క్లోరోఫ్లోరో కార్బన్లు (CFCs) వాతావరణంలో ఏ ఆవరణలోని ఓజోన్ పొర క్షీణతకు ప్రధాన కారణమవుతున్నాయి?
+option a: స్ట్రాటో ఆవరణం (Stratosphere)
+option b: ట్రోపో ఆవరణం
+option c: ఐనో ఆవరణం
+option d: ఎక్సో ఆవరణం
+correct: A
+---
+subject: Environmental Studies (121-150)
+topic: Eutrophication
+difficulty: Hard
+marks: 1
+year: 2026
+question: 'యూట్రోఫికేషన్' (Eutrophication) అనగా జల ఆవరణ వ్యవస్థలో సంభవించే ఏ మార్పు?
+option a: పోషకాలు మితిమీరి చేరడం వల్ల ఆల్గే విపరీతంగా పెరిగి ఆక్సిజన్ క్షీణించడం
+option b: నీరు ఆవిరి కావడం
+option c: ఉప్పు శాతం పెరగడం
+option d: నీటి ఉష్ణోగ్రత తగ్గడం
+correct: A
+---
+subject: Environmental Studies (121-150)
+topic: Urea Synthesis Liver
+difficulty: Hard
+marks: 1
+year: 2026
+question: మానవ శరీరంలో 'యూరియా' నైట్రోజనస్ వ్యర్థం ఏ అవయవంలో సంశ్లేషణ చేయబడుతుంది?
+option a: కాలేయం (Liver)
+option b: మూత్రపిండం (కేవలం వడపోత)
+option c: మూత్రాశయం
+option d: గుండె
+correct: A
+---
+subject: Environmental Studies (121-150)
+topic: Most Abundant Metal Non-metal
+difficulty: Hard
+marks: 1
+year: 2026
+question: భూమి ఉపరితలంపై అత్యంత సమృద్ధిగా లభించే 'లోహం' మరియు 'అలోహం/మూలకం' వరుసగా:
+option a: అల్యూమినియం (Al) మరియు ఆక్సిజన్ (O)
+option b: ఇనుము మరియు సీలియం
+option c: రాగి మరియు నైట్రోజన్
+option d: బంగారం మరియు సిలికాన్
+correct: A
+---
+subject: Environmental Studies (121-150)
+topic: C3 and C4 Plants
+difficulty: Hard
+marks: 1
+year: 2026
+question: C3 మరియు C4 మొక్కల కిరణజన్య సంయోగక్రియలో మొదటి స్థిరమైన పదార్థాలు వరుసగా:
+option a: PGA (3-కార్బన్) మరియు OAA (4-కార్బన్)
+option b: గ్లూకోజ్ మరియు మాల్టోజ్
+option c: స్టార్చ్ మరియు సుక్రోజ్
+option d: రూబిస్కో మరియు పిఈపి
+correct: A
+---
+subject: Environmental Studies (121-150)
+topic: Pulicat Lake AP
+difficulty: Hard
+marks: 1
+year: 2026
+question: ఆంధ్రప్రదేశ్ రాష్ట్రంలో 'పులికాట్ సరస్సు' ఏ రకమైన జలరాశి మరియు ఇది ఏ జిల్లా పరిధిలో ఉంది?
+option a: ఉప్పునీటి లగూన్ (Brackish water lagoon); తిరుపతి/నెల్లూరు
+option b: మంచి నీటి సరస్సు; ఏలూరు
+option c: కృత్రిమ సరస్సు; కర్నూలు
+option d: నదీ తీర సరస్సు; కృష్ణా
+correct: A
+---
+subject: Environmental Studies (121-150)
+topic: Ramsar Sites Wetlands
+difficulty: Hard
+marks: 1
+year: 2026
+question: 'రామ్సార్ సైట్స్' (Ramsar Convention) దేని సంరక్షణకు అంతర్జాతీయంగా కట్టుబడి ఉన్నాయి?
+option a: తడక నిలయాలు / చిత్తడి నేలలు (Wetlands)
+option b: మంచు పర్వతాలు
+option c: ఎడారులు
+option d: అడవులు
+correct: A
+---
+subject: Environmental Studies (121-150)
+topic: Systolic Blood Pressure
+difficulty: Hard
+marks: 1
+year: 2026
+question: గుండె సంకోచించినప్పుడు (Systole) ధమనుల గోడలపై ఏర్పడే గరిష్ట ఒత్తిడి ఎంత?
+option a: 120 mm Hg
+option b: 80 mm Hg
+option c: 140 mm Hg
+option d: 100 mm Hg
+correct: A
+---
+subject: Environmental Studies (121-150)
+topic: Insulin Beta Cells
+difficulty: Hard
+marks: 1
+year: 2026
+question: రక్తంలో గ్లూకోజ్ స్థాయిలను తగ్గించే హార్మోన్ 'ఇన్సులిన్' ను క్లోమంలోని ఏ కణాలు స్రవిస్తాయి?
+option a: బీటా కణాలు (Islets of Langerhans)
+option b: ఆల్ఫా కణాలు
+option c: డెల్టా కణాలు
+option d: ఎసి నార్ కణాలు
+correct: A
+---
+subject: Environmental Studies (121-150)
+topic: Judicial Review USA
+difficulty: Hard
+marks: 1
+year: 2026
+question: భారత రాజ్యాంగంలో 'న్యాయ సమీక్ష' (Judicial Review) భావనను ఏ దేశ రాజ్యాంగం నుండి గ్రహించారు?
+option a: అమెరికా (USA)
+option b: బ్రిటన్
+option c: ఐర్లాండ్
+option d: కెనడా
+correct: A
+---
+subject: Environmental Studies (121-150)
+topic: Sarkaria Commission
+difficulty: Hard
+marks: 1
+year: 2026
+question: మన దేశంలో 'కేంద్ర-రాష్ట్ర సంబంధాల' పునఃసమీక్ష కోసం ఏర్పాటు చేసిన ప్రసిద్ధ కమిషన్:
+option a: సర్కారియా కమిషన్ (Sarkaria Commission)
+option b: విజిలెన్స్ కమిషన్
+option c: శ్యామ్ ప్రసాద్ కమిటీ
+option d: ఆపరేషన్ పోలో
+correct: A
+---
+subject: Environmental Studies (121-150)
+topic: Raichur Doab
+difficulty: Hard
+marks: 1
+year: 2026
+question: బహుమనీ సుల్తానులకు మరియు విజయనగర రాజులకు మధ్య వివాదాస్పదంగా మారిన సారవంతమైన ప్రాంతం ఏది?
+option a: రాయచూర్ అంతర్వేది (Raichur Doab)
+option b: కొండవీడు
+option c: తెలంగాణా పీఠభూమి
+option d: కొంకణ్ తీరం
+correct: A
+---
+subject: Environmental Studies (121-150)
+topic: BOD Water Pollution
+difficulty: Hard
+marks: 1
+year: 2026
+question: 'బయోలాజికల్ ఆక్సిజన్ డిమాండ్' (BOD) సూచిక పెరిగితే, ఆ నీటి నమూనా స్థితి:
+option a: నీరు తీవ్రంగా కాలుష్యానికి గురైంది (ఆక్సిజన్ కొరత ఉంది)
+option b: నీరు అత్యంత స్వచ్ఛమైనది
+option c: నీటిలో చేపలు పెరగడానికి అనుకూలం
+option d: మినరల్స్ ఎక్కువ ఉన్నాయి
+correct: A
+---
+subject: Environmental Studies (121-150)
+topic: 10% Energy Flow Law Lindeman
+difficulty: Hard
+marks: 1
+year: 2026
+question: ఆహార శృంఖలంలో '10 శాతం ఇంధన పరివర్తన నియమాన్ని' (10% Energy Flow Law) ప్రతిపాదించింది ఎవరు?
+option a: లిండ్మ్యాన్ (Lindeman)
+option b: ఆర్థర్ టాన్స్లే
+option c: ఈ.పి. ఓడమ్
+option d: చార్లెస్ ఎల్టన్
+correct: A
+---
+subject: Environmental Studies (121-150)
+topic: Villi Small Intestine
+difficulty: Hard
+marks: 1
+year: 2026
+question: మానవ చిన్న పేగులోని 'విల్లి' (Villi) ల ప్రధాన విధి ఏమిటి?
+option a: శోషణ తల వైశాల్యాన్ని (Surface area) పెంచి జీర్ణమైన ఆహారాన్ని రక్తంలోకి శోషించడం
+option b: ఆహారాన్ని రుబ్బుట
+option c: యాసిడ్ ఉత్పన్నం చేయడం
+option d: ఎంజైమ్స్ అణచివేయడం
+correct: A
+---
+subject: Environmental Studies (121-150)
+topic: Viral Diseases
+difficulty: Hard
+marks: 1
+year: 2026
+question: వైరస్ వల్ల కలిగే వ్యాధుల జతను గుర్తించండి:
+option a: పోలియో, ఎయిడ్స్, డెంగ్యూ
+option b: క్షయ, టైఫాయిడ్
+option c: మలేరియా, అమీబియాసిస్
+option d: రింగ్వర్మ్, ఆస్తమా
+correct: A
+---
+subject: Environmental Studies (121-150)
+topic: Vitamin E Deficiency
+difficulty: Hard
+marks: 1
+year: 2026
+question: 'విటమిన్ ఇ' (టోకోఫెరోల్) లోపం వల్ల కలిగే ప్రధాన సమస్య:
+option a: ప్రత్యుత్పత్తి లోపాలు / వంధ్యత్వం (Infertility)
+option b: రక్తం గడ్డకట్టకపోవడం
+option c: రేచీకటి
+option d: పక్షవాతం
+correct: A
+---
+subject: Environmental Studies (121-150)
+topic: Vaisheshika Atomic Theory Kanada
+difficulty: Hard
+marks: 1
+year: 2026
+question: ప్రాచీన భారతదేశంలో 'పదార్థాల పరమాణు సిద్ధాంతాన్ని' ప్రతిపాదించిన వైశేషిక దర్శన పితామహుడు:
+option a: మహర్షి కణాదుడు (Kanada)
+option b: నాగార్జునుడు
+option c: గౌతముడు
+option d: పతంజలి
+correct: A
+---
+subject: Environmental Studies (121-150)
+topic: SONAR
+difficulty: Hard
+marks: 1
+year: 2026
+question: సముద్రంలో మునిగిపోయిన వస్తువుల స్థానాన్ని, లోతును గుర్తించడానికి వాడే సౌండ్ వేవ్ పరికరం:
+option a: సోనార్ (SONAR)
+option b: రాడార్ (RADAR)
+option c: సిస్మోగ్రాఫ్
+option d: లేజర్
+correct: A
+---
+subject: Environmental Studies (121-150)
+topic: 74th Constitutional Amendment
+difficulty: Hard
+marks: 1
+year: 2026
+question: 74వ రాజ్యాంగ సవరణ చట్టం దేనికి సంబంధించిన నిర్మాణాన్ని తెలుపుతుంది?
+option a: పట్టణ స్వపరిపాలనా సంస్థలు (Urban Local Bodies)
+option b: గ్రామ పంచాయతీలు
+option c: సహకార సంఘాలు
+option d: జిల్లా పరిషత్
+correct: A
+---
+subject: Environmental Studies (121-150)
+topic: ISRO HQ and SDSC
+difficulty: Hard
+marks: 1
+year: 2026
+question: 'ఇస్రో' (ISRO) యొక్క ప్రధాన కార్యాలయం ఎక్కడ ఉంది మరియు శ్రీహరికోటలోని ప్రయోగ వేదిక పేరు ఏమిటి?
+option a: బెంగళూరు; సతీష్ ధావన్ స్పేస్ సెంటర్ (SDSC)
+option b: తిరువనంతపురం; విక్రమ్ సారాభాయ్
+option c: హైదరాబాద్; NRSC
+option d: చెన్నై; ల్యాబ్
+correct: A
+---
+subject: Environmental Studies (121-150)
+topic: Sri Venkateswara National Park AP
+difficulty: Hard
+marks: 1
+year: 2026
+question: ఆంధ్రప్రదేశ్లోని ఏ జాతీయ పార్కు నెల్లూరు/కడప సరిహద్దుల్లో ఉండి అత్యంత అరుదైన జంతు, వృక్షజాతులకు నిలయంగా ఉంది?
+option a: శ్రీ వెంకటేశ్వర నేషనల్ పార్క్
+option b: పాపికొండలు నేషనల్ పార్క్
+option c: రాజీవ్ గాంధీ నేషనల్ పార్క్
+option d: కౌండిన్య
+correct: A
+---
+subject: Environmental Studies (121-150)
+topic: Critical Pedagogy in EVS
+difficulty: Hard
+marks: 1
+year: 2026
+question: EVS బోధనలో 'విమర్శనాత్మక పెడగాజీ' (Critical Pedagogy) ప్రాధాన్యత:
+option a: సామాజిక అసమానతలు, పర్యావరణ సమస్యలను విద్యార్థులు ప్రశ్నించి, విశ్లేషించే శక్తిని ఇవ్వడం
+option b: ఉపాధ్యాయుడి మాటలను వినడం
+option c: గ్రేడ్లు సాధించడం
+option d: పటాల డ్రాయింగ్
+correct: A
+---
+subject: Environmental Studies (121-150)
+topic: 5E Model Constructivist EVS
+difficulty: Hard
+marks: 1
+year: 2026
+question: EVS అభ్యసనంలో 'కన్స్ట్రక్టివిస్ట్ అప్రోచ్' (5E Model) లోని సోపానాలు సరియైన వరస:
+option a: Engage -> Explore -> Explain -> Elaborate -> Evaluate
+option b: Explore -> Engage -> Explain -> Evaluate -> Elaborate
+option c: Evaluate -> Engage -> Explore -> Explain -> Elaborate
+option d: Explain -> Engage -> Explore -> Elaborate -> Evaluate
+correct: A
+---
+subject: Environmental Studies (121-150)
+topic: Rubrics in CCE
+difficulty: Hard
+marks: 1
+year: 2026
+question: నిరంతర సమగ్ర మూల్యాంకనం (CCE) లో EVS విషయానికై ప్రవేశపెట్టిన 'రూబ్రిక్స్' (Rubrics) అనగా:
+option a: గుణాత్మక అభ్యసన సాధనలను అంచనా వేయడానికి ఉండే స్పష్టమైన మూల్యాంకన ప్రమాణాల పట్టిక
+option b: రాత పరీక్ష సమాధాన పత్రం
+option c: మార్కుల ప్రణాళిక
+option d: గృహకార్యం బుక్
+correct: A
+---
+subject: Environmental Studies (121-150)
+topic: Project Work Academic Standard EVS
+difficulty: Hard
+marks: 1
+year: 2026
+question: విద్యార్థి తన పరిసరాలలోని ప్లాస్టిక్ వ్యర్థాల సమస్యపై 'సర్వే చేసి నివేదిక' సేకరించడం ఏ విద్యా ప్రమాణం క్రిందికి వస్తుంది?
+option a: సమాచార సేకరణ మరియు ప్రాజెక్టు పనులు (Academic Standard 4)
+option b: విషయ అవగాహన
+option c: ప్రయోగాలు చేయుట
+option d: బొమ్మలు గీయడం
+correct: A
+---
+subject: Environmental Studies (121-150)
+topic: PBL Problem Based Learning EVS
+difficulty: Hard
+marks: 1
+year: 2026
+question: EVS తరగతి గదిలో "సమస్యల ఆధారిత అభ్యసనం" (Problem-Based Learning - PBL) ద్వారా విద్యార్థిలో పెంపొందే ప్రాథమిక వైఖరి:
+option a: పరిశోధనాత్మక ఆలోచన, జట్టుకృత్యాల్లో భాగస్వామ్యం మరియు స్వయం నిర్ణయ సాధన
+option b: నిశ్శబ్దంగా ఉండటం
+option c: పరీక్షల భయం
+option d: కేవలం ఆధారాలను సేకరించడం
+correct: A
