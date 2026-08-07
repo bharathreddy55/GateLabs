@@ -10,6 +10,11 @@ export const PyqMocks = {
     // Group questions by year
     const yearGroups = {};
     allQuestions.forEach(q => {
+      // Exclude TET questions from GATE CS mock test list
+      const subLower = (q.subject || '').toLowerCase();
+      if (subLower.includes('tet') || subLower.includes('pedagogy') || subLower.includes('language i') || subLower.includes('language ii') || subLower.includes('environmental studies')) {
+        return;
+      }
       if (q.year) {
         if (!yearGroups[q.year]) {
           yearGroups[q.year] = [];

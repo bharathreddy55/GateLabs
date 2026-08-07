@@ -710,25 +710,23 @@ const mockFirestore = {
   async getQuestions(filters = {}) {
     // Dynamically load text questions at query time to keep updated
     const textQs = await loadTextQuestions();
+    
+    // Always clean out cached static text questions from local storage
     let localQs = JSON.parse(localStorage.getItem('gate_questions') || '[]');
-    const existingQs = new Set(localQs.map(q => q.question.trim()));
-    let addedCount = 0;
-    textQs.forEach(q => {
-      if (!existingQs.has(q.question.trim())) {
-        localQs.push(q);
-        addedCount++;
-      }
-    });
-    if (addedCount > 0) {
-      localStorage.setItem('gate_questions', JSON.stringify(localQs));
-    }
+    localQs = localQs.filter(q => q.id && !q.id.startsWith('txt_') && !q.id.includes('tet') && q.options && q.options.every(o => o && o.trim() !== ''));
+
+    // Save only custom-created questions back to localStorage
+    localStorage.setItem('gate_questions', JSON.stringify(localQs));
+
+    // Combine local custom questions and fresh static text questions in memory
+    const allQs = [...localQs, ...textQs];
     
     // Scan and merge all topics into syllabus
-    mergeCustomTopicsIntoSyllabus(localQs);
+    mergeCustomTopicsIntoSyllabus(allQs);
 
     return new Promise((resolve) => {
       setTimeout(() => {
-        let list = [...localQs];
+        let list = [...allQs];
         if (filters.subject) {
           const filterSub = filters.subject.toLowerCase().replace(/^section\s+\d+\:\s*/i, '');
           list = list.filter(q => {
