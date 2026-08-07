@@ -768,12 +768,13 @@ const mockFirestore = {
   async saveAttempt(attempt) {
     return new Promise((resolve) => {
       setTimeout(() => {
+        const cleanAttempt = JSON.parse(JSON.stringify(attempt));
         const attempts = JSON.parse(localStorage.getItem('gate_attempts') || '[]');
-        attempt.id = 'att_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4);
-        attempt.timestamp = new Date().toISOString();
-        attempts.push(attempt);
+        cleanAttempt.id = 'att_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4);
+        cleanAttempt.timestamp = new Date().toISOString();
+        attempts.push(cleanAttempt);
         localStorage.setItem('gate_attempts', JSON.stringify(attempts));
-        resolve(attempt);
+        resolve(cleanAttempt);
       }, 400);
     });
   },
@@ -1107,13 +1108,15 @@ const realFirestore = {
   },
   
   async saveAttempt(attempt) {
-    attempt.id = 'att_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4);
-    attempt.timestamp = new Date().toISOString();
+    // Sanitize object to eliminate all 'undefined' fields for firestore compatibility
+    const cleanAttempt = JSON.parse(JSON.stringify(attempt));
+    cleanAttempt.id = 'att_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4);
+    cleanAttempt.timestamp = new Date().toISOString();
 
     // Always save to localStorage first
     try {
       const attempts = JSON.parse(localStorage.getItem('gate_attempts') || '[]');
-      attempts.push(attempt);
+      attempts.push(cleanAttempt);
       localStorage.setItem('gate_attempts', JSON.stringify(attempts));
     } catch (e) {
       console.warn("localStorage saveAttempt error:", e);
@@ -1123,13 +1126,13 @@ const realFirestore = {
     try {
       if (firestore) {
         const user = authInstance ? authInstance.currentUser : null;
-        attempt.userId = user ? user.uid : 'anonymous';
-        await setDoc(doc(firestore, "attempts", attempt.id), attempt);
+        cleanAttempt.userId = user ? user.uid : 'anonymous';
+        await setDoc(doc(firestore, "attempts", cleanAttempt.id), cleanAttempt);
       }
     } catch (err) {
       console.warn("Firestore saveAttempt error:", err);
     }
-    return attempt;
+    return cleanAttempt;
   },
   
   async getAttempts() {
