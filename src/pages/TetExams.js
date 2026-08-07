@@ -27,6 +27,9 @@ export const TetExams = {
             <button id="btn-load-tet-practice-1" class="px-4.5 py-2.5 rounded-xl bg-primary-500 text-white text-xs font-bold hover:scale-102 transition-all select-none active:scale-95 flex items-center gap-1.5 shadow-sm">
               <i class="fa-solid fa-file-invoice"></i> Load 'TET Practice 1'
             </button>
+            <button id="btn-load-tet-practice-2" class="px-4.5 py-2.5 rounded-xl bg-indigo-650 text-white text-xs font-bold hover:scale-102 transition-all select-none active:scale-95 flex items-center gap-1.5 shadow-sm">
+              <i class="fa-solid fa-file-invoice"></i> Load 'TET Practice 2'
+            </button>
             <button id="btn-load-sample-tet" class="px-4.5 py-2.5 rounded-xl border border-slate-200 dark:border-white/10 text-slate-600 dark:text-slate-300 text-xs font-bold hover:bg-slate-100 dark:hover:bg-slate-800 transition-all select-none active:scale-95 flex items-center gap-1.5">
               <i class="fa-solid fa-file-import"></i> Load Sample 150 Qs
             </button>
@@ -126,6 +129,7 @@ Q2: ...</pre>
     const btnStart = document.getElementById('btn-start-tet-simulator');
     const btnLoadSample = document.getElementById('btn-load-sample-tet');
     const btnLoadPractice1 = document.getElementById('btn-load-tet-practice-1');
+    const btnLoadPractice2 = document.getElementById('btn-load-tet-practice-2');
     const guideToggle = document.getElementById('btn-toggle-format-guide');
     const guideBox = document.getElementById('format-guide-box');
 
@@ -163,7 +167,27 @@ Q2: ...</pre>
       }
     });
 
-    // Parse questions click
+    // Load custom TET Practice 2 question file
+    btnLoadPractice2?.addEventListener('click', async () => {
+      btnLoadPractice2.disabled = true;
+      btnLoadPractice2.innerHTML = '<i class="fa-solid fa-circle-notch animate-spin"></i> Loading...';
+      try {
+        const res = await fetch('./pyqs/tet_practice_2.txt');
+        if (res.ok) {
+          const text = await res.text();
+          textarea.value = text;
+          showToast("Loaded 'TET Practice 2' questions!", "success");
+          this.parseQuestions();
+        } else {
+          showToast("Failed to fetch TET Practice 2 asset.", "error");
+        }
+      } catch (err) {
+        showToast("Error: " + err.message, "error");
+      } finally {
+        btnLoadPractice2.disabled = false;
+        btnLoadPractice2.innerHTML = '<i class="fa-solid fa-file-invoice"></i> Load \'TET Practice 2\'';
+      }
+    });
     btnParse?.addEventListener('click', () => {
       this.parseQuestions();
     });
@@ -185,7 +209,7 @@ Q2: ...</pre>
       MockTest.status = {};
       MockTest.timeLeft = 150 * 60; // 150 minutes
       MockTest.totalTime = 150 * 60;
-      MockTest.selectedSubject = 'TET Practice 1';
+      MockTest.selectedSubject = textarea.value.includes('MODEL PAPER 2') ? 'TET Practice 2' : 'TET Practice 1';
       MockTest.selectedTopic = 'All';
       MockTest.calcLeft = undefined;
       MockTest.calcTop = undefined;
