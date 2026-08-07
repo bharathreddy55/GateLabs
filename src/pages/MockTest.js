@@ -28,6 +28,7 @@ export const MockTest = {
   calcInput: '0',
   isSidebarOpen: true,
   isCalcDocked: false,
+  fontSizeMultiplier: 1.0,
 
   async render() {
     if (!this.isTesting) {
@@ -325,6 +326,12 @@ export const MockTest = {
           </div>
 
           <div class="flex items-center gap-3">
+            <button id="zoom-in-btn" class="px-3 py-1.5 rounded-xl border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-slate-850 text-slate-600 dark:text-slate-300 text-xs font-bold flex items-center gap-1.5" title="Zoom In Text">
+              <i class="fa-solid fa-magnifying-glass-plus"></i> Zoom In
+            </button>
+            <button id="zoom-out-btn" class="px-3 py-1.5 rounded-xl border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-slate-850 text-slate-600 dark:text-slate-300 text-xs font-bold flex items-center gap-1.5" title="Zoom Out Text">
+              <i class="fa-solid fa-magnifying-glass-minus"></i> Zoom Out
+            </button>
             <button id="toggle-calc-btn" class="px-3.5 py-1.5 rounded-xl border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-slate-850 text-slate-600 dark:text-slate-300 text-xs font-bold flex items-center gap-1.5">
               <i class="fa-solid fa-calculator"></i> ${this.isCalcOpen ? 'Hide Calculator' : 'Calculator'}
             </button>
@@ -371,7 +378,7 @@ export const MockTest = {
                     ${q.type === 'NAT' ? '<span class="text-[9px] font-bold text-slate-400 dark:text-slate-500">(Numerical Answer. No negative marking)</span>' : ''}
                   </div>
 
-                  <p class="text-xs font-bold text-slate-805 dark:text-slate-200 whitespace-pre-line leading-relaxed max-h-[22rem] overflow-y-auto pr-1">
+                  <p id="question-text-zoomable" class="font-bold text-slate-805 dark:text-slate-200 whitespace-pre-line leading-relaxed max-h-[22rem] overflow-y-auto pr-1" style="font-size: ${(this.fontSizeMultiplier || 1.0) * 12}px;">
                     ${q.question}
                   </p>
                 </div>
@@ -390,7 +397,7 @@ export const MockTest = {
                     <span class="text-[10px] font-extrabold text-primary-500 bg-primary-500/10 px-2.5 py-1 rounded-lg">${q.marks} Mark${q.marks > 1 ? 's' : ''}</span>
                   </div>
 
-                  <div class="max-h-[22rem] overflow-y-auto pr-1">
+                  <div id="options-container-zoomable" class="max-h-[22rem] overflow-y-auto pr-1" style="font-size: ${(this.fontSizeMultiplier || 1.0) * 12}px;">
                     ${q.type === 'NAT' ? `
                       <!-- NAT Input Panel -->
                       <div class="flex flex-col gap-4 max-w-sm mx-auto">
@@ -415,7 +422,7 @@ export const MockTest = {
                               isChecked ? 'border-primary-500 bg-primary-50/10 dark:bg-primary-950/20' : 'border-slate-200 dark:border-white/5 bg-white/40 dark:bg-slate-950/10'
                             }">
                               <input type="checkbox" name="sim-option-msq" value="${oIdx}" ${isChecked ? 'checked' : ''} class="mt-0.5 text-primary-600 border-slate-350 focus:ring-primary-500 rounded bg-white dark:bg-slate-900">
-                              <span class="text-xs font-bold text-slate-700 dark:text-slate-200 leading-relaxed">${String.fromCharCode(65 + oIdx)}. ${opt}</span>
+                              <span class="font-bold text-slate-700 dark:text-slate-200 leading-relaxed" style="font-size: inherit;">${String.fromCharCode(65 + oIdx)}. ${opt}</span>
                             </label>
                           `;
                         }).join('')}
@@ -430,7 +437,7 @@ export const MockTest = {
                               isChecked ? 'border-primary-500 bg-primary-50/10 dark:bg-primary-950/20' : 'border-slate-200 dark:border-white/5 bg-white/40 dark:bg-slate-950/10'
                             }">
                               <input type="radio" name="sim-option" value="${oIdx}" ${isChecked ? 'checked' : ''} class="mt-0.5 text-primary-600 border-slate-350 focus:ring-primary-500 bg-white dark:bg-slate-900">
-                              <span class="text-xs font-bold text-slate-700 dark:text-slate-200 leading-relaxed">${String.fromCharCode(65 + oIdx)}. ${opt}</span>
+                              <span class="font-bold text-slate-700 dark:text-slate-200 leading-relaxed" style="font-size: inherit;">${String.fromCharCode(65 + oIdx)}. ${opt}</span>
                             </label>
                           `;
                         }).join('')}
@@ -1092,6 +1099,17 @@ export const MockTest = {
       window.addEventListener('touchmove', onTouchMove, { passive: false });
       window.addEventListener('touchend', onTouchEnd);
     }
+
+    // Zoom Buttons
+    document.getElementById('zoom-in-btn')?.addEventListener('click', () => {
+      this.fontSizeMultiplier = Math.min((this.fontSizeMultiplier || 1.0) + 0.1, 2.0);
+      this.applyZoom();
+    });
+
+    document.getElementById('zoom-out-btn')?.addEventListener('click', () => {
+      this.fontSizeMultiplier = Math.max((this.fontSizeMultiplier || 1.0) - 0.1, 0.7);
+      this.applyZoom();
+    });
   },
 
   getCurrentSectionName(q) {
@@ -1730,6 +1748,22 @@ export const MockTest = {
         }
       });
     });
+  },
+
+  applyZoom() {
+    const qText = document.getElementById('question-text-zoomable');
+    const optsContainer = document.getElementById('options-container-zoomable');
+    const multiplier = this.fontSizeMultiplier || 1.0;
+    const pxSize = multiplier * 12;
+    if (qText) {
+      qText.style.fontSize = `${pxSize}px`;
+    }
+    if (optsContainer) {
+      optsContainer.style.fontSize = `${pxSize}px`;
+      optsContainer.querySelectorAll('span').forEach(span => {
+        span.style.fontSize = `${pxSize}px`;
+      });
+    }
   },
 
   async refresh() {
