@@ -286,6 +286,7 @@ export const MockTest = {
   renderSimulatorScreen() {
     const q = this.questions[this.currentIdx];
     if (!q) return `<p>Error loading question</p>`;
+    const isTET = (this.selectedSubject || '').toUpperCase().includes('TET');
 
     const formatTimer = (seconds) => {
       const h = Math.floor(seconds / 3600);
@@ -335,9 +336,11 @@ export const MockTest = {
             </div>
           </div>
           <div class="flex items-center gap-3">
-            <button id="toggle-calc-btn" class="px-3.5 py-1.5 rounded-xl border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-slate-850 text-slate-600 dark:text-slate-300 text-xs font-bold flex items-center gap-1.5">
-              <i class="fa-solid fa-calculator"></i> ${this.isCalcOpen ? 'Hide Calculator' : 'Calculator'}
-            </button>
+            ${!isTET ? `
+              <button id="toggle-calc-btn" class="px-3.5 py-1.5 rounded-xl border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-slate-850 text-slate-600 dark:text-slate-300 text-xs font-bold flex items-center gap-1.5">
+                <i class="fa-solid fa-calculator"></i> ${this.isCalcOpen ? 'Hide Calculator' : 'Calculator'}
+              </button>
+            ` : ''}
             <button id="toggle-sidebar-btn" class="px-3 py-1.5 rounded-xl border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-slate-850 text-slate-600 dark:text-slate-300 text-xs font-bold flex items-center gap-1.5 select-none">
               <i class="fa-solid ${this.isSidebarOpen ? 'fa-angles-right' : 'fa-angles-left'}"></i>
               <span>${this.isSidebarOpen ? 'Maximize Widescreen' : 'Show Panel'}</span>
@@ -348,10 +351,10 @@ export const MockTest = {
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 flex-1 relative items-stretch">
           
           <!-- Floating TCS Calculator (if floating and calculator open) -->
-          ${(!this.isCalcDocked && this.isCalcOpen) ? `
+          ${(!isTET && !this.isCalcDocked && this.isCalcOpen) ? `
             <div id="calculator-widget" class="fixed z-50 w-80 bg-slate-900 text-white rounded-3xl shadow-2xl p-4 border border-slate-700 animate-scale-in"
                  style="${this.calcLeft !== undefined && this.calcTop !== undefined ? `left: ${this.calcLeft}px; top: ${this.calcTop}px; transform: none;` : 'top: 7rem; left: 45%; transform: translateX(-50%);'}">
-              ${this.renderCalculatorInnerHtml()}
+               ${this.renderCalculatorInnerHtml()}
             </div>
           ` : ''}
 
@@ -459,7 +462,7 @@ export const MockTest = {
             </div>
 
             <!-- Inline Docked Calculator -->
-            ${(this.isCalcDocked && this.isCalcOpen) ? `
+            ${(!isTET && this.isCalcDocked && this.isCalcOpen) ? `
               <div class="glass-panel p-5 rounded-3xl bg-slate-900 border border-slate-700 text-white animate-scale-in">
                 ${this.renderCalculatorInnerHtml()}
               </div>
