@@ -31,7 +31,7 @@ export const TetExams = {
             <h4 class="font-display font-extrabold text-sm uppercase tracking-wider text-slate-900 dark:text-white">Official TET Mock Exams</h4>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- Exam Card 1 -->
             <div class="glass-panel p-6 rounded-3xl border border-slate-200/60 dark:border-white/[0.07] flex flex-col justify-between gap-6 hover:shadow-lg transition-all relative overflow-hidden group">
               <div class="absolute -right-10 -bottom-10 w-28 h-28 bg-primary-500/5 rounded-full blur-xl group-hover:bg-primary-500/10 transition-colors"></div>
@@ -84,6 +84,25 @@ export const TetExams = {
               <div class="flex items-center justify-between border-t border-slate-100 dark:border-white/[0.04] pt-4 mt-2">
                 <span class="text-xs text-slate-600 dark:text-slate-300 font-bold"><i class="fa-solid fa-circle-question text-emerald-500/80 mr-1"></i> 150 Questions</span>
                 <button id="btn-direct-tet-3" class="px-5 py-2.5 rounded-xl bg-emerald-600 text-white text-xs font-bold hover:scale-102 active:scale-95 transition-all flex items-center gap-1.5 shadow-md">
+                  <i class="fa-solid fa-play"></i> Start Exam
+                </button>
+              </div>
+            </div>
+
+            <!-- Exam Card 4 (AP TET Medium Paper) -->
+            <div class="glass-panel p-6 rounded-3xl border border-slate-200/60 dark:border-white/[0.07] flex flex-col justify-between gap-6 hover:shadow-lg transition-all relative overflow-hidden group">
+              <div class="absolute -right-10 -bottom-10 w-28 h-28 bg-amber-500/5 rounded-full blur-xl group-hover:bg-amber-500/10 transition-colors"></div>
+              <div>
+                <div class="flex justify-between items-start gap-4">
+                  <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-500 text-[10px] font-bold uppercase tracking-wider">Bilingual (Telugu/English)</span>
+                  <span class="text-xs text-slate-400 dark:text-slate-500 font-semibold"><i class="fa-solid fa-clock mr-1"></i> 150 Mins</span>
+                </div>
+                <h5 class="font-display font-extrabold text-base text-slate-900 dark:text-white mt-3 leading-snug">AP TET Medium Paper</h5>
+                <p class="text-xs text-slate-505 dark:text-slate-400 mt-1.5 font-semibold">TET Practice 4: 150 medium difficulty Telugu medium questions covering all Paper 1A segments.</p>
+              </div>
+              <div class="flex items-center justify-between border-t border-slate-100 dark:border-white/[0.04] pt-4 mt-2">
+                <span class="text-xs text-slate-600 dark:text-slate-300 font-bold"><i class="fa-solid fa-circle-question text-amber-500/80 mr-1"></i> 150 Questions</span>
+                <button id="btn-direct-tet-4" class="px-5 py-2.5 rounded-xl bg-amber-600 text-white text-xs font-bold hover:scale-102 active:scale-95 transition-all flex items-center gap-1.5 shadow-md">
                   <i class="fa-solid fa-play"></i> Start Exam
                 </button>
               </div>
@@ -204,6 +223,7 @@ Q2: ...</pre>
     const btnDirect1 = document.getElementById('btn-direct-tet-1');
     const btnDirect2 = document.getElementById('btn-direct-tet-2');
     const btnDirect3 = document.getElementById('btn-direct-tet-3');
+    const btnDirect4 = document.getElementById('btn-direct-tet-4');
 
     // Toggle guide box
     guideToggle?.addEventListener('click', () => {
@@ -272,6 +292,25 @@ Q2: ...</pre>
       } finally {
         btnDirect3.disabled = false;
         btnDirect3.innerHTML = '<i class="fa-solid fa-play"></i> Start Exam';
+      }
+    });
+
+    btnDirect4?.addEventListener('click', async () => {
+      btnDirect4.disabled = true;
+      btnDirect4.innerHTML = '<i class="fa-solid fa-circle-notch animate-spin"></i> Loading...';
+      try {
+        const res = await fetch('./pyqs/ap_tet_medium.txt');
+        if (res.ok) {
+          const text = await res.text();
+          await this.launchExamDirectly(text, 'AP TET Medium Paper');
+        } else {
+          showToast("Failed to fetch AP TET Medium Paper asset.", "error");
+        }
+      } catch (err) {
+        showToast("Error: " + err.message, "error");
+      } finally {
+        btnDirect4.disabled = false;
+        btnDirect4.innerHTML = '<i class="fa-solid fa-play"></i> Start Exam';
       }
     });
 

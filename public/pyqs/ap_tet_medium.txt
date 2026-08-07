@@ -1,0 +1,1949 @@
+subject: Child Development & Pedagogy (1-30)
+topic: Principles of Development
+difficulty: Medium
+marks: 1
+year: 2026
+question: వికాసానికి సంబంధించి క్రింది వానిలో సరికాని ప్రవచనం ఏది?
+option a: వికాస వేగం అందరి వ్యక్తుల్లో ఒకేలా ఉంటుంది
+option b: వికాసము వికేంద్రీకృతమైనది
+option c: వికాసము ఒక నిరంతర ప్రక్రియ
+option d: వికాసము సాధారణ దిశ నుండి నిర్దిష్ట దిశగా సాగుతుంది
+correct: A
+explanation: వికాస వేగం అందరి వ్యక్తుల్లో ఒకేలా ఉండదు, ఇది వైయక్తిక భేదాలపై ఆధారపడి ఉంటుంది.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Cognitive Development
+difficulty: Medium
+marks: 1
+year: 2026
+question: పిల్లవాడు తన తల్లి రూపాన్ని చూసి గుర్తిస్తూ, వేరే స్త్రీలను చూసి కూడా 'అమ్మ' అని పిలవడం పియాజె ప్రకారము ఏ వికాస ప్రక్రియకు చెందుతుంది?
+option a: ఆత్మీకరణం (Assimilation)
+option b: అనుగుణ్యత (Accommodation)
+option c: సమతుల్యత (Equilibration)
+option d: వికేంద్రీకరణ (Decentration)
+correct: A
+explanation: ఆత్మీకరణం అనగా పాత మానసిక నిర్మితులలో కొత్త సమాచారాన్ని కలుపుకోవడం.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Psycho-social Development
+difficulty: Medium
+marks: 1
+year: 2026
+question: ఎరిక్సన్ మనోసామాజిక వికాస సిద్ధాంతం ప్రకారం, 'ఉత్తర బాల్యావస్థ' (6-12 సంవత్సరాలు) లో ఎదుర్కొనే క్లిష్ట పరిస్థితి ఏది?
+option a: శ్రమించడం వర్సెస్ న్యూనతాభావం (Industry vs Inferiority)
+option b: స్వయంప్రతిపత్తి వర్సెస్ సిగ్గు/సందేహం
+option c: చొరవ వర్సెస్ తప్పుచేసాననే భావన
+option d: గుర్తింపు వర్సెస్ పాత్ర సంధిగ్ధత
+correct: A
+explanation: 6-12 సంవత్సరాల ఉత్తర బాల్యావస్థలో శ్రమించడం వర్సెస్ న్యూనతాభావం అనే సంక్షోభం ఎదురవుతుంది.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Moral Development
+difficulty: Medium
+marks: 1
+year: 2026
+question: కొహెల్బర్గ్ నైతిక వికాస సిద్ధాంతం ప్రకారం 'చట్టం మరియు వ్యవస్థ' (Law and Order) అనునది ఏ నైతిక స్థాయికి చెందుతుంది?
+option a: సాంప్రదాయ స్థాయి
+option b: పూర్వ సాంప్రదాయ స్థాయి
+option c: ఉత్తర సాంప్రదాయ స్థాయి
+option d: అస్తిత్వ స్థాయి
+correct: A
+explanation: సాంప్రదాయ స్థాయిలో భాగమైన 4వ దశ చట్టం మరియు సాంఘిక వ్యవస్థా గౌరవాన్ని సూచిస్తుంది.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Social Development
+difficulty: Medium
+marks: 1
+year: 2026
+question: 'సమీప వికాస మండలం' (Zone of Proximal Development - ZPD) అనే భావనను ప్రతిపాదించినది ఎవరు?
+option a: లెవ్ వైగోట్స్కీ
+option b: జీన్ పియాజె
+option c: జెరోమ్ బ్రూనర్
+option d: ఆల్బర్ట్ బందూరా
+correct: A
+explanation: వైగోట్స్కీ తన సాంఘిక సాంస్కృతిక వికాస సిద్ధాంతంలో ZPD భావనను ప్రతిపాదించారు.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Social Development
+difficulty: Medium
+marks: 1
+year: 2026
+question: ఒక విద్యార్థి గణితం సమస్యను స్వయంగా చేయలేకపోయాడు, కానీ ఉపాధ్యాయుడి చిన్న సూచన (Scaffolding) ద్వారా సాధించగలిగాడు. ఇక్కడ ఉపాధ్యాయుడి సహాయం:
+option a: తాత్కాలిక మద్దతు (Scaffolding)
+option b: శాశ్వత సహాయం
+option c: శారీరక శిక్ష
+option d: పునర్బలనం నిరాకరణ
+correct: A
+explanation: స్కాఫోల్డింగ్ అనేది అభ్యాసకుడు కష్టమైన పనిని సాధించడానికి తాత్కాలికంగా అందించే సహాయం.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Socio-cognitive Learning
+difficulty: Medium
+marks: 1
+year: 2026
+question: బందూరా సాంఘిక అభ్యసన సిద్ధాంతం ప్రకారం అభ్యసన నమూనాలో సరైన వరుస క్రమం:
+option a: అవధానం -> ధారణ -> పునరుత్పాదన -> ప్రేరణ
+option b: ధారణ -> అవధానం -> ప్రేరణ -> పునరుత్పాదన
+option c: ప్రేరణ -> అవధానం -> ధారణ -> పునరుత్పాదన
+option d: అవధానం -> ప్రేరణ -> ధారణ -> పునరుత్పాదన
+correct: A
+explanation: అభ్యసన నమూనా క్రమం: అవధానం (Attention), ధారణ (Retention), పునరుత్పాదన (Reproduction), ప్రేరణ (Motivation).
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Classical Conditioning
+difficulty: Medium
+marks: 1
+year: 2026
+question: శాస్త్రీయ నిబంధనంలో 'గంట శబ్దం' అనేది ప్రారంభంలో:
+option a: తటస్థ ఉద్దీపన (Neutral Stimulus)
+option b: నిబంధిత ఉద్దీపన (CS)
+option c: అనిబంధిత ఉద్దీపన (UCS)
+option d: నిబంధిత ప్రతిస్పందన (CR)
+correct: A
+explanation: నిబంధన ప్రక్రియ ప్రారంభం కాకముందు గంట శబ్దం కేవలం ఒక తటస్థ ఉద్దీపన మాత్రమే.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Trial & Error
+difficulty: Medium
+marks: 1
+year: 2026
+question: 'యత్నదోష అభ్యసన సిద్ధాంతం' (Trial and Error Theory) ను ప్రతిపాదించిన శాస్త్రవేత్త:
+option a: ఇ.ఎల్. థార్న్డైక్
+option b: బి.ఎఫ్. స్కిన్నర్
+option c: ఐవాన్ పావ్లోవ్
+option d: కోహ్లర్
+correct: A
+explanation: ఈ.ఎల్. థార్న్డైక్ పిల్లిపై ప్రయోగాలు చేసి యత్నదోష అభ్యసన సిద్ధాంతాన్ని ప్రతిపాదించారు.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Operant Conditioning
+difficulty: Medium
+marks: 1
+year: 2026
+question: కార్యా సాధక నిబంధనంలో 'సమయానుకూల పునర్బలనం' అనునది దీనిపై ఆధారపడి ఉంటుంది:
+option a: కాల వ్యవధిపై
+option b: చేసిన ప్రతిస్పందనల సంఖ్యపై
+option c: ఉద్దీపన తీవ్రతపై
+option d: జీవి ఆకలిపై
+correct: A
+explanation: నిర్ణీత కాల వ్యవధి పూర్తయిన తర్వాత పునర్బలనం అందించడం సమయానుకూల పునర్బలన పట్టిక కిందికి వస్తుంది.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Insight Learning
+difficulty: Medium
+marks: 1
+year: 2026
+question: అంతర్దృష్టి అభ్యసన సిద్ధాంతానికి (Insight Learning) సంబంధించి 'చింపాంజీలపై' ప్రయోగాలు చేసినది ఎవరు?
+option a: కోహ్లర్
+option b: కాఫ్కా
+option c: వర్తీమర్
+option d: లవిన్
+correct: A
+explanation: కోహ్లర్ సుల్తానా అనే చింపాంజీపై బాక్సులు మరియు కర్రల సహాయంతో ప్రయోగాలు చేశారు.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Learning Transfer
+difficulty: Medium
+marks: 1
+year: 2026
+question: సైకిల్ తొక్కడం నేర్చుకున్న వ్యక్తి కార్ నడపడం నేర్చుకునేటప్పుడు మోటార్ సమన్వయం కలగడం ఏ అభ్యసనాంతరణం?
+option a: అనుకూల అభ్యసనాంతరణం
+option b: ప్రతికూల అభ్యసనాంతరణం
+option c: శూన్య అభ్యసనాంతరణం
+option d: ద్విపార్శ్వ అభ్యసనాంతరణం
+correct: A
+explanation: సైకిల్ నేర్చుకోవడం ద్వారా వచ్చిన నైపుణ్యం కార్ నేర్చుకోవడంలో సహాయపడితే అది అనుకూల బదిలీ.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Classical Conditioning
+difficulty: Medium
+marks: 1
+year: 2026
+question: పాఠశాలలో ఒక ఉపాధ్యాయుడిని చూసి భయపడే విద్యార్థి, ఆ ఉపాధ్యాయుడు బోధించే సబ్జెక్టును కూడా ద్వేషించడం ఏ నియమానికి ఉదాహరణ?
+option a: సామాన్యీకరణం (Generalization)
+option b: విచక్షణ (Discrimination)
+option c: విరమణ (Extinction)
+option d: స్వతస్సిద్ధ సమన్వయం
+correct: A
+explanation: ఒక ఉద్దీపనకు చూపిన ప్రతిస్పందనను పోలిక గల ఇతర ఉద్దీపనలకు కూడా చూపడాన్ని సామాన్యీకరణం అంటారు.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Bloom's Taxonomy
+difficulty: Medium
+marks: 1
+year: 2026
+question: బ్లూమ్స్ వర్గీకరణ ప్రకారం 'జ్ఞానాత్మక రంగం' లో అత్యున్నత స్థాయి లక్ష్యం ఏది? (పరిష్కరించబడిన వర్గీకరణ ప్రకారం)
+option a: సృష్టింపు (Creating)
+option b: మూల్యాంకనం
+option c: విశ్లేషణ
+option d: ప్రయోగం
+correct: A
+explanation: ఆండర్సన్ మరియు క్రాత్‌వోల్ సవరించిన బ్లూమ్స్ వర్గీకరణలో అత్యున్నత స్థాయి 'సృష్టింపు (Creating)'.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Bloom's Taxonomy
+difficulty: Medium
+marks: 1
+year: 2026
+question: భావావేశ రంగానికి సంబంధించి సరియైన క్రమం:
+option a: గ్రహించడం -> స్పందించడం -> విలువ కట్టడం -> వ్యవస్థాపనం -> చారిత్రీకరణ
+option b: స్పందించడం -> గ్రహించడం -> విలువ కట్టడం -> వ్యవస్థాపనం
+option c: విలువ కట్టడం -> గ్రహించడం -> స్పందించడం -> చారిత్రీకరణ
+option d: గ్రహించడం -> విలువ కట్టడం -> స్పందించడం -> వ్యవస్థాపనం
+correct: A
+explanation: భావావేశ రంగం సోపానాలు: గ్రహించడం, స్పందించడం, విలువకట్టడం, వ్యవస్థీకరించడం, శీలస్థాపనం (చారిత్రీకరణ).
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Intelligence
+difficulty: Medium
+marks: 1
+year: 2026
+question: ప్రజ్ఞా లబ్ధి (IQ) గణించే సరైన సూత్రం ఏది?
+option a: (మానసిక వయస్సు / శారీరక వయస్సు) x 100
+option b: (శారీరక వయస్సు / మానసిక వయస్సు) x 100
+option c: (మానసిక వయస్సు x శారీరక వయస్సు) / 100
+option d: (మానసిక వయస్సు / 100) x శారీరక వయస్సు
+correct: A
+explanation: విలియం స్టెర్న్ ప్రతిపాదించిన IQ సూత్రం: (MA / CA) * 100.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Multiple Intelligence
+difficulty: Medium
+marks: 1
+year: 2026
+question: గార్డ్నర్ బహుళ ప్రజ్ఞా సిద్ధాంతం ప్రకారం 'స్వయం అవగాహన, తన ఆలోచనలను విశ్లేషించుకునే శక్తి' ఉన్న వ్యక్తిలో ఉండే ప్రజ్ఞ:
+option a: వ్యక్త్యంతర్గత ప్రజ్ఞ (Intrapersonal)
+option b: వ్యక్తిాంతర ప్రజ్ఞ (Interpersonal)
+option c: తాత్విక ప్రజ్ఞ
+option d: భాషా ప్రజ్ఞ
+correct: A
+explanation: తన గురించి తాను అవగాహన చేసుకోవడం వ్యక్త్యంతర్గత ప్రజ్ఞ (Intrapersonal) పరిధిలోకి వస్తుంది.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Attitude Measurement
+difficulty: Medium
+marks: 1
+year: 2026
+question: వైఖరి (Attitude) ని కొలవడానికి ఉపయోగిచే ప్రసిద్ధ స్కేలు:
+option a: లికర్ట్ స్కేలు (Likert Scale)
+option b: రోర్షాక్ ఇంక్బ్లాట్
+option c: TAT పరీక్ష
+option d: Raven's Progressive Matrices
+correct: A
+explanation: లికర్ట్ స్కేలు అనేది వైఖరి మాపనానికి ఉపయోగించే ప్రసిద్ధ రేటింగ్ స్కేల్.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Emotional Intelligence
+difficulty: Medium
+marks: 1
+year: 2026
+question: క్రింది వానిలో ఉద్వేగ ప్రజ్ఞ (Emotional Intelligence) కు చెందని అంశం ఏది?
+option a: తీవ్రకోపం ప్రదర్శించడం
+option b: స్వయం అవగాహన
+option c: సహానుభూతి (Empathy)
+option d: సాంఘిక నైపుణ్యాలు
+correct: A
+explanation: తీవ్రకోపం లేదా ఉద్వేగాల అస్థిరత అనేది ఉద్వేగ ప్రజ్ఞ లేకపోవడాన్ని సూచిస్తుంది.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Defense Mechanisms
+difficulty: Medium
+marks: 1
+year: 2026
+question: ఒక విద్యార్థి పరీక్షలో మార్కులు తక్కువ వస్తే 'ప్రశ్నాపత్రం కఠినంగా ఉంది' అని నెపం నెట్టడం ఏ రక్షక తంత్రం?
+option a: సాబల్యం/సాకేతికత (Rationalization - సబబీకరణ)
+option b: దమనం (Repression)
+option c: ప్రక్షేపణం (Projection)
+option d: విలీనం
+correct: A
+explanation: సబబీకరణం అనగా తన తప్పును కప్పిపుచ్చుకోవడానికి నమ్మదగిన తప్పుడు కారణాలు చూపించడం.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Social Development
+difficulty: Medium
+marks: 1
+year: 2026
+question: వైగోట్స్కీ ప్రకారం 'ప్రైవేట్ స్పీచ్' (Private Speech) అనగా:
+option a: పిల్లలు తమ స్వంత ప్రవర్తనను మార్గదర్శనం చేసుకోవడానికి తమలో తాము మాట్లాడుకోవడం
+option b: బిగ్గరగా ఇతరులతో మాట్లాడటం
+option c: పగటి కలలు కనడం
+option d: సైగలు చేయడం
+correct: A
+explanation: ప్రైవేట్ స్పీచ్ ద్వారా పిల్లలు తమ ప్రవర్తనను క్రమబద్ధీకరించుకుంటారు.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: RTE Act 2009
+difficulty: Medium
+marks: 1
+year: 2026
+question: RTE చట్టం-2009 ప్రకారం ప్రాథమిక పాఠశాల (1-5 తరగతులు) లో విద్యార్థి-ఉపాధ్యాయ నిష్పత్తి (ఉపాధ్యాయుల సంఖ్య 200 దాటనప్పుడు):
+option a: 30:1
+option b: 35:1
+option c: 40:1
+option d: 25:1
+correct: A
+explanation: ప్రాథమిక పాఠశాలలో విద్యార్థి ఉపాధ్యాయుల నిష్పత్తి 30:1 గా ఉండాలని చట్టం నిర్దేశించింది.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: RTE Act 2009
+difficulty: Medium
+marks: 1
+year: 2026
+question: RTE చట్టం-2009 ప్రకారం ప్రాథమిక పాఠశాల ఉపాధ్యాయుడికి ఒక విద్యా సంవత్సరంలో కనీస బోధనా గంటలు:
+option a: 800 గంటలు
+option b: 1000 గంటలు
+option c: 1200 గంటలు
+option d: 600 గంటలు
+correct: A
+explanation: ఒక విద్యా సంవత్సరంలో కనీస బోధనా గంటలు ప్రాథమిక స్థాయికి 800 గంటలు, ఉన్నత ప్రాథమిక స్థాయికి 1000 గంటలు.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: NCF 2005
+difficulty: Medium
+marks: 1
+year: 2026
+question: NCF-2005 ప్రకారం అభ్యసనం అనేది:
+option a: కరియాత్మకమైనది మరియు సామాజికమైనది
+option b: నిష్క్రియాత్మకమైనది మరియు సామాజికమైనది
+option c: నిష్క్రియాత్మకమైనది మరియు వ్యక్తిగతమైనది
+option d: కేవలం పుస్తకాధారితమైనది
+correct: A
+explanation: అభ్యసనం ఎల్లప్పుడూ క్రియాశీలంగా సాగాలి మరియు సమాజంలో నిర్మితమవ్వాలి.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Samagra Shiksha
+difficulty: Medium
+marks: 1
+year: 2026
+question: సమగ్ర శిక్షా అభియాన్ (Samagra Shiksha) ఏ మూడు పథకాల కలయిక?
+option a: SSA, RMSA, Teacher Education (TE)
+option b: SSA, DPEP, Mid Day Meal
+option c: RMSA, RUSA, SSA
+option d: NLM, SSA, DPEP
+correct: A
+explanation: సమగ్ర శిక్ష అనేది సర్వశిక్షా అభియాన్ (SSA), రాష్ట్రీయ మాధ్యమిక శిక్షా అభియాన్ (RMSA), మరియు టీచర్ ఎడ్యుకేషన్ల కలయిక.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Inclusive Education
+difficulty: Medium
+marks: 1
+year: 2026
+question: లోపాలు ఉన్న పిల్లలను సాధారణ పిల్లలతో కలిపి ఒకే పాఠశాలలో బోధించడాన్ని ఏమంటారు?
+option a: సమగ్ర విద్య (Inclusive Education)
+option b: ప్రత్యేక విద్య
+option c: అనుబంధ విద్య
+option d: పరోక్ష విద్య
+correct: A
+explanation: సమ్మిళిత విద్య (Inclusive Education) లో అందరు పిల్లలకు సమాన విద్యావకాశాలు కల్పిస్తారు.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Learning Disabilities
+difficulty: Medium
+marks: 1
+year: 2026
+question: 'డిస్లెక్షియా' (Dyslexia) అనేది దేనికి సంబంధించిన అభ్యసనా వైకల్యం?
+option a: పఠన లోపం
+option b: గణిత లోపం
+option c: రాయడంలో లోపం
+option d: మోటార్ సమన్వయ లోపం
+correct: A
+explanation: డిస్లెక్షియా అంటే చదవడం మరియు పదాలను గుర్తించడంలో ఉండే వైకల్యం.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Assessment
+difficulty: Medium
+marks: 1
+year: 2026
+question: నిర్మాణాత్మక మూల్యాంకనం (Formative Assessment) కు కేటాయించిన వెయిటేజీ శాతం:
+option a: 20%
+option b: 40%
+option c: 50%
+option d: 60%
+correct: A
+explanation: నిర్మాణాత్మక మూల్యాంకనానికి 20 శాతం మరియు సంగ్రహణాత్మక మూల్యాంకనానికి 80 శాతం వెయిటేజీ ఉంటుంది.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Teaching Methods
+difficulty: Medium
+marks: 1
+year: 2026
+question: ఉపాధ్యాయ కేంద్రీకృత బోధనా పద్ధతికి ఉదాహరణ:
+option a: ఉపన్యాస పద్ధతి
+option b: ప్రయోగశాలా పద్ధతి
+option c: ప్రాజెక్ట్ పద్ధతి
+option d: అన్వేషణ పద్ధతి
+correct: A
+explanation: ఉపన్యాస పద్ధతి అనేది ఉపాధ్యాయుడు క్రియాశీలంగా ఉండే బోధనా పద్ధతి.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Micro Teaching
+difficulty: Medium
+marks: 1
+year: 2026
+question: సూక్ష్మ బోధన (Micro Teaching) లో 'బోధనా కాలం' (Teaching Duration) సాధారణంగా ఎంతసేపు ఉంటుంది?
+option a: 6 నిమిషాలు
+option b: 12 నిమిషాలు
+option c: 36 నిమిషాలు
+option d: 45 నిమిషాలు
+correct: A
+explanation: సూక్ష్మ బోధనా చక్రంలో ఒక్కో బోధనా దశకు 6 నిమిషాల సమయం కేటాయించబడుతుంది (మొత్తం చక్రం 36 నిమిషాలు).
+---
+subject: Language I (31-60)
+topic: Poem Reading
+difficulty: Medium
+marks: 1
+year: 2026
+question: పద్యం ప్రకారం సంపదలు దేనిలాగా నిలకడ లేనివి?
+option a: మేఘంలోని నీరు
+option b: నదీ జలాలు
+option c: సముద్ర అలలు
+option d: గాలి
+correct: A
+explanation: పద్యంలో సంపదలు మేఘంలోని నీటివలె కరిగిపోయేవి అని చెప్పబడింది.
+---
+subject: Language I (31-60)
+topic: Vocabulary
+difficulty: Medium
+marks: 1
+year: 2026
+question: 'సిరి' అనే పదానికి వికృతి/పర్యాయపదం:
+option a: లక్ష్మి / సంపద
+option b: రాతి
+option c: రాత్రి
+option d: పేదరికం
+correct: A
+explanation: సిరి అంటే ఐశ్వర్యం, సంపద, లక్ష్మి అనే అర్థాలు ఉన్నాయి.
+---
+subject: Language I (31-60)
+topic: Vocabulary
+difficulty: Medium
+marks: 1
+year: 2026
+question: 'విసదమై' అనే పదానికి అర్థం:
+option a: స్పష్టమై
+option b: మరుగై
+option c: నాశనమై
+option d: చీకటై
+correct: A
+explanation: విసదము అంటే స్పష్టము అని అర్థం.
+---
+subject: Language I (31-60)
+topic: Poem Reading
+difficulty: Medium
+marks: 1
+year: 2026
+question: సంపద శాశ్వతం కాదు కాబట్టి మనిషి ఏ మార్గంలో నడవాలి?
+option a: ధర్మ మార్గం
+option b: అధర్మ మార్గం
+option c: స్వార్థ మార్గం
+option d: ఏదీ కాదు
+correct: A
+explanation: సంపదలు శాశ్వతం కాదు కనుక మానవుడు ధర్మ మార్గంలో నడవాలని కవి సూచించాడు.
+---
+subject: Language I (31-60)
+topic: Poem Reading
+difficulty: Medium
+marks: 1
+year: 2026
+question: ఈ పద్యం యొక్క ముఖ్య ఉద్దేశ్యం:
+option a: సంపద అశాశ్వతం అని తెలపడం
+option b: वर्షాల గురించి చెప్పడం
+option c: మేఘాల రకాలు చెప్పడం
+option d: నీటిని పొదుపు చేయడం
+correct: A
+explanation: పద్యం మానవులలో ధర్మ బుద్ధిని పెంపొందించడం మరియు సంపదల అశాశ్వతతను తెలపడం ముఖ్య ఉద్దేశ్యం.
+---
+subject: Language I (31-60)
+topic: Sandhi
+difficulty: Medium
+marks: 1
+year: 2026
+question: 'దేవాలయము' అను పదం ఏ సంధికి ఉదాహరణ?
+option a: సవర్ణదీర్ఘ సంధి
+option b: గుణ సంధి
+option c: వృద్ధి సంధి
+option d: యణాదేశ సంధి
+correct: A
+explanation: దేవ + ఆలయము = దేవాలయము. అచ్చునకు సవర్ణాచ్చు పరమైనప్పుడు దీర్ఘం ఏకాదేశమగును.
+---
+subject: Language I (31-60)
+topic: Grammar
+difficulty: Medium
+marks: 1
+year: 2026
+question: 'రాముడు రాక్షసులను సంహరించెను' - ఇది ఏ రకమైన వాక్యం?
+option a: కర్తరి వాక్యం
+option b: కర్మణి వాక్యం
+option c: భావే వాక్యం
+option d: ఆశ్చర్యార్థక వాక్యం
+correct: A
+explanation: కర్త ప్రధానంగా గల వాక్యం కర్తరి వాక్యం.
+---
+subject: Language I (31-60)
+topic: Samasamu
+difficulty: Medium
+marks: 1
+year: 2026
+question: 'తల్లిదండ్రులు' అనునది ఏ సమాసము?
+option a: ద్వంద్వ సమాసము
+option b: ద్విగు సమాసము
+option c: తత్పురుష సమాసము
+option d: బహువ్రీహి సమాసము
+correct: A
+explanation: తల్లి మరియు తండ్రి అని రెండు పదాల అర్థాలూ ప్రాధాన్యంగా ఉండేది ద్వంద్వ సమాసము.
+---
+subject: Language I (31-60)
+topic: Samasamu
+difficulty: Medium
+marks: 1
+year: 2026
+question: 'త్రిలోకాలు' అను సమాసంలో సమాస విగ్రహవాక్యం ప్రకారం పూర్వపదం సంఖ్యను సూచిస్తే అది ఏ సమాసం?
+option a: ద్విగు సమాసము
+option b: ద్వంద్వ సమాసము
+option c: రూపక సమాసము
+option d: కర్మధారయ సమాసము
+correct: A
+explanation: సంఖ్యా పూర్వక ద్విగువు అని సూత్రం. పూర్వపదం సంఖ్యగా ఉంటే అది ద్విగు సమాసం.
+---
+subject: Language I (31-60)
+topic: Parts of Speech
+difficulty: Medium
+marks: 1
+year: 2026
+question: 'అయ్యో! ఎంత పని జరిగింది' - ఇందులో 'అయ్యో' అనునది ఏ భాషాభాగం?
+option a: అవ్యయం
+option b: నామవాచకం
+option c: సర్వనామం
+option d: విశేషణం
+correct: A
+explanation: లింగ, వచన, విభక్తులు లేని పదాన్ని అవ్యయం అంటారు.
+---
+subject: Language I (31-60)
+topic: Synonyms
+difficulty: Medium
+marks: 1
+year: 2026
+question: 'చంద్రుడు' పదానికి పర్యాయపదాలు:
+option a: శశి, ఇందుడు
+option b: శశి, వెన్నెల
+option c: భాస్కరుడు, దినకరుడు
+option d: నీరజము, కమలము
+correct: A
+explanation: చంద్రుడికి శశి, ఇందుడు, సోముడు, సుధాకరుడు అనే పర్యాయపదాలు కలవు.
+---
+subject: Language I (31-60)
+topic: Grammar
+difficulty: Medium
+marks: 1
+year: 2026
+question: 'అమృతం' పదానికి ప్రకృతి - వికృతి రూపం:
+option a: అమృతం - అమిర్తం
+option b: అమృతం - విషం
+option c: అమృతం - సుధ
+option d: అమృతం - తీపి
+correct: A
+explanation: అమృతం ప్రకృతికి అమిర్తం వికృతి రూపం.
+---
+subject: Language I (31-60)
+topic: Vocabulary
+difficulty: Medium
+marks: 1
+year: 2026
+question: 'పూవు' పదానికి నానార్థాలు:
+option a: పుష్పం, వికసించు
+option b: రాయి, మన్ను
+option c: నీరు, మేఘం
+option d: ఆకాశం, నక్షత్రం
+correct: A
+explanation: పూవు నానార్థాలు పుష్పం మరియు వికసించడం.
+---
+subject: Language I (31-60)
+topic: Grammar
+difficulty: Medium
+marks: 1
+year: 2026
+question: 'గుర్రము ఖంగున గాలన రూపం' - ఇందులో 'ఖంగున' అనేది ఏ రకమైన శబ్దం?
+option a: అనుకరణ శబ్దం/అవ్యయం
+option b: నామవాచకం
+option c: క్రియ
+option d: విధి
+correct: A
+explanation: ధ్వనిని అనుకరించే శబ్దాలు అనుకరణ అవ్యయాలు.
+---
+subject: Language I (31-60)
+topic: Syntax
+difficulty: Medium
+marks: 1
+year: 2026
+question: 'విద్యార్థులు బాగా చదివితే మంచి మార్కులు వస్తాయి' - ఇది ఏ రకమైన వాక్యం?
+option a: చేదర్థక వాక్యం
+option b: హేత్వర్థక వాక్యం
+option c: శత్రర్థక వాక్యం
+option d: క్వార్థక వాక్యం
+correct: A
+explanation: ఒక పని జరిగితేనే మరొకటి జరుగుతుంది అని చెప్పే షరతు గల వాక్యం చేదర్థకం.
+---
+subject: Language I (31-60)
+topic: Grammar
+difficulty: Medium
+marks: 1
+year: 2026
+question: 'తిని' అనునది ఏ రకమైన క్రియ?
+option a: క్వార్థక క్రియ (అసమాపక)
+option b: సమాపక క్రియ
+option c: శత్రర్థక క్రియ
+option d: చేదర్థక క్రియ
+correct: A
+explanation: భూతకాలిక అసమాపక క్రియను క్వార్థకం (తిని, చూసి) అంటారు.
+---
+subject: Language I (31-60)
+topic: Chandassu
+difficulty: Medium
+marks: 1
+year: 2026
+question: 'ఉత్సాహము' ఛందస్సులో ఏ పద్య రూపానికి చెందుతుంది?
+option a: జాతి
+option b: వృత్తము
+option c: ఉపజాతి
+option d: ఏదీ కాదు
+correct: A
+explanation: ఉత్సాహము అనేది మాత్రా ఛందస్సుకు చెందిన జాతి పద్యము.
+---
+subject: Language I (31-60)
+topic: Grammar
+difficulty: Medium
+marks: 1
+year: 2026
+question: ఒక అక్షరానికి దాని ఒత్తు చేరితే దానిని ఏమంటారు?
+option a: ద్విత్వాక్షరం
+option b: సంయుక్తాక్షరం
+option c: సంశ్లేషాక్షరం
+option d: పరపదం
+correct: A
+explanation: ఒక హల్లుకు అదే హల్లు ఒత్తుగా చేరిన అక్షరం ద్విత్వం.
+---
+subject: Language I (31-60)
+topic: Literature
+difficulty: Medium
+marks: 1
+year: 2026
+question: 'జ్ఞానపీఠ్' అవార్డు పొందిన మొదటి తెలుగు రచయిత ఎవరు?
+option a: విశ్వనాథ సత్యనారాయణ
+option b: సి. నారాయణరెడ్డి
+option c: రావూరి భరద్వాజ
+option d: శ్రీశ్రీ
+correct: A
+explanation: రామాయణ కల్పవృక్షం కావ్యానికి గాను విశ్వనాథ సత్యనారాయణ గారు మొదటి జ్ఞానపీఠ్ అవార్డు అందుకున్నారు.
+---
+subject: Language I (31-60)
+topic: Literature
+difficulty: Medium
+marks: 1
+year: 2026
+question: 'ఆంధ్ర మహాభారతం' లో కవిత్రయంలో మొదటి వ్యక్తి ఎవరు?
+option a: నన్నయ
+option b: తిక్కన
+option c: ఎర్రన
+option d: పోతన
+correct: A
+explanation: మహాభారతాన్ని తెలుగులో రాయడం ప్రారంభించిన కవిత్రయ ప్రథముడు నన్నయ భట్టారకుడు.
+---
+subject: Language I (31-60)
+topic: Literature
+difficulty: Medium
+marks: 1
+year: 2026
+question: 'శతక పద్యాల' ప్రధాన లక్షణం:
+option a: మకుటం ఉండటం
+option b: కథాక్రమం ఉండటం
+option c: పెద్ద అధ్యాయాలు ఉండటం
+option d: వచనంలో ఉండటం
+correct: A
+explanation: శతక పద్యాల చివర ఒక పదం లేదా పాదం మకుటంగా ఉంటుంది.
+---
+subject: Language I (31-60)
+topic: Literature
+difficulty: Medium
+marks: 1
+year: 2026
+question: 'ప్రజాకవి' అని ఎవరిని పిలుస్తారు?
+option a: వేమన
+option b: గురజాడ అప్పారావు
+option c: కాళోజీ నారాయణరావు
+option d: శ్రీశ్రీ
+correct: A
+explanation: వేమన తన ఆటవెలది పద్యాలతో లోకనీతిని ప్రచారం చేసి ప్రజాకవిగా పేరు పొందారు.
+---
+subject: Language I (31-60)
+topic: Literature
+difficulty: Medium
+marks: 1
+year: 2026
+question: 'కన్యాశుల్కం' నాటక కర్త ఎవరు?
+option a: గురజాడ అప్పారావు
+option b: కందుకూరి వీరేశలింగం
+option c: గిడుగు రామ్మూర్తి
+option d: దేవులపల్లి
+correct: A
+explanation: సమాజంలోని బాల్యవివాహాల దురాచారాన్ని ఖండిస్తూ గురజాడ అప్పారావు గారు కన్యాశుల్కం నాటకం రాశారు.
+---
+subject: Language I (31-60)
+topic: Pedagogy
+difficulty: Medium
+marks: 1
+year: 2026
+question: బోధనా పద్ధతుల్లో 'పాఠశాల నాటకీకరణ' ఏ పద్ధతికి చెందుతుంది?
+option a: అభినయ/క్రీడా పద్ధతి
+option b: ప్రదర్శనా పద్ధతి
+option c: ఉపన్యాస పద్ధతి
+option d: విశ్లేషణ పద్ధతి
+correct: A
+explanation: నాటకీకరణ అనేది అభినయం మరియు పాత్రధారణ ఆధారంగా సాగే క్రీడా పద్ధతి.
+---
+subject: Language I (31-60)
+topic: Pedagogy
+difficulty: Medium
+marks: 1
+year: 2026
+question: భాషా నైపుణ్యాల సరైన వరుస క్రమం (LSRW):
+option a: శ్రవణం -> భాషణం -> పఠనం -> లేఖనం
+option b: భాషణం -> శ్రవణం -> లేఖనం -> పఠనం
+option c: పఠనం -> లేఖనం -> శ్రవణం -> భాషణం
+option d: శ్రవణం -> పఠనం -> భాషణం -> లేఖనం
+correct: A
+explanation: భాషా నైపుణ్యాల సహజ క్రమం: వినడం (శ్రవణం), మాట్లాడటం (భాషణం), చదవడం (పఠనం), రాయడం (లేఖనం).
+---
+subject: Language I (31-60)
+topic: Pedagogy
+difficulty: Medium
+marks: 1
+year: 2026
+question: వాచకంలో లేని విషయాలను, బాహ్య సమాచారాన్ని చదివి అర్థం చేసుకోవడం ఏ పఠనం?
+option a: విస్తార పఠనం (Extensive Reading)
+option b: నిశిత పఠనం (Intensive Reading)
+option c: ప్రకట పఠనం
+option d: మౌన పఠనం
+correct: A
+explanation: విస్తార పఠనం ఆనందం మరియు సాధారణ అవగాహన కోసం చేసే బాహ్య పఠనం.
+---
+subject: Language I (31-60)
+topic: Pedagogy
+difficulty: Medium
+marks: 1
+year: 2026
+question: నిరంకుశ మూల్యాంకనానికి బదులుగా నిరంతర సమగ్ర మూల్యాంకనం (CCE) లో ప్రవేశపెట్టినవి:
+option a: Formative & Summative మూల్యాంకనాలు
+option b: కేవలం వార్షిక పరీక్షలు
+option c: ప్రాజెక్ట్ పనులు మాత్రమే
+option d: కేవలం మౌఖిక పరీక్షలు
+correct: A
+explanation: CCE లో నిర్మాణాత్మక (Formative) మరియు సంగ్రహణాత్మక (Summative) మూల్యాంకనాలు ఉంటాయి.
+---
+subject: Language I (31-60)
+topic: Pedagogy
+difficulty: Medium
+marks: 1
+year: 2026
+question: సూక్ష్మ బోధన యొక్క ముఖ్య ఉద్దేశ్యం:
+option a: బోధనా నైపుణ్యాలను పెంపొందించడం
+option b: तरగతి గది పరిమాణాన్ని పెంచడం
+option c: సమయాన్ని ఆదా చేయడం
+option d: పరీక్షలు నిర్వహించడం
+correct: A
+explanation: ఉపాధ్యాయులలో నిర్దిష్ట బోధనా నైపుణ్యాలను సాధన చేయించడమే సూక్ష్మ బోధన లక్ష్యం.
+---
+subject: Language I (31-60)
+topic: Pedagogy
+difficulty: Medium
+marks: 1
+year: 2026
+question: దృశ్య-శ్రవణ బోధనోపకరణానికి ఉదాహరణ:
+option a: టీవీ / టెలివిజన్
+option b: రేడియో
+option c: చార్ట్
+option d: బ్లాక్బోర్డ్
+correct: A
+explanation: టెలివిజన్ అనేది కంటితో చూస్తూ, చెవితో వినగలిగే దృశ్య-శ్రవణ సాధనం.
+---
+subject: Language I (31-60)
+topic: Pedagogy
+difficulty: Medium
+marks: 1
+year: 2026
+question: మాతృభాషా బోధన యొక్క ప్రధాన లక్ష్యం:
+option a: భావవ్యక్తీకరణ మరియు రసాస్వాదన నైపుణ్యాల వికాసము
+option b: కేవలం మార్కులు సాధించడం
+option c: ఉద్యోగం సంపాదించడం
+option d: గ్రామర్ కంఠస్థం చేయడం
+correct: A
+explanation: సొంతంగా భావాలు వ్యక్తపరచడం మరియు సాహిత్యాన్ని ఆస్వాదించే శక్తిని కల్పించడమే మాతృభాషా బోధన పరమావధి.
+---
+subject: Language II (61-90)
+topic: Comprehension
+difficulty: Medium
+marks: 1
+year: 2026
+question: What is true education according to the passage?
+option a: Harmonious development of physical, mental, and moral faculties
+option b: Getting high degree certificates
+option c: Memorizing books
+option d: Getting a high paying job
+correct: A
+explanation: The passage explicitly states that education is the harmonious development of physical, mental, and moral faculties.
+---
+subject: Language II (61-90)
+topic: Comprehension
+difficulty: Medium
+marks: 1
+year: 2026
+question: Which of the following quality is expected in a well-educated person?
+option a: Empathy and critical thinking
+option b: Arrogance
+option c: Isolation
+option d: Wealth
+correct: A
+explanation: The text defines a well-educated person as one who possesses empathy, critical thinking, and social responsibility.
+---
+subject: Language II (61-90)
+topic: Comprehension
+difficulty: Medium
+marks: 1
+year: 2026
+question: The word "Harmonious" in the passage means:
+option a: Balanced and peaceful
+option b: Loud and noisy
+option c: Unequal
+option d: Difficult
+correct: A
+explanation: Harmonious refers to something that is balanced, integrated, and pleasant.
+---
+subject: Language II (61-90)
+topic: Comprehension
+difficulty: Medium
+marks: 1
+year: 2026
+question: Education enables a person to distinguish between:
+option a: Right and wrong
+option b: Rich and poor
+option c: Past and future
+option d: English and Telugu
+correct: A
+explanation: The text mentions true education enables a person to distinguish between right and wrong.
+---
+subject: Language II (61-90)
+topic: Grammar
+difficulty: Medium
+marks: 1
+year: 2026
+question: Identify the noun form of the word "Educate":
+option a: Education
+option b: Educated
+option c: Educative
+option d: Educating
+correct: A
+explanation: The suffix '-tion' converts the verb 'educate' into the noun 'education'.
+---
+subject: Language II (61-90)
+topic: Parts of Speech
+difficulty: Medium
+marks: 1
+year: 2026
+question: Identify the correct part of speech for the underlined word: "She runs fast."
+option a: Adverb
+option b: Noun
+option c: Verb
+option d: Adjective
+correct: A
+explanation: Here 'fast' modifies the verb 'runs', hence it is an adverb.
+---
+subject: Language II (61-90)
+topic: Articles
+difficulty: Medium
+marks: 1
+year: 2026
+question: Choose the correct article: "He is ______ European scholar."
+option a: a
+option b: an
+option c: the
+option d: No article
+correct: A
+explanation: 'European' starts with a consonant sound /juː/, so the article 'a' is appropriate.
+---
+subject: Language II (61-90)
+topic: Prepositions
+difficulty: Medium
+marks: 1
+year: 2026
+question: Choose the correct preposition: "The meeting will start ______ 10:00 AM."
+option a: at
+option b: in
+option c: on
+option d: by
+correct: A
+explanation: We use the preposition 'at' for specific points of time.
+---
+subject: Language II (61-90)
+topic: Voice
+difficulty: Medium
+marks: 1
+year: 2026
+question: Change into Passive Voice: "The teacher teaches Grammar."
+option a: Grammar is taught by the teacher.
+option b: Grammar was taught by the teacher.
+option c: Grammar has been taught by the teacher.
+option d: Grammar is teaching by the teacher.
+correct: A
+explanation: Simple present tense in passive voice uses 'is/am/are + V3'.
+---
+subject: Language II (61-90)
+topic: Direct & Indirect Speech
+difficulty: Medium
+marks: 1
+year: 2026
+question: Change into Indirect Speech: He said, "I am writing an exam."
+option a: He said that he was writing an exam.
+option b: He said that he is writing an exam.
+option c: He told that I was writing an exam.
+option d: He says that he was writing an exam.
+correct: A
+explanation: Present continuous changes to past continuous in indirect speech when the reporting verb is in past tense.
+---
+subject: Language II (61-90)
+topic: Singular & Plural
+difficulty: Medium
+marks: 1
+year: 2026
+question: Select the correct Plural form of 'Criterion':
+option a: Criteria
+option b: Criterions
+option c: Criterias
+option d: Criterium
+correct: A
+explanation: 'Criterion' is a Latin loan word that forms its plural as 'criteria'.
+---
+subject: Language II (61-90)
+topic: Subject-Verb Agreement
+difficulty: Medium
+marks: 1
+year: 2026
+question: Fill in the blank with correct form of verb: "Neither money nor power ______ made him happy."
+option a: has
+option b: have
+option c: are
+option d: were
+correct: A
+explanation: Singular nouns connected by 'nor' take a singular verb ('has').
+---
+subject: Language II (61-90)
+topic: Vocabulary
+difficulty: Medium
+marks: 1
+year: 2026
+question: Choose the synonym of "ABUNDANT":
+option a: Plentiful
+option b: Scarce
+option c: Rare
+option d: Small
+correct: A
+explanation: Abundant means existing or available in large quantities; plentiful.
+---
+subject: Language II (61-90)
+topic: Vocabulary
+difficulty: Medium
+marks: 1
+year: 2026
+question: Choose the antonym of "TRANSPARENT":
+option a: Opaque
+option b: Clear
+option c: Bright
+option d: Translucent
+correct: A
+explanation: Transparent means clear or see-through, and its opposite is opaque (cannot see through).
+---
+subject: Language II (61-90)
+topic: Spellings
+difficulty: Medium
+marks: 1
+year: 2026
+question: Identify the correctly spelled word:
+option a: Receive
+option b: Recieve
+option c: Receeve
+option d: Recive
+correct: A
+explanation: The rule is 'i' before 'e' except after 'c'. Therefore, 'receive' is correct.
+---
+subject: Language II (61-90)
+topic: Question Tags
+difficulty: Medium
+marks: 1
+year: 2026
+question: Select the correct question tag: "She doesn't like coffee, ______?"
+option a: does she?
+option b: doesn't she?
+option c: isn't she?
+option d: is she?
+correct: A
+explanation: A negative statement takes a positive question tag ('does she?').
+---
+subject: Language II (61-90)
+topic: Conditionals
+difficulty: Medium
+marks: 1
+year: 2026
+question: "If you study well, you will pass." - This is an example of:
+option a: First Conditional
+option b: Zero Conditional
+option c: Second Conditional
+option d: Third Conditional
+correct: A
+explanation: If + simple present followed by 'will + verb' represents the First Conditional (real/probable future).
+---
+subject: Language II (61-90)
+topic: Syntax
+difficulty: Medium
+marks: 1
+year: 2026
+question: Identify the sentence with correct word order:
+option a: He always comes late to school.
+option b: Always he comes late to school.
+option c: He comes always late to school.
+option d: Late to school always he comes.
+correct: A
+explanation: Adverbs of frequency (always) usually go before the main verb (comes).
+---
+subject: Language II (61-90)
+topic: Idioms
+difficulty: Medium
+marks: 1
+year: 2026
+question: Choose the appropriate Idiom meaning "To feel under the weather":
+option a: To feel slightly sick/unwell
+option b: To feel very happy
+option c: To enjoy the rainy season
+option d: To be angry
+correct: A
+explanation: To feel under the weather means to feel slightly sick, tired, or unwell.
+---
+subject: Language II (61-90)
+topic: Grammar
+difficulty: Medium
+marks: 1
+year: 2026
+question: Identify the degree of comparison: "Iron is more useful than any other metal."
+option a: Comparative Degree
+option b: Positive Degree
+option c: Superlative Degree
+option d: None of the above
+correct: A
+explanation: The structure 'more useful than' indicates a comparative degree.
+---
+subject: Language II (61-90)
+topic: Vocabulary
+difficulty: Medium
+marks: 1
+year: 2026
+question: "A person who collects stamps" is called:
+option a: Philatelist
+option b: Numismatist
+option c: Bibliophile
+option d: Optimist
+correct: A
+explanation: A philatelist is a stamp collector, whereas numismatist collects coins.
+---
+subject: Language II (61-90)
+topic: Grammar
+difficulty: Medium
+marks: 1
+year: 2026
+question: Fill in with appropriate Modal Auxiliary: "______ you please lend me your pen?" (Polite Request)
+option a: Could
+option b: Must
+option c: Should
+option d: Might
+correct: A
+explanation: 'Could' is used to make polite requests in English.
+---
+subject: Language II (61-90)
+topic: Spellings
+difficulty: Medium
+marks: 1
+year: 2026
+question: Identify the Silent letter in the word "KNIGHT":
+option a: K and GH
+option b: K and G
+option c: K and H
+option d: N and T
+correct: A
+explanation: In 'knight', both 'k' and 'gh' are silent characters.
+---
+subject: Language II (61-90)
+topic: Pedagogy
+difficulty: Medium
+marks: 1
+year: 2026
+question: Continuous and Comprehensive Evaluation (CCE) in English aims at evaluating:
+option a: Both scholastic and co-scholastic aspects
+option b: Only scholastic aspect
+option c: Only grammar rules
+option d: Only handwriting skills
+correct: A
+explanation: CCE covers both subject learning (scholastic) and life skills/extracurriculars (co-scholastic).
+---
+subject: Language II (61-90)
+topic: Pedagogy
+difficulty: Medium
+marks: 1
+year: 2026
+question: Which skill is known as a "Receptive Skill"?
+option a: Listening & Reading
+option b: Speaking & Writing
+option c: Reading & Writing
+option d: Speaking & Reading
+correct: A
+explanation: Receptive skills are those where we receive language input: listening and reading.
+---
+subject: Language II (61-90)
+topic: Pedagogy
+difficulty: Medium
+marks: 1
+year: 2026
+question: 'Direct Method' of teaching English lays emphasis on:
+option a: Direct association between thought and words without mother tongue
+option b: Translation into mother tongue
+option c: Teaching grammar rules explicitly
+option d: Memorizing vocabulary lists
+correct: A
+explanation: Direct method avoids translations and connects words directly with their concepts.
+---
+subject: Language II (61-90)
+topic: Pedagogy
+difficulty: Medium
+marks: 1
+year: 2026
+question: What is the primary objective of teaching Poetry in English at primary level?
+option a: For appreciation, rhythm, and enjoyment
+option b: To teach grammar rules
+option c: To improve speed reading
+option d: To translate line by line
+correct: A
+explanation: Poetry is introduced to help children enjoy rhythm, rhyme, and language expression.
+---
+subject: Language II (61-90)
+topic: Pedagogy
+difficulty: Medium
+marks: 1
+year: 2026
+question: Phonics method is used to teach:
+option a: Reading & Pronunciation
+option b: Writing
+option c: Grammar
+option d: Essay writing
+correct: A
+explanation: Phonics links letters (graphemes) to their sounds (phonemes) to build reading skills.
+---
+subject: Language II (61-90)
+topic: Pedagogy
+difficulty: Medium
+marks: 1
+year: 2026
+question: Teaching Learning Material (TLM) should primarily be:
+option a: Directly relevant to learning objectives and context
+option b: Expensive and attractive
+option c: Imported from abroad
+option d: Made only of plastic
+correct: A
+explanation: TLMs are selected based on whether they effectively facilitate the target learning objective.
+---
+subject: Language II (61-90)
+topic: Pedagogy
+difficulty: Medium
+marks: 1
+year: 2026
+question: Diagnostic testing in English language teaching helps to:
+option a: Identify learning gaps and difficulties of students
+option b: Give ranks to students
+option c: Issue report cards
+option d: Select students for competitions
+correct: A
+explanation: Diagnostic tests locate exactly where a student is struggling so that remedial teaching can happen.
+---
+subject: Mathematics (91-120)
+topic: HCF
+difficulty: Medium
+marks: 1
+year: 2026
+question: 72 మరియు 108 ల గ.సా.భా (HCF) ఎంత?
+option a: 36
+option b: 12
+option c: 18
+option d: 24
+correct: A
+explanation: 72 = 36 * 2, 108 = 36 * 3. HCF is 36.
+---
+subject: Mathematics (91-120)
+topic: LCM
+difficulty: Medium
+marks: 1
+year: 2026
+question: 3/4, 5/6, 7/12 ల యొక్క క.సా.గు (LCM) ఎంత?
+option a: 105/2
+option b: 105/12
+option c: 15/2
+option d: 35/4
+correct: A
+explanation: LCM of fractions = LCM of numerators / HCF of denominators = LCM(3,5,7) / HCF(4,6,12) = 105 / 2.
+---
+subject: Mathematics (91-120)
+topic: Geometry
+difficulty: Medium
+marks: 1
+year: 2026
+question: ఒక దీర్ఘచతురస్రం పొడవు 12 సెం.మీ, వెడల్పు 5 సెం.మీ అయిన దాని కర్ణం (Diagonal) పొడవు ఎంత?
+option a: 13 సెం.మీ
+option b: 17 సెం.మీ
+option c: 15 సెం.మీ
+option d: 16 సెం.మీ
+correct: A
+explanation: Diagonal = √(12² + 5²) = √(144 + 25) = √169 = 13 cm.
+---
+subject: Mathematics (91-120)
+topic: Profit & Loss
+difficulty: Medium
+marks: 1
+year: 2026
+question: 15% లాభంతో ఒక వస్తువును ₹ 460 కి అమ్మితే, దాని కొన్నవెల ఎంత?
+option a: ₹ 400
+option b: ₹ 390
+option c: ₹ 410
+option d: ₹ 420
+correct: A
+explanation: SP = 115% of CP => 460 = 1.15 * CP => CP = 460 / 1.15 = 400.
+---
+subject: Mathematics (91-120)
+topic: Averages
+difficulty: Medium
+marks: 1
+year: 2026
+question: మొదటి 10 సహజ సంఖ్యల సగటు ఎంత?
+option a: 5.5
+option b: 5
+option c: 6
+option d: 10.5
+correct: A
+explanation: Sum of first 10 natural numbers = 10 * 11 / 2 = 55. Average = 55 / 10 = 5.5.
+---
+subject: Mathematics (91-120)
+topic: Geometry
+difficulty: Medium
+marks: 1
+year: 2026
+question: త్రిభుజంలోని మూడు కోణాలు 2:3:4 నిష్పత్తిలో ఉంటే, ఆ కోణాలలో అతిపెద్ద కోణం ఎంత?
+option a: 80°
+option b: 60°
+option c: 100°
+option d: 90°
+correct: A
+explanation: Sum of angles is 180°. Parts: 2x+3x+4x=180 => 9x=180 => x=20. Largest angle is 4x = 80°.
+---
+subject: Mathematics (91-120)
+topic: Mensuration
+difficulty: Medium
+marks: 1
+year: 2026
+question: ఒక వృత్త వ్యాసార్థం 7 సెం.మీ అయిన దాని వైశాల్యం ఎంత? (π = 22/7)
+option a: 154 చ.సెం.మీ
+option b: 44 చ.సెం.మీ
+option c: 308 చ.సెం.మీ
+option d: 77 చ.సెం.మీ
+correct: A
+explanation: Area = π r² = (22/7) * 7 * 7 = 154 cm².
+---
+subject: Mathematics (91-120)
+topic: Algebra
+difficulty: Medium
+marks: 1
+year: 2026
+question: 2^(x+3) = 32 అయితే x విలువ ఎంత?
+option a: 2
+option b: 3
+option c: 5
+option d: 8
+correct: A
+explanation: 2^(x+3) = 2^5 => x+3 = 5 => x = 2.
+---
+subject: Mathematics (91-120)
+topic: Mensuration
+difficulty: Medium
+marks: 1
+year: 2026
+question: ఒక ఘనం (Cube) భుజం 6 సెం.మీ అయిన దాని సంపూర్ణ తల వైశాల్యం ఎంత?
+option a: 216 చ.సెం.మీ
+option b: 144 చ.సెం.మీ
+option c: 36 చ.సెం.మీ
+option d: 180 చ.సెం.మీ
+correct: A
+explanation: TSA = 6a² = 6 * 6² = 216 cm².
+---
+subject: Mathematics (91-120)
+topic: Statistics
+difficulty: Medium
+marks: 1
+year: 2026
+question: బార్ గ్రాఫ్లో (Bar Graph) ప్రాతినిధ్యం వహించే సమాచారాన్ని ఏమంటారు?
+option a: దత్తాంశం (Data)
+option b: ప్రమేయం
+option c: పౌనఃపున్యం
+option d: చలరాశి
+correct: A
+explanation: బార్ గ్రాఫ్ అనేది దత్తాంశాన్ని (Data) ప్రదర్శించే రేఖాచిత్రం.
+---
+subject: Mathematics (91-120)
+topic: Simple Interest
+difficulty: Medium
+marks: 1
+year: 2026
+question: 500 రూ. లపై 10% వార్షిక సాధారణ వడ్డీ రేటుతో 3 సంవత్సరాలకు అయ్యే వడ్డీ ఎంత?
+option a: ₹ 150
+option b: ₹ 100
+option c: ₹ 200
+option d: ₹ 50
+correct: A
+explanation: Interest I = PTR / 100 = 500 * 3 * 10 / 100 = 150.
+---
+subject: Mathematics (91-120)
+topic: Geometry
+difficulty: Medium
+marks: 1
+year: 2026
+question: సరళరేఖపై ఏర్పడే కోణాల మొత్తం ఎంత?
+option a: 180°
+option b: 90°
+option c: 360°
+option d: 270°
+correct: A
+explanation: ఒక సరళరేఖ పై గల ఒక బిందువు వద్ద ఉండే కోణం 180°.
+---
+subject: Mathematics (91-120)
+topic: Algebra
+difficulty: Medium
+marks: 1
+year: 2026
+question: x + 1/x = 4 అయితే x² + 1/x² విలువ ఎంత?
+option a: 14
+option b: 16
+option c: 18
+option d: 12
+correct: A
+explanation: x² + 1/x² = (x + 1/x)² - 2 = 4² - 2 = 14.
+---
+subject: Mathematics (91-120)
+topic: Mensuration
+difficulty: Medium
+marks: 1
+year: 2026
+question: ఒక సమబాహు త్రిభుజం భుజం 4 సెం.మీ అయిన దాని వైశాల్యం ఎంత?
+option a: 4√3 చ.సెం.మీ
+option b: 8√3 చ.సెం.మీ
+option c: 16 చ.సెం.మీ
+option d: 2√3 చ.సెం.మీ
+correct: A
+explanation: Area = (√3 / 4) * a² = (√3 / 4) * 16 = 4√3 cm².
+---
+subject: Mathematics (91-120)
+topic: Primes
+difficulty: Medium
+marks: 1
+year: 2026
+question: క్రింది సంఖ్యలలో "ప్రధాన సంఖ్య" (Prime Number) ఏది?
+option a: 97
+option b: 91
+option c: 87
+option d: 81
+correct: A
+explanation: 97 అనేది ఒక ప్రధాన సంఖ్య. 91 (13x7), 87 (29x3), 81 (9x9) లు సంయుక్త సంఖ్యలు.
+---
+subject: Mathematics (91-120)
+topic: Time & Work
+difficulty: Medium
+marks: 1
+year: 2026
+question: ఒక పనిని A 10 రోజుల్లో, B 15 రోజుల్లో చేయగలరు. ఇద్దరూ కలిసి ఆ పనిని ఎన్ని రోజుల్లో పూర్తి చేయగలరు?
+option a: 6 రోజులు
+option b: 8 రోజులు
+option c: 5 రోజులు
+option d: 12 రోజులు
+correct: A
+explanation: Combined work = (10 * 15) / (10 + 15) = 150 / 25 = 6 days.
+---
+subject: Mathematics (91-120)
+topic: Geometry
+difficulty: Medium
+marks: 1
+year: 2026
+question: రేఖాగణితంలో 'బిందువు' (Point) కి ఉండే కొలతలు ఎన్ని?
+option a: 0 (పరిమాణం లేదు)
+option b: 1 (పొడవు మాత్రమే)
+option c: 2 (పొడవు, వెడల్పు)
+option d: 3
+correct: A
+explanation: యుక్లిడియన్ రేఖాగణితం ప్రకారం బిందువుకు కొలతలు లేవు (0 dimensions).
+---
+subject: Mathematics (91-120)
+topic: Ratio & Proportion
+difficulty: Medium
+marks: 1
+year: 2026
+question: రెండు సంఖ్యల నిష్పత్తి 3:4 మరియు వాటి క.సా.గు 60 అయితే ఆ సంఖ్యలలో పెద్ద సంఖ్య ఏది?
+option a: 20
+option b: 15
+option c: 12
+option d: 25
+correct: A
+explanation: Let numbers be 3x, 4x. LCM = 12x = 60 => x = 5. Larger number is 4x = 20.
+---
+subject: Mathematics (91-120)
+topic: Mensuration
+difficulty: Medium
+marks: 1
+year: 2026
+question: స్థూపం (Cylinder) యొక్క ప్రక్కతల వైశాల్యం సూత్రం:
+option a: 2πrh
+option b: πr²h
+option c: 2πr(r+h)
+option d: πrl
+correct: A
+explanation: స్థూప ప్రక్కతల వైశాల్యం = 2 * π * వ్యాసార్థం * ఎత్తు (2πrh).
+---
+subject: Mathematics (91-120)
+topic: Number Systems
+difficulty: Medium
+marks: 1
+year: 2026
+question: 0.0025 యొక్క వర్గమూలం (Square Root) ఎంత?
+option a: 0.05
+option b: 0.5
+option c: 0.005
+option d: 0.25
+correct: A
+explanation: 0.05 * 0.05 = 0.0025, కావున వర్గమూలం 0.05.
+---
+subject: Mathematics (91-120)
+topic: Number Systems
+difficulty: Medium
+marks: 1
+year: 2026
+question: -5 మరియు 5 ల మధ్య ఉన్న పూర్ణాంకాల (Integers) సంఖ్య ఎంత?
+option a: 9
+option b: 10
+option c: 11
+option d: 8
+correct: A
+explanation: The integers are -4, -3, -2, -1, 0, 1, 2, 3, 4. Total = 9.
+---
+subject: Mathematics (91-120)
+topic: Geometry
+difficulty: Medium
+marks: 1
+year: 2026
+question: ఒక క్రమ బహుభుజిలో బాహ్యకోణం 45° అయితే దాని భుజాల సంఖ్య ఎంత?
+option a: 8
+option b: 6
+option c: 10
+option d: 12
+correct: A
+explanation: Number of sides n = 360° / exterior angle = 360 / 45 = 8.
+---
+subject: Mathematics (91-120)
+topic: Sets
+difficulty: Medium
+marks: 1
+year: 2026
+question: A = {1, 2, 3}, B = {3, 4, 5} అయితే A ∩ B ఎంత?
+option a: {3}
+option b: {1, 2, 3, 4, 5}
+option c: {1, 2}
+option d: {4, 5}
+correct: A
+explanation: A ∩ B అంటే ఉమ్మడి మూలకం, ఇది 3 మాత్రమే.
+---
+subject: Mathematics (91-120)
+topic: Mensuration
+difficulty: Medium
+marks: 1
+year: 2026
+question: శంకువు (Cone) ఘనపరిమాణం సూత్రం ఏది?
+option a: (1/3)πr²h
+option b: πr²h
+option c: (1/3)πrl
+option d: (2/3)πr³
+correct: A
+explanation: శంకువు ఘనపరిమాణం స్థూప ఘనపరిమాణంలో మూడో వంతు ఉంటుంది (1/3 * πr²h).
+---
+subject: Mathematics (91-120)
+topic: History of Math
+difficulty: Medium
+marks: 1
+year: 2026
+question: గణిత శాస్త్ర పితామహుడు అని ఎవరిని పిలుస్తారు?
+option a: ఆర్కిమిడీస్
+option b: పైథాగరస్
+option c: ఆర్యభట్ట
+option d: ยూక్లిడ్
+correct: A
+explanation: గ్రీకు గణిత మేధావి ఆర్కిమిడీస్ ని గణిత శాస్త్ర పితామహుడిగా గౌరవిస్తారు.
+---
+subject: Mathematics (91-120)
+topic: Pedagogy
+difficulty: Medium
+marks: 1
+year: 2026
+question: "గణితం అనేది సమస్త శాస్త్రములకు తలుపు మరియు తాళం చెవి లాంటిది" అని చెప్పినది ఎవరు?
+option a: రోజర్ బేకన్
+option b: లాకే
+option c: గెలీలియో
+option d: బెంజమిన్ పియర్స్
+correct: A
+explanation: రోజర్ బేకన్ గణిత ప్రాధాన్యతను తెలుపుతూ ఈ ప్రసిద్ధ వ్యాఖ్య చేశారు.
+---
+subject: Mathematics (91-120)
+topic: Pedagogy
+difficulty: Medium
+marks: 1
+year: 2026
+question: విద్యార్థి వివిధ రేఖాగణిత పటాలను చూసి వాటి మధ్య తేడాలను మరియు పోలికలను గుర్తించగలిగితే, అది ఏ విద్యా ప్రమాణానికి చెందుతుంది?
+option a: కారణాలు చెప్పడం - నిరూపణ చేయడం
+option b: వ్యక్తపరచడం
+option c: అనుసంధానం
+option d: ప్రాతినిధ్యపరచడం
+correct: A
+explanation: పోలికలు, తేడాలు వర్గీకరించడం కారణాలు చెప్పడం - నిరూపణ కిందకు వస్తుంది.
+---
+subject: Mathematics (91-120)
+topic: Pedagogy
+difficulty: Medium
+marks: 1
+year: 2026
+question: అగమనాత్మక పద్ధతి (Inductive Method) లో బోధనా సూత్రం:
+option a: ఉదాహరణల నుండి సూత్రం వైపు (Specific to General)
+option b: సూత్రం నుండి ఉదాహరణ వైపు
+option c: అమూర్తం నుండి మూర్తం వైపు
+option d: సంక్లిష్టం నుండి సులభం వైపు
+correct: A
+explanation: నిర్దిష్ట ఉదాహరణలను పరిశీలించి ఒక సాధారణ సూత్రానికి రావడం అగమనాత్మక పద్ధతి.
+---
+subject: Mathematics (91-120)
+topic: Pedagogy
+difficulty: Medium
+marks: 1
+year: 2026
+question: ప్రాథమిక స్థాయిలో గణిత బోధనకు అత్యంత ఉపయుక్తమైన బోధనోపకరణం (TLM):
+option a: అబాకస్ (Abacus) మరియు పూసల చట్రం
+option b: సైంటిఫిక్ క్యాలిక్యులేటర్
+option c: గ్రాఫ్ పేపర్ మాత్రమే
+option d: గ్లోబ్
+correct: A
+explanation: సంఖ్యా భావనలు మరియు కూడికలు నేర్పడానికి ప్రాథమిక స్థాయిలో అబాకస్ చాలా ఉపయోగపడుతుంది.
+---
+subject: Mathematics (91-120)
+topic: Pedagogy
+difficulty: Medium
+marks: 1
+year: 2026
+question: గణితంలో అభ్యసన లోపాలను లోతుగా తెలుసుకోవడానికి ఉపయోగించే పరీక్ష:
+option a: లోప నిర్ధారణ పరీక్ష (Diagnostic Test)
+option b: సాధనా పరీక్ష (Achievement Test)
+option c: సామర్థ్య పరీక్ష
+option d: మానసిక పరిపక్వత పరీక్ష
+correct: A
+explanation: విద్యార్థి యొక్క అభ్యసన ఇబ్బందులను నిర్దిష్టంగా కనుగొనే పరీక్ష లోప నిర్ధారణ పరీక్ష.
+---
+subject: Environmental Studies (121-150)
+topic: Human Body
+difficulty: Medium
+marks: 1
+year: 2026
+question: మానవ శరీరంలో అతిపెద్ద అవయవం ఏది?
+option a: చర్మం
+option b: కాలేయం
+option c: గుండె
+option d: మూత్రపిండం
+correct: A
+explanation: శరీరం వెలుపల చర్మం అతిపెద్ద అవయవము. అతిపెద్ద అంతర్గత అవయవం కాలేయం.
+---
+subject: Environmental Studies (121-150)
+topic: Plant Biology
+difficulty: Medium
+marks: 1
+year: 2026
+question: మొక్కలలో నీటిని వేర్ల నుండి ఆకుల వరకు చేరవేసే కణజాలం ఏది?
+option a: దారువు (Xylem)
+option b: పోషక కణజాలం (Phloem)
+option c: బాహ్యచర్మం
+option d: మృదుకణజాలం
+correct: A
+explanation: దారువు (Xylem) నీటిని రవాణా చేస్తుంది, పోషక కణజాలం ఆహారాన్ని రవాణా చేస్తుంది.
+---
+subject: Environmental Studies (121-150)
+topic: Vitamins
+difficulty: Medium
+marks: 1
+year: 2026
+question: విటమిన్ 'సి' (Vitamin C) లోపం వల్ల వచ్చే వ్యాధి ఏది?
+option a: స్కర్వీ (Scurvy)
+option b: రేచీకటి
+option c: బెరి-బెరి
+option d: రిక్కెట్స్
+correct: A
+explanation: విటమిన్ సి లోపం వల్ల చిగుళ్ళ నుండి రక్తం కారే స్కర్వీ వ్యాధి వస్తుంది.
+---
+subject: Environmental Studies (121-150)
+topic: Astronomy
+difficulty: Medium
+marks: 1
+year: 2026
+question: సౌర కుటుంబంలో అత్యంత వేడిగా ఉండే గ్రహం ఏది?
+option a: శుక్రుడు (Venus)
+option b: బుధుడు (Mercury)
+option c: అంగారకుడు (Mars)
+option d: బృహస్పతి (Jupiter)
+correct: A
+explanation: దట్టమైన కార్బన్ డయాక్సైడ్ వాతావరణం వల్ల శుక్రుడిపై హరితగృహ ప్రభావం జరిగి అత్యధిక ఉష్ణోగ్రత నమోదవుతుంది.
+---
+subject: Environmental Studies (121-150)
+topic: Respiration
+difficulty: Medium
+marks: 1
+year: 2026
+question: శ్వాసక్రియలో మానవుడు పీల్చే వాతావరణ గాలిలో ఆక్సిజన్ (ప్రాణవాయువు) శాతం ఎంత ఉంటుంది?
+option a: 21%
+option b: 78%
+option c: 0.04%
+option d: 0.9%
+correct: A
+explanation: వాతావరణంలో సుమారు 21% ఆక్సిజన్, 78% నైట్రోజన్ వాయువులు ఉంటాయి.
+---
+subject: Environmental Studies (121-150)
+topic: Ecology
+difficulty: Medium
+marks: 1
+year: 2026
+question: కింది వాటిలో ఏది ప్రాథమిక వినియోగదారుడు (Primary Consumer) కిందకు వస్తుంది?
+option a: మేక
+option b: సింహం
+option c: పాము
+option d: పచ్చని మొక్కలు
+correct: A
+explanation: ఆహారం కోసం మొక్కలపై ఆధారపడే శాకాహారులు (మేక) ప్రాథమిక వినియోగదారులు.
+---
+subject: Environmental Studies (121-150)
+topic: Ecology
+difficulty: Medium
+marks: 1
+year: 2026
+question: ప్రపంచ పర్యావరణ దినోత్సవం (World Environment Day) ప్రతి సంవత్సరం ఏ రోజున జరుపుకుంటారు?
+option a: జూన్ 5
+option b: ఏప్రిల్ 22
+option c: సెప్టెంబర్ 16
+option d: డిసెంబర్ 10
+correct: A
+explanation: పర్యావరణంపై అవగాహన పెంచడానికి ఐక్యరాజ్యసమితి జూన్ 5వ తేదీని పర్యావరణ దినోత్సవంగా ప్రకటించింది.
+---
+subject: Environmental Studies (121-150)
+topic: Health & Diseases
+difficulty: Medium
+marks: 1
+year: 2026
+question: క్రింది వానిలో కలుషిత నీటి ద్వారా వ్యాపించే వ్యాధి (Water-borne disease) ఏది?
+option a: కలరా
+option b: క్షయ (TB)
+option c: మలేరియా
+option d: ధనుర్వాతం
+correct: A
+explanation: కలరా విబ్రియో కలరే అనే బాక్టీరియా ద్వారా కలుషిత నీరు మరియు ఆహారం వల్ల వ్యాపిస్తుంది.
+---
+subject: Environmental Studies (121-150)
+topic: Agriculture
+difficulty: Medium
+marks: 1
+year: 2026
+question: భారతదేశంలో 'హరిత విప్లవం' (Green Revolution) పితామహుడు అని ఎవరిని పిలుస్తారు?
+option a: ఎం.ఎస్. స్వామినాథన్
+option b: వర్గీస్ కురియన్
+option c: సుందర్ లాల్ బహుగుణ
+option d: మేధా పాట్కర్
+correct: A
+explanation: భారతదేశంలో అధిక దిగుబడినిచ్చే వరి, గోధుమ రకాలను ప్రవేశపెట్టి ఆహార భద్రత సాధించిన శాస్త్రవేత్త ఎం.ఎస్. స్వామినాథన్.
+---
+subject: Environmental Studies (121-150)
+topic: Ecology
+difficulty: Medium
+marks: 1
+year: 2026
+question: వాయు కాలుష్యాన్ని సూచించే సహజ వృక్ష సూచీలు (Natural Bio-indicators) ఏవి?
+option a: లైకెన్లు (Lichens)
+option b: శిలీంధ్రాలు
+option c: ఫెర్న్లు
+option d: అమరాంతస్
+correct: A
+explanation: సల్ఫర్ డయాక్సైడ్ కాలుష్యానికి లైకెన్లు చాలా సున్నితంగా స్పందిస్తాయి, కనుక కాలుష్య సూచికలుగా ఉపయోగపడతాయి.
+---
+subject: Environmental Studies (121-150)
+topic: Conservation
+difficulty: Medium
+marks: 1
+year: 2026
+question: భారతదేశంలో ఏర్పాటైన మొట్టమొదటి జాతీయ పార్కు (National Park) ఏది?
+option a: జిమ్ కార్బెట్ జాతీయ పార్క్
+option b: కాజీరంగా జాతీయ పార్క్
+option c: గిర్ జాతీయ పార్క్
+option d: సుందర్ బన్ జాతీయ పార్క్
+correct: A
+explanation: 1936లో హేలీ నేషనల్ పార్క్ గా ప్రారంభించబడి ప్రస్తుతం జిమ్ కార్బెట్ జాతీయ పార్క్ (ఉత్తరాఖండ్) గా పిలువబడుతోంది.
+---
+subject: Environmental Studies (121-150)
+topic: Ecology
+difficulty: Medium
+marks: 1
+year: 2026
+question: సుందరబన్ అడవులు ఏ రకమైన వృక్షజాలానికి లేదా అడవులకు ప్రసిద్ధి చెందినవి?
+option a: మడ అడవులు (Mangroves)
+option b: సదాహరిత అరణ్యాలు
+option c: ఆకురాల్చే అడవులు
+option d: ముళ్ళ పొదలు
+correct: A
+explanation: గంగా-బ్రహ్మపుత్ర డెల్టాలో పెరిగే సుందరి చెట్లతో కూడిన మడ అడవులు సుందరబన్స్.
+---
+subject: Environmental Studies (121-150)
+topic: Energy Resources
+difficulty: Medium
+marks: 1
+year: 2026
+question: కింది వాటిలో ఏది 'పునరుత్పాదక శక్తి వనరు' (Renewable Energy Source) కి ఉదాహరణ?
+option a: సౌర శక్తి (Solar Energy)
+option b: బొగ్గు
+option c: పెట్రోలియం
+option d: సహజ వాయువు
+correct: A
+explanation: తరిగిపోని మరియు మళ్ళీ మళ్ళీ లభించే శక్తి వనరు సౌర శక్తి.
+---
+subject: Environmental Studies (121-150)
+topic: Human Body
+difficulty: Medium
+marks: 1
+year: 2026
+question: మానవ శరీరంలో 'రక్త ప్రసరణ వ్యవస్థ' (Blood Circulatory System) ను కనుగొన్న శాస్త్రవేత్త ఎవరు?
+option a: విలియం హార్వే
+option b: ఎడ్వర్డ్ జెన్నర్
+option c: లూయిస్ పాశ్చర్
+option d: రాబర్ట్ కోచ్
+correct: A
+explanation: విలియం హార్వే 1628 లో మానవ శరీరంలో రక్తం ప్రవహించే విధానాన్ని నిరూపించారు.
+---
+subject: Environmental Studies (121-150)
+topic: Plant Biology
+difficulty: Medium
+marks: 1
+year: 2026
+question: మొక్కల ఆకులు ఆకుపచ్చ రంగులో ఉండటానికి కారణమైన వర్ణద్రవ్యం (Pigment) ఏది?
+option a: పత్రహరితం (Chlorophyll)
+option b: కెరోటినాయిడ్
+option c: ఆంథోసయనిన్
+option d: హిమోగ్లోబిన్
+correct: A
+explanation: పత్రహరితం సూర్యకాంతిని శోషించి కిరణజన్య సంయోగక్రియకు తోడ్పడుతుంది.
+---
+subject: Environmental Studies (121-150)
+topic: Meteorology
+difficulty: Medium
+marks: 1
+year: 2026
+question: భూమికి అత్యంత దగ్గరగా ఉండి, వాతావరణ మార్పులన్నీ (వర్షం, గాలి, మేఘాలు) సంభవించే వాతావరణ పొర ఏది?
+option a: ట్రోపోస్పియర్ (Troposphere)
+option b: స్ట్రాటోస్పియర్
+option c: మెసోస్పియర్
+option d: థర్మోస్పియర్
+correct: A
+explanation: వాతావరణ పొరలలో మొదటిదైన ట్రోపోస్పియర్ లోనే వాతావరణ మార్పులన్నీ జరుగుతాయి.
+---
+subject: Environmental Studies (121-150)
+topic: Atmosphere
+difficulty: Medium
+marks: 1
+year: 2026
+question: ఓజోన్ పొర (Ozone Layer) సూర్యుడి నుండి వచ్చే ఏ హానికర కిరణాలను భూమిపై పడకుండా నిరోధిస్తుంది?
+option a: అతినీలలోహిత కిరణాలు (UV Rays)
+option b: ఇన్ఫ్రారెడ్ కిరణాలు
+option c: ఎక్స్-కిరణాలు
+option d: గామా కిరణాలు
+correct: A
+explanation: స్ట్రాటోస్పియర్ లో ఉండే ఓజోన్ పొర హానికరమైన UV-B అతినీలలోహిత కిరణాలను శోషిస్తుంది.
+---
+subject: Environmental Studies (121-150)
+topic: Earthquakes
+difficulty: Medium
+marks: 1
+year: 2026
+question: భూకంప తీవ్రతను (Earthquake Intensity) రికార్డ్ చేయడానికి ఉపయోగించే పరికరం ఏది?
+option a: సిస్మోగ్రాఫ్ (Seismograph)
+option b: బారోమీటర్
+option c: అనిమోమీటర్
+option d: లక్టోమీటర్
+correct: A
+explanation: సిస్మోగ్రాఫ్ భూకంప అలల తీవ్రతను గ్రాఫ్ రూపంలో రికార్డ్ చేస్తుంది. దీని తీవ్రతను రిక్టర్ స్కేలుపై కొలుస్తారు.
+---
+subject: Environmental Studies (121-150)
+topic: Water chemistry
+difficulty: Medium
+marks: 1
+year: 2026
+question: సాధారణ స్వచ్ఛమైన నీటి యొక్క రసాయన సంకేతం (Chemical Formula) ఏది?
+option a: H2O
+option b: CO2
+option c: H2SO4
+option d: NaCl
+correct: A
+explanation: నీటి అణువులో రెండు హైడ్రోజన్ పరమాణువులు, ఒక ఆక్సిజన్ పరమాణువు ఉంటాయి (H2O).
+---
+subject: Environmental Studies (121-150)
+topic: Geography
+difficulty: Medium
+marks: 1
+year: 2026
+question: భారతదేశంలో ప్రవహించే పొడవైన జీవనది ఏది?
+option a: గంగా నది
+option b: గోదావరి
+option c: కృష్ణా
+option d: సింధు నది
+correct: A
+explanation: భారతదేశం భూభాగంలో సుమారు 2525 కి.మీ ప్రవహించే అత్యంత పొడవైన నది గంగా నది.
+---
+subject: Environmental Studies (121-150)
+topic: Polity
+difficulty: Medium
+marks: 1
+year: 2026
+question: భారతదేశంలో స్థానిక స్వపరిపాలన బలపరిచే 'పంచాయతీ రాజ్' వ్యవస్థను మొదటగా అమలు చేసిన రాష్ట్రం ఏది?
+option a: రాజస్థాన్
+option b: ఆంధ్రప్రదేశ్
+option c: మహారాష్ట్ర
+option d: గుజరాత్
+correct: A
+explanation: 1959 అక్టోబర్ 2న రాజస్థాన్ లోని నాగౌర్ లో నెహ్రూ గారు పంచాయతీ రాజ్ ను ప్రారంభించారు.
+---
+subject: Environmental Studies (121-150)
+topic: Ecology
+difficulty: Medium
+marks: 1
+year: 2026
+question: ప్రపంచవ్యాప్తంగా గుర్తించబడిన అత్యంత సున్నితమైన జీవవైవిధ్య హాట్‌స్పాట్‌ల (Biodiversity Hotspots) సంఖ్య ఎంత?
+option a: 36
+option b: 25
+option c: 18
+option d: 45
+correct: A
+explanation: ప్రస్తుతం ప్రపంచవ్యాప్తంగా 36 జీవవైవిధ్య హాట్‌స్పాట్‌లు ఉన్నాయి. వీటిలో పశ్చిమ కనుమలు వంటివి భారతదేశంలో ఉన్నాయి.
+---
+subject: Environmental Studies (121-150)
+topic: Natural Disasters
+difficulty: Medium
+marks: 1
+year: 2026
+question: సముద్రగర్భంలో సంభవించే భూకంపాల వల్ల వచ్చే భారీ అలలను 'సునామీ' (Tsunami) అంటారు. ఇది ఏ భాషా పదం?
+option a: జపనీస్
+option b: చైనీస్
+option c: లాటిన్
+option d: గ్రీకు
+correct: A
+explanation: సునామీ అనేది జపనీస్ పదం. 'త్సు' అంటే నౌకాశ్రయం, 'నామి' అంటే అల అని అర్థం.
+---
+subject: Environmental Studies (121-150)
+topic: Mammals
+difficulty: Medium
+marks: 1
+year: 2026
+question: క్రింది వాటిలో పాలు ఇచ్చి పెంచే క్షీరదం (Mammal) అయినప్పటికీ గుడ్లు పెట్టే జీవి ఏది?
+option a: ప్లాటిపస్ (Platypus)
+option b: కంగారూ
+option c: తిమింగలం
+option d: చీమల భక్షిణి
+correct: A
+explanation: ప్లాటిపస్ మరియు ఎకిడ్నా లు గుడ్లు పెట్టే క్షీరదాలు (Monotremes).
+---
+subject: Environmental Studies (121-150)
+topic: Chemistry
+difficulty: Medium
+marks: 1
+year: 2026
+question: లోహాలన్నింటిలోనూ అత్యంత స్థిరమైనది మరియు రసాయనికంగా చర్యాశీలత లేని దానిని 'లోహాల రాజు' (King of Metals) అంటారు. అది ఏది?
+option a: బంగారం
+option b: వెండి
+option c: ఇనుము
+option d: రాగి
+correct: A
+explanation: బంగారానికి తుప్పుపట్టే గుణం లేదు, ఆమ్లాలతో త్వరగా చర్య జరపదు కనుక దీనిని లోహాల రాజు అంటారు.
+---
+subject: Environmental Studies (121-150)
+topic: Polity
+difficulty: Medium
+marks: 1
+year: 2026
+question: భారత రాజ్యాంగంలో 6-14 సంవత్సరాల పిల్లలందరికీ ఉచిత మరియు నిర్బంధ ప్రాథమిక విద్యా హక్కును కల్పించే ఆర్టికల్ ఏది?
+option a: ఆర్టికల్ 21A
+option b: ఆర్టికల్ 45
+option c: ఆర్టికల్ 19
+option d: ఆర్టికల్ 30
+correct: A
+explanation: 86వ రాజ్యాంగ సవరణ చట్టం 2002 ద్వారా ఆర్టికల్ 21A ను ప్రాథమిక హక్కుగా చేర్చారు.
+---
+subject: Environmental Studies (121-150)
+topic: Pedagogy
+difficulty: Medium
+marks: 1
+year: 2026
+question: పర్యావరణ శాస్త్ర బోధనలో ప్రాజెక్ట్ పద్ధతిని (Project Method) ప్రతిపాదించినది ఎవరు?
+option a: కిల్‌పాట్రిక్
+option b: జాన్ డ్యూయీ
+option c: స్టీవెన్సన్
+option d: ఆంస్ట్రాంగ్
+correct: A
+explanation: జాన్ డ్యూయీ వ్యవహారికసత్తావాద సిద్ధాంతం ఆధారంగా ఆయన శిష్యుడు కిల్‌పాట్రిక్ ప్రాజెక్ట్ పద్ధతిని ప్రవేశపెట్టారు.
+---
+subject: Environmental Studies (121-150)
+topic: Pedagogy
+difficulty: Medium
+marks: 1
+year: 2026
+question: పరిసరాల విజ్ఞాన బోధనా పద్ధతులలో క్షేత్ర పర్యటనల (Field Trips) ముఖ్య ఉద్దేశ్యం:
+option a: విద్యార్థులకు ప్రత్యక్ష అనుభవాలను అందించడం
+option b: వినోదం కల్పించడం
+option c: తరగతి బోధన నుండి ఉపాధ్యాయుడికి విశ్రాంతి కల్పించడం
+option d: మార్కుల విశ్లేషణ
+correct: A
+explanation: క్షేత్ర పర్యటనల వల్ల విద్యార్థులు పరిసరాలను స్వయంగా పరిశీలించి ప్రత్యక్ష జ్ఞానం సంపాదిస్తారు.
+---
+subject: Environmental Studies (121-150)
+topic: Pedagogy
+difficulty: Medium
+marks: 1
+year: 2026
+question: విద్యార్థులలో పర్యావరణ పరిరక్షణ పట్ల అనుకూల వైఖరిని పెంపొందించడం ఏ రంగ లక్ష్యానికి చెందుతుంది?
+option a: భావావేశ రంగం (Affective Domain)
+option b: జ్ఞానాత్మక రంగం
+option c: మనోచాలక రంగం
+option d: క్రియాశీల రంగం
+correct: A
+explanation: వైఖరులు, ఆసక్తులు, విలువలు పెంపొందించడం భావావేశ రంగానికి చెందుతుంది.
+---
+subject: Environmental Studies (121-150)
+topic: Pedagogy
+difficulty: Medium
+marks: 1
+year: 2026
+question: నిరంతర సమగ్ర మూల్యాంకనం (CCE) ప్రకారం విద్యార్థి ప్రగతిని సమగ్రంగా అంచనా వేయడానికి నిర్వహించే పరీక్షలు ఏవి?
+option a: నిర్మాణాత్మక మరియు సంగ్రహణాత్మక మూల్యాంకనం
+option b: కేవలం సంగ్రహణాత్మక మూల్యాంకనం
+option c: కేవలం బోర్డు పరీక్షలు
+option d: కేవలం ప్రతిభా పరీక్షలు
+correct: A
+explanation: CCE లో నిర్మాణాత్మక (Formative - 4 సార్లు) మరియు సంగ్రహణాత్మక (Summative - 2 లేదా 3 సార్లు) పరీక్షలు ఉంటాయి.
