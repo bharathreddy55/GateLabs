@@ -23,8 +23,11 @@ export const TetExams = {
             </div>
           </div>
 
-          <div class="flex items-center gap-2 relative z-10">
-            <button id="btn-load-sample-tet" class="px-4.5 py-2.5 rounded-xl border border-slate-205 dark:border-white/10 text-slate-655 dark:text-slate-300 text-xs font-bold hover:bg-slate-100 dark:hover:bg-slate-800 transition-all select-none active:scale-95 flex items-center gap-1.5">
+          <div class="flex items-center gap-2 flex-wrap relative z-10">
+            <button id="btn-load-tet-practice-1" class="px-4.5 py-2.5 rounded-xl bg-primary-500 text-white text-xs font-bold hover:scale-102 transition-all select-none active:scale-95 flex items-center gap-1.5 shadow-sm">
+              <i class="fa-solid fa-file-invoice"></i> Load 'TET Practice 1'
+            </button>
+            <button id="btn-load-sample-tet" class="px-4.5 py-2.5 rounded-xl border border-slate-200 dark:border-white/10 text-slate-600 dark:text-slate-300 text-xs font-bold hover:bg-slate-100 dark:hover:bg-slate-800 transition-all select-none active:scale-95 flex items-center gap-1.5">
               <i class="fa-solid fa-file-import"></i> Load Sample 150 Qs
             </button>
           </div>
@@ -122,6 +125,7 @@ Q2: ...</pre>
     const btnParse = document.getElementById('btn-parse-tet-questions');
     const btnStart = document.getElementById('btn-start-tet-simulator');
     const btnLoadSample = document.getElementById('btn-load-sample-tet');
+    const btnLoadPractice1 = document.getElementById('btn-load-tet-practice-1');
     const guideToggle = document.getElementById('btn-toggle-format-guide');
     const guideBox = document.getElementById('format-guide-box');
 
@@ -135,6 +139,28 @@ Q2: ...</pre>
       textarea.value = this.generateSampleQuestions();
       showToast("Generated 150 sample TET questions inside input area!", "success");
       this.parseQuestions();
+    });
+
+    // Load custom TET Practice 1 question file
+    btnLoadPractice1?.addEventListener('click', async () => {
+      btnLoadPractice1.disabled = true;
+      btnLoadPractice1.innerHTML = '<i class="fa-solid fa-circle-notch animate-spin"></i> Loading...';
+      try {
+        const res = await fetch('./pyqs/tet_practice_1.txt');
+        if (res.ok) {
+          const text = await res.text();
+          textarea.value = text;
+          showToast("Loaded 'TET Practice 1' questions!", "success");
+          this.parseQuestions();
+        } else {
+          showToast("Failed to fetch TET Practice 1 asset.", "error");
+        }
+      } catch (err) {
+        showToast("Error: " + err.message, "error");
+      } finally {
+        btnLoadPractice1.disabled = false;
+        btnLoadPractice1.innerHTML = '<i class="fa-solid fa-file-invoice"></i> Load \'TET Practice 1\'';
+      }
     });
 
     // Parse questions click
@@ -159,7 +185,7 @@ Q2: ...</pre>
       MockTest.status = {};
       MockTest.timeLeft = 150 * 60; // 150 minutes
       MockTest.totalTime = 150 * 60;
-      MockTest.selectedSubject = 'TET Exam Paper 1';
+      MockTest.selectedSubject = 'TET Practice 1';
       MockTest.selectedTopic = 'All';
       MockTest.calcLeft = undefined;
       MockTest.calcTop = undefined;
@@ -198,74 +224,132 @@ Q2: ...</pre>
       return;
     }
 
-    const rawBlocks = text.split(/(?=Q\d+[:\.\s]|Ques\s+\d+[:\.\s]|\d+[\.\s]\s*[A-Z])/i);
-    const parsed = [];
+    let parsed = [];
 
-    rawBlocks.forEach((block, index) => {
-      const trimmed = block.trim();
-      if (!trimmed) return;
+    if (text.includes('subject:')) {
+      // Standard file format: split by ---
+      const rawBlocks = text.split(/---/);
+      rawBlocks.forEach((block, index) => {
+        const trimmed = block.trim();
+        if (!trimmed) return;
 
-      // Extract title/question text
-      const lines = trimmed.split('\n').map(l => l.trim()).filter(Boolean);
-      if (lines.length < 2) return;
+        const lines = trimmed.split('\n').map(l => l.trim()).filter(Boolean);
+        let questionText = '';
+        let options = [];
+        let correctAnswer = 'A';
+        let explanationVal = '';
+        let subjectVal = '';
+        let topicVal = 'General';
 
-      // Parse question text (strip Q1:, 1., etc.)
-      let questionText = lines[0].replace(/^Q\d+[:\.]\s*/i, '').replace(/^\d+[:\.\s]\s*/i).trim();
-      
-      // Extract options (A, B, C, D)
-      const options = [];
-      let correctAnswer = 'A';
-      let explanation = 'TET Exam standard pedagogy solution review.';
+        lines.forEach(line => {
+          const lower = line.toLowerCase();
+          if (lower.startsWith('subject:')) {
+            subjectVal = line.substring(8).trim();
+          } else if (lower.startsWith('topic:')) {
+            topicVal = line.substring(6).trim();
+          } else if (lower.startsWith('question:')) {
+            questionText = line.substring(9).trim();
+          } else if (lower.startsWith('option a:') || line.startsWith('A)')) {
+            options[0] = line.substring(line.indexOf(')') >= 0 ? line.indexOf(')') + 1 : line.indexOf(':') + 1).trim();
+          } else if (lower.startsWith('option b:') || line.startsWith('B)')) {
+            options[1] = line.substring(line.indexOf(')') >= 0 ? line.indexOf(')') + 1 : line.indexOf(':') + 1).trim();
+          } else if (lower.startsWith('option c:') || line.startsWith('C)')) {
+            options[2] = line.substring(line.indexOf(')') >= 0 ? line.indexOf(')') + 1 : line.indexOf(':') + 1).trim();
+          } else if (lower.startsWith('option d:') || line.startsWith('D)')) {
+            options[3] = line.substring(line.indexOf(')') >= 0 ? line.indexOf(')') + 1 : line.indexOf(':') + 1).trim();
+          } else if (lower.startsWith('correct:') || lower.startsWith('answer:')) {
+            const val = line.substring(line.indexOf(':') + 1).trim().toUpperCase();
+            correctAnswer = val.includes('A') || val === '0' ? 'A' : (val.includes('B') || val === '1' ? 'B' : (val.includes('C') || val === '2' ? 'C' : 'D'));
+          } else if (lower.startsWith('explanation:')) {
+            explanationVal = line.substring(12).trim();
+          }
+        });
 
-      lines.slice(1).forEach(line => {
-        const optMatch = line.match(/^([A-D])[\)\.\s]\s*(.*)/i);
-        if (optMatch) {
-          options.push(optMatch[2].trim());
-        }
+        const qNum = parsed.length + 1;
+        let subject = subjectVal || 'Child Development & Pedagogy';
+        if (qNum > 30 && qNum <= 60) subject = 'Language I';
+        else if (qNum > 60 && qNum <= 90) subject = 'Language II';
+        else if (qNum > 90 && qNum <= 120) subject = 'Mathematics';
+        else if (qNum > 120) subject = 'Environmental Studies';
 
-        const ansMatch = line.match(/^(?:Answer|Correct\s+Answer)\s*:\s*([A-D])/i);
-        if (ansMatch) {
-          correctAnswer = ansMatch[1].toUpperCase();
-        }
-
-        const expMatch = line.match(/^(?:Explanation)\s*:\s*(.*)/i);
-        if (expMatch) {
-          explanation = expMatch[1].trim();
-        }
+        parsed.push({
+          id: `q_tet_${Date.now()}_${index}`,
+          type: 'MCQ',
+          question: questionText || `Question details review for TET query #${qNum}`,
+          options: options.length >= 2 ? options : ["Option A", "Option B", "Option C", "Option D"],
+          correctAnswer: correctAnswer === 'A' ? 0 : (correctAnswer === 'B' ? 1 : (correctAnswer === 'C' ? 2 : 3)),
+          explanation: explanationVal || 'TET Exam standard pedagogy solution review.',
+          marks: 1,
+          subject,
+          topic: topicVal,
+          difficulty: 'Hard',
+          year: 2026
+        });
       });
+    } else {
+      // Paste format (splits by Q1: etc.)
+      const rawBlocks = text.split(/(?=Q\d+[:\.\s]|Ques\s+\d+[:\.\s]|\d+[\.\s]\s*[A-Z])/i);
+      rawBlocks.forEach((block, index) => {
+        const trimmed = block.trim();
+        if (!trimmed) return;
 
-      if (options.length < 2) {
-        // Fallback options if none parsed
-        options.push("Option A", "Option B", "Option C", "Option D");
-      }
+        const lines = trimmed.split('\n').map(l => l.trim()).filter(Boolean);
+        if (lines.length < 2) return;
 
-      // Assign subject category based on question number index
-      const qNum = parsed.length + 1;
-      let subject = 'Child Development & Pedagogy';
-      if (qNum > 30 && qNum <= 60) {
-        subject = 'Language I';
-      } else if (qNum > 60 && qNum <= 90) {
-        subject = 'Language II';
-      } else if (qNum > 90 && qNum <= 120) {
-        subject = 'Mathematics';
-      } else if (qNum > 120) {
-        subject = 'Environmental Studies';
-      }
+        let questionText = lines[0].replace(/^Q\d+[:\.]\s*/i, '').replace(/^\d+[:\.\s]\s*/i).trim();
+        
+        const options = [];
+        let correctAnswer = 'A';
+        let explanation = 'TET Exam standard pedagogy solution review.';
 
-      parsed.push({
-        id: `q_tet_${Date.now()}_${index}`,
-        type: 'MCQ',
-        question: questionText || `Question details review for TET query #${qNum}`,
-        options,
-        correctAnswer,
-        explanation,
-        marks: 1,
-        subject,
-        topic: 'General Syllabus Review',
-        difficulty: 'Medium',
-        year: 2026
+        lines.slice(1).forEach(line => {
+          const optMatch = line.match(/^([A-D])[\)\.\s]\s*(.*)/i);
+          if (optMatch) {
+            options.push(optMatch[2].trim());
+          }
+
+          const ansMatch = line.match(/^(?:Answer|Correct\s+Answer)\s*:\s*([A-D])/i);
+          if (ansMatch) {
+            correctAnswer = ansMatch[1].toUpperCase();
+          }
+
+          const expMatch = line.match(/^(?:Explanation)\s*:\s*(.*)/i);
+          if (expMatch) {
+            explanation = expMatch[1].trim();
+          }
+        });
+
+        if (options.length < 2) {
+          options.push("Option A", "Option B", "Option C", "Option D");
+        }
+
+        const qNum = parsed.length + 1;
+        let subject = 'Child Development & Pedagogy';
+        if (qNum > 30 && qNum <= 60) {
+          subject = 'Language I';
+        } else if (qNum > 60 && qNum <= 90) {
+          subject = 'Language II';
+        } else if (qNum > 90 && qNum <= 120) {
+          subject = 'Mathematics';
+        } else if (qNum > 120) {
+          subject = 'Environmental Studies';
+        }
+
+        parsed.push({
+          id: `q_tet_${Date.now()}_${index}`,
+          type: 'MCQ',
+          question: questionText || `Question details review for TET query #${qNum}`,
+          options,
+          correctAnswer: correctAnswer === 'A' ? 0 : (correctAnswer === 'B' ? 1 : (correctAnswer === 'C' ? 2 : 3)),
+          explanation,
+          marks: 1,
+          subject,
+          topic: 'General Syllabus Review',
+          difficulty: 'Hard',
+          year: 2026
+        });
       });
-    });
+    }
 
     this.parsedQuestions = parsed;
 
@@ -293,7 +377,7 @@ Q2: ...</pre>
       startBtn.classList.add('opacity-50', 'cursor-not-allowed');
     }
 
-    showToast(`Parsed ${totalCount} questions from pasted text block!`, "success");
+    showToast(`Parsed ${totalCount} questions from input!`, "success");
   },
 
   generateSampleQuestions() {
