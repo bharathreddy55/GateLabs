@@ -567,28 +567,44 @@ function parseTextQuestions(text) {
         lowerLine.startsWith("option a:") || lowerLine.startsWith("option 1:") ||
         trimmedLine.startsWith("A)") || trimmedLine.startsWith("A.")
       ) {
-        qObj.options[0] = trimmedLine.substring(trimmedLine.indexOf(")") >= 0 ? trimmedLine.indexOf(")") + 1 : trimmedLine.indexOf(":") + 1).trim();
+        if (lowerLine.startsWith("option a:") || lowerLine.startsWith("option 1:")) {
+          qObj.options[0] = trimmedLine.substring(trimmedLine.indexOf(":") + 1).trim();
+        } else {
+          qObj.options[0] = trimmedLine.substring(trimmedLine.indexOf(")") >= 0 ? trimmedLine.indexOf(")") + 1 : trimmedLine.indexOf(".") + 1).trim();
+        }
         isReadingQuestion = false;
         isReadingExplanation = false;
       } else if (
         lowerLine.startsWith("option b:") || lowerLine.startsWith("option 2:") ||
         trimmedLine.startsWith("B)") || trimmedLine.startsWith("B.")
       ) {
-        qObj.options[1] = trimmedLine.substring(trimmedLine.indexOf(")") >= 0 ? trimmedLine.indexOf(")") + 1 : trimmedLine.indexOf(":") + 1).trim();
+        if (lowerLine.startsWith("option b:") || lowerLine.startsWith("option 2:")) {
+          qObj.options[1] = trimmedLine.substring(trimmedLine.indexOf(":") + 1).trim();
+        } else {
+          qObj.options[1] = trimmedLine.substring(trimmedLine.indexOf(")") >= 0 ? trimmedLine.indexOf(")") + 1 : trimmedLine.indexOf(".") + 1).trim();
+        }
         isReadingQuestion = false;
         isReadingExplanation = false;
       } else if (
         lowerLine.startsWith("option c:") || lowerLine.startsWith("option 3:") ||
         trimmedLine.startsWith("C)") || trimmedLine.startsWith("C.")
       ) {
-        qObj.options[2] = trimmedLine.substring(trimmedLine.indexOf(")") >= 0 ? trimmedLine.indexOf(")") + 1 : trimmedLine.indexOf(":") + 1).trim();
+        if (lowerLine.startsWith("option c:") || lowerLine.startsWith("option 3:")) {
+          qObj.options[2] = trimmedLine.substring(trimmedLine.indexOf(":") + 1).trim();
+        } else {
+          qObj.options[2] = trimmedLine.substring(trimmedLine.indexOf(")") >= 0 ? trimmedLine.indexOf(")") + 1 : trimmedLine.indexOf(".") + 1).trim();
+        }
         isReadingQuestion = false;
         isReadingExplanation = false;
       } else if (
         lowerLine.startsWith("option d:") || lowerLine.startsWith("option 4:") ||
         trimmedLine.startsWith("D)") || trimmedLine.startsWith("D.")
       ) {
-        qObj.options[3] = trimmedLine.substring(trimmedLine.indexOf(")") >= 0 ? trimmedLine.indexOf(")") + 1 : trimmedLine.indexOf(":") + 1).trim();
+        if (lowerLine.startsWith("option d:") || lowerLine.startsWith("option 4:")) {
+          qObj.options[3] = trimmedLine.substring(trimmedLine.indexOf(":") + 1).trim();
+        } else {
+          qObj.options[3] = trimmedLine.substring(trimmedLine.indexOf(")") >= 0 ? trimmedLine.indexOf(")") + 1 : trimmedLine.indexOf(".") + 1).trim();
+        }
         isReadingQuestion = false;
         isReadingExplanation = false;
       } else if (lowerLine.startsWith("question:")) {
@@ -1093,27 +1109,60 @@ const realFirestore = {
   },
   
   async saveAttempt(attempt) {
-    if (!firestore) throw new Error("Firestore is not initialized.");
-    const user = authInstance ? authInstance.currentUser : null;
     attempt.id = 'att_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4);
     attempt.timestamp = new Date().toISOString();
-    attempt.userId = user ? user.uid : 'anonymous';
-    
-    await setDoc(doc(firestore, "attempts", attempt.id), attempt);
+
+    // Always save to localStorage first
+    try {
+      const attempts = JSON.parse(localStorage.getItem('gate_attempts') || '[]');
+      attempts.push(attempt);
+      localStorage.setItem('gate_attempts', JSON.stringify(attempts));
+    } catch (e) {
+      console.warn("localStorage saveAttempt error:", e);
+    }
+
+    // Try Firestore if available
+    try {
+      if (firestore) {
+        const user = authInstance ? authInstance.currentUser : null;
+        attempt.userId = user ? user.uid : 'anonymous';
+        await setDoc(doc(firestore, "attempts", attempt.id), attempt);
+      }
+    } catch (err) {
+      console.warn("Firestore saveAttempt error:", err);
+    }
     return attempt;
   },
   
   async getAttempts() {
-    if (!firestore) return [];
-    const user = authInstance ? authInstance.currentUser : null;
-    if (!user) return [];
+    let list = [];
     
-    const q = query(collection(firestore, "attempts"), where("userId", "==", user.uid));
-    const qSnap = await getDocs(q);
-    const list = [];
-    qSnap.forEach(docSnap => {
-      list.push(docSnap.data());
-    });
+    // Always load from localStorage
+    try {
+      list = JSON.parse(localStorage.getItem('gate_attempts') || '[]');
+    } catch (e) {
+      console.warn("localStorage getAttempts error:", e);
+    }
+
+    // Load from Firestore if authenticated
+    try {
+      if (firestore) {
+        const user = authInstance ? authInstance.currentUser : null;
+        if (user) {
+          const q = query(collection(firestore, "attempts"), where("userId", "==", user.uid));
+          const qSnap = await getDocs(q);
+          qSnap.forEach(docSnap => {
+            const data = docSnap.data();
+            if (!list.some(item => item.id === data.id)) {
+              list.push(data);
+            }
+          });
+        }
+      }
+    } catch (err) {
+      console.warn("Firestore getAttempts error:", err);
+    }
+    
     return list.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
   },
 

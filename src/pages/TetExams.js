@@ -344,13 +344,29 @@ Q2: ...</pre>
           } else if (lower.startsWith('question:')) {
             questionText = line.substring(9).trim();
           } else if (lower.startsWith('option a:') || line.startsWith('A)')) {
-            options[0] = line.substring(line.indexOf(')') >= 0 ? line.indexOf(')') + 1 : line.indexOf(':') + 1).trim();
+            if (lower.startsWith('option a:')) {
+              options[0] = line.substring(9).trim();
+            } else {
+              options[0] = line.substring(line.indexOf(')') >= 0 ? line.indexOf(')') + 1 : line.indexOf(':') + 1).trim();
+            }
           } else if (lower.startsWith('option b:') || line.startsWith('B)')) {
-            options[1] = line.substring(line.indexOf(')') >= 0 ? line.indexOf(')') + 1 : line.indexOf(':') + 1).trim();
+            if (lower.startsWith('option b:')) {
+              options[1] = line.substring(9).trim();
+            } else {
+              options[1] = line.substring(line.indexOf(')') >= 0 ? line.indexOf(')') + 1 : line.indexOf(':') + 1).trim();
+            }
           } else if (lower.startsWith('option c:') || line.startsWith('C)')) {
-            options[2] = line.substring(line.indexOf(')') >= 0 ? line.indexOf(')') + 1 : line.indexOf(':') + 1).trim();
+            if (lower.startsWith('option c:')) {
+              options[2] = line.substring(9).trim();
+            } else {
+              options[2] = line.substring(line.indexOf(')') >= 0 ? line.indexOf(')') + 1 : line.indexOf(':') + 1).trim();
+            }
           } else if (lower.startsWith('option d:') || line.startsWith('D)')) {
-            options[3] = line.substring(line.indexOf(')') >= 0 ? line.indexOf(')') + 1 : line.indexOf(':') + 1).trim();
+            if (lower.startsWith('option d:')) {
+              options[3] = line.substring(9).trim();
+            } else {
+              options[3] = line.substring(line.indexOf(')') >= 0 ? line.indexOf(')') + 1 : line.indexOf(':') + 1).trim();
+            }
           } else if (lower.startsWith('correct:') || lower.startsWith('answer:')) {
             const val = line.substring(line.indexOf(':') + 1).trim().toUpperCase();
             correctAnswer = val.includes('A') || val === '0' ? 'A' : (val.includes('B') || val === '1' ? 'B' : (val.includes('C') || val === '2' ? 'C' : 'D'));
@@ -360,11 +376,11 @@ Q2: ...</pre>
         });
 
         const qNum = parsed.length + 1;
-        let subject = subjectVal || 'Child Development & Pedagogy';
-        if (qNum > 30 && qNum <= 60) subject = 'Language I';
-        else if (qNum > 60 && qNum <= 90) subject = 'Language II';
-        else if (qNum > 90 && qNum <= 120) subject = 'Mathematics';
-        else if (qNum > 120) subject = 'Environmental Studies';
+        let subject = subjectVal || 'Child Development & Pedagogy (1-30)';
+        if (qNum > 30 && qNum <= 60) subject = 'Language I (31-60)';
+        else if (qNum > 60 && qNum <= 90) subject = 'Language II (61-90)';
+        else if (qNum > 90 && qNum <= 120) subject = 'Mathematics (91-120)';
+        else if (qNum > 120) subject = 'Environmental Studies (121-150)';
 
         parsed.push({
           id: `q_tet_${Date.now()}_${index}`,
@@ -418,15 +434,15 @@ Q2: ...</pre>
         }
 
         const qNum = parsed.length + 1;
-        let subject = 'Child Development & Pedagogy';
+        let subject = 'Child Development & Pedagogy (1-30)';
         if (qNum > 30 && qNum <= 60) {
-          subject = 'Language I';
+          subject = 'Language I (31-60)';
         } else if (qNum > 60 && qNum <= 90) {
-          subject = 'Language II';
+          subject = 'Language II (61-90)';
         } else if (qNum > 90 && qNum <= 120) {
-          subject = 'Mathematics';
+          subject = 'Mathematics (91-120)';
         } else if (qNum > 120) {
-          subject = 'Environmental Studies';
+          subject = 'Environmental Studies (121-150)';
         }
 
         parsed.push({
@@ -453,11 +469,11 @@ Q2: ...</pre>
     if (statTotal) statTotal.innerText = `${totalCount} / 150`;
 
     const getEl = id => document.getElementById(id);
-    if (getEl('tet-stat-cdp')) getEl('tet-stat-cdp').innerText = parsed.filter(q => q.subject === 'Child Development & Pedagogy').length;
-    if (getEl('tet-stat-l1')) getEl('tet-stat-l1').innerText = parsed.filter(q => q.subject === 'Language I').length;
-    if (getEl('tet-stat-l2')) getEl('tet-stat-l2').innerText = parsed.filter(q => q.subject === 'Language II').length;
-    if (getEl('tet-stat-math')) getEl('tet-stat-math').innerText = parsed.filter(q => q.subject === 'Mathematics').length;
-    if (getEl('tet-stat-evs')) getEl('tet-stat-evs').innerText = parsed.filter(q => q.subject === 'Environmental Studies').length;
+    if (getEl('tet-stat-cdp')) getEl('tet-stat-cdp').innerText = parsed.filter(q => q.subject.includes('Child Development')).length;
+    if (getEl('tet-stat-l1')) getEl('tet-stat-l1').innerText = parsed.filter(q => q.subject.includes('Language I')).length;
+    if (getEl('tet-stat-l2')) getEl('tet-stat-l2').innerText = parsed.filter(q => q.subject.includes('Language II')).length;
+    if (getEl('tet-stat-math')) getEl('tet-stat-math').innerText = parsed.filter(q => q.subject.includes('Mathematics')).length;
+    if (getEl('tet-stat-evs')) getEl('tet-stat-evs').innerText = parsed.filter(q => q.subject.includes('Environmental Studies')).length;
 
     const alertEl = document.getElementById('tet-status-alert');
     const startBtn = document.getElementById('btn-start-tet-simulator');
