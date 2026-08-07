@@ -314,7 +314,7 @@ export const MockTest = {
 
     return `
       <!-- Simulator Wrapper (Adaptive dark/light theme, beautiful bento structure) -->
-      <div class="min-h-[calc(100vh-3.5rem)] flex flex-col gap-5 select-none animate-fade-in font-sans">
+      <div id="simulator-wrapper" class="min-h-[calc(100vh-3.5rem)] flex flex-col gap-5 select-none animate-fade-in font-sans" style="zoom: ${this.fontSizeMultiplier || 1.0};">
         
         <!-- Top Toolbar -->
         <div class="glass-panel px-6 py-3.5 rounded-3xl flex flex-wrap items-center justify-between gap-4">
@@ -324,14 +324,15 @@ export const MockTest = {
               ${sectionTabsHtml}
             </div>
           </div>
-
           <div class="flex items-center gap-3">
-            <button id="zoom-in-btn" class="px-3 py-1.5 rounded-xl border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-slate-850 text-slate-600 dark:text-slate-300 text-xs font-bold flex items-center gap-1.5" title="Zoom In Text">
-              <i class="fa-solid fa-magnifying-glass-plus"></i> Zoom In
-            </button>
-            <button id="zoom-out-btn" class="px-3 py-1.5 rounded-xl border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-slate-850 text-slate-600 dark:text-slate-300 text-xs font-bold flex items-center gap-1.5" title="Zoom Out Text">
-              <i class="fa-solid fa-magnifying-glass-minus"></i> Zoom Out
-            </button>
+            <div class="flex items-center border border-slate-200 dark:border-white/10 rounded-xl overflow-hidden bg-slate-50 dark:bg-slate-900 shadow-sm select-none">
+              <button id="zoom-out-btn" class="px-3.5 py-1.5 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-bold border-r border-slate-200 dark:border-white/10 flex items-center justify-center gap-1" title="Zoom Out / Minimize Screen">
+                <i class="fa-solid fa-magnifying-glass-minus text-[10px]"></i> A-
+              </button>
+              <button id="zoom-in-btn" class="px-3.5 py-1.5 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-bold flex items-center justify-center gap-1" title="Zoom In / Maximize Screen">
+                A+ <i class="fa-solid fa-magnifying-glass-plus text-[10px]"></i>
+              </button>
+            </div>
             <button id="toggle-calc-btn" class="px-3.5 py-1.5 rounded-xl border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-slate-850 text-slate-600 dark:text-slate-300 text-xs font-bold flex items-center gap-1.5">
               <i class="fa-solid fa-calculator"></i> ${this.isCalcOpen ? 'Hide Calculator' : 'Calculator'}
             </button>
@@ -378,7 +379,7 @@ export const MockTest = {
                     ${q.type === 'NAT' ? '<span class="text-[9px] font-bold text-slate-400 dark:text-slate-500">(Numerical Answer. No negative marking)</span>' : ''}
                   </div>
 
-                  <p id="question-text-zoomable" class="font-bold text-slate-805 dark:text-slate-200 whitespace-pre-line leading-relaxed max-h-[22rem] overflow-y-auto pr-1" style="font-size: ${(this.fontSizeMultiplier || 1.0) * 12}px;">
+                  <p class="text-xs font-bold text-slate-805 dark:text-slate-200 whitespace-pre-line leading-relaxed max-h-[22rem] overflow-y-auto pr-1">
                     ${q.question}
                   </p>
                 </div>
@@ -397,7 +398,7 @@ export const MockTest = {
                     <span class="text-[10px] font-extrabold text-primary-500 bg-primary-500/10 px-2.5 py-1 rounded-lg">${q.marks} Mark${q.marks > 1 ? 's' : ''}</span>
                   </div>
 
-                  <div id="options-container-zoomable" class="max-h-[22rem] overflow-y-auto pr-1" style="font-size: ${(this.fontSizeMultiplier || 1.0) * 12}px;">
+                  <div class="max-h-[22rem] overflow-y-auto pr-1">
                     ${q.type === 'NAT' ? `
                       <!-- NAT Input Panel -->
                       <div class="flex flex-col gap-4 max-w-sm mx-auto">
@@ -422,7 +423,7 @@ export const MockTest = {
                               isChecked ? 'border-primary-500 bg-primary-50/10 dark:bg-primary-950/20' : 'border-slate-200 dark:border-white/5 bg-white/40 dark:bg-slate-950/10'
                             }">
                               <input type="checkbox" name="sim-option-msq" value="${oIdx}" ${isChecked ? 'checked' : ''} class="mt-0.5 text-primary-600 border-slate-350 focus:ring-primary-500 rounded bg-white dark:bg-slate-900">
-                              <span class="font-bold text-slate-700 dark:text-slate-200 leading-relaxed" style="font-size: inherit;">${String.fromCharCode(65 + oIdx)}. ${opt}</span>
+                              <span class="text-xs font-bold text-slate-700 dark:text-slate-200 leading-relaxed">${String.fromCharCode(65 + oIdx)}. ${opt}</span>
                             </label>
                           `;
                         }).join('')}
@@ -437,7 +438,7 @@ export const MockTest = {
                               isChecked ? 'border-primary-500 bg-primary-50/10 dark:bg-primary-950/20' : 'border-slate-200 dark:border-white/5 bg-white/40 dark:bg-slate-950/10'
                             }">
                               <input type="radio" name="sim-option" value="${oIdx}" ${isChecked ? 'checked' : ''} class="mt-0.5 text-primary-600 border-slate-350 focus:ring-primary-500 bg-white dark:bg-slate-900">
-                              <span class="font-bold text-slate-700 dark:text-slate-200 leading-relaxed" style="font-size: inherit;">${String.fromCharCode(65 + oIdx)}. ${opt}</span>
+                              <span class="text-xs font-bold text-slate-700 dark:text-slate-200 leading-relaxed">${String.fromCharCode(65 + oIdx)}. ${opt}</span>
                             </label>
                           `;
                         }).join('')}
@@ -1751,18 +1752,9 @@ export const MockTest = {
   },
 
   applyZoom() {
-    const qText = document.getElementById('question-text-zoomable');
-    const optsContainer = document.getElementById('options-container-zoomable');
-    const multiplier = this.fontSizeMultiplier || 1.0;
-    const pxSize = multiplier * 12;
-    if (qText) {
-      qText.style.fontSize = `${pxSize}px`;
-    }
-    if (optsContainer) {
-      optsContainer.style.fontSize = `${pxSize}px`;
-      optsContainer.querySelectorAll('span').forEach(span => {
-        span.style.fontSize = `${pxSize}px`;
-      });
+    const wrapper = document.getElementById('simulator-wrapper');
+    if (wrapper) {
+      wrapper.style.zoom = this.fontSizeMultiplier || 1.0;
     }
   },
 
