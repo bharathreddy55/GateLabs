@@ -204,7 +204,7 @@ option b: 100
 option c: 80
 option d: 110
 correct: A
-explanation: $IQ = \frac{MA}{CA} \times 100 = \frac{12}{10} \times 100 = 120$.
+explanation: IQ = MA/CA \times 100 = 12/10 \times 100 = 120.
 ---
 subject: Child Development & Pedagogy
 topic: Bodily-Kinesthetic Intelligence
@@ -1177,13 +1177,13 @@ topic: Decimals
 difficulty: Hard
 marks: 1
 year: 2026
-question: $0.3\overline{18}$ ను సంపూర్ణ భిన్న రూపం $\frac{p}{q}$ లో వ్యక్తపరగా వచ్చు విలువ ఎంత?
-option a: \frac{315}{990} = \frac{7}{22}
-option b: \frac{318}{1000}
-option c: \frac{318}{999}
-option d: \frac{315}{900}
+question: 0.31818... ను సంపూర్ణ భిన్న రూపం p/q లో వ్యక్తపరగా వచ్చు విలువ ఎంత?
+option a: 315/990 = 7/22
+option b: 318/1000
+option c: 318/999
+option d: 315/900
 correct: A
-explanation: $0.3\overline{18} = \frac{318 - 3}{990} = \frac{315}{990} = \frac{7}{22}$.
+explanation: 0.31818... = 318 - 3/990 = 315/990 = 7/22.
 ---
 subject: Mathematics
 topic: LCM HCF
@@ -1196,7 +1196,7 @@ option b: 24
 option c: 72
 option d: 60
 correct: A
-explanation: $HCF \times LCM = n_1 \times n_2 \implies 12 \times 144 = 36 \times n_2 \implies n_2 = \frac{12 \times 144}{36} = 48$.
+explanation: HCF \times LCM = n_1 \times n_2 => 12 \times 144 = 36 \times n_2 => n_2 = 12 \times 144/36 = 48.
 ---
 subject: Mathematics
 topic: Percentage Area
@@ -1209,7 +1209,7 @@ option b: 20%
 option c: 40%
 option d: 50%
 correct: A
-explanation: పెరుగుదల శాతం = $20 + 20 + \frac{20 \times 20}{100} = 40 + 4 = 44\%$.
+explanation: పెరుగుదల శాతం = 20 + 20 + 20 \times 20/100 = 40 + 4 = 44\%.
 ---
 subject: Mathematics
 topic: Successive Discounts
@@ -1222,7 +1222,7 @@ option b: ₹ 560
 option c: ₹ 600
 option d: ₹ 580
 correct: A
-explanation: అమ్మకపు ధర = $800 \times 0.9 \times 0.8 = 720 \times 0.8 = ₹ 576$.
+explanation: అమ్మకపు ధర = 800 \times 0.9 \times 0.8 = 720 \times 0.8 = ₹ 576.
 ---
 subject: Mathematics
 topic: Averages
@@ -1235,7 +1235,7 @@ option b: 30
 option c: 32
 option d: 28
 correct: A
-explanation: తొలగించిన సంఖ్య = (5 సంఖ్యల మొత్తం) - (4 సంఖ్యల మొత్తం) = $(5 \times 27) - (4 \times 25) = 135 - 100 = 35$.
+explanation: తొలగించిన సంఖ్య = (5 సంఖ్యల మొత్తం) - (4 సంఖ్యల మొత్తం) = (5 \times 27) - (4 \times 25) = 135 - 100 = 35.
 ---
 subject: Mathematics
 topic: Triangle Angles
@@ -1243,12 +1243,12 @@ difficulty: Hard
 marks: 1
 year: 2026
 question: త్రిభుజం ABC లో \angle A = 2\angle B మరియు \angle C = 3\angle B అయితే \angle A, \angle B, \angle C ల విలువల వరుస క్రమం:
-option a: 60^\circ, 30^\circ, 90^\circ
-option b: 30^\circ, 60^\circ, 90^\circ
-option c: 45^\circ, 45^\circ, 90^\circ
-option d: 80^\circ, 40^\circ, 60^\circ
+option a: 60°, 30°, 90°
+option b: 30°, 60°, 90°
+option c: 45°, 45°, 90°
+option d: 80°, 40°, 60°
 correct: A
-explanation: $\angle A + \angle B + \angle C = 180^\circ \implies 2B + B + 3B = 180^\circ \implies 6B = 180^\circ \implies B = 30^\circ$. $A = 60^\circ, C = 90^\circ$.
+explanation: \angle A + \angle B + \angle C = 180° => 2B + B + 3B = 180° => 6B = 180° => B = 30°. A = 60°, C = 90°.
 ---
 subject: Mathematics
 topic: Mensuration
@@ -1256,38 +1256,38 @@ difficulty: Hard
 marks: 1
 year: 2026
 question: ఒక స్థూపం (Cylinder) యొక్క వ్యాసార్థం r = 7 cm మరియు ఎత్తు h = 10 cm అయిన దాని సంపూర్ణ తల వైశాల్యం ఎంత?
-option a: 748 \text{ cm}^2
-option b: 440 \text{ cm}^2
-option c: 1540 \text{ cm}^2
-option d: 616 \text{ cm}^2
+option a: 748 cm²
+option b: 440 cm²
+option c: 1540 cm²
+option d: 616 cm²
 correct: A
-explanation: $TSA = 2\pi r(r + h) = 2 \times \frac{22}{7} \times 7 \times (7 + 10) = 44 \times 17 = 748 \text{ cm}^2$.
+explanation: TSA = 2π r(r + h) = 2 \times 22/7 \times 7 \times (7 + 10) = 44 \times 17 = 748 cm².
 ---
 subject: Mathematics
 topic: Exponents
 difficulty: Hard
 marks: 1
 year: 2026
-question: \left(\frac{81}{16}\right)^{-\frac{3}{4}} విలువను గణించండి:
-option a: \frac{8}{27}
-option b: \frac{27}{8}
-option c: -\frac{8}{27}
-option d: \frac{9}{4}
+question: \left(81/16\right)^{-3/4} విలువను గణించండి:
+option a: 8/27
+option b: 27/8
+option c: -8/27
+option d: 9/4
 correct: A
-explanation: $\left(\frac{81}{16}\right)^{-3/4} = \left(\frac{16}{81}\right)^{3/4} = \left((\frac{2}{3})^4\right)^{3/4} = (\frac{2}{3})^3 = \frac{8}{27}$.
+explanation: \left(81/16\right)^{-3/4} = \left(16/81\right)^{3/4} = \left((2/3)^4\right)^{3/4} = (2/3)³ = 8/27.
 ---
 subject: Mathematics
 topic: Mensuration Cube
 difficulty: Hard
 marks: 1
 year: 2026
-question: ఒక ఘనం (Cube) యొక్క ఘనపరిమాణము 343 \text{ cm}^3$ అయితే దాని ప్రక్కతల వైశాల్యం (Lateral Surface Area) ఎంత?
-option a: 196 \text{ cm}^2
-option b: 294 \text{ cm}^2
-option c: 49 \text{ cm}^2
-option d: 144 \text{ cm}^2
+question: ఒక ఘనం (Cube) యొక్క ఘనపరిమాణము 343 cm³ అయితే దాని ప్రక్కతల వైశాల్యం (Lateral Surface Area) ఎంత?
+option a: 196 cm²
+option b: 294 cm²
+option c: 49 cm²
+option d: 144 cm²
 correct: A
-explanation: భుజం $a = \sqrt[3]{343} = 7 \text{ cm}$. ప్రక్కతల వైశాల్యం $LSA = 4a^2 = 4 \times 49 = 196 \text{ cm}^2$.
+explanation: భుజం a = \sqrt[3]{343} = 7 cm. ప్రక్కతల వైశాల్యం LSA = 4a² = 4 \times 49 = 196 cm².
 ---
 subject: Mathematics
 topic: Statistics Bounds
@@ -1297,10 +1297,10 @@ year: 2026
 question: ఒక పౌనఃపున్య విభాజనంలో (Frequency Distribution) వర్గ మధ్య విలువ m మరియు ఎగువ హద్దు u అయితే దిగువ హద్దు l విలువ ఎంత?
 option a: 2m - u
 option b: m - u
-option c: \frac{m+u}{2}
+option c: m+u/2
 option d: 2u - m
 correct: A
-explanation: వర్గ మధ్య విలువ $m = \frac{l+u}{2} \implies 2m = l + u \implies l = 2m - u$.
+explanation: వర్గ మధ్య విలువ m = l+u/2 => 2m = l + u => l = 2m - u.
 ---
 subject: Mathematics
 topic: Compound Interest
@@ -1313,7 +1313,7 @@ option b: 20%
 option c: 5%
 option d: 12%
 correct: A
-explanation: $A = P(1 + \frac{R}{100})^2 \implies 1.21 = (1 + \frac{R}{100})^2 \implies 1.1 = 1 + \frac{R}{100} \implies R = 10\%$.
+explanation: A = P(1 + R/100)² => 1.21 = (1 + R/100)² => 1.1 = 1 + R/100 => R = 10\%.
 ---
 subject: Mathematics
 topic: Geometry Lines
@@ -1322,8 +1322,8 @@ marks: 1
 year: 2026
 question: రెండు సమాంతర రేఖలను ఒక ఛేదనరేఖ ఖండించినప్పుడు ఏర్పడే 'అంతర ఏకాంతర కోణాలు' (Alternate Interior Angles):
 option a: సమానంగా ఉంటాయి
-option b: పూరకాలు (90^\circ)
-option c: సంపూరకాలు (180^\circ)
+option b: పూరకాలు (90°)
+option c: సంపూరకాలు (180°)
 option d: సంబంధం ఉండదు
 correct: A
 explanation: సమాంతర రేఖలను ఛేదనరేఖ ఖండించినప్పుడు ఏర్పడే ఏకాంతర అంతరకోణాలు ఎప్పుడూ సమానంగానే ఉంటాయి.
@@ -1333,26 +1333,26 @@ topic: Algebra Identity
 difficulty: Hard
 marks: 1
 year: 2026
-question: a + b + c = 9 మరియు ab + bc + ca = 26 అయితే a^2 + b^2 + c^2 విలువ ఎంత?
+question: a + b + c = 9 మరియు ab + bc + ca = 26 అయితే a² + b² + c² విలువ ఎంత?
 option a: 29
 option b: 31
 option c: 81
 option d: 55
 correct: A
-explanation: $(a+b+c)^2 = a^2+b^2+c^2 + 2(ab+bc+ca) \implies 9^2 = x + 2(26) \implies 81 = x + 52 \implies x = 29$.
+explanation: (a+b+c)² = a²+b²+c² + 2(ab+bc+ca) => 9² = x + 2(26) => 81 = x + 52 => x = 29.
 ---
 subject: Mathematics
 topic: Equilateral Triangle
 difficulty: Hard
 marks: 1
 year: 2026
-question: ఒక సమబాహు త్రిభుజం వైశాల్యం 9\sqrt{3} \text{ cm}^2$ అయితే దాని చుట్టుకొలత ఎంత?
+question: ఒక సమబాహు త్రిభుజం వైశాల్యం 9√3 cm² అయితే దాని చుట్టుకొలత ఎంత?
 option a: 18 cm
 option b: 12 cm
 option c: 24 cm
 option d: 6 cm
 correct: A
-explanation: వైశాల్యం $\frac{\sqrt{3}}{4} a^2 = 9\sqrt{3} \implies a^2 = 36 \implies a = 6 \text{ cm}$. చుట్టుకొలత = $3a = 18 \text{ cm}$.
+explanation: వైశాల్యం \frac{√3}{4} a² = 9√3 => a² = 36 => a = 6 cm. చుట్టుకొలత = 3a = 18 cm.
 ---
 subject: Mathematics
 topic: Prime Numbers
@@ -1373,12 +1373,12 @@ difficulty: Hard
 marks: 1
 year: 2026
 question: A ఒక పనిని 12 రోజుల్లో పూర్తి చేయగలడు. B యొక్క సామర్థ్యం A కంటే 60% ఎక్కువ. B ఒక్కడే ఆ పనిని ఎన్ని రోజుల్లో పూర్తి చేయగలడు?
-option a: 7.5 రోజులు (7\frac{1}{2})
+option a: 7.5 రోజులు (71/2)
 option b: 8 రోజులు
 option c: 9 రోజులు
 option d: 10 రోజులు
 correct: A
-explanation: A సామర్థ్యం 1/12. B సామర్థ్యం = $\frac{1}{12} \times 1.6 = \frac{1.6}{12} = \frac{16}{120} = \frac{2}{15} \implies$ రోజులు = 7.5 రోజులు.
+explanation: A సామర్థ్యం 1/12. B సామర్థ్యం = 1/12 \times 1.6 = 1.6/12 = 16/120 = 2/15 => రోజులు = 7.5 రోజులు.
 ---
 subject: Mathematics
 topic: Circle Area
@@ -1391,7 +1391,7 @@ option b: 3:4
 option c: 27:64
 option d: 81:256
 correct: A
-explanation: వృత్త వైశాల్యం $A \propto r^2$. వైశాల్యాల నిష్పత్తి $r_1^2 : r_2^2 = 3^2 : 4^2 = 9 : 16$.
+explanation: వృత్త వైశాల్యం A ∝ r². వైశాల్యాల నిష్పత్తి r_1² : r_2² = 3² : 4² = 9 : 16.
 ---
 subject: Mathematics
 topic: LCM HCF
@@ -1404,7 +1404,7 @@ option b: 108
 option c: 81
 option d: 36
 correct: A
-explanation: సంఖ్యలు $x+y=45, x-y=9 \implies x=27, y=18$. వాటి కసాగు $LCM(27, 18) = 54$.
+explanation: సంఖ్యలు x+y=45, x-y=9 => x=27, y=18. వాటి కసాగు LCM(27, 18) = 54.
 ---
 subject: Mathematics
 topic: Pythagoras Theorem
@@ -1417,20 +1417,20 @@ option b: 20 సెం.మీ
 option c: 18 సెం.మీ
 option d: 15 సెం.మీ
 correct: A
-explanation: మూడవ భుజం = $\sqrt{25^2 - 7^2} = \sqrt{625 - 49} = \sqrt{576} = 24 \text{ cm}$.
+explanation: మూడవ భుజం = √25² - 7² = √625 - 49 = √576 = 24 cm.
 ---
 subject: Mathematics
 topic: Algebra
 difficulty: Hard
 marks: 1
 year: 2026
-question: \sqrt{1+\frac{27}{169}} = 1 + \frac{x}{13} అయితే x విలువ ఎంత?
+question: √1+27/169 = 1 + x/13 అయితే x విలువ ఎంత?
 option a: 1
 option b: 3
 option c: 5
 option d: 7
 correct: A
-explanation: $\sqrt{\frac{169+27}{169}} = \sqrt{\frac{196}{169}} = \frac{14}{13} = 1 + \frac{1}{13} \implies x = 1$.
+explanation: √169+27/169 = √196/169 = 14/13 = 1 + 1/13 => x = 1.
 ---
 subject: Mathematics
 topic: Number Systems
@@ -1450,13 +1450,13 @@ topic: Polygons
 difficulty: Hard
 marks: 1
 year: 2026
-question: ఒక బహుభుజిలోని అంతర కోణాల మొత్తం 1080^\circ అయితే ఆ బహుభుజిలోని భుజాల సంఖ్య ఎంత?
+question: ఒక బహుభుజిలోని అంతర కోణాల మొత్తం 1080° అయితే ఆ బహుభుజిలోని భుజాల సంఖ్య ఎంత?
 option a: 8
 option b: 6
 option c: 10
 option d: 12
 correct: A
-explanation: $(n-2) \times 180^\circ = 1080^\circ \implies n-2 = 6 \implies n = 8$.
+explanation: (n-2) \times 180° = 1080° => n-2 = 6 => n = 8.
 ---
 subject: Mathematics
 topic: Probability
@@ -1464,12 +1464,12 @@ difficulty: Hard
 marks: 1
 year: 2026
 question: ఒక పెట్టెలో 4 ఎర్రటి, 5 నల్లటి, 6 తెల్లటి బంతులు ఉన్నాయి. యాదృచ్ఛికంగా ఒక బంతిని తీస్తే అది 'తెల్లటి బంతి' అయ్యే సంభావ్యత (Probability) ఎంత?
-option a: \frac{2}{5}
-option b: \frac{1}{3}
-option c: \frac{4}{15}
-option d: \frac{6}{11}
+option a: 2/5
+option b: 1/3
+option c: 4/15
+option d: 6/11
 correct: A
-explanation: మొత్తం బంతులు = $4+5+6 = 15$. తెల్లటి బంతులు = 6. సంభావ్యత = $\frac{6}{15} = \frac{2}{5}$.
+explanation: మొత్తం బంతులు = 4+5+6 = 15. తెల్లటి బంతులు = 6. సంభావ్యత = 6/15 = 2/5.
 ---
 subject: Mathematics
 topic: Cone Geometry
@@ -1482,7 +1482,7 @@ option b: 7 సెం.మీ
 option c: 6 సెం.మీ
 option d: 25 సెం.మీ
 correct: A
-explanation: $l = \sqrt{r^2 + h^2} = \sqrt{3^2 + 4^2} = \sqrt{25} = 5 \text{ cm}$.
+explanation: l = √r² + h² = √3² + 4² = √25 = 5 cm.
 ---
 subject: Mathematics
 topic: Ramanujan

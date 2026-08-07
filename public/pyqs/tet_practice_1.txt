@@ -1177,39 +1177,39 @@ topic: Decimals
 difficulty: Hard
 marks: 1
 year: 2026
-question: $0.\overline{7} + 0.\overline{3}$ విలువ ఎంత?
-option a: \frac{10}{9}
+question: 0.777... + 0.333... విలువ ఎంత?
+option a: 10/9
 option b: 1.0
-option c: \frac{73}{99}
-option d: \frac{1}{9}
+option c: 73/99
+option d: 1/9
 correct: A
-explanation: $0.\overline{7} = \frac{7}{9}$ మరియు $0.\overline{3} = \frac{3}{9}$. వాటి మొత్తం $\frac{7}{9} + \frac{3}{9} = \frac{10}{9}$.
+explanation: 0.777... = 7/9 మరియు 0.333... = 3/9. వాటి మొత్తం 7/9 + 3/9 = 10/9.
 ---
 subject: Mathematics
 topic: HCF LCM
 difficulty: Hard
 marks: 1
 year: 2026
-question: మూడు సంఖ్యలు $2:3:4$ నిష్పత్తిలో ఉన్నాయి. వాటి గ.సా.భా 12 అయితే ఆ సంఖ్యలలో అత్యంత పెద్ద సంఖ్య ఏది?
+question: మూడు సంఖ్యలు 2:3:4 నిష్పత్తిలో ఉన్నాయి. వాటి గ.సా.భా 12 అయితే ఆ సంఖ్యలలో అత్యంత పెద్ద సంఖ్య ఏది?
 option a: 48
 option b: 36
 option c: 24
 option d: 60
 correct: A
-explanation: సంఖ్యలు $2x, 3x, 4x$ అనుకుంటే వాటి గసాభా $x = 12$. పెద్ద సంఖ్య $4x = 4 \times 12 = 48$.
+explanation: సంఖ్యలు 2x, 3x, 4x అనుకుంటే వాటి గసాభా x = 12. పెద్ద సంఖ్య 4x = 4 \times 12 = 48.
 ---
 subject: Mathematics
 topic: Geometry
 difficulty: Hard
 marks: 1
 year: 2026
-question: ఒక చతురస్రం వైశాల్యం $144 \text{ cm}^2$ అయితే దాని కర్ణం (Diagonal) పొడవు ఎంత?
-option a: 12\sqrt{2} \text{ cm}
-option b: 12 \text{ cm}
-option c: 24 \text{ cm}
-option d: 6\sqrt{2} \text{ cm}
+question: ఒక చతురస్రం వైశాల్యం 144 cm² అయితే దాని కర్ణం (Diagonal) పొడవు ఎంత?
+option a: 12√2 cm
+option b: 12 cm
+option c: 24 cm
+option d: 6√2 cm
 correct: A
-explanation: చతురస్ర భుజం $a = \sqrt{144} = 12 \text{ cm}$. కర్ణం $d = a\sqrt{2} = 12\sqrt{2} \text{ cm}$.
+explanation: చతురస్ర భుజం a = √144 = 12 cm. కర్ణం d = a√2 = 12√2 cm.
 ---
 subject: Mathematics
 topic: Percentage Discount
@@ -1222,7 +1222,7 @@ option b: ₹ 950
 option c: ₹ 1050
 option d: ₹ 1100
 correct: A
-explanation: ప్రకటిత వెల $x$ అనుకుంటే, $88\% \text{ of } x = 880 \implies x = 1000$.
+explanation: ప్రకటిత వెల x అనుకుంటే, 88\% of x = 880 => x = 1000.
 ---
 subject: Mathematics
 topic: Averages
@@ -1235,7 +1235,7 @@ option b: 15
 option c: 45
 option d: 12
 correct: A
-explanation: ప్రతి రాశికి నిర్దిష్ట సంఖ్య కలిపితే సగటు కూడా అంతే సంఖ్య పెరుగుతుంది. $15 + 3 = 18$.
+explanation: ప్రతి రాశికి నిర్దిష్ట సంఖ్య కలిపితే సగటు కూడా అంతే సంఖ్య పెరుగుతుంది. 15 + 3 = 18.
 ---
 subject: Mathematics
 topic: Circle Tangents
@@ -1255,39 +1255,39 @@ topic: Mensuration
 difficulty: Hard
 marks: 1
 year: 2026
-question: 14 cm వ్యాసార్థం గల అర్ధగోళం (Hemisphere) యొక్క సంపూర్ణ తల వైశాల్యం ఎంత? (సూత్రం: $3\pi r^2$)
-option a: 1848 \text{ cm}^2
-option b: 1232 \text{ cm}^2
-option c: 616 \text{ cm}^2
-option d: 2464 \text{ cm}^2
+question: 14 cm వ్యాసార్థం గల అర్ధగోళం (Hemisphere) యొక్క సంపూర్ణ తల వైశాల్యం ఎంత? (సూత్రం: 3π r²)
+option a: 1848 cm²
+option b: 1232 cm²
+option c: 616 cm²
+option d: 2464 cm²
 correct: A
-explanation: $TSA = 3 \times \frac{22}{7} \times 14 \times 14 = 3 \times 22 \times 28 = 1848 \text{ cm}^2$.
+explanation: TSA = 3 \times 22/7 \times 14 \times 14 = 3 \times 22 \times 28 = 1848 cm².
 ---
 subject: Mathematics
 topic: Quadratic Equations
 difficulty: Hard
 marks: 1
 year: 2026
-question: $x^2 - 5x + 6 = 0$ సమీకరణం యొక్క మూలాలు (Roots):
+question: x² - 5x + 6 = 0 సమీకరణం యొక్క మూలాలు (Roots):
 option a: 2, 3
 option b: -2, -3
 option c: 1, 6
 option d: -1, -6
 correct: A
-explanation: $x^2 - 2x - 3x + 6 = 0 \implies (x-2)(x-3) = 0 \implies x = 2, 3$.
+explanation: x² - 2x - 3x + 6 = 0 => (x-2)(x-3) = 0 => x = 2, 3.
 ---
 subject: Mathematics
 topic: Mensuration
 difficulty: Hard
 marks: 1
 year: 2026
-question: ఒక సమఘనం (Cube) లంబతల వైశాల్యం $256 \text{ cm}^2$ అయితే దాని భుజం పొడవు ఎంత?
+question: ఒక సమఘనం (Cube) లంబతల వైశాల్యం 256 cm² అయితే దాని భుజం పొడవు ఎంత?
 option a: 8 cm
 option b: 16 cm
 option c: 64 cm
 option d: 4 cm
 correct: A
-explanation: లంబతల వైశాల్యం $4a^2 = 256 \implies a^2 = 64 \implies a = 8 \text{ cm}$.
+explanation: లంబతల వైశాల్యం 4a² = 256 => a² = 64 => a = 8 cm.
 ---
 subject: Mathematics
 topic: Statistics Relation
@@ -1295,10 +1295,10 @@ difficulty: Hard
 marks: 1
 year: 2026
 question: అంకమధ్యమం (Mean), బాహుళకం (Mode) మరియు మధ్యగతం (Median) ల మధ్య సంబంధం తెలపే సూత్రం:
-option a: \text{Mode} = 3(\text{Median}) - 2(\text{Mean})
-option b: \text{Mean} = 3(\text{Median}) - 2(\text{Mode})
-option c: \text{Median} = 3(\text{Mode}) - 2(\text{Mean})
-option d: \text{Mode} = 2(\text{Median}) - 3(\text{Mean})
+option a: Mode = 3(Median) - 2(Mean)
+option b: Mean = 3(Median) - 2(Mode)
+option c: Median = 3(Mode) - 2(Mean)
+option d: Mode = 2(Median) - 3(Mean)
 correct: A
 explanation: బాహుళకం = 3(మధ్యగతం) - 2(అంకమధ్యమం) అనేది స్టాటిస్టిక్స్ నిరూపిత అనుభూతి సూత్రం.
 ---
@@ -1313,7 +1313,7 @@ option b: 10%
 option c: 15%
 option d: 8%
 correct: A
-explanation: రెట్టింపు కావాలంటే వడ్డీ $I = P$ కావాలి. $P = \frac{P \times 8 \times R}{100} \implies R = \frac{100}{8} = 12.5\%$.
+explanation: రెట్టింపు కావాలంటే వడ్డీ I = P కావాలి. P = P \times 8 \times R/100 => R = 100/8 = 12.5\%.
 ---
 subject: Mathematics
 topic: Exterior Angles
@@ -1321,10 +1321,10 @@ difficulty: Hard
 marks: 1
 year: 2026
 question: త్రిభుజంలోని మూడు బాహ్య కోణాల మొత్తం ఎంత?
-option a: 360^\circ
-option b: 180^\circ
-option c: 540^\circ
-option d: 720^\circ
+option a: 360°
+option b: 180°
+option c: 540°
+option d: 720°
 correct: A
 explanation: ఏ బహుభుజిలోనైనా సరే అన్ని బాహ్యకోణాల మొత్తం ఎల్లప్పుడూ 360 డిగ్రీలు ఉంటుంది.
 ---
@@ -1333,13 +1333,13 @@ topic: Algebra Expansion
 difficulty: Hard
 marks: 1
 year: 2026
-question: $(x + y)^3 - (x - y)^3$ ను విస్తరించగా వచ్చు సమాసము:
-option a: 2y(3x^2 + y^2)
-option b: 2x(x^2 + 3y^2)
+question: (x + y)³ - (x - y)³ ను విస్తరించగా వచ్చు సమాసము:
+option a: 2y(3x² + y²)
+option b: 2x(x² + 3y²)
 option c: 6xy
-option d: 2y^3
+option d: 2y³
 correct: A
-explanation: $(x^3+3x^2y+3xy^2+y^3) - (x^3-3x^2y+3xy^2-y^3) = 6x^2y + 2y^3 = 2y(3x^2+y^2)$.
+explanation: (x³+3x²y+3xy²+y³) - (x³-3x²y+3xy²-y³) = 6x²y + 2y³ = 2y(3x²+y²).
 ---
 subject: Mathematics
 topic: Triangle Area
@@ -1347,12 +1347,12 @@ difficulty: Hard
 marks: 1
 year: 2026
 question: త్రిభుజం భూమి 10 సెం.మీ మరియు ఎత్తు 6 సెం.మీ అయిన దాని వైశాల్యం ఎంత?
-option a: 30 \text{ cm}^2
-option b: 60 \text{ cm}^2
-option c: 15 \text{ cm}^2
-option d: 45 \text{ cm}^2
+option a: 30 cm²
+option b: 60 cm²
+option c: 15 cm²
+option d: 45 cm²
 correct: A
-explanation: వైశాల్యం $A = \frac{1}{2} \times \text{base} \times \text{height} = \frac{1}{2} \times 10 \times 6 = 30 \text{ cm}^2$.
+explanation: వైశాల్యం A = 1/2 \times base \times height = 1/2 \times 10 \times 6 = 30 cm².
 ---
 subject: Mathematics
 topic: Co-primes HCF
@@ -1378,20 +1378,20 @@ option b: 12 రోజులు
 option c: 20 రోజులు
 option d: 18 రోజులు
 correct: A
-explanation: B సామర్థ్యం $\frac{1}{B} = \frac{1}{6} - \frac{1}{10} = \frac{5-3}{30} = \frac{2}{30} = \frac{1}{15} \implies 15 \text{ days}$.
+explanation: B సామర్థ్యం 1/B = 1/6 - 1/10 = 5-3/30 = 2/30 = 1/15 => 15 days.
 ---
 subject: Mathematics
 topic: Square Root
 difficulty: Hard
 marks: 1
 year: 2026
-question: వర్గమూలం \sqrt{0.000064} విలువ ఎంత?
+question: వర్గమూలం √0.000064 విలువ ఎంత?
 option a: 0.008
 option b: 0.08
 option c: 0.8
 option d: 0.0008
 correct: A
-explanation: $0.008 \times 0.008 = 0.000064$ కాబట్టి వర్గమూలం 0.008.
+explanation: 0.008 \times 0.008 = 0.000064 కాబట్టి వర్గమూలం 0.008.
 ---
 subject: Mathematics
 topic: Compound Ratio
@@ -1404,7 +1404,7 @@ option b: 12:15
 option c: 8:35
 option d: 1:1
 correct: A
-explanation: బహుళ నిష్పత్తి = పూర్వపదాల లబ్ధం : పరపదాల లబ్ధం = $(2 \times 4 \times 6) : (3 \times 5 \times 7) = 48 : 105 = 16 : 35$.
+explanation: బహుళ నిష్పత్తి = పూర్వపదాల లబ్ధం : పరపదాల లబ్ధం = (2 \times 4 \times 6) : (3 \times 5 \times 7) = 48 : 105 = 16 : 35.
 ---
 subject: Mathematics
 topic: Sphere Volume
@@ -1412,25 +1412,25 @@ difficulty: Hard
 marks: 1
 year: 2026
 question: ఒక గోళం (Sphere) వ్యాసార్థం సగానికి తగ్గించబడితే, దాని ఘనపరిమాణంలో వచ్చే మార్పు:
-option a: \frac{1}{8} వంతు అవుతుంది
+option a: 1/8 వంతు అవుతుంది
 option b: సగం అవుతుంది
-option c: \frac{1}{4} వంతు అవుతుంది
+option c: 1/4 వంతు అవుతుంది
 option d: 4 రెట్లు పెరుగుతుంది
 correct: A
-explanation: ఘనపరిమాణం $V \propto r^3$. వ్యాసార్థం సగం ($\frac{1}{2}$) అయితే ఘనపరిమాణం $(\frac{1}{2})^3 = \frac{1}{8}$ వంతు అవుతుంది.
+explanation: ఘనపరిమాణం V ∝ r³. వ్యాసార్థం సగం (1/2) అయితే ఘనపరిమాణం (1/2)³ = 1/8 వంతు అవుతుంది.
 ---
 subject: Mathematics
 topic: Algebra
 difficulty: Hard
 marks: 1
 year: 2026
-question: x^2 - y^2 = 36 మరియు x - y = 4 అయితే x + y విలువ ఎంత?
+question: x² - y² = 36 మరియు x - y = 4 అయితే x + y విలువ ఎంత?
 option a: 9
 option b: 6
 option c: 12
 option d: 18
 correct: A
-explanation: $x^2-y^2 = (x-y)(x+y) \implies 36 = 4 \times (x+y) \implies x+y = 9$.
+explanation: x²-y² = (x-y)(x+y) => 36 = 4 \times (x+y) => x+y = 9.
 ---
 subject: Mathematics
 topic: Pythagorean Triplet
@@ -1443,20 +1443,20 @@ option b: (3, 4, 5)
 option c: (5, 12, 13)
 option d: (8, 15, 17)
 correct: A
-explanation: $5^2+7^2 = 25+49 = 74 \neq 9^2 (81)$. కావున (5, 7, 9) పైథాగరియన్ త్రికం కాదు.
+explanation: 5²+7² = 25+49 = 74 ≠ 9² (81). కావున (5, 7, 9) పైథాగరియన్ త్రికం కాదు.
 ---
 subject: Mathematics
 topic: Polygons
 difficulty: Hard
 marks: 1
 year: 2026
-question: ఒక సమబహుభుజిలో అంతర కోణం 144^\circ అయితే దాని భుజాల సంఖ్య ఎంత?
+question: ఒక సమబహుభుజిలో అంతర కోణం 144° అయితే దాని భుజాల సంఖ్య ఎంత?
 option a: 10
 option b: 8
 option c: 12
 option d: 6
 correct: A
-explanation: బాహ్యకోణం = $180^\circ - 144^\circ = 36^\circ$. భుజాల సంఖ్య $n = \frac{360^\circ}{36^\circ} = 10$.
+explanation: బాహ్యకోణం = 180° - 144° = 36°. భుజాల సంఖ్య n = 360°/36° = 10.
 ---
 subject: Mathematics
 topic: Probability
@@ -1464,9 +1464,9 @@ difficulty: Hard
 marks: 1
 year: 2026
 question: నాణేన్ని రెండుసార్లు ఎగురవేసినప్పుడు రెండు సార్లూ 'బొమ్మ' (Heads) పడే సంభావ్యత ఎంత?
-option a: \frac{1}{4}
-option b: \frac{1}{2}
-option c: \frac{3}{4}
+option a: 1/4
+option b: 1/2
+option c: 3/4
 option d: 1
 correct: A
 explanation: మొత్తం పర్యవసానాలు S = {HH, HT, TH, TT} = 4. అనుకూల పర్యవసానాలు E = {HH} = 1. సంభావ్యత = 1/4.
@@ -1477,12 +1477,12 @@ difficulty: Hard
 marks: 1
 year: 2026
 question: శంకువు వైశాల్యంలో ఏటవాలు ఎత్తు l, వ్యాసార్థం r, ఎత్తు h ల మధ్య సంబంధం:
-option a: l = \sqrt{r^2 + h^2}
-option b: h = \sqrt{r^2 + l^2}
+option a: l = √r² + h²
+option b: h = √r² + l²
 option c: r = l + h
-option d: l^2 = r + h
+option d: l² = r + h
 correct: A
-explanation: శంకువు ఒక లంబకోణ త్రిభుజం రూపంలో పిచ్ అవుతుంది కాబట్టి కర్ణం $l = \sqrt{r^2 + h^2}$.
+explanation: శంకువు ఒక లంబకోణ త్రిభుజం రూపంలో పిచ్ అవుతుంది కాబట్టి కర్ణం l = √r² + h².
 ---
 subject: Mathematics
 topic: History of Zero

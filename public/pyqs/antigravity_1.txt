@@ -1173,13 +1173,13 @@ topic: Number Systems
 difficulty: Hard
 marks: 1
 year: 2026
-question: గణించండి: $0.\overline{7} + 0.\overline{3}$ విలువ ఎంత?
-option a: \frac{10}{9}
+question: గణించండి: 0.777... + 0.333... విలువ ఎంత?
+option a: 10/9
 option b: 1.0
-option c: \frac{73}{99}
-option d: \frac{1}{9}
+option c: 73/99
+option d: 1/9
 correct: A
-explanation: Let $x = 0.777... = 7/9$ and $y = 0.333... = 3/9$. Thus $x + y = 7/9 + 3/9 = 10/9$.
+explanation: Let x = 0.777... = 7/9 and y = 0.333... = 3/9. Thus x + y = 7/9 + 3/9 = 10/9.
 ---
 subject: Mathematics (91-120)
 topic: Mensuration
@@ -1192,33 +1192,33 @@ option b: 150% పెరగడం
 option c: 125% పెరగడం
 option d: 337.5% పెరగడం
 correct: A
-explanation: Volume $V = \pi r^2 h$. New $V' = \pi (1.5r)^2 (1.5h) = 3.375 V$. Growth is $3.375 - 1 = 2.375$ or $237.5\%$.
+explanation: Volume V = π r² h. New V' = π (1.5r)² (1.5h) = 3.375 V. Growth is 3.375 - 1 = 2.375 or 237.5\%.
 ---
 subject: Mathematics (91-120)
 topic: Geometry
 difficulty: Hard
 marks: 1
 year: 2026
-question: ఒక క్రమ బహుభుజిలో (Regular Polygon) ఒక్కొక్క అంతరకోణం $144^\circ$ అయితే ఆ బహుభుజిలోని భుజాల సంఖ్య ఎంత?
+question: ఒక క్రమ బహుభుజిలో (Regular Polygon) ఒక్కొక్క అంతరకోణం 144° అయితే ఆ బహుభుజిలోని భుజాల సంఖ్య ఎంత?
 option a: 10
 option b: 8
 option c: 12
 option d: 6
 correct: A
-explanation: Exterior angle = $180^\circ - 144^\circ = 36^\circ$. Number of sides $n = 360^\circ / 36^\circ = 10$.
+explanation: Exterior angle = 180° - 144° = 36°. Number of sides n = 360° / 36° = 10.
 ---
 subject: Mathematics (91-120)
 topic: Algebra
 difficulty: Hard
 marks: 1
 year: 2026
-question: ($a + b + c = 12$) మరియు ($a^2 + b^2 + c^2 = 50$) అయితే ($ab + bc + ca$) విలువ ఎంత?
+question: (a + b + c = 12) మరియు (a² + b² + c² = 50) అయితే (ab + bc + ca) విలువ ఎంత?
 option a: 47
 option b: 94
 option c: 22
 option d: 36
 correct: A
-explanation: Using formula $(a+b+c)^2 = a^2+b^2+c^2 + 2(ab+bc+ca) \implies 144 = 50 + 2x \implies 2x = 94 \implies x = 47$.
+explanation: Using formula (a+b+c)² = a²+b²+c² + 2(ab+bc+ca) => 144 = 50 + 2x => 2x = 94 => x = 47.
 ---
 subject: Mathematics (91-120)
 topic: Compound Interest
@@ -1231,7 +1231,7 @@ option b: 9 సంవత్సరాలు
 option c: 5 సంవత్సరాలు
 option d: 12 సంవత్సరాలు
 correct: A
-explanation: If $P$ becomes $3P$ in 3 years, then it becomes $3 \times 3P = 9P$ in $3 + 3 = 6$ years.
+explanation: If P becomes 3P in 3 years, then it becomes 3 \times 3P = 9P in 3 + 3 = 6 years.
 ---
 subject: Mathematics (91-120)
 topic: Math Pedagogy
