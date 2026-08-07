@@ -298,6 +298,44 @@ export const PyqMocks = {
               <button class="start-tet-mock-btn px-4 py-2.5 rounded-xl bg-emerald-600 text-white text-[11px] font-extrabold shadow-md active:scale-95 transition-all text-center" data-file="ap_tet_medium.txt" data-name="AP TET Medium Paper">
                 Start Mock
               </button>
+          </div>
+
+          <!-- TET Mock Card 5 -->
+          <div class="glass-card p-6 rounded-3xl border border-slate-200/60 dark:border-white/[0.08] relative overflow-hidden flex flex-col justify-between hover:border-emerald-500/30 dark:hover:border-emerald-500/20 hover:shadow-lg transition-all duration-300 group">
+            <div class="absolute -right-10 -top-10 w-24 h-24 bg-emerald-500/5 rounded-full blur-xl group-hover:bg-emerald-500/10 transition-all pointer-events-none"></div>
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-[10px] font-bold text-emerald-500 uppercase tracking-wider">AP TET Paper 1A</span>
+                <span class="px-2 py-0.5 rounded-full text-[9px] font-bold bg-emerald-500/10 text-emerald-500 border border-emerald-500/20"><i class="fa-solid fa-circle-play mr-1"></i> Ready</span>
+              </div>
+              <div class="flex items-center gap-3.5 mb-4">
+                <div class="h-11 w-11 rounded-2xl bg-gradient-to-tr from-emerald-500/15 to-teal-500/15 text-emerald-500 flex items-center justify-center text-lg flex-shrink-0 shadow-sm">
+                  <i class="fa-solid fa-file-signature"></i>
+                </div>
+                <div>
+                  <h4 class="font-display font-extrabold text-base text-slate-900 dark:text-white leading-tight">Model Paper 4 (Very Hard)</h4>
+                  <p class="text-[10px] text-slate-450 dark:text-slate-400 mt-0.5 font-semibold">TET Practice 5 (Very Hard)</p>
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-2 text-[10px] font-extrabold text-slate-505 dark:text-slate-400 bg-slate-50/50 dark:bg-slate-950/20 p-3 rounded-2xl border border-slate-100 dark:border-white/5 mb-5">
+                <div class="flex items-center gap-1.5">
+                  <i class="fa-solid fa-circle-question text-emerald-500 text-xs"></i>
+                  <span>150 Questions</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <i class="fa-solid fa-award text-teal-500 text-xs"></i>
+                  <span>150 Marks</span>
+                </div>
+                <div class="flex items-center gap-1.5 col-span-2">
+                  <i class="fa-regular fa-clock text-slate-400 text-xs"></i>
+                  <span>150 Minutes (No Negatives)</span>
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-1">
+              <button class="start-tet-mock-btn px-4 py-2.5 rounded-xl bg-emerald-600 text-white text-[11px] font-extrabold shadow-md active:scale-95 transition-all text-center" data-file="ap_tet_very_hard.txt" data-name="AP TET Model Paper 4 (Very Hard)">
+                Start Mock
+              </button>
             </div>
           </div>
           
