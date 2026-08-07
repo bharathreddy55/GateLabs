@@ -1348,9 +1348,12 @@ export const MockTest = {
           score += q.marks;
         } else {
           wrongCount++;
-          const deduction = q.marks / 3.0;
-          negativeMarks += deduction;
-          score -= deduction;
+          const isTET = (this.selectedSubject || '').toUpperCase().includes('TET');
+          if (!isTET) {
+            const deduction = q.marks / 3.0;
+            negativeMarks += deduction;
+            score -= deduction;
+          }
 
           mistakes.push({
             questionId: q.id,

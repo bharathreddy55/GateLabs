@@ -14,6 +14,7 @@ import { About } from './pages/About';
 import { Formulas } from './pages/Formulas';
 import { PyqMocks } from './pages/PyqMocks';
 import { Community } from './pages/Community';
+import { TetExams } from './pages/TetExams';
 
 // Import Layout Component
 import { Layout } from './components/Layout';
@@ -36,6 +37,7 @@ const routes = {
   '/mock-test': { component: MockTest, requiresAuth: true, name: 'mock-test' },
   '/pyq-mocks': { component: PyqMocks, requiresAuth: true, name: 'pyq-mocks' },
   '/community': { component: Community, requiresAuth: true, name: 'community' },
+  '/tet-exams': { component: TetExams, requiresAuth: true, name: 'tet-exams' },
   '/analytics': { component: Analytics, requiresAuth: true, name: 'analytics' }
 };
 

@@ -64,6 +64,9 @@ export const Layout = {
             <a href="#/community" class="${getLinkClass('community')}">
               <i class="fa-solid fa-users text-sm w-5 text-center"></i> Community Hub
             </a>
+            <a href="#/tet-exams" class="${getLinkClass('tet-exams')}">
+              <i class="fa-solid fa-chalkboard-user text-sm w-5 text-center"></i> TET Exams
+            </a>
             <a href="#/formulas" class="${getLinkClass('formulas')}">
               <i class="fa-solid fa-book-bookmark text-sm w-5 text-center"></i> Formula Deck
             </a>
