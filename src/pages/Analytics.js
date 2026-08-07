@@ -6,6 +6,7 @@ export const Analytics = {
   viewMode: 'list',        // 'list' | 'detail'
   activeAttemptId: null,
   selectedSubjectFilter: '',
+  activeReviewFilter: 'all',
 
   async render() {
     // Support deep-link: #/analytics?id=<attemptId>
@@ -368,94 +369,175 @@ export const Analytics = {
         </div>
         ` : ''}
 
-        <!-- Mistakes List -->
-        <div>
-          <h4 class="font-display font-bold text-lg text-slate-900 dark:text-white mb-4">
+        <!-- Focus Advice Card -->
+        ${this.generateFocusAdvice(att)}
+
+        <!-- Question review filter bar -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mt-2">
+          <h4 class="font-display font-bold text-base text-slate-900 dark:text-white">
             <i class="fa-solid fa-magnifying-glass-chart mr-2 text-rose-500"></i>
-            Question-by-Question Analysis
-            <span class="text-sm font-normal text-slate-400 ml-2">(${att.mistakes?.length || 0} mistake${att.mistakes?.length !== 1 ? 's' : ''})</span>
+            Question-by-Question Review
           </h4>
-
-          <div class="flex flex-col gap-5">
-            ${!att.mistakes || att.mistakes.length === 0 ? `
-              <div class="glass-panel p-12 text-center rounded-2xl flex flex-col items-center justify-center">
-                <div class="h-16 w-16 rounded-full bg-emerald-50 dark:bg-emerald-950/20 text-emerald-500 flex items-center justify-center text-2xl mb-4">
-                  <i class="fa-solid fa-trophy"></i>
-                </div>
-                <p class="text-base font-semibold text-slate-700 dark:text-slate-300">Perfect Score! 🎉</p>
-                <p class="text-xs text-slate-400 dark:text-slate-500 mt-1">You correctly answered all questions in this mock test. Exceptional!</p>
-              </div>
-            ` : att.mistakes.map((m, index) => `
-              <div class="glass-panel rounded-2xl overflow-hidden border-l-4 border-l-rose-500">
-                <!-- Question header -->
-                <div class="flex items-center justify-between p-5 pb-3">
-                  <div class="flex items-center gap-2 flex-wrap">
-                    <span class="text-[10px] font-bold text-rose-500 dark:text-rose-400 uppercase tracking-wider">${m.subject} · ${m.topic}</span>
-                    <span class="px-2 py-0.5 text-[10px] font-bold rounded-full ${
-                      m.difficulty?.toLowerCase() === 'easy' ? 'bg-emerald-100 dark:bg-emerald-950/40 text-emerald-600' :
-                      m.difficulty?.toLowerCase() === 'hard' ? 'bg-rose-100 dark:bg-rose-950/40 text-rose-600' :
-                      'bg-amber-100 dark:bg-amber-950/40 text-amber-600'
-                    }">${m.difficulty || 'Medium'}</span>
-                  </div>
-                  <span class="text-[10px] font-bold text-slate-400 bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-lg">Q${index + 1}</span>
-                </div>
-
-                <!-- Question text -->
-                <div class="px-5 pb-4">
-                  <p class="text-sm font-medium text-slate-800 dark:text-slate-200 leading-relaxed whitespace-pre-line">${m.question}</p>
-                </div>
-
-                <!-- Answer comparison -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 px-5 pb-4">
-                  <div class="p-3.5 border border-rose-200 dark:border-rose-900/40 bg-rose-50/30 dark:bg-rose-950/10 rounded-xl">
-                    <span class="block text-[10px] font-bold text-rose-500 uppercase mb-1.5">❌ Your Answer</span>
-                    <p class="font-semibold text-sm text-slate-800 dark:text-slate-200">
-                      ${m.userAnswer >= 0 && m.options?.[m.userAnswer] !== undefined 
-                        ? `${String.fromCharCode(65 + m.userAnswer)}. ${m.options[m.userAnswer]}` 
-                        : 'No answer selected'}
-                    </p>
-                  </div>
-                  <div class="p-3.5 border border-emerald-200 dark:border-emerald-900/40 bg-emerald-50/30 dark:bg-emerald-950/10 rounded-xl">
-                    <span class="block text-[10px] font-bold text-emerald-500 uppercase mb-1.5">✅ Correct Answer</span>
-                    <p class="font-semibold text-sm text-slate-800 dark:text-slate-200">
-                      ${m.options?.[m.correctAnswer] !== undefined 
-                        ? `${String.fromCharCode(65 + m.correctAnswer)}. ${m.options[m.correctAnswer]}` 
-                        : 'N/A'}
-                    </p>
-                  </div>
-                </div>
-
-                <!-- All Options (collapsed) -->
-                <details class="mx-5 mb-3 rounded-xl border border-slate-200/50 dark:border-slate-800/50 overflow-hidden group">
-                  <summary class="p-3 text-xs font-bold cursor-pointer text-slate-600 dark:text-slate-400 flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-800/30 select-none">
-                    <span><i class="fa-solid fa-list mr-1.5"></i>All Options</span>
-                    <i class="fa-solid fa-chevron-down group-open:rotate-180 transition-transform text-slate-400"></i>
-                  </summary>
-                  <div class="p-3 pt-0 bg-white/50 dark:bg-darkbg-50/50 border-t border-slate-200/50 dark:border-slate-800/50">
-                    ${(m.options || []).map((opt, oi) => `
-                      <div class="flex items-start gap-2 py-1.5 text-xs ${oi === m.correctAnswer ? 'text-emerald-600 dark:text-emerald-400 font-semibold' : oi === m.userAnswer ? 'text-rose-500 dark:text-rose-400 line-through' : 'text-slate-600 dark:text-slate-400'}">
-                        <span class="font-bold flex-shrink-0">${String.fromCharCode(65+oi)}.</span>
-                        <span>${opt}</span>
-                        ${oi === m.correctAnswer ? '<i class="fa-solid fa-check ml-auto text-emerald-500 flex-shrink-0"></i>' : ''}
-                        ${oi === m.userAnswer && oi !== m.correctAnswer ? '<i class="fa-solid fa-xmark ml-auto text-rose-400 flex-shrink-0"></i>' : ''}
-                      </div>
-                    `).join('')}
-                  </div>
-                </details>
-
-                <!-- Solution Explanation -->
-                <details class="mx-5 mb-5 rounded-xl border border-primary-200/50 dark:border-primary-900/30 overflow-hidden group" open>
-                  <summary class="p-3 text-xs font-bold cursor-pointer text-primary-700 dark:text-primary-400 flex items-center justify-between hover:bg-primary-50/30 dark:hover:bg-primary-950/20 select-none">
-                    <span><i class="fa-solid fa-circle-info mr-1.5 text-primary-500"></i>Solution & Explanation</span>
-                    <i class="fa-solid fa-chevron-down group-open:rotate-180 transition-transform text-primary-400"></i>
-                  </summary>
-                  <div class="p-4 bg-white/50 dark:bg-darkbg-50/50 border-t border-primary-200/50 dark:border-primary-900/30 text-xs leading-relaxed text-slate-600 dark:text-slate-300">
-                    <p class="whitespace-pre-line">${m.explanation || 'No explanation available.'}</p>
-                  </div>
-                </details>
-              </div>
-            `).join('')}
+          
+          <div class="flex flex-wrap gap-1 bg-slate-100 dark:bg-slate-950/40 p-1 rounded-xl border border-slate-200/20 max-w-max self-start sm:self-auto">
+            ${['all', 'correct', 'incorrect', 'skipped'].map(filter => {
+              const count = filter === 'all' 
+                ? (att.responses ? att.responses.length : (att.correctCount + att.wrongCount + att.skippedCount))
+                : (filter === 'correct' ? att.correctCount : (filter === 'incorrect' ? att.wrongCount : att.skippedCount));
+              const active = this.activeReviewFilter === filter;
+              return `
+                <button class="review-filter-btn px-3 py-1.5 rounded-lg text-[10px] font-bold transition-all select-none cursor-pointer ${
+                  active 
+                    ? 'btn-accent text-white shadow-sm' 
+                    : 'text-slate-500 hover:text-slate-900 dark:hover:text-white'
+                }" data-filter="${filter}">
+                  ${filter.charAt(0).toUpperCase() + filter.slice(1)} (${count})
+                </button>
+              `;
+            }).join('')}
           </div>
+        </div>
+
+        <!-- Question Review Cards Grid -->
+        <div class="flex flex-col gap-5">
+          ${(() => {
+            const listToRender = att.responses || (att.mistakes || []).map(m => ({ ...m, status: 'wrong' }));
+            let filteredList = [...listToRender];
+            if (this.activeReviewFilter === 'correct') {
+              filteredList = filteredList.filter(q => q.status === 'correct');
+            } else if (this.activeReviewFilter === 'incorrect') {
+              filteredList = filteredList.filter(q => q.status === 'wrong');
+            } else if (this.activeReviewFilter === 'skipped') {
+              filteredList = filteredList.filter(q => q.status === 'skipped');
+            }
+
+            if (filteredList.length === 0) {
+              return `
+                <div class="glass-panel p-12 text-center rounded-2xl flex flex-col items-center justify-center border border-slate-250/20 dark:border-white/5">
+                  <i class="fa-regular fa-comment-dots text-slate-400 text-2xl mb-2 block"></i>
+                  <p class="text-xs text-slate-500 font-bold">No questions found in this category.</p>
+                </div>
+              `;
+            }
+
+            return filteredList.map((q, idx) => {
+              const isCorrect = q.status === 'correct';
+              const isSkipped = q.status === 'skipped';
+              const borderClass = isCorrect ? 'border-l-emerald-500' : (isSkipped ? 'border-l-amber-500' : 'border-l-rose-500');
+              const iconHtml = isCorrect 
+                ? '<span class="px-2 py-0.5 rounded-full text-[9px] font-bold bg-emerald-500/10 text-emerald-500 border border-emerald-500/20"><i class="fa-solid fa-circle-check mr-1"></i> Correct</span>'
+                : (isSkipped 
+                    ? '<span class="px-2 py-0.5 rounded-full text-[9px] font-bold bg-amber-500/10 text-amber-500 border border-amber-500/20"><i class="fa-solid fa-circle-minus mr-1"></i> Skipped</span>'
+                    : '<span class="px-2 py-0.5 rounded-full text-[9px] font-bold bg-rose-500/10 text-rose-500 border border-rose-500/20"><i class="fa-solid fa-circle-xmark mr-1"></i> Incorrect</span>'
+                  );
+
+              return `
+                <div class="glass-panel rounded-2xl overflow-hidden border-l-4 ${borderClass} border border-slate-200/50 dark:border-white/[0.04]">
+                  <!-- Card Header -->
+                  <div class="flex items-center justify-between p-5 pb-3">
+                    <div class="flex items-center gap-2 flex-wrap">
+                      <span class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider">${q.subject} &bull; ${q.topic}</span>
+                      <span class="px-2 py-0.5 text-[9px] font-bold rounded-full ${
+                        q.difficulty?.toLowerCase() === 'easy' ? 'bg-emerald-100 dark:bg-emerald-950/40 text-emerald-600' :
+                        q.difficulty?.toLowerCase() === 'hard' ? 'bg-rose-100 dark:bg-rose-950/40 text-rose-600' :
+                        'bg-amber-100 dark:bg-amber-950/40 text-amber-600'
+                      }">${q.difficulty || 'Medium'}</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      ${iconHtml}
+                      <span class="text-[10px] font-bold text-slate-400 bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-lg">Q${idx + 1}</span>
+                    </div>
+                  </div>
+
+                  <!-- Question Text -->
+                  <div class="px-5 pb-4">
+                    <p class="text-sm font-medium text-slate-800 dark:text-slate-200 leading-relaxed whitespace-pre-line">${q.question}</p>
+                  </div>
+
+                  <!-- Answer Comparison -->
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 px-5 pb-4">
+                    <div class="p-3.5 border ${
+                      isSkipped 
+                        ? 'border-amber-200 dark:border-amber-900/40 bg-amber-50/10 dark:bg-amber-950/10' 
+                        : (isCorrect ? 'border-emerald-200 dark:border-emerald-900/40 bg-emerald-50/10 dark:bg-emerald-950/10' : 'border-rose-200 dark:border-rose-900/40 bg-rose-50/10 dark:bg-rose-950/10')
+                    } rounded-xl">
+                      <span class="block text-[9px] font-bold uppercase mb-1.5 ${
+                        isSkipped ? 'text-amber-500' : (isCorrect ? 'text-emerald-500' : 'text-rose-500')
+                      }">${isSkipped ? '⚠️ Skipped' : (isCorrect ? '✅ Your Answer (Correct)' : '❌ Your Answer')}</span>
+                      <p class="font-semibold text-sm text-slate-800 dark:text-slate-200">
+                        ${q.type === 'NAT' 
+                          ? (isSkipped ? 'No input provided' : q.userAnswer)
+                          : (q.type === 'MSQ' 
+                              ? (isSkipped ? 'No options selected' : (Array.isArray(q.userAnswer) ? q.userAnswer.map(o => String.fromCharCode(65 + parseInt(o))).join(', ') : q.userAnswer))
+                              : (q.userAnswer !== undefined && q.userAnswer !== null && q.options?.[q.userAnswer] !== undefined 
+                                  ? `${String.fromCharCode(65 + q.userAnswer)}. ${q.options[q.userAnswer]}` 
+                                  : 'No option selected')
+                            )
+                        }
+                      </p>
+                    </div>
+
+                    <div class="p-3.5 border border-emerald-200 dark:border-emerald-900/40 bg-emerald-50/10 dark:bg-emerald-950/10 rounded-xl">
+                      <span class="block text-[9px] font-bold text-emerald-500 uppercase mb-1.5">🔑 Correct Answer</span>
+                      <p class="font-semibold text-sm text-slate-800 dark:text-slate-200">
+                        ${q.type === 'NAT' 
+                          ? (q.correctNat !== undefined ? q.correctNat : `${q.natMin} to ${q.natMax}`)
+                          : (q.type === 'MSQ' 
+                              ? (Array.isArray(q.correctOptions) ? q.correctOptions.map(o => String.fromCharCode(65 + parseInt(o))).join(', ') : q.correctAnswer)
+                              : (q.options?.[q.correctAnswer] !== undefined 
+                                  ? `${String.fromCharCode(65 + q.correctAnswer)}. ${q.options[q.correctAnswer]}` 
+                                  : (q.correctAnswer !== undefined ? q.correctAnswer : 'N/A'))
+                            )
+                        }
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- All Options (for MCQs/MSQs) -->
+                  ${q.options && q.options.length > 0 ? `
+                  <details class="mx-5 mb-3 rounded-xl border border-slate-200/50 dark:border-slate-800/50 overflow-hidden group">
+                    <summary class="p-3 text-xs font-bold cursor-pointer text-slate-600 dark:text-slate-400 flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-800/30 select-none">
+                      <span><i class="fa-solid fa-list mr-1.5"></i>All Options</span>
+                      <i class="fa-solid fa-chevron-down group-open:rotate-180 transition-transform text-slate-400"></i>
+                    </summary>
+                    <div class="p-3 pt-0 bg-white/50 dark:bg-darkbg-50/50 border-t border-slate-200/50 dark:border-slate-800/50">
+                      ${q.options.map((opt, oi) => {
+                        const isCorrectOption = q.type === 'MSQ' 
+                          ? (q.correctOptions && q.correctOptions.includes(String(oi)))
+                          : oi === q.correctAnswer;
+                        const isUserOption = q.type === 'MSQ'
+                          ? (q.userAnswer && q.userAnswer.includes(String(oi)))
+                          : oi === q.userAnswer;
+                        
+                        return `
+                          <div class="flex items-start gap-2 py-1.5 text-xs ${
+                            isCorrectOption ? 'text-emerald-600 dark:text-emerald-400 font-semibold' : (isUserOption ? 'text-rose-505 dark:text-rose-400 line-through' : 'text-slate-600 dark:text-slate-400')
+                          }">
+                            <span class="font-bold flex-shrink-0">${String.fromCharCode(65+oi)}.</span>
+                            <span>${opt}</span>
+                            ${isCorrectOption ? '<i class="fa-solid fa-check ml-auto text-emerald-500 flex-shrink-0"></i>' : ''}
+                            ${isUserOption && !isCorrectOption ? '<i class="fa-solid fa-xmark ml-auto text-rose-450 flex-shrink-0"></i>' : ''}
+                          </div>
+                        `;
+                      }).join('')}
+                    </div>
+                  </details>
+                  ` : ''}
+
+                  <!-- Solution Explanation -->
+                  <details class="mx-5 mb-5 rounded-xl border border-primary-200/50 dark:border-primary-900/30 overflow-hidden group" open>
+                    <summary class="p-3 text-xs font-bold cursor-pointer text-primary-700 dark:text-primary-400 flex items-center justify-between hover:bg-primary-50/30 dark:hover:bg-primary-950/20 select-none">
+                      <span><i class="fa-solid fa-circle-info mr-1.5 text-primary-500"></i>Solution & Explanation</span>
+                      <i class="fa-solid fa-chevron-down group-open:rotate-180 transition-transform text-primary-450"></i>
+                    </summary>
+                    <div class="p-4 bg-white/50 dark:bg-darkbg-50/50 border-t border-primary-200/50 dark:border-primary-900/30 text-xs leading-relaxed text-slate-655 dark:text-slate-300">
+                      <p class="whitespace-pre-line">${q.explanation || 'No explanation available.'}</p>
+                    </div>
+                  </details>
+                </div>
+              `;
+            }).join('');
+          })()}
         </div>
       </div>
     `;
@@ -466,9 +548,18 @@ export const Analytics = {
     document.getElementById('btn-back-to-list')?.addEventListener('click', () => {
       this.viewMode = 'list';
       this.activeAttemptId = null;
+      this.activeReviewFilter = 'all'; // Reset filter
       // Clean URL
       window.history.replaceState(null, '', '#/analytics');
       this.refresh();
+    });
+
+    // Review filter click events
+    document.querySelectorAll('.review-filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        this.activeReviewFilter = btn.getAttribute('data-filter');
+        this.refresh();
+      });
     });
 
     // Delete button on detail view
@@ -530,5 +621,88 @@ export const Analytics = {
       mainNode.innerHTML = await this.render();
       this.init();
     }
+  },
+
+  generateFocusAdvice(att) {
+    const isTET = (att.scope || '').toUpperCase().includes('TET');
+    const items = att.responses || att.mistakes || [];
+    if (items.length === 0) return '';
+
+    // Group correctness by subject
+    const subjectStats = {};
+    if (att.responses) {
+      att.responses.forEach(r => {
+        if (!subjectStats[r.subject]) subjectStats[r.subject] = { correct: 0, total: 0 };
+        subjectStats[r.subject].total++;
+        if (r.status === 'correct') subjectStats[r.subject].correct++;
+      });
+    } else {
+      att.mistakes.forEach(m => {
+        if (!subjectStats[m.subject]) subjectStats[m.subject] = { correct: 0, total: 2 };
+        subjectStats[m.subject].total++;
+      });
+    }
+
+    // Find lowest accuracy subject
+    let worstSub = '';
+    let lowestAcc = 100;
+    Object.entries(subjectStats).forEach(([sub, stats]) => {
+      const acc = stats.total > 0 ? (stats.correct / stats.total) * 100 : 100;
+      if (acc < lowestAcc) {
+        lowestAcc = acc;
+        worstSub = sub;
+      }
+    });
+
+    if (!worstSub) {
+      return `
+        <div class="glass-panel p-5 rounded-3xl border border-emerald-500/20 bg-emerald-500/5 flex items-start gap-4">
+          <div class="h-10 w-10 rounded-2xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-lg flex-shrink-0">
+            <i class="fa-solid fa-medal"></i>
+          </div>
+          <div>
+            <h4 class="font-display font-extrabold text-xs uppercase tracking-wider text-slate-900 dark:text-white leading-tight">Focus Recommendation: Maintain Excellence</h4>
+            <p class="text-xs text-slate-505 dark:text-slate-400 mt-1.5 font-semibold">Incredible! You achieved 100% accuracy. Keep taking full-length mock tests to preserve speed and recall precision.</p>
+          </div>
+        </div>
+      `;
+    }
+
+    // Generate targeted advice text
+    let adviceText = '';
+    if (isTET) {
+      const cleanSub = worstSub.replace(/^Section\s+\d+\:\s*/i, '');
+      if (cleanSub.toLowerCase().includes('development') || cleanSub.toLowerCase().includes('pedagogy')) {
+        adviceText = "Focus on Child Development & Pedagogy. Review developmental milestones, Jean Piaget's cognitive stages, Lev Vygotsky's socio-cultural theory, and child-centered teaching paradigms.";
+      } else if (cleanSub.toLowerCase().includes('language i')) {
+        adviceText = "Focus on Language I pedagogy and grammar. Practice reading comprehension inferences, parts of speech syntax rules, and language acquisition methods.";
+      } else if (cleanSub.toLowerCase().includes('language ii')) {
+        adviceText = "Focus on Language II grammar structures. Practice syntax parameters, reading comprehension worksheets, and vocabulary builder revisions.";
+      } else if (cleanSub.toLowerCase().includes('math')) {
+        adviceText = "Focus on elementary TET Mathematics. Review core arithmetic rules, numbers, basic algebra transitions, and pedagogy of teaching mathematics in schools.";
+      } else if (cleanSub.toLowerCase().includes('environmental') || cleanSub.toLowerCase().includes('studies')) {
+        adviceText = "Focus on Environmental Studies. Review ecological food chains, biodiversity protection acts, water resource recycling, and teaching methods of environmental sciences.";
+      } else {
+        adviceText = `Focus on ${cleanSub} syllabus revision. Solve PYQs regarding these domains and review concepts in the practice pool.`;
+      }
+    } else {
+      const cleanSub = worstSub.replace(/^Section\s+\d+\:\s*/i, '');
+      adviceText = `Focus on ${cleanSub} revision. Review the related equations in the **Formula Deck**, practice targeted subject pools on the Practice page, and prompt the **AI Assistant** for step-by-step math breakdowns of complex questions.`;
+    }
+
+    return `
+      <div class="glass-panel p-5 rounded-3xl border border-rose-500/20 bg-rose-500/5 flex items-start gap-4">
+        <div class="h-10 w-10 rounded-2xl bg-rose-500/10 text-rose-500 flex items-center justify-center text-lg flex-shrink-0">
+          <i class="fa-solid fa-magnifying-glass-chart"></i>
+        </div>
+        <div>
+          <h4 class="font-display font-extrabold text-xs uppercase tracking-wider text-slate-900 dark:text-white leading-tight">Focus Recommendation: Revise ${worstSub.replace(/^Section\s+\d+\:\s*/i, '')}</h4>
+          <p class="text-xs text-slate-505 dark:text-slate-400 mt-1.5 leading-relaxed font-semibold">
+            Your accuracy in this domain was <span class="text-rose-500 dark:text-rose-400 font-bold">${Math.round(lowestAcc)}%</span>. 
+            ${adviceText}
+          </p>
+        </div>
+      </div>
+    `;
   }
 };

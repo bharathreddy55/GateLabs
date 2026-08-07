@@ -1375,6 +1375,44 @@ export const MockTest = {
     const accuracy = this.questions.length - skippedCount > 0 ? Math.round((correctCount / (this.questions.length - skippedCount)) * 100) : 0;
     const timeSpent = this.totalTime - this.timeLeft;
 
+    const responses = this.questions.map(q => {
+      const userAns = this.answers[q.id];
+      let status = 'skipped';
+      if (userAns !== undefined && userAns !== null && userAns !== '') {
+        let isCorrect = false;
+        if (q.type === 'MSQ') {
+          const userArr = Array.isArray(userAns) ? [...userAns].sort() : [userAns];
+          const correctArr = Array.isArray(q.correctOptions) ? [...q.correctOptions].sort() : [q.correctAnswer];
+          isCorrect = userArr.length === correctArr.length && userArr.every((val, idx) => val === correctArr[idx]);
+        } else if (q.type === 'NAT') {
+          const userNum = parseFloat(userAns);
+          const minVal = q.natMin !== undefined ? q.natMin : q.correctNat;
+          const maxVal = q.natMax !== undefined ? q.natMax : q.correctNat;
+          isCorrect = !isNaN(userNum) && userNum >= minVal && userNum <= maxVal;
+        } else {
+          isCorrect = userAns === q.correctAnswer;
+        }
+        status = isCorrect ? 'correct' : 'wrong';
+      }
+      return {
+        questionId: q.id,
+        type: q.type || 'MCQ',
+        question: q.question,
+        options: q.options,
+        correctAnswer: q.correctAnswer,
+        correctOptions: q.correctOptions,
+        correctNat: q.correctNat,
+        natMin: q.natMin,
+        natMax: q.natMax,
+        userAnswer: userAns,
+        explanation: q.explanation,
+        subject: q.subject,
+        topic: q.topic,
+        difficulty: q.difficulty,
+        status
+      };
+    });
+
     const attemptObj = {
       mode: this.testMode === 'Full-Length' ? 'Full-Length' : 'Subject Mock',
       scope: this.testMode === 'Full-Length' ? 'All Subjects' : (this.subjectMode === 'Topic' ? `${this.selectedSubject} (${this.selectedTopic})` : this.selectedSubject),
@@ -1386,7 +1424,8 @@ export const MockTest = {
       skippedCount,
       negativeMarks: parseFloat(negativeMarks.toFixed(2)),
       timeSpentSeconds: timeSpent,
-      mistakes
+      mistakes,
+      responses
     };
 
     try {
