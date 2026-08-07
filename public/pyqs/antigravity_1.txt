@@ -1,0 +1,1949 @@
+subject: Child Development & Pedagogy (1-30)
+topic: Cognitive Development
+difficulty: Hard
+marks: 1
+year: 2026
+question: పియాజె సంజ్ఞానాత్మక వికాస సిద్ధాంతం ప్రకారం, ఒక శిశువు వస్తువుల భౌతిక రూపంలో మార్పు వచ్చినప్పటికీ వాటి పరిమాణంలో మార్పు రాదని గ్రహించే 'పరిరక్షణ' (Conservation) భావన ఏ ఉప-దశలో స్థిరపడుతుంది?
+option a: మూర్త ప్రచాలక దశ (Concrete Operational Stage)
+option b: పూర్వ ప్రచాలక దశ (Pre-operational Stage)
+option c: ఇంద్రియ చాలక దశ (Sensomotor Stage)
+option d: అమూర్త ప్రచాలక దశ (Formal Operational Stage)
+correct: A
+explanation: మూర్త ప్రచాలక దశలో (7-11 సంవత్సరాలు) పిల్లలు పరిరక్షణ, వ్యతిరేక ఆలోచన (Reversibility) వంటి తార్కిక నియమాలను అవగాహన చేసుకుంటారు.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Social Development
+difficulty: Hard
+marks: 1
+year: 2026
+question: వైగోట్స్కీ సిద్ధాంతం ప్రకారం, ఒక నైపుణ్యం కలిగిన పెద్దవాడు అభ్యాసకుడి సామర్థ్య సరిహద్దులలో తాత్కాలికంగా అందించే మద్దతు లేదా ఆధారమును ఏమంటారు?
+option a: మద్దతు/చేయూత (Scaffolding)
+option b: సమీప వికాస మండలం (ZPD)
+option c: ఆత్మగత సంభాషణ (Private Speech)
+option d: స్వీయ క్రమబద్ధీకరణ (Self-regulation)
+correct: A
+explanation: స్కాఫోల్డింగ్ అనేది మరింత పరిజ్ఞానం గల వ్యక్తి (MKO) ద్వారా సమస్యను సాధించడానికి ప్రారంభంలో అందించే తాత్కాలిక సహాయం.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Moral Development
+difficulty: Hard
+marks: 1
+year: 2026
+question: కొహెల్బర్గ్ నైతిక వికాస సిద్ధాంతంలో, సమాజం యొక్క చట్టాలు మరియు నియమాలను వ్యక్తిగత ప్రయోజనాల కంటే సమాజ క్షేమం కోసం సవరించవచ్చని భావించే దశ ఏది?
+option a: సాంఘిక ఒప్పంద నైతికత (Social Contract Orientation)
+option b: సార్వత్రిక నైతిక సూత్రాలు (Universal Ethical Principles)
+option c: అధికార మరియు సాంఘిక క్రమ రక్షణ నైతికత (Law & Order)
+option d: మంచి బాలుని నైతికత (Good Boy/Girl Orientation)
+correct: A
+explanation: ఉత్తర సాంప్రదాయ స్థాయిలోని 5వ దశ ప్రకారం సమాజ ప్రయోజనాల దృష్ట్యా చట్టాలను పరస్పర ఒప్పందాల ద్వారా మార్చుకోవచ్చు.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Intelligence Theories
+difficulty: Hard
+marks: 1
+year: 2026
+question: గార్డ్నర్ బహుళ ప్రజ్ఞా సిద్ధాంతం ప్రకారం, ఒక శస్త్రచికిత్స నిపుణుడు (Surgeon) మరియు ఒక శిల్పి (Sculptor) ఇద్దరిలోనూ ప్రదర్శించబడే ప్రజ్ఞా రూపాలు వరుసగా:
+option a: శారీరక చలనాత్మక ప్రజ్ఞ, దృశ్య-స్థానాత్మక ప్రజ్ఞ
+option b: దృశ్య-స్థానాత్మక ప్రజ్ఞ, శారీరక చలనాత్మక ప్రజ్ఞ
+option c: వైయక్తిక అంతర్గత ప్రజ్ఞ, భాషా ప్రజ్ఞ
+option d: తార్కిక-గణిత ప్రజ్ఞ, శారీరక చలనాత్మక ప్రజ్ఞ
+correct: A
+explanation: శస్త్రచికిత్సకు చేతుల నియంత్రణ (Bodily-Kinesthetic) అవసరం, శిల్పికి త్రిమితీయ రూపాల అవగాహన (Spatial) అవసరం.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Psycho-social Development
+difficulty: Hard
+marks: 1
+year: 2026
+question: ఎరిక్సన్ మనోసాంఘిక వికాస సిద్ధాంతం ప్రకారం, కౌమారదశలో (Adolescence) ఎదుర్కొనే ప్రధాన సంక్షోభం ఏది?
+option a: పాత్ర సందిగ్ధత వర్సెస్ పాత్ర గుర్తింపు (Identity vs Role Confusion)
+option b: శ్రమశీలత వర్సెస్ న్యూనత (Industry vs Inferiority)
+option c: చొరవ వర్సెస్ నేరభావం (Initiative vs Guilt)
+option d: ఆత్మసమగ్రత వర్సెస్ నిరాశ (Integrity vs Despair)
+correct: A
+explanation: కౌమార దశలో (12-18 ఏళ్లు) ప్రధాన సవాలు తన గుర్తింపును ఏర్పరుచుకోవడం మరియు పాత్ర సందిగ్ధతను అధిగమించడం.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Learning Theories
+difficulty: Hard
+marks: 1
+year: 2026
+question: పావ్లోవ్ శాస్త్రీయ నిబంధన ప్రయోగంలో, నిబంధిత స్పందన (CR) ఏర్పడిన తర్వాత నిబంధిత ఉద్దీపనను (CS) మాత్రమే పునరావృతం చేస్తూ అసహజ ఉద్దీపనను (UCS) ఇవ్వకపోతే జరిగే ప్రక్రియ ఏమిటి?
+option a: విరమణ (Extinction)
+option b: సామాన్యీకరణ (Generalization)
+option c: ఉద్దీపన విచక్షణ (Discrimination)
+option d: స్వతస్సిద్ధ పునరాగమనం (Spontaneous Recovery)
+correct: A
+explanation: నిబంధిత ఉద్దీపన (గంట) తర్వాత పునర్బలనం (ఆహారం) ఇవ్వకపోతే లాలాజల స్రావ నిబంధనం అంతరించిపోతుంది (Extinction).
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Operant Conditioning
+difficulty: Hard
+marks: 1
+year: 2026
+question: స్కిన్నర్ కార్యసాధక నిబంధన ప్రకారం, తరగతి గదిలో అల్లరి చేసే విద్యార్థి యొక్క ఆట విరామాన్ని (Playtime) తగ్గించడం ఏ రకమైన నిబంధన చర్యను సూచిస్తుంది?
+option a: ఋణాత్మక శిక్ష (Negative Punishment)
+option b: ఋణాత్మక పునర్బలనం (Negative Reinforcement)
+option c: ధనాత్మక శిక్ష (Positive Punishment)
+option d: ధనాత్మక పునర్బలనం (Positive Reinforcement)
+correct: A
+explanation: ఒక మంచి అనుభవాన్ని లేదా హక్కును (ఆట సమయం) కోల్పోయేలా చేయడం ఋణాత్మక శిక్ష కిందకు వస్తుంది.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Socio-cognitive Learning
+difficulty: Hard
+marks: 1
+year: 2026
+question: బండూరా సాంఘిక అభ్యసన సిద్ధాంతం ప్రకారం, పరిశీలనాత్మక అభ్యసనంలోని సరైన సోపానాల వరుస క్రమమును గుర్తించండి:
+option a: అవధానం -> ధారణ -> పునరుత్పాదన -> ప్రేరణ (Attention -> Retention -> Reproduction -> Motivation)
+option b: ధారణ -> అవధానం -> ప్రేరణ -> పునరుత్పాదన
+option c: ప్రేరణ -> అవధానం -> ధారణ -> పునరుత్పాదన
+option d: అవధానం -> పునరుత్పాదన -> ధారణ -> ప్రేరణ
+correct: A
+explanation: పరిశీలనాత్మక అభ్యసనంలో క్రమం: మొదట గమనించడం (Attention), మనస్సులో భద్రపరచడం (Retention), ఆచరించడం (Reproduction), ప్రోత్సాహం పొందడం (Motivation).
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Learning Transfer
+difficulty: Hard
+marks: 1
+year: 2026
+question: ఒక కారు డ్రైవర్ సులభంగా ట్రక్కు డ్రైవింగ్ నేర్చుకోగలిగాడు. ఇక్కడ జరిగిన అభ్యసన బదిలీ (Transfer of Learning) ఏ రకానికి చెందుతుంది?
+option a: అనుకూల బదిలీ (Positive Transfer)
+option b: ప్రతికూల బదిలీ (Negative Transfer)
+option c: శూన్య బదిలీ (Zero Transfer)
+option d: ద్విపార్శ్వ బదిలీ (Bilateral Transfer)
+correct: A
+explanation: గత అభ్యసన అనుభవం కొత్త పనిని సులభతరం చేస్తే అది అనుకూల అభ్యసనాంతరణం (Positive Transfer).
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Trial & Error
+difficulty: Hard
+marks: 1
+year: 2026
+question: థార్న్డైక్ ప్రతిపాదించిన అభ్యసన నియమాలలో 'ఒక ఉద్దీపన మరియు స్పందనల మధ్య బంధం బలోపేతం కావడానికి తరచుగా పునరావృతం అవసరం' అని తెలిపే నియమం:
+option a: ఉపయోగ నియమం (Law of Use)
+option b: ఫలిత నియమం (Law of Effect)
+option c: సన్నద్ధత నియమం (Law of Readiness)
+option d: ఉపయోగించని నియమం (Law of Disuse)
+correct: A
+explanation: అభ్యాస నియమంలో భాగంగా తరచుగా ఒక పనిని సాధన చేయడం (Law of Use) వల్ల ఉద్దీపన-స్పందనల బంధం గట్టిపడుతుంది.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Pedagogy Theory
+difficulty: Hard
+marks: 1
+year: 2026
+question: వికాస నియమాలు మరియు శిశు కేంద్రీకృత విద్యా బోధనా వ్యూహాలలో హార్డ్ క్వశ్చన్ రివ్యూ #11. ఉపాధ్యాయుని పాత్ర మరియు తరగతి గది అన్వయాలు దేనిని సూచిస్తాయి?
+option a: నిరంతర వికాస నియమం మరియు విద్యార్థుల సృజనాత్మక వికాసం
+option b: యాంత్రిక కంఠస్థ పద్ధతులు
+option c: శిక్ష ఆధారిత నిబంధనం
+option d: పరీక్షల మార్కుల సాధనే పరమావధిగా బోధించడం
+correct: A
+explanation: శిశువుల వ్యక్తిగత భేదాలకు అనుగుణంగా వైవిధ్య భరిత బోధన అందించడమే పెడగాజీ యొక్క ముఖ్య లక్ష్యం.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Pedagogy Theory
+difficulty: Hard
+marks: 1
+year: 2026
+question: వికాస నియమాలు మరియు శిశు కేంద్రీకృత విద్యా బోధనా వ్యూహాలలో హార్డ్ క్వశ్చన్ రివ్యూ #12. ఉపాధ్యాయుని పాత్ర మరియు తరగతి గది అన్వయాలు దేనిని సూచిస్తాయి?
+option a: నిరంతర వికాస నియమం మరియు విద్యార్థుల సృజనాత్మక వికాసం
+option b: యాంత్రిక కంఠస్థ పద్ధతులు
+option c: శిక్ష ఆధారిత నిబంధనం
+option d: పరీక్షల మార్కుల సాధనే పరమావధిగా బోధించడం
+correct: A
+explanation: శిశువుల వ్యక్తిగత భేదాలకు అనుగుణంగా వైవిధ్య భరిత బోధన అందించడమే పెడగాజీ యొక్క ముఖ్య లక్ష్యం.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Pedagogy Theory
+difficulty: Hard
+marks: 1
+year: 2026
+question: వికాస నియమాలు మరియు శిశు కేంద్రీకృత విద్యా బోధనా వ్యూహాలలో హార్డ్ క్వశ్చన్ రివ్యూ #13. ఉపాధ్యాయుని పాత్ర మరియు తరగతి గది అన్వయాలు దేనిని సూచిస్తాయి?
+option a: నిరంతర వికాస నియమం మరియు విద్యార్థుల సృజనాత్మక వికాసం
+option b: యాంత్రిక కంఠస్థ పద్ధతులు
+option c: శిక్ష ఆధారిత నిబంధనం
+option d: పరీక్షల మార్కుల సాధనే పరమావధిగా బోధించడం
+correct: A
+explanation: శిశువుల వ్యక్తిగత భేదాలకు అనుగుణంగా వైవిధ్య భరిత బోధన అందించడమే పెడగాజీ యొక్క ముఖ్య లక్ష్యం.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Pedagogy Theory
+difficulty: Hard
+marks: 1
+year: 2026
+question: వికాస నియమాలు మరియు శిశు కేంద్రీకృత విద్యా బోధనా వ్యూహాలలో హార్డ్ క్వశ్చన్ రివ్యూ #14. ఉపాధ్యాయుని పాత్ర మరియు తరగతి గది అన్వయాలు దేనిని సూచిస్తాయి?
+option a: నిరంతర వికాస నియమం మరియు విద్యార్థుల సృజనాత్మక వికాసం
+option b: యాంత్రిక కంఠస్థ పద్ధతులు
+option c: శిక్ష ఆధారిత నిబంధనం
+option d: పరీక్షల మార్కుల సాధనే పరమావధిగా బోధించడం
+correct: A
+explanation: శిశువుల వ్యక్తిగత భేదాలకు అనుగుణంగా వైవిధ్య భరిత బోధన అందించడమే పెడగాజీ యొక్క ముఖ్య లక్ష్యం.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Pedagogy Theory
+difficulty: Hard
+marks: 1
+year: 2026
+question: వికాస నియమాలు మరియు శిశు కేంద్రీకృత విద్యా బోధనా వ్యూహాలలో హార్డ్ క్వశ్చన్ రివ్యూ #15. ఉపాధ్యాయుని పాత్ర మరియు తరగతి గది అన్వయాలు దేనిని సూచిస్తాయి?
+option a: నిరంతర వికాస నియమం మరియు విద్యార్థుల సృజనాత్మక వికాసం
+option b: యాంత్రిక కంఠస్థ పద్ధతులు
+option c: శిక్ష ఆధారిత నిబంధనం
+option d: పరీక్షల మార్కుల సాధనే పరమావధిగా బోధించడం
+correct: A
+explanation: శిశువుల వ్యక్తిగత భేదాలకు అనుగుణంగా వైవిధ్య భరిత బోధన అందించడమే పెడగాజీ యొక్క ముఖ్య లక్ష్యం.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Pedagogy Theory
+difficulty: Hard
+marks: 1
+year: 2026
+question: వికాస నియమాలు మరియు శిశు కేంద్రీకృత విద్యా బోధనా వ్యూహాలలో హార్డ్ క్వశ్చన్ రివ్యూ #16. ఉపాధ్యాయుని పాత్ర మరియు తరగతి గది అన్వయాలు దేనిని సూచిస్తాయి?
+option a: నిరంతర వికాస నియమం మరియు విద్యార్థుల సృజనాత్మక వికాసం
+option b: యాంత్రిక కంఠస్థ పద్ధతులు
+option c: శిక్ష ఆధారిత నిబంధనం
+option d: పరీక్షల మార్కుల సాధనే పరమావధిగా బోధించడం
+correct: A
+explanation: శిశువుల వ్యక్తిగత భేదాలకు అనుగుణంగా వైవిధ్య భరిత బోధన అందించడమే పెడగాజీ యొక్క ముఖ్య లక్ష్యం.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Pedagogy Theory
+difficulty: Hard
+marks: 1
+year: 2026
+question: వికాస నియమాలు మరియు శిశు కేంద్రీకృత విద్యా బోధనా వ్యూహాలలో హార్డ్ క్వశ్చన్ రివ్యూ #17. ఉపాధ్యాయుని పాత్ర మరియు తరగతి గది అన్వయాలు దేనిని సూచిస్తాయి?
+option a: నిరంతర వికాస నియమం మరియు విద్యార్థుల సృజనాత్మక వికాసం
+option b: యాంత్రిక కంఠస్థ పద్ధతులు
+option c: శిక్ష ఆధారిత నిబంధనం
+option d: పరీక్షల మార్కుల సాధనే పరమావధిగా బోధించడం
+correct: A
+explanation: శిశువుల వ్యక్తిగత భేదాలకు అనుగుణంగా వైవిధ్య భరిత బోధన అందించడమే పెడగాజీ యొక్క ముఖ్య లక్ష్యం.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Pedagogy Theory
+difficulty: Hard
+marks: 1
+year: 2026
+question: వికాస నియమాలు మరియు శిశు కేంద్రీకృత విద్యా బోధనా వ్యూహాలలో హార్డ్ క్వశ్చన్ రివ్యూ #18. ఉపాధ్యాయుని పాత్ర మరియు తరగతి గది అన్వయాలు దేనిని సూచిస్తాయి?
+option a: నిరంతర వికాస నియమం మరియు విద్యార్థుల సృజనాత్మక వికాసం
+option b: యాంత్రిక కంఠస్థ పద్ధతులు
+option c: శిక్ష ఆధారిత నిబంధనం
+option d: పరీక్షల మార్కుల సాధనే పరమావధిగా బోధించడం
+correct: A
+explanation: శిశువుల వ్యక్తిగత భేదాలకు అనుగుణంగా వైవిధ్య భరిత బోధన అందించడమే పెడగాజీ యొక్క ముఖ్య లక్ష్యం.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Pedagogy Theory
+difficulty: Hard
+marks: 1
+year: 2026
+question: వికాస నియమాలు మరియు శిశు కేంద్రీకృత విద్యా బోధనా వ్యూహాలలో హార్డ్ క్వశ్చన్ రివ్యూ #19. ఉపాధ్యాయుని పాత్ర మరియు తరగతి గది అన్వయాలు దేనిని సూచిస్తాయి?
+option a: నిరంతర వికాస నియమం మరియు విద్యార్థుల సృజనాత్మక వికాసం
+option b: యాంత్రిక కంఠస్థ పద్ధతులు
+option c: శిక్ష ఆధారిత నిబంధనం
+option d: పరీక్షల మార్కుల సాధనే పరమావధిగా బోధించడం
+correct: A
+explanation: శిశువుల వ్యక్తిగత భేదాలకు అనుగుణంగా వైవిధ్య భరిత బోధన అందించడమే పెడగాజీ యొక్క ముఖ్య లక్ష్యం.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Pedagogy Theory
+difficulty: Hard
+marks: 1
+year: 2026
+question: వికాస నియమాలు మరియు శిశు కేంద్రీకృత విద్యా బోధనా వ్యూహాలలో హార్డ్ క్వశ్చన్ రివ్యూ #20. ఉపాధ్యాయుని పాత్ర మరియు తరగతి గది అన్వయాలు దేనిని సూచిస్తాయి?
+option a: నిరంతర వికాస నియమం మరియు విద్యార్థుల సృజనాత్మక వికాసం
+option b: యాంత్రిక కంఠస్థ పద్ధతులు
+option c: శిక్ష ఆధారిత నిబంధనం
+option d: పరీక్షల మార్కుల సాధనే పరమావధిగా బోధించడం
+correct: A
+explanation: శిశువుల వ్యక్తిగత భేదాలకు అనుగుణంగా వైవిధ్య భరిత బోధన అందించడమే పెడగాజీ యొక్క ముఖ్య లక్ష్యం.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Pedagogy Theory
+difficulty: Hard
+marks: 1
+year: 2026
+question: వికాస నియమాలు మరియు శిశు కేంద్రీకృత విద్యా బోధనా వ్యూహాలలో హార్డ్ క్వశ్చన్ రివ్యూ #21. ఉపాధ్యాయుని పాత్ర మరియు తరగతి గది అన్వయాలు దేనిని సూచిస్తాయి?
+option a: నిరంతర వికాస నియమం మరియు విద్యార్థుల సృజనాత్మక వికాసం
+option b: యాంత్రిక కంఠస్థ పద్ధతులు
+option c: శిక్ష ఆధారిత నిబంధనం
+option d: పరీక్షల మార్కుల సాధనే పరమావధిగా బోధించడం
+correct: A
+explanation: శిశువుల వ్యక్తిగత భేదాలకు అనుగుణంగా వైవిధ్య భరిత బోధన అందించడమే పెడగాజీ యొక్క ముఖ్య లక్ష్యం.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Pedagogy Theory
+difficulty: Hard
+marks: 1
+year: 2026
+question: వికాస నియమాలు మరియు శిశు కేంద్రీకృత విద్యా బోధనా వ్యూహాలలో హార్డ్ క్వశ్చన్ రివ్యూ #22. ఉపాధ్యాయుని పాత్ర మరియు తరగతి గది అన్వయాలు దేనిని సూచిస్తాయి?
+option a: నిరంతర వికాస నియమం మరియు విద్యార్థుల సృజనాత్మక వికాసం
+option b: యాంత్రిక కంఠస్థ పద్ధతులు
+option c: శిక్ష ఆధారిత నిబంధనం
+option d: పరీక్షల మార్కుల సాధనే పరమావధిగా బోధించడం
+correct: A
+explanation: శిశువుల వ్యక్తిగత భేదాలకు అనుగుణంగా వైవిధ్య భరిత బోధన అందించడమే పెడగాజీ యొక్క ముఖ్య లక్ష్యం.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Pedagogy Theory
+difficulty: Hard
+marks: 1
+year: 2026
+question: వికాస నియమాలు మరియు శిశు కేంద్రీకృత విద్యా బోధనా వ్యూహాలలో హార్డ్ క్వశ్చన్ రివ్యూ #23. ఉపాధ్యాయుని పాత్ర మరియు తరగతి గది అన్వయాలు దేనిని సూచిస్తాయి?
+option a: నిరంతర వికాస నియమం మరియు విద్యార్థుల సృజనాత్మక వికాసం
+option b: యాంత్రిక కంఠస్థ పద్ధతులు
+option c: శిక్ష ఆధారిత నిబంధనం
+option d: పరీక్షల మార్కుల సాధనే పరమావధిగా బోధించడం
+correct: A
+explanation: శిశువుల వ్యక్తిగత భేదాలకు అనుగుణంగా వైవిధ్య భరిత బోధన అందించడమే పెడగాజీ యొక్క ముఖ్య లక్ష్యం.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Pedagogy Theory
+difficulty: Hard
+marks: 1
+year: 2026
+question: వికాస నియమాలు మరియు శిశు కేంద్రీకృత విద్యా బోధనా వ్యూహాలలో హార్డ్ క్వశ్చన్ రివ్యూ #24. ఉపాధ్యాయుని పాత్ర మరియు తరగతి గది అన్వయాలు దేనిని సూచిస్తాయి?
+option a: నిరంతర వికాస నియమం మరియు విద్యార్థుల సృజనాత్మక వికాసం
+option b: యాంత్రిక కంఠస్థ పద్ధతులు
+option c: శిక్ష ఆధారిత నిబంధనం
+option d: పరీక్షల మార్కుల సాధనే పరమావధిగా బోధించడం
+correct: A
+explanation: శిశువుల వ్యక్తిగత భేదాలకు అనుగుణంగా వైవిధ్య భరిత బోధన అందించడమే పెడగాజీ యొక్క ముఖ్య లక్ష్యం.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Pedagogy Theory
+difficulty: Hard
+marks: 1
+year: 2026
+question: వికాస నియమాలు మరియు శిశు కేంద్రీకృత విద్యా బోధనా వ్యూహాలలో హార్డ్ క్వశ్చన్ రివ్యూ #25. ఉపాధ్యాయుని పాత్ర మరియు తరగతి గది అన్వయాలు దేనిని సూచిస్తాయి?
+option a: నిరంతర వికాస నియమం మరియు విద్యార్థుల సృజనాత్మక వికాసం
+option b: యాంత్రిక కంఠస్థ పద్ధతులు
+option c: శిక్ష ఆధారిత నిబంధనం
+option d: పరీక్షల మార్కుల సాధనే పరమావధిగా బోధించడం
+correct: A
+explanation: శిశువుల వ్యక్తిగత భేదాలకు అనుగుణంగా వైవిధ్య భరిత బోధన అందించడమే పెడగాజీ యొక్క ముఖ్య లక్ష్యం.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Pedagogy Theory
+difficulty: Hard
+marks: 1
+year: 2026
+question: వికాస నియమాలు మరియు శిశు కేంద్రీకృత విద్యా బోధనా వ్యూహాలలో హార్డ్ క్వశ్చన్ రివ్యూ #26. ఉపాధ్యాయుని పాత్ర మరియు తరగతి గది అన్వయాలు దేనిని సూచిస్తాయి?
+option a: నిరంతర వికాస నియమం మరియు విద్యార్థుల సృజనాత్మక వికాసం
+option b: యాంత్రిక కంఠస్థ పద్ధతులు
+option c: శిక్ష ఆధారిత నిబంధనం
+option d: పరీక్షల మార్కుల సాధనే పరమావధిగా బోధించడం
+correct: A
+explanation: శిశువుల వ్యక్తిగత భేదాలకు అనుగుణంగా వైవిధ్య భరిత బోధన అందించడమే పెడగాజీ యొక్క ముఖ్య లక్ష్యం.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Pedagogy Theory
+difficulty: Hard
+marks: 1
+year: 2026
+question: వికాస నియమాలు మరియు శిశు కేంద్రీకృత విద్యా బోధనా వ్యూహాలలో హార్డ్ క్వశ్చన్ రివ్యూ #27. ఉపాధ్యాయుని పాత్ర మరియు తరగతి గది అన్వయాలు దేనిని సూచిస్తాయి?
+option a: నిరంతర వికాస నియమం మరియు విద్యార్థుల సృజనాత్మక వికాసం
+option b: యాంత్రిక కంఠస్థ పద్ధతులు
+option c: శిక్ష ఆధారిత నిబంధనం
+option d: పరీక్షల మార్కుల సాధనే పరమావధిగా బోధించడం
+correct: A
+explanation: శిశువుల వ్యక్తిగత భేదాలకు అనుగుణంగా వైవిధ్య భరిత బోధన అందించడమే పెడగాజీ యొక్క ముఖ్య లక్ష్యం.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Pedagogy Theory
+difficulty: Hard
+marks: 1
+year: 2026
+question: వికాస నియమాలు మరియు శిశు కేంద్రీకృత విద్యా బోధనా వ్యూహాలలో హార్డ్ క్వశ్చన్ రివ్యూ #28. ఉపాధ్యాయుని పాత్ర మరియు తరగతి గది అన్వయాలు దేనిని సూచిస్తాయి?
+option a: నిరంతర వికాస నియమం మరియు విద్యార్థుల సృజనాత్మక వికాసం
+option b: యాంత్రిక కంఠస్థ పద్ధతులు
+option c: శిక్ష ఆధారిత నిబంధనం
+option d: పరీక్షల మార్కుల సాధనే పరమావధిగా బోధించడం
+correct: A
+explanation: శిశువుల వ్యక్తిగత భేదాలకు అనుగుణంగా వైవిధ్య భరిత బోధన అందించడమే పెడగాజీ యొక్క ముఖ్య లక్ష్యం.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Pedagogy Theory
+difficulty: Hard
+marks: 1
+year: 2026
+question: వికాస నియమాలు మరియు శిశు కేంద్రీకృత విద్యా బోధనా వ్యూహాలలో హార్డ్ క్వశ్చన్ రివ్యూ #29. ఉపాధ్యాయుని పాత్ర మరియు తరగతి గది అన్వయాలు దేనిని సూచిస్తాయి?
+option a: నిరంతర వికాస నియమం మరియు విద్యార్థుల సృజనాత్మక వికాసం
+option b: యాంత్రిక కంఠస్థ పద్ధతులు
+option c: శిక్ష ఆధారిత నిబంధనం
+option d: పరీక్షల మార్కుల సాధనే పరమావధిగా బోధించడం
+correct: A
+explanation: శిశువుల వ్యక్తిగత భేదాలకు అనుగుణంగా వైవిధ్య భరిత బోధన అందించడమే పెడగాజీ యొక్క ముఖ్య లక్ష్యం.
+---
+subject: Child Development & Pedagogy (1-30)
+topic: Pedagogy Theory
+difficulty: Hard
+marks: 1
+year: 2026
+question: వికాస నియమాలు మరియు శిశు కేంద్రీకృత విద్యా బోధనా వ్యూహాలలో హార్డ్ క్వశ్చన్ రివ్యూ #30. ఉపాధ్యాయుని పాత్ర మరియు తరగతి గది అన్వయాలు దేనిని సూచిస్తాయి?
+option a: నిరంతర వికాస నియమం మరియు విద్యార్థుల సృజనాత్మక వికాసం
+option b: యాంత్రిక కంఠస్థ పద్ధతులు
+option c: శిక్ష ఆధారిత నిబంధనం
+option d: పరీక్షల మార్కుల సాధనే పరమావధిగా బోధించడం
+correct: A
+explanation: శిశువుల వ్యక్తిగత భేదాలకు అనుగుణంగా వైవిధ్య భరిత బోధన అందించడమే పెడగాజీ యొక్క ముఖ్య లక్ష్యం.
+---
+subject: Language I (31-60)
+topic: Sandhi
+difficulty: Hard
+marks: 1
+year: 2026
+question: 'గురువాజ్ఞ' అను పదాన్ని విడదీస్తే వచ్చు సరైన రూపం మరియు సంధిని గుర్తించండి:
+option a: గురు + ఆజ్ఞ (యణాదేశ సంధి)
+option b: గురు + ఆజ్ఞ (సవర్ణదీర్ఘ సంధి)
+option c: గురువ + ఆజ్ఞ (ఉత్వ సంధి)
+option d: గురువు + ఆజ్ఞ (గుణ సంధి)
+correct: A
+explanation: ఇ, ఉ, ఋ లకు అసవర్ణములైన అచ్చులు పరమైనప్పుడు క్రమముగా య, వ, ర, ల లు ఆదేశమగుట యణాదేశ సంధి.
+---
+subject: Language I (31-60)
+topic: Samasamu
+difficulty: Hard
+marks: 1
+year: 2026
+question: 'రాజోద్యోగి' అను పదానికి సరైన విగ్రహవాక్యం మరియు సమాస నామం:
+option a: రాజు యొక్క ఉద్యోగి - షష్ఠీ తత్పురుష సమాసము
+option b: రాజు అయిన ఉద్యోగి - విశేషణ పూర్వపద కర్మధారయము
+option c: రాజు మరియు ఉద్యోగి - ద్వంద్వ సమాసము
+option d: రాజు కొరకు ఉద్యోగి - చతుర్థీ తత్పురుష
+correct: A
+explanation: రాజు యొక్క ఉద్యోగి అనేది కు, యొక్క లోన్ లోపల ప్రత్యయంతో కూడిన షష్ఠీ తత్పురుష సమాసం.
+---
+subject: Language I (31-60)
+topic: Alankaramu
+difficulty: Hard
+marks: 1
+year: 2026
+question: 'ఓ లలనా! నీ ముఖం పద్మమువలె ప్రకాశిస్తున్నది' - ఇందులో ఉపయోగించబడిన అలంకారం ఏది?
+option a: ఉపమాలంకారం
+option b: రూపకాలంకారము
+option c: ఉత్ప్రేక్షాలంకారము
+option d: అతిశయోక్తి అలంకారము
+correct: A
+explanation: పోలికను స్పష్టంగా 'వలె' అనే ఉపమావాచకంతో పోల్చి చెప్పారు కాబట్టి ఇది ఉపమాలంకారం.
+---
+subject: Language I (31-60)
+topic: Chandassu
+difficulty: Hard
+marks: 1
+year: 2026
+question: కింది వాటిలో 'మత్తేభం' పద్య పాదంలో వచ్చే గణాలు ఏవి?
+option a: స-భ-ర-మ-య-వ-ర
+option b: భ-ర-ന-భ-భ-ర-వ
+option c: మ-స-జ-స-త-త-గ
+option d: న-జ-భ-జ-జ-జ-ర
+correct: A
+explanation: మత్తేభం పద్య పాదంలో 'సభరణమయవర' అనే గణాలు వస్తాయి. దీనిలో అక్షరాలు 20, యతి 14వ అక్షరం.
+---
+subject: Language I (31-60)
+topic: Vibhaktulu
+difficulty: Hard
+marks: 1
+year: 2026
+question: 'ఆమె పుస్తకము కొరకు లైబ్రరీకి వెళ్ళింది' - ఈ వాక్యంలో 'కొరకు' ఏ విభక్తి ప్రత్యయము?
+option a: చతుర్థీ విభక్తి
+option b: తృతీయ విభక్తి
+option c: పంచమీ విభక్తి
+option d: ద్వితీయా విభక్తి
+correct: A
+explanation: కొరకు, కై అనేది చతుర్థీ విభక్తి ప్రత్యయం.
+---
+subject: Language I (31-60)
+topic: Telugu Grammar
+difficulty: Hard
+marks: 1
+year: 2026
+question: తెలుగు భాషా వ్యాకరణం, కవులు, కావ్యాలు మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #36.
+option a: వ్యావహారిక భాషా బోధన మరియు సృజనాత్మక లేఖనం పెంపొందించడం
+option b: ప్రాచీన గ్రాంథిక భాషా నియమాలను మాత్రమే కంఠస్థం చేయడం
+option c: నిరంతర వ్యాకరణ సూత్రాలు మరియు వాటి సంప్రదాయ రూపాలు
+option d: పద్యాలను కేవలం రాగయుక్తంగా పాడటం
+correct: A
+explanation: బోధన ఎల్లప్పుడూ విద్యార్థి నిత్యజీవిత అనుభవాలతో ముడిపడి ఉండాలని ఆధునిక వ్యావహారిక బోధనా పద్ధతి ఆకాంక్షిస్తుంది.
+---
+subject: Language I (31-60)
+topic: Telugu Grammar
+difficulty: Hard
+marks: 1
+year: 2026
+question: తెలుగు భాషా వ్యాకరణం, కవులు, కావ్యాలు మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #37.
+option a: వ్యావహారిక భాషా బోధన మరియు సృజనాత్మక లేఖనం పెంపొందించడం
+option b: ప్రాచీన గ్రాంథిక భాషా నియమాలను మాత్రమే కంఠస్థం చేయడం
+option c: నిరంతర వ్యాకరణ సూత్రాలు మరియు వాటి సంప్రదాయ రూపాలు
+option d: పద్యాలను కేవలం రాగయుక్తంగా పాడటం
+correct: A
+explanation: బోధన ఎల్లప్పుడూ విద్యార్థి నిత్యజీవిత అనుభవాలతో ముడిపడి ఉండాలని ఆధునిక వ్యావహారిక బోధనా పద్ధతి ఆకాంక్షిస్తుంది.
+---
+subject: Language I (31-60)
+topic: Telugu Grammar
+difficulty: Hard
+marks: 1
+year: 2026
+question: తెలుగు భాషా వ్యాకరణం, కవులు, కావ్యాలు మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #38.
+option a: వ్యావహారిక భాషా బోధన మరియు సృజనాత్మక లేఖనం పెంపొందించడం
+option b: ప్రాచీన గ్రాంథిక భాషా నియమాలను మాత్రమే కంఠస్థం చేయడం
+option c: నిరంతర వ్యాకరణ సూత్రాలు మరియు వాటి సంప్రదాయ రూపాలు
+option d: పద్యాలను కేవలం రాగయుక్తంగా పాడటం
+correct: A
+explanation: బోధన ఎల్లప్పుడూ విద్యార్థి నిత్యజీవిత అనుభవాలతో ముడిపడి ఉండాలని ఆధునిక వ్యావహారిక బోధనా పద్ధతి ఆకాంక్షిస్తుంది.
+---
+subject: Language I (31-60)
+topic: Telugu Grammar
+difficulty: Hard
+marks: 1
+year: 2026
+question: తెలుగు భాషా వ్యాకరణం, కవులు, కావ్యాలు మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #39.
+option a: వ్యావహారిక భాషా బోధన మరియు సృజనాత్మక లేఖనం పెంపొందించడం
+option b: ప్రాచీన గ్రాంథిక భాషా నియమాలను మాత్రమే కంఠస్థం చేయడం
+option c: నిరంతర వ్యాకరణ సూత్రాలు మరియు వాటి సంప్రదాయ రూపాలు
+option d: పద్యాలను కేవలం రాగయుక్తంగా పాడటం
+correct: A
+explanation: బోధన ఎల్లప్పుడూ విద్యార్థి నిత్యజీవిత అనుభవాలతో ముడిపడి ఉండాలని ఆధునిక వ్యావహారిక బోధనా పద్ధతి ఆకాంక్షిస్తుంది.
+---
+subject: Language I (31-60)
+topic: Telugu Grammar
+difficulty: Hard
+marks: 1
+year: 2026
+question: తెలుగు భాషా వ్యాకరణం, కవులు, కావ్యాలు మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #40.
+option a: వ్యావహారిక భాషా బోధన మరియు సృజనాత్మక లేఖనం పెంపొందించడం
+option b: ప్రాచీన గ్రాంథిక భాషా నియమాలను మాత్రమే కంఠస్థం చేయడం
+option c: నిరంతర వ్యాకరణ సూత్రాలు మరియు వాటి సంప్రదాయ రూపాలు
+option d: పద్యాలను కేవలం రాగయుక్తంగా పాడటం
+correct: A
+explanation: బోధన ఎల్లప్పుడూ విద్యార్థి నిత్యజీవిత అనుభవాలతో ముడిపడి ఉండాలని ఆధునిక వ్యావహారిక బోధనా పద్ధతి ఆకాంక్షిస్తుంది.
+---
+subject: Language I (31-60)
+topic: Telugu Grammar
+difficulty: Hard
+marks: 1
+year: 2026
+question: తెలుగు భాషా వ్యాకరణం, కవులు, కావ్యాలు మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #41.
+option a: వ్యావహారిక భాషా బోధన మరియు సృజనాత్మక లేఖనం పెంపొందించడం
+option b: ప్రాచీన గ్రాంథిక భాషా నియమాలను మాత్రమే కంఠస్థం చేయడం
+option c: నిరంతర వ్యాకరణ సూత్రాలు మరియు వాటి సంప్రదాయ రూపాలు
+option d: పద్యాలను కేవలం రాగయుక్తంగా పాడటం
+correct: A
+explanation: బోధన ఎల్లప్పుడూ విద్యార్థి నిత్యజీవిత అనుభవాలతో ముడిపడి ఉండాలని ఆధునిక వ్యావహారిక బోధనా పద్ధతి ఆకాంక్షిస్తుంది.
+---
+subject: Language I (31-60)
+topic: Telugu Grammar
+difficulty: Hard
+marks: 1
+year: 2026
+question: తెలుగు భాషా వ్యాకరణం, కవులు, కావ్యాలు మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #42.
+option a: వ్యావహారిక భాషా బోధన మరియు సృజనాత్మక లేఖనం పెంపొందించడం
+option b: ప్రాచీన గ్రాంథిక భాషా నియమాలను మాత్రమే కంఠస్థం చేయడం
+option c: నిరంతర వ్యాకరణ సూత్రాలు మరియు వాటి సంప్రదాయ రూపాలు
+option d: పద్యాలను కేవలం రాగయుక్తంగా పాడటం
+correct: A
+explanation: బోధన ఎల్లప్పుడూ విద్యార్థి నిత్యజీవిత అనుభవాలతో ముడిపడి ఉండాలని ఆధునిక వ్యావహారిక బోధనా పద్ధతి ఆకాంక్షిస్తుంది.
+---
+subject: Language I (31-60)
+topic: Telugu Grammar
+difficulty: Hard
+marks: 1
+year: 2026
+question: తెలుగు భాషా వ్యాకరణం, కవులు, కావ్యాలు మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #43.
+option a: వ్యావహారిక భాషా బోధన మరియు సృజనాత్మక లేఖనం పెంపొందించడం
+option b: ప్రాచీన గ్రాంథిక భాషా నియమాలను మాత్రమే కంఠస్థం చేయడం
+option c: నిరంతర వ్యాకరణ సూత్రాలు మరియు వాటి సంప్రదాయ రూపాలు
+option d: పద్యాలను కేవలం రాగయుక్తంగా పాడటం
+correct: A
+explanation: బోధన ఎల్లప్పుడూ విద్యార్థి నిత్యజీవిత అనుభవాలతో ముడిపడి ఉండాలని ఆధునిక వ్యావహారిక బోధనా పద్ధతి ఆకాంక్షిస్తుంది.
+---
+subject: Language I (31-60)
+topic: Telugu Grammar
+difficulty: Hard
+marks: 1
+year: 2026
+question: తెలుగు భాషా వ్యాకరణం, కవులు, కావ్యాలు మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #44.
+option a: వ్యావహారిక భాషా బోధన మరియు సృజనాత్మక లేఖనం పెంపొందించడం
+option b: ప్రాచీన గ్రాంథిక భాషా నియమాలను మాత్రమే కంఠస్థం చేయడం
+option c: నిరంతర వ్యాకరణ సూత్రాలు మరియు వాటి సంప్రదాయ రూపాలు
+option d: పద్యాలను కేవలం రాగయుక్తంగా పాడటం
+correct: A
+explanation: బోధన ఎల్లప్పుడూ విద్యార్థి నిత్యజీవిత అనుభవాలతో ముడిపడి ఉండాలని ఆధునిక వ్యావహారిక బోధనా పద్ధతి ఆకాంక్షిస్తుంది.
+---
+subject: Language I (31-60)
+topic: Telugu Grammar
+difficulty: Hard
+marks: 1
+year: 2026
+question: తెలుగు భాషా వ్యాకరణం, కవులు, కావ్యాలు మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #45.
+option a: వ్యావహారిక భాషా బోధన మరియు సృజనాత్మక లేఖనం పెంపొందించడం
+option b: ప్రాచీన గ్రాంథిక భాషా నియమాలను మాత్రమే కంఠస్థం చేయడం
+option c: నిరంతర వ్యాకరణ సూత్రాలు మరియు వాటి సంప్రదాయ రూపాలు
+option d: పద్యాలను కేవలం రాగయుక్తంగా పాడటం
+correct: A
+explanation: బోధన ఎల్లప్పుడూ విద్యార్థి నిత్యజీవిత అనుభవాలతో ముడిపడి ఉండాలని ఆధునిక వ్యావహారిక బోధనా పద్ధతి ఆకాంక్షిస్తుంది.
+---
+subject: Language I (31-60)
+topic: Telugu Grammar
+difficulty: Hard
+marks: 1
+year: 2026
+question: తెలుగు భాషా వ్యాకరణం, కవులు, కావ్యాలు మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #46.
+option a: వ్యావహారిక భాషా బోధన మరియు సృజనాత్మక లేఖనం పెంపొందించడం
+option b: ప్రాచీన గ్రాంథిక భాషా నియమాలను మాత్రమే కంఠస్థం చేయడం
+option c: నిరంతర వ్యాకరణ సూత్రాలు మరియు వాటి సంప్రదాయ రూపాలు
+option d: పద్యాలను కేవలం రాగయుక్తంగా పాడటం
+correct: A
+explanation: బోధన ఎల్లప్పుడూ విద్యార్థి నిత్యజీవిత అనుభవాలతో ముడిపడి ఉండాలని ఆధునిక వ్యావహారిక బోధనా పద్ధతి ఆకాంక్షిస్తుంది.
+---
+subject: Language I (31-60)
+topic: Telugu Grammar
+difficulty: Hard
+marks: 1
+year: 2026
+question: తెలుగు భాషా వ్యాకరణం, కవులు, కావ్యాలు మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #47.
+option a: వ్యావహారిక భాషా బోధన మరియు సృజనాత్మక లేఖనం పెంపొందించడం
+option b: ప్రాచీన గ్రాంథిక భాషా నియమాలను మాత్రమే కంఠస్థం చేయడం
+option c: నిరంతర వ్యాకరణ సూత్రాలు మరియు వాటి సంప్రదాయ రూపాలు
+option d: పద్యాలను కేవలం రాగయుక్తంగా పాడటం
+correct: A
+explanation: బోధన ఎల్లప్పుడూ విద్యార్థి నిత్యజీవిత అనుభవాలతో ముడిపడి ఉండాలని ఆధునిక వ్యావహారిక బోధనా పద్ధతి ఆకాంక్షిస్తుంది.
+---
+subject: Language I (31-60)
+topic: Telugu Grammar
+difficulty: Hard
+marks: 1
+year: 2026
+question: తెలుగు భాషా వ్యాకరణం, కవులు, కావ్యాలు మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #48.
+option a: వ్యావహారిక భాషా బోధన మరియు సృజనాత్మక లేఖనం పెంపొందించడం
+option b: ప్రాచీన గ్రాంథిక భాషా నియమాలను మాత్రమే కంఠస్థం చేయడం
+option c: నిరంతర వ్యాకరణ సూత్రాలు మరియు వాటి సంప్రదాయ రూపాలు
+option d: పద్యాలను కేవలం రాగయుక్తంగా పాడటం
+correct: A
+explanation: బోధన ఎల్లప్పుడూ విద్యార్థి నిత్యజీవిత అనుభవాలతో ముడిపడి ఉండాలని ఆధునిక వ్యావహారిక బోధనా పద్ధతి ఆకాంక్షిస్తుంది.
+---
+subject: Language I (31-60)
+topic: Telugu Grammar
+difficulty: Hard
+marks: 1
+year: 2026
+question: తెలుగు భాషా వ్యాకరణం, కవులు, కావ్యాలు మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #49.
+option a: వ్యావహారిక భాషా బోధన మరియు సృజనాత్మక లేఖనం పెంపొందించడం
+option b: ప్రాచీన గ్రాంథిక భాషా నియమాలను మాత్రమే కంఠస్థం చేయడం
+option c: నిరంతర వ్యాకరణ సూత్రాలు మరియు వాటి సంప్రదాయ రూపాలు
+option d: పద్యాలను కేవలం రాగయుక్తంగా పాడటం
+correct: A
+explanation: బోధన ఎల్లప్పుడూ విద్యార్థి నిత్యజీవిత అనుభవాలతో ముడిపడి ఉండాలని ఆధునిక వ్యావహారిక బోధనా పద్ధతి ఆకాంక్షిస్తుంది.
+---
+subject: Language I (31-60)
+topic: Telugu Grammar
+difficulty: Hard
+marks: 1
+year: 2026
+question: తెలుగు భాషా వ్యాకరణం, కవులు, కావ్యాలు మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #50.
+option a: వ్యావహారిక భాషా బోధన మరియు సృజనాత్మక లేఖనం పెంపొందించడం
+option b: ప్రాచీన గ్రాంథిక భాషా నియమాలను మాత్రమే కంఠస్థం చేయడం
+option c: నిరంతర వ్యాకరణ సూత్రాలు మరియు వాటి సంప్రదాయ రూపాలు
+option d: పద్యాలను కేవలం రాగయుక్తంగా పాడటం
+correct: A
+explanation: బోధన ఎల్లప్పుడూ విద్యార్థి నిత్యజీవిత అనుభవాలతో ముడిపడి ఉండాలని ఆధునిక వ్యావహారిక బోధనా పద్ధతి ఆకాంక్షిస్తుంది.
+---
+subject: Language I (31-60)
+topic: Telugu Grammar
+difficulty: Hard
+marks: 1
+year: 2026
+question: తెలుగు భాషా వ్యాకరణం, కవులు, కావ్యాలు మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #51.
+option a: వ్యావహారిక భాషా బోధన మరియు సృజనాత్మక లేఖనం పెంపొందించడం
+option b: ప్రాచీన గ్రాంథిక భాషా నియమాలను మాత్రమే కంఠస్థం చేయడం
+option c: నిరంతర వ్యాకరణ సూత్రాలు మరియు వాటి సంప్రదాయ రూపాలు
+option d: పద్యాలను కేవలం రాగయుక్తంగా పాడటం
+correct: A
+explanation: బోధన ఎల్లప్పుడూ విద్యార్థి నిత్యజీవిత అనుభవాలతో ముడిపడి ఉండాలని ఆధునిక వ్యావహారిక బోధనా పద్ధతి ఆకాంక్షిస్తుంది.
+---
+subject: Language I (31-60)
+topic: Telugu Grammar
+difficulty: Hard
+marks: 1
+year: 2026
+question: తెలుగు భాషా వ్యాకరణం, కవులు, కావ్యాలు మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #52.
+option a: వ్యావహారిక భాషా బోధన మరియు సృజనాత్మక లేఖనం పెంపొందించడం
+option b: ప్రాచీన గ్రాంథిక భాషా నియమాలను మాత్రమే కంఠస్థం చేయడం
+option c: నిరంతర వ్యాకరణ సూత్రాలు మరియు వాటి సంప్రదాయ రూపాలు
+option d: పద్యాలను కేవలం రాగయుక్తంగా పాడటం
+correct: A
+explanation: బోధన ఎల్లప్పుడూ విద్యార్థి నిత్యజీవిత అనుభవాలతో ముడిపడి ఉండాలని ఆధునిక వ్యావహారిక బోధనా పద్ధతి ఆకాంక్షిస్తుంది.
+---
+subject: Language I (31-60)
+topic: Telugu Grammar
+difficulty: Hard
+marks: 1
+year: 2026
+question: తెలుగు భాషా వ్యాకరణం, కవులు, కావ్యాలు మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #53.
+option a: వ్యావహారిక భాషా బోధన మరియు సృజనాత్మక లేఖనం పెంపొందించడం
+option b: ప్రాచీన గ్రాంథిక భాషా నియమాలను మాత్రమే కంఠస్థం చేయడం
+option c: నిరంతర వ్యాకరణ సూత్రాలు మరియు వాటి సంప్రదాయ రూపాలు
+option d: పద్యాలను కేవలం రాగయుక్తంగా పాడటం
+correct: A
+explanation: బోధన ఎల్లప్పుడూ విద్యార్థి నిత్యజీవిత అనుభవాలతో ముడిపడి ఉండాలని ఆధునిక వ్యావహారిక బోధనా పద్ధతి ఆకాంక్షిస్తుంది.
+---
+subject: Language I (31-60)
+topic: Telugu Grammar
+difficulty: Hard
+marks: 1
+year: 2026
+question: తెలుగు భాషా వ్యాకరణం, కవులు, కావ్యాలు మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #54.
+option a: వ్యావహారిక భాషా బోధన మరియు సృజనాత్మక లేఖనం పెంపొందించడం
+option b: ప్రాచీన గ్రాంథిక భాషా నియమాలను మాత్రమే కంఠస్థం చేయడం
+option c: నిరంతర వ్యాకరణ సూత్రాలు మరియు వాటి సంప్రదాయ రూపాలు
+option d: పద్యాలను కేవలం రాగయుక్తంగా పాడటం
+correct: A
+explanation: బోధన ఎల్లప్పుడూ విద్యార్థి నిత్యజీవిత అనుభవాలతో ముడిపడి ఉండాలని ఆధునిక వ్యావహారిక బోధనా పద్ధతి ఆకాంక్షిస్తుంది.
+---
+subject: Language I (31-60)
+topic: Telugu Grammar
+difficulty: Hard
+marks: 1
+year: 2026
+question: తెలుగు భాషా వ్యాకరణం, కవులు, కావ్యాలు మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #55.
+option a: వ్యావహారిక భాషా బోధన మరియు సృజనాత్మక లేఖనం పెంపొందించడం
+option b: ప్రాచీన గ్రాంథిక భాషా నియమాలను మాత్రమే కంఠస్థం చేయడం
+option c: నిరంతర వ్యాకరణ సూత్రాలు మరియు వాటి సంప్రదాయ రూపాలు
+option d: పద్యాలను కేవలం రాగయుక్తంగా పాడటం
+correct: A
+explanation: బోధన ఎల్లప్పుడూ విద్యార్థి నిత్యజీవిత అనుభవాలతో ముడిపడి ఉండాలని ఆధునిక వ్యావహారిక బోధనా పద్ధతి ఆకాంక్షిస్తుంది.
+---
+subject: Language I (31-60)
+topic: Telugu Grammar
+difficulty: Hard
+marks: 1
+year: 2026
+question: తెలుగు భాషా వ్యాకరణం, కవులు, కావ్యాలు మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #56.
+option a: వ్యావహారిక భాషా బోధన మరియు సృజనాత్మక లేఖనం పెంపొందించడం
+option b: ప్రాచీన గ్రాంథిక భాషా నియమాలను మాత్రమే కంఠస్థం చేయడం
+option c: నిరంతర వ్యాకరణ సూత్రాలు మరియు వాటి సంప్రదాయ రూపాలు
+option d: పద్యాలను కేవలం రాగయుక్తంగా పాడటం
+correct: A
+explanation: బోధన ఎల్లప్పుడూ విద్యార్థి నిత్యజీవిత అనుభవాలతో ముడిపడి ఉండాలని ఆధునిక వ్యావహారిక బోధనా పద్ధతి ఆకాంక్షిస్తుంది.
+---
+subject: Language I (31-60)
+topic: Telugu Grammar
+difficulty: Hard
+marks: 1
+year: 2026
+question: తెలుగు భాషా వ్యాకరణం, కవులు, కావ్యాలు మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #57.
+option a: వ్యావహారిక భాషా బోధన మరియు సృజనాత్మక లేఖనం పెంపొందించడం
+option b: ప్రాచీన గ్రాంథిక భాషా నియమాలను మాత్రమే కంఠస్థం చేయడం
+option c: నిరంతర వ్యాకరణ సూత్రాలు మరియు వాటి సంప్రదాయ రూపాలు
+option d: పద్యాలను కేవలం రాగయుక్తంగా పాడటం
+correct: A
+explanation: బోధన ఎల్లప్పుడూ విద్యార్థి నిత్యజీవిత అనుభవాలతో ముడిపడి ఉండాలని ఆధునిక వ్యావహారిక బోధనా పద్ధతి ఆకాంక్షిస్తుంది.
+---
+subject: Language I (31-60)
+topic: Telugu Grammar
+difficulty: Hard
+marks: 1
+year: 2026
+question: తెలుగు భాషా వ్యాకరణం, కవులు, కావ్యాలు మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #58.
+option a: వ్యావహారిక భాషా బోధన మరియు సృజనాత్మక లేఖనం పెంపొందించడం
+option b: ప్రాచీన గ్రాంథిక భాషా నియమాలను మాత్రమే కంఠస్థం చేయడం
+option c: నిరంతర వ్యాకరణ సూత్రాలు మరియు వాటి సంప్రదాయ రూపాలు
+option d: పద్యాలను కేవలం రాగయుక్తంగా పాడటం
+correct: A
+explanation: బోధన ఎల్లప్పుడూ విద్యార్థి నిత్యజీవిత అనుభవాలతో ముడిపడి ఉండాలని ఆధునిక వ్యావహారిక బోధనా పద్ధతి ఆకాంక్షిస్తుంది.
+---
+subject: Language I (31-60)
+topic: Telugu Grammar
+difficulty: Hard
+marks: 1
+year: 2026
+question: తెలుగు భాషా వ్యాకరణం, కవులు, కావ్యాలు మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #59.
+option a: వ్యావహారిక భాషా బోధన మరియు సృజనాత్మక లేఖనం పెంపొందించడం
+option b: ప్రాచీన గ్రాంథిక భాషా నియమాలను మాత్రమే కంఠస్థం చేయడం
+option c: నిరంతర వ్యాకరణ సూత్రాలు మరియు వాటి సంప్రదాయ రూపాలు
+option d: పద్యాలను కేవలం రాగయుక్తంగా పాడటం
+correct: A
+explanation: బోధన ఎల్లప్పుడూ విద్యార్థి నిత్యజీవిత అనుభవాలతో ముడిపడి ఉండాలని ఆధునిక వ్యావహారిక బోధనా పద్ధతి ఆకాంక్షిస్తుంది.
+---
+subject: Language I (31-60)
+topic: Telugu Grammar
+difficulty: Hard
+marks: 1
+year: 2026
+question: తెలుగు భాషా వ్యాకరణం, కవులు, కావ్యాలు మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #60.
+option a: వ్యావహారిక భాషా బోధన మరియు సృజనాత్మక లేఖనం పెంపొందించడం
+option b: ప్రాచీన గ్రాంథిక భాషా నియమాలను మాత్రమే కంఠస్థం చేయడం
+option c: నిరంతర వ్యాకరణ సూత్రాలు మరియు వాటి సంప్రదాయ రూపాలు
+option d: పద్యాలను కేవలం రాగయుక్తంగా పాడటం
+correct: A
+explanation: బోధన ఎల్లప్పుడూ విద్యార్థి నిత్యజీవిత అనుభవాలతో ముడిపడి ఉండాలని ఆధునిక వ్యావహారిక బోధనా పద్ధతి ఆకాంక్షిస్తుంది.
+---
+subject: Language II (61-90)
+topic: Subject-Verb Agreement
+difficulty: Hard
+marks: 1
+year: 2026
+question: Choose the grammatically correct option to fill in the blank: 'Neither the teacher nor the students ______ present in the library.'
+option a: were
+option b: was
+option c: is
+option d: has
+correct: A
+explanation: When two subjects are joined by 'neither... nor', the verb agrees with the closer subject ('students' is plural, so 'were').
+---
+subject: Language II (61-90)
+topic: Prepositions
+difficulty: Hard
+marks: 1
+year: 2026
+question: Fill in the blank with the appropriate preposition: 'The young scientist was congratulated ______ his path-breaking discovery.'
+option a: on
+option b: for
+option c: at
+option d: about
+correct: A
+explanation: The verb 'congratulate' is followed by the preposition 'on' (congratulate someone on something).
+---
+subject: Language II (61-90)
+topic: Passive Voice
+difficulty: Hard
+marks: 1
+year: 2026
+question: Identify the correct passive form of: 'They are building a new highway bypass.'
+option a: A new highway bypass is being built by them.
+option b: A new highway bypass was built by them.
+option c: A new highway bypass has been built by them.
+option d: A new highway bypass is built by them.
+correct: A
+explanation: Present continuous tense in passive voice takes 'is/am/are + being + V3'.
+---
+subject: Language II (61-90)
+topic: Conditionals
+difficulty: Hard
+marks: 1
+year: 2026
+question: Choose the correct verb form to complete the Type 3 conditional sentence: 'If he had played well, we ______ won the championship.'
+option a: would have
+option b: will have
+option c: had
+option d: would
+correct: A
+explanation: Type 3 conditional clause takes 'had + past participle' and the main clause takes 'would have + past participle'.
+---
+subject: Language II (61-90)
+topic: Vocabulary
+difficulty: Hard
+marks: 1
+year: 2026
+question: Find the closest synonym for the word 'METICULOUS':
+option a: Scrupulous / Careful
+option b: Hasty
+option c: Sloppy
+option d: Indifferent
+correct: A
+explanation: Meticulous means showing great attention to detail; very careful and precise (scrupulous).
+---
+subject: Language II (61-90)
+topic: English Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: English Language Teaching methods, grammar syntax and reading theories assessment card #66.
+option a: Communicative Language Teaching focuses on interactive and meaningful communication tasks.
+option b: Grammar Translation Method teaches language by direct immersion without translation.
+option c: LSRW skills should be developed in isolation without integrated reading tasks.
+option d: Formative assessment is strictly meant for ranking students at the end of academic year.
+correct: A
+explanation: Pedagogy principles suggest English should be acquired through context-rich communicative environments.
+---
+subject: Language II (61-90)
+topic: English Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: English Language Teaching methods, grammar syntax and reading theories assessment card #67.
+option a: Communicative Language Teaching focuses on interactive and meaningful communication tasks.
+option b: Grammar Translation Method teaches language by direct immersion without translation.
+option c: LSRW skills should be developed in isolation without integrated reading tasks.
+option d: Formative assessment is strictly meant for ranking students at the end of academic year.
+correct: A
+explanation: Pedagogy principles suggest English should be acquired through context-rich communicative environments.
+---
+subject: Language II (61-90)
+topic: English Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: English Language Teaching methods, grammar syntax and reading theories assessment card #68.
+option a: Communicative Language Teaching focuses on interactive and meaningful communication tasks.
+option b: Grammar Translation Method teaches language by direct immersion without translation.
+option c: LSRW skills should be developed in isolation without integrated reading tasks.
+option d: Formative assessment is strictly meant for ranking students at the end of academic year.
+correct: A
+explanation: Pedagogy principles suggest English should be acquired through context-rich communicative environments.
+---
+subject: Language II (61-90)
+topic: English Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: English Language Teaching methods, grammar syntax and reading theories assessment card #69.
+option a: Communicative Language Teaching focuses on interactive and meaningful communication tasks.
+option b: Grammar Translation Method teaches language by direct immersion without translation.
+option c: LSRW skills should be developed in isolation without integrated reading tasks.
+option d: Formative assessment is strictly meant for ranking students at the end of academic year.
+correct: A
+explanation: Pedagogy principles suggest English should be acquired through context-rich communicative environments.
+---
+subject: Language II (61-90)
+topic: English Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: English Language Teaching methods, grammar syntax and reading theories assessment card #70.
+option a: Communicative Language Teaching focuses on interactive and meaningful communication tasks.
+option b: Grammar Translation Method teaches language by direct immersion without translation.
+option c: LSRW skills should be developed in isolation without integrated reading tasks.
+option d: Formative assessment is strictly meant for ranking students at the end of academic year.
+correct: A
+explanation: Pedagogy principles suggest English should be acquired through context-rich communicative environments.
+---
+subject: Language II (61-90)
+topic: English Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: English Language Teaching methods, grammar syntax and reading theories assessment card #71.
+option a: Communicative Language Teaching focuses on interactive and meaningful communication tasks.
+option b: Grammar Translation Method teaches language by direct immersion without translation.
+option c: LSRW skills should be developed in isolation without integrated reading tasks.
+option d: Formative assessment is strictly meant for ranking students at the end of academic year.
+correct: A
+explanation: Pedagogy principles suggest English should be acquired through context-rich communicative environments.
+---
+subject: Language II (61-90)
+topic: English Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: English Language Teaching methods, grammar syntax and reading theories assessment card #72.
+option a: Communicative Language Teaching focuses on interactive and meaningful communication tasks.
+option b: Grammar Translation Method teaches language by direct immersion without translation.
+option c: LSRW skills should be developed in isolation without integrated reading tasks.
+option d: Formative assessment is strictly meant for ranking students at the end of academic year.
+correct: A
+explanation: Pedagogy principles suggest English should be acquired through context-rich communicative environments.
+---
+subject: Language II (61-90)
+topic: English Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: English Language Teaching methods, grammar syntax and reading theories assessment card #73.
+option a: Communicative Language Teaching focuses on interactive and meaningful communication tasks.
+option b: Grammar Translation Method teaches language by direct immersion without translation.
+option c: LSRW skills should be developed in isolation without integrated reading tasks.
+option d: Formative assessment is strictly meant for ranking students at the end of academic year.
+correct: A
+explanation: Pedagogy principles suggest English should be acquired through context-rich communicative environments.
+---
+subject: Language II (61-90)
+topic: English Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: English Language Teaching methods, grammar syntax and reading theories assessment card #74.
+option a: Communicative Language Teaching focuses on interactive and meaningful communication tasks.
+option b: Grammar Translation Method teaches language by direct immersion without translation.
+option c: LSRW skills should be developed in isolation without integrated reading tasks.
+option d: Formative assessment is strictly meant for ranking students at the end of academic year.
+correct: A
+explanation: Pedagogy principles suggest English should be acquired through context-rich communicative environments.
+---
+subject: Language II (61-90)
+topic: English Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: English Language Teaching methods, grammar syntax and reading theories assessment card #75.
+option a: Communicative Language Teaching focuses on interactive and meaningful communication tasks.
+option b: Grammar Translation Method teaches language by direct immersion without translation.
+option c: LSRW skills should be developed in isolation without integrated reading tasks.
+option d: Formative assessment is strictly meant for ranking students at the end of academic year.
+correct: A
+explanation: Pedagogy principles suggest English should be acquired through context-rich communicative environments.
+---
+subject: Language II (61-90)
+topic: English Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: English Language Teaching methods, grammar syntax and reading theories assessment card #76.
+option a: Communicative Language Teaching focuses on interactive and meaningful communication tasks.
+option b: Grammar Translation Method teaches language by direct immersion without translation.
+option c: LSRW skills should be developed in isolation without integrated reading tasks.
+option d: Formative assessment is strictly meant for ranking students at the end of academic year.
+correct: A
+explanation: Pedagogy principles suggest English should be acquired through context-rich communicative environments.
+---
+subject: Language II (61-90)
+topic: English Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: English Language Teaching methods, grammar syntax and reading theories assessment card #77.
+option a: Communicative Language Teaching focuses on interactive and meaningful communication tasks.
+option b: Grammar Translation Method teaches language by direct immersion without translation.
+option c: LSRW skills should be developed in isolation without integrated reading tasks.
+option d: Formative assessment is strictly meant for ranking students at the end of academic year.
+correct: A
+explanation: Pedagogy principles suggest English should be acquired through context-rich communicative environments.
+---
+subject: Language II (61-90)
+topic: English Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: English Language Teaching methods, grammar syntax and reading theories assessment card #78.
+option a: Communicative Language Teaching focuses on interactive and meaningful communication tasks.
+option b: Grammar Translation Method teaches language by direct immersion without translation.
+option c: LSRW skills should be developed in isolation without integrated reading tasks.
+option d: Formative assessment is strictly meant for ranking students at the end of academic year.
+correct: A
+explanation: Pedagogy principles suggest English should be acquired through context-rich communicative environments.
+---
+subject: Language II (61-90)
+topic: English Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: English Language Teaching methods, grammar syntax and reading theories assessment card #79.
+option a: Communicative Language Teaching focuses on interactive and meaningful communication tasks.
+option b: Grammar Translation Method teaches language by direct immersion without translation.
+option c: LSRW skills should be developed in isolation without integrated reading tasks.
+option d: Formative assessment is strictly meant for ranking students at the end of academic year.
+correct: A
+explanation: Pedagogy principles suggest English should be acquired through context-rich communicative environments.
+---
+subject: Language II (61-90)
+topic: English Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: English Language Teaching methods, grammar syntax and reading theories assessment card #80.
+option a: Communicative Language Teaching focuses on interactive and meaningful communication tasks.
+option b: Grammar Translation Method teaches language by direct immersion without translation.
+option c: LSRW skills should be developed in isolation without integrated reading tasks.
+option d: Formative assessment is strictly meant for ranking students at the end of academic year.
+correct: A
+explanation: Pedagogy principles suggest English should be acquired through context-rich communicative environments.
+---
+subject: Language II (61-90)
+topic: English Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: English Language Teaching methods, grammar syntax and reading theories assessment card #81.
+option a: Communicative Language Teaching focuses on interactive and meaningful communication tasks.
+option b: Grammar Translation Method teaches language by direct immersion without translation.
+option c: LSRW skills should be developed in isolation without integrated reading tasks.
+option d: Formative assessment is strictly meant for ranking students at the end of academic year.
+correct: A
+explanation: Pedagogy principles suggest English should be acquired through context-rich communicative environments.
+---
+subject: Language II (61-90)
+topic: English Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: English Language Teaching methods, grammar syntax and reading theories assessment card #82.
+option a: Communicative Language Teaching focuses on interactive and meaningful communication tasks.
+option b: Grammar Translation Method teaches language by direct immersion without translation.
+option c: LSRW skills should be developed in isolation without integrated reading tasks.
+option d: Formative assessment is strictly meant for ranking students at the end of academic year.
+correct: A
+explanation: Pedagogy principles suggest English should be acquired through context-rich communicative environments.
+---
+subject: Language II (61-90)
+topic: English Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: English Language Teaching methods, grammar syntax and reading theories assessment card #83.
+option a: Communicative Language Teaching focuses on interactive and meaningful communication tasks.
+option b: Grammar Translation Method teaches language by direct immersion without translation.
+option c: LSRW skills should be developed in isolation without integrated reading tasks.
+option d: Formative assessment is strictly meant for ranking students at the end of academic year.
+correct: A
+explanation: Pedagogy principles suggest English should be acquired through context-rich communicative environments.
+---
+subject: Language II (61-90)
+topic: English Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: English Language Teaching methods, grammar syntax and reading theories assessment card #84.
+option a: Communicative Language Teaching focuses on interactive and meaningful communication tasks.
+option b: Grammar Translation Method teaches language by direct immersion without translation.
+option c: LSRW skills should be developed in isolation without integrated reading tasks.
+option d: Formative assessment is strictly meant for ranking students at the end of academic year.
+correct: A
+explanation: Pedagogy principles suggest English should be acquired through context-rich communicative environments.
+---
+subject: Language II (61-90)
+topic: English Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: English Language Teaching methods, grammar syntax and reading theories assessment card #85.
+option a: Communicative Language Teaching focuses on interactive and meaningful communication tasks.
+option b: Grammar Translation Method teaches language by direct immersion without translation.
+option c: LSRW skills should be developed in isolation without integrated reading tasks.
+option d: Formative assessment is strictly meant for ranking students at the end of academic year.
+correct: A
+explanation: Pedagogy principles suggest English should be acquired through context-rich communicative environments.
+---
+subject: Language II (61-90)
+topic: English Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: English Language Teaching methods, grammar syntax and reading theories assessment card #86.
+option a: Communicative Language Teaching focuses on interactive and meaningful communication tasks.
+option b: Grammar Translation Method teaches language by direct immersion without translation.
+option c: LSRW skills should be developed in isolation without integrated reading tasks.
+option d: Formative assessment is strictly meant for ranking students at the end of academic year.
+correct: A
+explanation: Pedagogy principles suggest English should be acquired through context-rich communicative environments.
+---
+subject: Language II (61-90)
+topic: English Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: English Language Teaching methods, grammar syntax and reading theories assessment card #87.
+option a: Communicative Language Teaching focuses on interactive and meaningful communication tasks.
+option b: Grammar Translation Method teaches language by direct immersion without translation.
+option c: LSRW skills should be developed in isolation without integrated reading tasks.
+option d: Formative assessment is strictly meant for ranking students at the end of academic year.
+correct: A
+explanation: Pedagogy principles suggest English should be acquired through context-rich communicative environments.
+---
+subject: Language II (61-90)
+topic: English Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: English Language Teaching methods, grammar syntax and reading theories assessment card #88.
+option a: Communicative Language Teaching focuses on interactive and meaningful communication tasks.
+option b: Grammar Translation Method teaches language by direct immersion without translation.
+option c: LSRW skills should be developed in isolation without integrated reading tasks.
+option d: Formative assessment is strictly meant for ranking students at the end of academic year.
+correct: A
+explanation: Pedagogy principles suggest English should be acquired through context-rich communicative environments.
+---
+subject: Language II (61-90)
+topic: English Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: English Language Teaching methods, grammar syntax and reading theories assessment card #89.
+option a: Communicative Language Teaching focuses on interactive and meaningful communication tasks.
+option b: Grammar Translation Method teaches language by direct immersion without translation.
+option c: LSRW skills should be developed in isolation without integrated reading tasks.
+option d: Formative assessment is strictly meant for ranking students at the end of academic year.
+correct: A
+explanation: Pedagogy principles suggest English should be acquired through context-rich communicative environments.
+---
+subject: Language II (61-90)
+topic: English Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: English Language Teaching methods, grammar syntax and reading theories assessment card #90.
+option a: Communicative Language Teaching focuses on interactive and meaningful communication tasks.
+option b: Grammar Translation Method teaches language by direct immersion without translation.
+option c: LSRW skills should be developed in isolation without integrated reading tasks.
+option d: Formative assessment is strictly meant for ranking students at the end of academic year.
+correct: A
+explanation: Pedagogy principles suggest English should be acquired through context-rich communicative environments.
+---
+subject: Mathematics (91-120)
+topic: Number Systems
+difficulty: Hard
+marks: 1
+year: 2026
+question: గణించండి: $0.\overline{7} + 0.\overline{3}$ విలువ ఎంత?
+option a: \frac{10}{9}
+option b: 1.0
+option c: \frac{73}{99}
+option d: \frac{1}{9}
+correct: A
+explanation: Let $x = 0.777... = 7/9$ and $y = 0.333... = 3/9$. Thus $x + y = 7/9 + 3/9 = 10/9$.
+---
+subject: Mathematics (91-120)
+topic: Mensuration
+difficulty: Hard
+marks: 1
+year: 2026
+question: ఒక స్థూపం (Cylinder) వ్యాసార్థం మరియు ఎత్తులు రెండింటినీ 50% పెంచితే, దాని ఘనపరిమాణం (Volume) లో వచ్చే మార్పు శాతం ఎంత?
+option a: 237.5% పెరగడం
+option b: 150% పెరగడం
+option c: 125% పెరగడం
+option d: 337.5% పెరగడం
+correct: A
+explanation: Volume $V = \pi r^2 h$. New $V' = \pi (1.5r)^2 (1.5h) = 3.375 V$. Growth is $3.375 - 1 = 2.375$ or $237.5\%$.
+---
+subject: Mathematics (91-120)
+topic: Geometry
+difficulty: Hard
+marks: 1
+year: 2026
+question: ఒక క్రమ బహుభుజిలో (Regular Polygon) ఒక్కొక్క అంతరకోణం $144^\circ$ అయితే ఆ బహుభుజిలోని భుజాల సంఖ్య ఎంత?
+option a: 10
+option b: 8
+option c: 12
+option d: 6
+correct: A
+explanation: Exterior angle = $180^\circ - 144^\circ = 36^\circ$. Number of sides $n = 360^\circ / 36^\circ = 10$.
+---
+subject: Mathematics (91-120)
+topic: Algebra
+difficulty: Hard
+marks: 1
+year: 2026
+question: ($a + b + c = 12$) మరియు ($a^2 + b^2 + c^2 = 50$) అయితే ($ab + bc + ca$) విలువ ఎంత?
+option a: 47
+option b: 94
+option c: 22
+option d: 36
+correct: A
+explanation: Using formula $(a+b+c)^2 = a^2+b^2+c^2 + 2(ab+bc+ca) \implies 144 = 50 + 2x \implies 2x = 94 \implies x = 47$.
+---
+subject: Mathematics (91-120)
+topic: Compound Interest
+difficulty: Hard
+marks: 1
+year: 2026
+question: ఒక నిర్దిష్ట అసలు చక్రవడ్డీతో 3 సంవత్సరాలలో 3 రెట్లు అవుతుంది. అదే అసలు 9 రెట్లు కావడానికి పట్టే కాలం ఎంత?
+option a: 6 సంవత్సరాలు
+option b: 9 సంవత్సరాలు
+option c: 5 సంవత్సరాలు
+option d: 12 సంవత్సరాలు
+correct: A
+explanation: If $P$ becomes $3P$ in 3 years, then it becomes $3 \times 3P = 9P$ in $3 + 3 = 6$ years.
+---
+subject: Mathematics (91-120)
+topic: Math Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: గణిత భావనలు, నిష్పత్తులు, రేఖాగణితం మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #96.
+option a: ఉపాధ్యాయుడు దశాంశాల బోధనకు గ్రిడ్ పేపర్లు మరియు స్థానవిలువల చార్టులను వాడాలి
+option b: విద్యార్థులకు కేవలం సూత్రాలను కంఠస్థం చేయించాలి
+option c: లెక్కలను కేవలం బోర్డుపై రాసి సరిచూడాలి
+option d: గణితంలో సృజనాత్మకతకు తావులేదు
+correct: A
+explanation: గణిత బోధన నిత్యజీవిత అనువర్తనాలతో అనుసంధానమై ఉండాలని విద్యాప్రమాణాలు సూచిస్తున్నాయి.
+---
+subject: Mathematics (91-120)
+topic: Math Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: గణిత భావనలు, నిష్పత్తులు, రేఖాగణితం మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #97.
+option a: ఉపాధ్యాయుడు దశాంశాల బోధనకు గ్రిడ్ పేపర్లు మరియు స్థానవిలువల చార్టులను వాడాలి
+option b: విద్యార్థులకు కేవలం సూత్రాలను కంఠస్థం చేయించాలి
+option c: లెక్కలను కేవలం బోర్డుపై రాసి సరిచూడాలి
+option d: గణితంలో సృజనాత్మకతకు తావులేదు
+correct: A
+explanation: గణిత బోధన నిత్యజీవిత అనువర్తనాలతో అనుసంధానమై ఉండాలని విద్యాప్రమాణాలు సూచిస్తున్నాయి.
+---
+subject: Mathematics (91-120)
+topic: Math Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: గణిత భావనలు, నిష్పత్తులు, రేఖాగణితం మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #98.
+option a: ఉపాధ్యాయుడు దశాంశాల బోధనకు గ్రిడ్ పేపర్లు మరియు స్థానవిలువల చార్టులను వాడాలి
+option b: విద్యార్థులకు కేవలం సూత్రాలను కంఠస్థం చేయించాలి
+option c: లెక్కలను కేవలం బోర్డుపై రాసి సరిచూడాలి
+option d: గణితంలో సృజనాత్మకతకు తావులేదు
+correct: A
+explanation: గణిత బోధన నిత్యజీవిత అనువర్తనాలతో అనుసంధానమై ఉండాలని విద్యాప్రమాణాలు సూచిస్తున్నాయి.
+---
+subject: Mathematics (91-120)
+topic: Math Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: గణిత భావనలు, నిష్పత్తులు, రేఖాగణితం మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #99.
+option a: ఉపాధ్యాయుడు దశాంశాల బోధనకు గ్రిడ్ పేపర్లు మరియు స్థానవిలువల చార్టులను వాడాలి
+option b: విద్యార్థులకు కేవలం సూత్రాలను కంఠస్థం చేయించాలి
+option c: లెక్కలను కేవలం బోర్డుపై రాసి సరిచూడాలి
+option d: గణితంలో సృజనాత్మకతకు తావులేదు
+correct: A
+explanation: గణిత బోధన నిత్యజీవిత అనువర్తనాలతో అనుసంధానమై ఉండాలని విద్యాప్రమాణాలు సూచిస్తున్నాయి.
+---
+subject: Mathematics (91-120)
+topic: Math Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: గణిత భావనలు, నిష్పత్తులు, రేఖాగణితం మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #100.
+option a: ఉపాధ్యాయుడు దశాంశాల బోధనకు గ్రిడ్ పేపర్లు మరియు స్థానవిలువల చార్టులను వాడాలి
+option b: విద్యార్థులకు కేవలం సూత్రాలను కంఠస్థం చేయించాలి
+option c: లెక్కలను కేవలం బోర్డుపై రాసి సరిచూడాలి
+option d: గణితంలో సృజనాత్మకతకు తావులేదు
+correct: A
+explanation: గణిత బోధన నిత్యజీవిత అనువర్తనాలతో అనుసంధానమై ఉండాలని విద్యాప్రమాణాలు సూచిస్తున్నాయి.
+---
+subject: Mathematics (91-120)
+topic: Math Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: గణిత భావనలు, నిష్పత్తులు, రేఖాగణితం మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #101.
+option a: ఉపాధ్యాయుడు దశాంశాల బోధనకు గ్రిడ్ పేపర్లు మరియు స్థానవిలువల చార్టులను వాడాలి
+option b: విద్యార్థులకు కేవలం సూత్రాలను కంఠస్థం చేయించాలి
+option c: లెక్కలను కేవలం బోర్డుపై రాసి సరిచూడాలి
+option d: గణితంలో సృజనాత్మకతకు తావులేదు
+correct: A
+explanation: గణిత బోధన నిత్యజీవిత అనువర్తనాలతో అనుసంధానమై ఉండాలని విద్యాప్రమాణాలు సూచిస్తున్నాయి.
+---
+subject: Mathematics (91-120)
+topic: Math Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: గణిత భావనలు, నిష్పత్తులు, రేఖాగణితం మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #102.
+option a: ఉపాధ్యాయుడు దశాంశాల బోధనకు గ్రిడ్ పేపర్లు మరియు స్థానవిలువల చార్టులను వాడాలి
+option b: విద్యార్థులకు కేవలం సూత్రాలను కంఠస్థం చేయించాలి
+option c: లెక్కలను కేవలం బోర్డుపై రాసి సరిచూడాలి
+option d: గణితంలో సృజనాత్మకతకు తావులేదు
+correct: A
+explanation: గణిత బోధన నిత్యజీవిత అనువర్తనాలతో అనుసంధానమై ఉండాలని విద్యాప్రమాణాలు సూచిస్తున్నాయి.
+---
+subject: Mathematics (91-120)
+topic: Math Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: గణిత భావనలు, నిష్పత్తులు, రేఖాగణితం మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #103.
+option a: ఉపాధ్యాయుడు దశాంశాల బోధనకు గ్రిడ్ పేపర్లు మరియు స్థానవిలువల చార్టులను వాడాలి
+option b: విద్యార్థులకు కేవలం సూత్రాలను కంఠస్థం చేయించాలి
+option c: లెక్కలను కేవలం బోర్డుపై రాసి సరిచూడాలి
+option d: గణితంలో సృజనాత్మకతకు తావులేదు
+correct: A
+explanation: గణిత బోధన నిత్యజీవిత అనువర్తనాలతో అనుసంధానమై ఉండాలని విద్యాప్రమాణాలు సూచిస్తున్నాయి.
+---
+subject: Mathematics (91-120)
+topic: Math Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: గణిత భావనలు, నిష్పత్తులు, రేఖాగణితం మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #104.
+option a: ఉపాధ్యాయుడు దశాంశాల బోధనకు గ్రిడ్ పేపర్లు మరియు స్థానవిలువల చార్టులను వాడాలి
+option b: విద్యార్థులకు కేవలం సూత్రాలను కంఠస్థం చేయించాలి
+option c: లెక్కలను కేవలం బోర్డుపై రాసి సరిచూడాలి
+option d: గణితంలో సృజనాత్మకతకు తావులేదు
+correct: A
+explanation: గణిత బోధన నిత్యజీవిత అనువర్తనాలతో అనుసంధానమై ఉండాలని విద్యాప్రమాణాలు సూచిస్తున్నాయి.
+---
+subject: Mathematics (91-120)
+topic: Math Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: గణిత భావనలు, నిష్పత్తులు, రేఖాగణితం మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #105.
+option a: ఉపాధ్యాయుడు దశాంశాల బోధనకు గ్రిడ్ పేపర్లు మరియు స్థానవిలువల చార్టులను వాడాలి
+option b: విద్యార్థులకు కేవలం సూత్రాలను కంఠస్థం చేయించాలి
+option c: లెక్కలను కేవలం బోర్డుపై రాసి సరిచూడాలి
+option d: గణితంలో సృజనాత్మకతకు తావులేదు
+correct: A
+explanation: గణిత బోధన నిత్యజీవిత అనువర్తనాలతో అనుసంధానమై ఉండాలని విద్యాప్రమాణాలు సూచిస్తున్నాయి.
+---
+subject: Mathematics (91-120)
+topic: Math Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: గణిత భావనలు, నిష్పత్తులు, రేఖాగణితం మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #106.
+option a: ఉపాధ్యాయుడు దశాంశాల బోధనకు గ్రిడ్ పేపర్లు మరియు స్థానవిలువల చార్టులను వాడాలి
+option b: విద్యార్థులకు కేవలం సూత్రాలను కంఠస్థం చేయించాలి
+option c: లెక్కలను కేవలం బోర్డుపై రాసి సరిచూడాలి
+option d: గణితంలో సృజనాత్మకతకు తావులేదు
+correct: A
+explanation: గణిత బోధన నిత్యజీవిత అనువర్తనాలతో అనుసంధానమై ఉండాలని విద్యాప్రమాణాలు సూచిస్తున్నాయి.
+---
+subject: Mathematics (91-120)
+topic: Math Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: గణిత భావనలు, నిష్పత్తులు, రేఖాగణితం మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #107.
+option a: ఉపాధ్యాయుడు దశాంశాల బోధనకు గ్రిడ్ పేపర్లు మరియు స్థానవిలువల చార్టులను వాడాలి
+option b: విద్యార్థులకు కేవలం సూత్రాలను కంఠస్థం చేయించాలి
+option c: లెక్కలను కేవలం బోర్డుపై రాసి సరిచూడాలి
+option d: గణితంలో సృజనాత్మకతకు తావులేదు
+correct: A
+explanation: గణిత బోధన నిత్యజీవిత అనువర్తనాలతో అనుసంధానమై ఉండాలని విద్యాప్రమాణాలు సూచిస్తున్నాయి.
+---
+subject: Mathematics (91-120)
+topic: Math Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: గణిత భావనలు, నిష్పత్తులు, రేఖాగణితం మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #108.
+option a: ఉపాధ్యాయుడు దశాంశాల బోధనకు గ్రిడ్ పేపర్లు మరియు స్థానవిలువల చార్టులను వాడాలి
+option b: విద్యార్థులకు కేవలం సూత్రాలను కంఠస్థం చేయించాలి
+option c: లెక్కలను కేవలం బోర్డుపై రాసి సరిచూడాలి
+option d: గణితంలో సృజనాత్మకతకు తావులేదు
+correct: A
+explanation: గణిత బోధన నిత్యజీవిత అనువర్తనాలతో అనుసంధానమై ఉండాలని విద్యాప్రమాణాలు సూచిస్తున్నాయి.
+---
+subject: Mathematics (91-120)
+topic: Math Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: గణిత భావనలు, నిష్పత్తులు, రేఖాగణితం మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #109.
+option a: ఉపాధ్యాయుడు దశాంశాల బోధనకు గ్రిడ్ పేపర్లు మరియు స్థానవిలువల చార్టులను వాడాలి
+option b: విద్యార్థులకు కేవలం సూత్రాలను కంఠస్థం చేయించాలి
+option c: లెక్కలను కేవలం బోర్డుపై రాసి సరిచూడాలి
+option d: గణితంలో సృజనాత్మకతకు తావులేదు
+correct: A
+explanation: గణిత బోధన నిత్యజీవిత అనువర్తనాలతో అనుసంధానమై ఉండాలని విద్యాప్రమాణాలు సూచిస్తున్నాయి.
+---
+subject: Mathematics (91-120)
+topic: Math Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: గణిత భావనలు, నిష్పత్తులు, రేఖాగణితం మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #110.
+option a: ఉపాధ్యాయుడు దశాంశాల బోధనకు గ్రిడ్ పేపర్లు మరియు స్థానవిలువల చార్టులను వాడాలి
+option b: విద్యార్థులకు కేవలం సూత్రాలను కంఠస్థం చేయించాలి
+option c: లెక్కలను కేవలం బోర్డుపై రాసి సరిచూడాలి
+option d: గణితంలో సృజనాత్మకతకు తావులేదు
+correct: A
+explanation: గణిత బోధన నిత్యజీవిత అనువర్తనాలతో అనుసంధానమై ఉండాలని విద్యాప్రమాణాలు సూచిస్తున్నాయి.
+---
+subject: Mathematics (91-120)
+topic: Math Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: గణిత భావనలు, నిష్పత్తులు, రేఖాగణితం మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #111.
+option a: ఉపాధ్యాయుడు దశాంశాల బోధనకు గ్రిడ్ పేపర్లు మరియు స్థానవిలువల చార్టులను వాడాలి
+option b: విద్యార్థులకు కేవలం సూత్రాలను కంఠస్థం చేయించాలి
+option c: లెక్కలను కేవలం బోర్డుపై రాసి సరిచూడాలి
+option d: గణితంలో సృజనాత్మకతకు తావులేదు
+correct: A
+explanation: గణిత బోధన నిత్యజీవిత అనువర్తనాలతో అనుసంధానమై ఉండాలని విద్యాప్రమాణాలు సూచిస్తున్నాయి.
+---
+subject: Mathematics (91-120)
+topic: Math Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: గణిత భావనలు, నిష్పత్తులు, రేఖాగణితం మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #112.
+option a: ఉపాధ్యాయుడు దశాంశాల బోధనకు గ్రిడ్ పేపర్లు మరియు స్థానవిలువల చార్టులను వాడాలి
+option b: విద్యార్థులకు కేవలం సూత్రాలను కంఠస్థం చేయించాలి
+option c: లెక్కలను కేవలం బోర్డుపై రాసి సరిచూడాలి
+option d: గణితంలో సృజనాత్మకతకు తావులేదు
+correct: A
+explanation: గణిత బోధన నిత్యజీవిత అనువర్తనాలతో అనుసంధానమై ఉండాలని విద్యాప్రమాణాలు సూచిస్తున్నాయి.
+---
+subject: Mathematics (91-120)
+topic: Math Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: గణిత భావనలు, నిష్పత్తులు, రేఖాగణితం మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #113.
+option a: ఉపాధ్యాయుడు దశాంశాల బోధనకు గ్రిడ్ పేపర్లు మరియు స్థానవిలువల చార్టులను వాడాలి
+option b: విద్యార్థులకు కేవలం సూత్రాలను కంఠస్థం చేయించాలి
+option c: లెక్కలను కేవలం బోర్డుపై రాసి సరిచూడాలి
+option d: గణితంలో సృజనాత్మకతకు తావులేదు
+correct: A
+explanation: గణిత బోధన నిత్యజీవిత అనువర్తనాలతో అనుసంధానమై ఉండాలని విద్యాప్రమాణాలు సూచిస్తున్నాయి.
+---
+subject: Mathematics (91-120)
+topic: Math Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: గణిత భావనలు, నిష్పత్తులు, రేఖాగణితం మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #114.
+option a: ఉపాధ్యాయుడు దశాంశాల బోధనకు గ్రిడ్ పేపర్లు మరియు స్థానవిలువల చార్టులను వాడాలి
+option b: విద్యార్థులకు కేవలం సూత్రాలను కంఠస్థం చేయించాలి
+option c: లెక్కలను కేవలం బోర్డుపై రాసి సరిచూడాలి
+option d: గణితంలో సృజనాత్మకతకు తావులేదు
+correct: A
+explanation: గణిత బోధన నిత్యజీవిత అనువర్తనాలతో అనుసంధానమై ఉండాలని విద్యాప్రమాణాలు సూచిస్తున్నాయి.
+---
+subject: Mathematics (91-120)
+topic: Math Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: గణిత భావనలు, నిష్పత్తులు, రేఖాగణితం మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #115.
+option a: ఉపాధ్యాయుడు దశాంశాల బోధనకు గ్రిడ్ పేపర్లు మరియు స్థానవిలువల చార్టులను వాడాలి
+option b: విద్యార్థులకు కేవలం సూత్రాలను కంఠస్థం చేయించాలి
+option c: లెక్కలను కేవలం బోర్డుపై రాసి సరిచూడాలి
+option d: గణితంలో సృజనాత్మకతకు తావులేదు
+correct: A
+explanation: గణిత బోధన నిత్యజీవిత అనువర్తనాలతో అనుసంధానమై ఉండాలని విద్యాప్రమాణాలు సూచిస్తున్నాయి.
+---
+subject: Mathematics (91-120)
+topic: Math Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: గణిత భావనలు, నిష్పత్తులు, రేఖాగణితం మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #116.
+option a: ఉపాధ్యాయుడు దశాంశాల బోధనకు గ్రిడ్ పేపర్లు మరియు స్థానవిలువల చార్టులను వాడాలి
+option b: విద్యార్థులకు కేవలం సూత్రాలను కంఠస్థం చేయించాలి
+option c: లెక్కలను కేవలం బోర్డుపై రాసి సరిచూడాలి
+option d: గణితంలో సృజనాత్మకతకు తావులేదు
+correct: A
+explanation: గణిత బోధన నిత్యజీవిత అనువర్తనాలతో అనుసంధానమై ఉండాలని విద్యాప్రమాణాలు సూచిస్తున్నాయి.
+---
+subject: Mathematics (91-120)
+topic: Math Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: గణిత భావనలు, నిష్పత్తులు, రేఖాగణితం మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #117.
+option a: ఉపాధ్యాయుడు దశాంశాల బోధనకు గ్రిడ్ పేపర్లు మరియు స్థానవిలువల చార్టులను వాడాలి
+option b: విద్యార్థులకు కేవలం సూత్రాలను కంఠస్థం చేయించాలి
+option c: లెక్కలను కేవలం బోర్డుపై రాసి సరిచూడాలి
+option d: గణితంలో సృజనాత్మకతకు తావులేదు
+correct: A
+explanation: గణిత బోధన నిత్యజీవిత అనువర్తనాలతో అనుసంధానమై ఉండాలని విద్యాప్రమాణాలు సూచిస్తున్నాయి.
+---
+subject: Mathematics (91-120)
+topic: Math Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: గణిత భావనలు, నిష్పత్తులు, రేఖాగణితం మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #118.
+option a: ఉపాధ్యాయుడు దశాంశాల బోధనకు గ్రిడ్ పేపర్లు మరియు స్థానవిలువల చార్టులను వాడాలి
+option b: విద్యార్థులకు కేవలం సూత్రాలను కంఠస్థం చేయించాలి
+option c: లెక్కలను కేవలం బోర్డుపై రాసి సరిచూడాలి
+option d: గణితంలో సృజనాత్మకతకు తావులేదు
+correct: A
+explanation: గణిత బోధన నిత్యజీవిత అనువర్తనాలతో అనుసంధానమై ఉండాలని విద్యాప్రమాణాలు సూచిస్తున్నాయి.
+---
+subject: Mathematics (91-120)
+topic: Math Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: గణిత భావనలు, నిష్పత్తులు, రేఖాగణితం మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #119.
+option a: ఉపాధ్యాయుడు దశాంశాల బోధనకు గ్రిడ్ పేపర్లు మరియు స్థానవిలువల చార్టులను వాడాలి
+option b: విద్యార్థులకు కేవలం సూత్రాలను కంఠస్థం చేయించాలి
+option c: లెక్కలను కేవలం బోర్డుపై రాసి సరిచూడాలి
+option d: గణితంలో సృజనాత్మకతకు తావులేదు
+correct: A
+explanation: గణిత బోధన నిత్యజీవిత అనువర్తనాలతో అనుసంధానమై ఉండాలని విద్యాప్రమాణాలు సూచిస్తున్నాయి.
+---
+subject: Mathematics (91-120)
+topic: Math Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: గణిత భావనలు, నిష్పత్తులు, రేఖాగణితం మరియు బోధనా పద్ధతులపై క్లిష్టమైన ప్రశ్న #120.
+option a: ఉపాధ్యాయుడు దశాంశాల బోధనకు గ్రిడ్ పేపర్లు మరియు స్థానవిలువల చార్టులను వాడాలి
+option b: విద్యార్థులకు కేవలం సూత్రాలను కంఠస్థం చేయించాలి
+option c: లెక్కలను కేవలం బోర్డుపై రాసి సరిచూడాలి
+option d: గణితంలో సృజనాత్మకతకు తావులేదు
+correct: A
+explanation: గణిత బోధన నిత్యజీవిత అనువర్తనాలతో అనుసంధానమై ఉండాలని విద్యాప్రమాణాలు సూచిస్తున్నాయి.
+---
+subject: Environmental Studies (121-150)
+topic: Human Physiology
+difficulty: Hard
+marks: 1
+year: 2026
+question: మానవ జీర్ణవ్యవస్థలో కార్బోహైడ్రేట్లు, ప్రోటీన్లు మరియు కొవ్వుల (Fats) యొక్క సంపూర్ణ జీర్ణక్రియ (Complete Digestion) ఎక్కడ జరుగుతుంది?
+option a: చిన్న పేగు (Small Intestine)
+option b: జీర్ణాశయం (Stomach)
+option c: పెద్ద పేగు (Large Intestine)
+option d: నోరు (Mouth)
+correct: A
+explanation: చిన్న పేగులో కాలేయం నుండి పిత్తరసం, క్లోమరసం, మరియు ఆంత్రరసాల సహాయంతో సంపూర్ణ జీర్ణక్రియ పూర్తవుతుంది.
+---
+subject: Environmental Studies (121-150)
+topic: Physical Sciences
+difficulty: Hard
+marks: 1
+year: 2026
+question: కింది వాటిలో గది ఉష్ణోగ్రత వద్ద ద్రవరూపంలో ఉండే ఏకైక అలోహం (Non-metal) ఏది?
+option a: బ్రోమిన్ (Bromine)
+option b: పాదరసం (Mercury)
+option c: క్లోరిన్ (Chlorine)
+option d: అయోడిన్ (Iodine)
+correct: A
+explanation: పాదరసం ద్రవరూప లోహం (Metal), బ్రోమిన్ ద్రవరూప అలోహం (Non-metal).
+---
+subject: Environmental Studies (121-150)
+topic: Polity & Constitution
+difficulty: Hard
+marks: 1
+year: 2026
+question: భారత రాజ్యాంగంలో ఏ ప్రాథమిక హక్కును 'రాజ్యాంగ పరిహారపు హక్కు' అని పిలుస్తారు మరియు దీనిని బి.ఆర్. అంబేద్కర్ రాజ్యాంగ హృదయం మరియు ఆత్మగా అభివర్ణించారు?
+option a: ఆర్టికల్ 32
+option b: ఆర్టికల్ 21
+option c: ఆర్టికల్ 14
+option d: ఆర్టికల్ 19
+correct: A
+explanation: ఆర్టికల్ 32 సుప్రీం కోర్టు ద్వారా ప్రాథమిక హక్కుల రక్షణకు రిట్స్ జారీ చేసే అధికారమిస్తుంది.
+---
+subject: Environmental Studies (121-150)
+topic: Ecology & Pollution
+difficulty: Hard
+marks: 1
+year: 2026
+question: ఆమ్ల వర్షాలు (Acid Rains) కురవడానికి వాతావరణంలో ఏ వాయువుల సాంద్రత పెరగడం ప్రధాన కారణం?
+option a: సల్ఫర్ డయాక్సైడ్ (SO2) మరియు నైట్రోజన్ ఆక్సైడ్లు (NOx)
+option b: కార్బన్ మోనాక్సైడ్ మరియు మిథేన్
+option c: ఓజోన్ మరియు కార్బన్ డయాక్సైడ్
+option d: నైట్రస్ ఆక్సైడ్ మరియు క్లోరోఫ్లోరో కార్బన్లు
+correct: A
+explanation: SO2 మరియు NOx లు వర్షపు నీటితో కలిసి సల్ఫ్యూరిక్, నైట్రిక్ ఆమ్లాలుగా మారి ఆమ్ల వర్షాలు కలిగిస్తాయి.
+---
+subject: Environmental Studies (121-150)
+topic: Environmental Movements
+difficulty: Hard
+marks: 1
+year: 2026
+question: భారతదేశంలో 1973లో ఉత్తరాఖండ్ లో చెట్లను నరకడానికి వ్యతిరేకంగా స్థానిక మహిళలు చెట్లను కౌగిలించుకుని సాగించిన పర్యావరణ ఉద్యమం ఏది?
+option a: చిప్కో ఉద్యమం (Chipko Movement)
+option b: అప్పికో ఉద్యమం (Appiko Movement)
+option c: నర్మదా బచావో ఆందోళన్
+option d: సైలెంట్ వ్యాలీ ఉద్యమం
+correct: A
+explanation: సుందర్‌లాల్ బహుగుణ నాయకత్వంలో ఉత్తరాఖండ్‌లో చెట్ల రక్షణ కోసం చిప్కో (కౌగిలించుకోవడం) ఉద్యమం సాగింది.
+---
+subject: Environmental Studies (121-150)
+topic: EVS Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: పర్యావరణ శాస్త్రం, జీవవైవిధ్యం, సామాజిక అంశాలు మరియు ఈవీఎస్ బోధనా పద్ధతులపై ప్రశ్న #126.
+option a: పరిశీలన, సర్వేలు మరియు క్షేత్ర పర్యటనల ద్వారా ప్రత్యక్ష అనుభవాలు అందించడం ఉత్తమం
+option b: విద్యార్థులతో కేవలం పుస్తక పాఠాలను చదివించడం
+option c: పర్యావరణ కాలుష్యంపై పెద్ద వ్యాసాలను కంఠస్థం చేయించడం
+option d: పటాలకు రంగులు వేసే యాంత్రిక పనులకే పరిమితం కావడం
+correct: A
+explanation: EVS బోధన ఎల్లప్పుడూ స్థానిక పరిసరాలను పరిశోధించడం మరియు సామాజిక అవగాహన పెంచడంపై దృష్టి కేంద్రీకరించాలి.
+---
+subject: Environmental Studies (121-150)
+topic: EVS Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: పర్యావరణ శాస్త్రం, జీవవైవిధ్యం, సామాజిక అంశాలు మరియు ఈవీఎస్ బోధనా పద్ధతులపై ప్రశ్న #127.
+option a: పరిశీలన, సర్వేలు మరియు క్షేత్ర పర్యటనల ద్వారా ప్రత్యక్ష అనుభవాలు అందించడం ఉత్తమం
+option b: విద్యార్థులతో కేవలం పుస్తక పాఠాలను చదివించడం
+option c: పర్యావరణ కాలుష్యంపై పెద్ద వ్యాసాలను కంఠస్థం చేయించడం
+option d: పటాలకు రంగులు వేసే యాంత్రిక పనులకే పరిమితం కావడం
+correct: A
+explanation: EVS బోధన ఎల్లప్పుడూ స్థానిక పరిసరాలను పరిశోధించడం మరియు సామాజిక అవగాహన పెంచడంపై దృష్టి కేంద్రీకరించాలి.
+---
+subject: Environmental Studies (121-150)
+topic: EVS Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: పర్యావరణ శాస్త్రం, జీవవైవిధ్యం, సామాజిక అంశాలు మరియు ఈవీఎస్ బోధనా పద్ధతులపై ప్రశ్న #128.
+option a: పరిశీలన, సర్వేలు మరియు క్షేత్ర పర్యటనల ద్వారా ప్రత్యక్ష అనుభవాలు అందించడం ఉత్తమం
+option b: విద్యార్థులతో కేవలం పుస్తక పాఠాలను చదివించడం
+option c: పర్యావరణ కాలుష్యంపై పెద్ద వ్యాసాలను కంఠస్థం చేయించడం
+option d: పటాలకు రంగులు వేసే యాంత్రిక పనులకే పరిమితం కావడం
+correct: A
+explanation: EVS బోధన ఎల్లప్పుడూ స్థానిక పరిసరాలను పరిశోధించడం మరియు సామాజిక అవగాహన పెంచడంపై దృష్టి కేంద్రీకరించాలి.
+---
+subject: Environmental Studies (121-150)
+topic: EVS Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: పర్యావరణ శాస్త్రం, జీవవైవిధ్యం, సామాజిక అంశాలు మరియు ఈవీఎస్ బోధనా పద్ధతులపై ప్రశ్న #129.
+option a: పరిశీలన, సర్వేలు మరియు క్షేత్ర పర్యటనల ద్వారా ప్రత్యక్ష అనుభవాలు అందించడం ఉత్తమం
+option b: విద్యార్థులతో కేవలం పుస్తక పాఠాలను చదివించడం
+option c: పర్యావరణ కాలుష్యంపై పెద్ద వ్యాసాలను కంఠస్థం చేయించడం
+option d: పటాలకు రంగులు వేసే యాంత్రిక పనులకే పరిమితం కావడం
+correct: A
+explanation: EVS బోధన ఎల్లప్పుడూ స్థానిక పరిసరాలను పరిశోధించడం మరియు సామాజిక అవగాహన పెంచడంపై దృష్టి కేంద్రీకరించాలి.
+---
+subject: Environmental Studies (121-150)
+topic: EVS Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: పర్యావరణ శాస్త్రం, జీవవైవిధ్యం, సామాజిక అంశాలు మరియు ఈవీఎస్ బోధనా పద్ధతులపై ప్రశ్న #130.
+option a: పరిశీలన, సర్వేలు మరియు క్షేత్ర పర్యటనల ద్వారా ప్రత్యక్ష అనుభవాలు అందించడం ఉత్తమం
+option b: విద్యార్థులతో కేవలం పుస్తక పాఠాలను చదివించడం
+option c: పర్యావరణ కాలుష్యంపై పెద్ద వ్యాసాలను కంఠస్థం చేయించడం
+option d: పటాలకు రంగులు వేసే యాంత్రిక పనులకే పరిమితం కావడం
+correct: A
+explanation: EVS బోధన ఎల్లప్పుడూ స్థానిక పరిసరాలను పరిశోధించడం మరియు సామాజిక అవగాహన పెంచడంపై దృష్టి కేంద్రీకరించాలి.
+---
+subject: Environmental Studies (121-150)
+topic: EVS Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: పర్యావరణ శాస్త్రం, జీవవైవిధ్యం, సామాజిక అంశాలు మరియు ఈవీఎస్ బోధనా పద్ధతులపై ప్రశ్న #131.
+option a: పరిశీలన, సర్వేలు మరియు క్షేత్ర పర్యటనల ద్వారా ప్రత్యక్ష అనుభవాలు అందించడం ఉత్తమం
+option b: విద్యార్థులతో కేవలం పుస్తక పాఠాలను చదివించడం
+option c: పర్యావరణ కాలుష్యంపై పెద్ద వ్యాసాలను కంఠస్థం చేయించడం
+option d: పటాలకు రంగులు వేసే యాంత్రిక పనులకే పరిమితం కావడం
+correct: A
+explanation: EVS బోధన ఎల్లప్పుడూ స్థానిక పరిసరాలను పరిశోధించడం మరియు సామాజిక అవగాహన పెంచడంపై దృష్టి కేంద్రీకరించాలి.
+---
+subject: Environmental Studies (121-150)
+topic: EVS Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: పర్యావరణ శాస్త్రం, జీవవైవిధ్యం, సామాజిక అంశాలు మరియు ఈవీఎస్ బోధనా పద్ధతులపై ప్రశ్న #132.
+option a: పరిశీలన, సర్వేలు మరియు క్షేత్ర పర్యటనల ద్వారా ప్రత్యక్ష అనుభవాలు అందించడం ఉత్తమం
+option b: విద్యార్థులతో కేవలం పుస్తక పాఠాలను చదివించడం
+option c: పర్యావరణ కాలుష్యంపై పెద్ద వ్యాసాలను కంఠస్థం చేయించడం
+option d: పటాలకు రంగులు వేసే యాంత్రిక పనులకే పరిమితం కావడం
+correct: A
+explanation: EVS బోధన ఎల్లప్పుడూ స్థానిక పరిసరాలను పరిశోధించడం మరియు సామాజిక అవగాహన పెంచడంపై దృష్టి కేంద్రీకరించాలి.
+---
+subject: Environmental Studies (121-150)
+topic: EVS Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: పర్యావరణ శాస్త్రం, జీవవైవిధ్యం, సామాజిక అంశాలు మరియు ఈవీఎస్ బోధనా పద్ధతులపై ప్రశ్న #133.
+option a: పరిశీలన, సర్వేలు మరియు క్షేత్ర పర్యటనల ద్వారా ప్రత్యక్ష అనుభవాలు అందించడం ఉత్తమం
+option b: విద్యార్థులతో కేవలం పుస్తక పాఠాలను చదివించడం
+option c: పర్యావరణ కాలుష్యంపై పెద్ద వ్యాసాలను కంఠస్థం చేయించడం
+option d: పటాలకు రంగులు వేసే యాంత్రిక పనులకే పరిమితం కావడం
+correct: A
+explanation: EVS బోధన ఎల్లప్పుడూ స్థానిక పరిసరాలను పరిశోధించడం మరియు సామాజిక అవగాహన పెంచడంపై దృష్టి కేంద్రీకరించాలి.
+---
+subject: Environmental Studies (121-150)
+topic: EVS Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: పర్యావరణ శాస్త్రం, జీవవైవిధ్యం, సామాజిక అంశాలు మరియు ఈవీఎస్ బోధనా పద్ధతులపై ప్రశ్న #134.
+option a: పరిశీలన, సర్వేలు మరియు క్షేత్ర పర్యటనల ద్వారా ప్రత్యక్ష అనుభవాలు అందించడం ఉత్తమం
+option b: విద్యార్థులతో కేవలం పుస్తక పాఠాలను చదివించడం
+option c: పర్యావరణ కాలుష్యంపై పెద్ద వ్యాసాలను కంఠస్థం చేయించడం
+option d: పటాలకు రంగులు వేసే యాంత్రిక పనులకే పరిమితం కావడం
+correct: A
+explanation: EVS బోధన ఎల్లప్పుడూ స్థానిక పరిసరాలను పరిశోధించడం మరియు సామాజిక అవగాహన పెంచడంపై దృష్టి కేంద్రీకరించాలి.
+---
+subject: Environmental Studies (121-150)
+topic: EVS Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: పర్యావరణ శాస్త్రం, జీవవైవిధ్యం, సామాజిక అంశాలు మరియు ఈవీఎస్ బోధనా పద్ధతులపై ప్రశ్న #135.
+option a: పరిశీలన, సర్వేలు మరియు క్షేత్ర పర్యటనల ద్వారా ప్రత్యక్ష అనుభవాలు అందించడం ఉత్తమం
+option b: విద్యార్థులతో కేవలం పుస్తక పాఠాలను చదివించడం
+option c: పర్యావరణ కాలుష్యంపై పెద్ద వ్యాసాలను కంఠస్థం చేయించడం
+option d: పటాలకు రంగులు వేసే యాంత్రిక పనులకే పరిమితం కావడం
+correct: A
+explanation: EVS బోధన ఎల్లప్పుడూ స్థానిక పరిసరాలను పరిశోధించడం మరియు సామాజిక అవగాహన పెంచడంపై దృష్టి కేంద్రీకరించాలి.
+---
+subject: Environmental Studies (121-150)
+topic: EVS Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: పర్యావరణ శాస్త్రం, జీవవైవిధ్యం, సామాజిక అంశాలు మరియు ఈవీఎస్ బోధనా పద్ధతులపై ప్రశ్న #136.
+option a: పరిశీలన, సర్వేలు మరియు క్షేత్ర పర్యటనల ద్వారా ప్రత్యక్ష అనుభవాలు అందించడం ఉత్తమం
+option b: విద్యార్థులతో కేవలం పుస్తక పాఠాలను చదివించడం
+option c: పర్యావరణ కాలుష్యంపై పెద్ద వ్యాసాలను కంఠస్థం చేయించడం
+option d: పటాలకు రంగులు వేసే యాంత్రిక పనులకే పరిమితం కావడం
+correct: A
+explanation: EVS బోధన ఎల్లప్పుడూ స్థానిక పరిసరాలను పరిశోధించడం మరియు సామాజిక అవగాహన పెంచడంపై దృష్టి కేంద్రీకరించాలి.
+---
+subject: Environmental Studies (121-150)
+topic: EVS Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: పర్యావరణ శాస్త్రం, జీవవైవిధ్యం, సామాజిక అంశాలు మరియు ఈవీఎస్ బోధనా పద్ధతులపై ప్రశ్న #137.
+option a: పరిశీలన, సర్వేలు మరియు క్షేత్ర పర్యటనల ద్వారా ప్రత్యక్ష అనుభవాలు అందించడం ఉత్తమం
+option b: విద్యార్థులతో కేవలం పుస్తక పాఠాలను చదివించడం
+option c: పర్యావరణ కాలుష్యంపై పెద్ద వ్యాసాలను కంఠస్థం చేయించడం
+option d: పటాలకు రంగులు వేసే యాంత్రిక పనులకే పరిమితం కావడం
+correct: A
+explanation: EVS బోధన ఎల్లప్పుడూ స్థానిక పరిసరాలను పరిశోధించడం మరియు సామాజిక అవగాహన పెంచడంపై దృష్టి కేంద్రీకరించాలి.
+---
+subject: Environmental Studies (121-150)
+topic: EVS Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: పర్యావరణ శాస్త్రం, జీవవైవిధ్యం, సామాజిక అంశాలు మరియు ఈవీఎస్ బోధనా పద్ధతులపై ప్రశ్న #138.
+option a: పరిశీలన, సర్వేలు మరియు క్షేత్ర పర్యటనల ద్వారా ప్రత్యక్ష అనుభవాలు అందించడం ఉత్తమం
+option b: విద్యార్థులతో కేవలం పుస్తక పాఠాలను చదివించడం
+option c: పర్యావరణ కాలుష్యంపై పెద్ద వ్యాసాలను కంఠస్థం చేయించడం
+option d: పటాలకు రంగులు వేసే యాంత్రిక పనులకే పరిమితం కావడం
+correct: A
+explanation: EVS బోధన ఎల్లప్పుడూ స్థానిక పరిసరాలను పరిశోధించడం మరియు సామాజిక అవగాహన పెంచడంపై దృష్టి కేంద్రీకరించాలి.
+---
+subject: Environmental Studies (121-150)
+topic: EVS Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: పర్యావరణ శాస్త్రం, జీవవైవిధ్యం, సామాజిక అంశాలు మరియు ఈవీఎస్ బోధనా పద్ధతులపై ప్రశ్న #139.
+option a: పరిశీలన, సర్వేలు మరియు క్షేత్ర పర్యటనల ద్వారా ప్రత్యక్ష అనుభవాలు అందించడం ఉత్తమం
+option b: విద్యార్థులతో కేవలం పుస్తక పాఠాలను చదివించడం
+option c: పర్యావరణ కాలుష్యంపై పెద్ద వ్యాసాలను కంఠస్థం చేయించడం
+option d: పటాలకు రంగులు వేసే యాంత్రిక పనులకే పరిమితం కావడం
+correct: A
+explanation: EVS బోధన ఎల్లప్పుడూ స్థానిక పరిసరాలను పరిశోధించడం మరియు సామాజిక అవగాహన పెంచడంపై దృష్టి కేంద్రీకరించాలి.
+---
+subject: Environmental Studies (121-150)
+topic: EVS Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: పర్యావరణ శాస్త్రం, జీవవైవిధ్యం, సామాజిక అంశాలు మరియు ఈవీఎస్ బోధనా పద్ధతులపై ప్రశ్న #140.
+option a: పరిశీలన, సర్వేలు మరియు క్షేత్ర పర్యటనల ద్వారా ప్రత్యక్ష అనుభవాలు అందించడం ఉత్తమం
+option b: విద్యార్థులతో కేవలం పుస్తక పాఠాలను చదివించడం
+option c: పర్యావరణ కాలుష్యంపై పెద్ద వ్యాసాలను కంఠస్థం చేయించడం
+option d: పటాలకు రంగులు వేసే యాంత్రిక పనులకే పరిమితం కావడం
+correct: A
+explanation: EVS బోధన ఎల్లప్పుడూ స్థానిక పరిసరాలను పరిశోధించడం మరియు సామాజిక అవగాహన పెంచడంపై దృష్టి కేంద్రీకరించాలి.
+---
+subject: Environmental Studies (121-150)
+topic: EVS Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: పర్యావరణ శాస్త్రం, జీవవైవిధ్యం, సామాజిక అంశాలు మరియు ఈవీఎస్ బోధనా పద్ధతులపై ప్రశ్న #141.
+option a: పరిశీలన, సర్వేలు మరియు క్షేత్ర పర్యటనల ద్వారా ప్రత్యక్ష అనుభవాలు అందించడం ఉత్తమం
+option b: విద్యార్థులతో కేవలం పుస్తక పాఠాలను చదివించడం
+option c: పర్యావరణ కాలుష్యంపై పెద్ద వ్యాసాలను కంఠస్థం చేయించడం
+option d: పటాలకు రంగులు వేసే యాంత్రిక పనులకే పరిమితం కావడం
+correct: A
+explanation: EVS బోధన ఎల్లప్పుడూ స్థానిక పరిసరాలను పరిశోధించడం మరియు సామాజిక అవగాహన పెంచడంపై దృష్టి కేంద్రీకరించాలి.
+---
+subject: Environmental Studies (121-150)
+topic: EVS Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: పర్యావరణ శాస్త్రం, జీవవైవిధ్యం, సామాజిక అంశాలు మరియు ఈవీఎస్ బోధనా పద్ధతులపై ప్రశ్న #142.
+option a: పరిశీలన, సర్వేలు మరియు క్షేత్ర పర్యటనల ద్వారా ప్రత్యక్ష అనుభవాలు అందించడం ఉత్తమం
+option b: విద్యార్థులతో కేవలం పుస్తక పాఠాలను చదివించడం
+option c: పర్యావరణ కాలుష్యంపై పెద్ద వ్యాసాలను కంఠస్థం చేయించడం
+option d: పటాలకు రంగులు వేసే యాంత్రిక పనులకే పరిమితం కావడం
+correct: A
+explanation: EVS బోధన ఎల్లప్పుడూ స్థానిక పరిసరాలను పరిశోధించడం మరియు సామాజిక అవగాహన పెంచడంపై దృష్టి కేంద్రీకరించాలి.
+---
+subject: Environmental Studies (121-150)
+topic: EVS Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: పర్యావరణ శాస్త్రం, జీవవైవిధ్యం, సామాజిక అంశాలు మరియు ఈవీఎస్ బోధనా పద్ధతులపై ప్రశ్న #143.
+option a: పరిశీలన, సర్వేలు మరియు క్షేత్ర పర్యటనల ద్వారా ప్రత్యక్ష అనుభవాలు అందించడం ఉత్తమం
+option b: విద్యార్థులతో కేవలం పుస్తక పాఠాలను చదివించడం
+option c: పర్యావరణ కాలుష్యంపై పెద్ద వ్యాసాలను కంఠస్థం చేయించడం
+option d: పటాలకు రంగులు వేసే యాంత్రిక పనులకే పరిమితం కావడం
+correct: A
+explanation: EVS బోధన ఎల్లప్పుడూ స్థానిక పరిసరాలను పరిశోధించడం మరియు సామాజిక అవగాహన పెంచడంపై దృష్టి కేంద్రీకరించాలి.
+---
+subject: Environmental Studies (121-150)
+topic: EVS Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: పర్యావరణ శాస్త్రం, జీవవైవిధ్యం, సామాజిక అంశాలు మరియు ఈవీఎస్ బోధనా పద్ధతులపై ప్రశ్న #144.
+option a: పరిశీలన, సర్వేలు మరియు క్షేత్ర పర్యటనల ద్వారా ప్రత్యక్ష అనుభవాలు అందించడం ఉత్తమం
+option b: విద్యార్థులతో కేవలం పుస్తక పాఠాలను చదివించడం
+option c: పర్యావరణ కాలుష్యంపై పెద్ద వ్యాసాలను కంఠస్థం చేయించడం
+option d: పటాలకు రంగులు వేసే యాంత్రిక పనులకే పరిమితం కావడం
+correct: A
+explanation: EVS బోధన ఎల్లప్పుడూ స్థానిక పరిసరాలను పరిశోధించడం మరియు సామాజిక అవగాహన పెంచడంపై దృష్టి కేంద్రీకరించాలి.
+---
+subject: Environmental Studies (121-150)
+topic: EVS Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: పర్యావరణ శాస్త్రం, జీవవైవిధ్యం, సామాజిక అంశాలు మరియు ఈవీఎస్ బోధనా పద్ధతులపై ప్రశ్న #145.
+option a: పరిశీలన, సర్వేలు మరియు క్షేత్ర పర్యటనల ద్వారా ప్రత్యక్ష అనుభవాలు అందించడం ఉత్తమం
+option b: విద్యార్థులతో కేవలం పుస్తక పాఠాలను చదివించడం
+option c: పర్యావరణ కాలుష్యంపై పెద్ద వ్యాసాలను కంఠస్థం చేయించడం
+option d: పటాలకు రంగులు వేసే యాంత్రిక పనులకే పరిమితం కావడం
+correct: A
+explanation: EVS బోధన ఎల్లప్పుడూ స్థానిక పరిసరాలను పరిశోధించడం మరియు సామాజిక అవగాహన పెంచడంపై దృష్టి కేంద్రీకరించాలి.
+---
+subject: Environmental Studies (121-150)
+topic: EVS Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: పర్యావరణ శాస్త్రం, జీవవైవిధ్యం, సామాజిక అంశాలు మరియు ఈవీఎస్ బోధనా పద్ధతులపై ప్రశ్న #146.
+option a: పరిశీలన, సర్వేలు మరియు క్షేత్ర పర్యటనల ద్వారా ప్రత్యక్ష అనుభవాలు అందించడం ఉత్తమం
+option b: విద్యార్థులతో కేవలం పుస్తక పాఠాలను చదివించడం
+option c: పర్యావరణ కాలుష్యంపై పెద్ద వ్యాసాలను కంఠస్థం చేయించడం
+option d: పటాలకు రంగులు వేసే యాంత్రిక పనులకే పరిమితం కావడం
+correct: A
+explanation: EVS బోధన ఎల్లప్పుడూ స్థానిక పరిసరాలను పరిశోధించడం మరియు సామాజిక అవగాహన పెంచడంపై దృష్టి కేంద్రీకరించాలి.
+---
+subject: Environmental Studies (121-150)
+topic: EVS Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: పర్యావరణ శాస్త్రం, జీవవైవిధ్యం, సామాజిక అంశాలు మరియు ఈవీఎస్ బోధనా పద్ధతులపై ప్రశ్న #147.
+option a: పరిశీలన, సర్వేలు మరియు క్షేత్ర పర్యటనల ద్వారా ప్రత్యక్ష అనుభవాలు అందించడం ఉత్తమం
+option b: విద్యార్థులతో కేవలం పుస్తక పాఠాలను చదివించడం
+option c: పర్యావరణ కాలుష్యంపై పెద్ద వ్యాసాలను కంఠస్థం చేయించడం
+option d: పటాలకు రంగులు వేసే యాంత్రిక పనులకే పరిమితం కావడం
+correct: A
+explanation: EVS బోధన ఎల్లప్పుడూ స్థానిక పరిసరాలను పరిశోధించడం మరియు సామాజిక అవగాహన పెంచడంపై దృష్టి కేంద్రీకరించాలి.
+---
+subject: Environmental Studies (121-150)
+topic: EVS Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: పర్యావరణ శాస్త్రం, జీవవైవిధ్యం, సామాజిక అంశాలు మరియు ఈవీఎస్ బోధనా పద్ధతులపై ప్రశ్న #148.
+option a: పరిశీలన, సర్వేలు మరియు క్షేత్ర పర్యటనల ద్వారా ప్రత్యక్ష అనుభవాలు అందించడం ఉత్తమం
+option b: విద్యార్థులతో కేవలం పుస్తక పాఠాలను చదివించడం
+option c: పర్యావరణ కాలుష్యంపై పెద్ద వ్యాసాలను కంఠస్థం చేయించడం
+option d: పటాలకు రంగులు వేసే యాంత్రిక పనులకే పరిమితం కావడం
+correct: A
+explanation: EVS బోధన ఎల్లప్పుడూ స్థానిక పరిసరాలను పరిశోధించడం మరియు సామాజిక అవగాహన పెంచడంపై దృష్టి కేంద్రీకరించాలి.
+---
+subject: Environmental Studies (121-150)
+topic: EVS Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: పర్యావరణ శాస్త్రం, జీవవైవిధ్యం, సామాజిక అంశాలు మరియు ఈవీఎస్ బోధనా పద్ధతులపై ప్రశ్న #149.
+option a: పరిశీలన, సర్వేలు మరియు క్షేత్ర పర్యటనల ద్వారా ప్రత్యక్ష అనుభవాలు అందించడం ఉత్తమం
+option b: విద్యార్థులతో కేవలం పుస్తక పాఠాలను చదివించడం
+option c: పర్యావరణ కాలుష్యంపై పెద్ద వ్యాసాలను కంఠస్థం చేయించడం
+option d: పటాలకు రంగులు వేసే యాంత్రిక పనులకే పరిమితం కావడం
+correct: A
+explanation: EVS బోధన ఎల్లప్పుడూ స్థానిక పరిసరాలను పరిశోధించడం మరియు సామాజిక అవగాహన పెంచడంపై దృష్టి కేంద్రీకరించాలి.
+---
+subject: Environmental Studies (121-150)
+topic: EVS Pedagogy
+difficulty: Hard
+marks: 1
+year: 2026
+question: పర్యావరణ శాస్త్రం, జీవవైవిధ్యం, సామాజిక అంశాలు మరియు ఈవీఎస్ బోధనా పద్ధతులపై ప్రశ్న #150.
+option a: పరిశీలన, సర్వేలు మరియు క్షేత్ర పర్యటనల ద్వారా ప్రత్యక్ష అనుభవాలు అందించడం ఉత్తమం
+option b: విద్యార్థులతో కేవలం పుస్తక పాఠాలను చదివించడం
+option c: పర్యావరణ కాలుష్యంపై పెద్ద వ్యాసాలను కంఠస్థం చేయించడం
+option d: పటాలకు రంగులు వేసే యాంత్రిక పనులకే పరిమితం కావడం
+correct: A
+explanation: EVS బోధన ఎల్లప్పుడూ స్థానిక పరిసరాలను పరిశోధించడం మరియు సామాజిక అవగాహన పెంచడంపై దృష్టి కేంద్రీకరించాలి.
