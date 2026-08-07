@@ -313,6 +313,16 @@ export const MockTest = {
     }).join('');
 
     return `
+      <!-- Fixed Viewport Zoom Control (outside the zoomed wrapper) -->
+      <div class="fixed top-[4.25rem] right-8 z-50 flex items-center border border-amber-200/80 dark:border-amber-900/40 rounded-xl overflow-hidden bg-amber-50/95 dark:bg-amber-950/90 shadow-md select-none">
+        <button id="zoom-out-btn" class="px-3.5 py-1.5 hover:bg-amber-100/60 dark:hover:bg-amber-900/40 text-amber-800 dark:text-amber-300 text-xs font-extrabold border-r border-amber-200/80 dark:border-amber-900/40 flex items-center justify-center gap-1" title="Zoom Out / Minimize Screen">
+          <i class="fa-solid fa-magnifying-glass-minus text-[10px]"></i> A-
+        </button>
+        <button id="zoom-in-btn" class="px-3.5 py-1.5 hover:bg-amber-100/60 dark:hover:bg-amber-900/40 text-amber-800 dark:text-amber-300 text-xs font-extrabold flex items-center justify-center gap-1" title="Zoom In / Maximize Screen">
+          A+ <i class="fa-solid fa-magnifying-glass-plus text-[10px]"></i>
+        </button>
+      </div>
+
       <!-- Simulator Wrapper (Adaptive dark/light theme, beautiful bento structure) -->
       <div id="simulator-wrapper" class="min-h-[calc(100vh-3.5rem)] flex flex-col gap-5 select-none animate-fade-in font-sans" style="zoom: ${this.fontSizeMultiplier || 1.0};">
         
@@ -325,14 +335,6 @@ export const MockTest = {
             </div>
           </div>
           <div class="flex items-center gap-3">
-            <div class="flex items-center border border-slate-200 dark:border-white/10 rounded-xl overflow-hidden bg-slate-50 dark:bg-slate-900 shadow-sm select-none">
-              <button id="zoom-out-btn" class="px-3.5 py-1.5 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-bold border-r border-slate-200 dark:border-white/10 flex items-center justify-center gap-1" title="Zoom Out / Minimize Screen">
-                <i class="fa-solid fa-magnifying-glass-minus text-[10px]"></i> A-
-              </button>
-              <button id="zoom-in-btn" class="px-3.5 py-1.5 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-bold flex items-center justify-center gap-1" title="Zoom In / Maximize Screen">
-                A+ <i class="fa-solid fa-magnifying-glass-plus text-[10px]"></i>
-              </button>
-            </div>
             <button id="toggle-calc-btn" class="px-3.5 py-1.5 rounded-xl border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-slate-850 text-slate-600 dark:text-slate-300 text-xs font-bold flex items-center gap-1.5">
               <i class="fa-solid fa-calculator"></i> ${this.isCalcOpen ? 'Hide Calculator' : 'Calculator'}
             </button>
