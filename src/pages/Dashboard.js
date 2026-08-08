@@ -253,6 +253,43 @@ export const Dashboard = {
 
         </div>
 
+        <!-- Activity & Metrics Row -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <!-- Weekly Study Activity -->
+          <div class="md:col-span-2 glass-panel p-6 rounded-3xl border border-slate-200/60 dark:border-white/[0.07] flex flex-col gap-4 shadow-sm">
+            <div class="flex items-center justify-between">
+              <div>
+                <h4 class="font-display font-extrabold text-sm text-slate-900 dark:text-white">Weekly Study Activity</h4>
+                <p class="text-[10px] text-slate-405 dark:text-slate-400 font-semibold mt-0.5">Hours spent practicing and taking tests per day</p>
+              </div>
+              <span class="text-xs font-bold text-primary-500 bg-primary-500/10 px-2.5 py-1 rounded-full border border-primary-500/20">Live Sync</span>
+            </div>
+            <div class="h-48">
+              <canvas id="studyHoursChart"></canvas>
+            </div>
+          </div>
+
+          <!-- Overall Syllabus Mastered Card -->
+          <div class="glass-panel p-6 rounded-3xl border border-slate-200/60 dark:border-white/[0.07] flex flex-col justify-between shadow-sm relative overflow-hidden group">
+            <div class="absolute -right-10 -bottom-10 w-24 h-24 bg-teal-500/5 rounded-full blur-xl group-hover:bg-teal-500/10 transition-colors"></div>
+            <div>
+              <div class="flex justify-between items-start">
+                <span class="text-[10px] font-extrabold text-slate-400 dark:text-slate-400 uppercase tracking-wider">Syllabus Mastered</span>
+                <span class="h-9 w-9 rounded-2xl bg-teal-500/15 text-teal-500 flex items-center justify-center text-lg shadow-sm">
+                  📊
+                </span>
+              </div>
+              <h3 class="font-display font-extrabold text-base text-slate-900 dark:text-white mt-3 leading-snug">GATE Syllabus Map</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 font-medium">Check your prerequisite DAG and topic completion checklist.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 dark:border-white/[0.04]">
+              <button class="dashboard-tab-btn text-xs font-bold text-teal-500 hover:underline flex items-center gap-1" data-tab="syllabus">
+                View Syllabus Map &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
         <!-- Quick Actions Bento Grid -->
         <div class="space-y-3">
           <h3 class="font-display font-extrabold var(--accent-from)ase text-slate-900 dark:text-white tracking-tight">Quick Actions</h3>

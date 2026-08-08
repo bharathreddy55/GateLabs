@@ -1,5 +1,6 @@
 import { db, SUBJECT_SYLLABUS } from '../config/firebase';
 import { showToast } from '../utils/toast';
+import { Chart } from 'chart.js/auto';
 
 export const Analytics = {
   // State
@@ -342,32 +343,58 @@ export const Analytics = {
           </div>
         </div>
 
-        <!-- Subject-wise mistake breakdown -->
-        ${Object.keys(subjectBreakdown).length > 0 ? `
-        <div class="glass-panel p-5 rounded-2xl">
-          <h4 class="font-bold text-sm text-slate-700 dark:text-slate-300 mb-4">
-            <i class="fa-solid fa-chart-bar mr-2 text-primary-500"></i>Subject-wise Mistake Breakdown
-          </h4>
-          <div class="flex flex-col gap-3">
-            ${Object.entries(subjectBreakdown).sort((a, b) => b[1].total - a[1].total).map(([sub, data]) => `
-              <div class="flex items-center gap-3">
-                <div class="w-40 text-xs font-semibold text-slate-600 dark:text-slate-400 truncate flex-shrink-0">${sub}</div>
-                <div class="flex-1 flex h-6 rounded-lg overflow-hidden bg-slate-100 dark:bg-slate-800">
-                  ${data.easy > 0 ? `<div class="bg-emerald-400 flex items-center justify-center text-[9px] font-bold text-white" style="width:${(data.easy/data.total*100).toFixed(0)}%">${data.easy > 0 ? data.easy : ''}</div>` : ''}
-                  ${data.medium > 0 ? `<div class="bg-amber-400 flex items-center justify-center text-[9px] font-bold text-white" style="width:${(data.medium/data.total*100).toFixed(0)}%">${data.medium > 0 ? data.medium : ''}</div>` : ''}
-                  ${data.hard > 0 ? `<div class="bg-rose-500 flex items-center justify-center text-[9px] font-bold text-white" style="width:${(data.hard/data.total*100).toFixed(0)}%">${data.hard > 0 ? data.hard : ''}</div>` : ''}
-                </div>
-                <div class="w-8 text-xs font-bold text-rose-500 text-right">${data.total}</div>
+        <!-- Subject Performance Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <!-- Subject-wise mistake breakdown -->
+          ${Object.keys(subjectBreakdown).length > 0 ? `
+          <div class="glass-panel p-5 rounded-2xl flex flex-col justify-between">
+            <div>
+              <h4 class="font-bold text-sm text-slate-700 dark:text-slate-300 mb-4">
+                <i class="fa-solid fa-chart-bar mr-2 text-primary-500"></i>Subject-wise Mistake Breakdown
+              </h4>
+              <div class="flex flex-col gap-3">
+                ${Object.entries(subjectBreakdown).sort((a, b) => b[1].total - a[1].total).map(([sub, data]) => `
+                  <div class="flex items-center gap-3">
+                    <div class="w-40 text-xs font-semibold text-slate-600 dark:text-slate-400 truncate flex-shrink-0">${sub}</div>
+                    <div class="flex-1 flex h-6 rounded-lg overflow-hidden bg-slate-100 dark:bg-slate-800">
+                      ${data.easy > 0 ? `<div class="bg-emerald-400 flex items-center justify-center text-[9px] font-bold text-white" style="width:${(data.easy/data.total*100).toFixed(0)}%">${data.easy}</div>` : ''}
+                      ${data.medium > 0 ? `<div class="bg-amber-400 flex items-center justify-center text-[9px] font-bold text-white" style="width:${(data.medium/data.total*100).toFixed(0)}%">${data.medium}</div>` : ''}
+                      ${data.hard > 0 ? `<div class="bg-rose-500 flex items-center justify-center text-[9px] font-bold text-white" style="width:${(data.hard/data.total*100).toFixed(0)}%">${data.hard}</div>` : ''}
+                    </div>
+                    <div class="w-8 text-xs font-bold text-rose-500 text-right">${data.total}</div>
+                  </div>
+                `).join('')}
               </div>
-            `).join('')}
+            </div>
+            <div class="flex gap-3 mt-4 text-[10px] font-semibold text-slate-500 border-t border-slate-100 dark:border-white/[0.04] pt-3">
+              <span><span class="inline-block h-2 w-2 rounded bg-emerald-400 mr-1"></span>Easy</span>
+              <span><span class="inline-block h-2 w-2 rounded bg-amber-400 mr-1"></span>Medium</span>
+              <span><span class="inline-block h-2 w-2 rounded bg-rose-500 mr-1"></span>Hard</span>
+            </div>
           </div>
-          <div class="flex gap-3 mt-3 text-[10px] font-semibold text-slate-500">
-            <span><span class="inline-block h-2 w-2 rounded bg-emerald-400 mr-1"></span>Easy</span>
-            <span><span class="inline-block h-2 w-2 rounded bg-amber-400 mr-1"></span>Medium</span>
-            <span><span class="inline-block h-2 w-2 rounded bg-rose-500 mr-1"></span>Hard</span>
+          ` : `
+          <div class="glass-panel p-5 rounded-2xl flex items-center justify-center text-center">
+            <div>
+              <i class="fa-solid fa-circle-check text-emerald-500 text-3xl mb-2"></i>
+              <h5 class="text-xs font-bold text-slate-700 dark:text-slate-300">No Mistakes!</h5>
+              <p class="text-[10px] text-slate-400">Excellent job! There are no mistakes to display.</p>
+            </div>
+          </div>
+          `}
+
+          <!-- Subject-wise performance Pie Chart -->
+          <div class="glass-panel p-5 rounded-2xl flex flex-col justify-between">
+            <h4 class="font-bold text-sm text-slate-700 dark:text-slate-300 mb-4">
+              <i class="fa-solid fa-chart-pie mr-2 text-indigo-500"></i>Subject-wise Accuracy Analysis
+            </h4>
+            <div class="relative h-64 flex items-center justify-center">
+              <canvas id="attemptPieChart"></canvas>
+            </div>
+            <div class="text-[10.5px] text-slate-405 dark:text-slate-500 text-center font-medium mt-2">
+              Slices show correct answers distribution. Hover/tap slices for accuracy details.
+            </div>
           </div>
         </div>
-        ` : ''}
 
         <!-- Focus Advice Card -->
         ${this.generateFocusAdvice(att)}
@@ -613,6 +640,104 @@ export const Analytics = {
       this.selectedSubjectFilter = e.target.value;
       this.refresh();
     });
+
+    // Render Subject Pie Chart
+    const canvas = document.getElementById('attemptPieChart');
+    if (canvas && this.viewMode === 'detail' && this.activeAttemptId) {
+      (async () => {
+        const attempts = await db.getAttempts();
+        const att = attempts.find(a => a.id === this.activeAttemptId);
+        if (!att) return;
+
+        const subjectSummary = {};
+        const responses = att.responses || [];
+        responses.forEach(r => {
+          const sub = r.subject || 'General';
+          if (!subjectSummary[sub]) subjectSummary[sub] = { correct: 0, wrong: 0, skipped: 0, total: 0 };
+          subjectSummary[sub].total++;
+          if (r.status === 'correct') subjectSummary[sub].correct++;
+          else if (r.status === 'wrong') subjectSummary[sub].wrong++;
+          else subjectSummary[sub].skipped++;
+        });
+
+        if (Object.keys(subjectSummary).length === 0) {
+          (att.mistakes || []).forEach(m => {
+            const sub = m.subject || 'General';
+            if (!subjectSummary[sub]) subjectSummary[sub] = { correct: 0, wrong: 0, skipped: 0, total: 0 };
+            subjectSummary[sub].wrong++;
+            subjectSummary[sub].total++;
+          });
+        }
+
+        const labels = Object.keys(subjectSummary);
+        const data = labels.map(sub => subjectSummary[sub].correct);
+        
+        const getSubColor = (subject) => {
+          const s = subject.toLowerCase();
+          if (s.includes('child development') || s.includes('cdp')) return '#6366f1';
+          if (s.includes('language i') || s.includes('telugu')) return '#0ea5e9';
+          if (s.includes('language ii') || s.includes('english')) return '#f59e0b';
+          if (s.includes('mathematics') || s.includes('math')) return '#ec4899';
+          if (s.includes('environmental') || s.includes('evs') || s.includes('studies')) return '#10b981';
+          
+          if (s.includes('digital logic') || s.includes('sec 2')) return '#3b82f6';
+          if (s.includes('organization') || s.includes('coa') || s.includes('sec 3')) return '#06b6d4';
+          if (s.includes('programming') || s.includes('sec 4')) return '#14b8a6';
+          if (s.includes('algorithms') || s.includes('sec 5')) return '#10b981';
+          if (s.includes('theory of computation') || s.includes('toc') || s.includes('sec 6')) return '#eab308';
+          if (s.includes('compiler') || s.includes('sec 7')) return '#f97316';
+          if (s.includes('operating') || s.includes('os') || s.includes('sec 8')) return '#f43f5e';
+          if (s.includes('databases') || s.includes('dbms') || s.includes('sec 9')) return '#a855f7';
+          if (s.includes('networks') || s.includes('cn') || s.includes('sec 10')) return '#d946ef';
+          
+          return '#64748b';
+        };
+
+        const colors = labels.map(getSubColor);
+
+        if (this.pieChart) {
+          this.pieChart.destroy();
+        }
+
+        this.pieChart = new Chart(canvas, {
+          type: 'pie',
+          data: {
+            labels: labels.map(sub => sub.replace(/(\(\d+-\d+\))/g, '').replace(/^Section\s+\d+\:\s*/i, '').trim()),
+            datasets: [{
+              data: data,
+              backgroundColor: colors,
+              borderWidth: 2,
+              borderColor: 'rgba(255, 255, 255, 0.1)'
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                position: 'bottom',
+                labels: {
+                  color: '#64748b',
+                  font: { size: 9, weight: 'bold' }
+                }
+              },
+              tooltip: {
+                callbacks: {
+                  label: function(context) {
+                    const label = context.label || '';
+                    const value = context.raw || 0;
+                    const subKey = labels[context.dataIndex];
+                    const total = subjectSummary[subKey].total;
+                    const pct = total > 0 ? Math.round((value / total) * 100) : 0;
+                    return ` ${label}: ${value}/${total} Correct (${pct}%)`;
+                  }
+                }
+              }
+            }
+          }
+        });
+      })();
+    }
   },
 
   async refresh() {
