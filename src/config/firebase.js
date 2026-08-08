@@ -1168,9 +1168,22 @@ const realFirestore = {
   },
 
   async deleteAttempt(attemptId) {
-    if (!firestore) throw new Error("Firestore is not initialized.");
-    const { deleteDoc } = await import('firebase/firestore');
-    await deleteDoc(doc(firestore, "attempts", attemptId));
+    try {
+      const list = JSON.parse(localStorage.getItem('gate_attempts') || '[]');
+      const updated = list.filter(a => a.id !== attemptId);
+      localStorage.setItem('gate_attempts', JSON.stringify(updated));
+    } catch (e) {
+      console.warn("localStorage deleteAttempt error:", e);
+    }
+
+    if (firestore) {
+      try {
+        const { deleteDoc } = await import('firebase/firestore');
+        await deleteDoc(doc(firestore, "attempts", attemptId));
+      } catch (err) {
+        console.warn("Firestore deleteAttempt error:", err);
+      }
+    }
     return true;
   },
 
