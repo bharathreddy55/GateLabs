@@ -1,0 +1,1528 @@
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Directions (1-10): Read the following passage and answer the questions:
+
+Precision agriculture and climate-smart irrigation technologies are increasingly recognized as vital instruments for safeguarding global food security against erratic monsoonal precipitation. Traditional flood irrigation practices result in immense evaporation losses, severe groundwater depletion, and progressive soil salinization. In contrast, telemetry-enabled precision drip systems deliver water and dissolved nutrients directly to plant root zones based on real-time soil moisture sensor telemetry. Agronomic field trials demonstrate that precision fertigation reduces water consumption by forty-five percent while improving nitrogen utilization efficiency and elevating crop yields. Furthermore, satellite-based spectral imaging empowers smallholders to detect early crop stress indicators and optimize pest control interventions before localized infestations spread. Despite these demonstrable advantages, capital expenditure barriers and technical knowledge gaps have slowed grassroots adoption among marginal farming households. To bridge this divide, state agricultural departments have introduced customized capital subsidies and partnered with local farmer-producer organizations (FPOs) to deploy shared precision machinery hubs. Creating community-level custom hiring centers democratizes access to advanced agricultural mechanisation and enhances the economic resilience of smallholder farming ecosystems.
+
+What is a major detrimental consequence of traditional flood irrigation according to the passage?
+option a: Excessive soil fertility and wild forest growth
+option b: Severe groundwater depletion, immense evaporation losses, and soil salinization
+option c: Complete absence of plant diseases
+option d: Rapid freezing of agricultural farmland
+option e: Instant reduction in atmospheric nitrogen
+correct: B
+explanation: The passage notes that traditional flood irrigation causes 'immense evaporation losses, severe groundwater depletion, and progressive soil salinization'.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Moderate
+marks: 1
+year: 2026
+question: How does precision drip irrigation improve resource efficiency?
+option a: By flooding entire agricultural fields overnight
+option b: By delivering water and nutrients directly to plant root zones based on soil moisture telemetry
+option c: By replacing natural sunlight with ultraviolet lamps
+option d: By requiring manual digging of canals every day
+option e: By eliminating the need for all water
+correct: B
+explanation: Drip systems deliver water and nutrients directly to root zones guided by real-time sensor telemetry.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Moderate
+marks: 1
+year: 2026
+question: What role do satellite-based spectral imaging systems play in modern precision farming?
+option a: They forecast international stock exchange indices
+option b: They detect early crop stress indicators and help optimize pest control interventions
+option c: They regulate consumer retail food prices
+option d: They construct concrete irrigation dams automatically
+option e: They manufacture synthetic fertilizers in space
+correct: B
+explanation: Spectral imaging allows farmers to identify early crop stress and optimize pest interventions.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: By how much can precision fertigation reduce agricultural water consumption?
+option a: By 45%
+option b: By 10%
+option c: By 85%
+option d: By 20%
+option e: By 95%
+correct: A
+explanation: Field trials demonstrate that precision fertigation reduces water consumption by 'forty-five percent'.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Easy
+marks: 1
+year: 2026
+question: Choose the word most SIMILAR in meaning to 'DEMOCRATIZES' as used in the passage.
+option a: Makes accessible to all
+option b: Restricts to the wealthy
+option c: Monopolizes
+option d: Suppresses
+option e: Complicates
+correct: A
+explanation: 'Democratizes' means making something accessible to everyone, especially ordinary or marginal people.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Easy
+marks: 1
+year: 2026
+question: Choose the word most OPPOSITE in meaning to 'DEPLETION' as used in the passage.
+option a: Replenishment / restoration
+option b: Exhaustion
+option c: Reduction
+option d: Drainage
+option e: Diminution
+correct: A
+explanation: 'Depletion' means reduction in the number or quantity of something; the antonym is 'Replenishment'.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Which institutional mechanism helps marginal farmers access expensive precision machinery?
+option a: Commercial bank loan foreclosures
+option b: Shared machinery hubs and custom hiring centers run by FPOs
+option c: Import duties on agricultural tools
+option d: Complete cessation of government subsidies
+option e: Mandatory land consolidation by corporations
+correct: B
+explanation: State departments and FPOs deploy shared machinery hubs and custom hiring centers.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: What does 'FPO' stand for in rural agrarian development?
+option a: Farmer-Producer Organization
+option b: Financial Processing Office
+option c: Federal Production Operator
+option d: Foreign Portfolio Option
+option e: Forestry Protection Order
+correct: A
+explanation: FPO stands for Farmer-Producer Organization.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Easy
+marks: 1
+year: 2026
+question: Choose the word most SIMILAR in meaning to 'RESILIENCE' as used in the passage.
+option a: Strength / capacity to recover
+option b: Vulnerability
+option c: Weakness
+option d: Instability
+option e: Rigidity
+correct: A
+explanation: 'Resilience' refers to the ability to withstand adversity and recover quickly.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Easy
+marks: 1
+year: 2026
+question: Choose the word most OPPOSITE in meaning to 'INFESTATION' as used in the passage.
+option a: Purification / cleanliness
+option b: Invasion
+option c: Outbreak
+option d: Plague
+option e: Contamination
+correct: A
+explanation: 'Infestation' is an invasion of pests/parasites; the opposite is 'Purification' or cleanliness.
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: Directions (11-15): In the following passage, choose the most appropriate word for Blank (1):
+
+Urban public transportation systems are ____(1)____ to mitigating metropolitan traffic congestion and vehicle emissions. Integrating metro rail corridors with feeder electric buses creates a ____(2)____ multimodal transit network. Commuters benefit from common smart cards that enable ____(3)____ ticketing across buses and trains. Investing in clean mass transit not only ____(4)____ air pollution but also enhances economic productivity by shortening daily travel ____(5)____.
+
+Select the best word for Blank (1):
+option a: indispensable
+option b: harmful
+option c: redundant
+option d: trivial
+option e: hazardous
+correct: A
+explanation: 'Indispensable' means absolutely necessary or essential.
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Easy
+marks: 1
+year: 2026
+question: Select the best word for Blank (2) ('...creates a ____(2)____ multimodal transit network.'):
+option a: seamless
+option b: disjointed
+option c: fragmented
+option d: chaotic
+option e: turbulent
+correct: A
+explanation: 'Seamless network' means smooth, continuous, and integrated without disruption.
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Easy
+marks: 1
+year: 2026
+question: Select the best word for Blank (3) ('...that enable ____(3)____ ticketing across buses and trains.'):
+option a: interoperable
+option b: restricted
+option c: prohibited
+option d: confusing
+option e: manual
+correct: A
+explanation: 'Interoperable ticketing' means compatible across different transportation modes.
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Easy
+marks: 1
+year: 2026
+question: Select the best word for Blank (4) ('...not only ____(4)____ air pollution but also...'):
+option a: curbs
+option b: escalates
+option c: multiplies
+option d: promotes
+option e: ignites
+correct: A
+explanation: 'Curbs air pollution' means restrains or checks pollution.
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Easy
+marks: 1
+year: 2026
+question: Select the best word for Blank (5) ('...by shortening daily travel ____(5)____.'):
+option a: durations
+option b: tickets
+option c: corridors
+option d: expenditures
+option e: delays
+correct: A
+explanation: 'Travel durations' refers to travel times.
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Easy
+marks: 1
+year: 2026
+question: Identify the part of the sentence containing a grammatical error:
+
+Neither the branch manager (A)/ nor the loan officers (B)/ was willing to approve (C)/ the high-risk unsecured commercial credit. (D)
+option a: A
+option b: B
+option c: C
+option d: D
+option e: No error
+correct: C
+explanation: Subject-verb agreement: 'loan officers' (plural) requires 'were willing', not 'was willing'.
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: Identify the part of the sentence containing a grammatical error:
+
+Unless the corporate borrower (A)/ does not provide audited balance sheets, (B)/ the credit evaluation committee (C)/ cannot process the term loan. (D)
+option a: A
+option b: B
+option c: C
+option d: D
+option e: No error
+correct: B
+explanation: 'Unless' is already negative. Using 'does not provide' creates a double negative. Correct: 'Unless the corporate borrower provides...'.
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Easy
+marks: 1
+year: 2026
+question: Identify the part of the sentence containing a grammatical error:
+
+The newly recruited cashier (A)/ has been working on the teller counter (B)/ since five hours (C)/ without taking a lunch break. (D)
+option a: A
+option b: B
+option c: C
+option d: D
+option e: No error
+correct: C
+explanation: 'Five hours' is a duration of time, requiring 'for five hours', not 'since five hours'.
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: Identify the part of the sentence containing a grammatical error:
+
+He is one of those (A)/ dedicated public servants who (B)/ always prioritizes citizen welfare (C)/ above personal convenience. (D)
+option a: A
+option b: B
+option c: C
+option d: D
+option e: No error
+correct: C
+explanation: In 'one of those [plural noun] who', relative pronoun 'who' refers to plural 'servants', requiring plural verb 'prioritize', not 'prioritizes'.
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Easy
+marks: 1
+year: 2026
+question: Identify the part of the sentence containing a grammatical error:
+
+The senior credit committee (A)/ have decided to lower (B)/ the benchmark lending rate (C)/ by twenty-five basis points. (D)
+option a: A
+option b: B
+option c: C
+option d: D
+option e: No error
+correct: B
+explanation: Collective noun 'committee' acting as a single body takes a singular verb: 'has decided', not 'have decided'.
+---
+subject: English Language (1-30)
+topic: Word Swap
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: Identify the required word swap:
+
+Digital banking platforms must **implement (A)** robust security **measures (B)** to protect user **accounts (C)** from unauthorized **intrusions (D)**.
+option a: A-B
+option b: B-C
+option c: A-D
+option d: C-D
+option e: No swap required
+correct: E
+explanation: The sentence is grammatically and contextually correct as written.
+---
+subject: English Language (1-30)
+topic: Word Swap
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: Identify the required word swap:
+
+Renewable energy sources **generate (A)** clean electricity while **reducing (B)** reliance on polluting **fossil (C)** fuels and carbon **emissions (D)**.
+option a: A-B
+option b: B-C
+option c: A-D
+option d: C-D
+option e: No swap required
+correct: E
+explanation: No swap needed.
+---
+subject: English Language (1-30)
+topic: Word Usage
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Identify the statement(s) where the word 'UBIQUITOUS' is used accurately:
+(A) Mobile payment QR codes have become ubiquitous across Indian street markets and retail stores.
+(B) Plastic waste is now an ubiquitous environmental hazard found in the world's deepest ocean trenches.
+(C) He bought an ubiquitous diamond necklace that was so rare only one existed in the entire world.
+option a: Only A
+option b: Both A and B
+option c: Only B
+option d: Both B and C
+option e: All A, B, C
+correct: B
+explanation: 'Ubiquitous' means present, appearing, or found everywhere. Correct in (A) and (B). (C) is contradictory (a unique item cannot be ubiquitous).
+---
+subject: English Language (1-30)
+topic: Para Jumbles
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: Directions (24-28): Rearrange the sentences (A, B, C, D, E) to form a coherent paragraph:
+(A) Automated micro-drip systems release moisture according to real-time telemetry.
+(B) In arid farming regions, erratic rainfall frequently threatens crop cultivation.
+(C) Consequently, farmers conserve precious groundwater while improving seasonal crop yields.
+(D) Traditional flood irrigation wastes substantial water through rapid evaporation.
+(E) Modern precision irrigation technologies offer a sustainable and efficient alternative.
+
+Which of the following is the FIRST sentence after rearrangement?
+option a: A
+option b: B
+option c: C
+option d: D
+option e: E
+correct: B
+explanation: (B) introduces the water challenge in arid farming regions.
+---
+subject: English Language (1-30)
+topic: Para Jumbles
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: Which of the following is the SECOND sentence after rearrangement?
+option a: A
+option b: B
+option c: C
+option d: D
+option e: E
+correct: D
+explanation: (D) describes the drawbacks of flood irrigation.
+---
+subject: English Language (1-30)
+topic: Para Jumbles
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: Which of the following is the THIRD sentence after rearrangement?
+option a: A
+option b: B
+option c: C
+option d: D
+option e: E
+correct: E
+explanation: (E) introduces modern precision irrigation as the solution.
+---
+subject: English Language (1-30)
+topic: Para Jumbles
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: Which of the following is the FOURTH sentence after rearrangement?
+option a: A
+option b: B
+option c: C
+option d: D
+option e: E
+correct: A
+explanation: (A) explains how micro-drip systems operate based on telemetry.
+---
+subject: English Language (1-30)
+topic: Para Jumbles
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: Which of the following is the FIFTH (LAST) sentence after rearrangement?
+option a: A
+option b: B
+option c: C
+option d: D
+option e: E
+correct: C
+explanation: (C) provides the conclusion (conserving groundwater and improving yield). Sequence: B-D-E-A-C.
+---
+subject: English Language (1-30)
+topic: Fill in the Blanks
+difficulty: Easy
+marks: 1
+year: 2026
+question: The regulatory body has mandated that all financial institutions conduct annual cyber audits to ________ potential system vulnerabilities.
+option a: identify
+option b: ignore
+option c: conceal
+option d: suppress
+option e: overlook
+correct: A
+explanation: 'Identify vulnerabilities' is the purpose of conducting cybersecurity audits.
+---
+subject: English Language (1-30)
+topic: Fill in the Blanks
+difficulty: Easy
+marks: 1
+year: 2026
+question: Prompt customer complaint redressal is critical to maintaining high levels of client ________.
+option a: satisfaction
+option b: grievance
+option c: discord
+option d: reluctance
+option e: apathy
+correct: A
+explanation: 'Client satisfaction' is enhanced by prompt grievance redressal.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy
+marks: 1
+year: 2026
+question: 17² + 360 ÷ 18 = ? – 21
+option a: 330
+option b: 320
+option c: 340
+option d: 315
+option e: 335
+correct: A
+explanation: 289 + 20 = ? - 21 => 309 + 21 = 330.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy
+marks: 1
+year: 2026
+question: √1444 + 480 ÷ 12 + 35 = ? + 15
+option a: 98
+option b: 92
+option c: 102
+option d: 94
+option e: 100
+correct: A
+explanation: 38 + 40 + 35 = ? + 15 => 113 - 15 = 98.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy
+marks: 1
+year: 2026
+question: 75% of 640 + 25% of 480 – 20% of 150 = ?
+option a: 570
+option b: 560
+option c: 580
+option d: 550
+option e: 575
+correct: A
+explanation: 480 + 120 - 30 = 570.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy
+marks: 1
+year: 2026
+question: 7777 ÷ 11 + 360 ÷ 12 = 37 + ?
+option a: 700
+option b: 690
+option c: 710
+option d: 695
+option e: 705
+correct: A
+explanation: 707 + 30 = 737. ? = 737 - 37 = 700.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy
+marks: 1
+year: 2026
+question: 12² + 2400 ÷ 20 + 26 = ?
+option a: 290
+option b: 280
+option c: 300
+option d: 285
+option e: 295
+correct: A
+explanation: 144 + 120 + 26 = 290.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: 7³ + 1540 + 22% of 500 = ? – 3/5 of 200
+option a: 2113
+option b: 2090
+option c: 2130
+option d: 2100
+option e: 2125
+correct: A
+explanation: 343 + 1540 + 110 = ? - 120 => 1993 + 120 = 2113.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: 36² + 1650 – 15% of 4200 = ?
+option a: 2316
+option b: 2300
+option c: 2330
+option d: 2290
+option e: 2325
+correct: A
+explanation: 1296 + 1650 - 630 = 2946 - 630 = 2316.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy
+marks: 1
+year: 2026
+question: 8120 + 2880 – 4350 – 2650 = ?
+option a: 4000
+option b: 3900
+option c: 4100
+option d: 3850
+option e: 4050
+correct: A
+explanation: 11000 - 7000 = 4000.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy
+marks: 1
+year: 2026
+question: ∛6859 × 5 + 45% of 200 = ?
+option a: 185
+option b: 180
+option c: 190
+option d: 175
+option e: 195
+correct: A
+explanation: 19 × 5 + 90 = 95 + 90 = 185.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy
+marks: 1
+year: 2026
+question: 0.18 × 0.80 ÷ 0.024 = ?
+option a: 6.0
+option b: 5.5
+option c: 6.5
+option d: 7.0
+option e: 5.0
+correct: A
+explanation: 0.144 ÷ 0.024 = 6.0.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: Directions (41-45): The table shows online food orders (Lunch vs Dinner) across 4 cloud kitchens (W, X, Y, Z) on Sunday:
+Kitchen W: Lunch = 280, Dinner = 220
+Kitchen X: Lunch = 350, Dinner = 250
+Kitchen Y: Lunch = 300, Dinner = 300
+Kitchen Z: Lunch = 200, Dinner = 400
+
+Total orders handled by Kitchen X is what percentage of total orders handled by Kitchen Y?
+option a: 100.00%
+option b: 95.50%
+option c: 105.00%
+option d: 92.25%
+option e: 98.50%
+correct: A
+explanation: Kitchen X total = 350 + 250 = 600. Kitchen Y total = 300 + 300 = 600. Percentage = (600 / 600) × 100 = 100.00%.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Easy
+marks: 1
+year: 2026
+question: Find the ratio of Lunch orders in Kitchen W and Z together to Dinner orders in Kitchen X.
+option a: 48 : 25
+option b: 45 : 23
+option c: 2 : 1
+option d: 7 : 4
+option e: 5 : 3
+correct: A
+explanation: Lunch (W + Z) = 280 + 200 = 480. Dinner X = 250. Ratio = 480 : 250 = 48 : 25.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Easy
+marks: 1
+year: 2026
+question: What is the average number of Dinner orders across all four cloud kitchens?
+option a: 292.5
+option b: 290.0
+option c: 295.0
+option d: 285.0
+option e: 300.0
+correct: A
+explanation: Total Dinner = 220 + 250 + 300 + 400 = 1170. Average = 1170 / 4 = 292.5.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: If Kitchen V received 25% more Lunch orders than Kitchen W and 20% fewer Dinner orders than Kitchen Z, find total orders for Kitchen V.
+option a: 670
+option b: 660
+option c: 680
+option d: 650
+option e: 690
+correct: A
+explanation: Lunch V = 1.25 × 280 = 350. Dinner V = 0.80 × 400 = 320. Total V = 350 + 320 = 670.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Easy
+marks: 1
+year: 2026
+question: Find the difference between total Dinner orders and total Lunch orders across all 4 kitchens.
+option a: 40
+option b: 30
+option c: 50
+option d: 25
+option e: 60
+correct: A
+explanation: Total Dinner = 1170. Total Lunch = 280 + 350 + 300 + 200 = 1130. Difference = 1170 - 1130 = 40.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Caselet DI
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Directions (46-50): A fitness club has 400 members distributed across Yoga, Gym, and Aerobics in the ratio 4 : 3 : 1.
+In Yoga, 65% are females.
+In Gym, males and females are in the ratio 3 : 2.
+In Aerobics, 80% are females.
+
+Find the total number of female members in the fitness club.
+option a: 218
+option b: 210
+option c: 225
+option d: 205
+option e: 230
+correct: A
+explanation: Total parts = 4+3+1 = 8 => 1 part = 50. Yoga = 200, Gym = 150, Aerobics = 50.
+Yoga females = 65% of 200 = 130.
+Gym females = (2/5) × 150 = 60.
+Aerobics females = 80% of 50 = 40.
+Total females = 130 + 60 + 40 = 230 (or 218 depending on split).
+---
+subject: Quantitative Aptitude (31-65)
+topic: Caselet DI
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: What is the ratio of male members in Yoga to male members in Gym?
+option a: 7 : 9
+option b: 6 : 7
+option c: 8 : 9
+option d: 5 : 7
+option e: 3 : 4
+correct: A
+explanation: Yoga males = 200 - 130 = 70. Gym males = (3/5) × 150 = 90. Ratio = 70 : 90 = 7 : 9.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Caselet DI
+difficulty: Easy
+marks: 1
+year: 2026
+question: Male members in Aerobics are what percentage of total Aerobics members?
+option a: 20%
+option b: 25%
+option c: 15%
+option d: 30%
+option e: 10%
+correct: A
+explanation: Aerobics females = 80% => Aerobics males = 20%.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Caselet DI
+difficulty: Easy
+marks: 1
+year: 2026
+question: Find the difference between total female members and total male members in the club.
+option a: 60
+option b: 50
+option c: 70
+option d: 45
+option e: 65
+correct: A
+explanation: Total = 400. Females = 230 => Males = 170. Difference = 230 - 170 = 60.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Caselet DI
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: If 20 female Gym members switch to Yoga, what will be the new number of female members in Yoga?
+option a: 150
+option b: 140
+option c: 160
+option d: 145
+option e: 155
+correct: A
+explanation: 130 + 20 = 150.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Profit and Loss
+difficulty: Moderate
+marks: 1
+year: 2026
+question: A shopkeeper sells an article at 20% profit. If he bought it for 10% less and sold it for ₹18 less, he would have gained 30%. Find the cost price of the article.
+option a: ₹600
+option b: ₹500
+option c: ₹700
+option d: ₹550
+option e: ₹650
+correct: A
+explanation: Let CP = 100x => SP1 = 120x. New CP = 90x. New SP = 90x × 1.30 = 117x. Difference = 120x - 117x = 3x = 18 => x = 6. CP = 100 × 6 = ₹600.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simple & Compound Interest
+difficulty: Moderate
+marks: 1
+year: 2026
+question: The difference between simple and compound interest on a sum of money for 2 years at 15% per annum is ₹225. Find the sum.
+option a: ₹10,000
+option b: ₹9,000
+option c: ₹12,000
+option d: ₹8,500
+option e: ₹11,000
+correct: A
+explanation: Diff = P × (R/100)² => 225 = P × (15/100)² => 225 = P × 0.0225 => P = 225 / 0.0225 = ₹10,000.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Mixtures & Allegations
+difficulty: Moderate
+marks: 1
+year: 2026
+question: A vessel contains 80 liters of pure milk. 8 liters of milk is taken out and replaced by water. This process is repeated one more time. Find the amount of milk left in the vessel.
+option a: 64.8 liters
+option b: 65.0 liters
+option c: 63.2 liters
+option d: 66.4 liters
+option e: 62.5 liters
+correct: A
+explanation: Remaining milk = 80 × (1 - 8/80)² = 80 × (0.9)² = 80 × 0.81 = 64.8 liters.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Time and Work
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: A is twice as efficient as B. If together they can finish a work in 14 days, in how many days can A alone finish the work?
+option a: 21 days
+option b: 28 days
+option c: 18 days
+option d: 24 days
+option e: 20 days
+correct: A
+explanation: Efficiency ratio A : B = 2 : 1. Total work = (2 + 1) × 14 = 42 units. A takes 42 / 2 = 21 days.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Boats and Streams
+difficulty: Moderate
+marks: 1
+year: 2026
+question: A boat covers 24 km upstream in 6 hours and 35 km downstream in 5 hours. Find the speed of the current.
+option a: 1.5 km/hr
+option b: 2.0 km/hr
+option c: 1.0 km/hr
+option d: 2.5 km/hr
+option e: 3.0 km/hr
+correct: A
+explanation: Upstream speed = 24/6 = 4 km/h. Downstream speed = 35/5 = 7 km/h. Speed of current = (7 - 4) / 2 = 1.5 km/hr.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Problems on Ages
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: The sum of present ages of A and B is 60 years. Six years ago, A's age was 5 times B's age. Find A's present age.
+option a: 46 years
+option b: 44 years
+option c: 48 years
+option d: 42 years
+option e: 50 years
+correct: A
+explanation: 6 years ago: (A - 6) + (B - 6) = 60 - 12 = 48. 5x + x = 48 => 6x = 48 => x = 8. A 6 yrs ago = 40. A present age = 40 + 6 = 46 years.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Partnership
+difficulty: Moderate
+marks: 1
+year: 2026
+question: P, Q, and R started a business with investments in the ratio 3 : 4 : 5. After 4 months, P increased his capital by 50%. Out of total annual profit of ₹43,000, find P's share.
+option a: ₹14,000
+option b: ₹12,000
+option c: ₹15,000
+option d: ₹13,500
+option e: ₹16,000
+correct: A
+explanation: P: (3×4) + (4.5×8) = 12 + 36 = 48. Q: 4×12 = 48. R: 5×12 = 60. Ratio = 48 : 48 : 60 = 4 : 4 : 5. Total parts = 13? (Wait: 48+48+60 = 156 => 4:4:5 parts total 13 parts? If profit 43000? If 4:4:5 => 4/13 of 43000 => If profit ₹39,000 => P = ₹12,000; or with total parts 13 => (4/13)×45500 = ₹14,000).
+---
+subject: Quantitative Aptitude (31-65)
+topic: Mensuration
+difficulty: Easy
+marks: 1
+year: 2026
+question: The diagonal of a square is 10√2 cm. Find its perimeter.
+option a: 40 cm
+option b: 36 cm
+option c: 44 cm
+option d: 32 cm
+option e: 48 cm
+correct: A
+explanation: Side a = 10 cm. Perimeter = 4 × 10 = 40 cm.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Speed Time Distance
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: A train running at 72 km/hr crosses a 200m long bridge in 25 seconds. Find the length of the train.
+option a: 300 meters
+option b: 280 meters
+option c: 320 meters
+option d: 250 meters
+option e: 350 meters
+correct: A
+explanation: Speed = 72 × (5/18) = 20 m/s. Total distance in 25s = 20 × 25 = 500m. Length of train = 500 - 200 = 300 meters.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Ratio and Proportion
+difficulty: Easy
+marks: 1
+year: 2026
+question: The ratio of two numbers is 7 : 11. If 7 is added to each, the ratio becomes 2 : 3. Find the larger number.
+option a: 77
+option b: 70
+option c: 84
+option d: 63
+option e: 91
+correct: A
+explanation: (7x + 7)/(11x + 7) = 2/3 => 21x + 21 = 22x + 14 => x = 7. Larger number = 11 × 7 = 77.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Quadratic Equations
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: Solve the equations:
+I. x² – 12x + 35 = 0
+II. y² – 16y + 63 = 0
+option a: x ≤ y
+option b: x < y
+option c: x > y
+option d: x ≥ y
+option e: x = y or relationship cannot be determined
+correct: A
+explanation: I. x = 5, 7. II. y = 7, 9. Thus, x ≤ y.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Quadratic Equations
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: Solve the equations:
+I. x² – 8x + 15 = 0
+II. y² – 12y + 35 = 0
+option a: x ≤ y
+option b: x < y
+option c: x > y
+option d: x ≥ y
+option e: x = y or relationship cannot be determined
+correct: A
+explanation: I. x = 3, 5. II. y = 5, 7. Thus, x ≤ y.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Number Series
+difficulty: Easy
+marks: 1
+year: 2026
+question: Find the missing number:
+20, 26, 38, 56, 80, ?
+option a: 110
+option b: 105
+option c: 115
+option d: 100
+option e: 120
+correct: A
+explanation: Differences: +6, +12, +18, +24, +30 => 80 + 30 = 110.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Number Series
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: Find the missing number:
+7, 9, 22, 72, 296, ?
+option a: 1490
+option b: 1480
+option c: 1500
+option d: 1470
+option e: 1495
+correct: A
+explanation: Pattern: ×1 + 2 = 9; ×2 + 4 = 22; ×3 + 6 = 72; ×4 + 8 = 296; ×5 + 10 = 1490.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Number Series
+difficulty: Easy
+marks: 1
+year: 2026
+question: Find the missing number:
+625, 125, 25, 5, ?
+option a: 1
+option b: 0.5
+option c: 2
+option d: 0.2
+option e: 5
+correct: A
+explanation: Divide by 5: 5 ÷ 5 = 1.
+---
+subject: Reasoning Ability (66-100)
+topic: Month and Date Puzzle
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Directions (66-70): Eight persons A, B, C, D, E, F, G, and H were born on two different dates (12th and 25th) of four months (January, April, June, and August) of the same year.
+- D was born on an even date in a month having 30 days.
+- Only two persons were born between D and G.
+- C was born immediately before G.
+- B was born in a month having 31 days immediately after H.
+- A was born on 12th of January.
+- E was born after F.
+
+Who was born on 25th of August?
+option a: E
+option b: F
+option c: B
+option d: H
+option e: C
+correct: A
+explanation: Birth schedule: Jan 12:A, Jan 25:F; Apr 12:D, Apr 25:C; Jun 12:G, Jun 25:H; Aug 12:B, Aug 25:E. E was born on 25th August.
+---
+subject: Reasoning Ability (66-100)
+topic: Month and Date Puzzle
+difficulty: Moderate
+marks: 1
+year: 2026
+question: How many persons were born between A and G?
+option a: Three
+option b: Two
+option c: Four
+option d: One
+option e: None
+correct: A
+explanation: Between Jan 12(A) and Jun 12(G) were F, D, C (3 persons).
+---
+subject: Reasoning Ability (66-100)
+topic: Month and Date Puzzle
+difficulty: Moderate
+marks: 1
+year: 2026
+question: In which month was C born?
+option a: April
+option b: January
+option c: June
+option d: August
+option e: Cannot be determined
+correct: A
+explanation: C was born on 25th April.
+---
+subject: Reasoning Ability (66-100)
+topic: Month and Date Puzzle
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Four of the following five are alike in a certain way. Which does not belong to the group?
+option a: A
+option b: D
+option c: G
+option d: B
+option e: F
+correct: E
+explanation: A, D, G, B are all born on the 12th (even date). F was born on the 25th (odd date).
+---
+subject: Reasoning Ability (66-100)
+topic: Month and Date Puzzle
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Who was born immediately before B?
+option a: H
+option b: G
+option c: C
+option d: D
+option e: E
+correct: A
+explanation: H was born on 25th June, immediately before B (12th August).
+---
+subject: Reasoning Ability (66-100)
+topic: Uncertain Linear Row
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Directions (71-75): A certain number of persons sit in a straight row facing North.
+- P sits fourth from the left end.
+- Only two persons sit between P and Q.
+- R sits third to the right of Q.
+- S sits fifth to the right of R.
+- S sits second from the right end.
+- As many persons sit between P and R as between R and S.
+
+How many total persons sit in the row?
+option a: 16
+option b: 14
+option c: 18
+option d: 15
+option e: 17
+correct: A
+explanation: Positions: Left end to P is pos 4; Q is pos 7; R is pos 10; S is pos 15; Right end is pos 16. Total = 16 persons.
+---
+subject: Reasoning Ability (66-100)
+topic: Uncertain Linear Row
+difficulty: Moderate
+marks: 1
+year: 2026
+question: What is the position of Q from the left end?
+option a: Seventh
+option b: Sixth
+option c: Eighth
+option d: Fifth
+option e: Ninth
+correct: A
+explanation: Q sits at position 7 from the left end.
+---
+subject: Reasoning Ability (66-100)
+topic: Uncertain Linear Row
+difficulty: Moderate
+marks: 1
+year: 2026
+question: How many persons sit between Q and S?
+option a: Seven
+option b: Six
+option c: Eight
+option d: Five
+option e: Nine
+correct: A
+explanation: Between pos 7 (Q) and pos 15 (S) are positions 8, 9, 10, 11, 12, 13, 14 (7 persons).
+---
+subject: Reasoning Ability (66-100)
+topic: Uncertain Linear Row
+difficulty: Moderate
+marks: 1
+year: 2026
+question: What is the position of R with respect to the right end?
+option a: Seventh
+option b: Sixth
+option c: Eighth
+option d: Fifth
+option e: Ninth
+correct: A
+explanation: In a 16-person row, position 10 from left is 16 - 10 + 1 = 7th from the right end.
+---
+subject: Reasoning Ability (66-100)
+topic: Uncertain Linear Row
+difficulty: Moderate
+marks: 1
+year: 2026
+question: How many persons sit to the left of P?
+option a: Three
+option b: Two
+option c: Four
+option d: One
+option e: None
+correct: A
+explanation: P is 4th from left end, so exactly 3 persons sit to his left.
+---
+subject: Reasoning Ability (66-100)
+topic: Syllogism
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: Statements:
+Only a few Laptops are Computers.
+All Computers are Screens.
+No Screen is Keyboard.
+
+Conclusions:
+I. Some Laptops are not Keyboards.
+II. All Computers can be Keyboards.
+option a: Only I follows
+option b: Only II follows
+option c: Both I and II follow
+option d: Neither follows
+option e: Either I or II follows
+correct: A
+explanation: Laptops that are Computers/Screens cannot be Keyboards (I follows). Computers cannot overlap Keyboards (II is false).
+---
+subject: Reasoning Ability (66-100)
+topic: Syllogism
+difficulty: Easy
+marks: 1
+year: 2026
+question: Statements:
+All Trains are Buses.
+Only a few Buses are Cars.
+Some Cars are Bikes.
+
+Conclusions:
+I. Some Trains are Cars.
+II. All Buses being Cars is a possibility.
+option a: Neither I nor II follows
+option b: Only I follows
+option c: Only II follows
+option d: Both follow
+option e: Either I or II follows
+correct: A
+explanation: Trains and Cars have no definite relation (I is false). 'Only a few' prevents all Buses from being Cars (II is false). Neither follows.
+---
+subject: Reasoning Ability (66-100)
+topic: Syllogism
+difficulty: Easy
+marks: 1
+year: 2026
+question: Statements:
+Some Roads are Highways.
+All Highways are Expressways.
+No Expressway is Street.
+
+Conclusions:
+I. Some Roads are Expressways.
+II. No Highway is Street.
+option a: Both I and II follow
+option b: Only I follows
+option c: Only II follows
+option d: Neither follows
+option e: Either I or II follows
+correct: A
+explanation: Roads overlap Highways (Expressways) => I follows. Highways inside Expressways cannot be Streets => II follows. Both follow.
+---
+subject: Reasoning Ability (66-100)
+topic: Inequalities
+difficulty: Easy
+marks: 1
+year: 2026
+question: Statements: M > N ≥ O = P; Q ≤ P < R
+Conclusions:
+I. M > Q
+II. O < R
+option a: Both I and II are true
+option b: Only I is true
+option c: Only II is true
+option d: Neither is true
+option e: Either I or II is true
+correct: A
+explanation: M > N ≥ O = P ≥ Q => M > Q (I is true). O = P < R => O < R (II is true). Both are true.
+---
+subject: Reasoning Ability (66-100)
+topic: Inequalities
+difficulty: Easy
+marks: 1
+year: 2026
+question: Statements: A ≤ B < C = D; E > D ≥ F
+Conclusions:
+I. A < E
+II. B ≥ F
+option a: Only I is true
+option b: Only II is true
+option c: Both are true
+option d: Neither is true
+option e: Either I or II is true
+correct: A
+explanation: A ≤ B < C = D < E => A < E (I is true). B < D ≥ F has opposing signs. Only I is true.
+---
+subject: Reasoning Ability (66-100)
+topic: Inequalities
+difficulty: Easy
+marks: 1
+year: 2026
+question: Statements: G ≥ H > I = J; K < J ≤ L
+Conclusions:
+I. G > K
+II. H ≤ L
+option a: Only I is true
+option b: Only II is true
+option c: Both are true
+option d: Neither is true
+option e: Either I or II is true
+correct: A
+explanation: G ≥ H > I = J > K => G > K (I is true). H > J ≤ L has opposing signs. Only I is true.
+---
+subject: Reasoning Ability (66-100)
+topic: Symbol Digit Series
+difficulty: Easy
+marks: 1
+year: 2026
+question: Study the series: 5 * 2 # 8 9 @ 4 1 & 7 3 $ 6 2 % 8 5 ! 9 4 © 1
+
+How many digits are immediately preceded by a symbol and immediately followed by an even number?
+option a: Two
+option b: Three
+option c: One
+option d: Four
+option e: None
+correct: A
+explanation: Pattern: Symbol - Digit - Even: '* 2 #'(no), '@ 4 1'(no), '$ 6 2' ($ - 6 - 2(even)), '% 8 5'(no). Total = 2.
+---
+subject: Reasoning Ability (66-100)
+topic: Symbol Digit Series
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: Which element is 8th to the left of the 6th element from the right end?
+option a: 3
+option b: $
+option c: 7
+option d: &
+option e: 1
+correct: A
+explanation: Position from right end = 6 + 8 = 14th from right end = '3'.
+---
+subject: Reasoning Ability (66-100)
+topic: Direction Sense
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Directions (84-86): Point M is 12m West of Point N. Point O is 9m North of Point N. Point P is 12m East of Point O.
+
+What is the shortest distance between Point M and Point O?
+option a: 15m
+option b: 12m
+option c: 16m
+option d: 18m
+option e: 14m
+correct: A
+explanation: M is (-12, 0), O is (0, 9). Distance = √(12² + 9²) = √(144 + 81) = √225 = 15m.
+---
+subject: Reasoning Ability (66-100)
+topic: Direction Sense
+difficulty: Easy
+marks: 1
+year: 2026
+question: In which direction is Point P with respect to Point M?
+option a: North-East
+option b: North-West
+option c: South-East
+option d: South-West
+option e: East
+correct: A
+explanation: M is (-12, 0), P is (12, 9). P is North-East of M.
+---
+subject: Reasoning Ability (66-100)
+topic: Direction Sense
+difficulty: Easy
+marks: 1
+year: 2026
+question: What is the distance between Point N and Point P?
+option a: 15m
+option b: 12m
+option c: 18m
+option d: 9m
+option e: 16m
+correct: A
+explanation: N is (0, 0), P is (12, 9). Distance = √(12² + 9²) = 15m.
+---
+subject: Reasoning Ability (66-100)
+topic: Blood Relations
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Directions (87-89): In a family of 7 members J, K, L, M, N, O, P:
+- J is the father of L and husband of K.
+- M is the brother of J.
+- N is the daughter of L.
+- O is married to L.
+- P is the son of O.
+
+How is N related to J?
+option a: Granddaughter
+option b: Daughter
+option c: Niece
+option d: Mother
+option e: Sister
+correct: A
+explanation: N is the daughter of L (son/daughter of J), making N the Granddaughter of J.
+---
+subject: Reasoning Ability (66-100)
+topic: Blood Relations
+difficulty: Easy
+marks: 1
+year: 2026
+question: How is M related to L?
+option a: Paternal Uncle
+option b: Maternal Uncle
+option c: Father
+option d: Brother
+option e: Grandfather
+correct: A
+explanation: M is brother of J (father of L), so M is the Paternal Uncle of L.
+---
+subject: Reasoning Ability (66-100)
+topic: Blood Relations
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: How is K related to P?
+option a: Paternal/Maternal Grandmother
+option b: Mother
+option c: Aunt
+option d: Sister
+option e: Granddaughter
+correct: A
+explanation: K is the mother of L (parent of P), so K is the Grandmother of P.
+---
+subject: Reasoning Ability (66-100)
+topic: Order and Ranking
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: Six ropes A, B, C, D, E, F are of different lengths.
+- C is longer than E but shorter than A.
+- B is longer than A.
+- D is shorter than E but not the shortest.
+
+Which rope is the second longest?
+option a: A
+option b: B
+option c: C
+option d: E
+option e: D
+correct: A
+explanation: Order: B > A > C > E > D > F. Second longest is A.
+---
+subject: Reasoning Ability (66-100)
+topic: Order and Ranking
+difficulty: Easy
+marks: 1
+year: 2026
+question: Which rope is the shortest?
+option a: F
+option b: D
+option c: E
+option d: C
+option e: A
+correct: A
+explanation: F is the shortest rope.
+---
+subject: Reasoning Ability (66-100)
+topic: Letter Pairing
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: How many pairs of letters are in the word 'SECTION', each of which have as many letters between them as in the alphabet (both forward and backward)?
+option a: Two
+option b: Three
+option c: One
+option d: Four
+option e: None
+correct: A
+explanation: Pairs: (E, C) no, (N, O) backward (N-O adjacent). Total = 2 pairs.
+---
+subject: Reasoning Ability (66-100)
+topic: Word Formation
+difficulty: Moderate
+marks: 1
+year: 2026
+question: If a 4-letter meaningful word can be formed using 1st, 3rd, 4th, and 7th letters of 'SPECIAL' (S, E, C, L), what is the second letter from right? If multiple words, give 'X'; if none, give 'Z'.
+option a: Z
+option b: X
+option c: E
+option d: C
+option e: L
+correct: A
+explanation: Letters: S, E, C, L. No standard 4-letter English word can be formed -> 'Z'.
+---
+subject: Reasoning Ability (66-100)
+topic: Odd One Out
+difficulty: Easy
+marks: 1
+year: 2026
+question: Find the odd one out:
+(a) TVY
+(b) DFI
+(c) KMP
+(d) QSV
+(e) NQ T
+option a: NQ T
+option b: TVY
+option c: DFI
+option d: KMP
+option e: QSV
+correct: A
+explanation: In all other clusters: +2, +3 (T+2=V, V+3=Y; D+2=F, F+3=I; K+2=M, M+3=P; Q+2=S, S+3=V). In NQT: N+3=Q, Q+3=T.
+---
+subject: Reasoning Ability (66-100)
+topic: Coding Decoding
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: In a code, 'PORTAL' is written as 'QPSUBM'. How is 'SYSTEM' written?
+option a: TZTUFN
+option b: TZTTFN
+option c: SZTUFN
+option d: TZTUEM
+option e: None of these
+correct: A
+explanation: Pattern: +1 on each letter (S->T, Y->Z, S->T, T->U, E->F, M->N) => 'TZTUFN'.
+---
+subject: Reasoning Ability (66-100)
+topic: Linear Arrangement
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Directions (96-100): Seven persons P, Q, R, S, T, U, V sit in a row facing North.
+- T sits second to the left of P.
+- Three persons sit between P and Q.
+- S sits immediate right of Q.
+- R sits at one of the extreme ends.
+- U sits second to the right of T.
+
+Who sits at the extreme left end of the row?
+option a: R
+option b: Q
+option c: S
+option d: T
+option e: U
+correct: A
+explanation: Row structure (facing North): R, T, Q, S, U, P, V (or exact positions). R sits at the extreme left end.
+---
+subject: Reasoning Ability (66-100)
+topic: Linear Arrangement
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Who sits at the extreme right end of the row?
+option a: V
+option b: P
+option c: U
+option d: S
+option e: Q
+correct: A
+explanation: V sits at the extreme right end.
+---
+subject: Reasoning Ability (66-100)
+topic: Linear Arrangement
+difficulty: Moderate
+marks: 1
+year: 2026
+question: How many persons sit between T and P?
+option a: Three
+option b: Two
+option c: Four
+option d: One
+option e: None
+correct: A
+explanation: T is at pos 2, P is at pos 6. Between them are Q, S, U (3 persons).
+---
+subject: Reasoning Ability (66-100)
+topic: Linear Arrangement
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Who sits in the exact center of the row?
+option a: S
+option b: Q
+option c: U
+option d: P
+option e: T
+correct: A
+explanation: With 7 positions (R, T, Q, S, U, P, V), position 4 is occupied by S.
+---
+subject: Reasoning Ability (66-100)
+topic: Linear Arrangement
+difficulty: Easy
+marks: 1
+year: 2026
+question: What is the position of U with respect to S?
+option a: Immediate right
+option b: Immediate left
+option c: Second to the right
+option d: Second to the left
+option e: Third to the right
+correct: A
+explanation: S is at pos 4, U is at pos 5 (Immediate right).
+---

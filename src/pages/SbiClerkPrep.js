@@ -3,7 +3,7 @@ import { MockTest } from './MockTest';
 
 export const SbiClerkPrep = {
   parsedQuestions: [],
-  activeTab: 'pyqs', // 'pyqs' | 'mocks' | 'pattern' | 'syllabus'
+  activeTab: 'expected2026', // 'expected2026' | 'pyqs' | 'mocks' | 'pattern' | 'syllabus'
 
   async render() {
     return `
@@ -23,15 +23,18 @@ export const SbiClerkPrep = {
                 <span class="px-2.5 py-0.5 rounded-full bg-blue-500/15 text-blue-600 dark:text-blue-400 font-extrabold text-[10px] tracking-wider uppercase border border-blue-500/20">
                   SBI Junior Associate 2026
                 </span>
+                <span class="px-2.5 py-0.5 rounded-full bg-amber-500/15 text-amber-600 dark:text-amber-400 font-extrabold text-[10px] tracking-wider uppercase border border-amber-500/20">
+                  🎯 8 Expected 2026 Papers
+                </span>
                 <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 font-extrabold text-[10px] tracking-wider uppercase border border-emerald-500/20">
-                  2025 PYQs + 7 Mock Series
+                  2025 PYQs + 7 Mocks
                 </span>
               </div>
               <h3 class="font-display font-extrabold text-xl md:text-2xl text-slate-900 dark:text-white leading-tight">
-                SBI Clerk Preparation Portal
+                SBI Clerk 2026 Preparation Portal
               </h3>
               <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 font-semibold max-w-2xl leading-relaxed">
-                Practice official memory-based SBI Clerk 2025 real exam papers and 7 progressive mock tests in full CBT simulator with 60-minute countdown, sectional grouping, and –0.25 negative marking.
+                Attempt 8 high-probability full-length 2026 expected question papers modeled on authentic 2025 shift patterns, plus official 2025 memory-based papers and progressive mock tests in full CBT mode.
               </p>
             </div>
           </div>
@@ -53,10 +56,13 @@ export const SbiClerkPrep = {
           </div>
         </div>
 
-        <!-- Navigation Tabs: PYQs | Mocks | Exam Pattern | Syllabus -->
+        <!-- Navigation Tabs: Expected 2026 | PYQs | 7 Mocks | Exam Pattern | Syllabus -->
         <div class="flex gap-2 border-b border-slate-200/60 dark:border-white/[0.06] pb-3 overflow-x-auto no-scrollbar">
+          <button id="sbi-tab-expected" class="sbi-tab-btn px-5 py-2.5 rounded-2xl text-xs font-extrabold transition-all cursor-pointer flex items-center gap-2 ${this.activeTab === 'expected2026' ? 'bg-primary-500 text-white shadow-md' : 'text-slate-600 dark:text-slate-400 hover:bg-black/5 dark:hover:bg-white/5'}">
+            <i class="fa-solid fa-bullseye text-amber-300"></i> 🎯 2026 Expected Papers (8 Sets)
+          </button>
           <button id="sbi-tab-pyqs" class="sbi-tab-btn px-5 py-2.5 rounded-2xl text-xs font-extrabold transition-all cursor-pointer flex items-center gap-2 ${this.activeTab === 'pyqs' ? 'bg-primary-500 text-white shadow-md' : 'text-slate-600 dark:text-slate-400 hover:bg-black/5 dark:hover:bg-white/5'}">
-            <i class="fa-solid fa-file-circle-check"></i> 2025 PYQ Real Papers
+            <i class="fa-solid fa-file-circle-check"></i> 2025 PYQ Real Papers (3 Shifts)
           </button>
           <button id="sbi-tab-mocks" class="sbi-tab-btn px-5 py-2.5 rounded-2xl text-xs font-extrabold transition-all cursor-pointer flex items-center gap-2 ${this.activeTab === 'mocks' ? 'bg-primary-500 text-white shadow-md' : 'text-slate-600 dark:text-slate-400 hover:bg-black/5 dark:hover:bg-white/5'}">
             <i class="fa-solid fa-layer-group"></i> 7 Progressive Mock Tests
@@ -69,7 +75,243 @@ export const SbiClerkPrep = {
           </button>
         </div>
 
-        <!-- TAB CONTENT 0: PREVIOUS YEAR PAPERS (PYQs) -->
+        <!-- TAB CONTENT 0: 2026 EXPECTED PAPERS (DEFAULT) -->
+        <div id="sbi-content-expected" class="${this.activeTab === 'expected2026' ? '' : 'hidden'} flex flex-col gap-8">
+          
+          <div class="flex flex-col gap-4">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-fire text-amber-500 text-sm"></i>
+                <h4 class="font-display font-extrabold text-sm uppercase tracking-wider text-slate-900 dark:text-white">
+                  8 Full-Length 2026 Predicted Question Papers (Exact Shift Calibration)
+                </h4>
+              </div>
+              <span class="text-[11px] font-bold text-slate-400">800 Comprehensive Qs</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+              
+              <!-- Paper 1 -->
+              <div class="glass-panel p-5 rounded-3xl border border-slate-200/60 dark:border-white/[0.07] flex flex-col justify-between gap-5 hover:shadow-xl hover:scale-[1.01] transition-all relative overflow-hidden group">
+                <div class="absolute -right-8 -bottom-8 w-24 h-24 bg-blue-500/10 rounded-full blur-xl group-hover:bg-blue-500/20 transition-colors"></div>
+                <div>
+                  <div class="flex justify-between items-start gap-2">
+                    <span class="px-2.5 py-1 rounded-xl bg-blue-500/15 text-blue-600 dark:text-blue-400 text-[10px] font-extrabold uppercase tracking-wider border border-blue-500/20">
+                      Expected Paper 1
+                    </span>
+                    <span class="text-[11px] text-slate-400 font-bold"><i class="fa-solid fa-clock mr-1"></i> 60 Mins</span>
+                  </div>
+                  <h5 class="font-display font-extrabold text-base text-slate-900 dark:text-white mt-3 leading-snug">
+                    2026 Paper 1 (Core FinTech & Retail Banking)
+                  </h5>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 mt-1.5 font-semibold leading-relaxed">
+                    FinTech & micro-credit RC, Store inventory DI, IT department caselet, 8-floor puzzle, 10-person parallel rows, quadratic equations, and number series.
+                  </p>
+                </div>
+                <div class="flex items-center justify-between border-t border-slate-100 dark:border-white/[0.04] pt-4">
+                  <span class="text-xs text-slate-600 dark:text-slate-300 font-extrabold"><i class="fa-solid fa-circle-question text-blue-500 mr-1"></i> 100 Qs</span>
+                  <button id="btn-sbi-exp-1" class="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-extrabold hover:scale-105 active:scale-95 transition-all flex items-center gap-1.5 shadow-md">
+                    <i class="fa-solid fa-play text-[10px]"></i> Start Paper 1
+                  </button>
+                </div>
+              </div>
+
+              <!-- Paper 2 -->
+              <div class="glass-panel p-5 rounded-3xl border border-slate-200/60 dark:border-white/[0.07] flex flex-col justify-between gap-5 hover:shadow-xl hover:scale-[1.01] transition-all relative overflow-hidden group">
+                <div class="absolute -right-8 -bottom-8 w-24 h-24 bg-emerald-500/10 rounded-full blur-xl group-hover:bg-emerald-500/20 transition-colors"></div>
+                <div>
+                  <div class="flex justify-between items-start gap-2">
+                    <span class="px-2.5 py-1 rounded-xl bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 text-[10px] font-extrabold uppercase tracking-wider border border-emerald-500/20">
+                      Expected Paper 2
+                    </span>
+                    <span class="text-[11px] text-slate-400 font-bold"><i class="fa-solid fa-clock mr-1"></i> 60 Mins</span>
+                  </div>
+                  <h5 class="font-display font-extrabold text-base text-slate-900 dark:text-white mt-3 leading-snug">
+                    2026 Paper 2 (Solar Micro-Grids & Healthcare)
+                  </h5>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 mt-1.5 font-semibold leading-relaxed">
+                    Solar electrification RC, hospital footfall bar DI, food delivery caselet, 8-box stack puzzle, square table seating, and speed drill arithmetic.
+                  </p>
+                </div>
+                <div class="flex items-center justify-between border-t border-slate-100 dark:border-white/[0.04] pt-4">
+                  <span class="text-xs text-slate-600 dark:text-slate-300 font-extrabold"><i class="fa-solid fa-circle-question text-emerald-500 mr-1"></i> 100 Qs</span>
+                  <button id="btn-sbi-exp-2" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-extrabold hover:scale-105 active:scale-95 transition-all flex items-center gap-1.5 shadow-md">
+                    <i class="fa-solid fa-play text-[10px]"></i> Start Paper 2
+                  </button>
+                </div>
+              </div>
+
+              <!-- Paper 3 -->
+              <div class="glass-panel p-5 rounded-3xl border border-slate-200/60 dark:border-white/[0.07] flex flex-col justify-between gap-5 hover:shadow-xl hover:scale-[1.01] transition-all relative overflow-hidden group">
+                <div class="absolute -right-8 -bottom-8 w-24 h-24 bg-indigo-500/10 rounded-full blur-xl group-hover:bg-indigo-500/20 transition-colors"></div>
+                <div>
+                  <div class="flex justify-between items-start gap-2">
+                    <span class="px-2.5 py-1 rounded-xl bg-indigo-500/15 text-indigo-600 dark:text-indigo-400 text-[10px] font-extrabold uppercase tracking-wider border border-indigo-500/20">
+                      Expected Paper 3
+                    </span>
+                    <span class="text-[11px] text-slate-400 font-bold"><i class="fa-solid fa-clock mr-1"></i> 60 Mins</span>
+                  </div>
+                  <h5 class="font-display font-extrabold text-base text-slate-900 dark:text-white mt-3 leading-snug">
+                    2026 Paper 3 (UPI 2.0 & Auto Manufacturing)
+                  </h5>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 mt-1.5 font-semibold leading-relaxed">
+                    Fast cross-border remittances RC, automobile production DI, airline seat caselet, circular table seating, and 7-day schedule puzzle.
+                  </p>
+                </div>
+                <div class="flex items-center justify-between border-t border-slate-100 dark:border-white/[0.04] pt-4">
+                  <span class="text-xs text-slate-600 dark:text-slate-300 font-extrabold"><i class="fa-solid fa-circle-question text-indigo-500 mr-1"></i> 100 Qs</span>
+                  <button id="btn-sbi-exp-3" class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-extrabold hover:scale-105 active:scale-95 transition-all flex items-center gap-1.5 shadow-md">
+                    <i class="fa-solid fa-play text-[10px]"></i> Start Paper 3
+                  </button>
+                </div>
+              </div>
+
+              <!-- Paper 4 -->
+              <div class="glass-panel p-5 rounded-3xl border border-slate-200/60 dark:border-white/[0.07] flex flex-col justify-between gap-5 hover:shadow-xl hover:scale-[1.01] transition-all relative overflow-hidden group">
+                <div class="absolute -right-8 -bottom-8 w-24 h-24 bg-amber-500/10 rounded-full blur-xl group-hover:bg-amber-500/20 transition-colors"></div>
+                <div>
+                  <div class="flex justify-between items-start gap-2">
+                    <span class="px-2.5 py-1 rounded-xl bg-amber-500/15 text-amber-600 dark:text-amber-400 text-[10px] font-extrabold uppercase tracking-wider border border-amber-500/20">
+                      Expected Paper 4
+                    </span>
+                    <span class="text-[11px] text-slate-400 font-bold"><i class="fa-solid fa-clock mr-1"></i> 60 Mins</span>
+                  </div>
+                  <h5 class="font-display font-extrabold text-base text-slate-900 dark:text-white mt-3 leading-snug">
+                    2026 Paper 4 (Precision Agronomy & Cloud Orders)
+                  </h5>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 mt-1.5 font-semibold leading-relaxed">
+                    Precision irrigation & FPOs RC, cloud kitchen lunch/dinner DI, fitness club caselet, 8-person month-date puzzle, and uncertain linear row.
+                  </p>
+                </div>
+                <div class="flex items-center justify-between border-t border-slate-100 dark:border-white/[0.04] pt-4">
+                  <span class="text-xs text-slate-600 dark:text-slate-300 font-extrabold"><i class="fa-solid fa-circle-question text-amber-500 mr-1"></i> 100 Qs</span>
+                  <button id="btn-sbi-exp-4" class="px-4 py-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-white text-xs font-extrabold hover:scale-105 active:scale-95 transition-all flex items-center gap-1.5 shadow-md">
+                    <i class="fa-solid fa-play text-[10px]"></i> Start Paper 4
+                  </button>
+                </div>
+              </div>
+
+              <!-- Paper 5 -->
+              <div class="glass-panel p-5 rounded-3xl border border-slate-200/60 dark:border-white/[0.07] flex flex-col justify-between gap-5 hover:shadow-xl hover:scale-[1.01] transition-all relative overflow-hidden group">
+                <div class="absolute -right-8 -bottom-8 w-24 h-24 bg-violet-500/10 rounded-full blur-xl group-hover:bg-violet-500/20 transition-colors"></div>
+                <div>
+                  <div class="flex justify-between items-start gap-2">
+                    <span class="px-2.5 py-1 rounded-xl bg-violet-500/15 text-violet-600 dark:text-violet-400 text-[10px] font-extrabold uppercase tracking-wider border border-violet-500/20">
+                      Expected Paper 5
+                    </span>
+                    <span class="text-[11px] text-slate-400 font-bold"><i class="fa-solid fa-clock mr-1"></i> 60 Mins</span>
+                  </div>
+                  <h5 class="font-display font-extrabold text-base text-slate-900 dark:text-white mt-3 leading-snug">
+                    2026 Paper 5 (Green Hydrogen & Metro Ridership)
+                  </h5>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 mt-1.5 font-semibold leading-relaxed">
+                    Heavy industrial decarbonization RC, metro line ridership DI, warehouse packages caselet, 4-floor × 2-flat puzzle, and bank designation hierarchy.
+                  </p>
+                </div>
+                <div class="flex items-center justify-between border-t border-slate-100 dark:border-white/[0.04] pt-4">
+                  <span class="text-xs text-slate-600 dark:text-slate-300 font-extrabold"><i class="fa-solid fa-circle-question text-violet-500 mr-1"></i> 100 Qs</span>
+                  <button id="btn-sbi-exp-5" class="px-4 py-2 rounded-xl bg-violet-600 hover:bg-violet-500 text-white text-xs font-extrabold hover:scale-105 active:scale-95 transition-all flex items-center gap-1.5 shadow-md">
+                    <i class="fa-solid fa-play text-[10px]"></i> Start Paper 5
+                  </button>
+                </div>
+              </div>
+
+              <!-- Paper 6 -->
+              <div class="glass-panel p-5 rounded-3xl border border-slate-200/60 dark:border-white/[0.07] flex flex-col justify-between gap-5 hover:shadow-xl hover:scale-[1.01] transition-all relative overflow-hidden group">
+                <div class="absolute -right-8 -bottom-8 w-24 h-24 bg-teal-500/10 rounded-full blur-xl group-hover:bg-teal-500/20 transition-colors"></div>
+                <div>
+                  <div class="flex justify-between items-start gap-2">
+                    <span class="px-2.5 py-1 rounded-xl bg-teal-500/15 text-teal-600 dark:text-teal-400 text-[10px] font-extrabold uppercase tracking-wider border border-teal-500/20">
+                      Expected Paper 6
+                    </span>
+                    <span class="text-[11px] text-slate-400 font-bold"><i class="fa-solid fa-clock mr-1"></i> 60 Mins</span>
+                  </div>
+                  <h5 class="font-display font-extrabold text-base text-slate-900 dark:text-white mt-3 leading-snug">
+                    2026 Paper 6 (Natural Farming & Courier Logistics)
+                  </h5>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 mt-1.5 font-semibold leading-relaxed">
+                    Organic cooperative hubs RC, courier express/standard DI, lab samples caselet, 12-person parallel rows, 7-box stack, and coded inequalities.
+                  </p>
+                </div>
+                <div class="flex items-center justify-between border-t border-slate-100 dark:border-white/[0.04] pt-4">
+                  <span class="text-xs text-slate-600 dark:text-slate-300 font-extrabold"><i class="fa-solid fa-circle-question text-teal-500 mr-1"></i> 100 Qs</span>
+                  <button id="btn-sbi-exp-6" class="px-4 py-2 rounded-xl bg-teal-600 hover:bg-teal-500 text-white text-xs font-extrabold hover:scale-105 active:scale-95 transition-all flex items-center gap-1.5 shadow-md">
+                    <i class="fa-solid fa-play text-[10px]"></i> Start Paper 6
+                  </button>
+                </div>
+              </div>
+
+              <!-- Paper 7 -->
+              <div class="glass-panel p-5 rounded-3xl border border-slate-200/60 dark:border-white/[0.07] flex flex-col justify-between gap-5 hover:shadow-xl hover:scale-[1.01] transition-all relative overflow-hidden group">
+                <div class="absolute -right-8 -bottom-8 w-24 h-24 bg-rose-500/10 rounded-full blur-xl group-hover:bg-rose-500/20 transition-colors"></div>
+                <div>
+                  <div class="flex justify-between items-start gap-2">
+                    <span class="px-2.5 py-1 rounded-xl bg-rose-500/15 text-rose-600 dark:text-rose-400 text-[10px] font-extrabold uppercase tracking-wider border border-rose-500/20">
+                      Expected Paper 7
+                    </span>
+                    <span class="text-[11px] text-slate-400 font-bold"><i class="fa-solid fa-clock mr-1"></i> 60 Mins</span>
+                  </div>
+                  <h5 class="font-display font-extrabold text-base text-slate-900 dark:text-white mt-3 leading-snug">
+                    2026 Paper 7 (LEO Satellite & Campus Placements)
+                  </h5>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 mt-1.5 font-semibold leading-relaxed">
+                    Space broadband communications RC, university placement statistics DI, media streaming caselet, year-age calculation puzzle, and 8-box stack.
+                  </p>
+                </div>
+                <div class="flex items-center justify-between border-t border-slate-100 dark:border-white/[0.04] pt-4">
+                  <span class="text-xs text-slate-600 dark:text-slate-300 font-extrabold"><i class="fa-solid fa-circle-question text-rose-500 mr-1"></i> 100 Qs</span>
+                  <button id="btn-sbi-exp-7" class="px-4 py-2 rounded-xl bg-rose-600 hover:bg-rose-500 text-white text-xs font-extrabold hover:scale-105 active:scale-95 transition-all flex items-center gap-1.5 shadow-md">
+                    <i class="fa-solid fa-play text-[10px]"></i> Start Paper 7
+                  </button>
+                </div>
+              </div>
+
+              <!-- Paper 8 -->
+              <div class="glass-panel p-5 rounded-3xl border border-slate-200/60 dark:border-white/[0.07] flex flex-col justify-between gap-5 hover:shadow-xl hover:scale-[1.01] transition-all relative overflow-hidden group">
+                <div class="absolute -right-8 -bottom-8 w-24 h-24 bg-purple-500/10 rounded-full blur-xl group-hover:bg-purple-500/20 transition-colors"></div>
+                <div>
+                  <div class="flex justify-between items-start gap-2">
+                    <span class="px-2.5 py-1 rounded-xl bg-purple-500/15 text-purple-600 dark:text-purple-400 text-[10px] font-extrabold uppercase tracking-wider border border-purple-500/20">
+                      Expected Paper 8
+                    </span>
+                    <span class="text-[11px] text-slate-400 font-bold"><i class="fa-solid fa-clock mr-1"></i> 60 Mins</span>
+                  </div>
+                  <h5 class="font-display font-extrabold text-base text-slate-900 dark:text-white mt-3 leading-snug">
+                    2026 Paper 8 (Post-Quantum Security & Bank Assets)
+                  </h5>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 mt-1.5 font-semibold leading-relaxed">
+                    Quantum-resistant cryptography RC, branch banking deposits/advances DI, advisory portfolios caselet, rectangular table seating, and 8-person linear row.
+                  </p>
+                </div>
+                <div class="flex items-center justify-between border-t border-slate-100 dark:border-white/[0.04] pt-4">
+                  <span class="text-xs text-slate-600 dark:text-slate-300 font-extrabold"><i class="fa-solid fa-circle-question text-purple-500 mr-1"></i> 100 Qs</span>
+                  <button id="btn-sbi-exp-8" class="px-4 py-2 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-xs font-extrabold hover:scale-105 active:scale-95 transition-all flex items-center gap-1.5 shadow-md">
+                    <i class="fa-solid fa-play text-[10px]"></i> Start Paper 8
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="border-t border-slate-200/50 dark:border-white/[0.05]"></div>
+
+          <!-- Quick Predictor Features Banner -->
+          <div class="glass-panel p-6 rounded-3xl border border-slate-200/60 dark:border-white/[0.07] bg-gradient-to-r from-amber-500/5 via-orange-500/5 to-blue-500/5 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-4">
+              <div class="h-12 w-12 rounded-2xl bg-amber-500/15 text-amber-600 dark:text-amber-400 flex items-center justify-center text-xl flex-shrink-0">
+                <i class="fa-solid fa-brain"></i>
+              </div>
+              <div>
+                <h5 class="font-display font-extrabold text-sm text-slate-900 dark:text-white">Calibrated strictly on 2025 Real Shifts (Sept 2025)</h5>
+                <p class="text-xs text-slate-500 dark:text-slate-400 font-semibold mt-0.5">Every expected mock is designed with the exact balance of Simplifications, Caselet DI, Syllogisms with "Only a few", and 100% detailed step-by-step solutions.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- TAB CONTENT 1: PREVIOUS YEAR PAPERS (PYQs) -->
         <div id="sbi-content-pyqs" class="${this.activeTab === 'pyqs' ? '' : 'hidden'} flex flex-col gap-8">
           
           <div class="flex flex-col gap-4">
@@ -178,24 +420,9 @@ export const SbiClerkPrep = {
             </div>
           </div>
 
-          <div class="border-t border-slate-200/50 dark:border-white/[0.05]"></div>
-
-          <!-- Quick PYQ Features Banner -->
-          <div class="glass-panel p-6 rounded-3xl border border-slate-200/60 dark:border-white/[0.07] bg-gradient-to-r from-emerald-500/5 via-teal-500/5 to-blue-500/5 flex flex-col md:flex-row items-center justify-between gap-4">
-            <div class="flex items-center gap-4">
-              <div class="h-12 w-12 rounded-2xl bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl flex-shrink-0">
-                <i class="fa-solid fa-clock-rotate-left"></i>
-              </div>
-              <div>
-                <h5 class="font-display font-extrabold text-sm text-slate-900 dark:text-white">Full Shift Solutions & Detailed Step-by-Step Explanations</h5>
-                <p class="text-xs text-slate-500 dark:text-slate-400 font-semibold mt-0.5">Every single question contains comprehensive explanations, grammar rules, shortcuts, and step-by-step arithmetic solutions.</p>
-              </div>
-            </div>
-          </div>
-
         </div>
 
-        <!-- TAB CONTENT 1: MOCK TESTS -->
+        <!-- TAB CONTENT 2: 7 PROGRESSIVE MOCK TESTS -->
         <div id="sbi-content-mocks" class="${this.activeTab === 'mocks' ? '' : 'hidden'} flex flex-col gap-8">
           
           <!-- 7 Official Mock Cards Grid -->
@@ -212,7 +439,7 @@ export const SbiClerkPrep = {
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
               
-              <!-- Mock Card 1: Level 1 Foundation -->
+              <!-- Mock Card 1 -->
               <div class="glass-panel p-5 rounded-3xl border border-slate-200/60 dark:border-white/[0.07] flex flex-col justify-between gap-5 hover:shadow-xl hover:scale-[1.01] transition-all relative overflow-hidden group">
                 <div class="absolute -right-8 -bottom-8 w-24 h-24 bg-emerald-500/10 rounded-full blur-xl group-hover:bg-emerald-500/20 transition-colors"></div>
                 <div>
@@ -237,7 +464,7 @@ export const SbiClerkPrep = {
                 </div>
               </div>
 
-              <!-- Mock Card 2: Level 2 Speed Drill -->
+              <!-- Mock Card 2 -->
               <div class="glass-panel p-5 rounded-3xl border border-slate-200/60 dark:border-white/[0.07] flex flex-col justify-between gap-5 hover:shadow-xl hover:scale-[1.01] transition-all relative overflow-hidden group">
                 <div class="absolute -right-8 -bottom-8 w-24 h-24 bg-blue-500/10 rounded-full blur-xl group-hover:bg-blue-500/20 transition-colors"></div>
                 <div>
@@ -262,7 +489,7 @@ export const SbiClerkPrep = {
                 </div>
               </div>
 
-              <!-- Mock Card 3: Level 3 Standard Prelims Real Exam -->
+              <!-- Mock Card 3 -->
               <div class="glass-panel p-5 rounded-3xl border border-slate-200/60 dark:border-white/[0.07] flex flex-col justify-between gap-5 hover:shadow-xl hover:scale-[1.01] transition-all relative overflow-hidden group">
                 <div class="absolute -right-8 -bottom-8 w-24 h-24 bg-indigo-500/10 rounded-full blur-xl group-hover:bg-indigo-500/20 transition-colors"></div>
                 <div>
@@ -287,7 +514,7 @@ export const SbiClerkPrep = {
                 </div>
               </div>
 
-              <!-- Mock Card 4: Level 4 Moderate-Advanced -->
+              <!-- Mock Card 4 -->
               <div class="glass-panel p-5 rounded-3xl border border-slate-200/60 dark:border-white/[0.07] flex flex-col justify-between gap-5 hover:shadow-xl hover:scale-[1.01] transition-all relative overflow-hidden group">
                 <div class="absolute -right-8 -bottom-8 w-24 h-24 bg-amber-500/10 rounded-full blur-xl group-hover:bg-amber-500/20 transition-colors"></div>
                 <div>
@@ -312,18 +539,18 @@ export const SbiClerkPrep = {
                 </div>
               </div>
 
-              <!-- Mock Card 5: Level 5 Advanced Prelims -->
+              <!-- Mock Card 5 -->
               <div class="glass-panel p-5 rounded-3xl border border-slate-200/60 dark:border-white/[0.07] flex flex-col justify-between gap-5 hover:shadow-xl hover:scale-[1.01] transition-all relative overflow-hidden group">
                 <div class="absolute -right-8 -bottom-8 w-24 h-24 bg-violet-500/10 rounded-full blur-xl group-hover:bg-violet-500/20 transition-colors"></div>
                 <div>
                   <div class="flex justify-between items-start gap-2">
-                    <span class="px-2.5 py-1 rounded-xl bg-violet-500/10 text-violet-600 dark:text-violet-400 text-[10px] font-extrabold uppercase tracking-wider border border-violet-500/20">
+                    <span class="px-2.5 py-1 rounded-xl bg-violet-500/15 text-violet-600 dark:text-violet-400 text-[10px] font-extrabold uppercase tracking-wider border border-violet-500/20">
                       Level 5 • Advanced
                     </span>
                     <span class="text-[11px] text-slate-400 font-bold"><i class="fa-solid fa-clock mr-1"></i> 60 Mins</span>
                   </div>
                   <h5 class="font-display font-extrabold text-base text-slate-900 dark:text-white mt-3 leading-snug">
-                    SBI Clerk Mock 5 (Advanced Prelims Speed)
+                    SBI Clerk Mock 5 (Advanced Speed Drill)
                   </h5>
                   <p class="text-xs text-slate-500 dark:text-slate-400 mt-1.5 font-semibold leading-relaxed">
                     Challenging speed drill: Bank designation hierarchy puzzle, uncertain person linear row, missing tabular DI, and space economy RC.
@@ -337,7 +564,7 @@ export const SbiClerkPrep = {
                 </div>
               </div>
 
-              <!-- Mock Card 6: Level 6 Mains Gateway / Hard -->
+              <!-- Mock Card 6 -->
               <div class="glass-panel p-5 rounded-3xl border border-slate-200/60 dark:border-white/[0.07] flex flex-col justify-between gap-5 hover:shadow-xl hover:scale-[1.01] transition-all relative overflow-hidden group">
                 <div class="absolute -right-8 -bottom-8 w-24 h-24 bg-rose-500/10 rounded-full blur-xl group-hover:bg-rose-500/20 transition-colors"></div>
                 <div>
@@ -362,7 +589,7 @@ export const SbiClerkPrep = {
                 </div>
               </div>
 
-              <!-- Mock Card 7: Level 7 Ultimate Pro Challenge -->
+              <!-- Mock Card 7 -->
               <div class="glass-panel p-5 rounded-3xl border border-slate-200/60 dark:border-white/[0.07] flex flex-col justify-between gap-5 hover:shadow-xl hover:scale-[1.01] transition-all relative overflow-hidden group md:col-span-2 lg:col-span-2">
                 <div class="absolute -right-8 -bottom-8 w-36 h-36 bg-purple-500/15 rounded-full blur-2xl group-hover:bg-purple-500/25 transition-colors"></div>
                 <div>
@@ -376,7 +603,7 @@ export const SbiClerkPrep = {
                     SBI Clerk Mock 7 (Ultimate Pro Challenge - Expert Level)
                   </h5>
                   <p class="text-xs text-slate-500 dark:text-slate-400 mt-1.5 font-semibold leading-relaxed">
-                    The ultimate trial: 12-person double row with color attributes, year-age calculation puzzle, Gross vs Net NPA banking DI, quantum cryptography RC, and advanced multi-step arithmetic word problems.
+                    The ultimate trial: 12-person double row with color attributes, year-age calculation puzzle, Gross vs Net NPA banking DI, quantum cryptography RC, and advanced arithmetic word problems.
                   </p>
                 </div>
                 <div class="flex items-center justify-between border-t border-slate-100 dark:border-white/[0.04] pt-4">
@@ -439,13 +666,13 @@ Q2: ...</pre>
 
                   <div class="flex flex-wrap gap-2">
                     <button id="btn-load-pyq-21sep1" class="px-3 py-2 rounded-xl border border-slate-200 dark:border-white/10 text-slate-600 dark:text-slate-300 text-[11px] font-bold hover:bg-slate-100 dark:hover:bg-slate-800 transition-all select-none active:scale-95 flex items-center gap-1">
-                      <i class="fa-solid fa-file-lines text-blue-500"></i> Load 21-Sep Shift 1
+                      <i class="fa-solid fa-file-lines text-blue-500"></i> 2025 PYQ (21-Sep)
                     </button>
-                    <button id="btn-load-pyq-20sep2" class="px-3 py-2 rounded-xl border border-slate-200 dark:border-white/10 text-slate-600 dark:text-slate-300 text-[11px] font-bold hover:bg-slate-100 dark:hover:bg-slate-800 transition-all select-none active:scale-95 flex items-center gap-1">
-                      <i class="fa-solid fa-file-lines text-emerald-500"></i> Load 20-Sep Shift 2
+                    <button id="btn-load-exp-paper1" class="px-3 py-2 rounded-xl border border-slate-200 dark:border-white/10 text-slate-600 dark:text-slate-300 text-[11px] font-bold hover:bg-slate-100 dark:hover:bg-slate-800 transition-all select-none active:scale-95 flex items-center gap-1">
+                      <i class="fa-solid fa-bullseye text-amber-500"></i> 2026 Expected #1
                     </button>
-                    <button id="btn-load-pyq-20sep1" class="px-3 py-2 rounded-xl border border-slate-200 dark:border-white/10 text-slate-600 dark:text-slate-300 text-[11px] font-bold hover:bg-slate-100 dark:hover:bg-slate-800 transition-all select-none active:scale-95 flex items-center gap-1">
-                      <i class="fa-solid fa-file-lines text-purple-500"></i> Load 20-Sep Shift 1
+                    <button id="btn-load-exp-paper2" class="px-3 py-2 rounded-xl border border-slate-200 dark:border-white/10 text-slate-600 dark:text-slate-300 text-[11px] font-bold hover:bg-slate-100 dark:hover:bg-slate-800 transition-all select-none active:scale-95 flex items-center gap-1">
+                      <i class="fa-solid fa-bullseye text-emerald-500"></i> 2026 Expected #2
                     </button>
                     <button id="btn-parse-sbi-questions" class="flex-1 py-2 rounded-xl btn-accent text-white font-bold text-xs shadow-md active:scale-95 transition-all">
                       <i class="fa-solid fa-wand-magic-sparkles mr-1"></i> Parse & Load Questions
@@ -496,7 +723,7 @@ Q2: ...</pre>
 
         </div>
 
-        <!-- TAB CONTENT 2: EXAM PATTERN -->
+        <!-- TAB CONTENT 3: EXAM PATTERN -->
         <div id="sbi-content-pattern" class="${this.activeTab === 'pattern' ? '' : 'hidden'} flex flex-col gap-6">
           
           <!-- Highlights Table Card -->
@@ -592,7 +819,7 @@ Q2: ...</pre>
           </div>
         </div>
 
-        <!-- TAB CONTENT 3: DETAILED SYLLABUS -->
+        <!-- TAB CONTENT 4: DETAILED SYLLABUS -->
         <div id="sbi-content-syllabus" class="${this.activeTab === 'syllabus' ? '' : 'hidden'} flex flex-col gap-6">
           
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -674,11 +901,13 @@ Q2: ...</pre>
     window.scrollTo(0, 0);
 
     // Tab switching event listeners
+    const tabExpected = document.getElementById('sbi-tab-expected');
     const tabPyqs = document.getElementById('sbi-tab-pyqs');
     const tabMocks = document.getElementById('sbi-tab-mocks');
     const tabPattern = document.getElementById('sbi-tab-pattern');
     const tabSyllabus = document.getElementById('sbi-tab-syllabus');
 
+    const contentExpected = document.getElementById('sbi-content-expected');
     const contentPyqs = document.getElementById('sbi-content-pyqs');
     const contentMocks = document.getElementById('sbi-content-mocks');
     const contentPattern = document.getElementById('sbi-content-pattern');
@@ -686,13 +915,17 @@ Q2: ...</pre>
 
     const setActiveTab = (tab) => {
       this.activeTab = tab;
-      [tabPyqs, tabMocks, tabPattern, tabSyllabus].forEach(btn => {
+      [tabExpected, tabPyqs, tabMocks, tabPattern, tabSyllabus].forEach(btn => {
         btn?.classList.remove('bg-primary-500', 'text-white', 'shadow-md');
         btn?.classList.add('text-slate-600', 'dark:text-slate-400');
       });
-      [contentPyqs, contentMocks, contentPattern, contentSyllabus].forEach(c => c?.classList.add('hidden'));
+      [contentExpected, contentPyqs, contentMocks, contentPattern, contentSyllabus].forEach(c => c?.classList.add('hidden'));
 
-      if (tab === 'pyqs') {
+      if (tab === 'expected2026') {
+        tabExpected?.classList.add('bg-primary-500', 'text-white', 'shadow-md');
+        tabExpected?.classList.remove('text-slate-600', 'dark:text-slate-400');
+        contentExpected?.classList.remove('hidden');
+      } else if (tab === 'pyqs') {
         tabPyqs?.classList.add('bg-primary-500', 'text-white', 'shadow-md');
         tabPyqs?.classList.remove('text-slate-600', 'dark:text-slate-400');
         contentPyqs?.classList.remove('hidden');
@@ -711,10 +944,35 @@ Q2: ...</pre>
       }
     };
 
+    tabExpected?.addEventListener('click', () => setActiveTab('expected2026'));
     tabPyqs?.addEventListener('click', () => setActiveTab('pyqs'));
     tabMocks?.addEventListener('click', () => setActiveTab('mocks'));
     tabPattern?.addEventListener('click', () => setActiveTab('pattern'));
     tabSyllabus?.addEventListener('click', () => setActiveTab('syllabus'));
+
+    // 8 Expected 2026 Paper Buttons
+    for (let i = 1; i <= 8; i++) {
+      const btn = document.getElementById(`btn-sbi-exp-${i}`);
+      btn?.addEventListener('click', async () => {
+        btn.disabled = true;
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '<i class="fa-solid fa-circle-notch animate-spin"></i> Loading...';
+        try {
+          const res = await fetch(`./pyqs/sbi_clerk_expected_2026_paper_${i}.txt`);
+          if (res.ok) {
+            const text = await res.text();
+            await this.launchExamDirectly(text, `SBI Clerk 2026 Expected Paper ${i}`);
+          } else {
+            showToast(`Failed to load Expected Paper ${i} asset.`, 'error');
+          }
+        } catch (err) {
+          showToast(`Error: ${err.message}`, 'error');
+        } finally {
+          btn.disabled = false;
+          btn.innerHTML = originalText;
+        }
+      });
+    }
 
     // 3 Official 2025 PYQ Start Buttons
     const pyqButtons = [
@@ -780,7 +1038,7 @@ Q2: ...</pre>
       guideBox?.classList.toggle('hidden');
     });
 
-    // Fast load PYQ buttons into textarea
+    // Fast load PYQ & Expected buttons into textarea
     const setupQuickLoad = (btnId, fileName, title) => {
       const btn = document.getElementById(btnId);
       btn?.addEventListener('click', async () => {
@@ -795,7 +1053,7 @@ Q2: ...</pre>
             showToast(`Loaded ${title} (100 Questions)!`, "success");
             this.parseQuestions(false);
           } else {
-            showToast("Failed to fetch PYQ paper.", "error");
+            showToast("Failed to fetch paper asset.", "error");
           }
           btn.innerHTML = orig;
         } catch (err) {
@@ -806,9 +1064,9 @@ Q2: ...</pre>
       });
     };
 
-    setupQuickLoad('btn-load-pyq-21sep1', 'sbi_clerk_pyq_2025_sep21_shift1.txt', '21-Sep Shift 1');
-    setupQuickLoad('btn-load-pyq-20sep2', 'sbi_clerk_pyq_2025_sep20_shift2.txt', '20-Sep Shift 2');
-    setupQuickLoad('btn-load-pyq-20sep1', 'sbi_clerk_pyq_2025_sep20_shift1.txt', '20-Sep Shift 1');
+    setupQuickLoad('btn-load-pyq-21sep1', 'sbi_clerk_pyq_2025_sep21_shift1.txt', '2025 PYQ (21-Sep Shift 1)');
+    setupQuickLoad('btn-load-exp-paper1', 'sbi_clerk_expected_2026_paper_1.txt', '2026 Expected Paper 1');
+    setupQuickLoad('btn-load-exp-paper2', 'sbi_clerk_expected_2026_paper_2.txt', '2026 Expected Paper 2');
 
     btnParse?.addEventListener('click', () => {
       this.parseQuestions(false);
@@ -961,11 +1219,11 @@ Q2: ...</pre>
           subject,
           topic: topicVal,
           difficulty: difficultyVal,
-          year: 2025
+          year: 2026
         });
       });
     } else {
-      // Natural paste format (Q1: ... A) ... B) ... Answer: B)
+      // Natural paste format
       const rawBlocks = text.split(/(?=Q\d+[:\.\s]|Ques\s+\d+[:\.\s]|\d+[\.\s]\s*[A-Z])/i);
       rawBlocks.forEach((block, index) => {
         const trimmed = block.trim();
@@ -1017,7 +1275,7 @@ Q2: ...</pre>
           subject,
           topic: 'General Syllabus Review',
           difficulty: 'Medium',
-          year: 2025
+          year: 2026
         });
       });
     }

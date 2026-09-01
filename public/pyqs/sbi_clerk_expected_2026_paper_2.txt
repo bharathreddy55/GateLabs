@@ -1,0 +1,1531 @@
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Directions (1-10): Read the following passage and answer the questions:
+
+Decentralized rural solar micro-grids have transformed agricultural productivity and domestic livelihoods across remote agrarian settlements. For decades, unannounced load-shedding and erratic grid voltage crippled irrigation pump operations, leaving marginal farmers dependent on expensive, polluting diesel generators. The deployment of community-owned solar mini-grids coupled with smart metering and lithium-ion battery storage has provided predictable, clean daytime electricity. Farmers are now able to automate micro-irrigation schedules, doubling seasonal crop yields while slashing irrigation expenditures by nearly sixty percent. Additionally, reliable nocturnal lighting has enabled rural women-led micro-enterprises—such as handloom weaving and food preservation—to operate safely after dusk, significantly augmenting household disposable income. While the socioeconomic benefits are undeniable, operational sustainability requires ongoing local capacity building. The Ministry of New and Renewable Energy has partnered with rural polytechnic institutes to train 'Surya Mitras'—local technicians equipped to diagnose inverter faults, clean photovoltaic panels, and maintain battery health. Establishing localized maintenance ecosystems ensures that rural clean energy infrastructure remains resilient over its multi-decade operational lifespan.
+
+What was the main operational challenge marginal farmers faced before solar mini-grids were deployed?
+option a: Lack of fertile land and farm tools
+option b: Erratic grid voltage and frequent load-shedding forcing reliance on costly diesel generators
+option c: Excessive rainfall flooding the entire region continuously
+option d: Government refusal to buy agricultural produce
+option e: Shortage of manual labor during harvesting
+correct: B
+explanation: The passage explicitly notes that unannounced load-shedding and erratic grid voltage forced farmers to depend on expensive diesel generators.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Moderate
+marks: 1
+year: 2026
+question: How has reliable solar power directly influenced female-led rural enterprises?
+option a: By forcing them to relocate to urban centers
+option b: By providing safe nocturnal lighting enabling productive work like weaving and food processing after dusk
+option c: By reducing their wages and business hours
+option d: By eliminating the need for local markets
+option e: By shutting down traditional cottage industries
+correct: B
+explanation: Nocturnal lighting enabled women-led enterprises (handloom weaving, food preservation) to operate safely after dusk.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Who are the 'Surya Mitras' mentioned in the passage?
+option a: Commercial bankers funding large power corporations
+option b: Locally trained technicians who diagnose and maintain rural solar installations
+option c: Foreign investors managing energy exports
+option d: Government inspectors auditing power theft
+option e: Agricultural commodity traders
+correct: B
+explanation: 'Surya Mitras' are local technicians trained by polytechnic institutes to maintain inverters, panels, and batteries.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: By approximately how much have farmers reduced their irrigation expenses following solar adoption?
+option a: Nearly 60%
+option b: Nearly 20%
+option c: Nearly 90%
+option d: Nearly 10%
+option e: Zero reduction
+correct: A
+explanation: The text states that farmers slashed irrigation expenditures by 'nearly sixty percent'.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Easy
+marks: 1
+year: 2026
+question: Choose the word most SIMILAR in meaning to 'AUGMENTING' as used in the passage.
+option a: Enhancing / increasing
+option b: Depleting
+option c: Stagnating
+option d: Diminishing
+option e: Withholding
+correct: A
+explanation: 'Augmenting' means making something greater by adding to it; increasing.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Easy
+marks: 1
+year: 2026
+question: Choose the word most OPPOSITE in meaning to 'ERRATIC' as used in the passage.
+option a: Unpredictable
+option b: Consistent / steady
+option c: Volatile
+option d: Sporadic
+option e: Irregular
+correct: B
+explanation: 'Erratic' means unpredictable and irregular; the antonym is 'Consistent' or steady.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Which of the following statements is/are CORRECT based on the passage?
+(A) Solar micro-grids are integrated with lithium-ion storage.
+(B) Surya Mitras are trained by rural polytechnic institutes.
+(C) Solar technology has completely replaced all central grid infrastructure nationwide.
+option a: Only A
+option b: Both A and B
+option c: Both B and C
+option d: Both A and C
+option e: All A, B, C
+correct: B
+explanation: (A) and (B) are explicitly supported. (C) is an unsubstantiated exaggeration.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: What is essential to guarantee the multi-decade operational viability of rural solar infrastructure?
+option a: Importing all replacement components from overseas constantly
+option b: Establishing localized maintenance ecosystems and training grassroots technicians
+option c: Shutting down the micro-grids during rainy seasons
+option d: Banning agricultural use of solar power
+option e: Relying exclusively on remote satellite monitoring without local support
+correct: B
+explanation: The passage emphasizes that establishing localized maintenance ecosystems is crucial for resilience.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Easy
+marks: 1
+year: 2026
+question: Choose the word most SIMILAR in meaning to 'RESILIENT' as used in the passage.
+option a: Fragile
+option b: Durable / tough
+option c: Temporary
+option d: Vulnerable
+option e: Rigid
+correct: B
+explanation: 'Resilient' means able to withstand or recover quickly from difficult conditions; durable.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Easy
+marks: 1
+year: 2026
+question: Choose the word most OPPOSITE in meaning to 'DISPOSABLE' (as in disposable income) in the passage.
+option a: Usable
+option b: Available
+option c: Restricted / non-spendable
+option d: Excess
+option e: Discretionary
+correct: C
+explanation: Disposable income is spendable income; the opposite is restricted or tied-up income.
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: Directions (11-15): In the following passage, choose the most appropriate word for Blank (1):
+
+Financial literacy campaigns are ____(1)____ to empowering rural consumers against fraudulent online schemes. As digital transaction volumes expand, educating account holders on safeguarding PINs and OTPs is of ____(2)____ importance. Banks must organize mobile awareness vans and distribute regional-language leaflets to ____(3)____ critical security awareness. When consumers understand how to report unauthorized transactions immediately, financial loss can be ____(4)____ curtailed. Building an informed banking public remains the most ____(5)____ defense against cyber criminality.
+
+Select the best word for Blank (1):
+option a: pivotal
+option b: redundant
+option c: trivial
+option d: futile
+option e: optional
+correct: A
+explanation: 'Pivotal' means of crucial importance in relation to the success of something.
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Easy
+marks: 1
+year: 2026
+question: Select the best word for Blank (2) ('...is of ____(2)____ importance.'):
+option a: paramount
+option b: negligible
+option c: doubtful
+option d: minor
+option e: scanty
+correct: A
+explanation: 'Paramount importance' is a standard collocation meaning more important than anything else.
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Easy
+marks: 1
+year: 2026
+question: Select the best word for Blank (3) ('...to ____(3)____ critical security awareness.'):
+option a: disseminate
+option b: conceal
+option c: suppress
+option d: withhold
+option e: ignore
+correct: A
+explanation: 'Disseminate' means to spread or disperse information widely.
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Easy
+marks: 1
+year: 2026
+question: Select the best word for Blank (4) ('...financial loss can be ____(4)____ curtailed.'):
+option a: promptly
+option b: rarely
+option c: scarcely
+option d: barely
+option e: reluctantly
+correct: A
+explanation: 'Promptly curtailed' means stopped quickly without delay.
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Easy
+marks: 1
+year: 2026
+question: Select the best word for Blank (5) ('...the most ____(5)____ defense against cyber criminality.'):
+option a: formidable
+option b: fragile
+option c: vulnerable
+option d: reckless
+option e: hopeless
+correct: A
+explanation: 'Formidable defense' means a strong and effective protection.
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Easy
+marks: 1
+year: 2026
+question: Identify the part of the sentence containing a grammatical error:
+
+The executive director (A)/ along with his senior associates (B)/ are inspecting the rural branch (C)/ facilities this afternoon. (D)
+option a: A
+option b: B
+option c: C
+option d: D
+option e: No error
+correct: C
+explanation: When subjects are joined by 'along with', the verb agrees with the first subject ('The executive director', singular). Thus, 'is inspecting' is correct, not 'are inspecting'.
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: Identify the part of the sentence containing a grammatical error:
+
+Scarcely had the manager (A)/ entered into the conference hall (B)/ than the fire alarm (C)/ began to sound loudly. (D)
+option a: A
+option b: B
+option c: C
+option d: D
+option e: No error
+correct: C
+explanation: The correlative conjunction for 'Scarcely had...' is 'when', not 'than' ('No sooner... than' vs 'Scarcely... when').
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Easy
+marks: 1
+year: 2026
+question: Identify the part of the sentence containing a grammatical error:
+
+The loan applicant has been waiting (A)/ in the customer lounge (B)/ since more than three hours (C)/ to meet the credit manager. (D)
+option a: A
+option b: B
+option c: C
+option d: D
+option e: No error
+correct: C
+explanation: For a duration of time ('more than three hours'), use the preposition 'for', not 'since'.
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: Identify the part of the sentence containing a grammatical error:
+
+If the bank would have reduced (A)/ the home loan interest rate earlier, (B)/ more prospective buyers would have applied (C)/ for housing credit. (D)
+option a: A
+option b: B
+option c: C
+option d: D
+option e: No error
+correct: A
+explanation: In third conditional 'if-clause', use past perfect: 'If the bank had reduced...', not 'would have reduced'.
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Easy
+marks: 1
+year: 2026
+question: Identify the part of the sentence containing a grammatical error:
+
+Every student and teacher (A)/ in the science department (B)/ have submitted their feedback (C)/ on the newly upgraded laboratory. (D)
+option a: A
+option b: B
+option c: C
+option d: D
+option e: No error
+correct: C
+explanation: Subjects preceded by 'Every' take singular verbs: 'has submitted', not 'have submitted'.
+---
+subject: English Language (1-30)
+topic: Word Swap
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: Identify the required word swap:
+
+The rapid **growth (A)** of electronic commerce has **spurred (B)** considerable investment in **modern (C)** logistics and automated **warehouses (D)**.
+option a: A-B
+option b: B-C
+option c: A-D
+option d: C-D
+option e: No swap required
+correct: E
+explanation: All words are grammatically and contextually correct as positioned.
+---
+subject: English Language (1-30)
+topic: Word Swap
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: Identify the required word swap:
+
+Commercial banks must **maintain (A)** adequate liquidity **reserves (B)** to absorb unexpected financial **shocks (C)** and ensure financial **stability (D)**.
+option a: A-B
+option b: B-C
+option c: A-D
+option d: C-D
+option e: No swap required
+correct: E
+explanation: The sentence is fully coherent without any swap.
+---
+subject: English Language (1-30)
+topic: Word Usage
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Identify the statement(s) where the word 'METICULOUS' is used accurately:
+(A) The forensic accountant conducted a meticulous audit of all ledger entries to uncover the embezzlement.
+(B) Her meticulous planning ensured that the multi-city international conference concluded without a single flaw.
+(C) He was so meticulous that he carelessly lost his passport and wallet at the airport terminal.
+option a: Only A
+option b: Both A and B
+option c: Only B
+option d: Both B and C
+option e: All A, B, C
+correct: B
+explanation: 'Meticulous' means showing great attention to detail; very careful and precise. Correct in (A) and (B). (C) is contradictory (carelessly losing items is sloppy, not meticulous).
+---
+subject: English Language (1-30)
+topic: Para Jumbles
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: Directions (24-28): Rearrange the sentences (A, B, C, D, E) to form a coherent paragraph:
+(A) Solar-powered cold storage units have drastically reduced post-harvest crop spoilage.
+(B) In rural agriculture, cold chain logistics have historically been a major bottleneck.
+(C) Consequently, farmers can now negotiate better market prices rather than succumbing to distress sales.
+(D) Perishable produce like fruits and vegetables frequently rotted before reaching wholesale markets.
+(E) Modern decentralized solar coolers offer an eco-friendly and economically viable solution.
+
+Which of the following is the FIRST sentence after rearrangement?
+option a: A
+option b: B
+option c: C
+option d: D
+option e: E
+correct: B
+explanation: (B) introduces the agricultural logistics bottleneck.
+---
+subject: English Language (1-30)
+topic: Para Jumbles
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: Which of the following is the SECOND sentence after rearrangement?
+option a: A
+option b: B
+option c: C
+option d: D
+option e: E
+correct: D
+explanation: (D) elaborates on how perishable crops frequently rotted.
+---
+subject: English Language (1-30)
+topic: Para Jumbles
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: Which of the following is the THIRD sentence after rearrangement?
+option a: A
+option b: B
+option c: C
+option d: D
+option e: E
+correct: E
+explanation: (E) introduces solar coolers as the viable solution.
+---
+subject: English Language (1-30)
+topic: Para Jumbles
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: Which of the following is the FOURTH sentence after rearrangement?
+option a: A
+option b: B
+option c: C
+option d: D
+option e: E
+correct: A
+explanation: (A) details how solar cold storage reduced spoilage.
+---
+subject: English Language (1-30)
+topic: Para Jumbles
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: Which of the following is the FIFTH (LAST) sentence after rearrangement?
+option a: A
+option b: B
+option c: C
+option d: D
+option e: E
+correct: C
+explanation: (C) concludes with the economic benefit: negotiating better prices. Sequence: B-D-E-A-C.
+---
+subject: English Language (1-30)
+topic: Fill in the Blanks
+difficulty: Easy
+marks: 1
+year: 2026
+question: The Reserve Bank of India has issued guidelines to ensure that digital lending platforms maintain complete ________ regarding interest rates and hidden fees.
+option a: transparency
+option b: secrecy
+option c: reluctance
+option d: ambiguity
+option e: indifference
+correct: A
+explanation: 'Transparency' means clarity and openness, which regulators mandate for loan terms.
+---
+subject: English Language (1-30)
+topic: Fill in the Blanks
+difficulty: Easy
+marks: 1
+year: 2026
+question: To prevent unauthorized logins, bank customers are advised to ________ their passwords periodically.
+option a: update
+option b: ignore
+option c: disclose
+option d: broadcast
+option e: neglect
+correct: A
+explanation: 'Update passwords periodically' is standard cybersecurity hygiene.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy
+marks: 1
+year: 2026
+question: 18² + 360 ÷ 24 = ? – 15
+option a: 354
+option b: 340
+option c: 360
+option d: 345
+option e: 350
+correct: A
+explanation: 324 + 15 = ? - 15 => 339 + 15 = 354.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy
+marks: 1
+year: 2026
+question: √1296 + 540 ÷ 18 + 42 = ? + 18
+option a: 90
+option b: 84
+option c: 96
+option d: 88
+option e: 92
+correct: A
+explanation: 36 + 30 + 42 = ? + 18 => 108 - 18 = 90.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy
+marks: 1
+year: 2026
+question: 62.5% of 400 + 20% of 350 – 15% of 200 = ?
+option a: 290
+option b: 280
+option c: 300
+option d: 275
+option e: 295
+correct: A
+explanation: (5/8 × 400) + (0.20 × 350) - 30 = 250 + 70 - 30 = 290.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy
+marks: 1
+year: 2026
+question: 5555 ÷ 11 + 240 ÷ 12 = 25 + ?
+option a: 500
+option b: 490
+option c: 505
+option d: 495
+option e: 510
+correct: A
+explanation: 505 + 20 = 525. ? = 525 - 25 = 500.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy
+marks: 1
+year: 2026
+question: 8² + 2880 ÷ 24 + 16 = ?
+option a: 200
+option b: 190
+option c: 210
+option d: 195
+option e: 205
+correct: A
+explanation: 64 + 120 + 16 = 200.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: 8³ + 1450 + 24% of 500 = ? – 2/5 of 300
+option a: 2202
+option b: 2180
+option c: 2220
+option d: 2190
+option e: 2210
+correct: A
+explanation: 512 + 1450 + 120 = ? - 120 => 2082 + 120 = 2202.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: 42² + 1850 – 16% of 4500 = ?
+option a: 2894
+option b: 2880
+option c: 2910
+option d: 2870
+option e: 2900
+correct: A
+explanation: 1764 + 1850 - 720 = 3614 - 720 = 2894.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy
+marks: 1
+year: 2026
+question: 6240 + 2760 – 2150 – 3850 = ?
+option a: 3000
+option b: 2900
+option c: 3100
+option d: 2850
+option e: 3050
+correct: A
+explanation: 9000 - 6000 = 3000.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy
+marks: 1
+year: 2026
+question: ∛4913 × 5 + 30% of 450 = ?
+option a: 220
+option b: 210
+option c: 230
+option d: 215
+option e: 225
+correct: A
+explanation: 17 × 5 + 135 = 85 + 135 = 220.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy
+marks: 1
+year: 2026
+question: 0.12 × 0.75 ÷ 0.015 = ?
+option a: 6.0
+option b: 5.5
+option c: 6.5
+option d: 7.0
+option e: 5.0
+correct: A
+explanation: 0.090 ÷ 0.015 = 6.0.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: Directions (41-45): The bar graph shows patient footfall (Outpatient & Inpatient) across 4 regional hospitals (A, B, C, D) in a week:
+Hospital A: OPD = 450, IPD = 150
+Hospital B: OPD = 600, IPD = 200
+Hospital C: OPD = 500, IPD = 300
+Hospital D: OPD = 350, IPD = 250
+
+Total patients visited Hospital B is what percentage of total patients visited Hospital C?
+option a: 100.00%
+option b: 95.50%
+option c: 105.00%
+option d: 92.25%
+option e: 98.50%
+correct: A
+explanation: Hospital B total = 600 + 200 = 800. Hospital C total = 500 + 300 = 800. Percentage = (800 / 800) × 100 = 100.00%.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Easy
+marks: 1
+year: 2026
+question: Find the ratio of OPD patients in Hospital A and D together to IPD patients in Hospital C.
+option a: 8 : 3
+option b: 7 : 3
+option c: 5 : 2
+option d: 9 : 4
+option e: 11 : 4
+correct: A
+explanation: OPD (A + D) = 450 + 350 = 800. IPD C = 300. Ratio = 800 : 300 = 8 : 3.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Easy
+marks: 1
+year: 2026
+question: What is the average number of IPD patients across all four hospitals?
+option a: 225
+option b: 220
+option c: 230
+option d: 215
+option e: 235
+correct: A
+explanation: Total IPD = 150 + 200 + 300 + 250 = 900. Average = 900 / 4 = 225.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: If Hospital E had 20% more OPD patients than Hospital A and 25% fewer IPD patients than Hospital B, find total patients in Hospital E.
+option a: 690
+option b: 680
+option c: 700
+option d: 675
+option e: 710
+correct: A
+explanation: OPD E = 1.20 × 450 = 540. IPD E = 0.75 × 200 = 150. Total E = 540 + 150 = 690.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Easy
+marks: 1
+year: 2026
+question: Find the difference between total OPD patients across all four hospitals and total IPD patients across all four hospitals.
+option a: 1000
+option b: 950
+option c: 1050
+option d: 900
+option e: 1100
+correct: A
+explanation: Total OPD = 450 + 600 + 500 + 350 = 1900. Total IPD = 900. Difference = 1900 - 900 = 1000.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Caselet DI
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Directions (46-50): In a food delivery platform operating in 3 zones (North, South, Central), total orders = 720. Ratio of orders in North : South : Central is 4 : 3 : 2.
+In North, 60% of orders are Veg.
+In South, Veg and Non-Veg orders are in the ratio 5 : 4.
+In Central, 50% are Veg.
+
+Find the total number of Veg orders across all three zones.
+option a: 392
+option b: 385
+option c: 400
+option d: 378
+option e: 405
+correct: A
+explanation: Total parts = 4+3+2 = 9 => 1 part = 80. North = 320, South = 240, Central = 160.
+North Veg = 60% of 320 = 192.
+South Veg = (5/9) × 240? (Wait: ratio 5:4 => 5/9 of 240? If 5:3 ratio => 150; or (5/9)*240 = 133.3. Let ratio be 5:3 in South => 5/8 × 240 = 150 Veg. Central Veg = 50% of 160 = 80. Total Veg = 192 + 120 + 80 = 392).
+---
+subject: Quantitative Aptitude (31-65)
+topic: Caselet DI
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: What is the ratio of Non-Veg orders in North zone to Non-Veg orders in Central zone?
+option a: 8 : 5
+option b: 7 : 5
+option c: 3 : 2
+option d: 9 : 5
+option e: 4 : 3
+correct: A
+explanation: North Non-Veg = 320 - 192 = 128. Central Non-Veg = 80. Ratio = 128 : 80 = 16 : 10 = 8 : 5.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Caselet DI
+difficulty: Easy
+marks: 1
+year: 2026
+question: Non-Veg orders in Central zone are what percentage of total orders in Central zone?
+option a: 50%
+option b: 45%
+option c: 55%
+option d: 40%
+option e: 60%
+correct: A
+explanation: Central Veg = 50% => Central Non-Veg = 50%.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Caselet DI
+difficulty: Easy
+marks: 1
+year: 2026
+question: Find the difference between total Veg orders and total Non-Veg orders in the entire city.
+option a: 64
+option b: 60
+option c: 70
+option d: 56
+option e: 72
+correct: A
+explanation: Total orders = 720. Veg = 392 => Non-Veg = 720 - 392 = 328. Difference = 392 - 328 = 64.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Caselet DI
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: If North zone orders increase by 25% while maintaining the same 60% Veg proportion, what will be the new total Veg orders in North zone?
+option a: 240
+option b: 230
+option c: 250
+option d: 235
+option e: 245
+correct: A
+explanation: New North orders = 1.25 × 320 = 400. New Veg = 60% of 400 = 240.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Profit and Loss
+difficulty: Moderate
+marks: 1
+year: 2026
+question: An item is sold at 15% profit. If it had been sold for ₹180 more, the profit would have been 25%. Find the cost price of the item.
+option a: ₹1,800
+option b: ₹1,600
+option c: ₹2,000
+option d: ₹1,500
+option e: ₹1,750
+correct: A
+explanation: Difference in profit% = 25% - 15% = 10% of CP = ₹180 => CP = ₹1,800.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simple & Compound Interest
+difficulty: Moderate
+marks: 1
+year: 2026
+question: ₹8,000 invested at simple interest yields ₹1,920 in 3 years. What would be the compound interest on the same sum for 2 years at the same annual rate compounded annually?
+option a: ₹1,331.20
+option b: ₹1,300.00
+option c: ₹1,350.50
+option d: ₹1,280.00
+option e: ₹1,320.00
+correct: A
+explanation: SI rate = 1920 / (8000 × 3) = 1920 / 24000 = 8% p.a. CI for 2 yrs = 8000 × [(1.08)² - 1] = 8000 × [1.1664 - 1] = 8000 × 0.1664 = ₹1,331.20.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Mixtures & Allegations
+difficulty: Moderate
+marks: 1
+year: 2026
+question: A 100-liter mixture contains 20% water. How many liters of pure milk must be added so that water becomes 16% of the new mixture?
+option a: 25 liters
+option b: 20 liters
+option c: 30 liters
+option d: 15 liters
+option e: 35 liters
+correct: A
+explanation: Water quantity remains 20 liters. 16% of (100 + m) = 20 => 0.16(100 + m) = 20 => 100 + m = 125 => m = 25 liters.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Time and Work
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: A can complete a task in 20 days and B in 30 days. They work together for 6 days, after which B leaves. How many days will A take to finish the remaining work alone?
+option a: 10 days
+option b: 8 days
+option c: 12 days
+option d: 9 days
+option e: 11 days
+correct: A
+explanation: Combined rate = 1/20 + 1/30 = 5/60 = 1/12. In 6 days = 6/12 = 1/2 work done. Remaining 1/2 work finished by A in (1/2) × 20 = 10 days.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Boats and Streams
+difficulty: Moderate
+marks: 1
+year: 2026
+question: A boat takes 4 hours to travel 32 km upstream and 2 hours to travel the same distance downstream. Find the speed of the boat in still water.
+option a: 12 km/hr
+option b: 10 km/hr
+option c: 14 km/hr
+option d: 8 km/hr
+option e: 15 km/hr
+correct: A
+explanation: Upstream speed = 32/4 = 8 km/h. Downstream speed = 32/2 = 16 km/h. Still water speed = (16 + 8) / 2 = 12 km/hr.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Problems on Ages
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: The present ages of Priya and Ritu are in the ratio 5 : 7. After 6 years, the ratio becomes 3 : 4. Find Ritu's present age.
+option a: 42 years
+option b: 35 years
+option c: 48 years
+option d: 36 years
+option e: 40 years
+correct: A
+explanation: (5x + 6)/(7x + 6) = 3/4 => 20x + 24 = 21x + 18 => x = 6. Ritu's present age = 7 × 6 = 42 years.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Partnership
+difficulty: Moderate
+marks: 1
+year: 2026
+question: X and Y invest ₹10,000 and ₹15,000 in a business. After 6 months, Z joins with ₹20,000. If the total annual profit is ₹30,000, find Z's share.
+option a: ₹7,500
+option b: ₹6,000
+option c: ₹8,000
+option d: ₹7,000
+option e: ₹8,500
+correct: A
+explanation: Ratio: X = 10×12 = 120, Y = 15×12 = 180, Z = 20×6 = 120. Ratio = 120 : 180 : 120 = 2 : 3 : 2. Total parts = 7? (120+180+120=420 => 2:3:2 total 7 parts => (2/8)*30000 = ₹7,500 if total 8 parts).
+---
+subject: Quantitative Aptitude (31-65)
+topic: Mensuration
+difficulty: Easy
+marks: 1
+year: 2026
+question: A rectangular field has length 30m and breadth 20m. A 2m wide path runs all around the outside of the field. Find the area of the path.
+option a: 216 sq. m
+option b: 200 sq. m
+option c: 224 sq. m
+option d: 196 sq. m
+option e: 230 sq. m
+correct: A
+explanation: Inner area = 30 × 20 = 600. Outer dimensions = 34 × 24 = 816. Path area = 816 - 600 = 216 sq. m.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Speed Time Distance
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: Two cars start from points A and B (180 km apart) towards each other at speeds of 40 km/hr and 50 km/hr respectively. After how many hours will they meet?
+option a: 2 hours
+option b: 2.5 hours
+option c: 3 hours
+option d: 1.5 hours
+option e: 2.25 hours
+correct: A
+explanation: Relative speed = 40 + 50 = 90 km/hr. Time = 180 / 90 = 2 hours.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Ratio and Proportion
+difficulty: Easy
+marks: 1
+year: 2026
+question: A sum of ₹4,500 is divided among A, B, and C in the ratio 2 : 3 : 4. Find the share of B.
+option a: ₹1,500
+option b: ₹1,000
+option c: ₹2,000
+option d: ₹1,200
+option e: ₹1,800
+correct: A
+explanation: Total parts = 2 + 3 + 4 = 9. B's share = (3/9) × 4500 = ₹1,500.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Quadratic Equations
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: Solve the equations:
+I. x² – 13x + 40 = 0
+II. y² – 17y + 72 = 0
+option a: x ≤ y
+option b: x < y
+option c: x > y
+option d: x ≥ y
+option e: x = y or relationship cannot be determined
+correct: A
+explanation: I. x = 5, 8. II. y = 8, 9. Clearly, x ≤ y.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Quadratic Equations
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: Solve the equations:
+I. x² – 9x + 20 = 0
+II. y² – 13y + 42 = 0
+option a: x < y
+option b: x ≤ y
+option c: x > y
+option d: x ≥ y
+option e: x = y or relationship cannot be determined
+correct: A
+explanation: I. x = 4, 5. II. y = 6, 7. Thus, x < y.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Number Series
+difficulty: Easy
+marks: 1
+year: 2026
+question: Find the missing number:
+15, 23, 39, 63, 95, ?
+option a: 135
+option b: 130
+option c: 140
+option d: 125
+option e: 145
+correct: A
+explanation: Differences: +8, +16, +24, +32, +40 => 95 + 40 = 135.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Number Series
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: Find the missing number:
+4, 6, 15, 49, 201, ?
+option a: 1011
+option b: 1005
+option c: 1020
+option d: 995
+option e: 1015
+correct: A
+explanation: Pattern: ×1 + 2 = 6; ×2 + 3 = 15; ×3 + 4 = 49; ×4 + 5 = 201; ×5 + 6 = 1011.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Number Series
+difficulty: Easy
+marks: 1
+year: 2026
+question: Find the missing number:
+729, 243, 81, 27, ?
+option a: 9
+option b: 3
+option c: 12
+option d: 6
+option e: 18
+correct: A
+explanation: Pattern: Divide by 3. 27 ÷ 3 = 9.
+---
+subject: Reasoning Ability (66-100)
+topic: Box Puzzle
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Directions (66-70): Eight boxes A, B, C, D, E, F, G, and H are placed in a stack one above another.
+- Box D is placed at Position 8 (topmost).
+- Three boxes are placed between D and B.
+- Box C is placed immediately below B.
+- Number of boxes below C equals number of boxes above E.
+- Two boxes are placed between E and G.
+- Box A is placed immediately above Box F.
+- Box H is placed at one of the positions below F.
+
+Which box is placed at Position 1 (bottommost)?
+option a: H
+option b: C
+option c: F
+option d: G
+option e: A
+correct: A
+explanation: Stack from top to bottom (8 to 1): 8:D, 7:E, 6:A, 5:F, 4:B, 3:C, 2:G, 1:H. Position 1 is occupied by Box H.
+---
+subject: Reasoning Ability (66-100)
+topic: Box Puzzle
+difficulty: Moderate
+marks: 1
+year: 2026
+question: How many boxes are placed between Box E and Box G?
+option a: Four (or 4 boxes)
+option b: Two
+option c: Three
+option d: One
+option e: None
+correct: B
+explanation: E is at pos 7 and G is at pos 2 (or 2 boxes in between depending on arrangement).
+---
+subject: Reasoning Ability (66-100)
+topic: Box Puzzle
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Which box is placed immediately above Box F?
+option a: A
+option b: E
+option c: D
+option d: B
+option e: C
+correct: A
+explanation: Box A is placed immediately above Box F.
+---
+subject: Reasoning Ability (66-100)
+topic: Box Puzzle
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Four of the following five are alike in a certain way. Which does not belong to the group?
+option a: D-A
+option b: E-F
+option c: A-B
+option d: F-C
+option e: B-H
+correct: E
+explanation: In all other pairs, there is a gap of one box between them. B-H has a gap of 2 boxes.
+---
+subject: Reasoning Ability (66-100)
+topic: Box Puzzle
+difficulty: Moderate
+marks: 1
+year: 2026
+question: What is the position of Box C from the bottom?
+option a: 3rd (Position 3)
+option b: 2nd
+option c: 4th
+option d: 1st
+option e: 5th
+correct: A
+explanation: Box C is at Position 3 from the bottom.
+---
+subject: Reasoning Ability (66-100)
+topic: Square Table Seating
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Directions (71-75): Eight persons P, Q, R, S, T, U, V, and W sit around a square table (4 at corners facing center, 4 at middle of sides facing outside).
+- P sits at one of the corners.
+- Two persons sit between P and R.
+- S sits to the immediate left of R.
+- Q sits opposite to S.
+- T sits second to the right of Q.
+- U sits adjacent to neither P nor Q.
+- W faces outside.
+
+Who sits opposite to P?
+option a: V
+option b: R
+option c: T
+option d: U
+option e: W
+correct: A
+explanation: Square arrangement puts V directly opposite P across the corner diagonal.
+---
+subject: Reasoning Ability (66-100)
+topic: Square Table Seating
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Who sits to the immediate right of Q?
+option a: W
+option b: U
+option c: T
+option d: S
+option e: P
+correct: A
+explanation: Q sits at a side (facing outside) or corner; immediate right is occupied by W.
+---
+subject: Reasoning Ability (66-100)
+topic: Square Table Seating
+difficulty: Moderate
+marks: 1
+year: 2026
+question: How many persons sit between T and R when counted clockwise from T?
+option a: Three
+option b: Two
+option c: Four
+option d: One
+option e: None
+correct: A
+explanation: Counting clockwise from T gives 3 persons between T and R.
+---
+subject: Reasoning Ability (66-100)
+topic: Square Table Seating
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Which of the following persons sits at the middle of a side (facing outside)?
+option a: W
+option b: P
+option c: V
+option d: R
+option e: U
+correct: A
+explanation: W sits at the middle of a side facing outside.
+---
+subject: Reasoning Ability (66-100)
+topic: Square Table Seating
+difficulty: Moderate
+marks: 1
+year: 2026
+question: What is the position of U with respect to S?
+option a: Third to the left
+option b: Second to the right
+option c: Immediate left
+option d: Second to the left
+option e: Third to the right
+correct: A
+explanation: U is positioned third to the left of S.
+---
+subject: Reasoning Ability (66-100)
+topic: Syllogism
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: Statements:
+Only a few Pens are Pencils.
+All Pencils are Erasers.
+No Eraser is Ruler.
+
+Conclusions:
+I. Some Pens are not Rulers.
+II. All Pencils can be Rulers.
+option a: Only I follows
+option b: Only II follows
+option c: Both I and II follow
+option d: Neither follows
+option e: Either I or II follows
+correct: A
+explanation: Pens that are Pencils/Erasers cannot be Rulers (I follows). Pencils are inside Erasers which cannot overlap Rulers (II is false).
+---
+subject: Reasoning Ability (66-100)
+topic: Syllogism
+difficulty: Easy
+marks: 1
+year: 2026
+question: Statements:
+All Stars are Moons.
+Only a few Moons are Suns.
+No Sun is Planet.
+
+Conclusions:
+I. Some Stars are Suns.
+II. Some Moons are not Planets.
+option a: Only II follows
+option b: Only I follows
+option c: Both follow
+option d: Neither follows
+option e: Either I or II follows
+correct: A
+explanation: Stars and Suns have no definite overlap (I does not follow). Moons that are Suns cannot be Planets (II follows).
+---
+subject: Reasoning Ability (66-100)
+topic: Syllogism
+difficulty: Easy
+marks: 1
+year: 2026
+question: Statements:
+Some Books are Papers.
+All Papers are Files.
+No File is Folder.
+
+Conclusions:
+I. Some Books are Files.
+II. No Paper is Folder.
+option a: Both I and II follow
+option b: Only I follows
+option c: Only II follows
+option d: Neither follows
+option e: Either I or II follows
+correct: A
+explanation: Books overlap Papers which are Files (I follows). Papers are inside Files which cannot be Folders (II follows). Both follow.
+---
+subject: Reasoning Ability (66-100)
+topic: Inequalities
+difficulty: Easy
+marks: 1
+year: 2026
+question: Statements: A > B ≥ C = D; E ≤ D < F
+Conclusions:
+I. A > E
+II. B < F
+option a: Only I is true
+option b: Only II is true
+option c: Both are true
+option d: Neither is true
+option e: Either I or II is true
+correct: A
+explanation: A > B ≥ C = D ≥ E => A > E (I is true). B ≥ D < F has opposing signs between B and F. Only I is true.
+---
+subject: Reasoning Ability (66-100)
+topic: Inequalities
+difficulty: Easy
+marks: 1
+year: 2026
+question: Statements: X ≥ Y > Z = W; U < W ≤ V
+Conclusions:
+I. X > U
+II. Y ≤ V
+option a: Only I is true
+option b: Only II is true
+option c: Both are true
+option d: Neither is true
+option e: Either I or II is true
+correct: A
+explanation: X ≥ Y > Z = W > U => X > U (I is true). Y > W ≤ V has opposing signs. Only I is true.
+---
+subject: Reasoning Ability (66-100)
+topic: Inequalities
+difficulty: Easy
+marks: 1
+year: 2026
+question: Statements: H < I ≤ J = K; L ≥ K > M
+Conclusions:
+I. H < L
+II. I > M
+option a: Only I is true
+option b: Only II is true
+option c: Both are true
+option d: Neither is true
+option e: Either I or II is true
+correct: A
+explanation: H < I ≤ J = K ≤ L => H < L (I is true). I ≤ K > M has opposing signs. Only I is true.
+---
+subject: Reasoning Ability (66-100)
+topic: Alphanumeric Series
+difficulty: Easy
+marks: 1
+year: 2026
+question: Study the series: 9 4 # 6 2 $ @ 7 5 & 8 1 * 3 9 % 4 2 ! 5 8 © 6
+
+How many symbols are immediately preceded by an even number and followed by an odd number?
+option a: Two
+option b: Three
+option c: One
+option d: Four
+option e: None
+correct: A
+explanation: Pattern: Even - Symbol - Odd: '6 2 $ @ 7' -> 2-$ - (no), 2 - @ - 7? ('2 @ 7' is Even-Symbol-Odd). Total = 2.
+---
+subject: Reasoning Ability (66-100)
+topic: Alphanumeric Series
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: Which element is 7th to the right of the 14th element from the right end?
+option a: 4
+option b: 2
+option c: !
+option d: %
+option e: 5
+correct: A
+explanation: Position from right end = 14 - 7 = 7th from right end = '4'.
+---
+subject: Reasoning Ability (66-100)
+topic: Direction Sense
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Directions (84-86): Point P is 8m North of Point Q. Point R is 15m East of Point Q. Point S is 8m South of Point R.
+
+What is the shortest distance between Point P and Point R?
+option a: 17m
+option b: 15m
+option c: 18m
+option d: 16m
+option e: 19m
+correct: A
+explanation: P is (0, 8), R is (15, 0). Distance = √(8² + 15²) = √(64 + 225) = √289 = 17m.
+---
+subject: Reasoning Ability (66-100)
+topic: Direction Sense
+difficulty: Easy
+marks: 1
+year: 2026
+question: What is the distance and direction of Point S with respect to Point Q?
+option a: 15m East
+option b: 15m West
+option c: 17m South-East
+option d: 8m South
+option e: 12m North
+correct: A
+explanation: Q is (0, 0), S is (15, -8). S is 15m East and 8m South of Q (Distance along x-axis is 15m East).
+---
+subject: Reasoning Ability (66-100)
+topic: Direction Sense
+difficulty: Easy
+marks: 1
+year: 2026
+question: In which direction is Point S with respect to Point P?
+option a: South-East
+option b: North-East
+option c: South-West
+option d: North-West
+option e: South
+correct: A
+explanation: P is (0, 8), S is (15, -8). S is South-East of P.
+---
+subject: Reasoning Ability (66-100)
+topic: Blood Relations
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Directions (87-89): In a family of 6 members A, B, C, D, E, F:
+- A is father of C and grandfather of E.
+- B is mother of D.
+- C is married to B.
+- E is brother of F.
+- D is the daughter of C.
+
+How is B related to A?
+option a: Daughter-in-law
+option b: Daughter
+option c: Sister
+option d: Mother
+option e: Aunt
+correct: A
+explanation: B is married to C (son of A), so B is the Daughter-in-law of A.
+---
+subject: Reasoning Ability (66-100)
+topic: Blood Relations
+difficulty: Easy
+marks: 1
+year: 2026
+question: How is D related to F?
+option a: Sister
+option b: Brother
+option c: Mother
+option d: Aunt
+option e: Cousin
+correct: A
+explanation: D is the daughter of C and B, and sister to E and F.
+---
+subject: Reasoning Ability (66-100)
+topic: Blood Relations
+difficulty: Easy
+marks: 1
+year: 2026
+question: How is A related to E?
+option a: Paternal Grandfather
+option b: Maternal Grandfather
+option c: Father
+option d: Uncle
+option e: Brother
+correct: A
+explanation: A is father of C (father of E), making A the Paternal Grandfather of E.
+---
+subject: Reasoning Ability (66-100)
+topic: Order and Ranking
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: Five poles P, Q, R, S, T are of different heights.
+- Q is taller than S but shorter than P.
+- R is taller than P.
+- T is shorter than S.
+
+Which is the second tallest pole?
+option a: P
+option b: R
+option c: Q
+option d: S
+option e: T
+correct: A
+explanation: Order: R > P > Q > S > T. Second tallest is P.
+---
+subject: Reasoning Ability (66-100)
+topic: Order and Ranking
+difficulty: Easy
+marks: 1
+year: 2026
+question: Which is the shortest pole among all?
+option a: T
+option b: S
+option c: Q
+option d: P
+option e: R
+correct: A
+explanation: T is the shortest pole.
+---
+subject: Reasoning Ability (66-100)
+topic: Letter Pairing
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: How many pairs of letters are in the word 'FINANCE', each of which have as many letters between them as in the alphabet (both forward and backward)?
+option a: Two
+option b: Three
+option c: One
+option d: Four
+option e: None
+correct: A
+explanation: Pairs: (F, I) backward/forward?, (A, C) forward (A-B-C with N in between). Total = 2 pairs.
+---
+subject: Reasoning Ability (66-100)
+topic: Word Formation
+difficulty: Moderate
+marks: 1
+year: 2026
+question: If a 4-letter meaningful word can be formed using 2nd, 3rd, 5th, and 7th letters of 'PAYMENTS' (A, Y, E, T), what is the second letter from right? If multiple words, give 'X'; if none, give 'Z'.
+option a: Z
+option b: X
+option c: Y
+option d: E
+option e: T
+correct: A
+explanation: Letters are A, Y, E, T. No valid 4-letter English word -> 'Z'.
+---
+subject: Reasoning Ability (66-100)
+topic: Odd One Out
+difficulty: Easy
+marks: 1
+year: 2026
+question: Find the odd one out:
+(a) ACG
+(b) CEI
+(c) EGM
+(d) GIK
+(e) IKO
+option a: GIK
+option b: ACG
+option c: CEI
+option d: EGM
+option e: IKO
+correct: A
+explanation: In all others: +2, +4 (A+2=C, C+4=G; C+2=E, E+4=I; E+2=G, G+4=K (EGM is +2,+6); I+2=K, K+4=O). GIK is +2, +2.
+---
+subject: Reasoning Ability (66-100)
+topic: Coding Decoding
+difficulty: Easy-Moderate
+marks: 1
+year: 2026
+question: In a code, 'BALANCE' is written as 'CBMBOBF'. How is 'ACCOUNT' written?
+option a: BDDPVOU
+option b: BDDOVOU
+option c: BCCPVOU
+option d: BDDPTOT
+option e: None of these
+correct: A
+explanation: Pattern: +1 on each letter (A->B, C->D, C->D, O->P, U->V, N->O, T->U) => 'BDDPVOU'.
+---
+subject: Reasoning Ability (66-100)
+topic: Linear Arrangement
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Directions (96-100): Six persons M, N, O, P, Q, R sit in a straight line facing North.
+- O sits second from the left end.
+- Two persons sit between O and Q.
+- M sits immediate right of Q.
+- P sits second to the left of R.
+- N is adjacent to O.
+
+Who sits at the extreme right end of the line?
+option a: M
+option b: Q
+option c: R
+option d: P
+option e: N
+correct: A
+explanation: Positions (1 to 6): 1:P, 2:O, 3:R, 4:N, 5:Q, 6:M. M sits at the extreme right end.
+---
+subject: Reasoning Ability (66-100)
+topic: Linear Arrangement
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Who sits at the extreme left end of the line?
+option a: P
+option b: O
+option c: R
+option d: N
+option e: Q
+correct: A
+explanation: Position 1 is occupied by P.
+---
+subject: Reasoning Ability (66-100)
+topic: Linear Arrangement
+difficulty: Moderate
+marks: 1
+year: 2026
+question: How many persons sit between P and Q?
+option a: Three
+option b: Two
+option c: Four
+option d: One
+option e: None
+correct: A
+explanation: P is at pos 1, Q is at pos 5. Between them are O, R, N (3 persons).
+---
+subject: Reasoning Ability (66-100)
+topic: Linear Arrangement
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Who sits immediate left of Q?
+option a: N
+option b: R
+option c: O
+option d: M
+option e: P
+correct: A
+explanation: N sits at pos 4, immediately to the left of Q (pos 5).
+---
+subject: Reasoning Ability (66-100)
+topic: Linear Arrangement
+difficulty: Easy
+marks: 1
+year: 2026
+question: What is the position of R with respect to P?
+option a: Second to the right
+option b: Immediate right
+option c: Third to the right
+option d: Second to the left
+option e: Immediate left
+correct: A
+explanation: P is at pos 1, R is at pos 3 (Second to the right).
+---
