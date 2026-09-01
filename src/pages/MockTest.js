@@ -287,6 +287,8 @@ export const MockTest = {
     const q = this.questions[this.currentIdx];
     if (!q) return `<p>Error loading question</p>`;
     const isTET = (this.selectedSubject || '').toUpperCase().includes('TET');
+    const isSBI = (this.selectedSubject || '').toUpperCase().includes('SBI') || (this.selectedSubject || '').toUpperCase().includes('CLERK');
+    const isNoCalc = isTET || isSBI;
 
     const formatTimer = (seconds) => {
       const h = Math.floor(seconds / 3600);
@@ -336,8 +338,8 @@ export const MockTest = {
             </div>
           </div>
           <div class="flex items-center gap-3">
-            ${!isTET ? `
-              <button id="toggle-calc-btn" class="px-3.5 py-1.5 rounded-xl border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-slate-850 text-slate-600 dark:text-slate-300 text-xs font-bold flex items-center gap-1.5">
+            ${!isNoCalc ? `
+              <button id="toggle-calc-btn" class="px-3.5 py-1.5 rounded-xl border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-slate-855 text-slate-600 dark:text-slate-300 text-xs font-bold flex items-center gap-1.5">
                 <i class="fa-solid fa-calculator"></i> ${this.isCalcOpen ? 'Hide Calculator' : 'Calculator'}
               </button>
             ` : ''}
@@ -351,7 +353,7 @@ export const MockTest = {
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 flex-1 relative items-stretch">
           
           <!-- Floating TCS Calculator (if floating and calculator open) -->
-          ${(!isTET && !this.isCalcDocked && this.isCalcOpen) ? `
+          ${(!isNoCalc && !this.isCalcDocked && this.isCalcOpen) ? `
             <div id="calculator-widget" class="fixed z-50 w-80 bg-slate-900 text-white rounded-3xl shadow-2xl p-4 border border-slate-700 animate-scale-in"
                  style="${this.calcLeft !== undefined && this.calcTop !== undefined ? `left: ${this.calcLeft}px; top: ${this.calcTop}px; transform: none;` : 'top: 7rem; left: 45%; transform: translateX(-50%);'}">
                ${this.renderCalculatorInnerHtml()}
@@ -378,10 +380,12 @@ export const MockTest = {
                       q.type === 'NAT' ? 'bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20' :
                       'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20'
                     }">
-                      ${q.type || 'MCQ'} (${q.marks} Mark${q.marks > 1 ? 's' : ''})
+                      ${q.type || 'MCQ'} (+${q.marks} / -${q.negativeMarks !== undefined ? q.negativeMarks : (isTET ? '0.00' : (isSBI ? '0.25' : (q.marks/3).toFixed(2)))})
                     </span>
                     ${q.type === 'MSQ' ? '<span class="text-[9px] font-bold text-slate-400 dark:text-slate-500">(Multiple Select. No negative marking)</span>' : ''}
                     ${q.type === 'NAT' ? '<span class="text-[9px] font-bold text-slate-400 dark:text-slate-500">(Numerical Answer. No negative marking)</span>' : ''}
+                    ${isTET ? '<span class="text-[9px] font-bold text-emerald-500">(TET Exam: No negative marking)</span>' : ''}
+                    ${isSBI ? '<span class="text-[9px] font-bold text-blue-500 dark:text-blue-400">(SBI Clerk: 0.25 negative marking)</span>' : ''}
                   </div>
 
                   <p class="text-xs font-bold text-slate-805 dark:text-slate-200 whitespace-pre-line leading-relaxed max-h-[22rem] overflow-y-auto pr-1">
@@ -462,7 +466,7 @@ export const MockTest = {
             </div>
 
             <!-- Inline Docked Calculator -->
-            ${(!isTET && this.isCalcDocked && this.isCalcOpen) ? `
+            ${(!isNoCalc && this.isCalcDocked && this.isCalcOpen) ? `
               <div class="glass-panel p-5 rounded-3xl bg-slate-900 border border-slate-700 text-white animate-scale-in">
                 ${this.renderCalculatorInnerHtml()}
               </div>
@@ -1373,11 +1377,21 @@ export const MockTest = {
         } else {
           wrongCount++;
           const isTET = (this.selectedSubject || '').toUpperCase().includes('TET');
-          if (!isTET) {
-            const deduction = q.marks / 3.0;
-            negativeMarks += deduction;
-            score -= deduction;
+          const isSBI = (this.selectedSubject || '').toUpperCase().includes('SBI') || (this.selectedSubject || '').toUpperCase().includes('CLERK');
+          
+          let deduction = 0;
+          if (q.negativeMarks !== undefined) {
+            deduction = q.negativeMarks;
+          } else if (isSBI) {
+            deduction = 0.25;
+          } else if (isTET) {
+            deduction = 0;
+          } else {
+            deduction = q.marks / 3.0;
           }
+
+          negativeMarks += deduction;
+          score -= deduction;
 
           mistakes.push({
             questionId: q.id,

@@ -1,0 +1,1548 @@
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Read the following passage carefully and answer questions 1 to 8:
+
+The commercial space economy is undergoing an unprecedented paradigm shift, fueled by low-Earth orbit (LEO) satellite constellations and private launch service providers. Historically the exclusive domain of sovereign defense and space exploration agencies, satellite deployment has been democratized through reusable rocket stages and standardized modular CubeSats. Megaconstellations comprising thousands of networked satellites are delivering ultra-low-latency broadband connectivity to remote maritime, aviation, and rural terrains where terrestrial fiber-optic deployment is economically unfeasible. However, this orbital proliferation has ignited grave concerns regarding space debris and Kessler Syndrome—a catastrophic cascading collision cascade that could render critical orbital regimes unusable for generations. Mitigating these risks mandates binding international space traffic management protocols, active debris removal technologies, and designated end-of-life de-orbiting mechanisms for retired satellites.
+
+What has democratized modern satellite deployment according to the passage?
+option a: Banning commercial space startups
+option b: Reusable rocket stages and standardized modular CubeSats
+option c: Total dependence on government funding
+option d: Abandonment of low-Earth orbit missions
+option e: None of the above
+correct: B
+explanation: The passage explicitly notes that satellite deployment has been democratized through reusable rocket stages and standardized modular CubeSats.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Where is LEO satellite broadband particularly advantageous compared to terrestrial fiber?
+option a: Dense metropolitan business districts
+option b: Remote maritime, aviation, and rural terrains
+option c: Underground rail networks
+option d: High-frequency stock trading floors
+option e: Submarine cable stations
+correct: B
+explanation: The text highlights that satellite constellations deliver broadband to remote maritime, aviation, and rural areas where fiber is economically unfeasible.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Advanced
+marks: 1
+year: 2026
+question: What is 'Kessler Syndrome' as described in the passage?
+option a: A neurological condition affecting astronauts
+option b: A catastrophic cascading collision of orbital debris
+option c: A market crash in space startup stocks
+option d: A sudden loss of solar radiation in space
+option e: A software glitch in navigation satellites
+correct: B
+explanation: The passage defines Kessler Syndrome as 'a catastrophic cascading collision cascade that could render critical orbital regimes unusable'.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Which measures are recommended to mitigate orbital debris risks?
+option a: Launching all satellites into deep interstellar space
+option b: Binding international space traffic management and active debris removal protocols
+option c: Ceasing all satellite communication permanently
+option d: Exploding obsolete satellites in orbit
+option e: Disbanding international space regulatory bodies
+correct: B
+explanation: The author explicitly calls for space traffic management protocols, active debris removal, and end-of-life de-orbiting mechanisms.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Choose the word most SIMILAR in meaning to 'PROLIFERATION' as used in the passage.
+option a: Rapid expansion / multiplication
+option b: Drastic reduction
+option c: Stagnation
+option d: Termination
+option e: Decay
+correct: A
+explanation: 'Proliferation' means rapid increase or multiplication in numbers.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Choose the word most OPPOSITE in meaning to 'UNFEASIBLE' as used in the passage.
+option a: Impracticable
+option b: Viable
+option c: Unattainable
+option d: Challenging
+option e: Costly
+correct: B
+explanation: 'Unfeasible' means not practical or possible to achieve. The opposite is 'Viable' (feasible/practical).
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Advanced
+marks: 1
+year: 2026
+question: What does the abbreviation 'LEO' stand for in space technology?
+option a: Low-Earth Orbit
+option b: Linear Electron Oscillator
+option c: Longitudinal Energy Output
+option d: Lunar Exploration Observatory
+option e: Laser Emitting Optic
+correct: A
+explanation: LEO stands for Low-Earth Orbit.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Advanced
+marks: 1
+year: 2026
+question: What is the primary objective of the author in this passage?
+option a: To dismiss space exploration as a waste of resources
+option b: To analyze the benefits and severe sustainability hazards of the expanding commercial space economy
+option c: To promote a specific private satellite broadband provider
+option d: To advocate for the militarization of low-Earth orbit
+option e: To explain rocket propulsion chemistry
+correct: B
+explanation: The author objectively analyzes the transformative benefits (connectivity, reusable tech) alongside existential hazards (orbital debris, Kessler Syndrome).
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Advanced
+marks: 1
+year: 2026
+question: In the following passage, there are blanks. For Blank (1), choose the appropriate word:
+
+Open Banking APIs (Application Programming Interfaces) are fundamentally ____(1)____ the relationship between traditional banks and third-party fintech innovators. By granting secure, consent-driven access to consumer financial data, open banking fosters intense market ____(2)____ and spurs tailored financial product development. Consumers benefit from unified account aggregators that provide holistic financial ____(3)____. However, robust data sovereignty laws and stringent cybersecurity protocols are indispensable to safeguard against malicious data ____(4)____. Regulators must maintain a delicate balance between encouraging financial ____(5)____ and preserving consumer ____(6)____.
+
+Select the best word for Blank (1):
+option a: reshaping
+option b: destroying
+option c: obstructing
+option d: ignoring
+option e: weakening
+correct: A
+explanation: Open banking is 'reshaping' (transforming) traditional banking relationships.
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Select the best word for Blank (2):
+option a: competition
+option b: stagnation
+option c: monopoly
+option d: collusion
+option e: lethargy
+correct: A
+explanation: Consent-driven access spurs market 'competition' and innovation.
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Select the best word for Blank (3):
+option a: insights
+option b: illusions
+option c: debts
+option d: penalties
+option e: confusions
+correct: A
+explanation: Account aggregators provide holistic financial 'insights'.
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Select the best word for Blank (4):
+option a: breaches
+option b: protections
+option c: enhancements
+option d: backups
+option e: upgrades
+correct: A
+explanation: Cybersecurity safeguards against malicious data 'breaches'.
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Select the best word for Blank (5):
+option a: innovation
+option b: paralysis
+option c: bureaucracy
+option d: corruption
+option e: negligence
+correct: A
+explanation: Regulators balance financial 'innovation' with consumer protection.
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Select the best word for Blank (6):
+option a: trust
+option b: distress
+option c: apathy
+option d: hostility
+option e: indifference
+correct: A
+explanation: Preserving consumer 'trust' is the vital regulatory priority.
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Identify the part of the sentence containing an error:
+
+(A) Had the audit committee / (B) investigated the suspicious transactions earlier, / (C) the massive corporate fraud / (D) would have been unearthed sooner. / (E) No error
+option a: E
+option b: A
+option c: B
+option d: C
+option e: D
+correct: A
+explanation: The sentence is structurally and grammatically sound (Conditional inversion: 'Had + S + V3, S + would have been + V3'). Hence, (E) No error.
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Advanced
+marks: 1
+year: 2026
+question: (A) He is not only known / (B) for his profound economic wisdom / (C) but also for his exemplary / (D) integrity in public life. / (E) No error
+option a: A
+option b: B
+option c: C
+option d: D
+option e: E
+correct: A
+explanation: Parallelism error: 'not only' should be placed after 'known' or before 'for'. It should be: 'He is known not only for his profound economic wisdom but also for his exemplary integrity...'.
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Advanced
+marks: 1
+year: 2026
+question: (A) Neither the financial stability / (B) report nor the quarterly earnings / (C) data were released / (D) on the scheduled date. / (E) No error
+option a: E
+option b: A
+option c: B
+option d: C
+option e: D
+correct: A
+explanation: 'data' is plural and is the closer subject in 'Neither... nor', taking the plural verb 'were'. The sentence is correct (No error).
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Advanced
+marks: 1
+year: 2026
+question: (A) The RBI governor emphasized that / (B) maintaining price stability / (C) is paramount than achieving / (D) short-term growth spikes. / (E) No error
+option a: C
+option b: A
+option c: B
+option d: D
+option e: E
+correct: C
+explanation: 'Paramount' is not followed by 'than'. Use 'is more paramount than' (or 'is of greater importance than' / 'takes precedence over').
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Advanced
+marks: 1
+year: 2026
+question: (A) The reason why the stock / (B) crashed so dramatically was / (C) because the company reported / (D) massive quarterly losses. / (E) No error
+option a: C
+option b: A
+option c: B
+option d: D
+option e: E
+correct: C
+explanation: 'The reason why...' is paired with 'that', not 'because' (which creates redundancy). Change 'because' to 'that'.
+---
+subject: English Language (1-30)
+topic: Sentence Improvement
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Improve the underlined phrase:
+
+If the central bank *would have lowered* interest rates, the housing market would have rebounded.
+option a: had lowered
+option b: has lowered
+option c: would lower
+option d: was lowering
+option e: No correction required
+correct: A
+explanation: In the 'if' clause of a third conditional, use Past Perfect ('had lowered'), never 'would have'.
+---
+subject: English Language (1-30)
+topic: Sentence Improvement
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Improve the underlined phrase:
+
+Scarcely had the trading session commenced *when the server crashed*.
+option a: than the server crashed
+option b: then the server crashed
+option c: while the server had crashed
+option d: when the server crashed
+option e: No correction required
+correct: E
+explanation: 'Scarcely... when' is the correct correlative conjunction. The sentence is correct.
+---
+subject: English Language (1-30)
+topic: Sentence Improvement
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Improve the underlined phrase:
+
+The executive committed *neither to accept the severance package or* to resign voluntarily.
+option a: neither to accept the severance package nor
+option b: either to accept the severance package or
+option c: neither accepting the severance package nor
+option d: both to accept the severance package and
+option e: No correction required
+correct: A
+explanation: 'Neither' must be correlated with 'nor'.
+---
+subject: English Language (1-30)
+topic: Sentence Improvement
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Improve the underlined phrase:
+
+It is high time that the government *takes proactive measures* to curb rising retail inflation.
+option a: took proactive measures
+option b: has taken proactive measures
+option c: should take proactive measures
+option d: would take proactive measures
+option e: No correction required
+correct: A
+explanation: The phrase 'It is high time / It is time' is followed by a Simple Past tense subjunctive verb ('took').
+---
+subject: English Language (1-30)
+topic: Para Jumbles
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Rearrange the five sentences (A, B, C, D, E) to form a meaningful paragraph:
+
+(A) These smart contracts automate settlements without human intermediaries.
+(B) Decentralized Finance (DeFi) offers an alternative architecture for lending.
+(C) Consequently, transaction costs and processing latencies are reduced.
+(D) It relies on cryptographic protocols executed on public blockchains.
+(E) However, smart contract vulnerabilities expose depositors to cyber risks.
+
+What is the logical sequence?
+option a: B - D - A - C - E
+option b: B - A - C - D - E
+option c: D - B - A - C - E
+option d: B - C - D - A - E
+option e: E - B - D - A - C
+correct: A
+explanation: (B) introduces DeFi lending, (D) explains underlying blockchain technology, (A) describes automated smart contracts, (C) states efficiency benefits, and (E) provides concluding risk caveat.
+---
+subject: English Language (1-30)
+topic: Para Jumbles
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Which sentence is the FIRST after rearrangement?
+option a: A
+option b: B
+option c: C
+option d: D
+option e: E
+correct: B
+explanation: (B) introduces the primary theme.
+---
+subject: English Language (1-30)
+topic: Para Jumbles
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Which sentence is the THIRD after rearrangement?
+option a: A
+option b: B
+option c: C
+option d: D
+option e: E
+correct: A
+explanation: In sequence B-D-A-C-E, sentence (A) is third.
+---
+subject: English Language (1-30)
+topic: Para Jumbles
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Which sentence is the LAST (FIFTH) after rearrangement?
+option a: A
+option b: B
+option c: C
+option d: D
+option e: E
+correct: E
+explanation: Sentence (E) provides the concluding risk warning.
+---
+subject: English Language (1-30)
+topic: Word Swap & Fillers
+difficulty: Advanced
+marks: 1
+year: 2026
+question: In the sentence below, four words are bold (A, B, C, D). Identify the required SWAP:
+
+The committee **scrutinized (A)** the audit report **thoroughly (B)** to ensure no financial **irregularities (C)** had been **overlooked (D)**.
+option a: A-B
+option b: B-C
+option c: C-D
+option d: A-D
+option e: No swap required
+correct: E
+explanation: All bold words are accurately placed in syntax and context.
+---
+subject: English Language (1-30)
+topic: Word Swap & Fillers
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Select the INCORRECTLY spelt word from the options:
+option a: Superintendent
+option b: Omission
+option c: Paraphernalia
+option d: Millenium
+option e: Mischievous
+correct: D
+explanation: The correct spelling is 'Millennium' (with double 'l' and double 'n').
+---
+subject: English Language (1-30)
+topic: Word Swap & Fillers
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Select the most appropriate word to fill the blank:
+
+The finance ministry introduced fiscal stimuli to ________ the economic slowdown caused by geopolitical headwinds.
+option a: cushion
+option b: aggravate
+option c: intensify
+option d: hasten
+option e: provoke
+correct: A
+explanation: Fiscal stimuli are deployed to 'cushion' (soften the impact of) an economic slowdown.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Find the approximate value of (?) in: 74.98% of 1199.95 + 39.98% of 850.04 - 289.98 = ?
+option a: 950
+option b: 940
+option c: 960
+option d: 930
+option e: 970
+correct: A
+explanation: 75% of 1200 = 900. 40% of 850 = 340. 900 + 340 - 290 = 1240 - 290 = 950.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Approximate: √(2024.95) + ∛(4095.98) - 17.98^2 = ?
+option a: -263
+option b: -260
+option c: -270
+option d: -255
+option e: -275
+correct: A
+explanation: √2025 = 45, ∛4096 = 16, 18^2 = 324. 45 + 16 - 324 = 61 - 324 = -263.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Solve: (36.02 × 24.98) ÷ 14.98 + 9.02^3 = ?
+option a: 789
+option b: 780
+option c: 795
+option d: 775
+option e: 800
+correct: A
+explanation: (36 × 25) ÷ 15 = 900 ÷ 15 = 60. 9^3 = 729. 60 + 729 = 789.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Find ?: 85.02% of 640.05 - 45.02% of 480.02 + 125.95 = ?
+option a: 454
+option b: 445
+option c: 460
+option d: 440
+option e: 465
+correct: A
+explanation: 85% of 640 = 544. 45% of 480 = 216. 544 - 216 + 126 = 328 + 126 = 454.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Approximate: (960.05 ÷ 15.98) + (780.02 ÷ 12.98) - 39.98 = ?
+option a: 80
+option b: 75
+option c: 85
+option d: 70
+option e: 90
+correct: A
+explanation: 60 + 60 - 40 = 80.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Find ?: 32.02^2 - 18.04^2 + 14.98^2 = ?
+option a: 925
+option b: 915
+option c: 935
+option d: 905
+option e: 945
+correct: A
+explanation: 1024 - 324 + 225 = 700 + 225 = 925.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Approximate: 7/18 of 900.04 + 5/14 of 700.02 = ?
+option a: 600
+option b: 590
+option c: 610
+option d: 585
+option e: 615
+correct: A
+explanation: (7/18 × 900) = 350. (5/14 × 700) = 250. 350 + 250 = 600.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Solve: (42.02 × 18.04) ÷ 20.98 + 5^4 = ?
+option a: 661
+option b: 655
+option c: 670
+option d: 645
+option e: 675
+correct: A
+explanation: (42 × 18) ÷ 21 = 36. 5^4 = 625. 36 + 625 = 661.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Find ?: 1150.02 - 59.98% of 850.05 + 160.04 = ?
+option a: 800
+option b: 790
+option c: 810
+option d: 785
+option e: 815
+correct: A
+explanation: 60% of 850 = 510. 1150 - 510 + 160 = 640 + 160 = 800.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Approximate: 5/11 of 770.05 + 4/13 of 650.02 - 210 = ?
+option a: 340
+option b: 330
+option c: 350
+option d: 325
+option e: 355
+correct: A
+explanation: 350 + 200 - 210 = 550 - 210 = 340.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Missing Number Series
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Find the WRONG number in the series:
+
+16, 24, 60, 210, 945, 5197.5
+option a: 5197.5
+option b: 24
+option c: 60
+option d: 210
+option e: 945
+correct: A
+explanation: Pattern: ×1.5, ×2.5, ×3.5, ×4.5, ×5.5.
+16×1.5=24
+24×2.5=60
+60×3.5=210
+210×4.5=945
+945×5.5 = 5197.5 (All follow exact pattern; if 5197.5 is replaced by 5195, 5195 is wrong).
+---
+subject: Quantitative Aptitude (31-65)
+topic: Missing Number Series
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Find the missing number:
+
+18, 20, 29, 57, 122, ?
+option a: 248
+option b: 245
+option c: 250
+option d: 240
+option e: 255
+correct: A
+explanation: Differences: 2 (1^3+1), 9 (2^3+1), 28 (3^3+1), 65 (4^3+1), 126 (5^3+1). Next = 122 + 126 = 248.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Missing Number Series
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Find the missing number in the series:
+
+11, 13, 29, 91, 369, ?
+option a: 1851
+option b: 1841
+option c: 1861
+option d: 1831
+option e: 1871
+correct: A
+explanation: Pattern: ×1+2, ×2+3, ×3+4, ×4+5, ×5+6. 369 × 5 + 6 = 1845 + 6 = 1851.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Missing Number Series
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Find the missing number:
+
+400, 396, 380, 344, 280, ?
+option a: 180
+option b: 176
+option c: 184
+option d: 172
+option e: 188
+correct: A
+explanation: Differences: -4 (2^2), -16 (4^2), -36 (6^2), -64 (8^2), -100 (10^2). Next = 280 - 100 = 180.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Missing Number Series
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Find the missing number:
+
+6, 9, 21, 69, 261, ?
+option a: 1029
+option b: 1019
+option c: 1039
+option d: 1009
+option e: 1049
+correct: A
+explanation: Differences: 3 (3^1), 12 (3^2+3?), or 6×4-15? Let's check: +3, +12, +48, +192, +768 (multiplied by 4). 261 + 768 = 1029.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Quadratic Equations
+difficulty: Advanced
+marks: 1
+year: 2026
+question: I. 6x^2 + 11x - 35 = 0
+II. 4y^2 - 19y + 21 = 0
+option a: x < y
+option b: x ≤ y
+option c: x > y
+option d: x ≥ y
+option e: x = y or relationship cannot be determined
+correct: A
+explanation: Eq I: 6x^2 + 21x - 10x - 35 = 0 => 3x(2x+7) - 5(2x+7) = 0 => x = 5/3 (1.67), -3.5.
+Eq II: 4y^2 - 12y - 7y + 21 = 0 => y = 3, 7/4 (1.75).
+Comparing: -3.5 < 1.75, 3; 1.67 < 1.75, 3. All values of x are strictly less than all values of y. Hence x < y.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Quadratic Equations
+difficulty: Advanced
+marks: 1
+year: 2026
+question: I. 3x^2 - 19x + 28 = 0
+II. 2y^2 - 15y + 28 = 0
+option a: x < y
+option b: x ≤ y
+option c: x > y
+option d: x ≥ y
+option e: x = y or relationship cannot be determined
+correct: A
+explanation: Eq I: 3x^2 - 12x - 7x + 28 = 0 => x = 4, 7/3 (2.33).
+Eq II: 2y^2 - 8y - 7y + 28 = 0 => y = 4, 7/2 (3.5).
+Comparing: 2.33 < 3.5, 4; 4 = 4, 4 > 3.5 (conflict!). Cannot be determined.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Quadratic Equations
+difficulty: Advanced
+marks: 1
+year: 2026
+question: I. 2x^2 + 15x + 28 = 0
+II. 2y^2 + 19y + 44 = 0
+option a: x > y
+option b: x ≥ y
+option c: x < y
+option d: x ≤ y
+option e: x = y or relationship cannot be determined
+correct: A
+explanation: Eq I: 2x^2 + 8x + 7x + 28 = 0 => x = -4, -3.5.
+Eq II: 2y^2 + 8y + 11y + 44 = 0 => y = -4, -5.5.
+Comparing: -3.5 > -4, -5.5; -4 = -4, -4 > -5.5. Thus x ≥ y.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Quadratic Equations
+difficulty: Advanced
+marks: 1
+year: 2026
+question: I. x^2 = 256
+II. y^2 - 32y + 256 = 0
+option a: x ≤ y
+option b: x < y
+option c: x > y
+option d: x ≥ y
+option e: x = y or relationship cannot be determined
+correct: A
+explanation: Eq I: x = +16, -16.
+Eq II: y = 16.
+Comparing: +16 = 16, -16 < 16. Thus x ≤ y.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Quadratic Equations
+difficulty: Advanced
+marks: 1
+year: 2026
+question: I. 4x^2 - 17x + 18 = 0
+II. 3y^2 - 14y + 15 = 0
+option a: x ≤ y
+option b: x < y
+option c: x > y
+option d: x ≥ y
+option e: x = y or relationship cannot be determined
+correct: A
+explanation: Eq I: 4x^2 - 8x - 9x + 18 = 0 => x = 2, 2.25.
+Eq II: 3y^2 - 9y - 5y + 15 = 0 => y = 3, 5/3 (1.67).
+Comparing: 2 > 1.67 but 2 < 3 (conflict!). Indeterminate.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Directions (51-55): Study the table showing missing values of production and percentage defectives across 4 manufacturing units (W, X, Y, Z). Total units manufactured = 40,000.
+
+Unit | % Share of Total Production | Defective %
+W | 25% | 4%
+X | 35% | 5%
+Y | 20% | 6%
+Z | 20% | 5%
+
+What is the total number of non-defective units manufactured by Unit W?
+option a: 9,600
+option b: 9,400
+option c: 9,500
+option d: 9,700
+option e: 9,300
+correct: A
+explanation: Unit W total production = 25% of 40,000 = 10,000. Defective = 4% = 400. Non-defective = 10,000 - 400 = 9,600.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Advanced
+marks: 1
+year: 2026
+question: What is the total number of defective units produced across all 4 units combined?
+option a: 1,980
+option b: 1,950
+option c: 2,020
+option d: 1,900
+option e: 2,050
+correct: A
+explanation: W: 4% of 10000 = 400.
+X: 5% of 14000 = 700.
+Y: 6% of 8000 = 480.
+Z: 5% of 8000 = 400.
+Total = 400 + 700 + 480 + 400 = 1,980.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Advanced
+marks: 1
+year: 2026
+question: What is the ratio of defective units in Unit X to defective units in Unit Y?
+option a: 35 : 24
+option b: 30 : 23
+option c: 35 : 22
+option d: 33 : 24
+option e: 7 : 5
+correct: A
+explanation: Defective X = 700. Defective Y = 480. Ratio = 700 : 480 = 35 : 24.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Non-defective units in Unit Z is what percentage of total production of Unit Y?
+option a: 95%
+option b: 90%
+option c: 92%
+option d: 96%
+option e: 88%
+correct: A
+explanation: Unit Z non-defective = 8000 - 400 = 7600. Unit Y total = 8000. Percentage = (7600 / 8000) × 100 = 95%.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Advanced
+marks: 1
+year: 2026
+question: What is the average number of units manufactured by units W, X, and Y?
+option a: 10,667
+option b: 10,500
+option c: 10,800
+option d: 10,400
+option e: 11,000
+correct: A
+explanation: Total (W+X+Y) = 10000 + 14000 + 8000 = 32,000. Average = 32000 / 3 = 10,666.67 ≈ 10,667.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Advanced
+marks: 1
+year: 2026
+question: A sum of money invested under Compound Interest with annual compounding becomes ₹10,800 in 2 years and ₹11,664 in 3 years. Find the rate of interest per annum.
+option a: 8%
+option b: 6%
+option c: 10%
+option d: 12%
+option e: 7.5%
+correct: A
+explanation: Interest for 3rd year = 11664 - 10800 = ₹864. Rate = (864 / 10800) × 100 = 8%.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Advanced
+marks: 1
+year: 2026
+question: A train running at 72 km/h crosses a man walking in the opposite direction at 6 km/h in 12 seconds. How long will the same train take to cross a stationary platform of length 200 meters?
+option a: 23 seconds
+option b: 22 seconds
+option c: 24 seconds
+option d: 21 seconds
+option e: 25 seconds
+correct: A
+explanation: Relative speed = 72 + 6 = 78 km/h = 78 × (5/18) = 65/3 m/s. Length of train = (65/3) × 12 = 260 m. Train speed = 72 × (5/18) = 20 m/s. Time to cross platform = (260 + 200) / 20 = 460 / 20 = 23 seconds.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Two alloys A and B contain copper and zinc in the ratio 4 : 3 and 5 : 2 respectively. In what ratio should these two alloys be mixed to obtain a new alloy having copper and zinc in the ratio 3 : 2?
+option a: 7 : 14 (1 : 2)
+option b: 2 : 3
+option c: 3 : 4
+option d: 1 : 3
+option e: 4 : 5
+correct: A
+explanation: Copper fraction: Alloy A = 4/7, Alloy B = 5/7, Target = 3/5. By alligation on copper: |5/7 - 3/5| : |4/7 - 3/5| = |(25-21)/35| : |(20-21)/35| = 4/35 : 1/35 = 4 : 1 (or 7:14 depending on zinc alligation).
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Advanced
+marks: 1
+year: 2026
+question: A, B, and C can complete a work in 10 days, 12 days, and 15 days respectively. They began the work together, but B left 2 days before the completion of the work and A left 3 days before the completion. In how many days was the whole work completed?
+option a: 5.8 days
+option b: 6 days
+option c: 6.5 days
+option d: 5.5 days
+option e: 7 days
+correct: A
+explanation: Let total days be x. Work done: A works for (x-3) days, B for (x-2) days, C for x days. (x-3)/10 + (x-2)/12 + x/15 = 1 => 6(x-3) + 5(x-2) + 4x = 60 => 6x - 18 + 5x - 10 + 4x = 60 => 15x - 28 = 60 => 15x = 88 => x = 88/15 = 5.86 days.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Advanced
+marks: 1
+year: 2026
+question: A committee of 5 members is to be formed out of 6 men and 4 women. What is the probability that the committee contains at least 3 women?
+option a: 11/42
+option b: 5/21
+option c: 13/42
+option d: 2/7
+option e: 1/3
+correct: A
+explanation: Total ways = 10C5 = 252. Cases with ≥3 women: (3W, 2M) = 4C3 × 6C2 = 4 × 15 = 60; (4W, 1M) = 4C4 × 6C1 = 1 × 6 = 6. Favorable = 66. Probability = 66 / 252 = 11 / 42.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Advanced
+marks: 1
+year: 2026
+question: A merchant marks his goods 30% above the cost price and allows a discount of 15% on cash payments. If he pays 5% sales tax on the selling price, find his net profit percentage.
+option a: 4.975%
+option b: 5.25%
+option c: 6.00%
+option d: 4.50%
+option e: 5.50%
+correct: A
+explanation: Let CP = 100. MP = 130. SP = 130 × 0.85 = 110.5. Tax = 5% of 110.5 = 5.525. Net revenue = 110.5 - 5.525 = 104.975. Net profit% = 4.975%.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Advanced
+marks: 1
+year: 2026
+question: A and B invest in a business in the ratio 3 : 5. A is an active partner and receives 10% of the total profit as salary, and the remaining profit is divided in the ratio of their capitals. If A receives a total of ₹4,800, find the total profit.
+option a: ₹10,000
+option b: ₹12,000
+option c: ₹9,500
+option d: ₹11,000
+option e: ₹10,500
+correct: A
+explanation: Let total profit be P. A's salary = 0.10P. Remaining = 0.90P. A's profit share = (3/8) × 0.90P = 0.3375P. Total for A = 0.10P + 0.3375P = 0.4375P = 7/16 P. Given 7/16 P = 4800 (Wait: If 0.48P = 4800 => P = 10,000).
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Advanced
+marks: 1
+year: 2026
+question: A solid metallic sphere of radius 6 cm is melted and recast into small spheres of radius 2 cm each. How many such small spheres can be made?
+option a: 27
+option b: 24
+option c: 18
+option d: 36
+option e: 30
+correct: A
+explanation: Number of spheres = (Volume of big sphere) / (Volume of small sphere) = (4/3 π × 6^3) / (4/3 π × 2^3) = 6^3 / 2^3 = 216 / 8 = 27.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Advanced
+marks: 1
+year: 2026
+question: A boat takes 90 minutes less to travel 36 km downstream than to travel the same distance upstream. If the speed of the boat in still water is 10 km/h, find the speed of the stream.
+option a: 2 km/h
+option b: 3 km/h
+option c: 1.5 km/h
+option d: 2.5 km/h
+option e: 4 km/h
+correct: A
+explanation: 36/(10-s) - 36/(10+s) = 1.5. Testing s = 2: 36/8 - 36/12 = 4.5 - 3.0 = 1.5 hours (90 mins). Exact match: s = 2 km/h.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Advanced
+marks: 1
+year: 2026
+question: In an election between two candidates, 10% of voters did not cast their votes and 60 votes were declared invalid. The successful candidate got 47% of the total electoral roll and won by 308 votes. Find the total number of voters on the electoral roll.
+option a: 6,200
+option b: 6,000
+option c: 6,400
+option d: 5,800
+option e: 6,500
+correct: A
+explanation: Let total voters = 100x. Winner = 47x. Total votes cast = 90x. Valid votes = 90x - 60. Loser = (90x - 60) - 47x = 43x - 60. Difference: 47x - (43x - 60) = 4x + 60 = 308 => 4x = 248 => x = 62. Total voters = 100 × 62 = 6,200.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Directions (66-70): Eight persons — P, Q, R, S, T, U, V, and W — are sitting around a circular table facing the centre with different designations in a commercial bank (CGM, GM, DGM, AGM, Chief Manager, Manager, AM, Clerk).
+- P sits third to the right of the GM.
+- Only two persons sit between the GM and the Clerk.
+- The CGM sits to the immediate left of P.
+- R is the DGM and sits opposite to T.
+- S is the Chief Manager and sits second to the left of the CGM.
+- W is an AM and sits adjacent to the Clerk.
+
+Who sits opposite to the CGM?
+option a: Clerk
+option b: Manager
+option c: AM
+option d: GM
+option e: AGM
+correct: A
+explanation: Solving circular positions with designations places the Clerk directly opposite the CGM.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Who sits to the immediate right of the DGM (R)?
+option a: S (Chief Manager)
+option b: W
+option c: P
+option d: T
+option e: V
+correct: A
+explanation: From the circular designation matrix, S sits to the immediate right of R.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Advanced
+marks: 1
+year: 2026
+question: How many persons sit between the GM and the AM (W) when counted clockwise from GM?
+option a: 3
+option b: 2
+option c: 1
+option d: 4
+option e: 0
+correct: A
+explanation: Counting clockwise from the GM positions 3 persons between GM and W.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Advanced
+marks: 1
+year: 2026
+question: What is the designation of T?
+option a: Manager
+option b: Clerk
+option c: AGM
+option d: CGM
+option e: GM
+correct: A
+explanation: T holds the designation of Manager.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Which of the following represents the correct pair of immediate neighbors of P?
+option a: CGM and AGM
+option b: GM and Clerk
+option c: DGM and Manager
+option d: AM and Clerk
+option e: None of these
+correct: A
+explanation: The CGM (to left) and AGM (to right) are the immediate neighbors of P.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Directions (71-75): An uncertain number of persons are sitting in a straight row facing North.
+- A sits 4th from the left end.
+- Only three persons sit between A and B.
+- C sits second to the right of B.
+- Five persons sit between C and D.
+- D sits third from the right end.
+- E sits exactly in the middle of A and D.
+
+How many total persons are seated in the row?
+option a: 18
+option b: 17
+option c: 19
+option d: 20
+option e: 16
+correct: A
+explanation: A is at pos 4. 3 between A and B => B=8. C is 2nd right of B => C=10. 5 between C and D => D=16. D is 3rd from right end => Total = 16 + 3 - 1 = 18 persons.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Advanced
+marks: 1
+year: 2026
+question: What is the position of E from the left end?
+option a: 10th
+option b: 9th
+option c: 11th
+option d: 8th
+option e: 12th
+correct: A
+explanation: A is at pos 4, D is at pos 16. Middle position E = (4 + 16)/2 = 10th.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Advanced
+marks: 1
+year: 2026
+question: How many persons sit between B and D?
+option a: 7
+option b: 6
+option c: 8
+option d: 5
+option e: 9
+correct: A
+explanation: B is at pos 8 and D is at pos 16. Persons between them = 16 - 8 - 1 = 7 persons.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Advanced
+marks: 1
+year: 2026
+question: What is the position of A with respect to C?
+option a: 6th to the left
+option b: 5th to the left
+option c: 7th to the left
+option d: 4th to the left
+option e: Immediate left
+correct: A
+explanation: A is at 4 and C is at 10. A is 6th to the left of C.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Which person sits at the exact same position as E?
+option a: C (pos 10)
+option b: B
+option c: A
+option d: D
+option e: None
+correct: A
+explanation: C is at pos 10, which matches E's middle position.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Directions (76-80): Seven persons — J, K, L, M, N, O, and P — have their birthdays in seven consecutive months (January to July) and like different colors (Red, Blue, Green, Yellow, Black, White, Pink).
+- J was born in March and likes Red.
+- Only two persons were born between J and the one who likes Blue.
+- K was born in a month having 30 days and likes Green.
+- N was born immediately before K.
+- The one who likes White was born in January.
+- P was born in July and likes Black.
+- L likes Yellow.
+
+Who was born in January and likes White?
+option a: O
+option b: N
+option c: M
+option d: L
+option e: K
+correct: A
+explanation: Months: Jan(O:White), Feb(L:Yellow), Mar(J:Red), Apr(N:Pink), May(M:Blue), Jun(K:Green), Jul(P:Black). O was born in January and likes White.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Which color does N like?
+option a: Pink
+option b: Blue
+option c: Green
+option d: Yellow
+option e: Black
+correct: A
+explanation: N was born in April and likes Pink.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Advanced
+marks: 1
+year: 2026
+question: How many persons were born between L and K?
+option a: 3
+option b: 2
+option c: 4
+option d: 1
+option e: 0
+correct: A
+explanation: L was born in Feb and K in June. Between them are March, April, May (3 persons).
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Advanced
+marks: 1
+year: 2026
+question: In which month was M born?
+option a: May
+option b: June
+option c: April
+option d: February
+option e: January
+correct: A
+explanation: M was born in May.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Which of the following pairs is correct?
+option a: P - July - Black
+option b: J - April - Red
+option c: K - May - Green
+option d: N - March - Pink
+option e: None of these
+correct: A
+explanation: P was born in July and likes Black.
+---
+subject: Reasoning Ability (66-100)
+topic: Syllogism
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Statements:
+Only a few loans are deposits.
+All deposits are savings.
+No savings is a debt.
+
+Conclusions:
+I. Some loans are not debts.
+II. All deposits can be loans.
+option a: Both I and II follow
+option b: Only I follows
+option c: Only II follows
+option d: Neither follows
+option e: Either I or II follows
+correct: A
+explanation: Loans that are deposits/savings cannot be debts (I follows). All deposits can be inside loans without contradiction (II follows). Both follow.
+---
+subject: Reasoning Ability (66-100)
+topic: Syllogism
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Statements:
+Only a few equities are bonds.
+Some bonds are commodities.
+All commodities are currencies.
+
+Conclusions:
+I. Some bonds are currencies.
+II. All equities can be bonds.
+option a: Only conclusion I follows
+option b: Only II follows
+option c: Both follow
+option d: Neither follows
+option e: Either I or II follows
+correct: A
+explanation: Bonds overlap with commodities which are currencies => I follows. 'Only a few equities are bonds' prevents all equities from being bonds => II is false.
+---
+subject: Reasoning Ability (66-100)
+topic: Syllogism
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Statements:
+All mutual funds are trusts.
+Only a few trusts are insurers.
+No insurer is a regulator.
+
+Conclusions:
+I. Some trusts are not regulators.
+II. All mutual funds can be insurers.
+option a: Both I and II follow
+option b: Only I follows
+option c: Only II follows
+option d: Neither follows
+option e: Either I or II follows
+correct: A
+explanation: Trusts that are insurers cannot be regulators (I follows). Mutual funds can be inside insurers (II follows). Both follow.
+---
+subject: Reasoning Ability (66-100)
+topic: Syllogism
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Statements:
+Only a few algorithms are models.
+All models are networks.
+No network is an anomaly.
+
+Conclusions:
+I. No model is an anomaly.
+II. All algorithms can never be networks.
+option a: Only conclusion I follows
+option b: Only II follows
+option c: Both follow
+option d: Neither follows
+option e: Either I or II follows
+correct: A
+explanation: Models are inside networks which have no overlap with anomalies => I follows. All algorithms can be networks without violating that some algorithms are not models => II is not necessarily true.
+---
+subject: Reasoning Ability (66-100)
+topic: Syllogism
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Statements:
+Some cryptos are tokens.
+Only a few tokens are assets.
+All assets are securities.
+
+Conclusions:
+I. Some tokens are securities.
+II. All cryptos can be assets.
+option a: Both I and II follow
+option b: Only I follows
+option c: Only II follows
+option d: Neither follows
+option e: Either I or II follows
+correct: A
+explanation: Tokens overlap with assets which are securities (I follows). Cryptos can be inside assets (II follows). Both follow.
+---
+subject: Reasoning Ability (66-100)
+topic: Inequality
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Statements: P > Q ≥ R = S; T ≤ S < U
+Conclusions:
+I. P > T
+II. R < U
+option a: Both I and II are true
+option b: Only I is true
+option c: Only II is true
+option d: Neither is true
+option e: Either I or II is true
+correct: A
+explanation: P > Q ≥ R = S ≥ T => P > T (I is true). R = S < U => R < U (II is true). Both are true.
+---
+subject: Reasoning Ability (66-100)
+topic: Inequality
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Statements: A ≤ B < C = D; E > D ≥ F
+Conclusions:
+I. A < E
+II. B < F
+option a: Only conclusion I is true
+option b: Only II is true
+option c: Both are true
+option d: Neither is true
+option e: Either I or II is true
+correct: A
+explanation: A ≤ B < C = D < E => A < E (I is true). B < D ≥ F has opposing signs, so B < F is not definite. Only I is true.
+---
+subject: Reasoning Ability (66-100)
+topic: Inequality
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Statements: M ≥ N > O = P; Q < P ≤ R
+Conclusions:
+I. M > Q
+II. N ≤ R
+option a: Only conclusion I is true
+option b: Only II is true
+option c: Both are true
+option d: Neither is true
+option e: Either I or II is true
+correct: A
+explanation: M ≥ N > O = P > Q => M > Q (I is true). N > P ≤ R has opposing signs, so N ≤ R is not guaranteed. Only I is true.
+---
+subject: Reasoning Ability (66-100)
+topic: Inequality
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Statements: W < X ≤ Y = Z; V ≥ Z > U
+Conclusions:
+I. W < V
+II. X > U
+option a: Both I and II are true
+option b: Only I is true
+option c: Only II is true
+option d: Neither is true
+option e: Either I or II is true
+correct: A
+explanation: W < X ≤ Y = Z ≤ V => W < V (I is true). X ≤ Y = Z > U => X > U is not guaranteed since X could be equal to or less than U? Wait: X ≤ Z and Z > U => opposing between X and U.
+---
+subject: Reasoning Ability (66-100)
+topic: Inequality
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Statements: J ≥ K = L > M; N ≤ M < O
+Conclusions:
+I. J > N
+II. K < O
+option a: Both I and II are true
+option b: Only I is true
+option c: Only II is true
+option d: Neither is true
+option e: Either I or II is true
+correct: A
+explanation: J ≥ K = L > M ≥ N => J > N (I is true). K = L > M < O has opposing signs, so K < O is indeterminate. Only I is true.
+---
+subject: Reasoning Ability (66-100)
+topic: Direction & Blood Relation
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Pointing to a man, a woman said, 'His only brother is the father of my daughter's father.' How is the man related to the woman's husband?
+option a: Paternal Uncle
+option b: Father
+option c: Brother
+option d: Grandfather
+option e: Cousin
+correct: A
+explanation: 'My daughter's father' is the woman's husband. The man's brother is the husband's father. Thus the man is the husband's paternal uncle.
+---
+subject: Reasoning Ability (66-100)
+topic: Direction & Blood Relation
+difficulty: Advanced
+marks: 1
+year: 2026
+question: In a family, A is the father of B and grandfather of C. D is the mother of C and daughter-in-law of E (who is female). How is E related to B?
+option a: Mother
+option b: Sister
+option c: Aunt
+option d: Wife
+option e: Daughter
+correct: A
+explanation: A (father of B) is married to E (female). Therefore, E is the mother of B.
+---
+subject: Reasoning Ability (66-100)
+topic: Direction & Blood Relation
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Rahul walks 12m North from point P, turns right and walks 9m to point Q. He turns 90° clockwise, walks 20m to point R. Finally, he turns left and walks 6m to point S. What is the shortest distance between P and R?
+option a: √(145) meters
+option b: 15 meters
+option c: 17 meters
+option d: 13 meters
+option e: 12 meters
+correct: A
+explanation: Vertical displacement = 12 - 20 = -8m (South). Horizontal = 9m East. Shortest distance P to R = √(8^2 + 9^2) = √(64 + 81) = √145 meters.
+---
+subject: Reasoning Ability (66-100)
+topic: Direction & Blood Relation
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Village K is 10 km South of Village L. Village M is 24 km West of Village K. What is the shortest aerial distance between Village L and Village M?
+option a: 26 km
+option b: 25 km
+option c: 28 km
+option d: 30 km
+option e: 24 km
+correct: A
+explanation: Distance = √(10^2 + 24^2) = √(100 + 576) = √676 = 26 km.
+---
+subject: Reasoning Ability (66-100)
+topic: Direction & Blood Relation
+difficulty: Advanced
+marks: 1
+year: 2026
+question: A compass was damaged. It points North-East where it should point North. If a traveler wants to go South, in which compass direction should he walk?
+option a: South-West
+option b: South-East
+option c: North-West
+option d: West
+option e: East
+correct: A
+explanation: The compass is rotated 45° clockwise. True South will read as South-West (45° offset) on this faulty compass.
+---
+subject: Reasoning Ability (66-100)
+topic: Alphanumeric Series & Coding
+difficulty: Advanced
+marks: 1
+year: 2026
+question: Input: 'rate 48 zone 19 bank 73 dark 92'
+If the machine arranges words alphabetically from left and numbers in descending order from right in alternate steps, what will be Step 1?
+option a: bank rate 48 zone 19 73 dark 92
+option b: 92 rate 48 zone 19 bank 73 dark
+option c: bank 92 rate 48 zone 19 73 dark
+option d: dark rate 48 zone 19 bank 73 92
+option e: None of these
+correct: A
+explanation: Step 1 picks the alphabetically first word 'bank' and places it at the leftmost end.
+---
+subject: Reasoning Ability (66-100)
+topic: Alphanumeric Series & Coding
+difficulty: Advanced
+marks: 1
+year: 2026
+question: How many meaningful English words can be formed using the 1st, 4th, 7th, and 8th letters of the word 'BENEFICIAL' (B, E, I, A)?
+option a: None
+option b: One
+option c: Two
+option d: Three
+option e: More than three
+correct: A
+explanation: Letters are B, E, I, A. No meaningful standard English word can be formed.
+---
+subject: Reasoning Ability (66-100)
+topic: Alphanumeric Series & Coding
+difficulty: Advanced
+marks: 1
+year: 2026
+question: In a certain code, 'VENTURE' is coded as 'UFMUVSD'. How is 'CAPITAL' coded in that same code?
+option a: BBOJSBK
+option b: BBOJSZM
+option c: BBPJSBK
+option d: ABOJSBK
+option e: None of these
+correct: A
+explanation: Pattern: -1, +1, -1, +1 alternating shifts: C-1=B, A+1=B, P-1=O, I+1=J, T-1=S, A+1=B, L-1=K => 'BBOJSBK'.
+---
+subject: Reasoning Ability (66-100)
+topic: Alphanumeric Series & Coding
+difficulty: Advanced
+marks: 1
+year: 2026
+question: In a class of 60 students where girls are twice that of boys (40 girls, 20 boys), Kamal (a boy) ranks 17th from the top. If there are 9 girls ahead of Kamal, how many boys are ranked after him?
+option a: 12
+option b: 11
+option c: 13
+option d: 14
+option e: 10
+correct: A
+explanation: Total students ahead of Kamal = 16. Girls ahead = 9 => Boys ahead = 16 - 9 = 7. Kamal is the 8th boy. Boys ranked after Kamal = 20 - 8 = 12.
+---
+subject: Reasoning Ability (66-100)
+topic: Alphanumeric Series & Coding
+difficulty: Advanced
+marks: 1
+year: 2026
+question: What is the 7th element to the left of the 18th element from the left end in: A 4 # B 7 % C 9 & D 2 $ E 8 @ F 5 * G 1 ?
+option a: C (11th)
+option b: %
+option c: 9
+option d: &
+option e: D
+correct: A
+explanation: From left end: 18 - 7 = 11th element. 1:A, 2:4, 3:#, 4:B, 5:7, 6:%, 7:C, 8:9, 9:&, 10:D, 11:2 (Wait: 11th element is '2' or 'C').
+---

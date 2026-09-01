@@ -15,6 +15,7 @@ import { Formulas } from './pages/Formulas';
 import { PyqMocks } from './pages/PyqMocks';
 import { Community } from './pages/Community';
 import { TetExams } from './pages/TetExams';
+import { SbiClerkPrep } from './pages/SbiClerkPrep';
 
 // Import Layout Component
 import { Layout } from './components/Layout';
@@ -38,6 +39,7 @@ const routes = {
   '/pyq-mocks': { component: PyqMocks, requiresAuth: true, name: 'pyq-mocks' },
   '/community': { component: Community, requiresAuth: true, name: 'community' },
   '/tet-exams': { component: TetExams, requiresAuth: true, name: 'tet-exams' },
+  '/sbi-clerk': { component: SbiClerkPrep, requiresAuth: true, name: 'sbi-clerk' },
   '/analytics': { component: Analytics, requiresAuth: true, name: 'analytics' }
 };
 

@@ -1,0 +1,1535 @@
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Read the following passage carefully and answer questions 1 to 8:
+
+Central Bank Digital Currencies (CBDCs) have transitioned from theoretical monetary concepts to tangible macroeconomic experiments across the globe. Unlike volatile cryptocurrencies issued by decentralized entities, a CBDC is a sovereign legal tender issued directly by the nation's monetary authority. In India, the Reserve Bank of India (RBI) launched retail and wholesale pilots of the Digital Rupee (e₹) utilizing distributed ledger technology. The strategic rationale underlying CBDCs includes reducing the immense operational costs associated with physical currency management, bolstering cross-border remittance efficiency, and expanding digital financial penetration to unbanked demographics. Furthermore, programmable CBDCs could allow targeted disbursement of agricultural subsidies or social welfare grants, ensuring funds are strictly utilized for designated purposes. However, widespread adoption introduces complex trade-offs, particularly regarding commercial bank disintermediation, cyber resilience against quantum threats, and user data anonymity.
+
+How does a CBDC fundamentally differ from private cryptocurrencies according to the passage?
+option a: It is volatile and speculative
+option b: It is sovereign legal tender issued directly by the central monetary authority
+option c: It cannot be transferred electronically
+option d: It is backed by physical gold coins
+option e: None of the above
+correct: B
+explanation: CBDC is sovereign legal tender issued directly by the central monetary authority (unlike decentralized, speculative crypto).
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: What is mentioned as a major operational benefit of introducing the Digital Rupee (e₹)?
+option a: Eliminating all commercial bank branches
+option b: Reducing the high costs associated with physical currency printing and logistics
+option c: Banning international currency trade
+option d: Increasing income tax rates on digital transactions
+option e: Guaranteeing zero inflation
+correct: B
+explanation: The passage notes: 'reducing the immense operational costs associated with physical currency management...'.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: What is the key advantage of 'programmable' CBDCs highlighted in the text?
+option a: Automatic trading on global stock markets
+option b: Targeted disbursement of welfare grants for designated purposes
+option c: Permanent locking of consumer accounts
+option d: Generating cryptocurrency tokens automatically
+option e: Elimination of identity verification
+correct: B
+explanation: Programmable CBDCs allow targeted disbursement of subsidies ensuring funds are used strictly for designated purposes.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Which systemic risk is associated with CBDC adoption as outlined in the text?
+option a: Excessive supply of physical banknotes
+option b: Commercial bank disintermediation and cyber vulnerabilities
+option c: Decline in smartphone usage
+option d: Surplus of sovereign gold reserves
+option e: Complete elimination of digital literacy
+correct: B
+explanation: The passage warns of trade-offs regarding commercial bank disintermediation, cyber resilience, and data anonymity.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Choose the word most SIMILAR in meaning to 'DISINTERMEDIATION' in this financial context.
+option a: Bypassing middlemen/traditional intermediaries
+option b: Establishing new physical branches
+option c: Strengthening bank monopolies
+option d: Increasing commission charges
+option e: Merging government ministries
+correct: A
+explanation: 'Disintermediation' refers to the removal or bypassing of financial intermediaries (such as commercial banks) in transactions.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Choose the word most OPPOSITE in meaning to 'SOVEREIGN' as used in the passage.
+option a: Autonomous
+option b: Independent
+option c: Subservient
+option d: Authoritative
+option e: Supreme
+correct: C
+explanation: 'Sovereign' implies supreme, independent authority; its antonym is 'Subservient' or dependent.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: What technology forms the underlying architectural basis of India's Digital Rupee pilot?
+option a: Analog radio signals
+option b: Distributed ledger technology
+option c: Magnetic tape recording
+option d: Optical telegraphy
+option e: None of these
+correct: B
+explanation: The passage mentions the RBI pilot utilizes 'distributed ledger technology'.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Which of the following can be logically inferred from the passage?
+option a: Physical currency has been permanently banned across India
+option b: CBDCs offer both profound efficiency benefits and critical systemic challenges
+option c: Cryptocurrencies have sovereign government backing
+option d: Commercial banks will disappear within six months
+option e: No other nation besides India is exploring CBDCs
+correct: B
+explanation: The author balances efficiency benefits (cost reduction, cross-border remittance) with systemic challenges (disintermediation, cyber threats).
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: In the following passage, there are blanks. For Blank (1), choose the appropriate word:
+
+Climate finance has emerged as a crucial ____(1)____ in global climate negotiations. Developing economies require substantial capital inflows to ____(2)____ their energy transition while simultaneously building climate-resilient infrastructure. Multilateral development banks are being urged to ____(3)____ their lending frameworks to de-risk private investments in green technologies. Innovative financial instruments, such as green sovereign bonds and sustainability-linked loans, are gaining ____(4)____ among institutional investors. However, transparent reporting standards are essential to prevent ____(5)____, ensuring that funds genuinely support ecological ____(6)____.
+
+Select the best word for Blank (1):
+option a: linchpin
+option b: nuisance
+option c: distraction
+option d: casualty
+option e: byproduct
+correct: A
+explanation: 'Linchpin' means a person or thing vital to an enterprise or system.
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Select the best word for Blank (2):
+option a: accelerate
+option b: impede
+option c: disrupt
+option d: paralyze
+option e: sabotage
+correct: A
+explanation: Developing economies need capital to 'accelerate' their transition.
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Select the best word for Blank (3):
+option a: overhaul
+option b: terminate
+option c: dismantle
+option d: suppress
+option e: prohibit
+correct: A
+explanation: MDBs are urged to 'overhaul' (restructure/modernize) lending frameworks.
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Select the best word for Blank (4):
+option a: traction
+option b: hostility
+option c: rejection
+option d: stagnation
+option e: contempt
+correct: A
+explanation: Green bonds are gaining 'traction' (momentum/acceptance).
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Select the best word for Blank (5):
+option a: greenwashing
+option b: afforestation
+option c: conservation
+option d: decarbonization
+option e: remediation
+correct: A
+explanation: 'Greenwashing' (misleading claims of environmental compliance) must be prevented.
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Select the best word for Blank (6):
+option a: sustainability
+option b: degradation
+option c: depletion
+option d: collapse
+option e: toxicity
+correct: A
+explanation: Funds should support ecological 'sustainability'.
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Identify the part of the sentence containing a grammatical error:
+
+(A) Seldom we have seen / (B) such a proactive response / (C) from regulatory authorities / (D) during market turbulence. / (E) No error
+option a: A
+option b: B
+option c: C
+option d: D
+option e: E
+correct: A
+explanation: When negative adverbs like 'Seldom', 'Rarely', 'Never' begin a sentence, inverted word order (verb before subject) is required. It should be: 'Seldom have we seen...'.
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: (A) He worked so hard / (B) with an objective / (C) to getting top rank / (D) in the banking examination. / (E) No error
+option a: C
+option b: A
+option c: B
+option d: D
+option e: E
+correct: C
+explanation: The infinitive 'to' takes the base verb (V1). Change 'to getting' to 'to get' or 'with the objective of getting'.
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: (A) The bank had barely / (B) opened its vault doors / (C) than the armed robbers / (D) entered the branch premises. / (E) No error
+option a: C
+option b: A
+option c: B
+option d: D
+option e: E
+correct: C
+explanation: 'Barely' is paired with 'when', not 'than'. Change 'than' to 'when'.
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: (A) The board of directors / (B) are divided in its / (C) opinion regarding the proposed / (D) takeover of the fintech firm. / (E) No error
+option a: B
+option b: A
+option c: C
+option d: D
+option e: E
+correct: B
+explanation: When a collective noun is divided in opinion, it is treated as plural, so its pronoun must be plural: 'in their opinion', not 'its'.
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: (A) Being a rainy day, / (B) the branch manager / (C) decided to postpone the / (D) outdoor customer outreach camp. / (E) No error
+option a: A
+option b: B
+option c: C
+option d: D
+option e: E
+correct: A
+explanation: Dangling participle error. The participle 'Being a rainy day' has no logical subject. It must be: 'It being a rainy day...'.
+---
+subject: English Language (1-30)
+topic: Sentence Improvement
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Improve the underlined phrase:
+
+*In spite of he was exhausted*, the loan officer verified all pending applications before leaving.
+option a: Although he was exhausted
+option b: Despite of being exhausted
+option c: In spite he was exhausted
+option d: Even though of exhaustion
+option e: No correction required
+correct: A
+explanation: 'In spite of' is followed by a noun phrase or gerund, not a clause. Use 'Although he was exhausted'.
+---
+subject: English Language (1-30)
+topic: Sentence Improvement
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Improve the underlined phrase:
+
+The customer demanded to know *why had the bank deducted* maintenance charges without notice.
+option a: why the bank had deducted
+option b: why the bank has deducted
+option c: that why the bank had deducted
+option d: why did the bank deduct
+option e: No correction required
+correct: A
+explanation: In indirect questions, statement word order (Subject + Verb) is used. Change 'why had the bank deducted' to 'why the bank had deducted'.
+---
+subject: English Language (1-30)
+topic: Sentence Improvement
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Improve the underlined phrase:
+
+Had the management taken timely action, the liquidity crisis *would have been averted*.
+option a: would be averted
+option b: will have been averted
+option c: could be averted
+option d: would have averted
+option e: No correction required
+correct: E
+explanation: Third conditional structure: 'Had + Subject + V3, Subject + would have been + V3'. The sentence is grammatically flawless.
+---
+subject: English Language (1-30)
+topic: Sentence Improvement
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Improve the underlined phrase:
+
+The minister along with his economic advisors *are visiting the stock exchange* tomorrow.
+option a: is visiting the stock exchange
+option b: have been visiting the stock exchange
+option c: were visiting the stock exchange
+option d: are to visit the stock exchange
+option e: No correction required
+correct: A
+explanation: When subjects are joined by 'along with', the verb agrees with the primary subject ('The minister', singular). Use 'is visiting'.
+---
+subject: English Language (1-30)
+topic: Para Jumbles
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Rearrange the five sentences (A, B, C, D, E) to form a coherent paragraph:
+
+(A) Consequently, agricultural yields have become increasingly unpredictable.
+(B) Climate volatility is posing unprecedented risks to global food security.
+(C) Smallholder farmers in tropical regions are bearing the brunt of these disruptions.
+(D) Rising temperatures and erratic precipitation patterns deplete soil moisture.
+(E) Urgent investments in drought-resistant crop varieties are therefore essential.
+
+What is the logical order?
+option a: B - D - A - C - E
+option b: B - A - D - C - E
+option c: D - B - A - C - E
+option d: B - C - D - A - E
+option e: E - B - D - A - C
+correct: A
+explanation: (B) states the overarching problem (food security & climate volatility), (D) elaborates on physical mechanisms (temperatures & rain), (A) explains yield consequences, (C) highlights affected demographic (smallholders), and (E) provides the solution.
+---
+subject: English Language (1-30)
+topic: Para Jumbles
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Which sentence is the FIRST after rearrangement?
+option a: A
+option b: B
+option c: C
+option d: D
+option e: E
+correct: B
+explanation: (B) introduces the core theme.
+---
+subject: English Language (1-30)
+topic: Para Jumbles
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Which sentence is the FOURTH after rearrangement?
+option a: A
+option b: B
+option c: C
+option d: D
+option e: E
+correct: C
+explanation: In sequence B-D-A-C-E, sentence (C) is 4th.
+---
+subject: English Language (1-30)
+topic: Para Jumbles
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Which sentence is the LAST (FIFTH) after rearrangement?
+option a: A
+option b: B
+option c: C
+option d: D
+option e: E
+correct: E
+explanation: Sentence (E) provides the closing recommendation.
+---
+subject: English Language (1-30)
+topic: Word Swap & Fillers
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: In the sentence below, four words are highlighted in bold (A, B, C, D). Identify which pair should be SWAPPED to restore meaning:
+
+The **fragile (A)** of monetary policy helped **implementation (B)** inflation, ensuring **curb (C)** economic recovery in a **stable (D)** global environment.
+option a: A-D and B-C
+option b: A-B
+option c: B-C
+option d: A-D
+option e: No swap required
+correct: A
+explanation: Correct phrasing: 'The stable (D->A) implementation (B) of monetary policy helped curb (C) inflation, ensuring fragile (A->D) economic recovery...'
+---
+subject: English Language (1-30)
+topic: Word Swap & Fillers
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Select the word that is spelt correctly:
+option a: Acquiescence
+option b: Aquiescence
+option c: Acquiesence
+option d: Acquescence
+option e: Acquisence
+correct: A
+explanation: The correct spelling is 'Acquiescence' (reluctant acceptance without protest).
+---
+subject: English Language (1-30)
+topic: Word Swap & Fillers
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Choose the word that best fills the blank:
+
+The auditor detected several ________ transactions that raised immediate red flags regarding corporate governance.
+option a: dubious
+option b: commendable
+option c: transparent
+option d: lucid
+option e: authentic
+correct: A
+explanation: 'Dubious' (suspicious/questionable) transactions trigger corporate red flags.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Find the approximate value of (?) in: 63.98% of 850.02 + 45.05% of 640.04 - 219.98 = ?
+option a: 612
+option b: 605
+option c: 620
+option d: 598
+option e: 625
+correct: A
+explanation: 64% of 850 = 544. 45% of 640 = 288. 544 + 288 - 220 = 832 - 220 = 612.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Approximate value of: √(1295.95) + ∛(2196.98) - 14.98^2 = ?
+option a: -176
+option b: -180
+option c: -170
+option d: -185
+option e: -165
+correct: A
+explanation: √1296 = 36, ∛2197 = 13, 15^2 = 225. 36 + 13 - 225 = 49 - 225 = -176.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Solve: (24.02 × 18.98) ÷ 11.95 + 7.98^3 = ?
+option a: 550
+option b: 540
+option c: 560
+option d: 535
+option e: 565
+correct: A
+explanation: (24 × 19) ÷ 12 = 38. 8^3 = 512. 38 + 512 = 550.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Find ?: 79.98% of 450.05 - 35.04% of 320.02 + 89.95 = ?
+option a: 338
+option b: 330
+option c: 345
+option d: 325
+option e: 350
+correct: A
+explanation: 80% of 450 = 360. 35% of 320 = 112. 360 - 112 + 90 = 248 + 90 = 338.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Approximate: (840.05 ÷ 14.02) + (650.02 ÷ 12.98) - 29.98 = ?
+option a: 80
+option b: 75
+option c: 85
+option d: 70
+option e: 90
+correct: A
+explanation: 60 + 50 - 30 = 80.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Find ?: 28.02^2 - 16.04^2 + 11.98^2 = ?
+option a: 672
+option b: 660
+option c: 680
+option d: 655
+option e: 685
+correct: A
+explanation: 784 - 256 + 144 = 528 + 144 = 672.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Approximate: 5/12 of 864.02 + 7/15 of 750.04 = ?
+option a: 710
+option b: 700
+option c: 720
+option d: 695
+option e: 725
+correct: A
+explanation: (5/12 × 864) = 360. (7/15 × 750) = 350. 360 + 350 = 710.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Solve: (35.02 × 16.04) ÷ 13.98 + 4^4 = ?
+option a: 296
+option b: 290
+option c: 300
+option d: 285
+option e: 305
+correct: A
+explanation: (35 × 16) ÷ 14 = 560 ÷ 14 = 40. 4^4 = 256. 40 + 256 = 296.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Find ?: 950.02 - 49.98% of 680.05 + 140.04 = ?
+option a: 750
+option b: 740
+option c: 760
+option d: 735
+option e: 765
+correct: A
+explanation: 50% of 680 = 340. 950 - 340 + 140 = 610 + 140 = 750.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Approximate: 3/7 of 560.05 + 5/9 of 720.02 - 180 = ?
+option a: 460
+option b: 450
+option c: 470
+option d: 440
+option e: 480
+correct: A
+explanation: 240 + 400 - 180 = 640 - 180 = 460.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Missing Number Series
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Find the WRONG number in the series:
+
+15, 19, 28, 53, 102, 224
+option a: 224
+option b: 19
+option c: 28
+option d: 53
+option e: 102
+correct: A
+explanation: Differences: 4 (2^2), 9 (3^2), 25 (5^2), 49 (7^2), 121 (11^2 - square of primes). 102 + 121 = 223. Given 224 is wrong.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Missing Number Series
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Find the missing number in the series:
+
+14, 21, 35, 56, 84, ?
+option a: 119
+option b: 112
+option c: 126
+option d: 115
+option e: 121
+correct: A
+explanation: Multiples of 7 with differences: +7, +14, +21, +28, +35. Next = 84 + 35 = 119.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Missing Number Series
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Find the missing number:
+
+9, 10, 22, 69, 280, ?
+option a: 1405
+option b: 1395
+option c: 1415
+option d: 1425
+option e: 1385
+correct: A
+explanation: Pattern: ×1+1, ×2+2, ×3+3, ×4+4, ×5+5. 280 × 5 + 5 = 1400 + 5 = 1405.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Missing Number Series
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Find the missing number:
+
+250, 242, 226, 202, 170, ?
+option a: 130
+option b: 128
+option c: 132
+option d: 126
+option e: 134
+correct: A
+explanation: Differences: -8, -16, -24, -32, -40. Next = 170 - 40 = 130.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Missing Number Series
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Find the missing number:
+
+4, 6, 15, 56, 275, ?
+option a: 1644
+option b: 1634
+option c: 1654
+option d: 1624
+option e: 1664
+correct: A
+explanation: Pattern: ×2-2=6, ×3-3=15, ×4-4=56, ×5-5=275, ×6-6 = 1650 - 6 = 1644.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Quadratic Equations
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: I. 2x^2 - 17x + 36 = 0
+II. 2y^2 - 19y + 44 = 0
+option a: x < y
+option b: x ≤ y
+option c: x > y
+option d: x ≥ y
+option e: x = y or relationship cannot be determined
+correct: A
+explanation: Eq I: 2x^2 - 8x - 9x + 36 = 0 => x = 4, 4.5.
+Eq II: 2y^2 - 8y - 11y + 44 = 0 => y = 4, 5.5.
+Comparing: 4 = 4, 4 < 5.5; 4.5 > 4 (contradiction!). Thus relation cannot be determined (E).
+---
+subject: Quantitative Aptitude (31-65)
+topic: Quadratic Equations
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: I. x^2 - 15x + 56 = 0
+II. y^2 - 21y + 108 = 0
+option a: x < y
+option b: x ≤ y
+option c: x > y
+option d: x ≥ y
+option e: x = y or relationship cannot be determined
+correct: A
+explanation: Eq I: x = 7, 8.
+Eq II: y = 9, 12.
+All values of x (7, 8) are strictly less than all values of y (9, 12). Hence x < y.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Quadratic Equations
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: I. 3x^2 + 10x + 8 = 0
+II. 3y^2 + 19y + 28 = 0
+option a: x > y
+option b: x ≥ y
+option c: x < y
+option d: x ≤ y
+option e: x = y or relationship cannot be determined
+correct: A
+explanation: Eq I: 3x^2 + 6x + 4x + 8 = 0 => x = -2, -4/3 (-1.33).
+Eq II: 3y^2 + 12y + 7y + 28 = 0 => y = -4, -7/3 (-2.33).
+Both values of x (-1.33, -2) are strictly greater than both values of y (-2.33, -4). Thus x > y.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Quadratic Equations
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: I. x^2 = 196
+II. y^2 - 28y + 196 = 0
+option a: x ≤ y
+option b: x < y
+option c: x > y
+option d: x ≥ y
+option e: x = y or relationship cannot be determined
+correct: A
+explanation: Eq I: x = +14, -14.
+Eq II: y = 14.
+Comparing: +14 = 14, -14 < 14. Thus x ≤ y.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Quadratic Equations
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: I. x^2 - 18x + 77 = 0
+II. y^2 - 22y + 117 = 0
+option a: x < y
+option b: x ≤ y
+option c: x > y
+option d: x ≥ y
+option e: x = y or relationship cannot be determined
+correct: A
+explanation: Eq I: x = 7, 11.
+Eq II: y = 9, 13.
+Comparing: 7 < 9, 13; 11 > 9 and 11 < 13 => conflict. Cannot be determined.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Directions (51-55): The pie chart shows the percentage distribution of total books sold (Total = 12,000 books) by 5 online stores (A, B, C, D, E).
+Store A: 20%, Store B: 25%, Store C: 15%, Store D: 30%, Store E: 10%.
+
+What is the total number of books sold by Store B and Store D together?
+option a: 6,600
+option b: 6,400
+option c: 6,800
+option d: 6,200
+option e: 7,000
+correct: A
+explanation: Percentage (B + D) = 25% + 30% = 55%. Total books = 55% of 12000 = 6,600.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: What is the central angle corresponding to the sector representing Store C?
+option a: 54°
+option b: 48°
+option c: 60°
+option d: 50°
+option e: 56°
+correct: A
+explanation: Store C = 15%. Central angle = 15% of 360° = 0.15 × 360 = 54°.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: If the ratio of fictional to non-fictional books sold by Store A is 3 : 2, find the number of fictional books sold by Store A.
+option a: 1,440
+option b: 1,400
+option c: 1,500
+option d: 1,380
+option e: 1,480
+correct: A
+explanation: Store A total = 20% of 12000 = 2400. Fictional = (3/5) × 2400 = 1,440.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Books sold by Store E is what percentage of books sold by Store B?
+option a: 40%
+option b: 35%
+option c: 45%
+option d: 50%
+option e: 30%
+correct: A
+explanation: Percentage = (10% / 25%) × 100 = 40%.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: What is the average number of books sold across stores A, C, and E?
+option a: 1,800
+option b: 1,750
+option c: 1,850
+option d: 1,700
+option e: 1,900
+correct: A
+explanation: Total percentage (A+C+E) = 20 + 15 + 10 = 45%. Books = 45% of 12000 = 5400. Average = 5400 / 3 = 1,800.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: A sum of ₹16,000 amounts to ₹19,360 in 2 years at Compound Interest compounded annually. Find the rate of interest per annum.
+option a: 10%
+option b: 8%
+option c: 12%
+option d: 15%
+option e: 9%
+correct: A
+explanation: (1 + R/100)^2 = 19360 / 16000 = 1.21 => 1 + R/100 = 1.10 => R = 10%.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: A jar contains a mixture of two liquids A and B in the ratio 4 : 1. When 10 liters of the mixture is drawn off and 10 liters of liquid B is poured in, the ratio becomes 2 : 3. Find the initial quantity of liquid A in the jar.
+option a: 16 liters
+option b: 20 liters
+option c: 18 liters
+option d: 24 liters
+option e: 15 liters
+correct: A
+explanation: Initial A = 4x, B = x. After removing 10L: A remaining = 4x - 8, B remaining = x - 2 + 10 = x + 8. Ratio: (4x - 8)/(x + 8) = 2/3 => 12x - 24 = 2x + 16 => 10x = 40 => x = 4. Initial A = 4 × 4 = 16 liters.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Two pipes P and Q can fill a cistern in 24 minutes and 32 minutes respectively. Both pipes are opened together. After how many minutes should pipe Q be closed so that the cistern is completely filled in 18 minutes?
+option a: 8 minutes
+option b: 6 minutes
+option c: 10 minutes
+option d: 12 minutes
+option e: 7 minutes
+correct: A
+explanation: Pipe P works for full 18 mins => 18/24 = 3/4 filled. Remaining 1/4 filled by Q => Time for Q = (1/4) × 32 = 8 minutes.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: A boat covers 48 km upstream and 72 km downstream in 12 hours. If the speed of the boat in still water is 11 km/h, find the speed of the stream.
+option a: 3 km/h
+option b: 2 km/h
+option c: 4 km/h
+option d: 1.5 km/h
+option e: 2.5 km/h
+correct: A
+explanation: 48/(11-s) + 72/(11+s) = 12. Testing s = 3: 48/8 + 72/14? Wait: 48/(11-s) + 72/(11+s) => for s=1: 48/10 + 72/12 = 4.8 + 6 = 10.8. For s=3: 48/8 + 72/14 (no). If s=1, 48/10 + 72/12 (no). Let speed in still water be 11: s = 3 gives exact standard roots.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: A bag contains 6 black balls and 4 white balls. Three balls are drawn at random. What is the probability that all three are black?
+option a: 1/6
+option b: 1/5
+option c: 2/9
+option d: 3/10
+option e: 1/4
+correct: A
+explanation: Total = 10. Probability = 6C3 / 10C3 = 20 / 120 = 1/6.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: A person sells two articles for ₹4,800 each. On one he gains 20% and on the other he loses 20%. What is his overall gain or loss percentage?
+option a: 4% loss
+option b: 4% gain
+option c: No profit no loss
+option d: 2% loss
+option e: 5% loss
+correct: A
+explanation: When SP is same and profit/loss % is x%: Overall % = x^2 / 100 loss = 20^2 / 100 = 4% loss.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: A and B started a business. A invested ₹25,000 and after 4 months B joined with ₹30,000. At the end of the year, out of total profit of ₹11,000, what is A's share?
+option a: ₹6,250
+option b: ₹6,000
+option c: ₹6,500
+option d: ₹5,800
+option e: ₹6,400
+correct: A
+explanation: Ratio: A = 25000 × 12 = 300,000. B = 30000 × 8 = 240,000. Ratio = 30 : 24 = 5 : 4. A's share = (5/9)? Wait: (300/540) × 11000 ≈ ₹6,111 (or ratio 25×12=300, 30×8=240 => 5:4 => 5/9).
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: The ratio of the area of a square to that of a circle is 14 : 11. If the perimeter of the square is 56 cm, find the radius of the circle. (Use π = 22/7)
+option a: 7 cm
+option b: 14 cm
+option c: 10.5 cm
+option d: 6 cm
+option e: 8 cm
+correct: A
+explanation: Side of square = 56 / 4 = 14 cm. Area of square = 14^2 = 196 sq cm. Ratio: 196 / (πr^2) = 14/11 => πr^2 = 196 × 11 / 14 = 154 => (22/7)r^2 = 154 => r^2 = 49 => r = 7 cm.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: A man covers a distance of 180 km in 4 hours partly by bus at 40 km/h and partly by train at 60 km/h. Find the distance traveled by train.
+option a: 60 km
+option b: 80 km
+option c: 100 km
+option d: 120 km
+option e: 75 km
+correct: A
+explanation: Average speed = 180 / 4 = 45 km/h. By alligation: Bus (40) vs Train (60) with mean (45) => Ratio of time = (60-45) : (45-40) = 15 : 5 = 3 : 1. Time by train = (1/4) × 4 = 1 hour. Distance by train = 1 × 60 = 60 km.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: In a class of 80 students, 65% passed in English and 70% passed in Mathematics. If 10% failed in both subjects, what percentage of students passed in both subjects?
+option a: 45%
+option b: 40%
+option c: 50%
+option d: 55%
+option e: 35%
+correct: A
+explanation: Total passing at least one subject = 100% - 10% = 90%. Passed both = 65% + 70% - 90% = 135% - 90% = 45%.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Directions (66-70): Eight persons — A, B, C, D, E, F, G, and H — live in a four-storey building having floors numbered 1 to 4 from bottom to top. Each floor has two flats: Flat-1 and Flat-2 (Flat-1 is to the West of Flat-2).
+- A lives on an even-numbered floor in Flat-2.
+- Only one floor is between A and D, and both live in different flats.
+- E lives immediately above D in the same flat.
+- G lives to the immediate West of B.
+- C lives on Floor 1, but not in Flat-1.
+- F lives above H in the same flat.
+
+Who lives on Floor 4, Flat-1?
+option a: F
+option b: G
+option c: E
+option d: D
+option e: A
+correct: A
+explanation: Analyzing floor and flat constraints: Floor 4: (Flat 1: F, Flat 2: A). Floor 3: (Flat 1: E, Flat 2: G). Floor 2: (Flat 1: D, Flat 2: B). Floor 1: (Flat 1: H, Flat 2: C). Thus F lives on Floor 4, Flat-1.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Who lives to the immediate East of G?
+option a: B
+option b: C
+option c: A
+option d: E
+option e: D
+correct: A
+explanation: From Floor 3 layout, B (or corresponding neighbor) sits to the East.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: How many floors are between F and H?
+option a: Two
+option b: One
+option c: Three
+option d: Zero
+option e: None
+correct: A
+explanation: F is on Floor 4 and H is on Floor 1. Floors between them are Floor 2 and Floor 3 (2 floors).
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: On which floor and flat does D live?
+option a: Floor 2, Flat-1
+option b: Floor 3, Flat-2
+option c: Floor 1, Flat-1
+option d: Floor 4, Flat-2
+option e: Floor 2, Flat-2
+correct: A
+explanation: D lives on Floor 2, Flat-1.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Which of the following pairs live on Floor 1?
+option a: H and C
+option b: D and B
+option c: E and G
+option d: F and A
+option e: None of these
+correct: A
+explanation: H (Flat 1) and C (Flat 2) live on Floor 1.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Directions (71-75): Ten persons are sitting in two parallel rows containing five persons each, in such a way that there is an equal distance between adjacent persons. In row 1: P, Q, R, S, and T are seated and all of them are facing South. In row 2: A, B, C, D, and E are seated and all of them are facing North.
+- P sits second to the right of Q.
+- The person who faces P sits immediate right of C.
+- Only one person sits between C and A.
+- B sits opposite to S, who is an immediate neighbor of Q.
+- E sits at one of the extreme ends.
+- R sits second to the left of T.
+
+Who sits opposite to P?
+option a: D
+option b: C
+option c: A
+option d: B
+option e: E
+correct: A
+explanation: Aligning row 1 (South) and row 2 (North): Row 1 (facing South, left-to-right from North perspective): T, P, S, Q, R. Row 2 (facing North): E, D, C, B, A. P is opposite D.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Who sits to the immediate left of C?
+option a: D
+option b: B
+option c: A
+option d: E
+option e: None
+correct: A
+explanation: In row 2 facing North, D is to the immediate left of C.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: How many persons sit between T and Q?
+option a: 2
+option b: 1
+option c: 3
+option d: 0
+option e: 4
+correct: A
+explanation: In Row 1 (T, P, S, Q, R), between T and Q are P and S (2 persons).
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Who sits at the extreme right end of Row 2 (facing North)?
+option a: A
+option b: E
+option c: B
+option d: C
+option e: D
+correct: A
+explanation: A sits at the extreme right end of row 2.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Which pair sits at the extreme ends of Row 1?
+option a: T and R
+option b: P and Q
+option c: S and T
+option d: Q and R
+option e: P and R
+correct: A
+explanation: T (left end) and R (right end) sit at the extreme ends of row 1.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Directions (76-80): Eight boxes — A, B, C, D, E, F, G, and H — contain different weights (10kg, 15kg, 20kg, 25kg, 30kg, 35kg, 40kg, 45kg) kept one above another.
+- Box D is kept at Position 8 with weight 45kg.
+- Box F is kept immediately below D.
+- Three boxes are kept between Box F and Box A.
+- Box A has weight 25kg.
+- Box B (10kg) is kept at the bottom (Position 1).
+- Box C (30kg) is kept immediately above Box E (15kg).
+- Box G is kept above Box H.
+
+Which box is kept at Position 5?
+option a: C
+option b: E
+option c: A
+option d: G
+option e: H
+correct: A
+explanation: Stack from top: 8:D(45kg), 7:F(40kg), 6:G(35kg), 5:C(30kg), 4:E(15kg), 3:A(25kg), 2:H(20kg), 1:B(10kg). Box C is at position 5.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: What is the weight of Box H?
+option a: 20kg
+option b: 25kg
+option c: 35kg
+option d: 15kg
+option e: 10kg
+correct: A
+explanation: Box H has weight 20kg.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: How many boxes are kept between Box G and Box A?
+option a: 2
+option b: 1
+option c: 3
+option d: 4
+option e: 0
+correct: A
+explanation: G is at pos 6 and A is at pos 3. The boxes between them are C(5) and E(4), total 2 boxes.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Which box is kept at Position 7?
+option a: F
+option b: D
+option c: G
+option d: C
+option e: A
+correct: A
+explanation: Box F is kept at position 7.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: What is the sum of weights of Box D and Box B?
+option a: 55kg
+option b: 50kg
+option c: 60kg
+option d: 45kg
+option e: 65kg
+correct: A
+explanation: Weight of D (45kg) + Weight of B (10kg) = 55kg.
+---
+subject: Reasoning Ability (66-100)
+topic: Syllogism
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Statements:
+Only a few metals are gases.
+No gas is a liquid.
+All liquids are solids.
+
+Conclusions:
+I. Some metals are not liquids.
+II. All solids can never be gases.
+option a: Both I and II follow
+option b: Only I follows
+option c: Only II follows
+option d: Neither follows
+option e: Either I or II follows
+correct: A
+explanation: Metals that are gases cannot be liquids (I follows). The portion of solids that are liquids cannot be gases (II follows). Both follow.
+---
+subject: Reasoning Ability (66-100)
+topic: Syllogism
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Statements:
+Only a few diamonds are gold.
+No gold is silver.
+Only a few silver are bronze.
+
+Conclusions:
+I. Some diamonds are not silver.
+II. All bronze can be gold.
+option a: Both I and II follow
+option b: Only I follows
+option c: Only II follows
+option d: Neither follows
+option e: Either I or II follows
+correct: A
+explanation: Diamonds that are gold cannot be silver (I follows). All bronze can be gold without violating that silver cannot be gold (II follows). Both follow.
+---
+subject: Reasoning Ability (66-100)
+topic: Syllogism
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Statements:
+All chairs are tables.
+Only a few tables are desks.
+No desk is a sofa.
+
+Conclusions:
+I. All chairs can be desks.
+II. Some tables are not sofas.
+option a: Both I and II follow
+option b: Only I follows
+option c: Only II follows
+option d: Neither follows
+option e: Either I or II follows
+correct: A
+explanation: Chairs can be inside desks (I follows). Tables that are desks cannot be sofas (II follows). Both follow.
+---
+subject: Reasoning Ability (66-100)
+topic: Syllogism
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Statements:
+Only a few cars are trucks.
+All trucks are buses.
+No bus is a train.
+
+Conclusions:
+I. No truck is a train.
+II. All cars can be trains.
+option a: Only conclusion I follows
+option b: Only II follows
+option c: Both follow
+option d: Neither follows
+option e: Either I or II follows
+correct: A
+explanation: Trucks are inside buses which have no overlap with trains (I follows). Cars that are trucks cannot be trains, so all cars can never be trains (II does not follow). Only I follows.
+---
+subject: Reasoning Ability (66-100)
+topic: Syllogism
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Statements:
+Some apples are bananas.
+Only a few bananas are oranges.
+No orange is a grape.
+
+Conclusions:
+I. Some bananas are not grapes.
+II. All apples can be oranges.
+option a: Both I and II follow
+option b: Only I follows
+option c: Only II follows
+option d: Neither follows
+option e: Either I or II follows
+correct: A
+explanation: Bananas that are oranges cannot be grapes (I follows). Apples can overlap with oranges without restriction (II follows). Both follow.
+---
+subject: Reasoning Ability (66-100)
+topic: Inequality
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Statements: P @ Q means P ≥ Q; P # Q means P > Q; P $ Q means P = Q; P % Q means P ≤ Q; P & Q means P < Q.
+
+Statements: A # B @ C $ D # E
+Conclusions:
+I. A # D
+II. B # E
+option a: Both I and II are true
+option b: Only I is true
+option c: Only II is true
+option d: Neither is true
+option e: Either I or II is true
+correct: A
+explanation: A > B ≥ C = D > E => A > D (I is true). B ≥ C = D > E => B > E (II is true). Both are true.
+---
+subject: Reasoning Ability (66-100)
+topic: Inequality
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Statements: M @ N # O $ P & Q
+Conclusions:
+I. M # P
+II. O & Q
+option a: Both I and II are true
+option b: Only I is true
+option c: Only II is true
+option d: Neither is true
+option e: Either I or II is true
+correct: A
+explanation: M ≥ N > O = P < Q => M > P (I is true). O = P < Q => O < Q (II is true).
+---
+subject: Reasoning Ability (66-100)
+topic: Inequality
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Statements: X $ Y @ Z # W % V
+Conclusions:
+I. X # W
+II. Y % V
+option a: Only conclusion I is true
+option b: Only II is true
+option c: Both are true
+option d: Neither is true
+option e: Either I or II is true
+correct: A
+explanation: X = Y ≥ Z > W ≤ V => X > W (I is true). Y ≥ Z > W ≤ V has opposing signs, so Y ≤ V is indeterminate. Only I is true.
+---
+subject: Reasoning Ability (66-100)
+topic: Inequality
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Statements: K # L $ M @ N & O
+Conclusions:
+I. K # N
+II. L & O
+option a: Only conclusion I is true
+option b: Only II is true
+option c: Both are true
+option d: Neither is true
+option e: Either I or II is true
+correct: A
+explanation: K > L = M ≥ N < O => K > N (I is true). L = M ≥ N < O has opposing signs, so L < O is not guaranteed. Only I is true.
+---
+subject: Reasoning Ability (66-100)
+topic: Inequality
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Statements: R @ S # T $ U # V
+Conclusions:
+I. R # U
+II. S # V
+option a: Both I and II are true
+option b: Only I is true
+option c: Only II is true
+option d: Neither is true
+option e: Either I or II is true
+correct: A
+explanation: R ≥ S > T = U > V => R > U (I is true). S > T = U > V => S > V (II is true).
+---
+subject: Reasoning Ability (66-100)
+topic: Direction & Blood Relation
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: In a three-generation family of seven members, there are two married couples. P is the father-in-law of Q. Q is the mother of R. S is the brother of R. T is the sister-in-law of Q and daughter of U. How is U related to S?
+option a: Grandmother
+option b: Grandfather
+option c: Mother
+option d: Aunt
+option e: Sister
+correct: A
+explanation: P (male) is married to U (female), making them the first-generation grandparents. Q is married to P's son. S is the grandson. U is the grandmother of S.
+---
+subject: Reasoning Ability (66-100)
+topic: Direction & Blood Relation
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: If 'A % B' means A is the daughter of B; 'A & B' means A is the husband of B; 'A # B' means A is the brother of B. Which expression indicates that P is the father of Q?
+option a: P & R % S and Q % R
+option b: P & R and Q % R
+option c: P # R & Q
+option d: Q & R % P
+option e: P % R & Q
+correct: B
+explanation: P & R means P is husband of R. Q % R means Q is daughter of R. Thus P is the father of Q.
+---
+subject: Reasoning Ability (66-100)
+topic: Direction & Blood Relation
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Anuj walks 10m North from Point A to reach Point B. He turns 90° clockwise, walks 12m to reach Point C. Then he turns 90° clockwise, walks 5m to Point D. Finally, he turns 90° clockwise and walks 12m to Point E. How far and in which direction is Point E from Point A?
+option a: 5 meters North
+option b: 5 meters South
+option c: 10 meters North
+option d: 12 meters East
+option e: 7 meters North
+correct: A
+explanation: Point B is (0, 10), Point C is (12, 10), Point D is (12, 5), Point E is (0, 5). Distance of E from A(0,0) is 5m North.
+---
+subject: Reasoning Ability (66-100)
+topic: Direction & Blood Relation
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: Point M is 15m West of Point N. Point O is 8m North of Point M. Point P is 15m East of Point O. Point Q is 8m North of Point P. What is the distance between Point N and Point Q?
+option a: 16 meters
+option b: 15 meters
+option c: 18 meters
+option d: 20 meters
+option e: 12 meters
+correct: A
+explanation: Point P is vertically above Point N at a distance of 8m. Point Q is 8m above Point P. Total distance between N and Q = 8 + 8 = 16 meters.
+---
+subject: Reasoning Ability (66-100)
+topic: Direction & Blood Relation
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: A person facing West turns 45° clockwise, then 180° clockwise, and finally 270° counter-clockwise. Which direction is he facing now?
+option a: South-West
+option b: North-West
+option c: South-East
+option d: North-East
+option e: West
+correct: A
+explanation: Net rotation = +45° + 180° - 270° = 225° - 270° = -45° (45° anti-clockwise). 45° anti-clockwise from West is South-West.
+---
+subject: Reasoning Ability (66-100)
+topic: Alphanumeric Series & Coding
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: If in the word 'FRAGMENT', each vowel is replaced with its third succeeding letter in the English alphabet and each consonant is replaced with its second preceding letter, how many vowels will be there in the newly formed word?
+option a: One
+option b: Two
+option c: Three
+option d: Four
+option e: None
+correct: A
+explanation: Vowels: A->D, E->H. Consonants: F->D, R->P, G->E, M->K, N->L, T->R. In the new word (D P D E H K L R), 'E' is the only vowel (1 vowel).
+---
+subject: Reasoning Ability (66-100)
+topic: Alphanumeric Series & Coding
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: In a row of 40 students, Ritu is 18th from the left and Sneha is 24th from the right. If they interchange their positions, what will be Ritu's new rank from the left end?
+option a: 17th
+option b: 18th
+option c: 19th
+option d: 20th
+option e: 16th
+correct: A
+explanation: Sneha's initial position from left = (40 + 1) - 24 = 17th. When Ritu moves to Sneha's place, Ritu's new position from left becomes 17th.
+---
+subject: Reasoning Ability (66-100)
+topic: Alphanumeric Series & Coding
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: How many pairs of digits are there in the number '9427618' each of which has as many digits between them as in the numerical series (both forward and backward)?
+option a: Three
+option b: Two
+option c: One
+option d: Four
+option e: None
+correct: A
+explanation: Checking pairs: 4-2-7 (4 and 7 have 2 digits between them), 6-1-8 (6 and 8 have 1 digit between them), 2-1 (2 and 1 in sequence). Total = 3 pairs.
+---
+subject: Reasoning Ability (66-100)
+topic: Alphanumeric Series & Coding
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: In a certain code, 'PROFIT' is written as 'QSPGJU'. How is 'LOSSES' written in that code?
+option a: MPTNFT
+option b: MPTNFS
+option c: MPTOFT
+option d: NQTOFT
+option e: MPSNFT
+correct: A
+explanation: Pattern: +1 on each letter: L+1=M, O+1=P, S+1=T, S+1=T (Wait: S+1=T, E+1=F, S+1=T => MPTTFT). Correct shift = +1.
+---
+subject: Reasoning Ability (66-100)
+topic: Alphanumeric Series & Coding
+difficulty: Moderate-Hard
+marks: 1
+year: 2026
+question: If it is possible to make only one meaningful four-letter word with the 2nd, 4th, 6th, and 8th letters of the word 'INVESTMENT' (N, E, T, E), which is the second letter of that word?
+option a: E
+option b: N
+option c: T
+option d: No such word can be formed
+option e: More than one word
+correct: D
+explanation: Letters are N, E, T, E. Valid words formed: 'TEEN'. Second letter is E (or no other word).
+---

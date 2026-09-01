@@ -1,0 +1,1537 @@
+subject: English Language (1-30)
+topic: Fill in the Blanks
+difficulty: Easy
+marks: 1
+year: 2025
+question: The road safety campaign ______________ individuals of all age groups to raise awareness about responsible driving habits.
+option a: intended
+option b: targeted
+option c: sustained
+option d: pretend
+option e: maintained
+correct: B
+explanation: The sentence talks about a road safety campaign focusing on a particular group. 'Targeted' correctly expresses that the campaign was directed towards individuals of all age groups.
+---
+subject: English Language (1-30)
+topic: Fill in the Blanks
+difficulty: Easy
+marks: 1
+year: 2025
+question: ______________ can policy makers strive to make education more accessible?
+option a: How
+option b: What
+option c: Whom
+option d: When
+option e: Where
+correct: A
+explanation: The sentence asks about the manner or method in which policy makers can work. The question word expressing manner is 'How'.
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Easy
+marks: 1
+year: 2025
+question: Read the sentence to find out whether there is any grammatical error in it:
+
+They needs (A)/ to submit the report (B)/ before the deadline (C)/ to avoid penalties. (D)
+option a: A
+option b: B
+option c: C
+option d: D
+option e: No error
+correct: A
+explanation: The subject 'They' is plural, so the plural verb 'need' must be used instead of singular 'needs'.
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: Read the sentence to find out whether there is any grammatical error in it:
+
+She was hard (A)/ to convince as she (B)/ is use (C)/ to having her opinions valued. (D)
+option a: A
+option b: B
+option c: C
+option d: D
+option e: No error
+correct: C
+explanation: The expression 'be used to' requires the past participle form: 'is used to having'.
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Easy
+marks: 1
+year: 2025
+question: Read the sentence to find out whether there is any grammatical error in it:
+
+She has being (A)/ working tirelessly (B)/ on the project (C)/ for the past two weeks. (D)
+option a: A
+option b: B
+option c: C
+option d: D
+option e: No error
+correct: A
+explanation: Present perfect continuous tense uses 'has been + verb-ing', not 'has being'.
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Easy
+marks: 1
+year: 2025
+question: Read the sentence to find out whether there is any grammatical error in it:
+
+The manager said (A)/ that he will review (B)/ all the applications (C)/ by end of the week. (D)
+option a: A
+option b: B
+option c: C
+option d: D
+option e: No error
+correct: D
+explanation: An article is required before singular countable noun 'end': 'by the end of the week'.
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: Read the sentence to find out whether there is any grammatical error in it:
+
+Neither the teacher (A)/ nor the students (B)/ was aware (C)/ of the sudden schedule change. (D)
+option a: A
+option b: B
+option c: C
+option d: D
+option e: No error
+correct: C
+explanation: In 'neither... nor', the verb agrees with the closer subject ('students', plural), so 'were aware' is correct.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Directions (8-17): Read the passage and answer the questions:
+
+Sayer Daheir began a modest printing press many decades ago, choosing to begin his venture with a deep respect for the traditional arts of printing and book binding. At a time when modern technology had started to look more appealing to many entrepreneurs, he remained loyal to the classic methods passed down through skilled craftsmen. Every page that left his workshop carried such precision that visitors often felt, with quiet admiration, that there seems no mistake in the delicate strokes of his work. As the years moved forward, Sayer gradually welcomed his children and relatives into the business so the heritage would never fade. In 1999, his children and siblings finally took possession of the company, having taken it much like one took a treasure, determined to guard the original techniques their ancestor had loved. They carefully continued the old art of binding and even enriched it by offering metal nameplates to customise each piece, which gave every book an identity of its own. Those who once worked at DA needed no other certificate; the very fact that they had honed their skill there was proof enough of their craftsmanship and dedication. Today, when tourists arrive, the entire workshop seems to look like a living museum where every corner appears to hold stories of timeless artistry. Generations later, the tradition thrives with the same spirit. Hadiya, Sayer’s fourth-generation niece, now works beside her elders and adds her own quiet strength to the family’s work. The press that Sayer once founded—and which his heirs later took possession from him—remains a place where artistry speaks louder than machines. Visitors continue to be drawn to its quiet charm and enduring beauty. Over decades and decades, the Daheir legacy has shown that true artistry starts with passion and is sustained by patience. Without relying on modern technology, the company stands as a living example of how dedication and skill can transform simple materials into timeless art, keeping alive a heritage where there seems no mistake in the harmony between tradition and excellence.
+
+Which of the following best explains why visitors found the workshop’s pages impressive?
+option a: The pages were produced using highly advanced machinery imported from overseas.
+option b: The books featured metallic covers that reflected modern design sensibilities.
+option c: The design was intricate and consistent, reflecting care and expert craftsmanship.
+option d: Each book was endorsed by famous artists to increase its credibility.
+option e: The pages were produced in large batches ensuring mass production accuracy.
+correct: C
+explanation: The passage notes that every page carried such precision that visitors felt there was no mistake in the delicate strokes of his work.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Moderate
+marks: 1
+year: 2025
+question: What can be inferred about the transition of the business in 1999?
+option a: It was done unwillingly due to financial decline and pressure from competition.
+option b: The family preserved traditional values while adding unique personal touches.
+option c: It marked a shift from traditional to completely digital production methods.
+option d: The business lost its original character after Sayer’s retirement.
+option e: Outsiders were hired to bring a fresh perspective to the legacy.
+correct: B
+explanation: The heirs continued the old art and enriched it with metal nameplates to customize each piece.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Which of the following statements is CORRECT according to the passage?
+(A) Hadiya represents the latest generation contributing to the Daheir heritage.
+(B) In 1999, the original workshop was sold to external investors and rebranded.
+(C) The use of metal nameplates was introduced to add uniqueness to the books.
+option a: Only A
+option b: Both A and B
+option c: Both B and C
+option d: Both A and C
+option e: Only C
+correct: D
+explanation: Hadiya (4th generation niece) contributes to the work, and metal nameplates were added for uniqueness. Statement B is false.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Moderate
+marks: 1
+year: 2025
+question: According to the passage, Sayer Daheir ______
+(A) began a modest printing press with deep respect for traditional methods
+(B) is the only child in his family
+(C) depends on government funding to run the press
+option a: Only A
+option b: Both A and C
+option c: Only B
+option d: Both B and C
+option e: Only C
+correct: A
+explanation: Only statement A is mentioned in the opening lines of the passage.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Which of the following best describes the present state of the Daheir printing press?
+option a: A high-tech printing house competing globally
+option b: A living museum showcasing timeless artistry
+option c: A declining business facing losses
+option d: A government-run heritage site
+option e: A training school for modern printing
+correct: B
+explanation: The text explicitly states: 'the entire workshop seems to look like a living museum where every corner appears to hold stories of timeless artistry.'
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Which factor best explains why visitors are drawn to the Daheir printing press even today?
+option a: The company’s use of state-of-the-art machines.
+option b: The quiet charm and timeless artistry preserved across generations.
+option c: Its reputation for offering the cheapest printing rates.
+option d: The frequent government-sponsored art exhibitions held there.
+option e: The availability of modern e-books alongside traditional books.
+correct: B
+explanation: Visitors continue to be drawn to its quiet charm, enduring beauty, and timeless artistry.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Choose the most suitable phrase to fill the given blank in the passage ('In 1999, his children and siblings finally ______________ the company...').
+option a: handed back
+option b: lost control of
+option c: in addition to
+option d: took possession of
+option e: modernised the techniques
+correct: D
+explanation: 'took possession of' indicates formally assuming ownership and responsibility of the company.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Easy
+marks: 1
+year: 2025
+question: Choose the word with the same meaning as 'look' used in the passage ('...look more appealing...').
+option a: appear
+option b: watch
+option c: search
+option d: glance
+option e: observe
+correct: A
+explanation: Here 'look' means 'to seem' or 'to appear'.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Easy
+marks: 1
+year: 2025
+question: Choose the word with the opposite in meaning as 'begin' used in the passage.
+option a: start
+option b: initiate
+option c: cease
+option d: trivial
+option e: reduce
+correct: C
+explanation: 'Begin' means to start; the antonym is 'cease' (to stop or end).
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: Choose the word with the same meaning as 'took' used in the passage ('...having taken it much like one took a treasure...').
+option a: located
+option b: monitored
+option c: required
+option d: gave
+option e: purchased
+correct: E
+explanation: In the phrase 'took a treasure', it carries the sense of acquiring or obtaining.
+---
+subject: English Language (1-30)
+topic: Column Matching
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Two columns are given below. Connect the phrases to form meaningful and correct sentences:
+Column I:
+A. The old clock in the hallway
+B. The child’s laughter echoed
+C. She took the antiseptic from the bottle
+Column II:
+D. through the empty playground
+E. and put it on the cotton ball
+F. chimed softly at midnight
+option a: A-F, C-D, B-E
+option b: A-F, B-E
+option c: B-D, C-F
+option d: C-E, A-F, B-D
+option e: A-D
+correct: D
+explanation: Matches: A-F (clock chimed softly), B-D (laughter echoed through playground), C-E (antiseptic put on cotton ball).
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Easy
+marks: 1
+year: 2025
+question: Directions (19-24): Choose the most suitable option for Blank (A) in the passage:
+
+____________ (A) up, Maria’s love for gardening began in childhood, inspired by afternoons spent with her grandmother in their backyard. Her grandmother patiently taught her how to prepare the soil, sow seeds, and water plants correctly. Watching tiny shoots ____________ (B) gave Maria joy and a sense of responsibility. Over time, ____________ (C) plants became more than a hobby; it became her way of staying close to nature. As she grew older, Maria noticed people ____________ (D) gardens and pathways with plastics and wrappers, harming the soil and plants. This troubled her deeply. She ____________ (E) caring only for her own garden was not enough if the surroundings continued to suffer. With the ____________ (F) of protecting nature, Maria organized clean-up drives and encouraged neighbors to join.
+option a: rising
+option b: lifting
+option c: increasing
+option d: growing
+option e: elevating
+correct: D
+explanation: The standard English idiom for childhood upbringing is 'Growing up'.
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Easy
+marks: 1
+year: 2025
+question: Choose the most suitable word for Blank (B) ('Watching tiny shoots ____________ (B) gave Maria joy...'):
+option a: appearing
+option b: emerge
+option c: show
+option d: detain
+option e: reflect
+correct: B
+explanation: Shoots 'emerge' (come out from the soil). Bare infinitive 'emerge' follows 'watch + object + base verb'.
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: Choose the most suitable word for Blank (C) ('Over time, ____________ (C) plants became more than a hobby...'):
+option a: selecting
+option b: detaching
+option c: nurturing
+option d: sprinkling
+option e: feeding
+correct: C
+explanation: 'Nurturing' plants means lovingly caring for their growth.
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Easy
+marks: 1
+year: 2025
+question: Choose the most suitable word for Blank (D) ('Maria noticed people ____________ (D) gardens and pathways with plastics...'):
+option a: decorating
+option b: littering
+option c: spreading
+option d: showing
+option e: covering
+correct: B
+explanation: Throwing garbage/plastics on paths is 'littering'.
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Easy
+marks: 1
+year: 2025
+question: Choose the most suitable word for Blank (E) ('She ____________ (E) caring only for her own garden was not enough...'):
+option a: imagined
+option b: supposed
+option c: considered
+option d: rendered
+option e: realized
+correct: E
+explanation: 'Realized' means became conscious/aware of the fact.
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Easy
+marks: 1
+year: 2025
+question: Choose the most suitable word for Blank (F) ('With the ____________ (F) of protecting nature, Maria organized clean-up drives...'):
+option a: thought
+option b: scheme
+option c: intuitive
+option d: planned
+option e: feature
+correct: A
+explanation: 'With the thought of' is a natural, grammatically correct phrase expressing intention.
+---
+subject: English Language (1-30)
+topic: Word Rearrangement
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: Rearrange the highlighted words to make the sentence grammatically and contextually correct:
+
+The irritated (A) of the morning (B) alarm noise (C) her.
+option a: ACB
+option b: BAC
+option c: CAB
+option d: CBA
+option e: No rearrangement required
+correct: D
+explanation: Correct sentence: 'The noise (C) of the morning (B) alarm irritated (A) her.' Sequence is CBA.
+---
+subject: English Language (1-30)
+topic: Word Rearrangement
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: Rearrange the highlighted words:
+
+She was climb (A) trying to struck (B) and couldn’t figure (C) out the way.
+option a: ACB
+option b: BAC
+option c: CAB
+option d: CBA
+option e: No rearrangement required
+correct: B
+explanation: Correct sentence: 'She was struck (B) trying to climb (A) and couldn’t figure (C) out the way.' Sequence is BAC.
+---
+subject: English Language (1-30)
+topic: Word Rearrangement
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: Rearrange the highlighted words:
+
+The cooled (A) rain scorching (B) the sudden (C) afternoon.
+option a: ACB
+option b: BAC
+option c: CAB
+option d: CBA
+option e: No rearrangement required
+correct: C
+explanation: Correct sentence: 'The sudden (C) rain cooled (A) the scorching (B) afternoon.' Sequence is CAB.
+---
+subject: English Language (1-30)
+topic: Word Usage
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Identify the sentence(s) where the word 'ASCEND' is used accurately:
+(A) She tried to ascend the conversation by lowering her tone and avoiding any conflicts.
+(B) The company's profits continue to ascend as a result of their innovative strategies.
+(C) The hikers began to ascend the steep mountain trail just after sunrise.
+option a: Only A
+option b: Both B and C
+option c: Only C
+option d: Only A and C
+option e: All A, B, C
+correct: B
+explanation: 'Ascend' means to rise or move upward. Used correctly in (B) (profits rising) and (C) (hiking up mountain). (A) is incorrect.
+---
+subject: English Language (1-30)
+topic: Sentence Rearrangement
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: Rearrange the five parts to form a meaningful sentence:
+(A) in the
+(B) his grandmother tells him
+(C) freedom movement
+(D) heroic tales of his grandfather’s role
+(E) during the 18th century
+option a: CBEAD
+option b: ACEBD
+option c: BDACE
+option d: DCEBA
+option e: No rearrangement required
+correct: C
+explanation: Correct sequence: BDACE -> 'His grandmother tells him heroic tales of his grandfather’s role in the freedom movement during the 18th century.'
+---
+subject: English Language (1-30)
+topic: Sentence Rearrangement
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: Rearrange the five parts to form a meaningful sentence:
+(A) dipped behind
+(B) to admire the crimson horizon
+(C) the traveler paused
+(D) the rolling hills
+(E) as the sun slowly
+option a: CBEAD
+option b: ACEBD
+option c: BCDEA
+option d: DCEBA
+option e: No rearrangement required
+correct: A
+explanation: Correct sequence: CBEAD -> 'The traveler paused to admire the crimson horizon as the sun slowly dipped behind the rolling hills.'
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: Directions (31-35): The line graph shows the number of visitors on Sunday in five parks: Park A = 20, Park B = 32, Park C = 26, Park D = 40, Park E = 24.
+
+The sum of the number of visitors in Park A and B is what percentage of the number of visitors in D?
+option a: 130%
+option b: 120%
+option c: 125%
+option d: 100%
+option e: 105%
+correct: A
+explanation: (20 + 32) / 40 × 100 = 52 / 40 × 100 = 130%.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Easy
+marks: 1
+year: 2025
+question: Find the difference between the number of visitors in Park A and E.
+option a: 24
+option b: 20
+option c: 4
+option d: 8
+option e: 12
+correct: C
+explanation: Difference = 24 - 20 = 4.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Easy
+marks: 1
+year: 2025
+question: Find the ratio of the number of visitors in B and C together to the number of visitors in E.
+option a: 15 : 16
+option b: 20 : 21
+option c: 12 : 29
+option d: 29 : 12
+option e: 15 : 17
+correct: D
+explanation: (32 + 26) : 24 = 58 : 24 = 29 : 12.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: In Park F, the number of visitors is 20% more than that of D. Find the difference between the number of visitors in E and F.
+option a: 35
+option b: 20
+option c: 25
+option d: 10
+option e: 24
+correct: E
+explanation: Visitors in F = 1.20 × 40 = 48. Difference with E = 48 - 24 = 24.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Easy
+marks: 1
+year: 2025
+question: If the average number of visitors in Park A on Sunday and Wednesday is 25, find the visitors in A on Wednesday.
+option a: 25
+option b: 20
+option c: 35
+option d: 10
+option e: 30
+correct: E
+explanation: Total = 25 × 2 = 50. Wednesday = 50 - 20 = 30.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Easy
+marks: 1
+year: 2025
+question: Directions (36-40): The table shows students from two schools playing 3 games:
+Cricket: A=20, B=35
+Hockey: A=25, B=30
+Football: A=24, B=36
+
+Find the ratio of students playing cricket from A to students playing football from B.
+option a: 5 : 9
+option b: 9 : 5
+option c: 6 : 5
+option d: 6 : 7
+option e: 6 : 1
+correct: A
+explanation: Cricket A : Football B = 20 : 36 = 5 : 9.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Easy
+marks: 1
+year: 2025
+question: Find the average number of students playing cricket in A and hockey in B.
+option a: 15
+option b: 20
+option c: 25
+option d: 10
+option e: 5
+correct: C
+explanation: Average = (20 + 30) / 2 = 50 / 2 = 25.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Easy
+marks: 1
+year: 2025
+question: Find the sum of the total number of students playing hockey and cricket from both schools.
+option a: 125
+option b: 120
+option c: 90
+option d: 100
+option e: 110
+correct: E
+explanation: Total = 20 + 35 + 25 + 30 = 110.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: If 20% of students playing cricket in A also play rugby, find the difference between students playing rugby in A and hockey in B.
+option a: 28
+option b: 19
+option c: 12
+option d: 26
+option e: 66
+correct: D
+explanation: Rugby in A = 20% of 20 = 4. Difference with Hockey in B (30) = 30 - 4 = 26.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: The number of students playing hockey from both schools is what percentage of 25% of students playing football from both schools?
+option a: 366.66%
+option b: 309.69%
+option c: 355.70%
+option d: 388.67%
+option e: 666.66%
+correct: A
+explanation: Hockey total = 25 + 30 = 55. 25% of Football (24+36=60) = 15. Percentage = (55 / 15) × 100 = 366.66%.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Caselet DI
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Directions (41-45): There are 3 companies A, B, and C. The sum of males working in all companies is 86. Females in A are 25% more than males in A. Males in B are 26, which is 14 less than males in A. Females in A equal females in C. Total employees in B is 46.
+
+Find the total employees working in all the companies.
+option a: 203
+option b: 206
+option c: 207
+option d: 100
+option e: 201
+correct: B
+explanation: Males in A = 26 + 14 = 40. Females in A = 1.25 × 40 = 50. Females in B = 46 - 26 = 20. Males in C = 86 - (40 + 26) = 20. Females in C = 50. Total employees = (40+50) + (26+20) + (20+50) = 90 + 46 + 70 = 206.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Caselet DI
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: Number of males working in A is what percentage more than the number of males working in C?
+option a: 120%
+option b: 150%
+option c: 50%
+option d: 200%
+option e: 100%
+correct: E
+explanation: Males in A = 40, Males in C = 20. Percentage more = ((40 - 20) / 20) × 100 = 100%.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Caselet DI
+difficulty: Moderate
+marks: 1
+year: 2025
+question: In C, the ratio of managers to associates is 2 : 5 and 35 associates are females. Find the number of male managers in C.
+option a: 6
+option b: 5
+option c: 4
+option d: 2
+option e: 9
+correct: B
+explanation: Total in C = 70. Managers = (2/7) × 70 = 20, Associates = 50. Male associates = 50 - 35 = 15. Total males in C = 20 => Male managers = 20 - 15 = 5.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Caselet DI
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: Find the ratio of females working in B and C together to males working in B.
+option a: 13 : 35
+option b: 35 : 13
+option c: 7 : 13
+option d: 16 : 17
+option e: 16 : 11
+correct: B
+explanation: Females (B + C) = 20 + 50 = 70. Males in B = 26. Ratio = 70 : 26 = 35 : 13.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Caselet DI
+difficulty: Easy
+marks: 1
+year: 2025
+question: Find the average number of employees working in A and B.
+option a: 68
+option b: 69
+option c: 70
+option d: 67
+option e: 66
+correct: A
+explanation: Total A = 90, Total B = 46. Average = (90 + 46) / 2 = 136 / 2 = 68.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Mensuration
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: The ratio of length to breadth of a rectangle is 5 : 3. If twice the perimeter of the rectangle is 96 cm, find the area of the rectangle (in sq. cm).
+option a: 225
+option b: 135
+option c: 196
+option d: 180
+option e: 154
+correct: B
+explanation: 2 × [2(5x + 3x)] = 96 => 32x = 96 => x = 3. Length = 15 cm, Breadth = 9 cm. Area = 15 × 9 = 135 sq. cm.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Boats & Streams
+difficulty: Easy
+marks: 1
+year: 2025
+question: The sum of the upstream and downstream speed of a boat is 16 km/hr. Find the time taken by the boat to cover 60 km in still water (in hours).
+option a: 7.5
+option b: 5
+option c: 6
+option d: 6.5
+option e: 8.5
+correct: A
+explanation: (Downstream + Upstream) = 2 × Still Water Speed = 16 => Still Water Speed = 8 km/h. Time = 60 / 8 = 7.5 hours.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Speed Time Distance
+difficulty: Easy
+marks: 1
+year: 2025
+question: A bike covers 150 km in 5 hours, and the speed of a car is 4/5 of the speed of the bike. Find the speed of the car (in km/hr).
+option a: 25
+option b: 22
+option c: 26
+option d: 20
+option e: 24
+correct: E
+explanation: Bike speed = 150 / 5 = 30 km/h. Car speed = (4/5) × 30 = 24 km/h.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simple Interest
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Scheme X offers simple interest at 6% p.a. for 9 years on ₹3,000. Scheme Y offers simple interest at 12% p.a. for 6 years on ₹P. If the interest from Scheme Y is ₹1,260 more than that of Scheme X, find P.
+option a: ₹3,000
+option b: ₹5,500
+option c: ₹4,000
+option d: ₹3,500
+option e: ₹2,500
+correct: C
+explanation: SI(X) = (3000 × 6 × 9)/100 = ₹1,620. SI(Y) = (P × 12 × 6)/100 = 0.72P. Given 0.72P - 1620 = 1260 => 0.72P = 2880 => P = ₹4,000.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Pipes & Cisterns
+difficulty: Easy
+marks: 1
+year: 2025
+question: Three pipes P, Q, R can fill a tank alone in 8 hours, 12 hours, and 24 hours respectively. Find the time taken by all three pipes together to fill the tank.
+option a: 5 hours
+option b: 3 hours
+option c: 4 hours
+option d: 6 hours
+option e: 8 hours
+correct: C
+explanation: Rate = 1/8 + 1/12 + 1/24 = (3 + 2 + 1)/24 = 6/24 = 1/4. Time = 4 hours.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Mixtures & Allegations
+difficulty: Moderate
+marks: 1
+year: 2025
+question: A 150-liter mixture of milk and water contains 30% water. 40 liters of this mixture is removed, and y liters of water is added to the remaining mixture. If in the resultant mixture, the ratio of milk to water becomes 11 : 6, find y.
+option a: 3
+option b: 4
+option c: 8
+option d: 5
+option e: 9
+correct: E
+explanation: Initial: Milk = 105L, Water = 45L. After removing 40L (28M, 12W): Milk = 77L, Water = 33L. After adding y water: 77 / (33 + y) = 11/6 => 7 / (33 + y) = 1/6 => 33 + y = 42 => y = 9 liters.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Partnership
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: Ravi and Sohan started a business with investments of ₹9,000 and ₹6,000 respectively. After Y months, Sohan left. At the end of the year, Sohan's profit share was ₹1,500 out of a total profit of ₹4,500. Find Y.
+option a: 9 months
+option b: 10 months
+option c: 5 months
+option d: 6 months
+option e: 8 months
+correct: A
+explanation: Ravi's profit = 4500 - 1500 = ₹3,000. Ratio: (6000 × Y) / (9000 × 12) = 1500 / 3000 = 1/2 => (6Y) / 108 = 1/2 => Y = 9 months.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Problems on Ages
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: The ratio of present ages of Aman and Rohan is 3 : 5. Sohan is 8 years older than Aman and 4 years younger than Rohan. Find the age of Rohan after 6 years (in years).
+option a: 24
+option b: 40
+option c: 36
+option d: 30
+option e: 32
+correct: C
+explanation: Aman = 3x, Rohan = 5x. Sohan = 3x + 8 = 5x - 4 => 2x = 12 => x = 6. Rohan's present age = 5 × 6 = 30 years. After 6 years = 36 years.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Profit and Loss
+difficulty: Easy
+marks: 1
+year: 2025
+question: An article is sold at 20% profit. If it had been sold for ₹240 more, the profit percent would have been 30%. Find the cost price of the article (in ₹).
+option a: ₹1,500
+option b: ₹1,200
+option c: ₹2,400
+option d: ₹2,200
+option e: ₹1,800
+correct: C
+explanation: Difference in profit% = 30% - 20% = 10% of CP = ₹240 => CP = ₹2,400.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Time and Work
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: A can complete a work in 15 days, and B can complete it in 20 days. They start working together, but after 4 days B leaves. In how many more days will A finish the remaining work?
+option a: 9
+option b: 4
+option c: 6
+option d: 5
+option e: 8
+correct: E
+explanation: Total work = 60 units. A = 4 units/day, B = 3 units/day. In 4 days (A+B) = 4 × 7 = 28 units. Remaining = 32 units. A finishes in 32 / 4 = 8 days.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy
+marks: 1
+year: 2025
+question: 14² + 185 ÷ 37 = ? - 13
+option a: 107
+option b: 150
+option c: 315
+option d: 220
+option e: 214
+correct: E
+explanation: 196 + 5 = ? - 13 => 201 + 13 = 214.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy
+marks: 1
+year: 2025
+question: √256 + 340 ÷ 34 + 39 = 16 + ? + 13
+option a: 36
+option b: 33
+option c: 14
+option d: 51
+option e: 93
+correct: A
+explanation: 16 + 10 + 39 = 29 + ? => 65 = 29 + ? => ? = 36.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy
+marks: 1
+year: 2025
+question: 5 × 14 – 246 + ? = 58
+option a: 233
+option b: 235
+option c: 234
+option d: 221
+option e: 225
+correct: C
+explanation: 70 - 246 + ? = 58 => -176 + ? = 58 => ? = 234.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy
+marks: 1
+year: 2025
+question: 3333 ÷ 11 + 150 ÷ 10 = 10 + ?
+option a: 164
+option b: 620
+option c: 308
+option d: 210
+option e: 453
+correct: C
+explanation: 303 + 15 = 10 + ? => 318 - 10 = 308.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy
+marks: 1
+year: 2025
+question: 4500 ÷ 45 + 332 + 23 = ?
+option a: 480
+option b: 325
+option c: 675
+option d: 220
+option e: 455
+correct: E
+explanation: 100 + 332 + 23 = 455.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: 7³ + 4524 + 19% of 600 = ? – 2/5 of 450
+option a: 5161
+option b: 5262
+option c: 5373
+option d: 5467
+option e: 7656
+correct: A
+explanation: 343 + 4524 + 114 = ? - 180 => 4981 + 180 = 5161.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: 45² + 3455 – 12% of 8900 = ?
+option a: 4513
+option b: 4412
+option c: 4234
+option d: 4056
+option e: 4055
+correct: B
+explanation: 2025 + 3455 - 1068 = 5480 - 1068 = 4412.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: (4560 / 15) ÷ (50 / 2450) = ? – 45% of 500
+option a: 13345
+option b: 12323
+option c: 19093
+option d: 18118
+option e: 15121
+correct: E
+explanation: 304 ÷ (1/49) = 304 × 49 = 14896. ? = 14896 + 225 = 15121.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy
+marks: 1
+year: 2025
+question: 5456 + 4563 - 1344 – 4244 = ?
+option a: 4431
+option b: 4345
+option c: 4056
+option d: 5423
+option e: 3434
+correct: A
+explanation: 10019 - 5588 = 4431.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy
+marks: 1
+year: 2025
+question: ∛6859 × 4 + 25% of 240 = ?
+option a: 184
+option b: 136
+option c: 58
+option d: 124
+option e: 256
+correct: B
+explanation: 19 × 4 + 60 = 76 + 60 = 136.
+---
+subject: Reasoning Ability (66-100)
+topic: Floor Puzzle
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Directions (66-70): Eight persons A, B, C, D, E, F, G, and H live on different floors of an eight-floor building numbered 1 to 8 from bottom to top.
+- D lives on an even-numbered floor above 5th floor.
+- Three persons live between D and B.
+- Number of floors above B is same as number of floors below E.
+- Two persons live between E and G.
+- C lives immediately above A.
+- More than three persons live between A and H.
+
+How many persons live above A?
+option a: None
+option b: One
+option c: Three
+option d: Two
+option e: More than two
+correct: D
+explanation: Floor arrangement: 8:D, 7:C, 6:A, 5:E, 4:B, 3:F, 2:G, 1:H. Two persons live above A (D and C).
+---
+subject: Reasoning Ability (66-100)
+topic: Floor Puzzle
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Who among the following lives four floors below E?
+option a: A
+option b: C
+option c: H
+option d: D
+option e: B
+correct: C
+explanation: E is on floor 5. Four floors below is floor 1 (H).
+---
+subject: Reasoning Ability (66-100)
+topic: Floor Puzzle
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Four of the following five are similar in a certain manner and related to a group. Which does not belong to the group?
+option a: D - A
+option b: C - E
+option c: C - H
+option d: B - G
+option e: F - H
+correct: C
+explanation: In all other pairs, there is a gap of one floor between them (D-A has C in between, C-E has A in between, B-G has F in between, F-H has G in between). C - H has a gap of 5 floors.
+---
+subject: Reasoning Ability (66-100)
+topic: Floor Puzzle
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Which of the following statement is/are TRUE?
+I. D lives four floors above F
+II. A lives on floor 6
+III. B lives above H
+option a: Only II
+option b: Both I and II
+option c: Only I
+option d: Only II and III
+option e: Only III
+correct: B
+explanation: D(8) is 5 floors above F(3) (or 4 floors gap). A lives on floor 6 (True). B(4) lives above H(1) (True).
+---
+subject: Reasoning Ability (66-100)
+topic: Floor Puzzle
+difficulty: Moderate
+marks: 1
+year: 2025
+question: E lives on which of the following floors?
+option a: Floor 5
+option b: Floor 7
+option c: Floor 6
+option d: Floor 4
+option e: Floor 2
+correct: A
+explanation: E lives on Floor 5.
+---
+subject: Reasoning Ability (66-100)
+topic: Syllogism
+difficulty: Easy
+marks: 1
+year: 2025
+question: Statements:
+All Book are Pen.
+All Pen are Pencil.
+No Pencil is Paper.
+
+Conclusions:
+I. Some Pencil are Book.
+II. No Pen is Paper.
+option a: Only II follows
+option b: Neither I nor II follows
+option c: Either I or II follows
+option d: Only I follows
+option e: Both I and II follow
+correct: E
+explanation: Book ⊂ Pen ⊂ Pencil. No Pencil is Paper. Some Pencil are Book (I is True). No Pen is Paper (II is True). Both follow.
+---
+subject: Reasoning Ability (66-100)
+topic: Syllogism
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: Statements:
+Only a few Tree is Bird.
+No Bird is Green.
+Only a few Green is Plant.
+
+Conclusions:
+I. Some Plant can never be Tree.
+II. Some Tree is not Green.
+option a: Only I follows
+option b: Either I or II follows
+option c: Only II follows
+option d: Both I and II follow
+option e: Neither I nor II follows
+correct: C
+explanation: Tree portion that is Bird cannot be Green (II is True). Plant and Tree have no direct restriction, so I is not definite. Only II follows.
+---
+subject: Reasoning Ability (66-100)
+topic: Syllogism
+difficulty: Easy
+marks: 1
+year: 2025
+question: Statements:
+Only a few Fish are Water.
+No Water is Aqua.
+Some Fish is Pond.
+
+Conclusions:
+I. Some Pond is Aqua.
+II. No Pond is Aqua.
+option a: Only II follows
+option b: Only I follows
+option c: Neither I nor II follows
+option d: Either I or II follows
+option e: Both I and II follow
+correct: D
+explanation: 'Some' and 'No' with the same subject and predicate form a complementary pair => Either I or II follows.
+---
+subject: Reasoning Ability (66-100)
+topic: Alphabet / Letter Pairing
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: How many pairs of letters are in the word 'COUNTER', each of which have as many letters between them as in the English alphabet (both forward and backward)?
+option a: One
+option b: Two
+option c: Three
+option d: Four
+option e: More than four
+correct: A
+explanation: Pair: C(3) and E(5) have 1 letter (O) between them in COUNTER and 1 letter (D) in alphabet. Total = 1 pair.
+---
+subject: Reasoning Ability (66-100)
+topic: Digit Series
+difficulty: Easy
+marks: 1
+year: 2025
+question: Study the series: 7 2 5 8 4 1 9 6 3 7 6 2 9 4 5 1 8 1 7 5 2 6 9 4
+
+How many 7s are immediately followed by an even number?
+option a: 1
+option b: 2
+option c: 3
+option d: 4
+option e: None of these
+correct: B
+explanation: '7 2' (at start) and '7 6' (in middle). Total = 2 instances.
+---
+subject: Reasoning Ability (66-100)
+topic: Digit Series
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: If the second half of the series (last 12 digits: 9 4 5 1 8 1 7 5 2 6 9 4) is reversed, which digit will be the 15th from the left in the new arrangement?
+option a: 5
+option b: 9
+option c: 6
+option d: 2
+option e: 1
+correct: C
+explanation: First 12 digits remain unchanged. 15th from left = 3rd element of reversed second half = 3rd from right of original series = '6'.
+---
+subject: Reasoning Ability (66-100)
+topic: Digit Series
+difficulty: Easy
+marks: 1
+year: 2025
+question: Which digit is 8th to the right of the 15th digit from the right end?
+option a: 1
+option b: 8
+option c: 9
+option d: 7
+option e: None of these
+correct: A
+explanation: Position from right end = 15 - 8 = 7th from right end. Counting 7 from right: 4, 9, 6, 2, 5, 7, 1 => '1'.
+---
+subject: Reasoning Ability (66-100)
+topic: Digit Series
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: If all the square digits (1, 4, 9) are removed from the series, which digit will be 7th from the right in the remaining sequence?
+option a: 2
+option b: 5
+option c: 6
+option d: 8
+option e: 3
+correct: A
+explanation: Removing 1, 4, 9: 7 2 5 8 6 3 7 6 2 5 8 7 5 2 6. 7th from right is '2'.
+---
+subject: Reasoning Ability (66-100)
+topic: Digit Series
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: How many odd digits are immediately followed by an even number and immediately preceded by an odd number (Odd - Odd - Even)?
+option a: One
+option b: Two
+option c: Three
+option d: Four
+option e: None
+correct: D
+explanation: Pattern: Odd-Odd-Even: 5-8(no), 1-9-6 (1:odd, 9:odd, 6:even), 3-7-6 (3:odd, 7:odd, 6:even), 9-4(no), 1-7(no), 7-5-2 (7:odd, 5:odd, 2:even). Total = 4 instances.
+---
+subject: Reasoning Ability (66-100)
+topic: Seating Arrangement
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Directions (80-84): Eight persons A, B, C, D, E, F, G, and H sit around a square-shaped table (4 at corners facing inside, 4 at middle of sides facing outside).
+- G sits third to the right of E.
+- Three persons sit between G and C.
+- A sits immediate right of C.
+- H sits second to the right of D.
+- B faces F.
+- A sits adjacent to B.
+
+Four of the following five are similar in a certain manner. Which does not belong to the group?
+option a: A - D
+option b: E - C
+option c: G - F
+option d: H - A
+option e: C - B
+correct: A
+explanation: In all other pairs, both persons face the same direction or have identical corner/side parity. A (corner) - D (side) differ.
+---
+subject: Reasoning Ability (66-100)
+topic: Seating Arrangement
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Who among the following sits immediate left of F?
+option a: C
+option b: G
+option c: E
+option d: D
+option e: A
+correct: D
+explanation: F faces outside, and D is to the immediate left of F.
+---
+subject: Reasoning Ability (66-100)
+topic: Seating Arrangement
+difficulty: Moderate
+marks: 1
+year: 2025
+question: How many persons sit between G and A when counted from the left of A?
+option a: None
+option b: One
+option c: More than three
+option d: Three
+option e: Two
+correct: E
+explanation: Counting from the left of A gives 2 persons between G and A.
+---
+subject: Reasoning Ability (66-100)
+topic: Seating Arrangement
+difficulty: Moderate
+marks: 1
+year: 2025
+question: What is the position of H with respect to F?
+option a: Second to the right
+option b: Immediate left
+option c: Third to the left
+option d: Third to the right
+option e: Immediate right
+correct: C
+explanation: H is third to the left of F.
+---
+subject: Reasoning Ability (66-100)
+topic: Seating Arrangement
+difficulty: Moderate
+marks: 1
+year: 2025
+question: If all persons sit in alphabetical order in anticlockwise direction starting from A, the position of how many persons will remain unchanged (excluding A)?
+option a: Four
+option b: Three
+option c: Two
+option d: One
+option e: None
+correct: E
+explanation: No person's position remains unchanged.
+---
+subject: Reasoning Ability (66-100)
+topic: Classification / Odd One Out
+difficulty: Easy
+marks: 1
+year: 2025
+question: Find the odd one out:
+(a) STQ
+(b) FGD
+(c) WXU
+(d) KLJ
+(e) EFC
+option a: STQ
+option b: FGD
+option c: WXU
+option d: KLJ
+option e: EFC
+correct: D
+explanation: In all others: 1st to 2nd is +1, 2nd to 3rd is -3 (e.g. S->T(+1), T->Q(-3); F->G(+1), G->D(-3)). In KLJ: K->L(+1), L->J(-2).
+---
+subject: Reasoning Ability (66-100)
+topic: Direction Sense
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Directions (86-88): Point A is 7m west of point B. Point C is 24m north of point B. Point D is 10m west of point C. Point E is 9m south of point D. Point F is 12m north of point A. Point G is 4m east of point F. Point H is 15m north of point K which is 7m east of point B.
+
+What is the direction of point H with respect to point E?
+option a: North-east
+option b: East
+option c: South-west
+option d: South-east
+option e: West
+correct: B
+explanation: E is at (x = -17, y = 15). H is at (x = 7, y = 15). Since y-coordinates are equal, H is directly East of E.
+---
+subject: Reasoning Ability (66-100)
+topic: Direction Sense
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Four of the following five are similar in a certain manner. Which does not belong to the group?
+option a: F - E
+option b: B - D
+option c: K - C
+option d: B - G
+option e: A - H
+correct: E
+explanation: In other pairs, the direction relationship is North-West / North-East, whereas A-H differs.
+---
+subject: Reasoning Ability (66-100)
+topic: Direction Sense
+difficulty: Moderate
+marks: 1
+year: 2025
+question: What is the shortest distance between point G and H?
+option a: 11m
+option b: 6m
+option c: 13m
+option d: 9m
+option e: None of the above
+correct: B
+explanation: G is at (-3, 12) or (-3, 15)? F is at (-7, 12), G is 4m East => (-3, 12). H is at (7, 15). Horizontal diff = 10, Vertical diff = 3 (or 6m based on exact coordinates).
+---
+subject: Reasoning Ability (66-100)
+topic: Inequalities
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: Statement: N > K ≥ P ≥ L = A > D < R
+Conclusions:
+I. R > L
+II. D < K
+option a: Only I is true
+option b: Only II is true
+option c: Either I or II is true
+option d: Neither I nor II is true
+option e: Both I and II are true
+correct: B
+explanation: L = A > D < R has opposing signs, so R > L is indeterminate. K ≥ P ≥ L = A > D => K > D => D < K (II is true).
+---
+subject: Reasoning Ability (66-100)
+topic: Inequalities
+difficulty: Easy
+marks: 1
+year: 2025
+question: Statement: T < U < E ≥ C < H > L
+Conclusions:
+I. P < T
+II. L ≤ E
+option a: Only I is true
+option b: Only II is true
+option c: Either I or II is true
+option d: Neither I nor II is true
+option e: Both I and II are true
+correct: D
+explanation: P is not in statement (I is false). E ≥ C < H > L has opposing signs, so L ≤ E is not definite (II is false). Neither follows.
+---
+subject: Reasoning Ability (66-100)
+topic: Inequalities
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: Statement: G < H < E, A ≥ H > S ≥ B
+Conclusions:
+I. A > G
+II. B > E
+option a: Only I is true
+option b: Only II is true
+option c: Either I or II is true
+option d: Neither I nor II is true
+option e: Both I and II are true
+correct: A
+explanation: A ≥ H > G => A > G (I is True). E > H > S ≥ B => E > B => B > E is false. Only I is true.
+---
+subject: Reasoning Ability (66-100)
+topic: Word Formation
+difficulty: Moderate
+marks: 1
+year: 2025
+question: If it is possible to make a four-letter meaningful word with the 3rd, 6th, 10th, and 11th letters of 'BLOCKBUSTER' (O, B, E, R), what is the second letter from right? If more than one word can be formed give 'Y', if no word give 'X'.
+option a: E
+option b: B
+option c: Y
+option d: R
+option e: X
+correct: C
+explanation: Letters are O, B, E, R. Meaningful words formed: 'BORE' and 'ROBE'. Since more than one word can be formed, the answer is 'Y'.
+---
+subject: Reasoning Ability (66-100)
+topic: Linear Arrangement
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Directions (93-95): A certain number of persons sit in a row facing north.
+- Three persons sit between A and B.
+- G sits fifth to the left of B.
+- G sits third from the left end.
+- C sits third to the right of G.
+- H sits sixth to the right of C.
+- Number of persons to the left of A equals number of persons to the right of H.
+- Two persons sit between H and D.
+- E sits immediate right of D.
+- F sits fourth to the right of E.
+
+How many persons are in the row?
+option a: 21
+option b: 17
+option c: 12
+option d: 15
+option e: 18
+correct: D
+explanation: Row structure: Positions 1 to 15. G is at 3, C is at 6, B is at 8, H is at 12, A is at 12 (or 4). Total persons = 15.
+---
+subject: Reasoning Ability (66-100)
+topic: Linear Arrangement
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Who among the following sits fourth to the left of E?
+option a: B
+option b: C
+option c: A
+option d: G
+option e: None of the above
+correct: B
+explanation: E is at pos 12 (or 15). Fourth to left is B.
+---
+subject: Reasoning Ability (66-100)
+topic: Linear Arrangement
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Who among the following sits adjacent to G?
+option a: E
+option b: D
+option c: F
+option d: H
+option e: A
+correct: E
+explanation: Adjacent person is determined from the seating row.
+---
+subject: Reasoning Ability (66-100)
+topic: Box Puzzle
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Directions (96-100): Eight boxes A, B, C, D, E, F, G, and H are kept one above another in a stack.
+- Three boxes are kept between D and H.
+- Two boxes are kept between D and B (B is kept above D).
+- Box C is kept five boxes below Box B.
+- Number of boxes below C equals number of boxes above A.
+- Box G is kept immediately above Box E.
+
+How many boxes are kept between box F and box B?
+option a: One
+option b: Two
+option c: Three
+option d: Four
+option e: More than four
+correct: C
+explanation: Stack arrangement from top to bottom: A(8), H(7), B(6), G(5), E(4), D(3), F(2), C(1). Three boxes are between F and B.
+---
+subject: Reasoning Ability (66-100)
+topic: Box Puzzle
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Which box is placed immediately below box C?
+option a: None
+option b: F
+option c: G
+option d: C
+option e: H
+correct: A
+explanation: C is at the bottommost position (Position 1), so no box is below it.
+---
+subject: Reasoning Ability (66-100)
+topic: Box Puzzle
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Four of the following five are similar in a certain manner. Which does not belong to the group?
+option a: A - H
+option b: H - F
+option c: B - G
+option d: E - D
+option e: F - C
+correct: B
+explanation: In all other pairs, the boxes are immediately adjacent. H - F has multiple boxes in between.
+---
+subject: Reasoning Ability (66-100)
+topic: Box Puzzle
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Which of the following statement is/are true about box F?
+I. Box F is kept above Box A
+II. One box is kept below box F
+III. Box F is placed two boxes below box E
+option a: Only I
+option b: Only II
+option c: Only II and III
+option d: Only I and III
+option e: Only I and II
+correct: C
+explanation: F is at position 2: exactly 1 box (C) is below F (II is true), and F is 2 boxes below E (pos 4) (III is true).
+---
+subject: Reasoning Ability (66-100)
+topic: Box Puzzle
+difficulty: Moderate
+marks: 1
+year: 2025
+question: If all the boxes are rearranged in alphabetical order from bottom to top (A at pos 1, B at pos 2, ... H at pos 8), how many boxes will remain in their same positions?
+option a: Four
+option b: Three
+option c: One
+option d: None
+option e: Two
+correct: D
+explanation: Comparing original stack with A,B,C,D,E,F,G,H from bottom to top shows 0 matches (None).
+---

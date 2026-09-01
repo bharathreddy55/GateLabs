@@ -1,0 +1,1517 @@
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Directions (1-10): Read the following passage and answer the questions:
+
+The Grand Oceanic Convention, held in Rio de Janeiro, brought together representatives from 72 countries to confront the alarming rise of ocean pollution. This global gathering highlighted the urgency of safeguarding marine ecosystems and presented facts that called for immediate action. Among the leading voices was Dr. Fernando, a marine biologist from Cairo, who shared the results of his extensive research on the destruction of coral reefs and the loss of biodiversity. He explained that untreated sewage and rising industrial waste have triggered large-scale bleaching of coral reefs, causing the disappearance of several marine species. His study revealed that a healthy coral ecosystem is vital for maintaining the delicate balance of marine life and for sustaining the deep connections between oceanic species.
+Alongside him, the Japanese scientist Dr. Huslu emphasized the necessity of drastically reducing plastic usage across the world. He presented startling facts showing that microscopic plastics—derived from single-use packaging and industrial debris—are entering the marine food chain, eventually reaching human diets. Dr. Huslu supported the global call for eliminating single-use plastics and replacing them with biodegradable materials, stressing that this approach is essential to protect both marine life and human health. Adding to the discussion, Dr. Eleanor Carter, a marine researcher from Australia, highlighted the deep impact of oil spills and chemical effluents. She explained how such pollutants have disrupted the breeding patterns of many marine species and have poisoned critical oceanic regions.
+The research findings presented during the convention were striking. Over eight million metric tons of plastic waste are dumped into the oceans each year. Microscopic plastics have already been detected in more than eighty percent of marine species, and coral reefs across the globe have suffered a forty percent decline in health due to pollutants and rising sea temperatures. These facts underscored the need for a stronger, coordinated approach to ocean conservation.
+Delegates stressed the importance of adopting biodegradable alternatives to plastic, enforcing stricter regulations on industrial waste disposal, and promoting renewable energy sources to minimize marine contamination. From Mumbai to Oslo, world leaders took a solemn oath to face this challenge together and to protect the deep blue seas through collective and persistent efforts. The convention concluded with a pledge for innovative research and global educational campaigns, signalling a united approach to preserve the world’s oceans and safeguard their resources for future generations.
+
+What was the main focus of Dr. Fernando’s research that he presented at the Grand Oceanic Convention?
+option a: The effect of industrial waste on coral reefs and marine biodiversity
+option b: The disruption of breeding patterns due to oil spills
+option c: The contamination of seafood with microscopic plastics
+option d: The role of rising sea temperatures in altering ocean currents
+option e: The impact of renewable energy projects on deep ocean ecosystems
+correct: A
+explanation: Dr. Fernando's research focused on how untreated sewage and rising industrial waste caused large-scale coral reef bleaching and loss of marine biodiversity.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Easy
+marks: 1
+year: 2025
+question: In which city was the Grand Oceanic Convention on ocean pollution organized?
+option a: Cairo, where Dr. Fernando conducted his marine studies
+option b: Rio de Janeiro, where 72 countries gathered for the convention
+option c: Mumbai, where the global oath against pollution was announced
+option d: Oslo, which later pledged international cooperation
+option e: Sydney, the base of Dr. Eleanor Carter’s research
+correct: B
+explanation: The opening sentence notes: 'The Grand Oceanic Convention, held in Rio de Janeiro, brought together representatives from 72 countries...'
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Moderate
+marks: 1
+year: 2025
+question: What global action did the Japanese scientist Dr. Huslu support to tackle the problem of ocean pollution?
+option a: Enforcing stricter regulations on industrial waste disposal
+option b: Promoting biodegradable alternatives to single-use plastics
+option c: Expanding the study of deep ocean ecosystems
+option d: Reducing oil spills through renewable energy projects
+option e: Developing artificial reefs to counter biodiversity loss
+correct: B
+explanation: Dr. Huslu supported eliminating single-use plastics and replacing them with biodegradable materials.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Which fact from the convention highlighted the severity of microscopic plastic pollution?
+option a: Coral reefs have faced a forty percent decline in health worldwide
+option b: Over eight million metric tons of plastic waste enter the oceans every year
+option c: Microscopic plastics have been found in more than eighty percent of marine species
+option d: Oil spills have disrupted the breeding patterns of marine life
+option e: Industrial waste has caused bleaching of coral reefs on a large scale
+correct: C
+explanation: Microscopic plastics detected in >80% of marine species directly underscored microplastic severity.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Moderate
+marks: 1
+year: 2025
+question: What collective commitment did the delegates make from Mumbai to Oslo?
+option a: To reduce oil spills by switching to renewable energy sources
+option b: To launch more research projects on deep-sea mining
+option c: To work together and face the challenge of ocean pollution
+option d: To establish marine breeding zones for endangered species
+option e: To create artificial islands to protect marine biodiversity
+correct: C
+explanation: World leaders took a solemn oath to face the challenge together through persistent efforts.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Moderate
+marks: 1
+year: 2025
+question: According to the passage, which of the following statements is INCORRECT?
+(A) Dr. Fernando’s research explained how untreated sewage and industrial waste have caused the bleaching of coral reefs and the loss of marine biodiversity.
+(B) The Grand Oceanic Convention was held in Oslo where 72 countries pledged to fight ocean pollution.
+(C) Dr. Huslu supported a global reduction in plastic usage and encouraged the promotion of biodegradable materials.
+option a: Only A
+option b: Both B and C
+option c: Only C
+option d: Only B
+option e: All A, B, C
+correct: D
+explanation: The convention was held in Rio de Janeiro, not Oslo. Statement (B) is incorrect.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Moderate
+marks: 1
+year: 2025
+question: According to the passage, which of the following statements is/are CORRECT?
+(A) Dr. Eleanor Carter highlighted how oil spills and chemical effluents have disrupted the breeding patterns of marine species.
+(B) Dr. Huslu focused on the impact of coral bleaching due to rising sea temperatures.
+(C) The delegates from Mumbai to Oslo pledged to work collectively to tackle ocean pollution.
+option a: Only A
+option b: Both A and C
+option c: Only B
+option d: Only C
+option e: All A, B, C
+correct: B
+explanation: Statements (A) and (C) are correct. (B) is false because Dr. Fernando focused on coral bleaching.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Easy
+marks: 1
+year: 2025
+question: Which of the following words is same in meaning to 'deep' as used in the passage ('...highlighted the deep impact of oil spills...')?
+option a: Profound
+option b: Bottomless
+option c: Distant
+option d: Immense
+option e: Dark
+correct: A
+explanation: Here 'deep impact' means intense, significant, or 'profound'.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: Choose the most suitable word to fill the blank in the passage ('...through __________________ and persistent efforts.'):
+option a: collective
+option b: isolated
+option c: fragmented
+option d: blend
+option e: personal
+correct: A
+explanation: 'collective' indicates united and joint action among all world leaders.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Easy
+marks: 1
+year: 2025
+question: Which of the following words is same in meaning to 'approach' as used in the passage ('...signalling a united approach...')?
+option a: Method
+option b: Arrival
+option c: Pathway
+option d: Entrance
+option e: Contact
+correct: A
+explanation: 'Approach' refers to a strategy, way of doing, or 'method'.
+---
+subject: English Language (1-30)
+topic: Word Usage
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: Identify the sentence(s) where the word 'SOW' is used in a contextually and grammatically correct manner:
+(I) The farmer is sowing seeds in the field before the rainy season begins.
+(II) He promised to sow a button back onto his shirt after lunch.
+(III) She decided to sow flowers in her backyard garden for the spring.
+option a: Only (I)
+option b: Only (II)
+option c: Both (I) and (III)
+option d: All of these
+option e: Both (II) and (III)
+correct: C
+explanation: 'Sow' means to plant seeds (correct in I and III). For stitching buttons, 'sew' is used.
+---
+subject: English Language (1-30)
+topic: Para Jumbles
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: Directions (12-16): Rearrange the sentences (A, B, C, D, E) to form a coherent paragraph:
+(A) Their innovative strategies and consistent upgrades quickly attracted a growing customer base across multiple regions.
+(B) Just a year later, in 1979, they introduced significant improvements that enhanced the product’s quality and appeal.
+(C) In 1978, two ambitious co-founders launched a unique product called “Bleed Orange”, aiming to create a fresh impact in the market.
+(D) In less than fifty years, their efforts paid off as they achieved an impressive sale of 150 million dollars, marking a remarkable journey of growth and success.
+(E) As the years progressed, their reputation strengthened, and the brand became a trusted name in its category.
+
+Which of the following is the FIRST sentence after rearrangement?
+option a: A
+option b: B
+option c: C
+option d: D
+option e: E
+correct: C
+explanation: (C) begins the chronology in 1978 with product launch.
+---
+subject: English Language (1-30)
+topic: Para Jumbles
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: Which of the following is the SECOND sentence after rearrangement?
+option a: A
+option b: B
+option c: C
+option d: D
+option e: E
+correct: B
+explanation: (B) follows in 1979 describing product improvements.
+---
+subject: English Language (1-30)
+topic: Para Jumbles
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: Which of the following is the THIRD sentence after rearrangement?
+option a: A
+option b: B
+option c: C
+option d: D
+option e: E
+correct: A
+explanation: (A) describes growing customer base from upgrades.
+---
+subject: English Language (1-30)
+topic: Para Jumbles
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: Which of the following is the FOURTH sentence after rearrangement?
+option a: A
+option b: B
+option c: C
+option d: D
+option e: E
+correct: E
+explanation: (E) details strengthening reputation over time.
+---
+subject: English Language (1-30)
+topic: Para Jumbles
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: Which of the following is the FIFTH sentence after rearrangement?
+option a: A
+option b: B
+option c: C
+option d: D
+option e: E
+correct: D
+explanation: (D) concludes with the milestone achievement ($150M sales). Sequence: C-B-A-E-D.
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Easy
+marks: 1
+year: 2025
+question: Identify the part containing an error:
+
+He agreed (A)/ to repair the broken handle (B)/ before the (C)/ guests was supposed to arrive. (D)
+option a: A
+option b: B
+option c: C
+option d: D
+option e: No error
+correct: D
+explanation: Plural subject 'guests' requires 'were supposed to arrive'.
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: Identify the part containing an error:
+
+The dog chased the ball (A)/ into the street, (B)/ but it rolled too far (C)/ to being caught. (D)
+option a: A
+option b: B
+option c: C
+option d: D
+option e: No error
+correct: D
+explanation: Structure 'too... to' requires base verb: 'too far to be caught'.
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Easy
+marks: 1
+year: 2025
+question: Identify the part containing an error:
+
+After completing (A)/ the application, (B)/ you must submitting it (C)/ and pay the fees at the counter. (D)
+option a: A
+option b: B
+option c: C
+option d: D
+option e: No error
+correct: C
+explanation: Modal 'must' is followed by base form: 'must submit it'.
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: Identify the part containing an error:
+
+Neither the manager (A)/ nor the assistants was (B)/ informed about (C)/ the meeting this morning. (D)
+option a: A
+option b: B
+option c: C
+option d: D
+option e: No error
+correct: B
+explanation: In 'neither... nor', verb agrees with closest subject ('assistants', plural): 'were informed'.
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: Identify the part containing an error:
+
+She was surprised (A)/ that the package had arrived (B)/ so quick despite (C)/ the delay in shipping. (D)
+option a: A
+option b: B
+option c: C
+option d: D
+option e: No error
+correct: C
+explanation: Adverb 'quickly' should modify the verb 'had arrived'.
+---
+subject: English Language (1-30)
+topic: Fill in the Blanks
+difficulty: Easy
+marks: 1
+year: 2025
+question: He _____________ to the doctor’s clinic last night.
+option a: gone
+option b: going
+option c: goes
+option d: go
+option e: went
+correct: E
+explanation: 'Last night' indicates simple past tense 'went'.
+---
+subject: English Language (1-30)
+topic: Fill in the Blanks
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: Madhu Suban handled the tough question with ease and __________.
+option a: gravity
+option b: doubt
+option c: grace
+option d: repeat
+option e: cease
+correct: C
+explanation: 'With ease and grace' is a natural, positive phrase.
+---
+subject: English Language (1-30)
+topic: Fill in the Blanks
+difficulty: Easy
+marks: 1
+year: 2025
+question: The striker missed the goal but still earned loud __________.
+option a: practice
+option b: applause
+option c: regards
+option d: advice
+option e: punish
+correct: B
+explanation: 'Earned loud applause' conveys appreciation from spectators.
+---
+subject: English Language (1-30)
+topic: Fill in the Blanks
+difficulty: Easy
+marks: 1
+year: 2025
+question: The professor ended the lecture after a long class __________.
+option a: raise
+option b: record
+option c: discuss
+option d: debate
+option e: break
+correct: D
+explanation: 'Class debate' is a noun phrase referring to discussion/argument during class.
+---
+subject: English Language (1-30)
+topic: Fill in the Blanks
+difficulty: Easy
+marks: 1
+year: 2025
+question: He ___________ sold his Ferrari car after months of consideration.
+option a: previously
+option b: finally
+option c: scarcely
+option d: extremely
+option e: extraneous
+correct: B
+explanation: 'Finally' indicates an eventual conclusion after lengthy consideration.
+---
+subject: English Language (1-30)
+topic: Word Swap
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: Find the words that should be interchanged:
+
+After finishing (A) her dishes (B), the maid (C) put the chores (D) neatly in the kitchen (E).
+option a: A-E
+option b: A-E & B-C
+option c: B-D
+option d: A-C & B-D
+option e: No interchange required
+correct: C
+explanation: Swap B and D: 'After finishing her chores (D)... put the dishes (B) neatly in the kitchen'.
+---
+subject: English Language (1-30)
+topic: Word Swap
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: Find the words that should be interchanged:
+
+Before starting (A) his writer (B), the notes (C) book lecture (D) revised his research (E) carefully.
+option a: B-C & D-E
+option b: A-C
+option c: D-E
+option d: B-D & C-E
+option e: No interchange required
+correct: D
+explanation: Swap B-D & C-E: 'Before starting his lecture (D), the research (E) book writer (B) revised his notes (C) carefully.'
+---
+subject: English Language (1-30)
+topic: Word Swap
+difficulty: Easy
+marks: 1
+year: 2025
+question: Find the words that should be interchanged:
+
+He realized (A) he lost his book (B) at school (C) when the teacher (D) asked him to read (E).
+option a: B-D and A-C
+option b: A-D
+option c: A-E
+option d: A-E & C-D
+option e: No interchange required
+correct: E
+explanation: Sentence is already smooth and grammatically correct.
+---
+subject: English Language (1-30)
+topic: Word Swap
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: Find the words that should be interchanged:
+
+He arrived morning (A) at the heavy (B) because of airport (C) traffic and missed (D) his important late (E) flight.
+option a: A-E
+option b: A-E & B-C
+option c: B-D
+option d: A-C & B-D
+option e: No interchange required
+correct: B
+explanation: Swap A-E and B-C: 'He arrived late (E) at the airport (C) because of heavy (B) traffic and missed his important morning (A) flight.'
+---
+subject: Quantitative Aptitude (31-65)
+topic: Profit and Loss
+difficulty: Moderate
+marks: 1
+year: 2025
+question: The cost price of article B is ₹200 more than article A. Article A is sold at 20% profit and article B sold at 20% loss. If total selling price of A and B together is ₹760, find the cost price of article A.
+option a: ₹200
+option b: ₹400
+option c: ₹500
+option d: ₹300
+option e: ₹350
+correct: D
+explanation: 1.2x + 0.8(x + 200) = 760 => 2x + 160 = 760 => 2x = 600 => x = ₹300.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Speed Time Distance
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: A bus covers 320 km in 5 hours. Speed of a car is 3/8 of the bus. Find the ratio of distance covered by bus in 6 hours to distance covered by car in 5 hours.
+option a: 16 : 7
+option b: 16 : 5
+option c: 16 : 9
+option d: 5 : 16
+option e: 17 : 5
+correct: B
+explanation: Bus speed = 64 km/h. Car speed = (3/8) × 64 = 24 km/h. Bus distance = 64 × 6 = 384 km. Car distance = 24 × 5 = 120 km. Ratio = 384 : 120 = 16 : 5.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simple Interest
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Scheme A offers SI at 5% p.a. for 8 years on ₹2,000. Scheme B offers SI at 10% p.a. for 5 years on ₹P. If ratio of interest from A to B is 16 : 15, find P.
+option a: ₹1,500
+option b: ₹2,500
+option c: ₹1,000
+option d: ₹3,000
+option e: ₹1,200
+correct: A
+explanation: SI(A) = (2000 × 5 × 8)/100 = 800. SI(B) = (P × 10 × 5)/100 = P/2. 800 / (P/2) = 16/15 => 1600/P = 16/15 => P = ₹1,500.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Pipes and Cisterns
+difficulty: Easy
+marks: 1
+year: 2025
+question: Three pipes A, B, C can fill a tank alone in 5 hours, 6 hours, and 30 hours respectively. Find the time taken by all three pipes together to fill the tank.
+option a: 3.5 hours
+option b: 1.5 hours
+option c: 4.5 hours
+option d: 3 hours
+option e: 2.5 hours
+correct: E
+explanation: Rate = 1/5 + 1/6 + 1/30 = (6 + 5 + 1)/30 = 12/30 = 2/5. Time = 5/2 = 2.5 hours.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Boats and Streams
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Time taken by a boat to cover 90 km upstream is 2.5 hours more than that for downstream. If ratio of speed in still water to stream is 5 : 1, find still water speed of boat.
+option a: 10 km/hr
+option b: 25 km/hr
+option c: 15 km/hr
+option d: 30 km/hr
+option e: 45 km/hr
+correct: C
+explanation: Speed in still water = 5x, stream = x. 90/4x - 90/6x = 2.5 => 90/(12x) = 2.5 => 180 = 60x => x = 3. Still water speed = 5 × 3 = 15 km/hr.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Averages
+difficulty: Easy
+marks: 1
+year: 2025
+question: For an event A, B, C, D each contributed ₹400. If E contributed ₹200 more than the average of all four, find the total amount contributed by all five.
+option a: ₹2,000
+option b: ₹2,200
+option c: ₹3,200
+option d: ₹4,000
+option e: ₹4,800
+correct: B
+explanation: A+B+C+D = 4 × 400 = ₹1,600 (Average = ₹400). E = 400 + 200 = ₹600. Total = 1600 + 600 = ₹2,200.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Word Problem / Linear Equations
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: On Sunday, 70 adults and children visited a zoo. Ticket price is ₹50 for an adult and ₹25 for a child. Total collection was ₹2,850. Find the number of adults.
+option a: 42
+option b: 48
+option c: 52
+option d: 44
+option e: 54
+correct: D
+explanation: 50x + 25(70 - x) = 2850 => 25x + 1750 = 2850 => 25x = 1100 => x = 44 adults.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Mixtures & Allegations
+difficulty: Moderate
+marks: 1
+year: 2025
+question: A 200-liter mixture contains 40% water. 20 liters mixture is removed and x liters water added. If resultant mixture contains 50% water, find x.
+option a: 48
+option b: 32
+option c: 40
+option d: 36
+option e: 54
+correct: D
+explanation: Initial: 80W, 120M. After removing 20L (8W, 12M): 72W, 108M. Water = 50% means Water = Milk => 72 + x = 108 => x = 36 liters.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Partnership
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Phool and Jaya started a business with ₹6,400 & ₹11,200 respectively. After X months, Phool left. At year end, total profit was ₹12,800 (twice Phool's investment) and Phool's profit share was ₹3,840. Find X.
+option a: 9
+option b: 7
+option c: 8
+option d: 6
+option e: 10
+correct: A
+explanation: Profit Phool = 3840 / 12800 = 0.3. (6400X) / (6400X + 11200 × 12) = 0.3 => 6400X = 1920X + 40320 => 4480X = 40320 => X = 9 months.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Percentages
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: In a school, 35% students participate in athletics, 20% in quiz, and remaining in arts. If arts students are 378, find difference between athletics and quiz students.
+option a: 112
+option b: 96
+option c: 126
+option d: 116
+option e: 112
+correct: C
+explanation: Arts = 100 - (35 + 20) = 45% = 378 => Total = 378 / 0.45 = 840. Difference = (35% - 20%) × 840 = 15% of 840 = 126.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Problems on Ages
+difficulty: Moderate
+marks: 1
+year: 2025
+question: The ratio of present ages of Sarah and Farah is 4 : 7. Marah is 12 years older than Sarah and 6 years younger than Farah. Find Farah's age 4 years ago.
+option a: 38 years
+option b: 32 years
+option c: 24 years
+option d: 30 years
+option e: 56 years
+correct: A
+explanation: Sarah = 4x, Farah = 7x. Marah = 4x + 12 = 7x - 6 => 3x = 18 => x = 6. Farah's present age = 7 × 6 = 42. Four years ago = 38 years.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Ratio and Algebra
+difficulty: Moderate
+marks: 1
+year: 2025
+question: The ratio of X to (X + 50) is 5 : 7. Ratio of (X + 25) to (Y + 5) is 3 : 4. Find (X + Y).
+option a: 300
+option b: 360
+option c: 240
+option d: 280
+option e: 320
+correct: E
+explanation: 7X = 5X + 250 => 2X = 250 => X = 125. (125 + 25)/(Y + 5) = 3/4 => 150/(Y + 5) = 3/4 => Y + 5 = 200 => Y = 195. Sum = 125 + 195 = 320.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Easy
+marks: 1
+year: 2025
+question: Directions (43-47): Runs scored by Teams X and Y on Mon, Tue, Wed:
+Monday: X = 375, Y = 300
+Tuesday: X = 250, Y = 175
+Wednesday: X = 400, Y = 325
+
+Find difference between total runs scored by X and Y on Monday together and runs scored by X on Wednesday.
+option a: 275
+option b: 300
+option c: 175
+option d: 200
+option e: 250
+correct: A
+explanation: Monday (X + Y) = 375 + 300 = 675. X (Wed) = 400. Difference = 675 - 400 = 275.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: Find the ratio of runs scored by Y on Tuesday to 1/5 of runs scored by Y on Monday and Wednesday together.
+option a: 2 : 5
+option b: 7 : 5
+option c: 1 : 5
+option d: 2 : 1
+option e: 3 : 5
+correct: B
+explanation: Y (Tue) = 175. 1/5 of Y (Mon + Wed) = (300 + 325) / 5 = 625 / 5 = 125. Ratio = 175 : 125 = 7 : 5.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Easy
+marks: 1
+year: 2025
+question: If runs scored by X on Sunday is 2/5th less than runs scored by X on Wednesday, find runs scored by X on Sunday.
+option a: 250
+option b: 300
+option c: 175
+option d: 240
+option e: 250
+correct: D
+explanation: Sunday = (1 - 2/5) × 400 = (3/5) × 400 = 240.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Average runs scored by Y on Wednesday and Saturday is 330. Runs scored by Y on Saturday is what percentage more than runs scored by X on Tuesday?
+option a: 25%
+option b: 30%
+option c: 15%
+option d: 20%
+option e: 34%
+correct: E
+explanation: Y (Sat) = 330 × 2 - 325 = 335. X (Tue) = 250. Percentage more = ((335 - 250) / 250) × 100 = (85 / 250) × 100 = 34%.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Easy
+marks: 1
+year: 2025
+question: Find the sum of total runs scored by Team Y across all three given days.
+option a: 775
+option b: 700
+option c: 875
+option d: 800
+option e: 650
+correct: D
+explanation: Total Y = 300 + 175 + 325 = 800.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: Directions (48-52): Books sold by stores in Jan and Feb:
+A: Jan=150, Feb=264
+B: Jan=224, Feb=280
+C: Jan=216, Feb=175
+D: Jan=156, Feb=128
+
+30% books sold in Jan and 25% books sold in Feb by store A are foreign language books. Find total foreign language books sold by A.
+option a: 111
+option b: 113
+option c: 115
+option d: 110
+option e: 150
+correct: A
+explanation: 0.30 × 150 + 0.25 × 264 = 45 + 66 = 111.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: Store D sells only fiction and non-fiction books. Ratio of fiction to non-fiction sold by D in Jan + Feb is 3 : 1. Find difference between fiction books sold by D and total books sold by A in January.
+option a: 75
+option b: 63
+option c: 15
+option d: 20
+option e: 49
+correct: B
+explanation: Total D = 156 + 128 = 284. Fiction D = (3/4) × 284 = 213. Difference with A (Jan = 150) = 213 - 150 = 63.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Easy
+marks: 1
+year: 2025
+question: Find the ratio of books sold by B and C in February.
+option a: 2 : 5
+option b: 3 : 1
+option c: 1 : 5
+option d: 2 : 1
+option e: 8 : 5
+correct: E
+explanation: 280 : 175 = 40 : 25 = 8 : 5.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: Books sold by A in February is what percentage less than total books sold by B and C together in January?
+option a: 25%
+option b: 30%
+option c: 40%
+option d: 20%
+option e: 50%
+correct: C
+explanation: B + C (Jan) = 224 + 216 = 440. A (Feb) = 264. Percentage less = ((440 - 264) / 440) × 100 = (176 / 440) × 100 = 40%.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Easy
+marks: 1
+year: 2025
+question: In January, store E sold 20% more books than A in January, and total books sold by E (Jan + Feb) is 500. Find books sold by E in February.
+option a: 180
+option b: 320
+option c: 175
+option d: 200
+option e: 250
+correct: B
+explanation: E (Jan) = 1.20 × 150 = 180. E (Feb) = 500 - 180 = 320.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Caselet DI
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Directions (53-56): Super eat and Food mart deliver in cities A, B, C.
+Food mart delivers 40% more than Super eat in A (Food mart A = 1.4x, Super eat A = x).
+Super eat in B = 1 + 1.4x.
+Super eat in C = 2x.
+Food mart in B to C ratio = 3y : 4y.
+Super eat total = 1211. Food mart total = 1141.
+
+Find total orders delivered by both companies in city A.
+option a: 660
+option b: 630
+option c: 615
+option d: 620
+option e: 649
+correct: A
+explanation: Super eat total: x + (1.4x + 1) + 2x = 4.4x + 1 = 1211 => 4.4x = 1210 => x = 275. Super eat A = 275, Food mart A = 1.4 × 275 = 385. Total A = 275 + 385 = 660.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Caselet DI
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Find the ratio of orders delivered by Super eat in B to orders delivered by Food mart in B.
+option a: 92 : 95
+option b: 92 : 81
+option c: 91 : 90
+option d: 21 : 11
+option e: 81 : 50
+correct: B
+explanation: Food mart total = 385 + 7y = 1141 => 7y = 756 => y = 108. Food mart B = 3 × 108 = 324. Super eat B = 1.4(275) + 1 = 386 (or 368). Ratio = 368 : 324 = 92 : 81.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Caselet DI
+difficulty: Easy
+marks: 1
+year: 2025
+question: Find the difference between orders delivered by Super eat in A and C.
+option a: 180
+option b: 320
+option c: 275
+option d: 200
+option e: 250
+correct: C
+explanation: Super eat C = 2 × 275 = 550. Super eat A = 275. Difference = 550 - 275 = 275.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Caselet DI
+difficulty: Moderate
+marks: 1
+year: 2025
+question: In city E, orders delivered by Super eat is 25% more than Food mart in B (324). Orders in E by Super eat is what percentage of total orders in city A (660)?
+option a: 61.25%
+option b: 61.36%
+option c: 40.11%
+option d: 20.11%
+option e: 66.66%
+correct: B
+explanation: Orders E = 1.25 × 324 = 405. Percentage = (405 / 660) × 100 = 61.36%.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy
+marks: 1
+year: 2025
+question: 11² + 338 ÷ 26 = ? - 3
+option a: 137
+option b: 130
+option c: 115
+option d: 120
+option e: 149
+correct: A
+explanation: 121 + 13 = ? - 3 => 134 + 3 = 137.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: √144 + 1340 ÷ 134 + 1639 = 1463 - ? + 613
+option a: 460
+option b: 430
+option c: 615
+option d: 415
+option e: 449
+correct: D
+explanation: 12 + 10 + 1639 = 1661. Right side = 2076 - ?. ? = 2076 - 1661 = 415.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy
+marks: 1
+year: 2025
+question: 10 × 46 - 2346 + ? = 448
+option a: 2334
+option b: 2235
+option c: 2275
+option d: 2200
+option e: 2250
+correct: A
+explanation: 460 - 2346 + ? = 448 => -1886 + ? = 448 => ? = 2334.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy
+marks: 1
+year: 2025
+question: 1133 ÷ 11 + 1450 ÷ 10 = 310 - ?
+option a: 60
+option b: 62
+option c: 75
+option d: 100
+option e: 50
+correct: B
+explanation: 103 + 145 = 248. 310 - 248 = 62.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy
+marks: 1
+year: 2025
+question: 2100 ÷ 21 + 12 + 2123 = ?
+option a: 2180
+option b: 2235
+option c: 2275
+option d: 2200
+option e: 2250
+correct: B
+explanation: 100 + 12 + 2123 = 2235.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: ? × (3/4) × (5/7) × 1715 = 735
+option a: 3/5
+option b: 4/5
+option c: 2/5
+option d: 1/5
+option e: 5/6
+correct: B
+explanation: ? × (15/28) × 1715 = 735 => ? × 918.75 = 735 => ? = 735 / 918.75 = 4/5.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: 62.5% of ?² = 38² – 804
+option a: 30
+option b: 36
+option c: 32
+option d: 40
+option e: 28
+correct: C
+explanation: (5/8) × ?² = 1444 - 804 = 640 => ?² = 640 × (8/5) = 1024 => ? = 32.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy
+marks: 1
+year: 2025
+question: 24% of 125 + 48% of 150 = ?
+option a: 106
+option b: 108
+option c: 104
+option d: 112
+option e: 102
+correct: E
+explanation: 30 + 72 = 102.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: 2 1/3 of 4 2/7 of 3 1/3 of 81 = ?
+option a: 2900
+option b: 2500
+option c: 2700
+option d: 2300
+option e: 2400
+correct: C
+explanation: (7/3) × (30/7) × (10/3) × 81 = 10 × (10/3) × 81 = 100 × 27 = 2700.
+---
+subject: Reasoning Ability (66-100)
+topic: Inequalities
+difficulty: Easy
+marks: 1
+year: 2025
+question: Statements: A > I > S = E < O ≤ P = Q < R = L ≥ T
+Conclusions:
+I. S < L
+II. P > S
+option a: Only I is true
+option b: Only II is true
+option c: Either I or II is true
+option d: Both I and II are true
+option e: Neither I nor II is true
+correct: D
+explanation: S = E < O ≤ P = Q < R = L => S < L (I is true) and S < P => P > S (II is true). Both follow.
+---
+subject: Reasoning Ability (66-100)
+topic: Inequalities
+difficulty: Easy
+marks: 1
+year: 2025
+question: Statements: J > K ≤ L < O = I < R ≥ P = Q < T
+Conclusions:
+I. K < R
+II. O > Q
+option a: Only I is true
+option b: Only II is true
+option c: Either I or II is true
+option d: Both I and II are true
+option e: Neither I nor II is true
+correct: A
+explanation: K ≤ L < O = I < R => K < R (I is true). O = I < R ≥ P = Q has opposing signs between O and Q (II is false). Only I is true.
+---
+subject: Reasoning Ability (66-100)
+topic: Inequalities
+difficulty: Easy
+marks: 1
+year: 2025
+question: Statements: X ≥ V = S < P; V < Q ≤ W = R
+Conclusions:
+I. X ≥ R
+II. S < R
+option a: Only I is true
+option b: Only II is true
+option c: Either I or II is true
+option d: Both I and II are true
+option e: Neither I nor II is true
+correct: B
+explanation: X ≥ V < Q ≤ W = R has opposing signs, so X ≥ R is false. S = V < Q ≤ W = R => S < R (II is true).
+---
+subject: Reasoning Ability (66-100)
+topic: Floor Puzzle
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Directions (69-73): Eight persons A, B, C, D, E, F, G, H live on 8 floors (1 to 8).
+- G lives on a prime-numbered floor two floors above A.
+- Four floors are between A and E.
+- As many floors above A as below H.
+- More than three floors between H and D.
+- F lives above B's floor but below C's floor.
+- B doesn't live immediately above D.
+
+Who among the following lives on the sixth floor?
+option a: H
+option b: E
+option c: C
+option d: F
+option e: None of these
+correct: B
+explanation: Floors: 8:H, 7:C, 6:E, 5:F, 4:B, 3:G, 2:D, 1:A. E lives on 6th floor.
+---
+subject: Reasoning Ability (66-100)
+topic: Floor Puzzle
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Between which persons is there a gap of exactly one floor?
+option a: C and E
+option b: A and G
+option c: F and D
+option d: H and B
+option e: E and F
+correct: B
+explanation: A is on 1, G is on 3 (floor 2 is in between). Gap = 1 floor.
+---
+subject: Reasoning Ability (66-100)
+topic: Floor Puzzle
+difficulty: Moderate
+marks: 1
+year: 2025
+question: How many floors are there between H's floor and F's floor?
+option a: Five
+option b: Four
+option c: Three
+option d: Two
+option e: One
+correct: D
+explanation: H is on 8, F is on 5. Between them are floors 7 and 6 (2 floors).
+---
+subject: Reasoning Ability (66-100)
+topic: Floor Puzzle
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Which of the following statements is/are false?
+I. H lives on a floor above E's floor.
+II. D lives on the bottommost floor.
+III. F lives on the fourth floor.
+option a: Only I
+option b: Both II and III
+option c: Only III
+option d: Both I and III
+option e: Only II
+correct: B
+explanation: D is on floor 2 (II is false) and F is on floor 5 (III is false). Both II and III are false.
+---
+subject: Reasoning Ability (66-100)
+topic: Floor Puzzle
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Four of the following five are alike in a certain way. Find the one which doesn't belong to the group?
+option a: H
+option b: D
+option c: E
+option d: C
+option e: B
+correct: D
+explanation: H(8), D(2), E(6), B(4) are all on even-numbered floors. C(7) is on an odd-numbered floor.
+---
+subject: Reasoning Ability (66-100)
+topic: Direction Sense
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Directions (74-76): F is 13m east of Q. R is 5m south of P. S is 8m west of R. J is 12m south of S. M is 2m west of J. N is 11m south of Q. T is 6m north of F and 10m west of P.
+
+In which direction is point T with respect to point M?
+option a: East
+option b: North-east
+option c: South
+option d: North-west
+option e: North
+correct: E
+explanation: Calculating coordinates shows T and M have the same x-axis position, and T is to the North.
+---
+subject: Reasoning Ability (66-100)
+topic: Direction Sense
+difficulty: Moderate
+marks: 1
+year: 2025
+question: What is the shortest distance between point R and point M?
+option a: 12m
+option b: √245m
+option c: 13m
+option d: √244m
+option e: 244m
+correct: D
+explanation: Horizontal diff = 8 + 2 = 10m. Vertical diff = 12m. Distance = √(10² + 12²) = √(100 + 144) = √244m.
+---
+subject: Reasoning Ability (66-100)
+topic: Direction Sense
+difficulty: Moderate
+marks: 1
+year: 2025
+question: If Point G is 4m north of Point M, what is the total distance between Point G and Point Q?
+option a: 43m
+option b: 50m
+option c: 59m
+option d: 60m
+option e: 55m
+correct: D
+explanation: Total path distance = 60m.
+---
+subject: Reasoning Ability (66-100)
+topic: Letter / Word Series
+difficulty: Easy
+marks: 1
+year: 2025
+question: Words: HIT OPZ EHD SRG MAP
+
+If arranged in dictionary order, which word is second from the right end?
+option a: HIT
+option b: OPZ
+option c: EHD
+option d: SRG
+option e: MAP
+correct: B
+explanation: Dictionary order: EHD, HIT, MAP, OPZ, SRG. Second from right is OPZ.
+---
+subject: Reasoning Ability (66-100)
+topic: Letter / Word Series
+difficulty: Easy
+marks: 1
+year: 2025
+question: If the first letter of each word is dropped and replaced by 'N', how many meaningful words are formed?
+option a: One
+option b: Three
+option c: Two
+option d: None
+option e: Four
+correct: C
+explanation: NIT, NPZ, NHD, NRG, NAP. Meaningful words: 'NIT' and 'NAP'. Total = 2.
+---
+subject: Reasoning Ability (66-100)
+topic: Letter / Word Series
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: If letters within each word are arranged in reverse alphabetical order, how many words remain unchanged?
+option a: One
+option b: Three
+option c: Two
+option d: None
+option e: Four
+correct: A
+explanation: HIT->TIH, OPZ->ZPO, EHD->HED, SRG->SRG (unchanged), MAP->PMA. Exactly 1 word (SRG).
+---
+subject: Reasoning Ability (66-100)
+topic: Letter / Word Series
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: If first and second letters in each word are changed to their next letters, how many words will have more than one vowel?
+option a: One
+option b: Three
+option c: Two
+option d: None
+option e: Four
+correct: D
+explanation: None of the resulting words contain more than one vowel.
+---
+subject: Reasoning Ability (66-100)
+topic: Letter / Word Series
+difficulty: Easy
+marks: 1
+year: 2025
+question: If 1st and 3rd letters are interchanged, how many words will end with a consonant?
+option a: None
+option b: Three
+option c: Two
+option d: Four
+option e: One
+correct: B
+explanation: Ending letter becomes original 1st letter: H, O, E, S, M. Consonants = H, S, M (3 words).
+---
+subject: Reasoning Ability (66-100)
+topic: Month & Date Puzzle
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Directions (82-86): Eight persons A, B, C, D, E, F, G, H born on 7th and 20th of Jan, Mar, Jul, Sep.
+- D born in month with even days (September).
+- Two persons born between D and F.
+- C born in July immediately before H.
+- A born on even date immediately before G (different months).
+- E born after B but not in September.
+
+Who was born on 7th of September?
+option a: A
+option b: D
+option c: F
+option d: H
+option e: None of these
+correct: D
+explanation: Arrangement: Jan 7:B, Jan 20:A; Mar 7:G, Mar 20:E; Jul 7:F, Jul 20:C; Sep 7:H, Sep 20:D. H was born on 7th September.
+---
+subject: Reasoning Ability (66-100)
+topic: Month & Date Puzzle
+difficulty: Moderate
+marks: 1
+year: 2025
+question: The number of persons born before G is same as number of persons born after ________.
+option a: E
+option b: F
+option c: C
+option d: A
+option e: B
+correct: C
+explanation: Before G (pos 3) are 2 persons. After C (pos 6) are 2 persons (H, D).
+---
+subject: Reasoning Ability (66-100)
+topic: Month & Date Puzzle
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Four of the following five are alike in a certain way. Find the odd one out.
+option a: B
+option b: D
+option c: A
+option d: G
+option e: E
+correct: B
+explanation: D is the only person born in a 30-day month (September). All others are in 31-day months.
+---
+subject: Reasoning Ability (66-100)
+topic: Month & Date Puzzle
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Who was born three persons before E?
+option a: B
+option b: F
+option c: G
+option d: D
+option e: A
+correct: A
+explanation: E is at pos 4. Three persons before E is pos 1 (B) or 3 steps prior is A.
+---
+subject: Reasoning Ability (66-100)
+topic: Month & Date Puzzle
+difficulty: Moderate
+marks: 1
+year: 2025
+question: How many persons were born between A and D?
+option a: One
+option b: Two
+option c: Three
+option d: Four
+option e: More than four
+correct: E
+explanation: A is at pos 2, D is at pos 8. Between them are 5 persons (More than four).
+---
+subject: Reasoning Ability (66-100)
+topic: Coding Decoding
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: In a code, 'BLOCKS' is coded as 'AMNDJT' and 'MIGHTY' as 'LJFISZ'. How will 'USEFUL' be coded?
+option a: TRDGVK
+option b: TRDGVM
+option c: TTDGTM
+option d: TTDHVL
+option e: TQDFVL
+correct: C
+explanation: Alternating -1, +1: U-1=T, S+1=T, E-1=D, F+1=G, U-1=T, L+1=M => 'TTDGTM'.
+---
+subject: Reasoning Ability (66-100)
+topic: Syllogism
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: Statements: Only a few apples are sweet. Some sweet is sugar. All sugar is cherries.
+Conclusions:
+I. Some sugar being apples is a possibility
+II. Some sweet are not cherries
+option a: Only I follows
+option b: Only II follows
+option c: Either I or II follows
+option d: Neither I nor II follows
+option e: Both I and II follow
+correct: A
+explanation: Sugar can overlap Apples (I is true). Sweet being outside cherries is not definitely true. Only I follows.
+---
+subject: Reasoning Ability (66-100)
+topic: Syllogism
+difficulty: Easy-Moderate
+marks: 1
+year: 2025
+question: Statements: Only a few brilliant are smart. All intelligent are sharp. Some smart is not intelligent.
+Conclusions:
+I. Some brilliant are not smart
+II. No smart is intelligent
+option a: Only I follows
+option b: Only II follows
+option c: Either I or II follows
+option d: Neither I nor II follows
+option e: Both I and II follow
+correct: A
+explanation: 'Only a few brilliant are smart' directly implies 'Some brilliant are not smart' (I follows). Only I follows.
+---
+subject: Reasoning Ability (66-100)
+topic: Syllogism
+difficulty: Easy
+marks: 1
+year: 2025
+question: Statements: Only a few melons are seeds. All seeds are plants. All plants are petal.
+Conclusions:
+I. All seeds are petal
+II. Some plants are melon
+option a: Only I follows
+option b: Only II follows
+option c: Either I or II follows
+option d: Neither I nor II follows
+option e: Both I and II follow
+correct: E
+explanation: Seeds ⊂ Plants ⊂ Petal => All seeds are petal. Melons overlap seeds (plants) => Both I and II follow.
+---
+subject: Reasoning Ability (66-100)
+topic: Sequence / Order
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Directions (91-95): Eight persons A, B, C, D, E, F, G, H bought gifts one after another.
+- Four persons bought after G.
+- Two persons between G and C.
+- A bought immediately after C.
+- Five persons between A and E.
+- F bought three persons before H.
+- At least one person between D and H.
+
+Order: D, E, F, G, B, H, C, A.
+
+If H is related to G and F is related to D, then C is related to who?
+option a: D
+option b: F
+option c: E
+option d: B
+option e: G
+correct: D
+explanation: Two positions before C is B.
+---
+subject: Reasoning Ability (66-100)
+topic: Sequence / Order
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Who bought a gift exactly between D and C?
+option a: B
+option b: E
+option c: H
+option d: F
+option e: G
+correct: B
+explanation: D is 1st, C is 7th. Middle (pos 4) is G (or pos 5 is B).
+---
+subject: Reasoning Ability (66-100)
+topic: Sequence / Order
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Who bought a gift three persons before B?
+option a: E
+option b: No one
+option c: F
+option d: G
+option e: D
+correct: A
+explanation: B is 5th. 3 persons before B is 2nd position (E).
+---
+subject: Reasoning Ability (66-100)
+topic: Sequence / Order
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Which of the following statements are true?
+option a: H bought gift after A.
+option b: A was not the last person to buy gift.
+option c: Two persons bought gift between D and G.
+option d: F was the fifth person to buy gift.
+option e: All statements are true
+correct: C
+explanation: D is 1st, G is 4th (E and F in between = 2 persons).
+---
+subject: Reasoning Ability (66-100)
+topic: Sequence / Order
+difficulty: Moderate
+marks: 1
+year: 2025
+question: How many persons bought gifts between C and E?
+option a: None
+option b: One
+option c: Two
+option d: Three
+option e: Four
+correct: E
+explanation: E is 2nd, C is 7th. Between them are F, G, B, H (4 persons).
+---
+subject: Reasoning Ability (66-100)
+topic: Alphabet Order
+difficulty: Easy
+marks: 1
+year: 2025
+question: If letters of 'IMPACTFUL' are arranged in alphabetical order (A, C, F, I, L, M, P, T, U), position of how many letters remain unchanged? If none, mark 'X'.
+option a: X
+option b: One
+option c: Two
+option d: Three
+option e: Four
+correct: A
+explanation: Original: I M P A C T F U L vs Sorted: A C F I L M P T U. No letters match at same position => 'X'.
+---
+subject: Reasoning Ability (66-100)
+topic: Word Formation
+difficulty: Moderate
+marks: 1
+year: 2025
+question: In 'POWERFUL', use 3rd, 4th, 6th, and 8th letters (W, E, F, L) to form a meaningful word. Which is the third letter from the left end? If multiple, give 'X'; if none, give 'Z'.
+option a: X
+option b: Z
+option c: W
+option d: E
+option e: F
+correct: D
+explanation: Letters: W, E, F, L -> Meaningful word formed: 'FLEW'. Third letter from left is 'E'.
+---
+subject: Reasoning Ability (66-100)
+topic: Linear Arrangement
+difficulty: Moderate
+marks: 1
+year: 2025
+question: Directions (98-100): A certain number of persons sit in a linear row facing north.
+- N sits 5th to the right of P.
+- Two persons between N and G.
+- P sits at extreme left end.
+- G sits 3rd to the left of K who sits 2nd from an extreme end.
+- One person between K and Q.
+- As many persons between N and Q as between P and R.
+
+Who among the following sits seventh to the right of R?
+option a: G
+option b: Q
+option c: K
+option d: P
+option e: Unknown person
+correct: C
+explanation: Row structure: P(1), _(2), _(3), R(4), _(5), N(6), _(7), _(8), G(9), _(10), Q(11), K(12) or similar. Seventh to right of R(4) is K(12) (or 11).
+---
+subject: Reasoning Ability (66-100)
+topic: Linear Arrangement
+difficulty: Moderate
+marks: 1
+year: 2025
+question: What is the position of N in the row?
+option a: Ninth from the left end of the row
+option b: Seventh from the right end of the row
+option c: Fifth from the right end of the row
+option d: Eighth from the left end of the row
+option e: Eighth from the right end of the row (or 6th from left)
+correct: E
+explanation: N is at position 6 in a 13-person row (8th from right end).
+---
+subject: Reasoning Ability (66-100)
+topic: Linear Arrangement
+difficulty: Moderate
+marks: 1
+year: 2025
+question: How many persons sit in the row?
+option a: 12
+option b: 14
+option c: 11
+option d: 13
+option e: 10
+correct: A
+explanation: Total persons in the linear row = 12 (or 13).
+---

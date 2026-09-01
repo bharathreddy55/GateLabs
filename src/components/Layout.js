@@ -67,6 +67,9 @@ export const Layout = {
             <a href="#/tet-exams" class="${getLinkClass('tet-exams')}">
               <i class="fa-solid fa-chalkboard-user text-sm w-5 text-center"></i> TET Exams
             </a>
+            <a href="#/sbi-clerk" class="${getLinkClass('sbi-clerk')}">
+              <i class="fa-solid fa-building-columns text-sm w-5 text-center"></i> SBI Clerk Prep
+            </a>
             <a href="#/formulas" class="${getLinkClass('formulas')}">
               <i class="fa-solid fa-book-bookmark text-sm w-5 text-center"></i> Formula Deck
             </a>
@@ -128,7 +131,13 @@ export const Layout = {
 
           <!-- Sticky Top Header -->
           <header id="layout-header" class="h-16 border border-slate-200/60 dark:border-white/[0.07] bg-white/85 dark:bg-[#0d1320]/80 backdrop-blur-2xl sticky top-4 z-20 flex items-center justify-between px-6 rounded-3xl transition-colors duration-300 shadow-sm">
-            <h2 class="font-display font-extrabold text-sm text-slate-900 dark:text-white capitalize tracking-tight">${activePage.replace('-', ' ')}</h2>
+            <h2 class="font-display font-extrabold text-sm text-slate-900 dark:text-white tracking-tight">${
+              activePage === 'sbi-clerk' ? 'SBI Clerk Prep' :
+              activePage === 'tet-exams' ? 'TET Exams' :
+              activePage === 'pyq-mocks' ? 'PYQ Mocks' :
+              activePage === 'mock-test' ? 'Mock Tests' :
+              activePage.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())
+            }</h2>
 
             <div class="flex items-center gap-3">
               <!-- Theme toggle -->
@@ -284,7 +293,13 @@ export const Layout = {
     });
 
     const titleEl = document.querySelector('header h2');
-    if (titleEl) titleEl.textContent = activePage.replace('-', ' ');
+    if (titleEl) {
+      titleEl.textContent = activePage === 'sbi-clerk' ? 'SBI Clerk Prep' :
+                            activePage === 'tet-exams' ? 'TET Exams' :
+                            activePage === 'pyq-mocks' ? 'PYQ Mocks' :
+                            activePage === 'mock-test' ? 'Mock Tests' :
+                            activePage.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase());
+    }
   },
 
   init(activePage = 'dashboard') {

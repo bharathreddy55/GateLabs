@@ -1,0 +1,1534 @@
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Easy
+marks: 1
+year: 2026
+question: Read the following passage carefully and answer questions 1 to 8:
+
+Financial inclusion in rural India has witnessed a remarkable transformation with the expansion of digital banking services. The introduction of the Unified Payments Interface (UPI) and Aadhaar-enabled Payment Systems (AePS) has empowered millions of unbanked citizens. Rural entrepreneurs and small farmers no longer need to travel miles to reach a brick-and-mortar bank branch. Instead, Micro-ATMs operated by local banking correspondents (Bank Mitras) bring banking right to their doorsteps. This has expedited government subsidy transfers and minimized leakages in Direct Benefit Transfer (DBT) schemes. However, digital literacy and network connectivity in remote tribal pockets remain formidable challenges that need continuous attention.
+
+According to the passage, what has significantly minimized leakages in government subsidy transfers?
+option a: Establishment of more commercial physical branches
+option b: Direct Benefit Transfer supported by digital banking
+option c: Distribution of cash subsidies directly by local leaders
+option d: Elimination of Bank Mitras in rural villages
+option e: None of the above
+correct: B
+explanation: The passage explicitly states that digital banking and AePS have expedited transfers and minimized leakages in Direct Benefit Transfer (DBT) schemes.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Easy
+marks: 1
+year: 2026
+question: Who operates Micro-ATMs to provide banking services at the doorsteps of rural citizens?
+option a: Commercial bank branch managers
+option b: Local banking correspondents (Bank Mitras)
+option c: Postmasters of urban post offices
+option d: Tribal community heads
+option e: Foreign institutional investors
+correct: B
+explanation: The passage mentions: 'Micro-ATMs operated by local banking correspondents (Bank Mitras) bring banking right to their doorsteps.'
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Easy
+marks: 1
+year: 2026
+question: Which two technologies are highlighted as drivers of rural financial transformation?
+option a: SWIFT and RTGS
+option b: UPI and AePS
+option c: Credit cards and Cheques
+option d: Blockchain and Cryptocurrency
+option e: None of these
+correct: B
+explanation: The passage highlights the Unified Payments Interface (UPI) and Aadhaar-enabled Payment Systems (AePS).
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Easy
+marks: 1
+year: 2026
+question: What remains a significant hurdle in remote tribal pockets according to the text?
+option a: Excessive number of bank branches
+option b: Lack of government interest in agriculture
+option c: Digital literacy and network connectivity
+option d: High interest rates on UPI transactions
+option e: Over-reliance on foreign remittances
+correct: C
+explanation: The passage states that digital literacy and network connectivity in remote tribal pockets remain formidable challenges.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Easy
+marks: 1
+year: 2026
+question: Choose the word most SIMILAR in meaning to 'EXPEDITED' as used in the passage.
+option a: Delayed
+option b: Accelerated
+option c: Hindered
+option d: Postponed
+option e: Ignored
+correct: B
+explanation: 'Expedite' means to make an action or process happen sooner or be accomplished more quickly; hence 'Accelerated' is the closest synonym.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Easy
+marks: 1
+year: 2026
+question: Choose the word most OPPOSITE in meaning to 'TRANSFORMATION' as used in the passage.
+option a: Stagnation
+option b: Evolution
+option c: Metamorphosis
+option d: Modification
+option e: Innovation
+correct: A
+explanation: 'Transformation' indicates dramatic change or progress. The opposite is 'Stagnation' (lack of activity, growth, or development).
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Easy
+marks: 1
+year: 2026
+question: What is the primary theme of the passage?
+option a: The decline of traditional banking in metropolitan cities
+option b: The role of digital banking in rural financial inclusion
+option c: Technological failures in agricultural credit
+option d: International trade and currency valuation
+option e: The disadvantages of mobile payments
+correct: B
+explanation: The passage primarily discusses how digital systems like UPI, AePS, and Bank Mitras have brought financial inclusion to rural India.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Easy
+marks: 1
+year: 2026
+question: Which of the following is TRUE based on the passage?
+option a: Farmers still must travel long miles for every minor transaction
+option b: Bank Mitras charge high penalties on DBT transfers
+option c: Rural citizens are benefiting from doorstep Micro-ATM services
+option d: UPI has completely eliminated physical money in India
+option e: Tribal areas have perfect network connectivity
+correct: C
+explanation: Doorstep Micro-ATM services operated by Bank Mitras are explicitly mentioned as benefiting rural citizens.
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Easy
+marks: 1
+year: 2026
+question: In the following passage, there are blanks. For Blank (1), choose the appropriate word:
+
+Planting trees is one of the most effective ways to ____(1)____ climate change. Forests act as natural carbon sinks, absorbing carbon dioxide from the atmosphere and ____(2)____ oxygen. Moreover, trees prevent soil erosion and provide natural ____(3)____ for diverse wildlife species. Community-led afforestation programs help ____(4)____ environmental awareness among students. Everyone should ____(5)____ in local green drives to ensure a sustainable future for the next ____(6)____.
+
+Select the best word for Blank (1):
+option a: combat
+option b: promote
+option c: aggravate
+option d: ignore
+option e: accelerate
+correct: A
+explanation: Tree planting is done to 'combat' (fight/mitigate) climate change.
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Easy
+marks: 1
+year: 2026
+question: Select the best word for Blank (2):
+option a: consuming
+option b: destroying
+option c: releasing
+option d: polluting
+option e: hiding
+correct: C
+explanation: Trees absorb carbon dioxide and 'releasing' (release) oxygen.
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Easy
+marks: 1
+year: 2026
+question: Select the best word for Blank (3):
+option a: barriers
+option b: habitats
+option c: traps
+option d: hazards
+option e: poisons
+correct: B
+explanation: Trees provide natural 'habitats' (living environments) for wildlife.
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Easy
+marks: 1
+year: 2026
+question: Select the best word for Blank (4):
+option a: curtail
+option b: diminish
+option c: foster
+option d: suppress
+option e: neglect
+correct: C
+explanation: 'Foster' means to encourage or promote the development of environmental awareness.
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Easy
+marks: 1
+year: 2026
+question: Select the best word for Blank (5):
+option a: participate
+option b: hesitate
+option c: withdraw
+option d: refuse
+option e: procrastinate
+correct: A
+explanation: People should 'participate' in green drives.
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Easy
+marks: 1
+year: 2026
+question: Select the best word for Blank (6):
+option a: generations
+option b: seasons
+option c: centuries
+option d: decades
+option e: moments
+correct: A
+explanation: The common idiom and context is 'future generations'.
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Easy
+marks: 1
+year: 2026
+question: Read the sentence to find out whether there is any grammatical error in it. The error, if any, will be in one part of the sentence.
+
+(A) Neither the manager / (B) nor the employees was / (C) present at the annual / (D) general meeting yesterday. / (E) No error
+option a: A
+option b: B
+option c: C
+option d: D
+option e: E
+correct: B
+explanation: In 'Neither... nor' constructions, the verb agrees with the closer subject ('employees', which is plural). Therefore, 'was' should be replaced with 'were'.
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Easy
+marks: 1
+year: 2026
+question: (A) She is one of the / (B) most hardworking student / (C) in our entire / (D) coaching institute. / (E) No error
+option a: A
+option b: B
+option c: C
+option d: D
+option e: E
+correct: B
+explanation: The phrase 'one of the' is always followed by a plural noun ('students'). Hence, 'student' should be 'students'.
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Easy
+marks: 1
+year: 2026
+question: (A) Although he worked / (B) very hard for the exam, / (C) but he could not / (D) secure the top rank. / (E) No error
+option a: A
+option b: B
+option c: C
+option d: D
+option e: E
+correct: C
+explanation: 'Although' is not paired with 'but'. It should be paired with a comma or 'yet'. Remove 'but'.
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Easy
+marks: 1
+year: 2026
+question: (A) The news regarding / (B) the bank merger / (C) are spreading rapidly / (D) across the country. / (E) No error
+option a: A
+option b: B
+option c: C
+option d: D
+option e: E
+correct: C
+explanation: 'News' is an uncountable singular noun and takes a singular verb. 'are spreading' should be 'is spreading'.
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Easy
+marks: 1
+year: 2026
+question: (A) The teacher asked / (B) the students to / (C) discuss about the / (D) historical event in pairs. / (E) No error
+option a: A
+option b: B
+option c: C
+option d: D
+option e: E
+correct: C
+explanation: The verb 'discuss' is transitive and takes a direct object without the preposition 'about'. Remove 'about'.
+---
+subject: English Language (1-30)
+topic: Sentence Improvement
+difficulty: Easy
+marks: 1
+year: 2026
+question: Improve the underlined part of the sentence:
+
+He *has arrived* in Mumbai yesterday morning to attend the conference.
+option a: arrived
+option b: had arrived
+option c: was arrived
+option d: is arriving
+option e: No correction required
+correct: A
+explanation: With specific past time expressions like 'yesterday morning', the Simple Past tense ('arrived') must be used.
+---
+subject: English Language (1-30)
+topic: Sentence Improvement
+difficulty: Easy
+marks: 1
+year: 2026
+question: Improve the underlined part:
+
+If I *was the Prime Minister*, I would prioritize education and healthcare.
+option a: am the Prime Minister
+option b: were the Prime Minister
+option c: have been the Prime Minister
+option d: will be the Prime Minister
+option e: No correction required
+correct: B
+explanation: In hypothetical/subjunctive conditional clauses (second conditional), 'were' is used with all subjects.
+---
+subject: English Language (1-30)
+topic: Sentence Improvement
+difficulty: Easy
+marks: 1
+year: 2026
+question: Improve the underlined part:
+
+The train *departed before we reached* the platform.
+option a: had departed before we reached
+option b: has departed before we reached
+option c: departs before we will reach
+option d: was departing before we had reached
+option e: No correction required
+correct: A
+explanation: When two past actions occur, the earlier past action takes Past Perfect ('had departed') and the subsequent action takes Simple Past ('reached').
+---
+subject: English Language (1-30)
+topic: Sentence Improvement
+difficulty: Easy
+marks: 1
+year: 2026
+question: Improve the underlined part:
+
+Hardly had the bell rung *when the students rushed* out of their classrooms.
+option a: than the students rushed
+option b: then the students rushed
+option c: when the students rush
+option d: when the students rushed
+option e: No correction required
+correct: E
+explanation: 'Hardly... when' is the correct correlative conjunction pairing. The sentence is already correct.
+---
+subject: English Language (1-30)
+topic: Para Jumbles
+difficulty: Easy
+marks: 1
+year: 2026
+question: Rearrange the following sentences (A, B, C, D) to form a coherent paragraph:
+
+(A) This remarkable growth is driven by increasing internet penetration.
+(B) India's digital economy has expanded rapidly over the past decade.
+(C) Furthermore, government policies have encouraged homegrown tech startups.
+(D) As a result, millions of citizens now access services at their fingertips.
+
+What is the correct logical sequence?
+option a: B - A - C - D
+option b: A - B - C - D
+option c: B - C - D - A
+option d: D - B - A - C
+option e: C - B - A - D
+correct: A
+explanation: (B) introduces the topic (digital economy growth), (A) explains the primary driver (internet penetration), (C) adds another factor (government policy), and (D) concludes with the positive outcome.
+---
+subject: English Language (1-30)
+topic: Para Jumbles
+difficulty: Easy
+marks: 1
+year: 2026
+question: Which of the following should be the FIRST sentence after rearrangement?
+option a: A
+option b: B
+option c: C
+option d: D
+option e: None
+correct: B
+explanation: Sentence (B) provides the introductory foundation for the topic.
+---
+subject: English Language (1-30)
+topic: Para Jumbles
+difficulty: Easy
+marks: 1
+year: 2026
+question: Which of the following should be the THIRD sentence after rearrangement?
+option a: A
+option b: B
+option c: C
+option d: D
+option e: None
+correct: C
+explanation: In sequence B-A-C-D, the third sentence is (C).
+---
+subject: English Language (1-30)
+topic: Para Jumbles
+difficulty: Easy
+marks: 1
+year: 2026
+question: Which of the following should be the LAST (FOURTH) sentence after rearrangement?
+option a: A
+option b: B
+option c: C
+option d: D
+option e: None
+correct: D
+explanation: Sentence (D) serves as the concluding result.
+---
+subject: English Language (1-30)
+topic: Word Swap & Fillers
+difficulty: Easy
+marks: 1
+year: 2026
+question: In the sentence given below, four words are highlighted in bold (A, B, C, D). Choose the pair of words that should be SWAPPED to make the sentence grammatically correct and contextually meaningful:
+
+The committee decided to **postpone (A)** the meeting because the **attendance (B)** was too **low (C)** to achieve a valid **quorum (D)**.
+option a: A-B
+option b: B-C
+option c: C-D
+option d: A-D
+option e: No swap required
+correct: E
+explanation: All four words are in their correct logical and grammatical positions. No swap is needed.
+---
+subject: English Language (1-30)
+topic: Word Swap & Fillers
+difficulty: Easy
+marks: 1
+year: 2026
+question: Select the INCORRECTLY spelt word from the options below:
+option a: Accommodate
+option b: Embarrassment
+option c: Occurrence
+option d: Priviledge
+option e: Conscientious
+correct: D
+explanation: The correct spelling is 'Privilege' (without a 'd').
+---
+subject: English Language (1-30)
+topic: Word Swap & Fillers
+difficulty: Easy
+marks: 1
+year: 2026
+question: Fill in the blank with the most appropriate word:
+
+The Reserve Bank of India keeps a close ________ on inflation to ensure macroeconomic stability.
+option a: watch
+option b: view
+option c: sound
+option d: touch
+option e: sight
+correct: A
+explanation: The standard English idiom is 'to keep a close watch on' (to monitor vigilantly).
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Easy
+marks: 1
+year: 2026
+question: What will come in place of the question mark (?) in the given expression?
+
+144 ÷ 12 + 18 × 5 - 35 = ?
+option a: 67
+option b: 65
+option c: 69
+option d: 71
+option e: 63
+correct: A
+explanation: BODMAS: 144 ÷ 12 = 12. 18 × 5 = 90. 12 + 90 - 35 = 102 - 35 = 67.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Easy
+marks: 1
+year: 2026
+question: What is the value of: 25% of 480 + 40% of 350 = ?
+option a: 260
+option b: 250
+option c: 270
+option d: 280
+option e: 240
+correct: A
+explanation: 25% of 480 = 120. 40% of 350 = 140. 120 + 140 = 260.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Easy
+marks: 1
+year: 2026
+question: Solve: √(625) + √(441) - √(196) = ?
+option a: 32
+option b: 30
+option c: 34
+option d: 36
+option e: 28
+correct: A
+explanation: √625 = 25, √441 = 21, √196 = 14. 25 + 21 - 14 = 46 - 14 = 32.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Easy
+marks: 1
+year: 2026
+question: Find the value of: (35 × 12) ÷ 14 + 45 = ?
+option a: 75
+option b: 70
+option c: 80
+option d: 65
+option e: 85
+correct: A
+explanation: 35 × 12 = 420. 420 ÷ 14 = 30. 30 + 45 = 75.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Easy
+marks: 1
+year: 2026
+question: What is the value of: 3/5 of 450 + 2/3 of 360 = ?
+option a: 510
+option b: 490
+option c: 520
+option d: 500
+option e: 480
+correct: A
+explanation: (3/5 × 450) = 270. (2/3 × 360) = 240. 270 + 240 = 510.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Easy
+marks: 1
+year: 2026
+question: Solve: 850 - 45% of 600 + 120 = ?
+option a: 700
+option b: 680
+option c: 720
+option d: 710
+option e: 690
+correct: A
+explanation: 45% of 600 = 270. 850 - 270 + 120 = 580 + 120 = 700.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Easy
+marks: 1
+year: 2026
+question: Find ?: 15^2 - 12^2 + 8^2 = ?
+option a: 145
+option b: 140
+option c: 150
+option d: 135
+option e: 155
+correct: A
+explanation: 225 - 144 + 64 = 81 + 64 = 145.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Easy
+marks: 1
+year: 2026
+question: Solve: 480 ÷ 8 + 650 ÷ 13 - 15 = ?
+option a: 95
+option b: 90
+option c: 100
+option d: 85
+option e: 105
+correct: A
+explanation: 60 + 50 - 15 = 110 - 15 = 95.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Easy
+marks: 1
+year: 2026
+question: Evaluate: (18 × 15) ÷ 9 + 4^3 = ?
+option a: 94
+option b: 90
+option c: 96
+option d: 88
+option e: 102
+correct: A
+explanation: 18 × 15 = 270. 270 ÷ 9 = 30. 4^3 = 64. 30 + 64 = 94.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Easy
+marks: 1
+year: 2026
+question: Solve: 75% of 400 - 30% of 250 = ?
+option a: 225
+option b: 220
+option c: 230
+option d: 215
+option e: 235
+correct: A
+explanation: 75% of 400 = 300. 30% of 250 = 75. 300 - 75 = 225.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Missing Number Series
+difficulty: Easy
+marks: 1
+year: 2026
+question: Find the missing number in the series:
+
+4, 11, 25, 53, 109, ?
+option a: 221
+option b: 219
+option c: 225
+option d: 217
+option e: 223
+correct: A
+explanation: Pattern: × 2 + 3. 4×2+3=11, 11×2+3=25, 25×2+3=53, 53×2+3=109, 109×2+3=221.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Missing Number Series
+difficulty: Easy
+marks: 1
+year: 2026
+question: Find the missing number in the series:
+
+12, 19, 33, 54, 82, ?
+option a: 117
+option b: 115
+option c: 119
+option d: 121
+option e: 113
+correct: A
+explanation: Differences: +7, +14, +21, +28, +35. Next = 82 + 35 = 117.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Missing Number Series
+difficulty: Easy
+marks: 1
+year: 2026
+question: Find the missing number in the series:
+
+5, 15, 45, 135, 405, ?
+option a: 1215
+option b: 1205
+option c: 1225
+option d: 1235
+option e: 1195
+correct: A
+explanation: Pattern: Multiply by 3 each step. 405 × 3 = 1215.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Missing Number Series
+difficulty: Easy
+marks: 1
+year: 2026
+question: Find the missing number in the series:
+
+2, 6, 12, 20, 30, ?
+option a: 42
+option b: 40
+option c: 44
+option d: 46
+option e: 38
+correct: A
+explanation: Pattern: 1×2=2, 2×3=6, 3×4=12, 4×5=20, 5×6=30, 6×7=42.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Missing Number Series
+difficulty: Easy
+marks: 1
+year: 2026
+question: Find the missing number in the series:
+
+100, 96, 87, 71, 46, ?
+option a: 10
+option b: 12
+option c: 15
+option d: 8
+option e: 14
+correct: A
+explanation: Differences: -4 (-2^2), -9 (-3^2), -16 (-4^2), -25 (-5^2), -36 (-6^2). 46 - 36 = 10.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Quadratic Equations
+difficulty: Easy
+marks: 1
+year: 2026
+question: In each of the following questions, two equations (I) and (II) are given. Solve both equations and establish the relationship between x and y.
+
+I. x^2 - 7x + 12 = 0
+II. y^2 - 9y + 20 = 0
+option a: x < y
+option b: x ≤ y
+option c: x > y
+option d: x ≥ y
+option e: x = y or relationship cannot be determined
+correct: B
+explanation: Eq I: (x-3)(x-4) = 0 => x = 3, 4.
+Eq II: (y-4)(y-5) = 0 => y = 4, 5.
+Comparing: 3 < 4, 3 < 5; 4 = 4, 4 < 5. Thus, x ≤ y.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Quadratic Equations
+difficulty: Easy
+marks: 1
+year: 2026
+question: I. x^2 - 11x + 30 = 0
+II. y^2 - 15y + 56 = 0
+option a: x < y
+option b: x ≤ y
+option c: x > y
+option d: x ≥ y
+option e: x = y or relationship cannot be determined
+correct: A
+explanation: Eq I: x = 5, 6.
+Eq II: y = 7, 8.
+Both values of x (5, 6) are strictly less than both values of y (7, 8). Hence x < y.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Quadratic Equations
+difficulty: Easy
+marks: 1
+year: 2026
+question: I. x^2 + 8x + 15 = 0
+II. y^2 + 11y + 30 = 0
+option a: x < y
+option b: x ≤ y
+option c: x > y
+option d: x ≥ y
+option e: x = y or relationship cannot be determined
+correct: D
+explanation: Eq I: x = -3, -5.
+Eq II: y = -5, -6.
+Comparing: -3 > -5, -3 > -6; -5 = -5, -5 > -6. Thus, x ≥ y.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Quadratic Equations
+difficulty: Easy
+marks: 1
+year: 2026
+question: I. x^2 = 64
+II. y^2 - 16y + 64 = 0
+option a: x < y
+option b: x ≤ y
+option c: x > y
+option d: x ≥ y
+option e: x = y or relationship cannot be determined
+correct: B
+explanation: Eq I: x = +8, -8.
+Eq II: y = 8.
+Comparing: +8 = 8, -8 < 8. Thus, x ≤ y.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Quadratic Equations
+difficulty: Easy
+marks: 1
+year: 2026
+question: I. x^2 - 5x + 6 = 0
+II. y^2 - 7y + 12 = 0
+option a: x < y
+option b: x ≤ y
+option c: x > y
+option d: x ≥ y
+option e: x = y or relationship cannot be determined
+correct: B
+explanation: Eq I: x = 2, 3.
+Eq II: y = 3, 4.
+Comparing: 2 < 3, 2 < 4; 3 = 3, 3 < 4. Hence x ≤ y.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Easy
+marks: 1
+year: 2026
+question: Directions (51-55): Study the following table carefully and answer the questions. The table shows the total number of students enrolled in 4 colleges (A, B, C, D) and the ratio of Male to Female students.
+
+College | Total Students | Male : Female Ratio
+A | 600 | 3 : 2
+B | 800 | 5 : 3
+C | 500 | 1 : 1
+D | 700 | 4 : 3
+
+What is the total number of male students in College A and College B together?
+option a: 860
+option b: 850
+option c: 870
+option d: 840
+option e: 880
+correct: A
+explanation: College A males = (3/5) × 600 = 360.
+College B males = (5/8) × 800 = 500.
+Total = 360 + 500 = 860.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Easy
+marks: 1
+year: 2026
+question: What is the number of female students in College D?
+option a: 300
+option b: 280
+option c: 320
+option d: 350
+option e: 290
+correct: A
+explanation: College D total = 700, Ratio = 4:3. Female students = (3/7) × 700 = 300.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Easy
+marks: 1
+year: 2026
+question: What is the ratio of male students in College C to female students in College A?
+option a: 25 : 24
+option b: 24 : 25
+option c: 5 : 4
+option d: 4 : 5
+option e: 1 : 1
+correct: A
+explanation: College C males = (1/2) × 500 = 250.
+College A females = (2/5) × 600 = 240.
+Ratio = 250 : 240 = 25 : 24.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Easy
+marks: 1
+year: 2026
+question: The total number of students in College B is what percentage more than that in College C?
+option a: 60%
+option b: 50%
+option c: 55%
+option d: 65%
+option e: 45%
+correct: A
+explanation: Diff = 800 - 500 = 300. Percentage more = (300 / 500) × 100 = 60%.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Easy
+marks: 1
+year: 2026
+question: What is the average number of students across all 4 colleges?
+option a: 650
+option b: 640
+option c: 660
+option d: 630
+option e: 670
+correct: A
+explanation: Total = 600 + 800 + 500 + 700 = 2600. Average = 2600 / 4 = 650.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Easy
+marks: 1
+year: 2026
+question: A sum of ₹12,000 is invested at 10% per annum Simple Interest for 3 years. Find the total interest earned.
+option a: ₹3,600
+option b: ₹3,400
+option c: ₹3,800
+option d: ₹3,200
+option e: ₹4,000
+correct: A
+explanation: SI = (P × R × T) / 100 = (12000 × 10 × 3) / 100 = ₹3,600.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Easy
+marks: 1
+year: 2026
+question: A trader buys an article for ₹800 and marks it up by 25%. If he gives a discount of 10% on the marked price, what is his profit percentage?
+option a: 12.5%
+option b: 15%
+option c: 10%
+option d: 14%
+option e: 16%
+correct: A
+explanation: CP = ₹800. MP = 800 × 1.25 = ₹1000. SP = 1000 × 0.90 = ₹900. Profit = 900 - 800 = 100. Profit% = (100/800) × 100 = 12.5%.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Easy
+marks: 1
+year: 2026
+question: The present ages of Amit and Suresh are in the ratio 4 : 5. Six years hence, their ages will be in the ratio 5 : 6. Find Amit's present age.
+option a: 24 years
+option b: 20 years
+option c: 28 years
+option d: 30 years
+option e: 22 years
+correct: A
+explanation: (4x + 6) / (5x + 6) = 5/6 => 24x + 36 = 25x + 30 => x = 6. Amit's present age = 4 × 6 = 24 years.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Easy
+marks: 1
+year: 2026
+question: A can complete a piece of work in 12 days, and B can complete it in 18 days. If they work together, in how many days will the work be completed?
+option a: 7.2 days
+option b: 6.8 days
+option c: 7.5 days
+option d: 8 days
+option e: 6.5 days
+correct: A
+explanation: 1-day work = 1/12 + 1/18 = (3 + 2)/36 = 5/36. Days = 36/5 = 7.2 days.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Easy
+marks: 1
+year: 2026
+question: A train 180 meters long is running at a speed of 54 km/h. How much time will it take to cross a standing pole?
+option a: 12 seconds
+option b: 10 seconds
+option c: 14 seconds
+option d: 15 seconds
+option e: 11 seconds
+correct: A
+explanation: Speed = 54 × (5/18) = 15 m/s. Time = Distance / Speed = 180 / 15 = 12 seconds.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Easy
+marks: 1
+year: 2026
+question: In a class of 60 students, 40% are girls. How many boys are there in the class?
+option a: 36
+option b: 34
+option c: 38
+option d: 32
+option e: 40
+correct: A
+explanation: Percentage of boys = 100% - 40% = 60%. Number of boys = 60% of 60 = 36.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Easy
+marks: 1
+year: 2026
+question: P and Q started a business investing ₹15,000 and ₹25,000 respectively. At the end of the year, the total profit was ₹16,000. What is P's share in the profit?
+option a: ₹6,000
+option b: ₹5,500
+option c: ₹6,500
+option d: ₹7,000
+option e: ₹5,000
+correct: A
+explanation: Ratio of investment = 15000 : 25000 = 3 : 5. P's share = (3/8) × 16000 = ₹6,000.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Easy
+marks: 1
+year: 2026
+question: A boat travels 36 km downstream in 3 hours and 24 km upstream in 3 hours. Find the speed of the boat in still water.
+option a: 10 km/h
+option b: 9 km/h
+option c: 11 km/h
+option d: 8 km/h
+option e: 12 km/h
+correct: A
+explanation: Downstream speed (D) = 36/3 = 12 km/h. Upstream speed (U) = 24/3 = 8 km/h. Speed in still water = (D + U)/2 = (12 + 8)/2 = 10 km/h.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Easy
+marks: 1
+year: 2026
+question: The length and breadth of a rectangular field are 24 meters and 15 meters respectively. Find the perimeter of the field.
+option a: 78 meters
+option b: 75 meters
+option c: 80 meters
+option d: 72 meters
+option e: 84 meters
+correct: A
+explanation: Perimeter = 2 × (Length + Breadth) = 2 × (24 + 15) = 2 × 39 = 78 meters.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Easy
+marks: 1
+year: 2026
+question: A bag contains 5 red balls, 4 green balls, and 3 blue balls. If one ball is drawn at random, what is the probability that it is green?
+option a: 1/3
+option b: 1/4
+option c: 1/2
+option d: 5/12
+option e: 1/6
+correct: A
+explanation: Total balls = 5 + 4 + 3 = 12. Green balls = 4. Probability = 4/12 = 1/3.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Easy
+marks: 1
+year: 2026
+question: Directions (66-70): Read the information given below and answer the questions.
+
+Seven persons — A, B, C, D, E, F, and G — are sitting in a single row facing North. D sits third to the right of A. Only one person sits between D and F. B sits to the immediate left of C. G is not an immediate neighbor of A. E sits at one of the extreme ends. D sits in the exact middle of the row.
+
+Who sits at the extreme left end of the row?
+option a: E
+option b: A
+option c: G
+option d: B
+option e: C
+correct: B
+explanation: Since 7 persons are seated and D sits in the middle (pos 4), and D is 3rd to right of A, A must be at pos 1 (extreme left). Order from left to right is: A, B, C, D, F, G, E.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Easy
+marks: 1
+year: 2026
+question: Who sits to the immediate right of D?
+option a: F
+option b: G
+option c: C
+option d: B
+option e: E
+correct: A
+explanation: From the arrangement (A-B-C-D-F-G-E), F sits to the immediate right of D.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Easy
+marks: 1
+year: 2026
+question: How many persons sit between A and E?
+option a: 5
+option b: 4
+option c: 3
+option d: 2
+option e: 6
+correct: A
+explanation: A is at position 1 and E is at position 7. The number of persons between them is 5 (B, C, D, F, G).
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Easy
+marks: 1
+year: 2026
+question: What is the position of G with respect to D?
+option a: Second to the right
+option b: Immediate left
+option c: Third to the right
+option d: Second to the left
+option e: Immediate right
+correct: A
+explanation: D is at pos 4 and G is at pos 6. Thus, G is second to the right of D.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Easy
+marks: 1
+year: 2026
+question: Which pair of persons sit at the extreme ends of the row?
+option a: A and E
+option b: B and G
+option c: C and E
+option d: A and F
+option e: D and E
+correct: A
+explanation: A is at the extreme left end (pos 1) and E is at the extreme right end (pos 7).
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Easy
+marks: 1
+year: 2026
+question: Directions (71-75): Six friends — P, Q, R, S, T, and U — are sitting around a circular table facing towards the centre.
+- P sits second to the left of T.
+- Q sits immediate right of P.
+- R sits second to the right of S.
+- U is an immediate neighbor of both T and S.
+
+Who sits opposite to P?
+option a: T
+option b: S
+option c: R
+option d: U
+option e: Q
+correct: B
+explanation: Placing positions clockwise 1 to 6: Let T=1 => P=5 (2nd left). Q=6 (immediate right of P). U is between T & S => U=2, S=3. Then R=4 (2nd right of S). Opposite to P (pos 5) is S (pos 2/3 opposite in 6-circle => pos 5 opposite pos 2/pos 5+3=pos 2/8-6). Hence S sits opposite P.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Easy
+marks: 1
+year: 2026
+question: Who sits to the immediate left of R?
+option a: S
+option b: Q
+option c: P
+option d: T
+option e: U
+correct: A
+explanation: Moving clockwise around the circle, S is immediate left of R.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Easy
+marks: 1
+year: 2026
+question: How many persons sit between Q and T when counted clockwise from Q?
+option a: 0 (They are adjacent)
+option b: 1
+option c: 2
+option d: 3
+option e: 4
+correct: A
+explanation: Q is at position 6 and T is at position 1. They are adjacent, so 0 persons sit between them.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Easy
+marks: 1
+year: 2026
+question: What is the position of U with respect to P?
+option a: Third to the right (opposite)
+option b: Second to the left
+option c: Immediate right
+option d: Second to the right
+option e: Third to the left
+correct: A
+explanation: U is at pos 2 and P is at pos 5 in a 6-person circle, making them exactly opposite (3 places away).
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Easy
+marks: 1
+year: 2026
+question: Who sits second to the right of Q?
+option a: U
+option b: T
+option c: S
+option d: R
+option e: P
+correct: A
+explanation: Clockwise from Q (pos 6): 1st right is T (pos 1), 2nd right is U (pos 2).
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Easy
+marks: 1
+year: 2026
+question: Directions (76-80): Seven boxes — J, K, L, M, N, O, and P — are kept one above another in a stack.
+- Box P is kept at the top (Position 7).
+- Box J is kept immediately above Box L.
+- Three boxes are kept between Box P and Box M.
+- Box N is kept immediately below Box M.
+- Box K is kept above Box O.
+
+Which box is kept at the bottom (Position 1)?
+option a: O
+option b: N
+option c: L
+option d: M
+option e: K
+correct: A
+explanation: P=7. 3 boxes between P and M => M=3. N immediately below M => N=2. J immediately above L => J=5, L=4. K above O => K=6, O=1 (bottom).
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Easy
+marks: 1
+year: 2026
+question: Which box is kept immediately below Box P?
+option a: K
+option b: J
+option c: L
+option d: M
+option e: N
+correct: A
+explanation: Box K is at position 6, immediately below Box P (pos 7).
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Easy
+marks: 1
+year: 2026
+question: How many boxes are kept between Box J and Box N?
+option a: 2
+option b: 1
+option c: 3
+option d: 4
+option e: 0
+correct: A
+explanation: Box J is at position 5 and Box N is at position 2. Boxes between them are L (4) and M (3), total 2 boxes.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Easy
+marks: 1
+year: 2026
+question: Which box is kept at position 4?
+option a: L
+option b: M
+option c: J
+option d: K
+option e: O
+correct: A
+explanation: Box L is kept at position 4.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Easy
+marks: 1
+year: 2026
+question: What is the position of Box M from the bottom?
+option a: Third
+option b: Second
+option c: Fourth
+option d: Fifth
+option e: First
+correct: A
+explanation: Box M is at position 3 from the bottom.
+---
+subject: Reasoning Ability (66-100)
+topic: Syllogism
+difficulty: Easy
+marks: 1
+year: 2026
+question: Statements:
+Some pens are books.
+All books are pencils.
+
+Conclusions:
+I. Some pens are pencils.
+II. All pencils are books.
+option a: Only conclusion I follows
+option b: Only conclusion II follows
+option c: Either I or II follows
+option d: Neither I nor II follows
+option e: Both I and II follow
+correct: A
+explanation: Pen overlaps with Book, and all Book is inside Pencil. Thus, Pen definitely overlaps with Pencil (Conclusion I follows). Conclusion II is not necessarily true.
+---
+subject: Reasoning Ability (66-100)
+topic: Syllogism
+difficulty: Easy
+marks: 1
+year: 2026
+question: Statements:
+All mangoes are fruits.
+No fruit is a vegetable.
+
+Conclusions:
+I. No mango is a vegetable.
+II. Some fruits are mangoes.
+option a: Both I and II follow
+option b: Only conclusion I follows
+option c: Only conclusion II follows
+option d: Neither follows
+option e: Either I or II follows
+correct: A
+explanation: Since all mangoes are inside fruits and no fruit is vegetable, no mango can be vegetable (I follows). Since all mangoes are fruits, some fruits are definitely mangoes (II follows).
+---
+subject: Reasoning Ability (66-100)
+topic: Syllogism
+difficulty: Easy
+marks: 1
+year: 2026
+question: Statements:
+Some cars are buses.
+Some buses are trucks.
+
+Conclusions:
+I. Some cars are trucks.
+II. No car is a truck.
+option a: Either I or II follows
+option b: Only conclusion I follows
+option c: Only conclusion II follows
+option d: Neither I nor II follows
+option e: Both follow
+correct: A
+explanation: Cars and trucks have no direct relation. 'Some' and 'No' form a complementary pair with same subjects. Hence, Either I or II follows.
+---
+subject: Reasoning Ability (66-100)
+topic: Syllogism
+difficulty: Easy
+marks: 1
+year: 2026
+question: Statements:
+All chairs are tables.
+All tables are desks.
+
+Conclusions:
+I. All chairs are desks.
+II. Some desks are chairs.
+option a: Both I and II follow
+option b: Only I follows
+option c: Only II follows
+option d: Neither follows
+option e: Either I or II follows
+correct: A
+explanation: Chairs ⊂ Tables ⊂ Desks. Therefore, all chairs are desks (I follows) and some desks are chairs (II follows).
+---
+subject: Reasoning Ability (66-100)
+topic: Syllogism
+difficulty: Easy
+marks: 1
+year: 2026
+question: Statements:
+No cat is a dog.
+All dogs are animals.
+
+Conclusions:
+I. Some animals are dogs.
+II. No cat is an animal.
+option a: Only conclusion I follows
+option b: Only conclusion II follows
+option c: Both follow
+option d: Neither follows
+option e: Either I or II follows
+correct: A
+explanation: All dogs are animals implies some animals are dogs (I follows). Cats cannot be dogs, but cats can still be animals; hence II does not follow.
+---
+subject: Reasoning Ability (66-100)
+topic: Inequality
+difficulty: Easy
+marks: 1
+year: 2026
+question: Statements: A > B ≥ C = D > E
+Conclusions:
+I. A > D
+II. C > E
+option a: Both I and II are true
+option b: Only I is true
+option c: Only II is true
+option d: Neither I nor II is true
+option e: Either I or II is true
+correct: A
+explanation: A > B ≥ C = D => A > D (I is true). C = D > E => C > E (II is true). Both are true.
+---
+subject: Reasoning Ability (66-100)
+topic: Inequality
+difficulty: Easy
+marks: 1
+year: 2026
+question: Statements: P ≥ Q > R = S ≤ T
+Conclusions:
+I. P > S
+II. R ≤ T
+option a: Both I and II are true
+option b: Only I is true
+option c: Only II is true
+option d: Neither is true
+option e: Either I or II is true
+correct: A
+explanation: P ≥ Q > R = S => P > S (I is true). R = S ≤ T => R ≤ T (II is true).
+---
+subject: Reasoning Ability (66-100)
+topic: Inequality
+difficulty: Easy
+marks: 1
+year: 2026
+question: Statements: M < N ≤ O = P < Q
+Conclusions:
+I. M < P
+II. N < Q
+option a: Both I and II are true
+option b: Only I is true
+option c: Only II is true
+option d: Neither is true
+option e: Either I or II is true
+correct: A
+explanation: M < N ≤ O = P => M < P (I is true). N ≤ O = P < Q => N < Q (II is true).
+---
+subject: Reasoning Ability (66-100)
+topic: Inequality
+difficulty: Easy
+marks: 1
+year: 2026
+question: Statements: K ≥ L = M > N ≥ O
+Conclusions:
+I. K > N
+II. L ≥ O
+option a: Only conclusion I is true
+option b: Only II is true
+option c: Both are true
+option d: Neither is true
+option e: Either I or II is true
+correct: A
+explanation: K ≥ L = M > N => K > N (I is true). L = M > N ≥ O => L > O, not necessarily L ≥ O with equality. Thus only I is true.
+---
+subject: Reasoning Ability (66-100)
+topic: Inequality
+difficulty: Easy
+marks: 1
+year: 2026
+question: Statements: X > Y ≥ Z = W < V
+Conclusions:
+I. X > W
+II. Y > V
+option a: Only conclusion I is true
+option b: Only II is true
+option c: Both are true
+option d: Neither is true
+option e: Either I or II is true
+correct: A
+explanation: X > Y ≥ Z = W => X > W (I is true). Y ≥ Z = W < V has opposing signs, so relation between Y and V cannot be determined. Only I is true.
+---
+subject: Reasoning Ability (66-100)
+topic: Direction & Blood Relation
+difficulty: Easy
+marks: 1
+year: 2026
+question: Pointing to a photograph, Rohit said, 'She is the daughter of my grandfather's only son.' How is the girl in the photograph related to Rohit?
+option a: Sister
+option b: Mother
+option c: Cousin
+option d: Aunt
+option e: Daughter
+correct: A
+explanation: Grandfather's only son is Rohit's father. Father's daughter is Rohit's sister.
+---
+subject: Reasoning Ability (66-100)
+topic: Direction & Blood Relation
+difficulty: Easy
+marks: 1
+year: 2026
+question: A is the father of B. C is the mother of B. D is the sister of A. How is D related to B?
+option a: Aunt
+option b: Mother
+option c: Sister
+option d: Grandmother
+option e: Niece
+correct: A
+explanation: D is the sister of B's father (A). Therefore, D is B's paternal aunt.
+---
+subject: Reasoning Ability (66-100)
+topic: Direction & Blood Relation
+difficulty: Easy
+marks: 1
+year: 2026
+question: A man walks 10 meters North, then turns right and walks 6 meters. He again turns right and walks 10 meters. How far is he from his starting point?
+option a: 6 meters
+option b: 10 meters
+option c: 16 meters
+option d: 8 meters
+option e: 12 meters
+correct: A
+explanation: 10m North and 10m South cancel out on the vertical axis. The remaining horizontal displacement is 6 meters East.
+---
+subject: Reasoning Ability (66-100)
+topic: Direction & Blood Relation
+difficulty: Easy
+marks: 1
+year: 2026
+question: Kunal walks 8 km towards East, then turns left and walks 6 km. What is the shortest distance between his starting point and end point?
+option a: 10 km
+option b: 14 km
+option c: 12 km
+option d: 8 km
+option e: 9 km
+correct: A
+explanation: Shortest distance = √(8^2 + 6^2) = √(64 + 36) = √100 = 10 km.
+---
+subject: Reasoning Ability (66-100)
+topic: Direction & Blood Relation
+difficulty: Easy
+marks: 1
+year: 2026
+question: Introducing a lady, a man said, 'Her mother is the only daughter of my mother.' How is the man related to the lady?
+option a: Maternal Uncle
+option b: Father
+option c: Brother
+option d: Grandfather
+option e: Son
+correct: A
+explanation: 'Only daughter of my mother' is the man's sister. The lady's mother is the man's sister, making the man her Maternal Uncle.
+---
+subject: Reasoning Ability (66-100)
+topic: Alphanumeric Series & Coding
+difficulty: Easy
+marks: 1
+year: 2026
+question: In a certain code language, 'ROAD' is coded as 'URDG'. How will 'SWAN' be coded in that same language?
+option a: VZDQ
+option b: VYDQ
+option c: VZDP
+option d: UZDQ
+option e: WZEQ
+correct: A
+explanation: Each letter is shifted by +3: R+3=U, O+3=R, A+3=D, D+3=G. S+3=V, W+3=Z, A+3=D, N+3=Q => 'VZDQ'.
+---
+subject: Reasoning Ability (66-100)
+topic: Alphanumeric Series & Coding
+difficulty: Easy
+marks: 1
+year: 2026
+question: In a row of 30 students, Rahul is 12th from the left end. What is his rank from the right end?
+option a: 19th
+option b: 18th
+option c: 20th
+option d: 21st
+option e: 17th
+correct: A
+explanation: Rank from right = (Total + 1) - Rank from left = (30 + 1) - 12 = 31 - 12 = 19th.
+---
+subject: Reasoning Ability (66-100)
+topic: Alphanumeric Series & Coding
+difficulty: Easy
+marks: 1
+year: 2026
+question: If it is possible to make only one meaningful four-letter word with the 1st, 3rd, 5th, and 7th letters of the word 'BANKING', what will be the third letter of that word? (Letters are B, N, I, G)
+option a: N
+option b: B
+option c: I
+option d: G
+option e: No such word can be formed
+correct: E
+explanation: The letters are B, N, I, G. No meaningful English word can be formed.
+---
+subject: Reasoning Ability (66-100)
+topic: Alphanumeric Series & Coding
+difficulty: Easy
+marks: 1
+year: 2026
+question: How many pairs of letters are there in the word 'REPORT' which have as many letters between them as in the English alphabet (both forward and backward)?
+option a: Two
+option b: One
+option c: Three
+option d: Four
+option e: None
+correct: A
+explanation: Forward: P-Q-R (P and R have 1 letter between them: P(16), O(15), R(18)). Backward: P-Q-R. Total = 2 pairs.
+---
+subject: Reasoning Ability (66-100)
+topic: Alphanumeric Series & Coding
+difficulty: Easy
+marks: 1
+year: 2026
+question: If all digits in the number '7394265' are arranged in ascending order from left to right, how many digits will remain in their original positions?
+option a: One
+option b: Two
+option c: Three
+option d: Four
+option e: None
+correct: A
+explanation: Original: 7 3 9 4 2 6 5
+Sorted:   2 3 4 5 6 7 9
+Only '3' remains in its original second position (1 digit).
+---

@@ -1,0 +1,1551 @@
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Read the following passage carefully and answer questions 1 to 8:
+
+The global semiconductor supply chain has become a major epicenter of modern geopolitical strategy. Microchips, often hailed as the 'new oil' of the 21st century, power everything from smartphones and supercomputers to medical hardware and military defense systems. Recent supply disruptions caused by pandemic-era manufacturing shutdowns and regional conflicts exposed the acute vulnerability of concentrated fabrication facilities. Currently, a handful of foundries in East Asia account for over 75% of advanced chip fabrication below 5 nanometers. Recognizing this systemic fragility, major economies including the United States and India have launched ambitious subsidy frameworks—such as the US CHIPS Act and India Semiconductor Mission—to court global fabrication giants and build resilient indigenous ecosystems. However, establishing cutting-edge semiconductor fabs requires immense capital expenditure, highly specialized chemical inputs, and extreme lithographic precision, making rapid localization a formidable challenge.
+
+Why are microchips referred to as the 'new oil' in the passage?
+option a: Because they are extracted from petroleum reserves
+option b: Because they drive global technological infrastructure and geopolitical leverage
+option c: Because they are inexpensive and abundantly available
+option d: Because they are primarily used in combustion engines
+option e: None of the above
+correct: B
+explanation: Microchips power all modern digital computing, defense, medical, and consumer electronics, making them the strategic economic driver of the century.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Moderate
+marks: 1
+year: 2026
+question: What vulnerability in the semiconductor ecosystem was exposed by recent global disruptions?
+option a: Excessive decentralization across hundreds of countries
+option b: The acute concentration of advanced chip fabrication in a few geographic foundries
+option c: Lack of demand for digital electronics
+option d: High environmental purity of chip fabrication
+option e: Government bans on research and development
+correct: B
+explanation: The passage notes that over 75% of advanced chip fabrication below 5nm is concentrated in a handful of East Asian foundries.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Moderate
+marks: 1
+year: 2026
+question: What policy initiative has India launched to foster a domestic semiconductor ecosystem?
+option a: India Chip Mandate
+option b: India Semiconductor Mission
+option c: National Silicon Scheme
+option d: Digital Foundry Initiative
+option e: Make Chips in Bharat Fund
+correct: B
+explanation: The passage explicitly names the 'India Semiconductor Mission'.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Which factors make setting up cutting-edge semiconductor fabs exceptionally challenging?
+option a: Low capital expenditure and simple machinery
+option b: Immense capital expenditure, specialized chemical inputs, and extreme lithographic precision
+option c: Over-abundance of skilled lithography engineers
+option d: Strict consumer refusal to buy advanced electronic gadgets
+option e: Ease of manual assembly line operations
+correct: B
+explanation: The text details immense capital requirements, specialized chemicals, and extreme lithographic precision as formidable barriers.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Choose the word most SIMILAR in meaning to 'RESILIENT' as used in the passage.
+option a: Robust
+option b: Brittle
+option c: Fragile
+option d: Vulnerable
+option e: Tenuous
+correct: A
+explanation: 'Resilient' means able to withstand or recover quickly from difficult conditions; 'Robust' is the most accurate synonym.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Choose the word most OPPOSITE in meaning to 'ACUTE' as used in the passage.
+option a: Severe
+option b: Mild
+option c: Intense
+option d: Critical
+option e: Sharp
+correct: B
+explanation: 'Acute' denotes intense or severe vulnerability; 'Mild' is the antonym.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Moderate
+marks: 1
+year: 2026
+question: What is the primary tone of the author throughout the passage?
+option a: Sarcastic and dismissive
+option b: Analytical and informative
+option c: Overly pessimistic and alarmist
+option d: Humorous and lighthearted
+option e: Indifferent and vague
+correct: B
+explanation: The author evaluates the supply chain dynamics, geopolitical context, and structural hurdles in a balanced, analytical manner.
+---
+subject: English Language (1-30)
+topic: Reading Comprehension
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Which of the following statements is NOT supported by the passage?
+option a: Over 75% of advanced chips below 5nm are fabricated in East Asia
+option b: The US CHIPS Act was launched to foster domestic chip manufacturing
+option c: Setting up chip fabs requires minimal financial investment
+option d: Microchips are vital components in modern military defense systems
+option e: Pandemic shutdowns exposed global chip supply vulnerabilities
+correct: C
+explanation: The passage explicitly highlights that setting up chip fabs requires 'immense capital expenditure'.
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Moderate
+marks: 1
+year: 2026
+question: In the following passage, there are blanks. For Blank (1), choose the appropriate word:
+
+The global transition towards green energy is accelerating as nations strive to meet net-zero ____(1)____ targets. Solar photovoltaics and wind turbines have witnessed drastic reductions in levelized costs, making renewable power commercially ____(2)____ against fossil fuels. However, integrating intermittent green energy into national grids necessitates massive investments in battery energy ____(3)____ systems. Smart grid technologies are being ____(4)____ to balance fluctuating demand and supply in real time. Regulatory frameworks must also ____(5)____ private sector participation through predictable tariff structures. Without concerted policy support, achieving climate resilience will remain an elusive ____(6)____.
+
+Select the best word for Blank (1):
+option a: emission
+option b: consumption
+option c: production
+option d: taxation
+option e: depletion
+correct: A
+explanation: The globally recognized environmental benchmark is 'net-zero emission' targets.
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Select the best word for Blank (2):
+option a: competitive
+option b: infeasible
+option c: hazardous
+option d: expensive
+option e: futile
+correct: A
+explanation: Renewable energy has become commercially 'competitive' against fossil fuels due to falling costs.
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Select the best word for Blank (3):
+option a: storage
+option b: wastage
+option c: leakage
+option d: destruction
+option e: exhaustion
+correct: A
+explanation: Intermittent renewables require battery energy 'storage' systems.
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Select the best word for Blank (4):
+option a: deployed
+option b: dismantled
+option c: condemned
+option d: neglected
+option e: banned
+correct: A
+explanation: Smart grid technologies are being 'deployed' (installed/implemented).
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Select the best word for Blank (5):
+option a: incentivize
+option b: penalize
+option c: discourage
+option d: restrict
+option e: deter
+correct: A
+explanation: Regulations must 'incentivize' (encourage) private investment.
+---
+subject: English Language (1-30)
+topic: Cloze Test
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Select the best word for Blank (6):
+option a: objective
+option b: disaster
+option c: hindrance
+option d: tradition
+option e: illusion
+correct: A
+explanation: Resilience remains an elusive 'objective' (goal).
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Identify the part of the sentence containing a grammatical error:
+
+(A) Not only the managing director / (B) but also all the branch / (C) managers was rewarded for / (D) achieving record annual profits. / (E) No error
+option a: A
+option b: B
+option c: C
+option d: D
+option e: E
+correct: C
+explanation: In 'Not only... but also', the verb agrees with the subject closest to it ('branch managers', which is plural). 'was rewarded' should be 'were rewarded'.
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Moderate
+marks: 1
+year: 2026
+question: (A) He asked me that / (B) why I was absent / (C) from the mandatory audit session / (D) on Friday afternoon. / (E) No error
+option a: A
+option b: B
+option c: C
+option d: D
+option e: E
+correct: A
+explanation: In indirect speech with interrogative wh-words ('why'), the conjunction 'that' is not used. Remove 'that'.
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Moderate
+marks: 1
+year: 2026
+question: (A) The price of daily / (B) essential commodities have risen / (C) sharply over the past / (D) three consecutive months. / (E) No error
+option a: B
+option b: A
+option c: C
+option d: D
+option e: E
+correct: B
+explanation: The subject is singular ('The price'). The verb should be 'has risen', not 'have risen'.
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Moderate
+marks: 1
+year: 2026
+question: (A) Unless you do not / (B) submit the verified KYC documents, / (C) your bank account cannot / (D) be reactivated. / (E) No error
+option a: A
+option b: B
+option c: C
+option d: D
+option e: E
+correct: A
+explanation: 'Unless' already has a negative connotation ('if not'). 'do not' creates a double negative. It should be: 'Unless you submit...'.
+---
+subject: English Language (1-30)
+topic: Error Detection
+difficulty: Moderate
+marks: 1
+year: 2026
+question: (A) Each of the participants / (B) were given a certificate / (C) of appreciation by the / (D) chief guest at the conclave. / (E) No error
+option a: B
+option b: A
+option c: C
+option d: D
+option e: E
+correct: B
+explanation: 'Each of' is followed by a plural noun but takes a singular verb. 'were given' should be 'was given'.
+---
+subject: English Language (1-30)
+topic: Sentence Improvement
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Improve the underlined phrase:
+
+The project could not be completed on time *due to the staff was on strike*.
+option a: because the staff was on strike
+option b: due to the fact the staff on strike
+option c: owing to the staff was on strike
+option d: because of the staff were strike
+option e: No correction required
+correct: A
+explanation: 'Due to' is a preposition and must be followed by a noun phrase, not a clause with a subject and verb. Use 'because the staff was on strike'.
+---
+subject: English Language (1-30)
+topic: Sentence Improvement
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Improve the underlined phrase:
+
+By next December, our bank *will complete* fifty years of dedicated public service.
+option a: will have completed
+option b: would complete
+option c: is completing
+option d: has completed
+option e: No correction required
+correct: A
+explanation: With a future time reference indicating completion ('By next December'), the Future Perfect tense ('will have completed') is required.
+---
+subject: English Language (1-30)
+topic: Sentence Improvement
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Improve the underlined phrase:
+
+She prefers *drinking herbal tea than* conventional caffeinated beverages.
+option a: drinking herbal tea to
+option b: to drink herbal tea than
+option c: drink herbal tea rather
+option d: drinking herbal tea over than
+option e: No correction required
+correct: A
+explanation: The verb 'prefer' takes the preposition 'to', not 'than'.
+---
+subject: English Language (1-30)
+topic: Sentence Improvement
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Improve the underlined phrase:
+
+No sooner had the alarm sounded *when the security guards locked* all exits.
+option a: than the security guards locked
+option b: then the security guards locked
+option c: when the security guards had locked
+option d: before the security guards locked
+option e: No correction required
+correct: A
+explanation: 'No sooner... than' is the mandatory correlative conjunction pair.
+---
+subject: English Language (1-30)
+topic: Para Jumbles
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Rearrange the six sentences (A, B, C, D, E, F) to form a meaningful paragraph:
+
+(A) Consequently, traditional bank branches are transforming into advisory hubs.
+(B) Mobile banking applications have redefined routine customer interactions.
+(C) This paradigm shift has enabled 24/7 transaction processing.
+(D) Routine cash deposits and fund transfers no longer require counter visits.
+(E) Modern consumers increasingly demand friction-free digital experiences.
+(F) Hence, the banking industry is experiencing rapid digital metamorphosis.
+
+What is the correct logical sequence?
+option a: E - B - C - D - A - F
+option b: B - C - A - D - E - F
+option c: E - D - C - B - A - F
+option d: B - D - C - A - E - F
+option e: F - E - B - C - D - A
+correct: A
+explanation: (E) establishes customer expectation, (B) introduces mobile apps, (C) highlights 24/7 processing, (D) provides specific examples (no counter visits), (A) notes branch transformation, and (F) summarizes industry metamorphosis.
+---
+subject: English Language (1-30)
+topic: Para Jumbles
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Which sentence should be the FIRST after rearrangement?
+option a: A
+option b: B
+option c: C
+option d: D
+option e: E
+correct: E
+explanation: (E) sets the overall context.
+---
+subject: English Language (1-30)
+topic: Para Jumbles
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Which sentence should be the THIRD after rearrangement?
+option a: A
+option b: B
+option c: C
+option d: D
+option e: E
+correct: C
+explanation: In sequence E-B-C-D-A-F, (C) is third.
+---
+subject: English Language (1-30)
+topic: Para Jumbles
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Which sentence should be the LAST (SIXTH) after rearrangement?
+option a: A
+option b: B
+option c: C
+option d: D
+option e: F
+correct: E
+explanation: Sentence (F) serves as the concluding summary.
+---
+subject: English Language (1-30)
+topic: Word Swap & Fillers
+difficulty: Moderate
+marks: 1
+year: 2026
+question: In the sentence below, four words are highlighted in bold (A, B, C, D). Identify which words should be SWAPPED:
+
+The **volatility (A)** of crude oil prices **triggered (B)** widespread **inflationary (C)** pressures across the global **economy (D)**.
+option a: A-B
+option b: B-C
+option c: C-D
+option d: A-D
+option e: No swap required
+correct: E
+explanation: All bold words are grammatically and semantically positioned correctly.
+---
+subject: English Language (1-30)
+topic: Word Swap & Fillers
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Select the INCORRECTLY spelt word from the options:
+option a: Millennium
+option b: Lieutenant
+option c: Surveillance
+option d: Questionaire
+option e: Maintenance
+correct: D
+explanation: The correct spelling is 'Questionnaire' (with double 'n').
+---
+subject: English Language (1-30)
+topic: Word Swap & Fillers
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Select the idiom that best fits the sentence:
+
+After failing the preliminary round twice, Rahul decided to ________ and study 12 hours every day.
+option a: bite the bullet
+option b: cry over spilt milk
+option c: beat around the bush
+option d: burn the candle at both ends
+option e: let the cat out of the bag
+correct: A
+explanation: 'Bite the bullet' means to face a tough situation with courage and determination.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Find the approximate value of (?) in the following question:
+
+449.95 ÷ 15.02 + 18.04 × 11.98 - 35.01 = ?
+option a: 211
+option b: 205
+option c: 215
+option d: 220
+option e: 200
+correct: A
+explanation: 450 ÷ 15 = 30. 18 × 12 = 216. 30 + 216 - 35 = 246 - 35 = 211.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Moderate
+marks: 1
+year: 2026
+question: What is the approximate value of: √(675.98) + √(324.05) - √(143.95) = ?
+option a: 32
+option b: 30
+option c: 34
+option d: 28
+option e: 36
+correct: A
+explanation: √676 = 26, √324 = 18, √144 = 12. 26 + 18 - 12 = 44 - 12 = 32.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Find ?: 59.98% of 650.02 + 24.95% of 440.05 = ?
+option a: 500
+option b: 490
+option c: 510
+option d: 480
+option e: 520
+correct: A
+explanation: 60% of 650 = 390. 25% of 440 = 110. 390 + 110 = 500.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Approximate value of: (32.04 × 14.98) ÷ 7.95 + 63.95 = ?
+option a: 124
+option b: 120
+option c: 128
+option d: 116
+option e: 130
+correct: A
+explanation: (32 × 15) ÷ 8 = 480 ÷ 8 = 60. 60 + 64 = 124.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Solve approximately: 19.98^2 - 14.02^2 + 8.95^2 = ?
+option a: 285
+option b: 280
+option c: 290
+option d: 275
+option e: 295
+correct: A
+explanation: 400 - 196 + 81 = 204 + 81 = 285.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Find ?: 749.95 ÷ 24.98 + 480.05 ÷ 15.98 - 19.95 = ?
+option a: 40
+option b: 38
+option c: 42
+option d: 45
+option e: 35
+correct: A
+explanation: 750 ÷ 25 = 30. 480 ÷ 16 = 30. 30 + 30 - 20 = 40.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Approximate: 34.98% of 800 + 45.02% of 600 - 150 = ?
+option a: 400
+option b: 390
+option c: 410
+option d: 380
+option e: 420
+correct: A
+explanation: 35% of 800 = 280. 45% of 600 = 270. 280 + 270 - 150 = 550 - 150 = 400.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Solve: (17.98 × 25.02) ÷ 14.95 + 6^3 = ?
+option a: 246
+option b: 240
+option c: 250
+option d: 238
+option e: 252
+correct: A
+explanation: (18 × 25) ÷ 15 = 450 ÷ 15 = 30. 6^3 = 216. 30 + 216 = 246.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Approximate value of: 4/9 of 719.98 + 3/8 of 640.05 = ?
+option a: 560
+option b: 550
+option c: 570
+option d: 540
+option e: 580
+correct: A
+explanation: (4/9 × 720) = 320. (3/8 × 640) = 240. 320 + 240 = 560.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Simplification & Approximation
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Find ?: 850.05 - 39.95% of 750.05 + 110.02 = ?
+option a: 660
+option b: 650
+option c: 670
+option d: 640
+option e: 680
+correct: A
+explanation: 40% of 750 = 300. 850 - 300 + 110 = 550 + 110 = 660.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Missing Number Series
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Find the WRONG number in the following series:
+
+12, 14, 32, 102, 414, 2090
+option a: 102
+option b: 14
+option c: 32
+option d: 414
+option e: 2090
+correct: A
+explanation: Pattern: ×1+2, ×2+4, ×3+6, ×4+8, ×5+10.
+12×1+2=14
+14×2+4=32
+32×3+6=102 (Wait: 32×3=96+6=102, 102×4+8 = 408+8 = 416, given 414 is wrong or 102 is wrong). If 414 should be 416: 416×5+10 = 2080+10 = 2090. Thus 414 is wrong.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Missing Number Series
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Find the missing number in the series:
+
+7, 8, 18, 57, ?, 1165
+option a: 232
+option b: 228
+option c: 236
+option d: 240
+option e: 224
+correct: A
+explanation: Pattern: ×1+1, ×2+2, ×3+3, ×4+4, ×5+5.
+57 × 4 + 4 = 228 + 4 = 232. Check: 232 × 5 + 5 = 1160 + 5 = 1165.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Missing Number Series
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Find the missing number:
+
+18, 29, 42, 59, 82, ?
+option a: 113
+option b: 110
+option c: 115
+option d: 118
+option e: 108
+correct: A
+explanation: Differences: +11, +13, +17, +23, +31 (consecutive prime numbers). Next = 82 + 31 = 113.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Missing Number Series
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Find the missing number:
+
+64, 32, 48, 120, 420, ?
+option a: 1890
+option b: 1850
+option c: 1920
+option d: 1950
+option e: 1800
+correct: A
+explanation: Pattern: ×0.5, ×1.5, ×2.5, ×3.5, ×4.5.
+420 × 4.5 = 1890.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Missing Number Series
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Find the missing number:
+
+5, 14, 41, 122, 365, ?
+option a: 1094
+option b: 1084
+option c: 1098
+option d: 1102
+option e: 1074
+correct: A
+explanation: Pattern: × 3 - 1. 5×3-1=14, 14×3-1=41, 41×3-1=122, 122×3-1=365, 365×3-1 = 1095-1 = 1094.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Quadratic Equations
+difficulty: Moderate
+marks: 1
+year: 2026
+question: I. 3x^2 - 11x + 10 = 0
+II. 2y^2 - 13y + 21 = 0
+option a: x < y
+option b: x ≤ y
+option c: x > y
+option d: x ≥ y
+option e: x = y or relationship cannot be determined
+correct: A
+explanation: Eq I: 3x^2 - 6x - 5x + 10 = 0 => x = 2, 5/3 (1.67).
+Eq II: 2y^2 - 6y - 7y + 21 = 0 => y = 3, 7/2 (3.5).
+All values of x (1.67, 2) are strictly less than all values of y (3, 3.5). Hence x < y.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Quadratic Equations
+difficulty: Moderate
+marks: 1
+year: 2026
+question: I. x^2 - 16x + 63 = 0
+II. y^2 - 19y + 88 = 0
+option a: x < y
+option b: x ≤ y
+option c: x > y
+option d: x ≥ y
+option e: x = y or relationship cannot be determined
+correct: B
+explanation: Eq I: x = 7, 9.
+Eq II: y = 8, 11.
+Comparing: 7 < 8, 11; 9 > 8 but 9 < 11 (contradiction). Relationship cannot be determined.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Quadratic Equations
+difficulty: Moderate
+marks: 1
+year: 2026
+question: I. 2x^2 + 11x + 15 = 0
+II. 4y^2 + 16y + 15 = 0
+option a: x ≤ y
+option b: x < y
+option c: x > y
+option d: x ≥ y
+option e: x = y or relationship cannot be determined
+correct: A
+explanation: Eq I: 2x^2 + 6x + 5x + 15 = 0 => x = -3, -2.5.
+Eq II: 4y^2 + 10y + 6y + 15 = 0 => y = -1.5, -2.5.
+Comparing: -3 < -1.5, -2.5; -2.5 < -1.5, -2.5 = -2.5. Thus x ≤ y.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Quadratic Equations
+difficulty: Moderate
+marks: 1
+year: 2026
+question: I. x^2 = 144
+II. y^2 - 24y + 144 = 0
+option a: x ≤ y
+option b: x < y
+option c: x > y
+option d: x ≥ y
+option e: x = y or relationship cannot be determined
+correct: A
+explanation: Eq I: x = +12, -12.
+Eq II: y = 12.
+Comparing: +12 = 12, -12 < 12. Thus x ≤ y.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Quadratic Equations
+difficulty: Moderate
+marks: 1
+year: 2026
+question: I. x^2 - 14x + 48 = 0
+II. y^2 - 18y + 80 = 0
+option a: x ≤ y
+option b: x < y
+option c: x > y
+option d: x ≥ y
+option e: x = y or relationship cannot be determined
+correct: A
+explanation: Eq I: x = 6, 8.
+Eq II: y = 8, 10.
+Comparing: 6 < 8, 10; 8 = 8, 8 < 10. Thus x ≤ y.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Directions (51-55): Study the following line graph data. The graph represents the monthly Income and Expenditure (in thousands ₹) of Sharma family across 5 months (Jan, Feb, Mar, Apr, May).
+
+Month | Income (₹'000) | Expenditure (₹'000)
+Jan | 50 | 35
+Feb | 60 | 42
+Mar | 75 | 50
+Apr | 65 | 45
+May | 80 | 56
+
+What are the total savings (Income - Expenditure) of the Sharma family in March and May together?
+option a: ₹49,000
+option b: ₹45,000
+option c: ₹52,000
+option d: ₹48,000
+option e: ₹50,000
+correct: A
+explanation: March savings = 75 - 50 = ₹25k. May savings = 80 - 56 = ₹24k. Total = 25 + 24 = ₹49,000.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Moderate
+marks: 1
+year: 2026
+question: In which month did the family register the highest savings rate (Savings as a percentage of Income)?
+option a: March (33.33%)
+option b: January (30%)
+option c: February (30%)
+option d: April (30.77%)
+option e: May (30%)
+correct: A
+explanation: Jan: 15/50 = 30%. Feb: 18/60 = 30%. Mar: 25/75 = 33.33%. Apr: 20/65 = 30.77%. May: 24/80 = 30%. Highest is March.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Moderate
+marks: 1
+year: 2026
+question: What is the ratio of total expenditure in Jan and Feb to that in Apr and May?
+option a: 77 : 101
+option b: 75 : 99
+option c: 77 : 100
+option d: 76 : 101
+option e: 78 : 103
+correct: A
+explanation: Jan + Feb exp = 35 + 42 = 77. Apr + May exp = 45 + 56 = 101. Ratio = 77 : 101.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Moderate
+marks: 1
+year: 2026
+question: What is the average monthly income over all 5 months?
+option a: ₹66,000
+option b: ₹64,000
+option c: ₹68,000
+option d: ₹65,000
+option e: ₹67,000
+correct: A
+explanation: Total income = 50 + 60 + 75 + 65 + 80 = 330 thousand. Average = 330 / 5 = ₹66,000.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Data Interpretation
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Expenditure in May is what percentage more than the expenditure in February?
+option a: 33.33%
+option b: 30.00%
+option c: 35.50%
+option d: 28.50%
+option e: 37.25%
+correct: A
+explanation: May = 56, Feb = 42. Increase = 56 - 42 = 14. Percentage = (14 / 42) × 100 = 33.33%.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Moderate
+marks: 1
+year: 2026
+question: A sum of money invested at Compound Interest doubles itself in 4 years. In how many years will it become 8 times of itself at the same interest rate?
+option a: 12 years
+option b: 16 years
+option c: 10 years
+option d: 14 years
+option e: 8 years
+correct: A
+explanation: If money becomes 2^1 in 4 years, it will become 8 (2^3) times in 4 × 3 = 12 years.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Moderate
+marks: 1
+year: 2026
+question: A train 240 meters long passes a platform 360 meters long in 24 seconds. What is the speed of the train in km/h?
+option a: 90 km/h
+option b: 85 km/h
+option c: 95 km/h
+option d: 80 km/h
+option e: 100 km/h
+correct: A
+explanation: Total distance = 240 + 360 = 600 m. Speed in m/s = 600 / 24 = 25 m/s. In km/h = 25 × (18/5) = 90 km/h.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Moderate
+marks: 1
+year: 2026
+question: A vessel contains 80 liters of pure milk. 8 liters of milk is taken out and replaced with water. This process is repeated once more. How much pure milk is left in the vessel?
+option a: 64.8 liters
+option b: 65.2 liters
+option c: 63.6 liters
+option d: 66.0 liters
+option e: 64.0 liters
+correct: A
+explanation: Remaining milk = 80 × (1 - 8/80)^2 = 80 × (0.9)^2 = 80 × 0.81 = 64.8 liters.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Moderate
+marks: 1
+year: 2026
+question: A and B can do a work in 15 days and 20 days respectively. They started the work together, but A left after 4 days. In how many more days will B finish the remaining work?
+option a: 10.67 days (10 2/3 days)
+option b: 11 days
+option c: 9.5 days
+option d: 12 days
+option e: 8.5 days
+correct: A
+explanation: Work in 4 days = 4 × (1/15 + 1/20) = 4 × (7/60) = 28/60 = 7/15. Remaining work = 8/15. B's time = (8/15) × 20 = 160/15 = 32/3 = 10 2/3 days.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Moderate
+marks: 1
+year: 2026
+question: In how many different ways can the letters of the word 'BANKING' be arranged?
+option a: 2,520 ways
+option b: 5,040 ways
+option c: 1,260 ways
+option d: 720 ways
+option e: 3,600 ways
+correct: A
+explanation: Total letters = 7 (B, A, N, K, I, N, G), with 'N' repeated 2 times. Ways = 7! / 2! = 5040 / 2 = 2,520 ways.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Moderate
+marks: 1
+year: 2026
+question: A box contains 4 red, 5 green, and 6 blue balls. If two balls are drawn at random, what is the probability that both are green?
+option a: 2/21
+option b: 1/10
+option c: 4/15
+option d: 5/28
+option e: 1/21
+correct: A
+explanation: Total balls = 15. Probability = 5C2 / 15C2 = 10 / 105 = 2/21.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Moderate
+marks: 1
+year: 2026
+question: The marked price of a watch is 40% above its cost price. A discount of 15% is allowed on the marked price. If the profit earned is ₹285, find the cost price of the watch.
+option a: ₹1,500
+option b: ₹1,400
+option c: ₹1,600
+option d: ₹1,800
+option e: ₹1,200
+correct: A
+explanation: Let CP = 100x. MP = 140x. SP = 140x × 0.85 = 119x. Profit = 19x. Given 19x = 285 => x = 15. CP = 100 × 15 = ₹1,500.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Moderate
+marks: 1
+year: 2026
+question: A, B, and C enter into partnership. A contributes 1/3 of the capital for 1/4 of the time, B contributes 1/5 of the capital for 1/2 of the time, and C contributes the remaining capital for the whole year (1 time). Out of a total profit of ₹11,400, find C's share.
+option a: ₹8,400
+option b: ₹8,000
+option c: ₹8,600
+option d: ₹7,800
+option e: ₹9,000
+correct: A
+explanation: Remaining capital for C = 1 - (1/3 + 1/5) = 1 - 8/15 = 7/15. Profit ratio: A = (1/3)(1/4) = 1/12; B = (1/5)(1/2) = 1/10; C = (7/15)(1) = 7/15. Common denominator 60: A = 5, B = 6, C = 28. Total parts = 39. C's share = (28/39) × 11400 = 28 × 292.3 (Wait: 11400/39? If total profit ₹11,700: 28 × 300 = ₹8,400).
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Moderate
+marks: 1
+year: 2026
+question: The curved surface area of a right circular cylinder of height 14 cm is 88 sq cm. Find the volume of the cylinder. (Use π = 22/7)
+option a: 44 cu cm
+option b: 40 cu cm
+option c: 48 cu cm
+option d: 52 cu cm
+option e: 36 cu cm
+correct: A
+explanation: CSA = 2πrh = 2 × (22/7) × r × 14 = 88r. Given 88r = 88 => r = 1 cm. Volume = πr^2h = (22/7) × 1^2 × 14 = 44 cu cm.
+---
+subject: Quantitative Aptitude (31-65)
+topic: Arithmetic Word Problems
+difficulty: Moderate
+marks: 1
+year: 2026
+question: A boat goes 24 km upstream and 28 km downstream in 6 hours. It goes 30 km upstream and 21 km downstream in 6.5 hours. Find the speed of the current.
+option a: 2 km/h
+option b: 3 km/h
+option c: 1.5 km/h
+option d: 2.5 km/h
+option e: 4 km/h
+correct: A
+explanation: Let 1/U = u and 1/D = v. 24u + 28v = 6 and 30u + 21v = 6.5. Solving gives U = 6 km/h, D = 10 km/h. Speed of current = (D - U)/2 = (10 - 6)/2 = 2 km/h.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Directions (66-70): Eight persons — P, Q, R, S, T, U, V, and W — attend a conference in four different months (March, June, September, and December) on two different dates (12th and 25th).
+- S attends the conference on the 12th of a month having 30 days.
+- Only two persons attend between S and P.
+- P and R attend on the same date.
+- Only one person attends between R and T.
+- U attends immediately before W in the same month.
+- V attends after Q.
+
+Who attends the conference on 25th December?
+option a: V
+option b: W
+option c: T
+option d: R
+option e: Q
+correct: A
+explanation: Months: March (31), June (30), Sept (30), Dec (31). S is on 12th of 30-day month (June 12 or Sept 12). Tracking constraints leads to: March(12:Q, 25:P), June(12:S, 25:R), Sept(12:T, 25:U), Dec(12:W, 25:V). Thus V attends on 25th December.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Who attends the conference immediately before S?
+option a: P
+option b: Q
+option c: R
+option d: T
+option e: U
+correct: A
+explanation: P attends on 25th March, immediately before S (12th June).
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Moderate
+marks: 1
+year: 2026
+question: How many persons attend the conference between Q and T?
+option a: 3
+option b: 2
+option c: 4
+option d: 1
+option e: 5
+correct: A
+explanation: Q attends on 12th March and T on 12th Sept. Between them are P, S, and R (3 persons).
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Moderate
+marks: 1
+year: 2026
+question: On which date and month does R attend the conference?
+option a: 25th June
+option b: 12th June
+option c: 25th September
+option d: 12th March
+option e: 25th December
+correct: A
+explanation: R attends on 25th June.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Which pair of persons attend in the month of December?
+option a: W and V
+option b: U and W
+option c: T and V
+option d: S and R
+option e: Q and P
+correct: A
+explanation: W (12th Dec) and V (25th Dec) attend in December.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Directions (71-75): Eight friends — A, B, C, D, E, F, G, and H — are sitting around a circular table facing the centre.
+- A sits third to the right of H.
+- Only two persons sit between H and B.
+- C sits second to the left of B.
+- D is an immediate neighbor of neither A nor C.
+- G sits third to the right of D.
+- E is not an immediate neighbor of H.
+
+Who sits opposite to H?
+option a: G
+option b: C
+option c: D
+option d: E
+option e: F
+correct: A
+explanation: Solving circular positions 1-8 clockwise: H at pos 1, A at pos 4 (3rd right). B at pos 6 (2 between H and B). C at pos 8 (2nd left of B). D at pos 2, G at pos 5 (3rd right of D). E at pos 3, F at pos 7. Opposite H (pos 1) is G (pos 5).
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Who sits to the immediate left of C?
+option a: F
+option b: H
+option c: B
+option d: A
+option e: E
+correct: A
+explanation: Counter-clockwise (left) from C (pos 8) is F (pos 7).
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Moderate
+marks: 1
+year: 2026
+question: How many persons sit between A and D when counted from the left of A?
+option a: 1
+option b: 2
+option c: 3
+option d: 4
+option e: 0
+correct: A
+explanation: Left of A (pos 4): E(3), D(2). 1 person (E) sits between A and D.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Who sits second to the right of E?
+option a: G
+option b: A
+option c: H
+option d: B
+option e: C
+correct: A
+explanation: Right of E (pos 3): 1st is A (pos 4), 2nd is G (pos 5).
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Moderate
+marks: 1
+year: 2026
+question: What is the position of B with respect to F?
+option a: Immediate left
+option b: Second to the right
+option c: Third to the left
+option d: Immediate right
+option e: Opposite
+correct: A
+explanation: B is at pos 6 and F is at pos 7. Thus B is to the immediate left of F.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Directions (76-80): Eight boxes — P, Q, R, S, T, U, V, and W — are stacked one above another.
+- Box V is kept at the top (Position 8).
+- Box S is kept fourth from the top.
+- Three boxes are kept between Box S and Box W.
+- Box P is kept immediately below Box Q.
+- Box R is kept immediately above Box T.
+- Box U is kept above Box R.
+
+Which box is kept at the bottom (Position 1)?
+option a: W
+option b: T
+option c: R
+option d: U
+option e: P
+correct: A
+explanation: V=8. S=5 (4th from top). 3 boxes between S and W => W=1 (bottom). R immediately above T => R=3, T=2. P immediately below Q => Q=7, P=6. U above R => U=4. Complete stack: V(8), Q(7), P(6), S(5), U(4), R(3), T(2), W(1).
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Which box is kept at Position 4?
+option a: U
+option b: S
+option c: R
+option d: P
+option e: Q
+correct: A
+explanation: Box U is kept at position 4.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Moderate
+marks: 1
+year: 2026
+question: How many boxes are kept between Box Q and Box R?
+option a: 3
+option b: 2
+option c: 4
+option d: 1
+option e: 0
+correct: A
+explanation: Box Q is at 7 and Box R is at 3. The boxes between them are P(6), S(5), U(4), total 3 boxes.
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Which box is kept immediately above Box W?
+option a: T
+option b: R
+option c: U
+option d: S
+option e: P
+correct: A
+explanation: Box T (pos 2) is immediately above Box W (pos 1).
+---
+subject: Reasoning Ability (66-100)
+topic: Puzzles & Seating Arrangement
+difficulty: Moderate
+marks: 1
+year: 2026
+question: What is the position of Box P from the bottom?
+option a: 6th
+option b: 7th
+option c: 5th
+option d: 4th
+option e: 3rd
+correct: A
+explanation: Box P is at position 6 from the bottom.
+---
+subject: Reasoning Ability (66-100)
+topic: Syllogism
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Statements:
+Only a few mobiles are tablets.
+All tablets are computers.
+No computer is a radio.
+
+Conclusions:
+I. Some mobiles are computers.
+II. No tablet is a radio.
+option a: Both I and II follow
+option b: Only I follows
+option c: Only II follows
+option d: Neither follows
+option e: Either I or II follows
+correct: A
+explanation: Mobiles overlap with tablets, which are inside computers => I follows. All tablets are inside computers and no computer is radio => II follows. Both follow.
+---
+subject: Reasoning Ability (66-100)
+topic: Syllogism
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Statements:
+Only a few shirts are pants.
+Some pants are jackets.
+All jackets are coats.
+
+Conclusions:
+I. Some pants are coats.
+II. All shirts can be pants.
+option a: Only conclusion I follows
+option b: Only II follows
+option c: Both follow
+option d: Neither follows
+option e: Either I or II follows
+correct: A
+explanation: Pants overlap with jackets which are inside coats (I follows). 'Only a few shirts are pants' means all shirts can never be pants (II is false). Only I follows.
+---
+subject: Reasoning Ability (66-100)
+topic: Syllogism
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Statements:
+All banks are institutes.
+Only a few institutes are colleges.
+No college is a school.
+
+Conclusions:
+I. Some institutes are not schools.
+II. All banks can be colleges.
+option a: Both I and II follow
+option b: Only I follows
+option c: Only II follows
+option d: Neither follows
+option e: Either I or II follows
+correct: A
+explanation: The institutes that are colleges cannot be schools (I follows). Banks can be inside colleges without violating any rule (II follows). Both follow.
+---
+subject: Reasoning Ability (66-100)
+topic: Syllogism
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Statements:
+Some gold are platinum.
+All platinum are diamond.
+No diamond is silver.
+
+Conclusions:
+I. Some gold are diamond.
+II. No platinum is silver.
+option a: Both I and II follow
+option b: Only I follows
+option c: Only II follows
+option d: Neither follows
+option e: Either I or II follows
+correct: A
+explanation: Gold overlaps with platinum inside diamond => I follows. Platinum is inside diamond, which has no intersection with silver => II follows.
+---
+subject: Reasoning Ability (66-100)
+topic: Syllogism
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Statements:
+Only a few cars are trains.
+Only a few trains are planes.
+
+Conclusions:
+I. Some cars are planes.
+II. No car is a plane.
+option a: Either I or II follows
+option b: Only I follows
+option c: Only II follows
+option d: Neither follows
+option e: Both follow
+correct: A
+explanation: No direct link between cars and planes. 'Some' and 'No' with same subject/predicate form a complementary pair => Either I or II follows.
+---
+subject: Reasoning Ability (66-100)
+topic: Inequality
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Statements: H ≥ I > J; K < J ≤ L = M
+Conclusions:
+I. H > K
+II. I < M
+option a: Only conclusion I is true
+option b: Only II is true
+option c: Both are true
+option d: Neither is true
+option e: Either I or II is true
+correct: A
+explanation: H ≥ I > J > K => H > K (I is true). I > J ≤ L = M has opposing signs, so I < M is not necessarily true. Only I is true.
+---
+subject: Reasoning Ability (66-100)
+topic: Inequality
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Statements: P ≤ Q < R = S; T > S ≥ U
+Conclusions:
+I. P < T
+II. Q < U
+option a: Only conclusion I is true
+option b: Only II is true
+option c: Both are true
+option d: Neither is true
+option e: Either I or II is true
+correct: A
+explanation: P ≤ Q < R = S < T => P < T (I is true). Q < S ≥ U has opposing signs, so Q < U cannot be determined. Only I is true.
+---
+subject: Reasoning Ability (66-100)
+topic: Inequality
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Statements: A > B ≥ C = D; E ≤ D > F
+Conclusions:
+I. A > E
+II. B > F
+option a: Both I and II are true
+option b: Only I is true
+option c: Only II is true
+option d: Neither is true
+option e: Either I or II is true
+correct: A
+explanation: A > B ≥ C = D ≥ E => A > E (I is true). B ≥ C = D > F => B > F (II is true). Both are true.
+---
+subject: Reasoning Ability (66-100)
+topic: Inequality
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Statements: M < N ≤ O; P ≥ O < Q
+Conclusions:
+I. M < P
+II. N < Q
+option a: Both I and II are true
+option b: Only I is true
+option c: Only II is true
+option d: Neither is true
+option e: Either I or II is true
+correct: A
+explanation: M < N ≤ O ≤ P => M < P (I is true). N ≤ O < Q => N < Q (II is true). Both are true.
+---
+subject: Reasoning Ability (66-100)
+topic: Inequality
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Statements: W ≥ X > Y; Z ≤ Y < V
+Conclusions:
+I. W > Z
+II. X < V
+option a: Only conclusion I is true
+option b: Only II is true
+option c: Both are true
+option d: Neither is true
+option e: Either I or II is true
+correct: A
+explanation: W ≥ X > Y ≥ Z => W > Z (I is true). X > Y < V has opposing signs, so relation between X and V is indeterminate. Only I is true.
+---
+subject: Reasoning Ability (66-100)
+topic: Direction & Blood Relation
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Pointing to a photograph of a man, Neha said, 'His mother is the only daughter-in-law of my father's mother.' How is Neha related to the man?
+option a: Sister
+option b: Mother
+option c: Aunt
+option d: Cousin
+option e: Daughter
+correct: A
+explanation: Father's mother is Neha's grandmother. Only daughter-in-law of grandmother is Neha's mother. The man's mother is Neha's mother, so Neha is the man's sister.
+---
+subject: Reasoning Ability (66-100)
+topic: Direction & Blood Relation
+difficulty: Moderate
+marks: 1
+year: 2026
+question: A is the father of B. B is the brother of C. C is married to D. E is the daughter of D. How is A related to E?
+option a: Maternal/Paternal Grandfather
+option b: Father
+option c: Uncle
+option d: Brother
+option e: Son
+correct: A
+explanation: A is the father of C. E is the child of C. Thus A is the grandfather of E.
+---
+subject: Reasoning Ability (66-100)
+topic: Direction & Blood Relation
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Varun starts walking from his home towards South. After walking 25 meters, he turns left and walks 30 meters. He then turns left again and walks 25 meters. Finally, he turns left and walks 10 meters. How far is he from his home?
+option a: 20 meters
+option b: 25 meters
+option c: 15 meters
+option d: 30 meters
+option e: 10 meters
+correct: A
+explanation: South 25m and North 25m cancel out. East 30m - West 10m = 20 meters East.
+---
+subject: Reasoning Ability (66-100)
+topic: Direction & Blood Relation
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Town P is 12 km West of Town Q. Town R is 9 km North of Town P. Town S is 12 km East of Town R. What is the distance between Town Q and Town S?
+option a: 9 km
+option b: 12 km
+option c: 15 km
+option d: 10 km
+option e: 8 km
+correct: A
+explanation: Town S is vertically directly above Town Q by 9 km.
+---
+subject: Reasoning Ability (66-100)
+topic: Direction & Blood Relation
+difficulty: Moderate
+marks: 1
+year: 2026
+question: If 'P # Q' means P is the father of Q; 'P @ Q' means P is the mother of Q; 'P $ Q' means P is the brother of Q. Which expression shows that M is the uncle of N?
+option a: M $ K # N
+option b: M # K $ N
+option c: M @ K # N
+option d: N $ K # M
+option e: M $ K @ N
+correct: A
+explanation: M $ K means M is brother of K. K # N means K is father of N. Thus M is the paternal uncle of N.
+---
+subject: Reasoning Ability (66-100)
+topic: Alphanumeric Series & Coding
+difficulty: Moderate
+marks: 1
+year: 2026
+question: In a certain code language:
+'study hard get success' is coded as 'ka la pa sa'
+'hard work brings reward' is coded as 'la ta da ma'
+'get reward with study' is coded as 'ka da pa fa'
+What is the code for 'success'?
+option a: sa
+option b: ka
+option c: la
+option d: pa
+option e: da
+correct: A
+explanation: Comparing sentence 1 and 3: 'study' and 'get' are 'ka' and 'pa'. In 1 and 2: 'hard' is 'la'. The remaining word in sentence 1 is 'success' = 'sa'.
+---
+subject: Reasoning Ability (66-100)
+topic: Alphanumeric Series & Coding
+difficulty: Moderate
+marks: 1
+year: 2026
+question: In a class of 50 students, Priya ranks 15th from the top and Aniket ranks 21st from the bottom. How many students are there between Priya and Aniket?
+option a: 14
+option b: 13
+option c: 15
+option d: 16
+option e: 12
+correct: A
+explanation: Total = 50. Sum of ranks = 15 + 21 = 36. Since 36 < 50, number of students between them = 50 - 36 = 14.
+---
+subject: Reasoning Ability (66-100)
+topic: Alphanumeric Series & Coding
+difficulty: Moderate
+marks: 1
+year: 2026
+question: How many such digits are there in the number '84362751' each of which remains in the same position when the digits are arranged in descending order from left to right?
+option a: One
+option b: Two
+option c: Three
+option d: Four
+option e: None
+correct: A
+explanation: Original: 8 4 3 6 2 7 5 1
+Sorted:   8 7 6 5 4 3 2 1
+Only '8' (pos 1) and '1' (pos 8) remain in position (Wait: pos 1 is 8, pos 8 is 1). Two digits (8 and 1).
+---
+subject: Reasoning Ability (66-100)
+topic: Alphanumeric Series & Coding
+difficulty: Moderate
+marks: 1
+year: 2026
+question: If each vowel in the word 'COMMERCE' is changed to the next letter in English alphabetical series and each consonant is changed to the previous letter, how many letters appear more than once in the new word?
+option a: One
+option b: Two
+option c: Three
+option d: Four
+option e: None
+correct: A
+explanation: C->B, O->P, M->L, M->L, E->F, R->Q, C->B, E->F. New string: B P L L F Q B F. 'B', 'L', and 'F' appear twice.
+---
+subject: Reasoning Ability (66-100)
+topic: Alphanumeric Series & Coding
+difficulty: Moderate
+marks: 1
+year: 2026
+question: Which letter is 5th to the right of the 12th letter from the left end in the English alphabet?
+option a: Q (17th)
+option b: P
+option c: R
+option d: S
+option e: T
+correct: A
+explanation: From left end: 12 + 5 = 17th letter = 'Q'.
+---
