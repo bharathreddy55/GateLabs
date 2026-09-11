@@ -1,5 +1,6 @@
 import { db, auth } from '../config/firebase';
 import { showToast } from '../utils/toast';
+import { getApiKey, generateContent } from '../utils/aiService';
 
 export const Community = {
   posts: [],
@@ -414,28 +415,13 @@ export const Community = {
         btn.classList.add('opacity-50');
 
         try {
-          const apiKey = localStorage.getItem('gemini_api_key');
+          const apiKey = getApiKey();
           let replyText = '';
 
           if (apiKey) {
-            const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
-            const res = await fetch(url, {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({
-                contents: [{
-                  parts: [{ text: `You are an expert GATE Computer Science mentor. Provide a precise, conceptual, and mathematically accurate solution or explanation to this aspirant's doubt.\n\nQuery Title: ${title}\nQuery Detail: ${content}` }]
-                }]
-              })
-            });
-
-            if (res.ok) {
-              const data = await res.json();
-              replyText = data.candidates?.[0]?.content?.parts?.[0]?.text || "Failed to compile response.";
-            } else {
-              const err = await res.json().catch(() => ({}));
-              replyText = `AI Mentor failed to answer: ${err.error?.message || res.statusText}`;
-            }
+            const promptText = `You are an expert GATE Computer Science mentor. Provide a precise, conceptual, and mathematically accurate solution or explanation to this aspirant's doubt.\n\nQuery Title: ${title}\nQuery Detail: ${content}`;
+            const res = await generateContent(promptText);
+            replyText = res.text || "Failed to compile response.";
           } else {
             // High-quality static fallback
             replyText = `Here is the AI Mentor analysis of your doubt:\n\n1. **Core Concept**: This concerns states evaluation inside finite automata and DFAs. In TOC, we track string endings by configuring transitions that shift back to historical state parameters upon encountering mismatch inputs.\n\n2. **Step-by-Step State Transition Table**:\n- State \\( q_0 \\) (Start state / strings ending in other configurations).\n- State \\( q_1 \\) (Strings ending in '0').\n- State \\( q_2 \\) (Accept state / strings ending in '01').\n\n- Transitioning: On reading '0' in state \\( q_2 \\), stay in state \\( q_1 \\) because it still ends with '0'. On reading '1', go back to \\( q_0 \\).\n\n(Tip: Save your Google Gemini API key in configuration settings to fetch live custom solver comments!)`;

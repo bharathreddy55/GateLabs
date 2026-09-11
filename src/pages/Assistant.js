@@ -1,5 +1,6 @@
 import { db, SUBJECT_SYLLABUS } from '../config/firebase';
 import { showToast } from '../utils/toast';
+import { getApiKey, generateContent } from '../utils/aiService';
 
 export const Assistant = {
   messages: [
@@ -130,37 +131,22 @@ export const Assistant = {
       }
 
       try {
-        const apiKey = localStorage.getItem('gemini_api_key');
+        const apiKey = getApiKey();
         let responseText = '';
 
         if (apiKey) {
-          const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
-          const res = await fetch(url, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              contents: [{
-                parts: [{ text: `You are an expert GATE Computer Science tutor. Answer the user's query clearly with formulas and step-by-step logic:\n${text}` }]
-              }]
-            })
-          });
-
-          if (res.ok) {
-            const data = await res.json();
-            responseText = data.candidates?.[0]?.content?.parts?.[0]?.text || "No response text received.";
-          } else {
-            const errData = await res.json().catch(() => ({}));
-            responseText = `Gemini API error: ${errData.error?.message || res.statusText}`;
-          }
+          const promptText = `You are an expert GATE Computer Science tutor. Answer the user's query clearly with formulas, LaTeX math, and step-by-step logic:\n${text}`;
+          const res = await generateContent(promptText);
+          responseText = res.text || "No response text received.";
         } else {
-          responseText = `Here is the explanation for your query:\n\n1. Concept Definition: In GATE Computer Science, this concept evaluates runtime complexity and memory hierarchy boundaries.\n\n2. Key Formula: \\( T(n) = a T(n/b) + f(n) \\)\n\n3. Solved Strategy: Break down state transitions and analyze worst-case constraints.\n\n(Tip: Add your Gemini API key in AI Configuration for full real-time AI responses!)`;
+          responseText = `Here is the explanation for your query:\n\n1. Concept Definition: In GATE Computer Science, this concept evaluates runtime complexity and memory hierarchy boundaries.\n\n2. Key Formula: \\( T(n) = a T(n/b) + f(n) \\)\n\n3. Solved Strategy: Break down state transitions and analyze worst-case constraints.\n\n(Tip: Add your Gemini API key in AI Configuration for live custom AI answers!)`;
         }
 
         this.messages.pop();
         this.messages.push({ role: 'model', text: responseText });
       } catch (err) {
         this.messages.pop();
-        this.messages.push({ role: 'model', text: `Sorry, I encountered an error: ${err.message}` });
+        this.messages.push({ role: 'model', text: `Sorry, AI failed: ${err.message}` });
       }
 
       if (container) {

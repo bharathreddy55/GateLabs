@@ -1,5 +1,6 @@
 import { db, SUBJECT_SYLLABUS } from '../config/firebase';
 import { showToast } from '../utils/toast';
+import { getApiKey, generateContent } from '../utils/aiService';
 
 export const Practice = {
   questions: [],
@@ -249,16 +250,20 @@ export const Practice = {
         <!-- TAB 2: PDF INGESTION & AI GENERATOR -->
         <div id="tab-ingest-content" class="${this.activeTab === 'ingest' ? '' : 'hidden'} flex flex-col gap-6">
           <!-- API Key Warning if missing -->
-          ${!localStorage.getItem('gemini_api_key') ? `
-            <div class="p-4 rounded-2xl border border-amber-100 dark:border-amber-900/40 bg-amber-50/10 dark:bg-amber-950/10 flex items-start gap-3.5 shadow-sm">
-              <i class="fa-solid fa-triangle-exclamation text-amber-500 text-base mt-0.5"></i>
-              <div class="text-xs">
-                <p class="font-bold text-slate-800 dark:text-slate-200">Gemini API Key Missing</p>
-                <p class="text-slate-500 dark:text-slate-400 mt-1 leading-relaxed font-semibold">
-                  To parse PDFs or generate new GATE-style practice questions using AI, please configure your Gemini API key in the sidebar footer (<b><i class="fa-solid fa-gear"></i> AI Config</b>).
-                  We will fallback to a rule-based regex parsing algorithm if no key is supplied.
-                </p>
+          ${!getApiKey() ? `
+            <div class="p-4 rounded-2xl border border-amber-200/60 dark:border-amber-900/40 bg-amber-50/20 dark:bg-amber-950/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-sm">
+              <div class="flex items-start gap-3 text-xs">
+                <i class="fa-solid fa-triangle-exclamation text-amber-500 text-base mt-0.5"></i>
+                <div>
+                  <p class="font-bold text-slate-800 dark:text-slate-200">Gemini API Key Not Configured</p>
+                  <p class="text-slate-500 dark:text-slate-400 mt-0.5 leading-relaxed font-semibold">
+                    Parsing PDFs uses rule-based fallback unless a valid Gemini API key is configured.
+                  </p>
+                </div>
               </div>
+              <button type="button" class="open-ai-config-btn px-4 py-2 rounded-xl btn-accent text-white text-xs font-bold shadow-md hover:scale-105 transition-transform flex-shrink-0">
+                <i class="fa-solid fa-gear mr-1"></i> Configure Gemini Key
+              </button>
             </div>
           ` : ''}
 
@@ -793,7 +798,7 @@ export const Practice = {
   },
 
   async runAiGenerator(text, generateMore = false) {
-    const apiKey = localStorage.getItem('gemini_api_key');
+    const apiKey = getApiKey();
 
     if (!apiKey) {
       this.updateStatus('generating', 80, "Executing local rule-based regex fallback parser...");
@@ -881,35 +886,11 @@ Return ONLY a valid JSON array — no markdown:
         const chunkLabel = chunks.length > 1 ? ` (chunk ${ci + 1}/${chunks.length})` : '';
         this.updateStatus('generating',
           60 + Math.round((ci / chunks.length) * 35),
-          `Gemini extracting questions${chunkLabel}...`);
+          `Gemini AI processing${chunkLabel}...`);
 
-        const reqPayload = {
-          contents: [{
-            role: 'user',
-            parts: [
-              { text: systemPrompt },
-              { text: `PDF TEXT SEGMENT${chunkLabel}:\n\n${chunks[ci]}` }
-            ]
-          }],
-          generationConfig: {
-            temperature: 0.2,
-            maxOutputTokens: 8192
-          }
-        };
-
-        const response = await fetch(url, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(reqPayload)
-        });
-
-        if (!response.ok) {
-          console.warn(`Gemini chunk ${ci + 1} returned ${response.status} — skipping`);
-          continue;
-        }
-
-        const resData = await response.json();
-        const replyText = resData.candidates?.[0]?.content?.parts?.[0]?.text;
+        const promptText = `${systemPrompt}\n\nPDF TEXT SEGMENT${chunkLabel}:\n\n${chunks[ci]}`;
+        const res = await generateContent(promptText);
+        const replyText = res.text;
         if (!replyText) continue;
 
         // Strip accidental markdown code fences

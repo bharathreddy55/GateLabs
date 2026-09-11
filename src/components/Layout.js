@@ -2,6 +2,7 @@ import { auth } from '../config/firebase';
 import { toggleTheme, getTheme } from '../utils/theme';
 import { showToast } from '../utils/toast';
 import { getSavedPalette, applyAccentPalette, initAccentPalette } from '../utils/accentTheme';
+import { getApiKey, saveApiKey, testApiKey } from '../utils/aiService';
 
 export const Layout = {
   render(contentHtml, activePage = 'dashboard') {
@@ -250,27 +251,49 @@ export const Layout = {
         </div>
 
         <!-- ======= AI CONFIG MODAL ======= -->
-        <div id="settings-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/50 dark:bg-black/80 backdrop-blur-md hidden px-4">
-          <div class="w-full max-w-md glass-panel p-8 rounded-3xl relative shadow-2xl text-slate-900 dark:text-white border border-white/10">
+        <div id="settings-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/60 dark:bg-black/80 backdrop-blur-md hidden px-4">
+          <div class="w-full max-w-md glass-panel p-8 rounded-3xl relative shadow-2xl text-slate-900 dark:text-white border border-slate-200/60 dark:border-white/10 flex flex-col gap-4">
             <button id="close-settings-modal" class="absolute top-5 right-5 h-8 w-8 flex items-center justify-center rounded-xl hover:bg-black/5 dark:hover:bg-white/10 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-all">
               <i class="fa-solid fa-xmark text-base"></i>
             </button>
 
-            <h2 class="font-display font-extrabold text-xl flex items-center gap-2">
-              <i class="fa-solid fa-gear accent-text"></i> AI Configuration
-            </h2>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1.5 leading-relaxed font-medium">Configure your Gemini API key for PDF question extraction and practice set generation.</p>
+            <div>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="h-8 w-8 rounded-xl btn-accent text-white flex items-center justify-center text-xs shadow-md">
+                  <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </span>
+                <h2 class="font-display font-extrabold text-xl">AI Configuration</h2>
+              </div>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-relaxed font-medium">Configure your Google Gemini API key for PDF question extraction, AI chatbot, and practice generation.</p>
+            </div>
 
-            <form id="settings-form" class="mt-6 flex flex-col gap-4 text-xs font-semibold">
+            <!-- Status Indicator Badge -->
+            <div id="api-key-status-badge" class="p-3 rounded-2xl bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 text-xs font-semibold flex items-center justify-between">
+              <span class="text-slate-500 dark:text-slate-400">Current Status:</span>
+              <span id="api-key-status-text" class="font-bold accent-text">Checking...</span>
+            </div>
+
+            <form id="settings-form" class="flex flex-col gap-4 text-xs font-semibold">
               <div>
-                <label class="block text-slate-400 uppercase mb-2 tracking-wider text-[10px]">Gemini API Key</label>
-                <input type="password" id="settings-api-key" placeholder="Enter your Gemini API key..." class="glass-input font-mono text-xs">
-                <span class="block text-[10px] text-slate-400 mt-2 font-normal leading-relaxed">Stored locally in your browser. Used only for direct Gemini API calls.</span>
+                <label class="block text-slate-500 dark:text-slate-400 uppercase mb-1.5 tracking-wider text-[10px]">Gemini API Key</label>
+                <div class="relative">
+                  <input type="password" id="settings-api-key" placeholder="AIzaSy..." class="glass-input font-mono text-xs pr-10">
+                  <button type="button" id="toggle-api-key-visibility" class="absolute right-3 top-3 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+                    <i class="fa-solid fa-eye text-xs"></i>
+                  </button>
+                </div>
+                <span class="block text-[10px] text-slate-400 mt-1.5 font-normal leading-relaxed">Key is stored locally in your browser. Used for direct Gemini API calls.</span>
               </div>
 
-              <div class="flex justify-end gap-3 mt-2">
-                <button type="button" id="cancel-settings" class="px-5 py-2.5 rounded-2xl border border-slate-200 dark:border-white/10 text-slate-600 dark:text-slate-300 font-bold hover:bg-black/5 dark:hover:bg-white/10 transition-all">Cancel</button>
-                <button type="submit" class="px-6 py-2.5 rounded-2xl text-white font-bold shadow-md hover:scale-102 active:scale-95 transition-all btn-accent">Save Key</button>
+              <div class="flex items-center justify-between gap-3 pt-2">
+                <button type="button" id="test-settings-btn" class="px-4 py-2.5 rounded-2xl bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold transition-all flex items-center gap-1.5">
+                  <i class="fa-solid fa-bolt text-amber-500"></i> Test Connection
+                </button>
+
+                <div class="flex items-center gap-2">
+                  <button type="button" id="cancel-settings" class="px-4 py-2.5 rounded-2xl border border-slate-200 dark:border-white/10 text-slate-600 dark:text-slate-300 font-bold hover:bg-black/5 dark:hover:bg-white/10 transition-all">Cancel</button>
+                  <button type="submit" class="px-5 py-2.5 rounded-2xl text-white font-bold shadow-md hover:scale-102 active:scale-95 transition-all btn-accent">Save Key</button>
+                </div>
               </div>
             </form>
           </div>
@@ -399,11 +422,71 @@ export const Layout = {
     // ---- AI CONFIG MODAL ----
     const settingsModal = document.getElementById('settings-modal');
     const apiKeyInput   = document.getElementById('settings-api-key');
+    const statusText    = document.getElementById('api-key-status-text');
+    const toggleEye     = document.getElementById('toggle-api-key-visibility');
 
-    document.getElementById('settings-btn')?.addEventListener('click', () => {
-      if (apiKeyInput) apiKeyInput.value = localStorage.getItem('gemini_api_key') || '';
+    const updateModalStatus = () => {
+      const currentKey = getApiKey();
+      if (apiKeyInput) apiKeyInput.value = currentKey || '';
+      if (statusText) {
+        if (currentKey) {
+          statusText.textContent = 'Active Key Configured ✓';
+          statusText.className = 'font-bold text-emerald-500';
+        } else {
+          statusText.textContent = 'No Key Set (Using Local Regex Engine)';
+          statusText.className = 'font-bold text-amber-500';
+        }
+      }
+    };
+
+    const openSettings = () => {
+      updateModalStatus();
       settingsModal?.classList.remove('hidden');
+    };
+
+    document.getElementById('settings-btn')?.addEventListener('click', openSettings);
+    document.querySelectorAll('.open-ai-config-btn').forEach(btn => {
+      btn.addEventListener('click', openSettings);
     });
+
+    // Toggle Eye Visibility
+    toggleEye?.addEventListener('click', () => {
+      if (apiKeyInput) {
+        const isPassword = apiKeyInput.type === 'password';
+        apiKeyInput.type = isPassword ? 'text' : 'password';
+        toggleEye.innerHTML = isPassword ? '<i class="fa-solid fa-eye-slash text-xs"></i>' : '<i class="fa-solid fa-eye text-xs"></i>';
+      }
+    });
+
+    // Test API Key Connection
+    document.getElementById('test-settings-btn')?.addEventListener('click', async () => {
+      const val = apiKeyInput?.value.trim();
+      if (!val) {
+        showToast('Please enter an API key to test.', 'warning');
+        return;
+      }
+
+      if (statusText) {
+        statusText.textContent = 'Testing connection...';
+        statusText.className = 'font-bold text-blue-400 animate-pulse';
+      }
+
+      const res = await testApiKey(val);
+      if (res.success) {
+        showToast(`Gemini Connection Successful! (Model: ${res.modelUsed})`, 'success');
+        if (statusText) {
+          statusText.textContent = `Valid Key (${res.modelUsed}) ✓`;
+          statusText.className = 'font-bold text-emerald-500';
+        }
+      } else {
+        showToast(`Connection Failed: ${res.error}`, 'error');
+        if (statusText) {
+          statusText.textContent = 'Invalid / Failed Connection ❌';
+          statusText.className = 'font-bold text-rose-500';
+        }
+      }
+    });
+
     const closeSettings = () => settingsModal?.classList.add('hidden');
     document.getElementById('close-settings-modal')?.addEventListener('click', closeSettings);
     document.getElementById('cancel-settings')?.addEventListener('click', closeSettings);
@@ -412,8 +495,13 @@ export const Layout = {
     document.getElementById('settings-form')?.addEventListener('submit', (e) => {
       e.preventDefault();
       const key = apiKeyInput?.value.trim();
-      if (key) { localStorage.setItem('gemini_api_key', key); showToast('Gemini API key saved!', 'success'); }
-      else { localStorage.removeItem('gemini_api_key'); showToast('API key removed.', 'info'); }
+      if (key) {
+        saveApiKey(key);
+        showToast('Gemini API key saved successfully!', 'success');
+      } else {
+        saveApiKey('');
+        showToast('API key removed. Using offline fallback parser.', 'info');
+      }
       closeSettings();
     });
 
