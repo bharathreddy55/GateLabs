@@ -419,9 +419,15 @@ export const Community = {
           let replyText = '';
 
           if (apiKey) {
-            const promptText = `You are an expert GATE Computer Science mentor. Provide a precise, conceptual, and mathematically accurate solution or explanation to this aspirant's doubt.\n\nQuery Title: ${title}\nQuery Detail: ${content}`;
-            const res = await generateContent(promptText);
-            replyText = res.text || "Failed to compile response.";
+            try {
+              const promptText = `You are an expert GATE Computer Science mentor. Provide a precise, conceptual, and mathematically accurate solution or explanation to this aspirant's doubt.\n\nQuery Title: ${title}\nQuery Detail: ${content}`;
+              const res = await generateContent(promptText);
+              replyText = res.text || "Failed to compile response.";
+            } catch (apiErr) {
+              console.warn("Gemini API error, using offline mentor fallback:", apiErr.message);
+              showToast("Saved Gemini API key is invalid. Using offline mentor response.", "warning");
+              replyText = `⚠️ **API Key Error**: Your saved Gemini API key is invalid or expired. Please update it in AI Configuration.\n\nHere is the GATE CS offline conceptual mentor response:\n\n1. **Core Concept Analysis**: This doubt touches upon fundamental CS principles. Ensure you review state machine definitions, invariant assertions, and boundary limits.\n\n2. **Solution Guidelines**:\n- Identify given constraints and invariant conditions.\n- Formulate recurrence or matrix equations.\n- Check worst-case time/space complexity.`;
+            }
           } else {
             // High-quality static fallback
             replyText = `Here is the AI Mentor analysis of your doubt:\n\n1. **Core Concept**: This concerns states evaluation inside finite automata and DFAs. In TOC, we track string endings by configuring transitions that shift back to historical state parameters upon encountering mismatch inputs.\n\n2. **Step-by-Step State Transition Table**:\n- State \\( q_0 \\) (Start state / strings ending in other configurations).\n- State \\( q_1 \\) (Strings ending in '0').\n- State \\( q_2 \\) (Accept state / strings ending in '01').\n\n- Transitioning: On reading '0' in state \\( q_2 \\), stay in state \\( q_1 \\) because it still ends with '0'. On reading '1', go back to \\( q_0 \\).\n\n(Tip: Save your Google Gemini API key in configuration settings to fetch live custom solver comments!)`;

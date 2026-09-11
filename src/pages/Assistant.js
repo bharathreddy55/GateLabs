@@ -135,18 +135,24 @@ export const Assistant = {
         let responseText = '';
 
         if (apiKey) {
-          const promptText = `You are an expert GATE Computer Science tutor. Answer the user's query clearly with formulas, LaTeX math, and step-by-step logic:\n${text}`;
-          const res = await generateContent(promptText);
-          responseText = res.text || "No response text received.";
+          try {
+            const promptText = `You are an expert GATE Computer Science tutor. Answer the user's query clearly with formulas, LaTeX math, and step-by-step logic:\n${text}`;
+            const res = await generateContent(promptText);
+            responseText = res.text || "No response text received.";
+          } catch (apiErr) {
+            console.warn("Gemini API Error, using offline fallback:", apiErr.message);
+            showToast("Saved Gemini API Key is invalid or expired. Update key in AI Configuration.", "warning");
+            responseText = `⚠️ **Gemini API Key Warning**: The saved key is invalid or expired.\n\nHere is the GATE Computer Science conceptual breakdown for your query:\n\n1. **Concept Analysis**: In GATE CS, this topic evaluates time/space complexity, resource allocation boundaries, or protocol state transitions.\n\n2. **Core Formula / Theorem**: \\( T(n) = a T(n/b) + f(n) \\)\n\n3. **Problem Solving Tip**: Verify edge cases, boundary conditions, and formal constraints.\n\n*(Click **AI Config** in the sidebar to update your API key for live real-time Gemini AI answers)*`;
+          }
         } else {
-          responseText = `Here is the explanation for your query:\n\n1. Concept Definition: In GATE Computer Science, this concept evaluates runtime complexity and memory hierarchy boundaries.\n\n2. Key Formula: \\( T(n) = a T(n/b) + f(n) \\)\n\n3. Solved Strategy: Break down state transitions and analyze worst-case constraints.\n\n(Tip: Add your Gemini API key in AI Configuration for live custom AI answers!)`;
+          responseText = `Here is the explanation for your query:\n\n1. **Concept Definition**: In GATE Computer Science, this concept evaluates runtime complexity and memory hierarchy boundaries.\n\n2. **Key Formula**: \\( T(n) = a T(n/b) + f(n) \\)\n\n3. **Solved Strategy**: Break down state transitions and analyze worst-case constraints.\n\n*(Tip: Click **<i class="fa-solid fa-gear"></i> Config** in the sidebar to add your Gemini API key for live AI responses!)*`;
         }
 
         this.messages.pop();
         this.messages.push({ role: 'model', text: responseText });
       } catch (err) {
         this.messages.pop();
-        this.messages.push({ role: 'model', text: `Sorry, AI failed: ${err.message}` });
+        this.messages.push({ role: 'model', text: `Sorry, I encountered an error: ${err.message}` });
       }
 
       if (container) {
