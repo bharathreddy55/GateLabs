@@ -11,7 +11,7 @@
 
 **GateLabs** is an advanced, open-source competitive exam preparation ecosystem created specifically for **GATE (Graduate Aptitude Test in Engineering) CS & IT 2027** candidates. Also a place to check their progress through Mock tests .
 
-Preparing for GATE CS & IT requires not just solving static questions, but mastering time management, understanding complex algorithmic breakdowns, and continuously tracking subject-wise weak spots. GateLabs bridges this gap by offering:
+Preparing for GATE CS & IT requires not just solving static questions, but mastering time management, understanding complex algorithmic breakdowns, and continuously tracking subject-wise weak spots. GateLabs bridges this gap by offering: 
 
 - 🎓 **Authentic Computer-Based Test (CBT) Interface**: Experience the real exam environment with a built-in, draggable scientific calculator, question palette, status markers (Answered, Marked for Review, Not Visited), and timed test tracking.
 - 🤖 **Gemini 1.5 Flash AI Assistant**: Clear doubts instantly, request step-by-step algorithm walkthroughs, and generate personalized practice problems tailored to your target subjects.
