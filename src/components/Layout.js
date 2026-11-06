@@ -2,7 +2,7 @@ import { auth } from '../config/firebase';
 import { toggleTheme, getTheme } from '../utils/theme';
 import { showToast } from '../utils/toast';
 import { getSavedPalette, applyAccentPalette, initAccentPalette } from '../utils/accentTheme';
-import { getApiKey, saveApiKey, testApiKey } from '../utils/aiService';
+import { getAiConfig, getApiKey, saveAiConfig, testApiKey, PROVIDERS } from '../utils/aiService';
 
 export const Layout = {
   render(contentHtml, activePage = 'dashboard') {
@@ -264,7 +264,7 @@ export const Layout = {
                 </span>
                 <h2 class="font-display font-extrabold text-xl">AI Configuration</h2>
               </div>
-              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-relaxed font-medium">Configure your Google Gemini API key for PDF question extraction, AI chatbot, and practice generation.</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-relaxed font-medium">Use any API key you prefer: Google Gemini, OpenAI, Anthropic Claude, or OpenRouter.</p>
             </div>
 
             <!-- Status Indicator Badge -->
@@ -274,25 +274,43 @@ export const Layout = {
             </div>
 
             <form id="settings-form" class="flex flex-col gap-4 text-xs font-semibold">
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-slate-500 dark:text-slate-400 uppercase mb-1.5 tracking-wider text-[10px]">AI Provider</label>
+                  <select id="settings-provider" class="glass-input text-xs font-bold">
+                    <option value="gemini">Google Gemini (Free)</option>
+                    <option value="openai">OpenAI (ChatGPT)</option>
+                    <option value="anthropic">Anthropic Claude</option>
+                    <option value="openrouter">OpenRouter (Free/Paid)</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-slate-500 dark:text-slate-400 uppercase mb-1.5 tracking-wider text-[10px]">Model</label>
+                  <select id="settings-model" class="glass-input text-xs font-bold">
+                    <option value="gemini-1.5-flash">gemini-1.5-flash</option>
+                  </select>
+                </div>
+              </div>
+
               <div>
-                <label class="block text-slate-500 dark:text-slate-400 uppercase mb-1.5 tracking-wider text-[10px]">Gemini API Key</label>
+                <label class="block text-slate-500 dark:text-slate-400 uppercase mb-1.5 tracking-wider text-[10px]">API Key</label>
                 <div class="relative">
-                  <input type="password" id="settings-api-key" placeholder="AIzaSy..." class="glass-input font-mono text-xs pr-10">
+                  <input type="password" id="settings-api-key" placeholder="Paste your API key here..." class="glass-input font-mono text-xs pr-10">
                   <button type="button" id="toggle-api-key-visibility" class="absolute right-3 top-3 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
                     <i class="fa-solid fa-eye text-xs"></i>
                   </button>
                 </div>
-                <span class="block text-[10px] text-slate-400 mt-1.5 font-normal leading-relaxed">Key is stored locally in your browser. Used for direct Gemini API calls.</span>
+                <span class="block text-[10px] text-slate-400 mt-1.5 font-normal leading-relaxed">Key is stored locally in your browser. Never sent to any external server.</span>
               </div>
 
               <div class="flex items-center justify-between gap-3 pt-2">
                 <button type="button" id="test-settings-btn" class="px-4 py-2.5 rounded-2xl bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold transition-all flex items-center gap-1.5">
-                  <i class="fa-solid fa-bolt text-amber-500"></i> Test Connection
+                  <i class="fa-solid fa-bolt text-amber-500"></i> Test Key
                 </button>
 
                 <div class="flex items-center gap-2">
                   <button type="button" id="cancel-settings" class="px-4 py-2.5 rounded-2xl border border-slate-200 dark:border-white/10 text-slate-600 dark:text-slate-300 font-bold hover:bg-black/5 dark:hover:bg-white/10 transition-all">Cancel</button>
-                  <button type="submit" class="px-5 py-2.5 rounded-2xl text-white font-bold shadow-md hover:scale-102 active:scale-95 transition-all btn-accent">Save Key</button>
+                  <button type="submit" class="px-5 py-2.5 rounded-2xl text-white font-bold shadow-md hover:scale-102 active:scale-95 transition-all btn-accent">Save Config</button>
                 </div>
               </div>
             </form>
@@ -420,24 +438,45 @@ export const Layout = {
     });
 
     // ---- AI CONFIG MODAL ----
-    const settingsModal = document.getElementById('settings-modal');
-    const apiKeyInput   = document.getElementById('settings-api-key');
-    const statusText    = document.getElementById('api-key-status-text');
-    const toggleEye     = document.getElementById('toggle-api-key-visibility');
+    const settingsModal    = document.getElementById('settings-modal');
+    const providerSelect  = document.getElementById('settings-provider');
+    const modelSelect     = document.getElementById('settings-model');
+    const apiKeyInput      = document.getElementById('settings-api-key');
+    const statusText       = document.getElementById('api-key-status-text');
+    const toggleEye        = document.getElementById('toggle-api-key-visibility');
+
+    const updateModelDropdown = (selectedProv, selectedMod) => {
+      const pInfo = PROVIDERS[selectedProv] || PROVIDERS.gemini;
+      if (modelSelect) {
+        modelSelect.innerHTML = pInfo.models.map(m => `<option value="${m}" ${m === selectedMod ? 'selected' : ''}>${m}</option>`).join('');
+      }
+      if (apiKeyInput) {
+        apiKeyInput.placeholder = pInfo.placeholder || 'Paste API key...';
+      }
+    };
 
     const updateModalStatus = () => {
-      const currentKey = getApiKey();
-      if (apiKeyInput) apiKeyInput.value = currentKey || '';
+      const { provider, apiKey, model } = getAiConfig();
+      if (providerSelect) providerSelect.value = provider;
+      updateModelDropdown(provider, model);
+      if (apiKeyInput) apiKeyInput.value = apiKey || '';
+
       if (statusText) {
-        if (currentKey) {
-          statusText.textContent = 'Active Key Configured ✓';
+        if (apiKey) {
+          statusText.textContent = `${PROVIDERS[provider]?.name || provider} Configured ✓`;
           statusText.className = 'font-bold text-emerald-500';
         } else {
-          statusText.textContent = 'No Key Set (Using Local Regex Engine)';
+          statusText.textContent = 'No Key Set (Using Offline Fallback Engine)';
           statusText.className = 'font-bold text-amber-500';
         }
       }
     };
+
+    providerSelect?.addEventListener('change', (e) => {
+      const p = e.target.value;
+      const defaultMod = PROVIDERS[p]?.defaultModel;
+      updateModelDropdown(p, defaultMod);
+    });
 
     const openSettings = () => {
       updateModalStatus();
@@ -460,20 +499,23 @@ export const Layout = {
 
     // Test API Key Connection
     document.getElementById('test-settings-btn')?.addEventListener('click', async () => {
+      const p = providerSelect?.value || 'gemini';
+      const m = modelSelect?.value;
       const val = apiKeyInput?.value.trim();
+
       if (!val) {
         showToast('Please enter an API key to test.', 'warning');
         return;
       }
 
       if (statusText) {
-        statusText.textContent = 'Testing connection...';
+        statusText.textContent = `Testing ${PROVIDERS[p]?.name}...`;
         statusText.className = 'font-bold text-blue-400 animate-pulse';
       }
 
-      const res = await testApiKey(val);
+      const res = await testApiKey(p, val, m);
       if (res.success) {
-        showToast(`Gemini Connection Successful! (Model: ${res.modelUsed})`, 'success');
+        showToast(`Connection Successful! (${PROVIDERS[p]?.name} - ${res.modelUsed})`, 'success');
         if (statusText) {
           statusText.textContent = `Valid Key (${res.modelUsed}) ✓`;
           statusText.className = 'font-bold text-emerald-500';
@@ -494,13 +536,16 @@ export const Layout = {
 
     document.getElementById('settings-form')?.addEventListener('submit', (e) => {
       e.preventDefault();
+      const p = providerSelect?.value || 'gemini';
+      const m = modelSelect?.value;
       const key = apiKeyInput?.value.trim();
+
       if (key) {
-        saveApiKey(key);
-        showToast('Gemini API key saved successfully!', 'success');
+        saveAiConfig(p, key, m);
+        showToast(`${PROVIDERS[p]?.name || p} configuration saved successfully! ⚡`, 'success');
       } else {
-        saveApiKey('');
-        showToast('API key removed. Using offline fallback parser.', 'info');
+        saveAiConfig('gemini', '', '');
+        showToast('API key removed. Using offline fallback engine.', 'info');
       }
       closeSettings();
     });
