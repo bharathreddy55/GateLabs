@@ -2,6 +2,7 @@ import { db, SUBJECT_SYLLABUS } from '../config/firebase';
 import { showToast } from '../utils/toast';
 import { Chart } from 'chart.js/auto';
 import { generateContent } from '../utils/aiService';
+import { toggleTheme, getTheme } from '../utils/theme';
 import { CBT_BENCHMARK_MOCK04, getBenchmarkQuestions } from '../utils/cbtBenchmarkData';
 
 export const MockTest = {
@@ -13,7 +14,7 @@ export const MockTest = {
   // Benchmark / Custom exam state
   isTesting: false,
   questions: [],
-  currentIdx: 23, // Default to Question 24 (index 23) matching Image 1
+  currentIdx: 23, // Default to Question 24 (index 23) matching Image 1 & 2
   answers: {}, // qid -> user response (index, array, or string)
   status: {}, // qid -> 'not-visited', 'not-answered', 'answered', 'marked', 'marked-answered'
   sections: {},
@@ -47,29 +48,32 @@ export const MockTest = {
       return this.renderConfigScreen();
     }
 
-    // Fullscreen CBT Engine shell matching the 4 images exactly
+    const currentTheme = getTheme(); // 'light' or 'dark'
+    const isDark = currentTheme === 'dark';
+
+    // Fullscreen CBT Engine shell supporting both exact Light & Dark themes
     return `
-      <div id="cbt-engine-root" class="min-h-screen w-full bg-[#060b17] text-slate-100 font-sans flex flex-row overflow-hidden select-none">
+      <div id="cbt-engine-root" class="min-h-screen w-full bg-[#f8fafc] dark:bg-[#060b17] text-slate-800 dark:text-slate-100 font-sans flex flex-row overflow-hidden select-none transition-colors duration-200">
         
         <!-- ============================================== -->
-        <!-- 1. LEFT SIDEBAR (Identical across all 4 screens) -->
+        <!-- 1. LEFT SIDEBAR (Identical across all screens) -->
         <!-- ============================================== -->
-        <aside class="w-[230px] flex-shrink-0 bg-[#070d1a] border-r border-[#15203b] flex flex-col justify-between p-3.5 z-30">
+        <aside class="w-[230px] flex-shrink-0 bg-white dark:bg-[#070d1a] border-r border-slate-200 dark:border-[#15203b] flex flex-col justify-between p-3.5 z-30 shadow-sm">
           <div class="flex flex-col gap-4">
             
             <!-- Engine Logo -->
             <div class="flex items-center gap-2.5 px-1 py-1">
-              <div class="h-8 w-8 rounded-lg bg-cyan-500/10 border border-cyan-500/40 text-cyan-400 flex items-center justify-center font-mono font-bold text-sm shadow-sm shadow-cyan-500/20">
+              <div class="h-8 w-8 rounded-lg bg-blue-50 border border-blue-200 dark:bg-cyan-500/10 dark:border-cyan-500/40 text-blue-600 dark:text-cyan-400 flex items-center justify-center font-mono font-bold text-sm shadow-sm">
                 &gt;_
               </div>
               <div class="flex flex-col">
-                <span class="font-display font-extrabold text-sm tracking-wide text-white leading-tight">GATE CBT</span>
-                <span class="text-[9px] font-mono tracking-wider font-extrabold text-cyan-400 leading-tight">CS/IT ENGINE</span>
+                <span class="font-display font-extrabold text-sm tracking-wide text-slate-900 dark:text-white leading-tight">GATE CBT</span>
+                <span class="text-[9px] font-mono tracking-wider font-extrabold text-blue-600 dark:text-cyan-400 leading-tight">CS/IT ENGINE</span>
               </div>
             </div>
 
             <!-- Secure Exam Mode Pill -->
-            <div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#06241b] border border-[#0d5940] text-emerald-400 text-[10px] font-mono font-bold tracking-wider uppercase">
+            <div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-700 dark:bg-[#06241b] dark:border-[#0d5940] dark:text-emerald-400 text-[10px] font-mono font-bold tracking-wider uppercase">
               <i class="fa-solid fa-lock text-xs"></i>
               <span>SECURE EXAM MODE</span>
             </div>
@@ -78,8 +82,8 @@ export const MockTest = {
             <nav class="flex flex-col gap-1.5 text-xs font-semibold mt-1">
               <button class="cbt-nav-btn flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all text-left ${
                 this.activeView === 'console'
-                  ? 'bg-[#0c1a36] text-cyan-300 border border-cyan-500/40 shadow-sm shadow-cyan-500/10 font-bold'
-                  : 'text-slate-400 hover:text-white hover:bg-white/5 border border-transparent'
+                  ? 'bg-blue-50 border border-blue-200 text-blue-700 dark:bg-[#0c1a36] dark:text-cyan-300 dark:border-cyan-500/40 shadow-sm font-bold'
+                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-white dark:hover:bg-white/5 border border-transparent'
               }" data-view="console">
                 <i class="fa-solid fa-desktop w-4 text-center"></i>
                 <span>Exam Console</span>
@@ -87,8 +91,8 @@ export const MockTest = {
 
               <button class="cbt-nav-btn flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all text-left ${
                 this.activeView === 'paper'
-                  ? 'bg-[#0c1a36] text-cyan-300 border border-cyan-500/40 shadow-sm shadow-cyan-500/10 font-bold'
-                  : 'text-slate-400 hover:text-white hover:bg-white/5 border border-transparent'
+                  ? 'bg-blue-50 border border-blue-200 text-blue-700 dark:bg-[#0c1a36] dark:text-cyan-300 dark:border-cyan-500/40 shadow-sm font-bold'
+                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-white dark:hover:bg-white/5 border border-transparent'
               }" data-view="paper">
                 <i class="fa-regular fa-file-lines w-4 text-center"></i>
                 <span>Full Question Paper</span>
@@ -96,8 +100,8 @@ export const MockTest = {
 
               <button class="cbt-nav-btn flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all text-left ${
                 this.activeView === 'instructions'
-                  ? 'bg-[#0c1a36] text-cyan-300 border border-cyan-500/40 shadow-sm shadow-cyan-500/10 font-bold'
-                  : 'text-slate-400 hover:text-white hover:bg-white/5 border border-transparent'
+                  ? 'bg-blue-50 border border-blue-200 text-blue-700 dark:bg-[#0c1a36] dark:text-cyan-300 dark:border-cyan-500/40 shadow-sm font-bold'
+                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-white dark:hover:bg-white/5 border border-transparent'
               }" data-view="instructions">
                 <i class="fa-solid fa-circle-info w-4 text-center"></i>
                 <span>Instructions &amp; Marking</span>
@@ -105,8 +109,8 @@ export const MockTest = {
 
               <button class="cbt-nav-btn flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all text-left ${
                 this.activeView === 'diagnostic'
-                  ? 'bg-[#0c1a36] text-cyan-300 border border-cyan-500/40 shadow-sm shadow-cyan-500/10 font-bold'
-                  : 'text-slate-400 hover:text-white hover:bg-white/5 border border-transparent'
+                  ? 'bg-blue-50 border border-blue-200 text-blue-700 dark:bg-[#0c1a36] dark:text-cyan-300 dark:border-cyan-500/40 shadow-sm font-bold'
+                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-white dark:hover:bg-white/5 border border-transparent'
               }" data-view="diagnostic">
                 <i class="fa-solid fa-chart-line w-4 text-center"></i>
                 <span>Analytics &amp; AI Diagnostic</span>
@@ -115,85 +119,89 @@ export const MockTest = {
           </div>
 
           <!-- Candidate Node Footer Card -->
-          <div class="bg-[#0b1326] border border-[#172646] rounded-xl p-3 flex flex-col gap-1 shadow-inner">
-            <div class="flex items-center justify-between text-[9px] font-mono font-bold tracking-wider text-slate-400 uppercase">
+          <div class="bg-slate-50 border border-slate-200 dark:bg-[#0b1326] dark:border-[#172646] rounded-xl p-3 flex flex-col gap-1 shadow-inner">
+            <div class="flex items-center justify-between text-[9px] font-mono font-bold tracking-wider text-slate-500 dark:text-slate-400 uppercase">
               <span>CANDIDATE NODE</span>
-              <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span class="h-2 w-2 rounded-full bg-emerald-500 dark:bg-emerald-400 animate-pulse"></span>
             </div>
-            <span class="text-xs font-bold text-white">${CBT_BENCHMARK_MOCK04.candidate.name}</span>
-            <span class="font-mono text-[11px] font-extrabold text-cyan-400">${CBT_BENCHMARK_MOCK04.candidate.rollNo}</span>
-            <span class="text-[10px] text-slate-400">${CBT_BENCHMARK_MOCK04.candidate.nodeZone}</span>
+            <span class="text-xs font-bold text-slate-900 dark:text-white">${CBT_BENCHMARK_MOCK04.candidate.name}</span>
+            <span class="font-mono text-[11px] font-extrabold text-blue-600 dark:text-cyan-400">${CBT_BENCHMARK_MOCK04.candidate.rollNo}</span>
+            <span class="text-[10px] text-slate-500 dark:text-slate-400">${CBT_BENCHMARK_MOCK04.candidate.nodeZone}</span>
           </div>
         </aside>
 
         <!-- ============================================== -->
         <!-- 2. RIGHT WORKSPACE CONTAINER -->
         <!-- ============================================== -->
-        <main class="flex-1 flex flex-col min-h-screen overflow-hidden bg-[#060b17] relative">
+        <main class="flex-1 flex flex-col min-h-screen overflow-hidden bg-[#f8fafc] dark:bg-[#060b17] relative">
           
           <!-- Top Header Bar -->
-          <header class="bg-[#080e1e] border-b border-[#15203b] px-6 py-2.5 flex items-center justify-between z-20 flex-shrink-0">
+          <header class="bg-white dark:bg-[#080e1e] border-b border-slate-200 dark:border-[#15203b] px-6 py-2.5 flex items-center justify-between z-20 flex-shrink-0 shadow-sm">
             <!-- Left Info -->
             <div class="flex items-center gap-3">
-              <span class="font-display font-extrabold text-sm text-white tracking-wide">GATE CS/IT 2025</span>
-              <span class="bg-[#0b1836] border border-cyan-500/40 text-cyan-300 text-[10px] font-mono font-bold px-2 py-0.5 rounded">MOCK-04</span>
+              <span class="font-display font-extrabold text-sm text-slate-900 dark:text-white tracking-wide">GATE CS/IT 2025</span>
+              <span class="bg-blue-50 border border-blue-200 text-blue-600 dark:bg-[#0b1836] dark:border-cyan-500/40 dark:text-cyan-300 text-[10px] font-mono font-bold px-2 py-0.5 rounded">MOCK-04</span>
             </div>
 
             <!-- Center: Section Switcher Tabs -->
             <div class="flex items-center gap-2">
               <button class="cbt-section-tab px-4 py-1.5 rounded-lg text-xs font-bold transition-all ${
                 this.activeSection === 'General Aptitude (GA)'
-                  ? 'bg-cyan-500/10 text-cyan-400 border border-cyan-500/40 shadow-sm'
-                  : 'bg-[#0e1a38] text-slate-400 border border-[#1e345e] hover:text-slate-200'
+                  ? 'bg-blue-50 text-blue-700 border border-blue-300 dark:bg-cyan-500/10 dark:text-cyan-400 dark:border-cyan-500/40 shadow-sm'
+                  : 'bg-slate-100 text-slate-600 border border-slate-200 hover:bg-slate-200 dark:bg-[#0e1a38] dark:text-slate-400 dark:border-[#1e345e] dark:hover:text-slate-200'
               }" data-sec="General Aptitude (GA)">
                 General Aptitude (GA)
               </button>
 
               <button class="cbt-section-tab px-4 py-1.5 rounded-lg text-xs font-bold transition-all ${
                 this.activeSection === 'Computer Science & IT (CS)'
-                  ? 'bg-cyan-500/10 text-cyan-400 border border-cyan-500/40 shadow-sm'
-                  : 'bg-[#0e1a38] text-slate-400 border border-[#1e345e] hover:text-slate-200'
+                  ? 'bg-blue-50 text-blue-700 border border-blue-300 dark:bg-cyan-500/10 dark:text-cyan-400 dark:border-cyan-500/40 shadow-sm'
+                  : 'bg-slate-100 text-slate-600 border border-slate-200 hover:bg-slate-200 dark:bg-[#0e1a38] dark:text-slate-400 dark:border-[#1e345e] dark:hover:text-slate-200'
               }" data-sec="Computer Science & IT (CS)">
                 Computer Science &amp; IT (CS)
               </button>
             </div>
 
-            <!-- Right: Timer & Tools -->
+            <!-- Right: Timer, Theme Toggle & Tools -->
             <div class="flex items-center gap-4">
               <!-- Digital Clock Timer -->
               <div class="flex items-center gap-2 font-mono">
-                <i class="fa-regular fa-clock text-cyan-400 text-sm"></i>
+                <i class="fa-regular fa-clock text-blue-600 dark:text-cyan-400 text-sm"></i>
                 <div class="flex flex-col">
                   <span class="text-[8px] font-bold tracking-wider text-slate-400 uppercase leading-none">TIME LEFT</span>
-                  <span id="cbt-timer-display" class="text-base font-extrabold text-cyan-400 tracking-wider leading-tight">
+                  <span id="cbt-timer-display" class="text-base font-extrabold text-blue-600 dark:text-cyan-400 tracking-wider leading-tight">
                     ${this.formatTimer(this.timeLeft)}
                   </span>
                 </div>
               </div>
 
               <!-- Action Icons -->
-              <div class="flex items-center gap-2 border-l border-[#1a2b4a] pl-3 text-slate-400">
-                <button id="btn-toggle-palette" class="p-1.5 rounded-lg hover:text-cyan-400 hover:bg-white/5 transition-colors" title="Toggle Question Palette">
+              <div class="flex items-center gap-1.5 border-l border-slate-200 dark:border-[#1a2b4a] pl-3 text-slate-500 dark:text-slate-400">
+                <!-- Theme Switcher Button -->
+                <button id="btn-cbt-toggle-theme" class="p-1.5 rounded-lg hover:text-blue-600 dark:hover:text-cyan-400 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors" title="Toggle Light / Dark Theme">
+                  <i class="fa-solid ${isDark ? 'fa-sun text-amber-400' : 'fa-moon text-slate-600'} text-sm"></i>
+                </button>
+                <button id="btn-toggle-palette" class="p-1.5 rounded-lg hover:text-blue-600 dark:hover:text-cyan-400 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors" title="Toggle Question Palette">
                   <i class="fa-solid fa-table-cells-large text-sm"></i>
                 </button>
-                <button id="btn-header-paper" class="p-1.5 rounded-lg hover:text-cyan-400 hover:bg-white/5 transition-colors" title="View Full Question Paper">
+                <button id="btn-header-paper" class="p-1.5 rounded-lg hover:text-blue-600 dark:hover:text-cyan-400 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors" title="View Full Question Paper">
                   <i class="fa-regular fa-file-lines text-sm"></i>
                 </button>
-                <button id="btn-header-instructions" class="p-1.5 rounded-lg hover:text-cyan-400 hover:bg-white/5 transition-colors" title="Instructions & Marking">
+                <button id="btn-header-instructions" class="p-1.5 rounded-lg hover:text-blue-600 dark:hover:text-cyan-400 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors" title="Instructions & Marking">
                   <i class="fa-solid fa-circle-question text-sm"></i>
                 </button>
-                <button id="btn-header-tutor" class="p-1.5 rounded-lg ${this.isTutorOpen ? 'text-purple-400' : 'hover:text-purple-400'} hover:bg-white/5 transition-colors" title="Toggle Gemini Concept Tutor">
+                <button id="btn-header-tutor" class="p-1.5 rounded-lg ${this.isTutorOpen ? 'text-purple-600 dark:text-purple-400' : 'hover:text-purple-600 dark:hover:text-purple-400'} hover:bg-slate-100 dark:hover:bg-white/5 transition-colors" title="Toggle Gemini Concept Tutor">
                   <i class="fa-solid fa-brain text-sm"></i>
                 </button>
               </div>
 
               <!-- Candidate Profile Avatar -->
-              <div class="flex items-center gap-2.5 border-l border-[#1a2b4a] pl-3">
+              <div class="flex items-center gap-2.5 border-l border-slate-200 dark:border-[#1a2b4a] pl-3">
                 <div class="text-right hidden sm:block">
-                  <span class="block text-xs font-bold text-white leading-tight">${CBT_BENCHMARK_MOCK04.candidate.name}</span>
-                  <span class="block text-[9px] text-slate-400 leading-tight">Candidate</span>
+                  <span class="block text-xs font-bold text-slate-900 dark:text-white leading-tight">${CBT_BENCHMARK_MOCK04.candidate.name}</span>
+                  <span class="block text-[9px] text-slate-500 dark:text-slate-400 leading-tight">Candidate</span>
                 </div>
-                <div class="h-8 w-8 rounded-full bg-cyan-500/20 border border-cyan-500/50 text-cyan-400 flex items-center justify-center font-bold text-xs">
+                <div class="h-8 w-8 rounded-full bg-blue-50 border border-blue-200 text-blue-600 dark:bg-cyan-500/20 dark:border-cyan-500/50 dark:text-cyan-400 flex items-center justify-center font-bold text-xs">
                   <i class="fa-solid fa-user"></i>
                 </div>
               </div>
@@ -227,7 +235,7 @@ export const MockTest = {
   },
 
   // ─────────────────────────────────────────────────────────────
-  // VIEW 1 & 2: EXAM CONSOLE (Matching Images 1 & 2)
+  // VIEW 1 & 2: EXAM CONSOLE (Matching Light & Dark Panels 2 & 4)
   // ─────────────────────────────────────────────────────────────
   renderExamConsole() {
     const q = this.questions[this.currentIdx] || getBenchmarkQuestions()[23];
@@ -235,6 +243,7 @@ export const MockTest = {
     const isQ42 = q.number === 42;
     const qType = q.type || 'NAT';
     const userAns = this.answers[q.id];
+    const isDark = getTheme() === 'dark';
 
     return `
       <div class="flex flex-col gap-5 max-w-[1700px] mx-auto pb-6 relative">
@@ -242,25 +251,25 @@ export const MockTest = {
         <!-- Question Meta Top Bar -->
         <div class="flex items-center justify-between gap-4 flex-wrap pb-1">
           <div class="flex items-center gap-2.5 flex-wrap">
-            <span class="bg-cyan-500 text-slate-950 font-extrabold px-3 py-1 text-xs rounded tracking-wider uppercase">
+            <span class="bg-blue-600 dark:bg-cyan-500 text-white dark:text-slate-950 font-extrabold px-3 py-1 text-xs rounded tracking-wider uppercase shadow-sm">
               QUESTION ${q.number || (this.currentIdx + 1)}
             </span>
-            <span class="bg-[#0b1836] border border-cyan-500/40 text-cyan-400 text-[11px] font-mono font-bold px-2.5 py-1 rounded">
+            <span class="bg-blue-50 border border-blue-200 text-blue-700 dark:bg-[#0b1836] dark:border-cyan-500/40 dark:text-cyan-400 text-[11px] font-mono font-bold px-2.5 py-1 rounded">
               ${qType} (${qType === 'NAT' ? 'NUMERICAL ANSWER' : qType === 'MSQ' ? 'MULTIPLE SELECT' : 'MULTIPLE CHOICE'})
             </span>
-            <span class="text-xs font-semibold text-slate-400">
+            <span class="text-xs font-semibold text-slate-600 dark:text-slate-400">
               ${q.subject || 'CS Core: Operating Systems'}
             </span>
           </div>
 
           <div class="flex items-center gap-3">
-            <span class="text-[11px] font-mono text-slate-300">
-              MARKING: <span class="text-emerald-400 font-bold">+${q.marks}.00</span> / <span class="text-rose-400 font-bold">-${q.negativeMarks || '0.00'}</span> (${qType === 'NAT' ? 'No Negative for NAT' : qType === 'MSQ' ? 'No Negative for MSQ' : '1/3rd Negative'})
+            <span class="text-[11px] font-mono text-slate-600 dark:text-slate-300">
+              MARKING: <span class="text-emerald-600 dark:text-emerald-400 font-bold">+${q.marks}.00</span> / <span class="text-rose-600 dark:text-rose-400 font-bold">-${q.negativeMarks || '0.00'}</span> (${qType === 'NAT' ? 'No Negative for NAT' : qType === 'MSQ' ? 'No Negative for MSQ' : '1/3rd Negative'})
             </span>
-            <button id="btn-toggle-calculator" class="bg-[#0c1833] border border-cyan-900/60 hover:border-cyan-500 text-cyan-400 text-xs px-3 py-1 rounded-lg font-mono flex items-center gap-1.5 transition-all active:scale-95 shadow-sm">
+            <button id="btn-toggle-calculator" class="bg-white border border-slate-300 hover:border-blue-500 text-blue-600 dark:bg-[#0c1833] dark:border-cyan-900/60 dark:hover:border-cyan-500 dark:text-cyan-400 text-xs px-3 py-1 rounded-lg font-mono flex items-center gap-1.5 transition-all active:scale-95 shadow-sm">
               <i class="fa-solid fa-calculator text-[11px]"></i> Virtual Calc (Esc)
             </button>
-            <button id="btn-report-error" class="text-slate-500 hover:text-slate-300 text-xs flex items-center gap-1">
+            <button id="btn-report-error" class="text-slate-400 hover:text-slate-600 dark:text-slate-500 dark:hover:text-slate-300 text-xs flex items-center gap-1">
               <i class="fa-regular fa-flag text-[10px]"></i> Report Error
             </button>
           </div>
@@ -273,47 +282,47 @@ export const MockTest = {
           <div class="${this.isTutorOpen ? 'lg:col-span-7' : (this.isPaletteOpen ? 'lg:col-span-8' : 'lg:col-span-12')} flex flex-col gap-5">
             
             <!-- Problem Statement Card -->
-            <div class="bg-[#0a1122] border border-[#15233e] rounded-2xl p-6 flex flex-col gap-5 shadow-xl relative">
-              <div class="flex items-center justify-between border-b border-[#142038] pb-3">
-                <span class="text-[10px] font-mono font-bold tracking-wider text-slate-400 uppercase">
+            <div class="bg-white border border-slate-200 dark:bg-[#0a1122] dark:border-[#15233e] rounded-2xl p-6 flex flex-col gap-5 shadow-sm dark:shadow-xl relative">
+              <div class="flex items-center justify-between border-b border-slate-100 dark:border-[#142038] pb-3">
+                <span class="text-[10px] font-mono font-bold tracking-wider text-slate-500 dark:text-slate-400 uppercase">
                   PROBLEM STATEMENT
                 </span>
-                <span class="text-emerald-400 font-mono text-[11px] font-semibold flex items-center gap-1">
-                  <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span> ${q.subtopic || q.topic || 'Multi-Level Memory Hierarchy'}
+                <span class="text-emerald-600 dark:text-emerald-400 font-mono text-[11px] font-semibold flex items-center gap-1">
+                  <span class="h-1.5 w-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400"></span> ${q.subtopic || q.topic || 'Multi-Level Memory Hierarchy'}
                 </span>
               </div>
 
               <!-- Question Text -->
-              <p class="text-xs font-semibold text-slate-200 leading-relaxed whitespace-pre-line">
+              <p class="text-xs font-semibold text-slate-800 dark:text-slate-200 leading-relaxed whitespace-pre-line">
                 ${q.question}
               </p>
 
               <!-- Optional Technical Metrics Cards (Q24 Demand Paging Params) -->
               ${isQ24 ? `
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 my-1">
-                  <div class="bg-[#0c162e] border border-[#1a2c4e] rounded-xl p-3">
-                    <span class="text-[9px] font-mono text-slate-400 block uppercase">TLB Search Time (t<sub>TLB</sub>)</span>
-                    <span class="font-mono text-cyan-400 font-extrabold text-sm block mt-0.5">12 ns</span>
-                    <span class="text-[9px] text-slate-400 block mt-0.5">Hit Ratio (&alpha;) = 94%</span>
+                  <div class="bg-slate-50 border border-slate-200 dark:bg-[#0c162e] dark:border-[#1a2c4e] rounded-xl p-3">
+                    <span class="text-[9px] font-mono text-slate-500 dark:text-slate-400 block uppercase">TLB Search Time (t<sub>TLB</sub>)</span>
+                    <span class="font-mono text-blue-600 dark:text-cyan-400 font-extrabold text-sm block mt-0.5">12 ns</span>
+                    <span class="text-[9px] text-slate-500 dark:text-slate-400 block mt-0.5">Hit Ratio (&alpha;) = 94%</span>
                   </div>
-                  <div class="bg-[#0c162e] border border-[#1a2c4e] rounded-xl p-3">
-                    <span class="text-[9px] font-mono text-slate-400 block uppercase">Main Memory Access (t<sub>M</sub>)</span>
-                    <span class="font-mono text-cyan-400 font-extrabold text-sm block mt-0.5">85 ns</span>
-                    <span class="text-[9px] text-slate-400 block mt-0.5">Per Memory Reference cycle</span>
+                  <div class="bg-slate-50 border border-slate-200 dark:bg-[#0c162e] dark:border-[#1a2c4e] rounded-xl p-3">
+                    <span class="text-[9px] font-mono text-slate-500 dark:text-slate-400 block uppercase">Main Memory Access (t<sub>M</sub>)</span>
+                    <span class="font-mono text-blue-600 dark:text-cyan-400 font-extrabold text-sm block mt-0.5">85 ns</span>
+                    <span class="text-[9px] text-slate-500 dark:text-slate-400 block mt-0.5">Per Memory Reference cycle</span>
                   </div>
-                  <div class="bg-[#0c162e] border border-[#1a2c4e] rounded-xl p-3">
-                    <span class="text-[9px] font-mono text-slate-400 block uppercase">Page Fault Rate (p)</span>
-                    <span class="font-mono text-emerald-400 font-extrabold text-sm block mt-0.5">0.002%</span>
-                    <span class="text-[9px] text-slate-400 block mt-0.5">1 per 50,000 instructions</span>
+                  <div class="bg-slate-50 border border-slate-200 dark:bg-[#0c162e] dark:border-[#1a2c4e] rounded-xl p-3">
+                    <span class="text-[9px] font-mono text-slate-500 dark:text-slate-400 block uppercase">Page Fault Rate (p)</span>
+                    <span class="font-mono text-emerald-600 dark:text-emerald-400 font-extrabold text-sm block mt-0.5">0.002%</span>
+                    <span class="text-[9px] text-slate-500 dark:text-slate-400 block mt-0.5">1 per 50,000 instructions</span>
                   </div>
                 </div>
               ` : ''}
 
               <!-- Interactive SVG Diagram for Memory Hierarchy Traversal Pipeline (Q24) -->
               ${isQ24 ? `
-                <div class="bg-[#080e1c] border border-[#15233e] rounded-xl p-4 flex flex-col gap-2">
-                  <div class="flex items-center justify-between text-[10px] font-mono font-bold text-slate-400 uppercase">
-                    <span class="flex items-center gap-1.5 text-cyan-400">
+                <div class="bg-slate-50 border border-slate-200 dark:bg-[#080e1c] dark:border-[#15233e] rounded-xl p-4 flex flex-col gap-2">
+                  <div class="flex items-center justify-between text-[10px] font-mono font-bold text-slate-500 dark:text-slate-400 uppercase">
+                    <span class="flex items-center gap-1.5 text-blue-600 dark:text-cyan-400">
                       <i class="fa-solid fa-microchip"></i> MEMORY HIERARCHY TRAVERSAL PIPELINE
                     </span>
                     <span>Paging Architecture: 2-Tier Hierarchical</span>
@@ -322,23 +331,23 @@ export const MockTest = {
                   <div class="w-full overflow-x-auto py-2">
                     <svg viewBox="0 0 680 120" class="w-full max-w-2xl mx-auto h-auto">
                       <!-- CPU VA Node -->
-                      <rect x="10" y="35" width="85" height="42" rx="6" fill="#0d1b38" stroke="#00f2fe" stroke-width="1.5" />
-                      <text x="52" y="55" fill="#00f2fe" font-size="10" font-family="monospace" font-weight="bold" text-anchor="middle">CPU VA</text>
-                      <text x="52" y="68" fill="#94a3b8" font-size="8" font-family="monospace" text-anchor="middle">Logical Addr</text>
+                      <rect x="10" y="35" width="85" height="42" rx="6" fill="${isDark ? '#0d1b38' : '#eff6ff'}" stroke="${isDark ? '#00f2fe' : '#3b82f6'}" stroke-width="1.5" />
+                      <text x="52" y="55" fill="${isDark ? '#00f2fe' : '#1d4ed8'}" font-size="10" font-family="monospace" font-weight="bold" text-anchor="middle">CPU VA</text>
+                      <text x="52" y="68" fill="${isDark ? '#94a3b8' : '#64748b'}" font-size="8" font-family="monospace" text-anchor="middle">Logical Addr</text>
 
                       <!-- Arrow CPU to TLB -->
-                      <line x1="95" y1="56" x2="140" y2="56" stroke="#00f2fe" stroke-width="1.5" stroke-dasharray="3,3" />
+                      <line x1="95" y1="56" x2="140" y2="56" stroke="${isDark ? '#00f2fe' : '#3b82f6'}" stroke-width="1.5" stroke-dasharray="3,3" />
 
                       <!-- TLB Lookup Node -->
-                      <rect x="140" y="30" width="110" height="52" rx="6" fill="#0f1f42" stroke="#38bdf8" stroke-width="1.5" />
-                      <text x="195" y="50" fill="#ffffff" font-size="10" font-family="monospace" font-weight="bold" text-anchor="middle">TLB Lookup</text>
-                      <text x="195" y="63" fill="#38bdf8" font-size="8" font-family="monospace" text-anchor="middle">12 ns | Hit 94%</text>
-                      <text x="195" y="74" fill="#64748b" font-size="7" font-family="monospace" text-anchor="middle">Associative</text>
+                      <rect x="140" y="30" width="110" height="52" rx="6" fill="${isDark ? '#0f1f42' : '#f0fdf4'}" stroke="${isDark ? '#38bdf8' : '#10b981'}" stroke-width="1.5" />
+                      <text x="195" y="50" fill="${isDark ? '#ffffff' : '#0f172a'}" font-size="10" font-family="monospace" font-weight="bold" text-anchor="middle">TLB Lookup</text>
+                      <text x="195" y="63" fill="${isDark ? '#38bdf8' : '#059669'}" font-size="8" font-family="monospace" text-anchor="middle">12 ns | Hit 94%</text>
+                      <text x="195" y="74" fill="${isDark ? '#64748b' : '#64748b'}" font-size="7" font-family="monospace" text-anchor="middle">Associative</text>
 
                       <!-- Hit Path to Frame Data -->
                       <path d="M 250 45 L 350 20 L 410 20" fill="none" stroke="#10b981" stroke-width="1.5" />
                       <text x="300" y="27" fill="#10b981" font-size="8" font-family="monospace">Hit &alpha; (94%)</text>
-                      <rect x="410" y="10" width="120" height="25" rx="5" fill="#07271e" stroke="#10b981" stroke-width="1.2" />
+                      <rect x="410" y="10" width="120" height="25" rx="5" fill="${isDark ? '#07271e' : '#ecfdf5'}" stroke="#10b981" stroke-width="1.2" />
                       <text x="470" y="26" fill="#10b981" font-size="9" font-family="monospace" font-weight="bold" text-anchor="middle">Frame Data (85ns)</text>
 
                       <!-- Miss Path to 2-Level Page Table -->
@@ -346,21 +355,21 @@ export const MockTest = {
                       <text x="290" y="68" fill="#f43f5e" font-size="8" font-family="monospace">Miss (6%)</text>
 
                       <!-- Two-Level PT Node -->
-                      <rect x="340" y="55" width="115" height="42" rx="6" fill="#1a1c32" stroke="#8b5cf6" stroke-width="1.2" />
-                      <text x="397" y="73" fill="#ffffff" font-size="9" font-family="monospace" font-weight="bold" text-anchor="middle">Two-Level PT</text>
-                      <text x="397" y="86" fill="#a78bfa" font-size="8" font-family="monospace" text-anchor="middle">2 &times; t_M = 170ns</text>
+                      <rect x="340" y="55" width="115" height="42" rx="6" fill="${isDark ? '#1a1c32' : '#f5f3ff'}" stroke="#8b5cf6" stroke-width="1.2" />
+                      <text x="397" y="73" fill="${isDark ? '#ffffff' : '#0f172a'}" font-size="9" font-family="monospace" font-weight="bold" text-anchor="middle">Two-Level PT</text>
+                      <text x="397" y="86" fill="${isDark ? '#a78bfa' : '#6d28d9'}" font-size="8" font-family="monospace" text-anchor="middle">2 &times; t_M = 170ns</text>
 
                       <!-- Path to Page Check -->
                       <line x1="455" y1="76" x2="495" y2="76" stroke="#8b5cf6" stroke-width="1.5" />
 
                       <!-- Page Fault Check Node -->
-                      <rect x="495" y="60" width="90" height="34" rx="5" fill="#162038" stroke="#64748b" stroke-width="1" />
-                      <text x="540" y="75" fill="#cbd5e1" font-size="8" font-family="monospace" text-anchor="middle">Page Check</text>
-                      <text x="540" y="86" fill="#38bdf8" font-size="7" font-family="monospace" text-anchor="middle">p = 0.00002</text>
+                      <rect x="495" y="60" width="90" height="34" rx="5" fill="${isDark ? '#162038' : '#f1f5f9'}" stroke="#64748b" stroke-width="1" />
+                      <text x="540" y="75" fill="${isDark ? '#cbd5e1' : '#334155'}" font-size="8" font-family="monospace" text-anchor="middle">Page Check</text>
+                      <text x="540" y="86" fill="${isDark ? '#38bdf8' : '#0284c7'}" font-size="7" font-family="monospace" text-anchor="middle">p = 0.00002</text>
 
                       <!-- Disk Penalty Indicator -->
                       <path d="M 585 77 L 620 77 L 620 95" fill="none" stroke="#f43f5e" stroke-width="1.5" stroke-dasharray="3,3" />
-                      <rect x="605" y="95" width="30" height="18" rx="3" fill="#3f0f1c" stroke="#f43f5e" stroke-width="1" />
+                      <rect x="605" y="95" width="30" height="18" rx="3" fill="${isDark ? '#3f0f1c' : '#fee2e2'}" stroke="#f43f5e" stroke-width="1" />
                       <text x="620" y="108" fill="#f43f5e" font-size="8" font-family="monospace" text-anchor="middle">Disk</text>
                     </svg>
                   </div>
@@ -369,12 +378,12 @@ export const MockTest = {
 
               <!-- Interactive SVG Diagram for Network Topology (Q42 Distance Vector Routing) -->
               ${isQ42 ? `
-                <div class="bg-[#080e1c] border border-[#15233e] rounded-xl p-4 flex flex-col gap-3">
-                  <div class="flex items-center justify-between text-[10px] font-mono font-bold text-slate-400 uppercase">
-                    <span class="flex items-center gap-1.5 text-cyan-400">
+                <div class="bg-slate-50 border border-slate-200 dark:bg-[#080e1c] dark:border-[#15233e] rounded-xl p-4 flex flex-col gap-3">
+                  <div class="flex items-center justify-between text-[10px] font-mono font-bold text-slate-500 dark:text-slate-400 uppercase">
+                    <span class="flex items-center gap-1.5 text-blue-600 dark:text-cyan-400">
                       <i class="fa-solid fa-network-wired"></i> SYNCHRONOUS LINEAR TOPOLOGY MATRIX
                     </span>
-                    <span class="text-rose-400 font-mono flex items-center gap-1">
+                    <span class="text-rose-600 dark:text-rose-400 font-mono flex items-center gap-1">
                       <span class="h-2 w-2 rounded-full bg-rose-500 animate-pulse"></span> Link (X &minus; A) Severed @ t=0
                     </span>
                   </div>
@@ -383,60 +392,60 @@ export const MockTest = {
                   <div class="w-full overflow-x-auto py-2">
                     <svg viewBox="0 0 600 90" class="w-full max-w-xl mx-auto h-auto">
                       <!-- Node X -->
-                      <circle cx="50" cy="45" r="18" fill="#101a30" stroke="#64748b" stroke-width="1.5" />
-                      <text x="50" y="49" fill="#e2e8f0" font-size="11" font-family="monospace" font-weight="bold" text-anchor="middle">X</text>
+                      <circle cx="50" cy="45" r="18" fill="${isDark ? '#101a30' : '#f1f5f9'}" stroke="#64748b" stroke-width="1.5" />
+                      <text x="50" y="49" fill="${isDark ? '#e2e8f0' : '#0f172a'}" font-size="11" font-family="monospace" font-weight="bold" text-anchor="middle">X</text>
                       <text x="50" y="75" fill="#64748b" font-size="8" font-family="monospace" text-anchor="middle">Target Dest</text>
 
                       <!-- Severed Link X-A -->
                       <line x1="68" y1="45" x2="162" y2="45" stroke="#f43f5e" stroke-width="2" stroke-dasharray="4,4" />
-                      <circle cx="115" cy="45" r="9" fill="#3b0d18" stroke="#f43f5e" stroke-width="1.2" />
+                      <circle cx="115" cy="45" r="9" fill="${isDark ? '#3b0d18' : '#fee2e2'}" stroke="#f43f5e" stroke-width="1.2" />
                       <text x="115" y="48.5" fill="#f43f5e" font-size="9" font-family="monospace" font-weight="bold" text-anchor="middle">&times;</text>
                       <text x="115" y="30" fill="#f43f5e" font-size="7" font-family="monospace" text-anchor="middle">FAILED LINK</text>
 
                       <!-- Node A -->
-                      <circle cx="180" cy="45" r="18" fill="#0d2448" stroke="#00f2fe" stroke-width="1.8" />
-                      <text x="180" y="49" fill="#00f2fe" font-size="11" font-family="monospace" font-weight="bold" text-anchor="middle">A</text>
-                      <text x="180" y="75" fill="#38bdf8" font-size="8" font-family="monospace" text-anchor="middle">Router A</text>
+                      <circle cx="180" cy="45" r="18" fill="${isDark ? '#0d2448' : '#eff6ff'}" stroke="${isDark ? '#00f2fe' : '#3b82f6'}" stroke-width="1.8" />
+                      <text x="180" y="49" fill="${isDark ? '#00f2fe' : '#1d4ed8'}" font-size="11" font-family="monospace" font-weight="bold" text-anchor="middle">A</text>
+                      <text x="180" y="75" fill="${isDark ? '#38bdf8' : '#2563eb'}" font-size="8" font-family="monospace" text-anchor="middle">Router A</text>
 
                       <!-- Link A-B -->
-                      <line x1="198" y1="45" x2="312" y2="45" stroke="#00f2fe" stroke-width="1.8" />
-                      <rect x="240" y="37" width="30" height="16" rx="4" fill="#0c1833" stroke="#00f2fe" stroke-width="1" />
-                      <text x="255" y="48.5" fill="#00f2fe" font-size="8" font-family="monospace" text-anchor="middle">c = 1</text>
+                      <line x1="198" y1="45" x2="312" y2="45" stroke="${isDark ? '#00f2fe' : '#3b82f6'}" stroke-width="1.8" />
+                      <rect x="240" y="37" width="30" height="16" rx="4" fill="${isDark ? '#0c1833' : '#ffffff'}" stroke="${isDark ? '#00f2fe' : '#3b82f6'}" stroke-width="1" />
+                      <text x="255" y="48.5" fill="${isDark ? '#00f2fe' : '#1d4ed8'}" font-size="8" font-family="monospace" text-anchor="middle">c = 1</text>
 
                       <!-- Node B -->
-                      <circle cx="330" cy="45" r="18" fill="#142042" stroke="#38bdf8" stroke-width="1.5" />
-                      <text x="330" y="49" fill="#ffffff" font-size="11" font-family="monospace" font-weight="bold" text-anchor="middle">B</text>
+                      <circle cx="330" cy="45" r="18" fill="${isDark ? '#142042' : '#f0fdf4'}" stroke="${isDark ? '#38bdf8' : '#10b981'}" stroke-width="1.5" />
+                      <text x="330" y="49" fill="${isDark ? '#ffffff' : '#0f172a'}" font-size="11" font-family="monospace" font-weight="bold" text-anchor="middle">B</text>
                       <text x="330" y="75" fill="#94a3b8" font-size="8" font-family="monospace" text-anchor="middle">Router B</text>
 
                       <!-- Link B-C -->
-                      <line x1="348" y1="45" x2="462" y2="45" stroke="#38bdf8" stroke-width="1.5" />
-                      <rect x="390" y="37" width="30" height="16" rx="4" fill="#0c1833" stroke="#38bdf8" stroke-width="1" />
-                      <text x="405" y="48.5" fill="#38bdf8" font-size="8" font-family="monospace" text-anchor="middle">c = 1</text>
+                      <line x1="348" y1="45" x2="462" y2="45" stroke="${isDark ? '#38bdf8' : '#10b981'}" stroke-width="1.5" />
+                      <rect x="390" y="37" width="30" height="16" rx="4" fill="${isDark ? '#0c1833' : '#ffffff'}" stroke="${isDark ? '#38bdf8' : '#10b981'}" stroke-width="1" />
+                      <text x="405" y="48.5" fill="${isDark ? '#38bdf8' : '#059669'}" font-size="8" font-family="monospace" text-anchor="middle">c = 1</text>
 
                       <!-- Node C -->
-                      <circle cx="480" cy="45" r="18" fill="#1f1842" stroke="#a855f7" stroke-width="1.8" />
-                      <text x="480" y="49" fill="#c084fc" font-size="11" font-family="monospace" font-weight="bold" text-anchor="middle">C</text>
-                      <text x="480" y="75" fill="#c084fc" font-size="8" font-family="monospace" text-anchor="middle">Query Probe</text>
+                      <circle cx="480" cy="45" r="18" fill="${isDark ? '#1f1842' : '#f5f3ff'}" stroke="#a855f7" stroke-width="1.8" />
+                      <text x="480" y="49" fill="${isDark ? '#c084fc' : '#7c3aed'}" font-size="11" font-family="monospace" font-weight="bold" text-anchor="middle">C</text>
+                      <text x="480" y="75" fill="${isDark ? '#c084fc' : '#7c3aed'}" font-size="8" font-family="monospace" text-anchor="middle">Query Probe</text>
                     </svg>
                   </div>
 
                   <!-- Distance Matrix Table -->
                   <div class="grid grid-cols-4 gap-2 text-center text-[10px] font-mono mt-1">
-                    <div class="bg-[#0b162f] border border-[#172b52] rounded-lg p-2">
-                      <span class="text-slate-400 block text-[8px] uppercase">Stable State Dist(A,X)</span>
-                      <span class="text-cyan-400 font-extrabold text-xs">1 (Direct)</span>
+                    <div class="bg-white border border-slate-200 dark:bg-[#0b162f] dark:border-[#172b52] rounded-lg p-2">
+                      <span class="text-slate-500 dark:text-slate-400 block text-[8px] uppercase">Stable State Dist(A,X)</span>
+                      <span class="text-blue-600 dark:text-cyan-400 font-extrabold text-xs">1 (Direct)</span>
                     </div>
-                    <div class="bg-[#0b162f] border border-[#172b52] rounded-lg p-2">
-                      <span class="text-slate-400 block text-[8px] uppercase">Stable State Dist(B,X)</span>
-                      <span class="text-cyan-400 font-extrabold text-xs">2 (via A)</span>
+                    <div class="bg-white border border-slate-200 dark:bg-[#0b162f] dark:border-[#172b52] rounded-lg p-2">
+                      <span class="text-slate-500 dark:text-slate-400 block text-[8px] uppercase">Stable State Dist(B,X)</span>
+                      <span class="text-blue-600 dark:text-cyan-400 font-extrabold text-xs">2 (via A)</span>
                     </div>
-                    <div class="bg-[#0b162f] border border-[#172b52] rounded-lg p-2">
-                      <span class="text-slate-400 block text-[8px] uppercase">Stable State Dist(C,X)</span>
-                      <span class="text-cyan-400 font-extrabold text-xs">3 (via B)</span>
+                    <div class="bg-white border border-slate-200 dark:bg-[#0b162f] dark:border-[#172b52] rounded-lg p-2">
+                      <span class="text-slate-500 dark:text-slate-400 block text-[8px] uppercase">Stable State Dist(C,X)</span>
+                      <span class="text-blue-600 dark:text-cyan-400 font-extrabold text-xs">3 (via B)</span>
                     </div>
-                    <div class="bg-[#0b162f] border border-[#172b52] rounded-lg p-2">
-                      <span class="text-slate-400 block text-[8px] uppercase">Max Infinity Metric</span>
-                      <span class="text-rose-400 font-extrabold text-xs">16 hops</span>
+                    <div class="bg-white border border-slate-200 dark:bg-[#0b162f] dark:border-[#172b52] rounded-lg p-2">
+                      <span class="text-slate-500 dark:text-slate-400 block text-[8px] uppercase">Max Infinity Metric</span>
+                      <span class="text-rose-600 dark:text-rose-400 font-extrabold text-xs">16 hops</span>
                     </div>
                   </div>
                 </div>
@@ -445,12 +454,12 @@ export const MockTest = {
             </div>
 
             <!-- Response Input Panel -->
-            <div class="bg-[#0a1122] border border-[#15233e] rounded-2xl p-5 shadow-xl flex flex-col gap-4">
-              <div class="flex items-center justify-between border-b border-[#142038] pb-3">
-                <span class="text-[10px] font-mono font-bold tracking-wider text-slate-400 uppercase flex items-center gap-2">
-                  <i class="fa-solid fa-keyboard text-cyan-400"></i> ${qType === 'NAT' ? 'NUMERICAL RESPONSE INPUT' : 'CANDIDATE RESPONSE SELECTION'}
+            <div class="bg-white border border-slate-200 dark:bg-[#0a1122] dark:border-[#15233e] rounded-2xl p-5 shadow-sm dark:shadow-xl flex flex-col gap-4">
+              <div class="flex items-center justify-between border-b border-slate-100 dark:border-[#142038] pb-3">
+                <span class="text-[10px] font-mono font-bold tracking-wider text-slate-500 dark:text-slate-400 uppercase flex items-center gap-2">
+                  <i class="fa-solid fa-keyboard text-blue-600 dark:text-cyan-400"></i> ${qType === 'NAT' ? 'NUMERICAL RESPONSE INPUT' : 'CANDIDATE RESPONSE SELECTION'}
                 </span>
-                <span class="text-[10px] font-mono font-bold text-slate-400">
+                <span class="text-[10px] font-mono font-bold text-slate-500 dark:text-slate-400">
                   ${qType === 'NAT' ? 'Range accepted: Exact Integer or Float' : `${q.marks} Mark${q.marks > 1 ? 's' : ''}`}
                 </span>
               </div>
@@ -460,36 +469,36 @@ export const MockTest = {
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-5 items-center">
                   <div class="md:col-span-7 flex flex-col gap-2">
                     <div class="relative">
-                      <input type="text" id="cbt-nat-input" readonly value="${userAns !== undefined ? userAns : (q.candidateValue || '')}" placeholder="Enter numerical value" class="w-full bg-[#080d1a] border border-cyan-500/40 rounded-xl px-4 py-3 text-lg font-mono font-extrabold text-cyan-400 shadow-inner focus:outline-none focus:border-cyan-400 pr-12">
-                      <span class="absolute right-4 top-3.5 text-xs font-mono font-bold text-slate-500">
+                      <input type="text" id="cbt-nat-input" readonly value="${userAns !== undefined ? userAns : (q.candidateValue || '')}" placeholder="Enter numerical value" class="w-full bg-slate-50 dark:bg-[#080d1a] border border-blue-300 dark:border-cyan-500/40 rounded-xl px-4 py-3 text-lg font-mono font-extrabold text-blue-600 dark:text-cyan-400 shadow-inner focus:outline-none focus:border-blue-500 dark:focus:border-cyan-400 pr-12">
+                      <span class="absolute right-4 top-3.5 text-xs font-mono font-bold text-slate-400 dark:text-slate-500">
                         ${isQ24 ? 'ns' : (isQ42 ? 'cycles' : 'val')}
                       </span>
                     </div>
-                    <span class="text-[10px] text-slate-400 font-sans">
+                    <span class="text-[10px] text-slate-500 dark:text-slate-400 font-sans">
                       Use the virtual on-screen keypad to avoid peripheral keystroke errors.
                     </span>
                   </div>
 
                   <!-- 4x4 Cyber Virtual Numpad -->
                   <div class="md:col-span-5 grid grid-cols-4 gap-1.5 font-mono text-xs max-w-xs mx-auto md:mx-0">
-                    <button class="cbt-keypad-btn p-2.5 rounded-lg bg-[#0e1830] hover:bg-[#16264d] text-white border border-[#1a2c4e] font-extrabold" data-val="7">7</button>
-                    <button class="cbt-keypad-btn p-2.5 rounded-lg bg-[#0e1830] hover:bg-[#16264d] text-white border border-[#1a2c4e] font-extrabold" data-val="8">8</button>
-                    <button class="cbt-keypad-btn p-2.5 rounded-lg bg-[#0e1830] hover:bg-[#16264d] text-white border border-[#1a2c4e] font-extrabold" data-val="9">9</button>
-                    <button class="cbt-keypad-btn p-2.5 rounded-lg bg-[#2a1320] hover:bg-rose-900/40 text-rose-400 border border-rose-900/50 font-extrabold" data-val="back"><i class="fa-solid fa-delete-left"></i></button>
+                    <button class="cbt-keypad-btn p-2.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 dark:bg-[#0e1830] dark:hover:bg-[#16264d] dark:text-white border border-slate-200 dark:border-[#1a2c4e] font-extrabold" data-val="7">7</button>
+                    <button class="cbt-keypad-btn p-2.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 dark:bg-[#0e1830] dark:hover:bg-[#16264d] dark:text-white border border-slate-200 dark:border-[#1a2c4e] font-extrabold" data-val="8">8</button>
+                    <button class="cbt-keypad-btn p-2.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 dark:bg-[#0e1830] dark:hover:bg-[#16264d] dark:text-white border border-slate-200 dark:border-[#1a2c4e] font-extrabold" data-val="9">9</button>
+                    <button class="cbt-keypad-btn p-2.5 rounded-lg bg-rose-50 hover:bg-rose-100 text-rose-600 dark:bg-[#2a1320] dark:hover:bg-rose-900/40 dark:text-rose-400 border border-rose-200 dark:border-rose-900/50 font-extrabold" data-val="back"><i class="fa-solid fa-delete-left"></i></button>
 
-                    <button class="cbt-keypad-btn p-2.5 rounded-lg bg-[#0e1830] hover:bg-[#16264d] text-white border border-[#1a2c4e] font-extrabold" data-val="4">4</button>
-                    <button class="cbt-keypad-btn p-2.5 rounded-lg bg-[#0e1830] hover:bg-[#16264d] text-white border border-[#1a2c4e] font-extrabold" data-val="5">5</button>
-                    <button class="cbt-keypad-btn p-2.5 rounded-lg bg-[#0e1830] hover:bg-[#16264d] text-white border border-[#1a2c4e] font-extrabold" data-val="6">6</button>
-                    <button class="cbt-keypad-btn p-2.5 rounded-lg bg-[#2a1320] hover:bg-rose-900/40 text-rose-400 border border-rose-900/50 font-extrabold" data-val="clear">CLR</button>
+                    <button class="cbt-keypad-btn p-2.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 dark:bg-[#0e1830] dark:hover:bg-[#16264d] dark:text-white border border-slate-200 dark:border-[#1a2c4e] font-extrabold" data-val="4">4</button>
+                    <button class="cbt-keypad-btn p-2.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 dark:bg-[#0e1830] dark:hover:bg-[#16264d] dark:text-white border border-slate-200 dark:border-[#1a2c4e] font-extrabold" data-val="5">5</button>
+                    <button class="cbt-keypad-btn p-2.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 dark:bg-[#0e1830] dark:hover:bg-[#16264d] dark:text-white border border-slate-200 dark:border-[#1a2c4e] font-extrabold" data-val="6">6</button>
+                    <button class="cbt-keypad-btn p-2.5 rounded-lg bg-rose-50 hover:bg-rose-100 text-rose-600 dark:bg-[#2a1320] dark:hover:bg-rose-900/40 dark:text-rose-400 border border-rose-200 dark:border-rose-900/50 font-extrabold" data-val="clear">CLR</button>
 
-                    <button class="cbt-keypad-btn p-2.5 rounded-lg bg-[#0e1830] hover:bg-[#16264d] text-white border border-[#1a2c4e] font-extrabold" data-val="1">1</button>
-                    <button class="cbt-keypad-btn p-2.5 rounded-lg bg-[#0e1830] hover:bg-[#16264d] text-white border border-[#1a2c4e] font-extrabold" data-val="2">2</button>
-                    <button class="cbt-keypad-btn p-2.5 rounded-lg bg-[#0e1830] hover:bg-[#16264d] text-white border border-[#1a2c4e] font-extrabold" data-val="3">3</button>
-                    <button class="cbt-keypad-btn p-2.5 rounded-lg bg-[#0e1830] hover:bg-[#16264d] text-cyan-400 border border-[#1a2c4e] font-extrabold" data-val="neg">&plusmn;</button>
+                    <button class="cbt-keypad-btn p-2.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 dark:bg-[#0e1830] dark:hover:bg-[#16264d] dark:text-white border border-slate-200 dark:border-[#1a2c4e] font-extrabold" data-val="1">1</button>
+                    <button class="cbt-keypad-btn p-2.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 dark:bg-[#0e1830] dark:hover:bg-[#16264d] dark:text-white border border-slate-200 dark:border-[#1a2c4e] font-extrabold" data-val="2">2</button>
+                    <button class="cbt-keypad-btn p-2.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 dark:bg-[#0e1830] dark:hover:bg-[#16264d] dark:text-white border border-slate-200 dark:border-[#1a2c4e] font-extrabold" data-val="3">3</button>
+                    <button class="cbt-keypad-btn p-2.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-blue-600 dark:bg-[#0e1830] dark:hover:bg-[#16264d] dark:text-cyan-400 border border-slate-200 dark:border-[#1a2c4e] font-extrabold" data-val="neg">&plusmn;</button>
 
-                    <button class="cbt-keypad-btn p-2.5 rounded-lg bg-[#0e1830] hover:bg-[#16264d] text-white border border-[#1a2c4e] font-extrabold col-span-2" data-val="0">0</button>
-                    <button class="cbt-keypad-btn p-2.5 rounded-lg bg-[#0e1830] hover:bg-[#16264d] text-white border border-[#1a2c4e] font-extrabold" data-val=".">.</button>
-                    <button class="cbt-keypad-btn p-2.5 rounded-lg bg-[#063b2c] hover:bg-emerald-900/50 text-emerald-400 border border-emerald-500/40 font-extrabold" data-val="ok"><i class="fa-solid fa-check"></i></button>
+                    <button class="cbt-keypad-btn p-2.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 dark:bg-[#0e1830] dark:hover:bg-[#16264d] dark:text-white border border-slate-200 dark:border-[#1a2c4e] font-extrabold col-span-2" data-val="0">0</button>
+                    <button class="cbt-keypad-btn p-2.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 dark:bg-[#0e1830] dark:hover:bg-[#16264d] dark:text-white border border-slate-200 dark:border-[#1a2c4e] font-extrabold" data-val=".">.</button>
+                    <button class="cbt-keypad-btn p-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white border border-emerald-500 font-extrabold" data-val="ok"><i class="fa-solid fa-check"></i></button>
                   </div>
                 </div>
               ` : qType === 'MSQ' ? `
@@ -501,13 +510,13 @@ export const MockTest = {
                     return `
                       <label class="flex items-start gap-3 p-3.5 rounded-xl border transition-all cursor-pointer ${
                         isChecked
-                          ? 'bg-[#0f1f3d] border-cyan-500 text-white shadow-sm shadow-cyan-500/10'
-                          : 'bg-[#0b1426] border-[#182848] text-slate-300 hover:border-slate-600'
+                          ? 'bg-blue-50 border-blue-500 text-slate-900 dark:bg-[#0f1f3d] dark:border-cyan-500 dark:text-white shadow-sm'
+                          : 'bg-white border-slate-200 text-slate-700 hover:border-slate-400 dark:bg-[#0b1426] dark:border-[#182848] dark:text-slate-300 dark:hover:border-slate-600'
                       }">
-                        <input type="checkbox" name="cbt-option-msq" value="${oIdx}" ${isChecked ? 'checked' : ''} class="mt-1 text-cyan-500 rounded bg-[#080d1a] border-slate-700">
+                        <input type="checkbox" name="cbt-option-msq" value="${oIdx}" ${isChecked ? 'checked' : ''} class="mt-1 text-blue-600 dark:text-cyan-500 rounded bg-white dark:bg-[#080d1a] border-slate-300 dark:border-slate-700">
                         <div class="flex flex-col">
                           <span class="text-xs font-semibold leading-relaxed">${String.fromCharCode(65 + oIdx)}. ${opt}</span>
-                          ${isChecked ? '<span class="text-[9px] font-mono text-cyan-400 mt-1 font-bold">Candidate Choice [Registered]</span>' : ''}
+                          ${isChecked ? '<span class="text-[9px] font-mono text-blue-600 dark:text-cyan-400 mt-1 font-bold">Candidate Choice [Registered]</span>' : ''}
                         </div>
                       </label>
                     `;
@@ -521,13 +530,13 @@ export const MockTest = {
                     return `
                       <label class="flex items-start gap-3 p-3.5 rounded-xl border transition-all cursor-pointer ${
                         isChecked
-                          ? 'bg-[#0f1f3d] border-cyan-500 text-white shadow-sm shadow-cyan-500/10'
-                          : 'bg-[#0b1426] border-[#182848] text-slate-300 hover:border-slate-600'
+                          ? 'bg-blue-50 border-blue-500 text-slate-900 dark:bg-[#0f1f3d] dark:border-cyan-500 dark:text-white shadow-sm'
+                          : 'bg-white border-slate-200 text-slate-700 hover:border-slate-400 dark:bg-[#0b1426] dark:border-[#182848] dark:text-slate-300 dark:hover:border-slate-600'
                       }">
-                        <input type="radio" name="cbt-option-mcq" value="${oIdx}" ${isChecked ? 'checked' : ''} class="mt-1 text-cyan-500 bg-[#080d1a] border-slate-700">
+                        <input type="radio" name="cbt-option-mcq" value="${oIdx}" ${isChecked ? 'checked' : ''} class="mt-1 text-blue-600 dark:text-cyan-500 bg-white dark:bg-[#080d1a] border-slate-300 dark:border-slate-700">
                         <div class="flex flex-col">
                           <span class="text-xs font-semibold leading-relaxed">${String.fromCharCode(65 + oIdx)}. ${opt}</span>
-                          ${isChecked ? '<span class="text-[9px] font-mono text-cyan-400 mt-1 font-bold">Candidate Choice [Registered]</span>' : ''}
+                          ${isChecked ? '<span class="text-[9px] font-mono text-blue-600 dark:text-cyan-400 mt-1 font-bold">Candidate Choice [Registered]</span>' : ''}
                         </div>
                       </label>
                     `;
@@ -537,30 +546,30 @@ export const MockTest = {
             </div>
 
             <!-- Bottom Navigation Bar (Previous, Next, Clear, Mark for Review, Save & Next, Submit) -->
-            <div class="flex items-center justify-between gap-3 flex-wrap pt-2 border-t border-[#142038]">
+            <div class="flex items-center justify-between gap-3 flex-wrap pt-2 border-t border-slate-200 dark:border-[#142038]">
               <div class="flex items-center gap-2">
-                <button id="btn-cbt-prev" class="px-4 py-2 rounded-xl bg-[#0b1426] hover:bg-[#121f3a] border border-[#192b4c] text-xs font-bold text-slate-300 transition-all active:scale-95 flex items-center gap-1.5">
+                <button id="btn-cbt-prev" class="px-4 py-2 rounded-xl bg-white dark:bg-[#0b1426] hover:bg-slate-100 dark:hover:bg-[#121f3a] border border-slate-300 dark:border-[#192b4c] text-xs font-bold text-slate-700 dark:text-slate-300 transition-all active:scale-95 flex items-center gap-1.5 shadow-sm">
                   <i class="fa-solid fa-chevron-left text-[10px]"></i> Previous
                 </button>
-                <button id="btn-cbt-next" class="px-4 py-2 rounded-xl bg-[#0b1426] hover:bg-[#121f3a] border border-[#192b4c] text-xs font-bold text-slate-300 transition-all active:scale-95 flex items-center gap-1.5">
+                <button id="btn-cbt-next" class="px-4 py-2 rounded-xl bg-white dark:bg-[#0b1426] hover:bg-slate-100 dark:hover:bg-[#121f3a] border border-slate-300 dark:border-[#192b4c] text-xs font-bold text-slate-700 dark:text-slate-300 transition-all active:scale-95 flex items-center gap-1.5 shadow-sm">
                   Next <i class="fa-solid fa-chevron-right text-[10px]"></i>
                 </button>
-                <button id="btn-cbt-clear" class="px-3.5 py-2 rounded-xl border border-slate-700 hover:bg-white/5 text-xs font-bold text-slate-400 hover:text-slate-200 transition-all">
+                <button id="btn-cbt-clear" class="px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-white/5 text-xs font-bold text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition-all">
                   Clear Response
                 </button>
               </div>
 
               <div class="flex items-center gap-2">
-                <button id="btn-cbt-mark-review" class="px-4 py-2 rounded-xl bg-[#281845] hover:bg-[#341e5c] border border-purple-500/40 text-purple-300 text-xs font-bold transition-all active:scale-95">
+                <button id="btn-cbt-mark-review" class="px-4 py-2 rounded-xl bg-purple-50 hover:bg-purple-100 text-purple-700 border border-purple-200 dark:bg-[#281845] dark:hover:bg-[#341e5c] dark:border-purple-500/40 dark:text-purple-300 text-xs font-bold transition-all active:scale-95">
                   Mark for Review &amp; Next
                 </button>
-                <button id="btn-cbt-save-mark" class="px-4 py-2 rounded-xl bg-[#1b1938] hover:bg-[#25224e] border border-indigo-500/40 text-indigo-300 text-xs font-bold transition-all active:scale-95">
+                <button id="btn-cbt-save-mark" class="px-4 py-2 rounded-xl bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200 dark:bg-[#1b1938] dark:hover:bg-[#25224e] dark:border-indigo-500/40 dark:text-indigo-300 text-xs font-bold transition-all active:scale-95">
                   Save &amp; Mark for Review
                 </button>
-                <button id="btn-cbt-save-next" class="px-5 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-extrabold text-xs shadow-md shadow-cyan-500/20 transition-all active:scale-95 flex items-center gap-1.5">
+                <button id="btn-cbt-save-next" class="px-5 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white dark:bg-cyan-500 dark:hover:bg-cyan-400 dark:text-slate-950 font-extrabold text-xs shadow-md transition-all active:scale-95 flex items-center gap-1.5">
                   Save &amp; Next <i class="fa-solid fa-arrow-right text-[11px]"></i>
                 </button>
-                <button id="btn-cbt-submit-exam" class="px-5 py-2 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-extrabold text-xs shadow-md shadow-rose-600/20 transition-all active:scale-95">
+                <button id="btn-cbt-submit-exam" class="px-5 py-2 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-extrabold text-xs shadow-md transition-all active:scale-95">
                   SUBMIT PAPER
                 </button>
               </div>
@@ -571,141 +580,141 @@ export const MockTest = {
           <!-- RIGHT COLUMN: Calculator, Palette, or Gemini Concept Tutor (Span 4 or 5) -->
           <div class="${this.isTutorOpen ? 'lg:col-span-5' : (this.isPaletteOpen ? 'lg:col-span-4' : 'hidden')} flex flex-col gap-5">
             
-            <!-- 1. GATE Virtual Calculator Floating / Docked Card (Image 1) -->
+            <!-- 1. GATE Virtual Calculator Floating / Docked Card (Panel 2) -->
             ${this.isCalcOpen ? `
-              <div id="cbt-calculator-card" class="bg-[#0b1426] border border-[#1b2b4c] rounded-2xl p-4 shadow-2xl flex flex-col gap-3 relative">
-                <div class="flex items-center justify-between border-b border-[#162544] pb-2">
-                  <div class="flex items-center gap-2 text-cyan-400 font-mono text-xs font-bold">
+              <div id="cbt-calculator-card" class="bg-white border border-slate-300 dark:bg-[#0b1426] dark:border-[#1b2b4c] rounded-2xl p-4 shadow-2xl flex flex-col gap-3 relative">
+                <div class="flex items-center justify-between border-b border-slate-200 dark:border-[#162544] pb-2">
+                  <div class="flex items-center gap-2 text-blue-600 dark:text-cyan-400 font-mono text-xs font-bold">
                     <i class="fa-solid fa-calculator"></i>
                     <span>GATE VIRTUAL CALCULATOR</span>
                   </div>
                   <div class="flex items-center gap-3">
-                    <span class="text-[9px] font-mono text-slate-400">DEG | M: ${this.calcMemory}</span>
-                    <button id="btn-close-calc" class="text-slate-400 hover:text-white text-xs">
+                    <span class="text-[9px] font-mono text-slate-500 dark:text-slate-400">DEG | M: ${this.calcMemory}</span>
+                    <button id="btn-close-calc" class="text-slate-400 hover:text-slate-600 dark:hover:text-white text-xs">
                       <i class="fa-solid fa-xmark"></i>
                     </button>
                   </div>
                 </div>
 
                 <!-- Calculator Screen -->
-                <div class="bg-[#070c18] border border-[#162544] rounded-xl p-3 text-right">
-                  <span class="block text-[10px] font-mono text-slate-500 truncate h-3.5">${this.calcExpression}</span>
-                  <span id="calc-display-val" class="block font-mono text-2xl font-extrabold text-cyan-400 truncate mt-1">
+                <div class="bg-slate-100 dark:bg-[#070c18] border border-slate-200 dark:border-[#162544] rounded-xl p-3 text-right">
+                  <span class="block text-[10px] font-mono text-slate-400 dark:text-slate-500 truncate h-3.5">${this.calcExpression}</span>
+                  <span id="calc-display-val" class="block font-mono text-2xl font-extrabold text-slate-900 dark:text-cyan-400 truncate mt-1">
                     ${this.calcDisplayValue}
                   </span>
                 </div>
 
-                <!-- Scientific Keypad Rows Matching Image 1 -->
+                <!-- Scientific Keypad Rows Matching Image 1 & 2 -->
                 <div class="grid grid-cols-5 gap-1.5 font-mono text-xs">
                   <!-- Row 1 -->
-                  <button class="calc-key p-2 rounded-lg bg-[#111c33] hover:bg-[#1a2d52] text-amber-400 font-bold" data-calc="mode">DEG</button>
-                  <button class="calc-key p-2 rounded-lg bg-[#111c33] hover:bg-[#1a2d52] text-slate-300 font-bold" data-calc="mc">MC</button>
-                  <button class="calc-key p-2 rounded-lg bg-[#111c33] hover:bg-[#1a2d52] text-slate-300 font-bold" data-calc="mr">MR</button>
-                  <button class="calc-key p-2 rounded-lg bg-[#111c33] hover:bg-[#1a2d52] text-slate-300 font-bold" data-calc="m+">M+</button>
-                  <button class="calc-key p-2 rounded-lg bg-[#111c33] hover:bg-[#1a2d52] text-slate-300 font-bold" data-calc="m-">M-</button>
+                  <button class="calc-key p-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-amber-600 dark:bg-[#111c33] dark:hover:bg-[#1a2d52] dark:text-amber-400 font-bold" data-calc="mode">DEG</button>
+                  <button class="calc-key p-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 dark:bg-[#111c33] dark:hover:bg-[#1a2d52] dark:text-slate-300 font-bold" data-calc="mc">MC</button>
+                  <button class="calc-key p-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 dark:bg-[#111c33] dark:hover:bg-[#1a2d52] dark:text-slate-300 font-bold" data-calc="mr">MR</button>
+                  <button class="calc-key p-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 dark:bg-[#111c33] dark:hover:bg-[#1a2d52] dark:text-slate-300 font-bold" data-calc="m+">M+</button>
+                  <button class="calc-key p-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 dark:bg-[#111c33] dark:hover:bg-[#1a2d52] dark:text-slate-300 font-bold" data-calc="m-">M-</button>
 
                   <!-- Row 2 -->
-                  <button class="calc-key p-2 rounded-lg bg-[#111c33] hover:bg-[#1a2d52] text-cyan-300" data-calc="sin">sin</button>
-                  <button class="calc-key p-2 rounded-lg bg-[#111c33] hover:bg-[#1a2d52] text-cyan-300" data-calc="cos">cos</button>
-                  <button class="calc-key p-2 rounded-lg bg-[#111c33] hover:bg-[#1a2d52] text-cyan-300" data-calc="tan">tan</button>
-                  <button class="calc-key p-2 rounded-lg bg-[#111c33] hover:bg-[#1a2d52] text-cyan-300" data-calc="ln">ln</button>
-                  <button class="calc-key p-2 rounded-lg bg-[#111c33] hover:bg-[#1a2d52] text-cyan-300" data-calc="log">log</button>
+                  <button class="calc-key p-2 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-700 dark:bg-[#111c33] dark:hover:bg-[#1a2d52] dark:text-cyan-300" data-calc="sin">sin</button>
+                  <button class="calc-key p-2 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-700 dark:bg-[#111c33] dark:hover:bg-[#1a2d52] dark:text-cyan-300" data-calc="cos">cos</button>
+                  <button class="calc-key p-2 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-700 dark:bg-[#111c33] dark:hover:bg-[#1a2d52] dark:text-cyan-300" data-calc="tan">tan</button>
+                  <button class="calc-key p-2 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-700 dark:bg-[#111c33] dark:hover:bg-[#1a2d52] dark:text-cyan-300" data-calc="ln">ln</button>
+                  <button class="calc-key p-2 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-700 dark:bg-[#111c33] dark:hover:bg-[#1a2d52] dark:text-cyan-300" data-calc="log">log</button>
 
                   <!-- Row 3 -->
-                  <button class="calc-key p-2 rounded-lg bg-[#111c33] hover:bg-[#1a2d52] text-slate-300" data-calc="(">(</button>
-                  <button class="calc-key p-2 rounded-lg bg-[#111c33] hover:bg-[#1a2d52] text-slate-300" data-calc=")">)</button>
-                  <button class="calc-key p-2 rounded-lg bg-[#111c33] hover:bg-[#1a2d52] text-cyan-300" data-calc="sqrt">&radic;</button>
-                  <button class="calc-key p-2 rounded-lg bg-[#111c33] hover:bg-[#1a2d52] text-cyan-300" data-calc="sq">x&sup2;</button>
-                  <button class="calc-key p-2 rounded-lg bg-[#111c33] hover:bg-[#1a2d52] text-cyan-300" data-calc="/">&divide;</button>
+                  <button class="calc-key p-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 dark:bg-[#111c33] dark:hover:bg-[#1a2d52] dark:text-slate-300" data-calc="(">(</button>
+                  <button class="calc-key p-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 dark:bg-[#111c33] dark:hover:bg-[#1a2d52] dark:text-slate-300" data-calc=")">)</button>
+                  <button class="calc-key p-2 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-700 dark:bg-[#111c33] dark:hover:bg-[#1a2d52] dark:text-cyan-300" data-calc="sqrt">&radic;</button>
+                  <button class="calc-key p-2 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-700 dark:bg-[#111c33] dark:hover:bg-[#1a2d52] dark:text-cyan-300" data-calc="sq">x&sup2;</button>
+                  <button class="calc-key p-2 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-700 dark:bg-[#111c33] dark:hover:bg-[#1a2d52] dark:text-cyan-300" data-calc="/">&divide;</button>
 
                   <!-- Row 4 -->
-                  <button class="calc-key p-2 rounded-lg bg-[#152340] hover:bg-[#1e345e] text-white font-bold" data-calc="7">7</button>
-                  <button class="calc-key p-2 rounded-lg bg-[#152340] hover:bg-[#1e345e] text-white font-bold" data-calc="8">8</button>
-                  <button class="calc-key p-2 rounded-lg bg-[#152340] hover:bg-[#1e345e] text-white font-bold" data-calc="9">9</button>
-                  <button class="calc-key p-2 rounded-lg bg-[#2a1320] hover:bg-rose-900/40 text-rose-400 font-bold" data-calc="back">&larr;</button>
-                  <button class="calc-key p-2 rounded-lg bg-[#111c33] hover:bg-[#1a2d52] text-cyan-300" data-calc="*">&times;</button>
+                  <button class="calc-key p-2 rounded-lg bg-white border border-slate-200 hover:bg-slate-100 text-slate-900 dark:bg-[#152340] dark:border-transparent dark:hover:bg-[#1e345e] dark:text-white font-bold" data-calc="7">7</button>
+                  <button class="calc-key p-2 rounded-lg bg-white border border-slate-200 hover:bg-slate-100 text-slate-900 dark:bg-[#152340] dark:border-transparent dark:hover:bg-[#1e345e] dark:text-white font-bold" data-calc="8">8</button>
+                  <button class="calc-key p-2 rounded-lg bg-white border border-slate-200 hover:bg-slate-100 text-slate-900 dark:bg-[#152340] dark:border-transparent dark:hover:bg-[#1e345e] dark:text-white font-bold" data-calc="9">9</button>
+                  <button class="calc-key p-2 rounded-lg bg-rose-50 hover:bg-rose-100 text-rose-600 dark:bg-[#2a1320] dark:hover:bg-rose-900/40 dark:text-rose-400 font-bold" data-calc="back">&larr;</button>
+                  <button class="calc-key p-2 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-700 dark:bg-[#111c33] dark:hover:bg-[#1a2d52] dark:text-cyan-300" data-calc="*">&times;</button>
 
                   <!-- Row 5 -->
-                  <button class="calc-key p-2 rounded-lg bg-[#152340] hover:bg-[#1e345e] text-white font-bold" data-calc="4">4</button>
-                  <button class="calc-key p-2 rounded-lg bg-[#152340] hover:bg-[#1e345e] text-white font-bold" data-calc="5">5</button>
-                  <button class="calc-key p-2 rounded-lg bg-[#152340] hover:bg-[#1e345e] text-white font-bold" data-calc="6">6</button>
-                  <button class="calc-key p-2 rounded-lg bg-[#2a1320] hover:bg-rose-900/40 text-rose-400 font-bold" data-calc="c">C</button>
-                  <button class="calc-key p-2 rounded-lg bg-[#111c33] hover:bg-[#1a2d52] text-cyan-300" data-calc="-">&minus;</button>
+                  <button class="calc-key p-2 rounded-lg bg-white border border-slate-200 hover:bg-slate-100 text-slate-900 dark:bg-[#152340] dark:border-transparent dark:hover:bg-[#1e345e] dark:text-white font-bold" data-calc="4">4</button>
+                  <button class="calc-key p-2 rounded-lg bg-white border border-slate-200 hover:bg-slate-100 text-slate-900 dark:bg-[#152340] dark:border-transparent dark:hover:bg-[#1e345e] dark:text-white font-bold" data-calc="5">5</button>
+                  <button class="calc-key p-2 rounded-lg bg-white border border-slate-200 hover:bg-slate-100 text-slate-900 dark:bg-[#152340] dark:border-transparent dark:hover:bg-[#1e345e] dark:text-white font-bold" data-calc="6">6</button>
+                  <button class="calc-key p-2 rounded-lg bg-rose-50 hover:bg-rose-100 text-rose-600 dark:bg-[#2a1320] dark:hover:bg-rose-900/40 dark:text-rose-400 font-bold" data-calc="c">C</button>
+                  <button class="calc-key p-2 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-700 dark:bg-[#111c33] dark:hover:bg-[#1a2d52] dark:text-cyan-300" data-calc="-">&minus;</button>
 
                   <!-- Row 6 -->
-                  <button class="calc-key p-2 rounded-lg bg-[#152340] hover:bg-[#1e345e] text-white font-bold" data-calc="1">1</button>
-                  <button class="calc-key p-2 rounded-lg bg-[#152340] hover:bg-[#1e345e] text-white font-bold" data-calc="2">2</button>
-                  <button class="calc-key p-2 rounded-lg bg-[#152340] hover:bg-[#1e345e] text-white font-bold" data-calc="3">3</button>
-                  <button class="calc-key p-2 rounded-lg bg-[#111c33] hover:bg-[#1a2d52] text-cyan-300" data-calc="inv">1/x</button>
-                  <button class="calc-key p-2 rounded-lg bg-[#111c33] hover:bg-[#1a2d52] text-cyan-300" data-calc="+">+</button>
+                  <button class="calc-key p-2 rounded-lg bg-white border border-slate-200 hover:bg-slate-100 text-slate-900 dark:bg-[#152340] dark:border-transparent dark:hover:bg-[#1e345e] dark:text-white font-bold" data-calc="1">1</button>
+                  <button class="calc-key p-2 rounded-lg bg-white border border-slate-200 hover:bg-slate-100 text-slate-900 dark:bg-[#152340] dark:border-transparent dark:hover:bg-[#1e345e] dark:text-white font-bold" data-calc="2">2</button>
+                  <button class="calc-key p-2 rounded-lg bg-white border border-slate-200 hover:bg-slate-100 text-slate-900 dark:bg-[#152340] dark:border-transparent dark:hover:bg-[#1e345e] dark:text-white font-bold" data-calc="3">3</button>
+                  <button class="calc-key p-2 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-700 dark:bg-[#111c33] dark:hover:bg-[#1a2d52] dark:text-cyan-300" data-calc="inv">1/x</button>
+                  <button class="calc-key p-2 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-700 dark:bg-[#111c33] dark:hover:bg-[#1a2d52] dark:text-cyan-300" data-calc="+">+</button>
 
                   <!-- Row 7 -->
-                  <button class="calc-key p-2 rounded-lg bg-[#152340] hover:bg-[#1e345e] text-white font-bold col-span-2" data-calc="0">0</button>
-                  <button class="calc-key p-2 rounded-lg bg-[#152340] hover:bg-[#1e345e] text-white font-bold" data-calc=".">.</button>
-                  <button class="calc-key p-2 rounded-lg bg-[#111c33] hover:bg-[#1a2d52] text-cyan-300" data-calc="pm">&plusmn;</button>
-                  <button class="calc-key p-2 rounded-lg bg-[#00f2fe] hover:bg-cyan-300 text-slate-950 font-extrabold" data-calc="=">=</button>
+                  <button class="calc-key p-2 rounded-lg bg-white border border-slate-200 hover:bg-slate-100 text-slate-900 dark:bg-[#152340] dark:border-transparent dark:hover:bg-[#1e345e] dark:text-white font-bold col-span-2" data-calc="0">0</button>
+                  <button class="calc-key p-2 rounded-lg bg-white border border-slate-200 hover:bg-slate-100 text-slate-900 dark:bg-[#152340] dark:border-transparent dark:hover:bg-[#1e345e] dark:text-white font-bold" data-calc=".">.</button>
+                  <button class="calc-key p-2 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-700 dark:bg-[#111c33] dark:hover:bg-[#1a2d52] dark:text-cyan-300" data-calc="pm">&plusmn;</button>
+                  <button class="calc-key p-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white dark:bg-[#00f2fe] dark:hover:bg-cyan-300 dark:text-slate-950 font-extrabold" data-calc="=">=</button>
                 </div>
 
                 <!-- Direct Clipboard Transfer Button -->
-                <button id="btn-transfer-calc-nat" class="w-full py-2 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/40 text-cyan-400 text-xs font-mono font-bold flex items-center justify-center gap-2 transition-all">
+                <button id="btn-transfer-calc-nat" class="w-full py-2 rounded-xl bg-blue-50 hover:bg-blue-100 border border-blue-200 text-blue-700 dark:bg-cyan-500/10 dark:hover:bg-cyan-500/20 dark:border-cyan-500/40 dark:text-cyan-400 text-xs font-mono font-bold flex items-center justify-center gap-2 transition-all">
                   <i class="fa-regular fa-clipboard"></i> Direct Clipboard: <span class="underline">Transfer to NAT Box</span>
                 </button>
               </div>
             ` : ''}
 
-            <!-- 2. GEMINI CONCEPT TUTOR SIDE PANEL (Image 2) -->
+            <!-- 2. GEMINI CONCEPT TUTOR SIDE PANEL (Panel 4) -->
             ${this.isTutorOpen ? `
-              <div id="gemini-concept-tutor-panel" class="bg-[#0b1328] border border-[#1b2b4c] rounded-2xl p-5 shadow-2xl flex flex-col gap-4">
+              <div id="gemini-concept-tutor-panel" class="bg-white border border-purple-200 dark:bg-[#0b1328] dark:border-[#1b2b4c] rounded-2xl p-5 shadow-sm dark:shadow-2xl flex flex-col gap-4">
                 <!-- Header -->
-                <div class="flex items-center justify-between border-b border-[#182848] pb-3">
+                <div class="flex items-center justify-between border-b border-purple-100 dark:border-[#182848] pb-3">
                   <div class="flex items-center gap-2.5">
-                    <div class="h-7 w-7 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center text-xs">
+                    <div class="h-7 w-7 rounded-lg bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-400 flex items-center justify-center text-xs">
                       <i class="fa-solid fa-sparkles"></i>
                     </div>
                     <div>
-                      <h4 class="font-display font-extrabold text-sm text-white leading-tight">Gemini Concept Tutor</h4>
-                      <p class="text-[9px] text-purple-300 font-mono">1.5 Pro &bull; Pedagogical Socratic Mode</p>
+                      <h4 class="font-display font-extrabold text-sm text-slate-900 dark:text-white leading-tight">Gemini Concept Tutor</h4>
+                      <p class="text-[9px] text-purple-600 dark:text-purple-300 font-mono">1.5 Pro &bull; Pedagogical Socratic Mode</p>
                     </div>
                   </div>
-                  <span class="px-2 py-0.5 rounded-full text-[9px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 flex items-center gap-1">
-                    <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span> Non-Spoiler Active
+                  <span class="px-2 py-0.5 rounded-full text-[9px] font-mono font-bold bg-emerald-50 text-emerald-700 border border-emerald-200 dark:bg-emerald-500/10 dark:text-emerald-400 dark:border-emerald-500/30 flex items-center gap-1">
+                    <span class="h-1.5 w-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400"></span> Non-Spoiler Active
                   </span>
                 </div>
 
-                <p class="text-[10px] text-slate-400 leading-relaxed font-sans">
+                <p class="text-[10px] text-slate-600 dark:text-slate-400 leading-relaxed font-sans">
                   Guiding you via algorithmic invariants without revealing the final integer solution.
                 </p>
 
                 <!-- Socratic Guidance Ladder -->
                 <div class="flex flex-col gap-2.5">
                   <div class="flex items-center justify-between text-[10px] font-mono font-bold">
-                    <span class="text-slate-400 uppercase">SOCRATIC GUIDANCE LADDER</span>
-                    <span class="text-cyan-400">Step 2 of 3 Active</span>
+                    <span class="text-slate-500 dark:text-slate-400 uppercase">SOCRATIC GUIDANCE LADDER</span>
+                    <span class="text-blue-600 dark:text-cyan-400">Step 2 of 3 Active</span>
                   </div>
-                  <div class="h-1 bg-[#15233e] rounded-full overflow-hidden">
+                  <div class="h-1 bg-slate-100 dark:bg-[#15233e] rounded-full overflow-hidden">
                     <div class="h-full bg-gradient-to-r from-purple-500 to-cyan-400 w-2/3"></div>
                   </div>
 
                   <!-- Step 1: Accordion (Collapsed) -->
-                  <div class="bg-[#0e1935] border border-[#18294e] rounded-xl p-3 flex items-center justify-between cursor-pointer">
-                    <span class="text-[11px] font-bold text-slate-300 flex items-center gap-2">
-                      <span class="h-4 w-4 rounded-full bg-emerald-500/20 text-emerald-400 text-[9px] flex items-center justify-center font-bold">1</span>
+                  <div class="bg-slate-50 border border-slate-200 dark:bg-[#0e1935] dark:border-[#18294e] rounded-xl p-3 flex items-center justify-between cursor-pointer">
+                    <span class="text-[11px] font-bold text-slate-700 dark:text-slate-300 flex items-center gap-2">
+                      <span class="h-4 w-4 rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-400 text-[9px] flex items-center justify-center font-bold">1</span>
                       The Core Invariant: Two-Node Mutual Routing Loop
                     </span>
-                    <i class="fa-solid fa-chevron-down text-slate-500 text-xs"></i>
+                    <i class="fa-solid fa-chevron-down text-slate-400 dark:text-slate-500 text-xs"></i>
                   </div>
 
                   <!-- Step 2: Accordion (In Focus with Cycle Transition Table) -->
-                  <div class="bg-[#121f3f] border border-purple-500/30 rounded-xl p-3.5 flex flex-col gap-2.5">
+                  <div class="bg-purple-50/50 border border-purple-200 dark:bg-[#121f3f] dark:border-purple-500/30 rounded-xl p-3.5 flex flex-col gap-2.5">
                     <div class="flex items-center justify-between">
-                      <span class="text-[11px] font-bold text-white flex items-center gap-2">
-                        <span class="h-4 w-4 rounded-full bg-purple-500 text-white text-[9px] flex items-center justify-center font-bold">2</span>
+                      <span class="text-[11px] font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                        <span class="h-4 w-4 rounded-full bg-purple-600 text-white text-[9px] flex items-center justify-center font-bold">2</span>
                         Discrete State Transitions (Cycle Evolution)
                       </span>
-                      <span class="px-2 py-0.5 rounded text-[8px] font-bold bg-purple-500/20 text-purple-300 uppercase">In Focus</span>
+                      <span class="px-2 py-0.5 rounded text-[8px] font-bold bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300 uppercase">In Focus</span>
                     </div>
 
-                    <p class="text-[10px] text-slate-300 leading-relaxed">
+                    <p class="text-[10px] text-slate-600 dark:text-slate-300 leading-relaxed">
                       Observe how the increment cascades synchronously across the linear topology with alternating updates:
                     </p>
 
@@ -713,48 +722,48 @@ export const MockTest = {
                     <div class="overflow-x-auto">
                       <table class="w-full text-center text-[10px] font-mono border-collapse">
                         <thead>
-                          <tr class="border-b border-[#21355e] text-slate-400 text-[9px]">
+                          <tr class="border-b border-purple-200 dark:border-[#21355e] text-slate-500 dark:text-slate-400 text-[9px]">
                             <th class="py-1">Cycle</th>
-                            <th class="py-1 text-cyan-400">D_A(X)</th>
-                            <th class="py-1 text-cyan-400">D_B(X)</th>
-                            <th class="py-1 text-cyan-400">D_C(X)</th>
+                            <th class="py-1 text-blue-600 dark:text-cyan-400">D_A(X)</th>
+                            <th class="py-1 text-blue-600 dark:text-cyan-400">D_B(X)</th>
+                            <th class="py-1 text-blue-600 dark:text-cyan-400">D_C(X)</th>
                           </tr>
                         </thead>
-                        <tbody class="divide-y divide-[#182848] text-slate-200">
-                          <tr><td class="py-1 text-slate-400">0 (Break)</td><td class="py-1 text-rose-400 font-bold">1 &rarr; 3</td><td class="py-1">2</td><td class="py-1">3</td></tr>
-                          <tr><td class="py-1 text-slate-400">1</td><td class="py-1">3</td><td class="py-1 text-cyan-400 font-bold">4</td><td class="py-1">3</td></tr>
-                          <tr><td class="py-1 text-slate-400">2</td><td class="py-1">3</td><td class="py-1">4</td><td class="py-1 text-cyan-400 font-bold">5</td></tr>
-                          <tr><td class="py-1 text-slate-400">3</td><td class="py-1 text-cyan-400 font-bold">5</td><td class="py-1">4</td><td class="py-1">5</td></tr>
-                          <tr class="text-[8px] text-slate-500 italic"><td colspan="4" class="py-1">&bull; &bull; &bull; Loop increments step-by-step (+2 every 2 rounds) &bull; &bull; &bull;</td></tr>
-                          <tr class="bg-[#0b1428] font-bold"><td class="py-1 text-purple-300">k (Target)</td><td class="py-1">15</td><td class="py-1">16 (&infin;)</td><td class="py-1 text-purple-400">16 (&infin;)</td></tr>
+                        <tbody class="divide-y divide-purple-100 dark:divide-[#182848] text-slate-800 dark:text-slate-200">
+                          <tr><td class="py-1 text-slate-500 dark:text-slate-400">0 (Break)</td><td class="py-1 text-rose-600 dark:text-rose-400 font-bold">1 &rarr; 3</td><td class="py-1">2</td><td class="py-1">3</td></tr>
+                          <tr><td class="py-1 text-slate-500 dark:text-slate-400">1</td><td class="py-1">3</td><td class="py-1 text-blue-600 dark:text-cyan-400 font-bold">4</td><td class="py-1">3</td></tr>
+                          <tr><td class="py-1 text-slate-500 dark:text-slate-400">2</td><td class="py-1">3</td><td class="py-1">4</td><td class="py-1 text-blue-600 dark:text-cyan-400 font-bold">5</td></tr>
+                          <tr><td class="py-1 text-slate-500 dark:text-slate-400">3</td><td class="py-1 text-blue-600 dark:text-cyan-400 font-bold">5</td><td class="py-1">4</td><td class="py-1">5</td></tr>
+                          <tr class="text-[8px] text-slate-400 dark:text-slate-500 italic"><td colspan="4" class="py-1">&bull; &bull; &bull; Loop increments step-by-step (+2 every 2 rounds) &bull; &bull; &bull;</td></tr>
+                          <tr class="bg-purple-100/60 dark:bg-[#0b1428] font-bold"><td class="py-1 text-purple-700 dark:text-purple-300">k (Target)</td><td class="py-1">15</td><td class="py-1">16 (&infin;)</td><td class="py-1 text-purple-700 dark:text-purple-400">16 (&infin;)</td></tr>
                         </tbody>
                       </table>
                     </div>
 
-                    <div class="bg-[#080d1a] border border-[#172648] rounded-lg p-2 font-mono text-[9px] text-cyan-300 flex items-center justify-between">
+                    <div class="bg-white border border-purple-200 dark:bg-[#080d1a] dark:border-[#172648] rounded-lg p-2 font-mono text-[9px] text-purple-700 dark:text-cyan-300 flex items-center justify-between">
                       <span>Recurrence:</span>
                       <span>D_C(X) @ cycle k = 3 + 2 &times; &lfloor;k/2&rfloor;</span>
                     </div>
                   </div>
 
                   <!-- Step 3: Locked Step -->
-                  <div class="bg-[#0e1935] border border-[#18294e] rounded-xl p-3 flex items-center justify-between">
+                  <div class="bg-slate-50 border border-slate-200 dark:bg-[#0e1935] dark:border-[#18294e] rounded-xl p-3 flex items-center justify-between">
                     <div>
-                      <span class="text-[11px] font-bold text-slate-400 flex items-center gap-2">
-                        <span class="h-4 w-4 rounded-full bg-slate-700 text-slate-300 text-[9px] flex items-center justify-center font-bold">3</span>
+                      <span class="text-[11px] font-bold text-slate-500 dark:text-slate-400 flex items-center gap-2">
+                        <span class="h-4 w-4 rounded-full bg-slate-200 text-slate-600 dark:bg-slate-700 dark:text-slate-300 text-[9px] flex items-center justify-center font-bold">3</span>
                         Final Equation &amp; Convergence Cycle
                       </span>
-                      <span class="text-[8px] text-slate-500 block pl-6">Reveals definitive calculation step</span>
+                      <span class="text-[8px] text-slate-400 dark:text-slate-500 block pl-6">Reveals definitive calculation step</span>
                     </div>
-                    <button id="btn-unlock-math" class="px-2.5 py-1 rounded bg-[#1e2a4a] hover:bg-[#283863] text-cyan-400 text-[9px] font-bold flex items-center gap-1 transition-all">
+                    <button id="btn-unlock-math" class="px-2.5 py-1 rounded bg-slate-200 hover:bg-slate-300 text-slate-800 dark:bg-[#1e2a4a] dark:hover:bg-[#283863] dark:text-cyan-400 text-[9px] font-bold flex items-center gap-1 transition-all">
                       <i class="fa-solid fa-lock text-[8px]"></i> Unlock Math
                     </button>
                   </div>
                 </div>
 
                 <!-- GATE Trap Alert Box -->
-                <div class="bg-rose-950/20 border border-rose-800/40 rounded-xl p-3 text-rose-300 text-[10px] leading-relaxed">
-                  <span class="font-bold flex items-center gap-1.5 text-rose-400 uppercase text-[9px] mb-1">
+                <div class="bg-rose-50 border border-rose-200 dark:bg-rose-950/20 dark:border-rose-800/40 rounded-xl p-3 text-rose-800 dark:text-rose-300 text-[10px] leading-relaxed">
+                  <span class="font-bold flex items-center gap-1.5 text-rose-600 dark:text-rose-400 uppercase text-[9px] mb-1">
                     <i class="fa-solid fa-triangle-exclamation"></i> GATE Trap Alert: Stop Conditions
                   </span>
                   Do not confuse the round router B reaches 16 with the round router C registers 16. In linear networks, Router C is 2 hops away from the fault origin. Updates propagate with an interleaving lag of exactly 1 exchange interval per hop!
@@ -762,15 +771,15 @@ export const MockTest = {
 
                 <!-- Prompt Suggestion Chips -->
                 <div class="flex flex-col gap-1.5 mt-1">
-                  <span class="text-[9px] font-mono text-slate-400 uppercase">ASK GEMINI CONCEPT TUTOR</span>
+                  <span class="text-[9px] font-mono text-slate-500 dark:text-slate-400 uppercase">ASK GEMINI CONCEPT TUTOR</span>
                   <div class="flex flex-col gap-1.5">
-                    <button class="tutor-chip text-left px-3 py-1.5 rounded-lg bg-[#0e1935] hover:bg-[#162752] border border-[#1e335f] text-cyan-300 text-[10px] font-mono transition-all">
+                    <button class="tutor-chip text-left px-3 py-1.5 rounded-lg bg-slate-50 hover:bg-slate-100 border border-slate-200 text-blue-700 dark:bg-[#0e1935] dark:hover:bg-[#162752] dark:border-[#1e335f] dark:text-cyan-300 text-[10px] font-mono transition-all">
                       &ldquo;Show Bellman-Ford Recurrence&rdquo;
                     </button>
-                    <button class="tutor-chip text-left px-3 py-1.5 rounded-lg bg-[#0e1935] hover:bg-[#162752] border border-[#1e335f] text-cyan-300 text-[10px] font-mono transition-all">
+                    <button class="tutor-chip text-left px-3 py-1.5 rounded-lg bg-slate-50 hover:bg-slate-100 border border-slate-200 text-blue-700 dark:bg-[#0e1935] dark:hover:bg-[#162752] dark:border-[#1e335f] dark:text-cyan-300 text-[10px] font-mono transition-all">
                       &ldquo;Why doesn't Split Horizon apply?&rdquo;
                     </button>
-                    <button class="tutor-chip text-left px-3 py-1.5 rounded-lg bg-[#0e1935] hover:bg-[#162752] border border-[#1e335f] text-cyan-300 text-[10px] font-mono transition-all">
+                    <button class="tutor-chip text-left px-3 py-1.5 rounded-lg bg-slate-50 hover:bg-slate-100 border border-slate-200 text-blue-700 dark:bg-[#0e1935] dark:hover:bg-[#162752] dark:border-[#1e335f] dark:text-cyan-300 text-[10px] font-mono transition-all">
                       &ldquo;Why 15 vs 16 cycles?&rdquo;
                     </button>
                   </div>
@@ -778,64 +787,63 @@ export const MockTest = {
 
                 <!-- Interactive Chat Input -->
                 <div class="relative mt-2">
-                  <input type="text" id="tutor-chat-input" placeholder="Ask a pedagogical doubt regarding Q.${q.number || 42}..." class="w-full bg-[#070c18] border border-[#182848] rounded-xl px-4 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 pr-16 font-sans">
+                  <input type="text" id="tutor-chat-input" placeholder="Ask a pedagogical doubt regarding Q.${q.number || 42}..." class="w-full bg-slate-50 border border-slate-300 dark:bg-[#070c18] dark:border-[#182848] rounded-xl px-4 py-2.5 text-xs text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-blue-500 dark:focus:border-cyan-400 pr-16 font-sans">
                   <div class="absolute right-2 top-2 flex items-center gap-1">
-                    <button class="p-1.5 text-slate-400 hover:text-white transition-colors" title="Voice Input">
+                    <button class="p-1.5 text-slate-400 hover:text-slate-600 dark:hover:text-white transition-colors" title="Voice Input">
                       <i class="fa-solid fa-microphone text-xs"></i>
                     </button>
-                    <button id="btn-send-tutor" class="p-1.5 bg-cyan-500 hover:bg-cyan-400 text-slate-950 rounded-lg text-xs font-bold transition-all">
+                    <button id="btn-send-tutor" class="p-1.5 bg-blue-600 hover:bg-blue-500 dark:bg-cyan-500 dark:hover:bg-cyan-400 text-white dark:text-slate-950 rounded-lg text-xs font-bold transition-all">
                       <i class="fa-solid fa-arrow-up"></i>
                     </button>
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between text-[9px] font-mono text-slate-500 border-t border-[#16233e] pt-2">
-                  <span class="flex items-center gap-1.5 text-emerald-400">
-                    <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span> Diagnostic Sync Active
+                <div class="flex items-center justify-between text-[9px] font-mono text-slate-500 border-t border-slate-200 dark:border-[#16233e] pt-2">
+                  <span class="flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400">
+                    <span class="h-1.5 w-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400"></span> Diagnostic Sync Active
                   </span>
                   <span>Tokens: 412 / 2048</span>
                 </div>
               </div>
             ` : ''}
 
-            <!-- 3. QUESTION PALETTE GRID (Image 1) -->
+            <!-- 3. QUESTION PALETTE GRID (Panel 2) -->
             ${(!this.isTutorOpen && this.isPaletteOpen) ? `
-              <div class="bg-[#0a1122] border border-[#15233e] rounded-2xl p-4 shadow-xl flex flex-col gap-4">
-                <div class="flex items-center justify-between border-b border-[#142038] pb-2.5">
-                  <span class="text-xs font-bold text-white uppercase tracking-wider font-display">Question Palette</span>
-                  <span class="text-[10px] font-mono font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded">65 Items</span>
+              <div class="bg-white border border-slate-200 dark:bg-[#0a1122] dark:border-[#15233e] rounded-2xl p-4 shadow-sm dark:shadow-xl flex flex-col gap-4">
+                <div class="flex items-center justify-between border-b border-slate-100 dark:border-[#142038] pb-2.5">
+                  <span class="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider font-display">Question Palette</span>
+                  <span class="text-[10px] font-mono font-bold text-blue-600 bg-blue-50 dark:text-cyan-400 dark:bg-cyan-500/10 px-2 py-0.5 rounded">65 Items</span>
                 </div>
 
-                <!-- Legend Tiles Matching Image 1 -->
+                <!-- Legend Tiles Matching Image 1 & 2 -->
                 <div class="grid grid-cols-2 gap-2 text-[9px] font-bold">
-                  <div class="flex items-center justify-between p-1.5 rounded-lg bg-[#07241b] border border-emerald-500/20 text-emerald-300">
+                  <div class="flex items-center justify-between p-1.5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-700 dark:bg-[#07241b] dark:border-emerald-500/20 dark:text-emerald-300">
                     <span class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-emerald-500"></span> Answered</span>
                     <span class="font-mono font-extrabold">42</span>
                   </div>
-                  <div class="flex items-center justify-between p-1.5 rounded-lg bg-[#310c14] border border-rose-500/20 text-rose-300">
+                  <div class="flex items-center justify-between p-1.5 rounded-lg bg-rose-50 border border-rose-200 text-rose-700 dark:bg-[#310c14] dark:border-rose-500/20 dark:text-rose-300">
                     <span class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-rose-500"></span> Not Ans.</span>
                     <span class="font-mono font-extrabold">17</span>
                   </div>
-                  <div class="flex items-center justify-between p-1.5 rounded-lg bg-[#24133b] border border-purple-500/20 text-purple-300">
+                  <div class="flex items-center justify-between p-1.5 rounded-lg bg-purple-50 border border-purple-200 text-purple-700 dark:bg-[#24133b] dark:border-purple-500/20 dark:text-purple-300">
                     <span class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-purple-500"></span> Marked</span>
                     <span class="font-mono font-extrabold">06</span>
                   </div>
-                  <div class="flex items-center justify-between p-1.5 rounded-lg bg-[#0e1628] border border-slate-700 text-slate-400">
-                    <span class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-slate-500"></span> Unvisited</span>
+                  <div class="flex items-center justify-between p-1.5 rounded-lg bg-slate-100 border border-slate-200 text-slate-600 dark:bg-[#0e1628] dark:border-slate-700 dark:text-slate-400">
+                    <span class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-slate-400 dark:bg-slate-500"></span> Unvisited</span>
                     <span class="font-mono font-extrabold">00</span>
                   </div>
                 </div>
 
-                <!-- Question Tiles Grid (1 to 50/65) -->
+                <!-- Question Tiles Grid (1 to 65) -->
                 <div class="grid grid-cols-5 gap-1.5 max-h-[300px] overflow-y-auto cbt-scrollbar pr-1">
                   ${Array.from({ length: 65 }, (_, i) => {
                     const qnum = i + 1;
-                    const isCurrent = (this.currentIdx + 1) === qnum;
                     
-                    // Style status matching Image 1
-                    let tileClass = "bg-[#0b162c] text-slate-300 border border-[#192b4c]";
+                    // Style status matching Image 1 & 2
+                    let tileClass = "bg-slate-50 text-slate-700 border border-slate-200 dark:bg-[#0b162c] dark:text-slate-300 dark:border-[#192b4c]";
                     if (qnum === 24) {
-                      tileClass = "bg-cyan-500 text-slate-950 font-extrabold border-2 border-white ring-2 ring-cyan-500";
+                      tileClass = "bg-blue-600 text-white dark:bg-cyan-500 dark:text-slate-950 font-extrabold border-2 border-white ring-2 ring-blue-500 dark:ring-cyan-500";
                     } else if (qnum === 42) {
                       tileClass = "bg-emerald-600 text-white font-bold border border-emerald-400";
                     } else if ([13, 17, 19, 23, 26, 28, 29, 30, 31].includes(qnum)) {
@@ -845,7 +853,7 @@ export const MockTest = {
                     } else if (qnum <= 35) {
                       tileClass = "bg-emerald-600 text-white font-bold border border-emerald-400";
                     } else {
-                      tileClass = "bg-[#0e1628] text-slate-400 border border-slate-800";
+                      tileClass = "bg-slate-100 text-slate-400 border border-slate-200 dark:bg-[#0e1628] dark:text-slate-500 dark:border-slate-800";
                     }
 
                     return `
@@ -856,18 +864,18 @@ export const MockTest = {
                   }).join('')}
                 </div>
 
-                <!-- Bottom AI Hint Quick Callout (Matching Image 1) -->
-                <div class="bg-[#09152b] border border-cyan-500/30 rounded-xl p-3 flex items-center justify-between">
+                <!-- Bottom AI Hint Quick Callout (Matching Image 1 & 2) -->
+                <div class="bg-blue-50 border border-blue-200 dark:bg-[#09152b] dark:border-cyan-500/30 rounded-xl p-3 flex items-center justify-between">
                   <div class="flex items-center gap-2">
-                    <div class="h-6 w-6 rounded bg-purple-500/20 text-purple-400 flex items-center justify-center text-xs">
+                    <div class="h-6 w-6 rounded bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-400 flex items-center justify-center text-xs">
                       <i class="fa-solid fa-sparkles"></i>
                     </div>
                     <div>
-                      <span class="block text-[10px] font-bold text-white">Gemini AI Tutor</span>
-                      <span class="block text-[8px] text-cyan-300 font-mono">Demand Paging Hint Ready</span>
+                      <span class="block text-[10px] font-bold text-slate-900 dark:text-white">Gemini AI Tutor</span>
+                      <span class="block text-[8px] text-blue-600 dark:text-cyan-300 font-mono">Demand Paging Hint Ready</span>
                     </div>
                   </div>
-                  <button id="btn-show-hint-inline" class="px-3 py-1 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-[10px] font-extrabold transition-all">
+                  <button id="btn-show-hint-inline" class="px-3 py-1 rounded-lg bg-blue-600 hover:bg-blue-500 text-white dark:bg-cyan-500 dark:hover:bg-cyan-400 dark:text-slate-950 text-[10px] font-extrabold transition-all">
                     Show Hint
                   </button>
                 </div>
@@ -883,7 +891,7 @@ export const MockTest = {
   },
 
   // ─────────────────────────────────────────────────────────────
-  // VIEW 3: POST-EXAM DIAGNOSTIC TERMINAL (Matching Image 3)
+  // VIEW 3: POST-EXAM DIAGNOSTIC TERMINAL (Matching Panel 3)
   // ─────────────────────────────────────────────────────────────
   renderDiagnosticTerminal() {
     const d = this.diagnosticData || CBT_BENCHMARK_MOCK04.diagnosticStats;
@@ -892,134 +900,134 @@ export const MockTest = {
       <div class="flex flex-col gap-6 max-w-[1700px] mx-auto pb-8">
         
         <!-- Terminal Header Row -->
-        <div class="flex items-start justify-between gap-4 flex-wrap border-b border-[#142038] pb-4">
+        <div class="flex items-start justify-between gap-4 flex-wrap border-b border-slate-200 dark:border-[#142038] pb-4">
           <div class="flex flex-col gap-1">
             <div class="flex items-center gap-2 text-[10px] font-mono">
-              <span class="flex items-center gap-1.5 text-emerald-400 font-bold">
-                <span class="h-2 w-2 rounded-full bg-emerald-400"></span> EVALUATION COMPLETE
+              <span class="flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400 font-bold">
+                <span class="h-2 w-2 rounded-full bg-emerald-500 dark:bg-emerald-400"></span> EVALUATION COMPLETE
               </span>
-              <span class="text-slate-500">&bull;</span>
-              <span class="text-slate-400">RUN_ID: <span class="text-cyan-400 font-bold">${CBT_BENCHMARK_MOCK04.runId}</span></span>
-              <span class="text-slate-500">&bull;</span>
-              <span class="text-purple-400 font-bold">${CBT_BENCHMARK_MOCK04.title}</span>
+              <span class="text-slate-400 dark:text-slate-500">&bull;</span>
+              <span class="text-slate-600 dark:text-slate-400">RUN_ID: <span class="text-blue-600 dark:text-cyan-400 font-bold">${CBT_BENCHMARK_MOCK04.runId}</span></span>
+              <span class="text-slate-400 dark:text-slate-500">&bull;</span>
+              <span class="text-purple-600 dark:text-purple-400 font-bold">${CBT_BENCHMARK_MOCK04.title}</span>
             </div>
-            <h2 class="font-display font-extrabold text-2xl text-white tracking-tight mt-0.5">
+            <h2 class="font-display font-extrabold text-2xl text-slate-900 dark:text-white tracking-tight mt-0.5">
               Post-Exam Diagnostic Terminal
             </h2>
-            <p class="text-xs text-slate-400 font-mono">
+            <p class="text-xs text-slate-500 dark:text-slate-400 font-mono">
               Session 1 &bull; AI Core v4.2 Diagnostic Telemetry
             </p>
           </div>
 
           <!-- Top Action Buttons -->
           <div class="flex items-center gap-2.5">
-            <button id="btn-diag-revision" class="px-3.5 py-2 rounded-xl bg-[#0b1426] hover:bg-[#14223d] border border-[#192b4c] text-slate-300 text-xs font-bold transition-all flex items-center gap-2">
-              <i class="fa-solid fa-folder-plus text-cyan-400"></i> Add to Revision Deck
+            <button id="btn-diag-revision" class="px-3.5 py-2 rounded-xl bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 dark:bg-[#0b1426] dark:hover:bg-[#14223d] dark:border-[#192b4c] dark:text-slate-300 text-xs font-bold transition-all flex items-center gap-2 shadow-sm">
+              <i class="fa-solid fa-folder-plus text-blue-600 dark:text-cyan-400"></i> Add to Revision Deck
             </button>
-            <button id="btn-diag-pdf" class="px-3.5 py-2 rounded-xl bg-[#0b1426] hover:bg-[#14223d] border border-[#192b4c] text-slate-300 text-xs font-bold transition-all flex items-center gap-2">
-              <i class="fa-solid fa-file-arrow-down text-cyan-400"></i> Diagnostic PDF
+            <button id="btn-diag-pdf" class="px-3.5 py-2 rounded-xl bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 dark:bg-[#0b1426] dark:hover:bg-[#14223d] dark:border-[#192b4c] dark:text-slate-300 text-xs font-bold transition-all flex items-center gap-2 shadow-sm">
+              <i class="fa-solid fa-file-arrow-down text-blue-600 dark:text-cyan-400"></i> Diagnostic PDF
             </button>
-            <button id="btn-diag-retest" class="px-4 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-xs font-extrabold shadow-md shadow-cyan-500/20 transition-all active:scale-95 flex items-center gap-1.5">
+            <button id="btn-diag-retest" class="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white dark:bg-cyan-500 dark:hover:bg-cyan-400 dark:text-slate-950 text-xs font-extrabold shadow-md transition-all active:scale-95 flex items-center gap-1.5">
               <i class="fa-solid fa-rotate-left"></i> Retest Incorrect (11)
             </button>
           </div>
         </div>
 
-        <!-- 5 Top Metric Cards in a Row (Matching Image 3) -->
+        <!-- 5 Top Metric Cards in a Row (Matching Panel 3) -->
         <div class="grid grid-cols-2 md:grid-cols-5 gap-3.5">
           <!-- Card 1: Raw Score -->
-          <div class="bg-[#0a1122] border border-[#15233e] rounded-2xl p-4 flex flex-col justify-between shadow-xl">
-            <div class="flex items-center justify-between text-[10px] font-mono text-slate-400 uppercase">
+          <div class="bg-white border border-slate-200 dark:bg-[#0a1122] dark:border-[#15233e] rounded-2xl p-4 flex flex-col justify-between shadow-sm dark:shadow-xl">
+            <div class="flex items-center justify-between text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase">
               <span>TOTAL RAW SCORE</span>
-              <i class="fa-solid fa-chart-simple text-cyan-400"></i>
+              <i class="fa-solid fa-chart-simple text-blue-600 dark:text-cyan-400"></i>
             </div>
             <div class="my-2">
-              <span class="font-mono text-3xl font-extrabold text-cyan-400 leading-none">${d.totalRawScore}</span>
+              <span class="font-mono text-3xl font-extrabold text-blue-600 dark:text-cyan-400 leading-none">${d.totalRawScore}</span>
               <span class="text-xs font-mono text-slate-400 font-bold"> / ${d.maxScore}</span>
             </div>
-            <div class="flex items-center justify-between text-[10px] font-mono border-t border-[#142038] pt-2">
-              <span class="text-slate-400">Cutoff: ${d.cutoff}</span>
-              <span class="text-emerald-400 font-bold bg-emerald-500/10 px-1.5 py-0.5 rounded">${d.cutoffBuff}</span>
+            <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-100 dark:border-[#142038] pt-2">
+              <span class="text-slate-500 dark:text-slate-400">Cutoff: ${d.cutoff}</span>
+              <span class="text-emerald-700 dark:text-emerald-400 font-bold bg-emerald-50 dark:bg-emerald-500/10 px-1.5 py-0.5 rounded">${d.cutoffBuff}</span>
             </div>
           </div>
 
           <!-- Card 2: Projected AIR Rank -->
-          <div class="bg-[#0a1122] border border-[#15233e] rounded-2xl p-4 flex flex-col justify-between shadow-xl">
-            <div class="flex items-center justify-between text-[10px] font-mono text-slate-400 uppercase">
+          <div class="bg-white border border-slate-200 dark:bg-[#0a1122] dark:border-[#15233e] rounded-2xl p-4 flex flex-col justify-between shadow-sm dark:shadow-xl">
+            <div class="flex items-center justify-between text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase">
               <span>PROJECTED ALL INDIA RANK</span>
-              <i class="fa-solid fa-trophy text-emerald-400"></i>
+              <i class="fa-solid fa-trophy text-emerald-600 dark:text-emerald-400"></i>
             </div>
             <div class="my-2">
-              <span class="font-mono text-3xl font-extrabold text-emerald-400 leading-none">${d.projectedAir}</span>
+              <span class="font-mono text-3xl font-extrabold text-emerald-600 dark:text-emerald-400 leading-none">${d.projectedAir}</span>
               <span class="text-xs font-mono text-slate-400 font-bold"> / ${d.totalAspirants}</span>
             </div>
-            <div class="flex items-center justify-between text-[10px] font-mono border-t border-[#142038] pt-2">
-              <span class="text-slate-400">${d.aspirantBracket}</span>
-              <span class="text-cyan-400 font-bold bg-cyan-500/10 px-1.5 py-0.5 rounded">${d.airPercentile}</span>
+            <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-100 dark:border-[#142038] pt-2">
+              <span class="text-slate-500 dark:text-slate-400">${d.aspirantBracket}</span>
+              <span class="text-blue-700 dark:text-cyan-400 font-bold bg-blue-50 dark:bg-cyan-500/10 px-1.5 py-0.5 rounded">${d.airPercentile}</span>
             </div>
           </div>
 
           <!-- Card 3: Normalized GATE Score -->
-          <div class="bg-[#0a1122] border border-[#15233e] rounded-2xl p-4 flex flex-col justify-between shadow-xl">
-            <div class="flex items-center justify-between text-[10px] font-mono text-slate-400 uppercase">
+          <div class="bg-white border border-slate-200 dark:bg-[#0a1122] dark:border-[#15233e] rounded-2xl p-4 flex flex-col justify-between shadow-sm dark:shadow-xl">
+            <div class="flex items-center justify-between text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase">
               <span>NORMALIZED GATE SCORE</span>
-              <i class="fa-solid fa-circle-check text-purple-400"></i>
+              <i class="fa-solid fa-circle-check text-purple-600 dark:text-purple-400"></i>
             </div>
             <div class="my-2">
-              <span class="font-mono text-3xl font-extrabold text-white leading-none">${d.normalizedGateScore}</span>
+              <span class="font-mono text-3xl font-extrabold text-slate-900 dark:text-white leading-none">${d.normalizedGateScore}</span>
               <span class="text-xs font-mono text-slate-400 font-bold"> / ${d.gateScoreMax}</span>
             </div>
-            <div class="flex items-center justify-between text-[10px] font-mono border-t border-[#142038] pt-2">
-              <span class="text-emerald-400 font-bold bg-emerald-500/10 px-1.5 py-0.5 rounded">${d.collegeCall}</span>
+            <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-100 dark:border-[#142038] pt-2">
+              <span class="text-emerald-700 dark:text-emerald-400 font-bold bg-emerald-50 dark:bg-emerald-500/10 px-1.5 py-0.5 rounded">${d.collegeCall}</span>
             </div>
           </div>
 
           <!-- Card 4: Overall Accuracy -->
-          <div class="bg-[#0a1122] border border-[#15233e] rounded-2xl p-4 flex flex-col justify-between shadow-xl">
-            <div class="flex items-center justify-between text-[10px] font-mono text-slate-400 uppercase">
+          <div class="bg-white border border-slate-200 dark:bg-[#0a1122] dark:border-[#15233e] rounded-2xl p-4 flex flex-col justify-between shadow-sm dark:shadow-xl">
+            <div class="flex items-center justify-between text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase">
               <span>OVERALL ACCURACY</span>
-              <i class="fa-solid fa-bullseye text-cyan-400"></i>
+              <i class="fa-solid fa-bullseye text-blue-600 dark:text-cyan-400"></i>
             </div>
             <div class="my-2 flex items-baseline gap-2">
-              <span class="font-mono text-3xl font-extrabold text-cyan-400 leading-none">${d.overallAccuracy}%</span>
-              <span class="text-xs font-mono text-rose-400 font-bold">${d.negativeMarks} Neg</span>
+              <span class="font-mono text-3xl font-extrabold text-blue-600 dark:text-cyan-400 leading-none">${d.overallAccuracy}%</span>
+              <span class="text-xs font-mono text-rose-600 dark:text-rose-400 font-bold">${d.negativeMarks} Neg</span>
             </div>
-            <div class="flex items-center justify-between text-[10px] font-mono border-t border-[#142038] pt-2">
-              <span class="text-slate-400">${d.validQuestions} Valid Questions</span>
-              <span class="text-slate-400">${d.skippedQuestions} Skipped</span>
+            <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-100 dark:border-[#142038] pt-2">
+              <span class="text-slate-500 dark:text-slate-400">${d.validQuestions} Valid Questions</span>
+              <span class="text-slate-500 dark:text-slate-400">${d.skippedQuestions} Skipped</span>
             </div>
           </div>
 
           <!-- Card 5: Time Velocity -->
-          <div class="bg-[#0a1122] border border-[#15233e] rounded-2xl p-4 flex flex-col justify-between shadow-xl col-span-2 md:col-span-1">
-            <div class="flex items-center justify-between text-[10px] font-mono text-slate-400 uppercase">
+          <div class="bg-white border border-slate-200 dark:bg-[#0a1122] dark:border-[#15233e] rounded-2xl p-4 flex flex-col justify-between shadow-sm dark:shadow-xl col-span-2 md:col-span-1">
+            <div class="flex items-center justify-between text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase">
               <span>TIME VELOCITY</span>
-              <i class="fa-regular fa-clock text-emerald-400"></i>
+              <i class="fa-regular fa-clock text-emerald-600 dark:text-emerald-400"></i>
             </div>
             <div class="my-2">
-              <span class="font-mono text-3xl font-extrabold text-white leading-none">${d.timeVelocity.split('/')[0].trim()}</span>
+              <span class="font-mono text-3xl font-extrabold text-slate-900 dark:text-white leading-none">${d.timeVelocity.split('/')[0].trim()}</span>
               <span class="text-xs font-mono text-slate-400 font-bold"> / ${d.timeVelocity.split('/')[1]?.trim() || '180m'}</span>
             </div>
-            <div class="flex items-center justify-between text-[10px] font-mono border-t border-[#142038] pt-2">
-              <span class="text-slate-400">Pacing Velocity</span>
-              <span class="text-cyan-400 font-bold">${d.pacingVelocity}</span>
+            <div class="flex items-center justify-between text-[10px] font-mono border-t border-slate-100 dark:border-[#142038] pt-2">
+              <span class="text-slate-500 dark:text-slate-400">Pacing Velocity</span>
+              <span class="text-blue-600 dark:text-cyan-400 font-bold">${d.pacingVelocity}</span>
             </div>
           </div>
         </div>
 
-        <!-- 3 Diagnostic Visual Panels (Matching Image 3) -->
+        <!-- 3 Diagnostic Visual Panels (Matching Panel 3) -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
           
           <!-- Panel 1: Syllabus Competency Vector (Radar Chart) -->
-          <div class="bg-[#0a1122] border border-[#15233e] rounded-2xl p-5 shadow-xl flex flex-col justify-between">
-            <div class="flex items-center justify-between border-b border-[#142038] pb-3">
+          <div class="bg-white border border-slate-200 dark:bg-[#0a1122] dark:border-[#15233e] rounded-2xl p-5 shadow-sm dark:shadow-xl flex flex-col justify-between">
+            <div class="flex items-center justify-between border-b border-slate-100 dark:border-[#142038] pb-3">
               <div>
-                <h4 class="font-display font-extrabold text-xs text-white uppercase tracking-wider">
+                <h4 class="font-display font-extrabold text-xs text-slate-900 dark:text-white uppercase tracking-wider">
                   Syllabus Competency Vector
                 </h4>
-                <p class="text-[9px] text-slate-400 mt-0.5">Relative performance vs Top 100 AIR Benchmark</p>
+                <p class="text-[9px] text-slate-500 dark:text-slate-400 mt-0.5">Relative performance vs Top 100 AIR Benchmark</p>
               </div>
-              <span class="px-2 py-0.5 rounded text-[8px] font-mono font-bold bg-[#142038] text-cyan-400">RADAR_01</span>
+              <span class="px-2 py-0.5 rounded text-[8px] font-mono font-bold bg-slate-100 dark:bg-[#142038] text-blue-600 dark:text-cyan-400">RADAR_01</span>
             </div>
 
             <!-- Radar Canvas -->
@@ -1027,26 +1035,26 @@ export const MockTest = {
               <canvas id="diagRadarChart"></canvas>
             </div>
 
-            <div class="flex items-center justify-center gap-4 text-[10px] font-mono border-t border-[#142038] pt-3">
-              <span class="flex items-center gap-1.5 text-cyan-400">
-                <span class="h-2 w-2 rounded-full bg-cyan-400"></span> Candidate Accuracy
+            <div class="flex items-center justify-center gap-4 text-[10px] font-mono border-t border-slate-100 dark:border-[#142038] pt-3">
+              <span class="flex items-center gap-1.5 text-blue-600 dark:text-cyan-400">
+                <span class="h-2 w-2 rounded-full bg-blue-600 dark:bg-cyan-400"></span> Candidate Accuracy
               </span>
-              <span class="flex items-center gap-1.5 text-purple-400">
-                <span class="h-2 w-2 rounded-full bg-purple-400"></span> Top 100 Benchmark
+              <span class="flex items-center gap-1.5 text-purple-600 dark:text-purple-400">
+                <span class="h-2 w-2 rounded-full bg-purple-600 dark:bg-purple-400"></span> Top 100 Benchmark
               </span>
             </div>
           </div>
 
           <!-- Panel 2: Pacing & Weightage Matrix (Scatter Plot) -->
-          <div class="bg-[#0a1122] border border-[#15233e] rounded-2xl p-5 shadow-xl flex flex-col justify-between">
-            <div class="flex items-center justify-between border-b border-[#142038] pb-3">
+          <div class="bg-white border border-slate-200 dark:bg-[#0a1122] dark:border-[#15233e] rounded-2xl p-5 shadow-sm dark:shadow-xl flex flex-col justify-between">
+            <div class="flex items-center justify-between border-b border-slate-100 dark:border-[#142038] pb-3">
               <div>
-                <h4 class="font-display font-extrabold text-xs text-white uppercase tracking-wider">
+                <h4 class="font-display font-extrabold text-xs text-slate-900 dark:text-white uppercase tracking-wider">
                   Pacing &amp; Weightage Matrix
                 </h4>
-                <p class="text-[9px] text-slate-400 mt-0.5">Question duration vs Mark Yield (Traps Highlighted)</p>
+                <p class="text-[9px] text-slate-500 dark:text-slate-400 mt-0.5">Question duration vs Mark Yield (Traps Highlighted)</p>
               </div>
-              <span class="px-2 py-0.5 rounded text-[8px] font-mono font-bold bg-[#142038] text-cyan-400">SCATTER_02</span>
+              <span class="px-2 py-0.5 rounded text-[8px] font-mono font-bold bg-slate-100 dark:bg-[#142038] text-blue-600 dark:text-cyan-400">SCATTER_02</span>
             </div>
 
             <!-- Scatter Canvas -->
@@ -1054,127 +1062,127 @@ export const MockTest = {
               <canvas id="diagScatterChart"></canvas>
             </div>
 
-            <div class="flex items-center justify-center gap-4 text-[10px] font-mono border-t border-[#142038] pt-3">
-              <span class="flex items-center gap-1.5 text-rose-400">
+            <div class="flex items-center justify-center gap-4 text-[10px] font-mono border-t border-slate-100 dark:border-[#142038] pt-3">
+              <span class="flex items-center gap-1.5 text-rose-600 dark:text-rose-400">
                 <span class="h-2 w-2 rounded-full bg-rose-500"></span> Critical Traps (&gt;4m Incorrect)
               </span>
-              <span class="flex items-center gap-1.5 text-emerald-400">
-                <span class="h-2 w-2 rounded-full bg-emerald-400"></span> High-Speed Wins
+              <span class="flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400">
+                <span class="h-2 w-2 rounded-full bg-emerald-500 dark:bg-emerald-400"></span> High-Speed Wins
               </span>
             </div>
           </div>
 
           <!-- Panel 3: Question States (Donut Chart) -->
-          <div class="bg-[#0a1122] border border-[#15233e] rounded-2xl p-5 shadow-xl flex flex-col justify-between">
-            <div class="flex items-center justify-between border-b border-[#142038] pb-3">
+          <div class="bg-white border border-slate-200 dark:bg-[#0a1122] dark:border-[#15233e] rounded-2xl p-5 shadow-sm dark:shadow-xl flex flex-col justify-between">
+            <div class="flex items-center justify-between border-b border-slate-100 dark:border-[#142038] pb-3">
               <div>
-                <h4 class="font-display font-extrabold text-xs text-white uppercase tracking-wider">
+                <h4 class="font-display font-extrabold text-xs text-slate-900 dark:text-white uppercase tracking-wider">
                   Question States
                 </h4>
-                <p class="text-[9px] text-slate-400 mt-0.5">Total 65 Questions Evaluated</p>
+                <p class="text-[9px] text-slate-500 dark:text-slate-400 mt-0.5">Total 65 Questions Evaluated</p>
               </div>
-              <span class="px-2 py-0.5 rounded text-[8px] font-mono font-bold bg-[#142038] text-cyan-400">RATIO_03</span>
+              <span class="px-2 py-0.5 rounded text-[8px] font-mono font-bold bg-slate-100 dark:bg-[#142038] text-blue-600 dark:text-cyan-400">RATIO_03</span>
             </div>
 
             <!-- Donut Canvas with Center Text -->
             <div class="relative h-60 w-full flex items-center justify-center my-2">
               <canvas id="diagDonutChart"></canvas>
               <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-                <span class="font-mono text-2xl font-extrabold text-white">65</span>
-                <span class="text-[9px] font-mono font-bold text-slate-400 uppercase tracking-wider">EVALUATED</span>
+                <span class="font-mono text-2xl font-extrabold text-slate-900 dark:text-white">65</span>
+                <span class="text-[9px] font-mono font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">EVALUATED</span>
               </div>
             </div>
 
             <!-- Donut Legend -->
-            <div class="flex flex-col gap-1.5 text-[10px] font-mono border-t border-[#142038] pt-3">
+            <div class="flex flex-col gap-1.5 text-[10px] font-mono border-t border-slate-100 dark:border-[#142038] pt-3">
               <div class="flex items-center justify-between">
-                <span class="flex items-center gap-1.5 text-emerald-400">
-                  <span class="h-2 w-2 rounded-full bg-emerald-400"></span> Correct Valid
+                <span class="flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400">
+                  <span class="h-2 w-2 rounded-full bg-emerald-500"></span> Correct Valid
                 </span>
-                <span class="text-slate-300 font-bold">47 (72.3%)</span>
+                <span class="text-slate-700 dark:text-slate-300 font-bold">47 (72.3%)</span>
               </div>
               <div class="flex items-center justify-between">
-                <span class="flex items-center gap-1.5 text-rose-400">
+                <span class="flex items-center gap-1.5 text-rose-600 dark:text-rose-400">
                   <span class="h-2 w-2 rounded-full bg-rose-500"></span> Incorrect Error
                 </span>
-                <span class="text-slate-300 font-bold">11 (16.9%)</span>
+                <span class="text-slate-700 dark:text-slate-300 font-bold">11 (16.9%)</span>
               </div>
               <div class="flex items-center justify-between">
-                <span class="flex items-center gap-1.5 text-slate-400">
-                  <span class="h-2 w-2 rounded-full bg-slate-500"></span> Skipped / Zero
+                <span class="flex items-center gap-1.5 text-slate-500 dark:text-slate-400">
+                  <span class="h-2 w-2 rounded-full bg-slate-400 dark:bg-slate-500"></span> Skipped / Zero
                 </span>
-                <span class="text-slate-400 font-bold">7 (10.8%)</span>
+                <span class="text-slate-500 dark:text-slate-400 font-bold">7 (10.8%)</span>
               </div>
             </div>
           </div>
 
         </div>
 
-        <!-- Cognitive Root Cause Mistake Notebook (Matching Image 3) -->
-        <div class="bg-[#0a1122] border border-[#15233e] rounded-2xl p-6 shadow-xl flex flex-col gap-5">
-          <div class="flex items-center justify-between gap-4 flex-wrap border-b border-[#142038] pb-4">
+        <!-- Cognitive Root Cause Mistake Notebook (Matching Panel 3) -->
+        <div class="bg-white border border-slate-200 dark:bg-[#0a1122] dark:border-[#15233e] rounded-2xl p-6 shadow-sm dark:shadow-xl flex flex-col gap-5">
+          <div class="flex items-center justify-between gap-4 flex-wrap border-b border-slate-100 dark:border-[#142038] pb-4">
             <div class="flex items-center gap-3">
-              <div class="h-8 w-8 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-sm">
+              <div class="h-8 w-8 rounded-xl bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-400 flex items-center justify-center text-sm">
                 <i class="fa-solid fa-brain"></i>
               </div>
               <div>
-                <h4 class="font-display font-extrabold text-sm text-white">
+                <h4 class="font-display font-extrabold text-sm text-slate-900 dark:text-white">
                   Cognitive Root Cause Mistake Notebook
                 </h4>
-                <p class="text-[10px] text-slate-400">Automated classification of candidate missteps by AI Diagnostics</p>
+                <p class="text-[10px] text-slate-500 dark:text-slate-400">Automated classification of candidate missteps by AI Diagnostics</p>
               </div>
             </div>
 
             <!-- Filter Tabs -->
-            <div class="flex items-center gap-1.5 bg-[#080d1a] border border-[#162544] p-1 rounded-xl">
-              <button class="diag-filter-btn px-3 py-1 rounded-lg text-xs font-bold transition-all ${this.diagnosticFilter === 'all' ? 'bg-[#152340] text-cyan-300 border border-cyan-500/30' : 'text-slate-400 hover:text-white'}" data-filter="all">
+            <div class="flex items-center gap-1.5 bg-slate-100 border border-slate-200 dark:bg-[#080d1a] dark:border-[#162544] p-1 rounded-xl">
+              <button class="diag-filter-btn px-3 py-1 rounded-lg text-xs font-bold transition-all ${this.diagnosticFilter === 'all' ? 'bg-white text-blue-700 shadow-sm border border-slate-200 dark:bg-[#152340] dark:text-cyan-300 dark:border-cyan-500/30' : 'text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white'}" data-filter="all">
                 All Mistakes (11)
               </button>
-              <button class="diag-filter-btn px-3 py-1 rounded-lg text-xs font-bold transition-all ${this.diagnosticFilter === 'conceptual' ? 'bg-[#152340] text-cyan-300 border border-cyan-500/30' : 'text-slate-400 hover:text-white'}" data-filter="conceptual">
+              <button class="diag-filter-btn px-3 py-1 rounded-lg text-xs font-bold transition-all ${this.diagnosticFilter === 'conceptual' ? 'bg-white text-blue-700 shadow-sm border border-slate-200 dark:bg-[#152340] dark:text-cyan-300 dark:border-cyan-500/30' : 'text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white'}" data-filter="conceptual">
                 Conceptual Gap (4)
               </button>
-              <button class="diag-filter-btn px-3 py-1 rounded-lg text-xs font-bold transition-all ${this.diagnosticFilter === 'calculation' ? 'bg-[#152340] text-cyan-300 border border-cyan-500/30' : 'text-slate-400 hover:text-white'}" data-filter="calculation">
+              <button class="diag-filter-btn px-3 py-1 rounded-lg text-xs font-bold transition-all ${this.diagnosticFilter === 'calculation' ? 'bg-white text-blue-700 shadow-sm border border-slate-200 dark:bg-[#152340] dark:text-cyan-300 dark:border-cyan-500/30' : 'text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white'}" data-filter="calculation">
                 Calculation Error (3)
               </button>
-              <button class="diag-filter-btn px-3 py-1 rounded-lg text-xs font-bold transition-all ${this.diagnosticFilter === 'misread' ? 'bg-[#152340] text-cyan-300 border border-cyan-500/30' : 'text-slate-400 hover:text-white'}" data-filter="misread">
+              <button class="diag-filter-btn px-3 py-1 rounded-lg text-xs font-bold transition-all ${this.diagnosticFilter === 'misread' ? 'bg-white text-blue-700 shadow-sm border border-slate-200 dark:bg-[#152340] dark:text-cyan-300 dark:border-cyan-500/30' : 'text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white'}" data-filter="misread">
                 Misread Constraint (4)
               </button>
             </div>
           </div>
 
-          <!-- Mistake Cards List Matching Image 3 -->
+          <!-- Mistake Cards List Matching Panel 3 -->
           <div class="flex flex-col gap-3">
             ${CBT_BENCHMARK_MOCK04.mistakeNotebook.map(m => `
-              <div class="bg-[#0c1426] border border-[#162544] hover:border-slate-600 rounded-xl p-4 transition-all flex flex-col gap-2.5">
+              <div class="bg-slate-50 border border-slate-200 hover:border-slate-400 dark:bg-[#0c1426] dark:border-[#162544] dark:hover:border-slate-600 rounded-xl p-4 transition-all flex flex-col gap-2.5 shadow-sm">
                 <div class="flex items-center justify-between gap-3 flex-wrap">
                   <div class="flex items-center gap-2.5 flex-wrap">
                     <span class="h-6 w-9 rounded bg-rose-600 text-white font-mono font-extrabold text-xs flex items-center justify-center">
                       ${m.qid}
                     </span>
-                    <span class="text-xs font-bold text-white">${m.subject} &bull; ${m.topic}</span>
+                    <span class="text-xs font-bold text-slate-900 dark:text-white">${m.subject} &bull; ${m.topic}</span>
                     <span class="px-2 py-0.5 rounded text-[9px] font-mono font-bold uppercase ${
-                      m.categoryColor === 'purple' ? 'bg-purple-500/20 text-purple-300 border border-purple-500/40' :
-                      m.categoryColor === 'cyan' ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40' :
-                      m.categoryColor === 'emerald' ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' :
-                      'bg-amber-500/20 text-amber-300 border border-amber-500/40'
+                      m.categoryColor === 'purple' ? 'bg-purple-100 text-purple-700 border border-purple-200 dark:bg-purple-500/20 dark:text-purple-300 dark:border-purple-500/40' :
+                      m.categoryColor === 'cyan' ? 'bg-cyan-100 text-cyan-800 border border-cyan-200 dark:bg-cyan-500/20 dark:text-cyan-300 dark:border-cyan-500/40' :
+                      m.categoryColor === 'emerald' ? 'bg-emerald-100 text-emerald-800 border border-emerald-200 dark:bg-emerald-500/20 dark:text-emerald-300 dark:border-emerald-500/40' :
+                      'bg-amber-100 text-amber-800 border border-amber-200 dark:bg-amber-500/20 dark:text-amber-300 dark:border-amber-500/40'
                     }">
                       ${m.category}
                     </span>
                   </div>
 
                   <div class="flex items-center gap-4 text-xs font-mono">
-                    <span class="text-rose-400 font-extrabold">${m.marksLost}</span>
-                    <span class="text-slate-400">${m.timeSpent}</span>
-                    <i class="fa-solid fa-chevron-down text-slate-500 text-xs"></i>
+                    <span class="text-rose-600 dark:text-rose-400 font-extrabold">${m.marksLost}</span>
+                    <span class="text-slate-500 dark:text-slate-400">${m.timeSpent}</span>
+                    <i class="fa-solid fa-chevron-down text-slate-400 dark:text-slate-500 text-xs"></i>
                   </div>
                 </div>
 
-                <p class="text-xs text-slate-300 leading-relaxed font-sans">
+                <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed font-sans">
                   ${m.title}
                 </p>
 
-                <div class="bg-[#080d1a] border border-[#142038] rounded-lg p-3 text-[11px] text-slate-400 leading-relaxed font-mono">
-                  <span class="text-cyan-400 font-bold block mb-1">Diagnostic Root Cause:</span>
+                <div class="bg-white border border-slate-200 dark:bg-[#080d1a] dark:border-[#142038] rounded-lg p-3 text-[11px] text-slate-600 dark:text-slate-400 leading-relaxed font-mono">
+                  <span class="text-blue-600 dark:text-cyan-400 font-bold block mb-1">Diagnostic Root Cause:</span>
                   ${m.explanation}
                 </div>
               </div>
@@ -1182,8 +1190,8 @@ export const MockTest = {
           </div>
         </div>
 
-        <!-- AI Prescribed Action Callout (Matching Image 3) -->
-        <div class="bg-gradient-to-r from-[#0c1836] via-[#101d42] to-[#141838] border border-cyan-500/30 rounded-2xl p-6 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <!-- AI Prescribed Action Callout (Deep navy card matching Panel 3 in both Light & Dark) -->
+        <div class="bg-[#0f172a] text-white border border-slate-800 dark:bg-gradient-to-r dark:from-[#0c1836] dark:via-[#101d42] dark:to-[#141838] dark:border-cyan-500/30 rounded-2xl p-6 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
           <div class="flex flex-col gap-2 max-w-2xl">
             <span class="text-[10px] font-mono font-extrabold text-cyan-400 uppercase tracking-wider flex items-center gap-2">
               <span class="h-2 w-2 rounded-full bg-cyan-400 animate-pulse"></span> AI PRESCRIBED ACTION &bull; Recovery Sequence Ready
@@ -1197,7 +1205,7 @@ export const MockTest = {
           </div>
 
           <div class="flex items-center gap-3 flex-shrink-0">
-            <button id="btn-export-anki" class="px-4 py-2.5 rounded-xl bg-[#080f21] hover:bg-[#0f1d40] border border-[#1e345e] text-slate-300 text-xs font-bold transition-all">
+            <button id="btn-export-anki" class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 text-xs font-bold transition-all">
               Export Anki Deck (.apkg)
             </button>
             <button id="btn-start-drill" class="px-5 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-xs font-extrabold shadow-lg shadow-cyan-500/20 transition-all active:scale-95 flex items-center gap-2">
@@ -1211,10 +1219,11 @@ export const MockTest = {
   },
 
   // ─────────────────────────────────────────────────────────────
-  // VIEW 4: FULL QUESTION PAPER REVIEW (Matching Image 4)
+  // VIEW 4: FULL QUESTION PAPER REVIEW (Matching Panel 5)
   // ─────────────────────────────────────────────────────────────
   renderFullQuestionPaper() {
     const allQs = getBenchmarkQuestions();
+    const isDark = getTheme() === 'dark';
     
     // Apply filters
     let filtered = [...allQs];
@@ -1236,84 +1245,84 @@ export const MockTest = {
       <div class="flex flex-col gap-6 max-w-[1700px] mx-auto pb-12">
         
         <!-- Header Info Bar -->
-        <div class="flex items-center justify-between gap-4 flex-wrap border-b border-[#142038] pb-4">
+        <div class="flex items-center justify-between gap-4 flex-wrap border-b border-slate-200 dark:border-[#142038] pb-4">
           <div class="flex items-center gap-3 text-xs font-mono">
-            <span class="text-slate-400">REF: <span class="text-white font-bold">${CBT_BENCHMARK_MOCK04.paperCode}</span></span>
-            <span class="px-2 py-0.5 rounded text-[9px] font-bold bg-purple-500/20 text-purple-300 border border-purple-500/40">
+            <span class="text-slate-500 dark:text-slate-400">REF: <span class="text-slate-900 dark:text-white font-bold">${CBT_BENCHMARK_MOCK04.paperCode}</span></span>
+            <span class="px-2 py-0.5 rounded text-[9px] font-bold bg-purple-100 text-purple-700 border border-purple-200 dark:bg-purple-500/20 dark:text-purple-300 dark:border-purple-500/40">
               HARD-COPY REVIEW MODE
             </span>
-            <span class="text-slate-500">Last synced: 11:14:12 UTC</span>
+            <span class="text-slate-400 dark:text-slate-500">Last synced: 11:14:12 UTC</span>
           </div>
 
           <div class="flex items-center gap-2.5">
-            <button class="px-3 py-1.5 rounded-lg border border-[#192b4c] text-xs text-slate-300 hover:text-white hover:bg-white/5 transition-all">
+            <button class="px-3 py-1.5 rounded-lg border border-slate-300 dark:border-[#192b4c] text-xs text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 transition-all">
               <i class="fa-solid fa-compress mr-1"></i> Compact View
             </button>
-            <button id="btn-print-paper" class="px-3 py-1.5 rounded-lg border border-[#192b4c] text-xs text-slate-300 hover:text-white hover:bg-white/5 transition-all">
+            <button id="btn-print-paper" class="px-3 py-1.5 rounded-lg border border-slate-300 dark:border-[#192b4c] text-xs text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 transition-all">
               <i class="fa-solid fa-print mr-1"></i> Print Paper
             </button>
-            <button id="btn-return-live-test" class="px-4 py-1.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-extrabold text-xs transition-all active:scale-95">
+            <button id="btn-return-live-test" class="px-4 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white dark:bg-cyan-500 dark:hover:bg-cyan-400 dark:text-slate-950 font-extrabold text-xs transition-all active:scale-95 shadow-sm">
               &larr; Return to Live Test
             </button>
           </div>
         </div>
 
-        <!-- 6 Quick Stats Cards (Matching Image 4) -->
+        <!-- 6 Quick Stats Cards (Matching Panel 5) -->
         <div class="grid grid-cols-2 md:grid-cols-6 gap-3">
-          <div class="bg-[#0a1122] border border-[#15233e] rounded-xl p-3 text-center">
-            <span class="text-[9px] font-mono text-slate-400 uppercase block">TOTAL POOL</span>
-            <span class="font-mono text-xl font-extrabold text-white block mt-0.5">65 <span class="text-xs text-slate-500">Items</span></span>
+          <div class="bg-white border border-slate-200 dark:bg-[#0a1122] dark:border-[#15233e] rounded-xl p-3 text-center shadow-sm">
+            <span class="text-[9px] font-mono text-slate-500 dark:text-slate-400 uppercase block">TOTAL POOL</span>
+            <span class="font-mono text-xl font-extrabold text-slate-900 dark:text-white block mt-0.5">65 <span class="text-xs text-slate-400">Items</span></span>
           </div>
-          <div class="bg-[#0a1122] border border-[#15233e] rounded-xl p-3 text-center">
-            <span class="text-[9px] font-mono text-slate-400 uppercase block">ANSWERED</span>
-            <span class="font-mono text-xl font-extrabold text-emerald-400 block mt-0.5">42 <span class="text-xs text-slate-500">(64.6%)</span></span>
+          <div class="bg-white border border-slate-200 dark:bg-[#0a1122] dark:border-[#15233e] rounded-xl p-3 text-center shadow-sm">
+            <span class="text-[9px] font-mono text-slate-500 dark:text-slate-400 uppercase block">ANSWERED</span>
+            <span class="font-mono text-xl font-extrabold text-emerald-600 dark:text-emerald-400 block mt-0.5">42 <span class="text-xs text-slate-400">(64.6%)</span></span>
           </div>
-          <div class="bg-[#0a1122] border border-[#15233e] rounded-xl p-3 text-center">
-            <span class="text-[9px] font-mono text-slate-400 uppercase block">ATTEMPTED</span>
-            <span class="font-mono text-xl font-extrabold text-cyan-400 block mt-0.5">68.33 <span class="text-xs text-slate-500">/ 100</span></span>
+          <div class="bg-white border border-slate-200 dark:bg-[#0a1122] dark:border-[#15233e] rounded-xl p-3 text-center shadow-sm">
+            <span class="text-[9px] font-mono text-slate-500 dark:text-slate-400 uppercase block">ATTEMPTED</span>
+            <span class="font-mono text-xl font-extrabold text-blue-600 dark:text-cyan-400 block mt-0.5">68.33 <span class="text-xs text-slate-400">/ 100</span></span>
           </div>
-          <div class="bg-[#0a1122] border border-[#15233e] rounded-xl p-3 text-center">
-            <span class="text-[9px] font-mono text-slate-400 uppercase block">MARKED REVIEW</span>
-            <span class="font-mono text-xl font-extrabold text-purple-400 block mt-0.5">06 <span class="text-xs text-slate-500">Pending</span></span>
+          <div class="bg-white border border-slate-200 dark:bg-[#0a1122] dark:border-[#15233e] rounded-xl p-3 text-center shadow-sm">
+            <span class="text-[9px] font-mono text-slate-500 dark:text-slate-400 uppercase block">MARKED REVIEW</span>
+            <span class="font-mono text-xl font-extrabold text-purple-600 dark:text-purple-400 block mt-0.5">06 <span class="text-xs text-slate-400">Pending</span></span>
           </div>
-          <div class="bg-[#0a1122] border border-[#15233e] rounded-xl p-3 text-center">
-            <span class="text-[9px] font-mono text-slate-400 uppercase block">UNATTEMPTED</span>
-            <span class="font-mono text-xl font-extrabold text-rose-400 block mt-0.5">17 <span class="text-xs text-slate-500">Skipped</span></span>
+          <div class="bg-white border border-slate-200 dark:bg-[#0a1122] dark:border-[#15233e] rounded-xl p-3 text-center shadow-sm">
+            <span class="text-[9px] font-mono text-slate-500 dark:text-slate-400 uppercase block">UNATTEMPTED</span>
+            <span class="font-mono text-xl font-extrabold text-rose-600 dark:text-rose-400 block mt-0.5">17 <span class="text-xs text-slate-400">Skipped</span></span>
           </div>
-          <div class="bg-[#0a1122] border border-[#15233e] rounded-xl p-3 text-center">
-            <span class="text-[9px] font-mono text-slate-400 uppercase block">EST. NET VELOCITY</span>
-            <span class="font-mono text-xl font-extrabold text-white block mt-0.5">54.67 <span class="text-xs text-slate-500">Qs/Hr</span></span>
+          <div class="bg-white border border-slate-200 dark:bg-[#0a1122] dark:border-[#15233e] rounded-xl p-3 text-center shadow-sm">
+            <span class="text-[9px] font-mono text-slate-500 dark:text-slate-400 uppercase block">EST. NET VELOCITY</span>
+            <span class="font-mono text-xl font-extrabold text-slate-900 dark:text-white block mt-0.5">54.67 <span class="text-xs text-slate-400">Qs/Hr</span></span>
           </div>
         </div>
 
         <!-- Section Filters & Filter State Bar -->
-        <div class="flex items-center justify-between gap-4 flex-wrap bg-[#080e1c] border border-[#15233e] p-3 rounded-2xl">
+        <div class="flex items-center justify-between gap-4 flex-wrap bg-slate-100 border border-slate-200 dark:bg-[#080e1c] dark:border-[#15233e] p-3 rounded-2xl">
           <!-- Section Tabs -->
           <div class="flex items-center gap-2">
-            <button class="paper-sec-pill px-3 py-1 rounded-lg text-xs font-bold transition-all ${this.paperFilterSection === 'all' ? 'bg-[#152340] text-cyan-300 border border-cyan-500/40' : 'text-slate-400 hover:text-white'}" data-psec="all">
+            <button class="paper-sec-pill px-3 py-1 rounded-lg text-xs font-bold transition-all ${this.paperFilterSection === 'all' ? 'bg-white text-blue-700 shadow-sm border border-slate-200 dark:bg-[#152340] dark:text-cyan-300 dark:border-cyan-500/40' : 'text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white'}" data-psec="all">
               All Sections (65)
             </button>
-            <button class="paper-sec-pill px-3 py-1 rounded-lg text-xs font-bold transition-all ${this.paperFilterSection === 'ga' ? 'bg-[#152340] text-cyan-300 border border-cyan-500/40' : 'text-slate-400 hover:text-white'}" data-psec="ga">
+            <button class="paper-sec-pill px-3 py-1 rounded-lg text-xs font-bold transition-all ${this.paperFilterSection === 'ga' ? 'bg-white text-blue-700 shadow-sm border border-slate-200 dark:bg-[#152340] dark:text-cyan-300 dark:border-cyan-500/40' : 'text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white'}" data-psec="ga">
               General Aptitude (GA 1-10)
             </button>
-            <button class="paper-sec-pill px-3 py-1 rounded-lg text-xs font-bold transition-all ${this.paperFilterSection === 'cs' ? 'bg-[#152340] text-cyan-300 border border-cyan-500/40' : 'text-slate-400 hover:text-white'}" data-psec="cs">
+            <button class="paper-sec-pill px-3 py-1 rounded-lg text-xs font-bold transition-all ${this.paperFilterSection === 'cs' ? 'bg-white text-blue-700 shadow-sm border border-slate-200 dark:bg-[#152340] dark:text-cyan-300 dark:border-cyan-500/40' : 'text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white'}" data-psec="cs">
               CS &amp; IT (CS 1-55)
             </button>
           </div>
 
           <!-- State Tabs -->
           <div class="flex items-center gap-2 text-xs font-mono">
-            <span class="text-slate-500 uppercase text-[9px] font-bold">FILTER STATE:</span>
-            <button class="paper-state-pill px-2.5 py-0.5 rounded text-[10px] font-bold transition-all ${this.paperFilterState === 'all' ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/40' : 'text-slate-400 hover:text-white'}" data-pstate="all">
+            <span class="text-slate-500 dark:text-slate-400 uppercase text-[9px] font-bold">FILTER STATE:</span>
+            <button class="paper-state-pill px-2.5 py-0.5 rounded text-[10px] font-bold transition-all ${this.paperFilterState === 'all' ? 'bg-blue-100 text-blue-800 dark:bg-cyan-500/20 dark:text-cyan-400 dark:border-cyan-500/40' : 'text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white'}" data-pstate="all">
               ALL
             </button>
-            <button class="paper-state-pill px-2.5 py-0.5 rounded text-[10px] font-bold transition-all ${this.paperFilterState === 'answered' ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/40' : 'text-slate-400 hover:text-white'}" data-pstate="answered">
+            <button class="paper-state-pill px-2.5 py-0.5 rounded text-[10px] font-bold transition-all ${this.paperFilterState === 'answered' ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-500/20 dark:text-emerald-400 dark:border-emerald-500/40' : 'text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white'}" data-pstate="answered">
               ANSWERED (42)
             </button>
-            <button class="paper-state-pill px-2.5 py-0.5 rounded text-[10px] font-bold transition-all ${this.paperFilterState === 'review' ? 'bg-purple-500/20 text-purple-400 border border-purple-500/40' : 'text-slate-400 hover:text-white'}" data-pstate="review">
+            <button class="paper-state-pill px-2.5 py-0.5 rounded text-[10px] font-bold transition-all ${this.paperFilterState === 'review' ? 'bg-purple-100 text-purple-800 dark:bg-purple-500/20 dark:text-purple-400 dark:border-purple-500/40' : 'text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white'}" data-pstate="review">
               REVIEW (6)
             </button>
-            <button class="paper-state-pill px-2.5 py-0.5 rounded text-[10px] font-bold transition-all ${this.paperFilterState === 'unattempted' ? 'bg-rose-500/20 text-rose-400 border border-rose-500/40' : 'text-slate-400 hover:text-white'}" data-pstate="unattempted">
+            <button class="paper-state-pill px-2.5 py-0.5 rounded text-[10px] font-bold transition-all ${this.paperFilterState === 'unattempted' ? 'bg-rose-100 text-rose-800 dark:bg-rose-500/20 dark:text-rose-400 dark:border-rose-500/40' : 'text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white'}" data-pstate="unattempted">
               UNATTEMPTED (17)
             </button>
           </div>
@@ -1322,66 +1331,66 @@ export const MockTest = {
         <!-- Continuous Question Paper Stream -->
         <div class="flex flex-col gap-6">
           ${filtered.map(qi => `
-            <div class="bg-[#0a1122] border border-[#15233e] rounded-2xl p-6 shadow-xl flex flex-col gap-4">
+            <div class="bg-white border border-slate-200 dark:bg-[#0a1122] dark:border-[#15233e] rounded-2xl p-6 shadow-sm dark:shadow-xl flex flex-col gap-4">
               <!-- Question Header Row -->
-              <div class="flex items-center justify-between gap-3 flex-wrap border-b border-[#142038] pb-3">
+              <div class="flex items-center justify-between gap-3 flex-wrap border-b border-slate-100 dark:border-[#142038] pb-3">
                 <div class="flex items-center gap-2.5 flex-wrap">
-                  <span class="text-cyan-400 font-mono font-extrabold text-sm">
+                  <span class="text-blue-600 dark:text-cyan-400 font-mono font-extrabold text-sm">
                     Q.${qi.number < 10 ? '0' + qi.number : qi.number}
                   </span>
-                  <span class="text-xs font-bold text-white uppercase">${qi.subject}</span>
-                  <span class="px-2 py-0.5 rounded text-[9px] font-mono font-bold bg-[#0e1830] text-cyan-300 border border-cyan-500/30">
+                  <span class="text-xs font-bold text-slate-900 dark:text-white uppercase">${qi.subject}</span>
+                  <span class="px-2 py-0.5 rounded text-[9px] font-mono font-bold bg-slate-100 dark:bg-[#0e1830] text-blue-700 dark:text-cyan-300 border border-slate-200 dark:border-cyan-500/30">
                     ${qi.type}
                   </span>
-                  <span class="text-[10px] font-mono text-slate-400">
+                  <span class="text-[10px] font-mono text-slate-500 dark:text-slate-400">
                     Marks: +${qi.marks}.00 / -${qi.negativeMarks || '0.00'}
                   </span>
                 </div>
 
                 <div class="flex items-center gap-3">
                   ${qi.status === 'answered' ? `
-                    <span class="px-2.5 py-0.5 rounded-full text-[9px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 flex items-center gap-1">
+                    <span class="px-2.5 py-0.5 rounded-full text-[9px] font-mono font-bold bg-emerald-50 text-emerald-700 border border-emerald-200 dark:bg-emerald-500/10 dark:text-emerald-400 dark:border-emerald-500/30 flex items-center gap-1">
                       <i class="fa-solid fa-check"></i> ${qi.type === 'NAT' ? `CANDIDATE VALUE: ${qi.candidateValue}` : `CANDIDATE ANSWERED: OPTION (${String.fromCharCode(65 + (qi.candidateSelection ?? 1))})`}
                     </span>
                   ` : qi.status === 'marked-answered' ? `
-                    <span class="px-2.5 py-0.5 rounded-full text-[9px] font-mono font-bold bg-purple-500/10 text-purple-300 border border-purple-500/30 flex items-center gap-1">
+                    <span class="px-2.5 py-0.5 rounded-full text-[9px] font-mono font-bold bg-purple-50 text-purple-700 border border-purple-200 dark:bg-purple-500/10 dark:text-purple-300 dark:border-purple-500/30 flex items-center gap-1">
                       <i class="fa-solid fa-bookmark"></i> MARKED FOR REVIEW &bull; SELECTED: (A), (C)
                     </span>
                   ` : `
-                    <span class="px-2.5 py-0.5 rounded-full text-[9px] font-mono font-bold bg-rose-500/10 text-rose-400 border border-rose-500/30 flex items-center gap-1">
+                    <span class="px-2.5 py-0.5 rounded-full text-[9px] font-mono font-bold bg-rose-50 text-rose-700 border border-rose-200 dark:bg-rose-500/10 dark:text-rose-400 dark:border-rose-500/30 flex items-center gap-1">
                       <i class="fa-solid fa-xmark"></i> NOT ATTEMPTED
                     </span>
                   `}
-                  <span class="text-[10px] font-mono text-slate-400">Time: ${qi.timeSpent}</span>
+                  <span class="text-[10px] font-mono text-slate-500 dark:text-slate-400">Time: ${qi.timeSpent}</span>
                 </div>
               </div>
 
               <!-- Question Body Text -->
-              <div class="text-xs font-medium text-slate-200 whitespace-pre-line leading-relaxed">
+              <div class="text-xs font-medium text-slate-800 dark:text-slate-200 whitespace-pre-line leading-relaxed">
                 ${qi.question}
               </div>
 
               <!-- Specific Diagrams in Question Paper -->
               ${qi.hasResourceTopologyDiagram ? `
-                <div class="bg-[#080d1a] border border-[#142038] rounded-xl p-4 my-1 flex flex-col items-center">
-                  <div class="text-[9px] font-mono font-bold text-slate-400 uppercase tracking-wider mb-2">
+                <div class="bg-slate-50 border border-slate-200 dark:bg-[#080d1a] dark:border-[#142038] rounded-xl p-4 my-1 flex flex-col items-center">
+                  <div class="text-[9px] font-mono font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2">
                     RESOURCE ALLOCATION TOPOLOGY
                   </div>
                   <svg viewBox="0 0 240 180" class="w-48 h-auto">
-                    <circle cx="120" cy="90" r="60" fill="none" stroke="#162c52" stroke-width="1.5" stroke-dasharray="3,3" />
+                    <circle cx="120" cy="90" r="60" fill="none" stroke="${isDark ? '#162c52' : '#cbd5e1'}" stroke-width="1.5" stroke-dasharray="3,3" />
                     <!-- 5 Philosopher Nodes -->
-                    <circle cx="120" cy="30" r="12" fill="#0c1e40" stroke="#00f2fe" stroke-width="1.5" />
-                    <text x="120" y="34" fill="#00f2fe" font-size="8" font-family="monospace" text-anchor="middle">P0</text>
-                    <circle cx="178" cy="72" r="12" fill="#0c1e40" stroke="#00f2fe" stroke-width="1.5" />
-                    <text x="178" y="76" fill="#00f2fe" font-size="8" font-family="monospace" text-anchor="middle">P1</text>
-                    <circle cx="156" cy="140" r="12" fill="#0c1e40" stroke="#00f2fe" stroke-width="1.5" />
-                    <text x="156" y="144" fill="#00f2fe" font-size="8" font-family="monospace" text-anchor="middle">P2</text>
-                    <circle cx="84" cy="140" r="12" fill="#0c1e40" stroke="#00f2fe" stroke-width="1.5" />
-                    <text x="84" y="144" fill="#00f2fe" font-size="8" font-family="monospace" text-anchor="middle">P3</text>
-                    <circle cx="62" cy="72" r="12" fill="#0c1e40" stroke="#00f2fe" stroke-width="1.5" />
-                    <text x="62" y="76" fill="#00f2fe" font-size="8" font-family="monospace" text-anchor="middle">P4</text>
+                    <circle cx="120" cy="30" r="12" fill="${isDark ? '#0c1e40' : '#eff6ff'}" stroke="${isDark ? '#00f2fe' : '#3b82f6'}" stroke-width="1.5" />
+                    <text x="120" y="34" fill="${isDark ? '#00f2fe' : '#1d4ed8'}" font-size="8" font-family="monospace" text-anchor="middle">P0</text>
+                    <circle cx="178" cy="72" r="12" fill="${isDark ? '#0c1e40' : '#eff6ff'}" stroke="${isDark ? '#00f2fe' : '#3b82f6'}" stroke-width="1.5" />
+                    <text x="178" y="76" fill="${isDark ? '#00f2fe' : '#1d4ed8'}" font-size="8" font-family="monospace" text-anchor="middle">P1</text>
+                    <circle cx="156" cy="140" r="12" fill="${isDark ? '#0c1e40' : '#eff6ff'}" stroke="${isDark ? '#00f2fe' : '#3b82f6'}" stroke-width="1.5" />
+                    <text x="156" y="144" fill="${isDark ? '#00f2fe' : '#1d4ed8'}" font-size="8" font-family="monospace" text-anchor="middle">P2</text>
+                    <circle cx="84" cy="140" r="12" fill="${isDark ? '#0c1e40' : '#eff6ff'}" stroke="${isDark ? '#00f2fe' : '#3b82f6'}" stroke-width="1.5" />
+                    <text x="84" y="144" fill="${isDark ? '#00f2fe' : '#1d4ed8'}" font-size="8" font-family="monospace" text-anchor="middle">P3</text>
+                    <circle cx="62" cy="72" r="12" fill="${isDark ? '#0c1e40' : '#eff6ff'}" stroke="${isDark ? '#00f2fe' : '#3b82f6'}" stroke-width="1.5" />
+                    <text x="62" y="76" fill="${isDark ? '#00f2fe' : '#1d4ed8'}" font-size="8" font-family="monospace" text-anchor="middle">P4</text>
                   </svg>
-                  <span class="text-[8px] font-mono text-emerald-400 mt-1">Status: Circular Wait Cycle Active</span>
+                  <span class="text-[8px] font-mono text-emerald-600 dark:text-emerald-400 mt-1">Status: Circular Wait Cycle Active</span>
                 </div>
               ` : ''}
 
@@ -1396,13 +1405,13 @@ export const MockTest = {
                     return `
                       <div class="p-3 rounded-xl border text-xs flex items-start gap-2.5 ${
                         isCandidateChoice
-                          ? 'bg-[#0f1f3d] border-cyan-500 text-white'
-                          : 'bg-[#0b1426] border-[#182848] text-slate-300'
+                          ? 'bg-blue-50 border-blue-500 text-slate-900 dark:bg-[#0f1f3d] dark:border-cyan-500 dark:text-white'
+                          : 'bg-white border-slate-200 text-slate-700 dark:bg-[#0b1426] dark:border-[#182848] dark:text-slate-300'
                       }">
-                        <span class="font-bold font-mono text-cyan-400">${String.fromCharCode(65 + oi)}.</span>
+                        <span class="font-bold font-mono text-blue-600 dark:text-cyan-400">${String.fromCharCode(65 + oi)}.</span>
                         <div class="flex flex-col">
                           <span>${opt}</span>
-                          ${isCandidateChoice ? '<span class="text-[8px] font-mono text-cyan-400 font-bold mt-1">&check; Candidate Selection</span>' : ''}
+                          ${isCandidateChoice ? '<span class="text-[8px] font-mono text-blue-600 dark:text-cyan-400 font-bold mt-1">&check; Candidate Selection</span>' : ''}
                         </div>
                       </div>
                     `;
@@ -1411,13 +1420,13 @@ export const MockTest = {
               ` : ''}
 
               ${qi.type === 'NAT' ? `
-                <div class="bg-[#080d1a] border border-[#142038] rounded-xl p-3 flex items-center justify-between text-xs font-mono">
+                <div class="bg-slate-50 border border-slate-200 dark:bg-[#080d1a] dark:border-[#142038] rounded-xl p-3 flex items-center justify-between text-xs font-mono">
                   <div class="flex items-center gap-3">
-                    <span class="text-slate-400 text-[10px] uppercase">CANDIDATE ENTERED VALUE:</span>
-                    <span class="text-cyan-400 font-extrabold text-sm px-3 py-1 rounded bg-[#0d1b38] border border-cyan-500/40">${qi.candidateValue}</span>
-                    <span class="text-emerald-400 text-[10px]">&check; Valid integer recorded</span>
+                    <span class="text-slate-500 dark:text-slate-400 text-[10px] uppercase">CANDIDATE ENTERED VALUE:</span>
+                    <span class="text-blue-600 dark:text-cyan-400 font-extrabold text-sm px-3 py-1 rounded bg-white dark:bg-[#0d1b38] border border-blue-200 dark:border-cyan-500/40">${qi.candidateValue}</span>
+                    <span class="text-emerald-600 dark:text-emerald-400 text-[10px]">&check; Valid integer recorded</span>
                   </div>
-                  <span class="text-slate-400 text-[10px]">ALLOWABLE TOLERANCE: [${qi.natMin || qi.correctNat}, ${qi.natMax || qi.correctNat}]</span>
+                  <span class="text-slate-500 dark:text-slate-400 text-[10px]">ALLOWABLE TOLERANCE: [${qi.natMin || qi.correctNat}, ${qi.natMax || qi.correctNat}]</span>
                 </div>
               ` : ''}
 
@@ -1426,15 +1435,15 @@ export const MockTest = {
         </div>
 
         <!-- Bottom Audit Watermark Bar -->
-        <div class="flex items-center justify-between gap-4 border-t border-[#142038] pt-4 text-xs font-mono text-slate-500">
+        <div class="flex items-center justify-between gap-4 border-t border-slate-200 dark:border-[#142038] pt-4 text-xs font-mono text-slate-500">
           <span class="flex items-center gap-2">
-            <i class="fa-solid fa-shield-halved text-cyan-400"></i> IIT Roorkee Testing Agency &bull; Audit Checksum: 0x9AF48DB1
+            <i class="fa-solid fa-shield-halved text-blue-600 dark:text-cyan-400"></i> IIT Roorkee Testing Agency &bull; Audit Checksum: 0x9AF48DB1
           </span>
           <div class="flex items-center gap-3">
-            <button id="btn-scroll-top" class="hover:text-white transition-colors">
+            <button id="btn-scroll-top" class="hover:text-slate-900 dark:hover:text-white transition-colors">
               <i class="fa-solid fa-arrow-up mr-1"></i> Back to Top
             </button>
-            <button id="btn-exit-paper-bottom" class="px-3 py-1 rounded bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold">
+            <button id="btn-exit-paper-bottom" class="px-3 py-1 rounded bg-blue-600 hover:bg-blue-500 text-white dark:bg-cyan-500 dark:hover:bg-cyan-400 dark:text-slate-950 font-bold">
               Exit Paper View
             </button>
           </div>
@@ -1449,20 +1458,20 @@ export const MockTest = {
   // ─────────────────────────────────────────────────────────────
   renderInstructions() {
     return `
-      <div class="max-w-4xl mx-auto bg-[#0a1122] border border-[#15233e] rounded-3xl p-8 shadow-2xl flex flex-col gap-6 text-slate-200">
-        <div class="flex items-center justify-between border-b border-[#142038] pb-4">
+      <div class="max-w-4xl mx-auto bg-white border border-slate-200 dark:bg-[#0a1122] dark:border-[#15233e] rounded-3xl p-8 shadow-sm dark:shadow-2xl flex flex-col gap-6 text-slate-800 dark:text-slate-200">
+        <div class="flex items-center justify-between border-b border-slate-200 dark:border-[#142038] pb-4">
           <div>
-            <h3 class="font-display font-extrabold text-xl text-white">GATE Computer Based Test (CBT) Instructions</h3>
-            <p class="text-xs text-slate-400 mt-1">Official Examination Standards &bull; Computer Science &amp; Information Technology</p>
+            <h3 class="font-display font-extrabold text-xl text-slate-900 dark:text-white">GATE Computer Based Test (CBT) Instructions</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Official Examination Standards &bull; Computer Science &amp; Information Technology</p>
           </div>
-          <button id="btn-close-instructions" class="px-4 py-2 rounded-xl bg-cyan-500 text-slate-950 font-extrabold text-xs">
+          <button id="btn-close-instructions" class="px-4 py-2 rounded-xl bg-blue-600 text-white dark:bg-cyan-500 dark:text-slate-950 font-extrabold text-xs shadow-sm">
             Return to Console
           </button>
         </div>
 
         <div class="flex flex-col gap-4 text-xs leading-relaxed">
-          <h4 class="font-bold text-sm text-cyan-400 uppercase tracking-wider font-mono">1. General Instructions</h4>
-          <ul class="list-disc pl-5 flex flex-col gap-1.5 text-slate-300">
+          <h4 class="font-bold text-sm text-blue-600 dark:text-cyan-400 uppercase tracking-wider font-mono">1. General Instructions</h4>
+          <ul class="list-disc pl-5 flex flex-col gap-1.5 text-slate-600 dark:text-slate-300">
             <li>The total duration of the examination is 180 minutes (3 hours).</li>
             <li>The clock will be set at the server. The countdown timer at the top displays time remaining.</li>
             <li>The question paper consists of 65 questions carrying a total of 100 marks.</li>
@@ -1470,27 +1479,27 @@ export const MockTest = {
             <li>Questions 11 to 65 belong to Computer Science &amp; IT (CS) carrying 85 marks.</li>
           </ul>
 
-          <h4 class="font-bold text-sm text-cyan-400 uppercase tracking-wider font-mono mt-2">2. Question Types &amp; Negative Marking</h4>
+          <h4 class="font-bold text-sm text-blue-600 dark:text-cyan-400 uppercase tracking-wider font-mono mt-2">2. Question Types &amp; Negative Marking</h4>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-3 my-2">
-            <div class="bg-[#0c162e] border border-[#1a2c4e] rounded-xl p-4">
-              <span class="text-cyan-400 font-mono font-bold block">MCQ (Multiple Choice)</span>
-              <p class="text-[11px] text-slate-400 mt-1.5">Single correct option out of four.</p>
-              <span class="text-rose-400 font-mono text-[10px] font-bold block mt-2">Negative: 1/3 mark for 1-mark Qs, 2/3 mark for 2-mark Qs.</span>
+            <div class="bg-slate-50 border border-slate-200 dark:bg-[#0c162e] dark:border-[#1a2c4e] rounded-xl p-4">
+              <span class="text-blue-600 dark:text-cyan-400 font-mono font-bold block">MCQ (Multiple Choice)</span>
+              <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-1.5">Single correct option out of four.</p>
+              <span class="text-rose-600 dark:text-rose-400 font-mono text-[10px] font-bold block mt-2">Negative: 1/3 mark for 1-mark Qs, 2/3 mark for 2-mark Qs.</span>
             </div>
-            <div class="bg-[#0c162e] border border-[#1a2c4e] rounded-xl p-4">
-              <span class="text-purple-400 font-mono font-bold block">MSQ (Multiple Select)</span>
-              <p class="text-[11px] text-slate-400 mt-1.5">One or more than one correct option.</p>
-              <span class="text-emerald-400 font-mono text-[10px] font-bold block mt-2">NO negative marking. No partial credit.</span>
+            <div class="bg-slate-50 border border-slate-200 dark:bg-[#0c162e] dark:border-[#1a2c4e] rounded-xl p-4">
+              <span class="text-purple-600 dark:text-purple-400 font-mono font-bold block">MSQ (Multiple Select)</span>
+              <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-1.5">One or more than one correct option.</p>
+              <span class="text-emerald-600 dark:text-emerald-400 font-mono text-[10px] font-bold block mt-2">NO negative marking. No partial credit.</span>
             </div>
-            <div class="bg-[#0c162e] border border-[#1a2c4e] rounded-xl p-4">
-              <span class="text-emerald-400 font-mono font-bold block">NAT (Numerical Answer)</span>
-              <p class="text-[11px] text-slate-400 mt-1.5">Real number entered via virtual keypad.</p>
-              <span class="text-emerald-400 font-mono text-[10px] font-bold block mt-2">NO negative marking.</span>
+            <div class="bg-slate-50 border border-slate-200 dark:bg-[#0c162e] dark:border-[#1a2c4e] rounded-xl p-4">
+              <span class="text-emerald-600 dark:text-emerald-400 font-mono font-bold block">NAT (Numerical Answer)</span>
+              <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-1.5">Real number entered via virtual keypad.</p>
+              <span class="text-emerald-600 dark:text-emerald-400 font-mono text-[10px] font-bold block mt-2">NO negative marking.</span>
             </div>
           </div>
 
-          <h4 class="font-bold text-sm text-cyan-400 uppercase tracking-wider font-mono mt-2">3. Virtual Calculator Usage</h4>
-          <p class="text-slate-300">
+          <h4 class="font-bold text-sm text-blue-600 dark:text-cyan-400 uppercase tracking-wider font-mono mt-2">3. Virtual Calculator Usage</h4>
+          <p class="text-slate-600 dark:text-slate-300">
             A virtual scientific calculator is available at the top right of the examination console. No physical calculator is allowed inside the testing hall. Answers from the virtual calculator can be directly transferred to NAT answer boxes.
           </p>
         </div>
@@ -1506,51 +1515,51 @@ export const MockTest = {
       <div class="max-w-4xl mx-auto py-8 px-4 flex flex-col gap-8 animate-fade-in font-sans">
         <!-- Header -->
         <div class="text-center">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-mono font-bold mb-3">
-            <span class="h-2 w-2 rounded-full bg-cyan-400 animate-pulse"></span> GATE CBT CS/IT ENGINE v4.2
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-600 dark:bg-cyan-500/10 dark:border-cyan-500/30 dark:text-cyan-400 text-xs font-mono font-bold mb-3">
+            <span class="h-2 w-2 rounded-full bg-blue-600 dark:bg-cyan-400 animate-pulse"></span> GATE CBT CS/IT ENGINE v4.2
           </div>
-          <h2 class="font-display font-extrabold text-3xl text-white tracking-tight">
+          <h2 class="font-display font-extrabold text-3xl text-slate-900 dark:text-white tracking-tight">
             Realistic Computer Based Test Simulator
           </h2>
-          <p class="text-xs text-slate-400 mt-1.5 max-w-lg mx-auto">
-            Experience the exact high-tech testing environment with on-screen virtual calculator, TCS keypad, Socratic concept tutor, and instant post-exam AIR telemetry.
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1.5 max-w-lg mx-auto">
+            Experience the exact high-tech testing environment with on-screen virtual calculator, TCS keypad, Socratic concept tutor, and instant post-exam AIR telemetry in both Light and Dark themes.
           </p>
         </div>
 
         <!-- Featured Benchmark Card (Official GATE CS/IT 2025 MOCK-04) -->
-        <div class="bg-gradient-to-r from-[#0c1836] via-[#101e45] to-[#161a3d] border border-cyan-500/40 rounded-3xl p-7 shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="bg-gradient-to-r from-blue-900 via-indigo-950 to-slate-900 dark:from-[#0c1836] dark:via-[#101e45] dark:to-[#161a3d] border border-blue-700/50 dark:border-cyan-500/40 rounded-3xl p-7 shadow-2xl text-white relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6">
           <div class="flex flex-col gap-2 max-w-xl">
             <div class="flex items-center gap-2 text-[10px] font-mono">
-              <span class="px-2 py-0.5 rounded bg-cyan-500 text-slate-950 font-extrabold">OFFICIAL BENCHMARK</span>
-              <span class="text-cyan-300 font-bold">MOCK-04 &bull; 65 Questions &bull; 100 Marks</span>
+              <span class="px-2 py-0.5 rounded bg-blue-500 text-white font-extrabold">OFFICIAL BENCHMARK</span>
+              <span class="text-blue-200 dark:text-cyan-300 font-bold">MOCK-04 &bull; 65 Questions &bull; 100 Marks</span>
             </div>
             <h3 class="font-display font-extrabold text-xl text-white">
               GATE CS/IT 2025 Standard Mock Test 04
             </h3>
-            <p class="text-xs text-slate-300 leading-relaxed">
+            <p class="text-xs text-slate-200 leading-relaxed">
               Complete full-length paper covering all 10 GATE CS/IT sections: Multi-Level Demand Paging (Q24), Distance Vector Routing (Q42), Dining Philosophers (Q14), and C Recursive Analysis (Q28).
             </p>
-            <div class="flex items-center gap-4 text-[10px] font-mono text-slate-400 mt-1">
-              <span><i class="fa-solid fa-clock text-cyan-400 mr-1"></i> 180 Minutes</span>
-              <span><i class="fa-solid fa-calculator text-cyan-400 mr-1"></i> TCS Calc &amp; Keypad</span>
+            <div class="flex items-center gap-4 text-[10px] font-mono text-slate-300 mt-1">
+              <span><i class="fa-solid fa-clock text-blue-400 dark:text-cyan-400 mr-1"></i> 180 Minutes</span>
+              <span><i class="fa-solid fa-calculator text-blue-400 dark:text-cyan-400 mr-1"></i> TCS Calc &amp; Keypad</span>
               <span><i class="fa-solid fa-brain text-purple-400 mr-1"></i> Socratic AI Tutor</span>
             </div>
           </div>
 
-          <button id="btn-launch-benchmark-mock" class="px-6 py-3.5 rounded-2xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-extrabold text-sm shadow-xl shadow-cyan-500/25 transition-all active:scale-95 flex items-center gap-2 flex-shrink-0">
+          <button id="btn-launch-benchmark-mock" class="px-6 py-3.5 rounded-2xl bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-extrabold text-sm shadow-xl transition-all active:scale-95 flex items-center gap-2 flex-shrink-0">
             <i class="fa-solid fa-play"></i> Launch Exam Engine
           </button>
         </div>
 
         <!-- Or Configure Custom Mock -->
-        <div class="bg-[#0a1122] border border-[#15233e] rounded-3xl p-6 shadow-xl flex flex-col gap-5">
-          <h4 class="font-display font-extrabold text-base text-white">
+        <div class="bg-white border border-slate-200 dark:bg-[#0a1122] dark:border-[#15233e] rounded-3xl p-6 shadow-sm dark:shadow-xl flex flex-col gap-5">
+          <h4 class="font-display font-extrabold text-base text-slate-900 dark:text-white">
             Custom Mock Generator
           </h4>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
             <div>
-              <label class="block text-slate-400 text-[10px] font-mono uppercase mb-1">Subject</label>
-              <select id="cfg-custom-subject" class="w-full bg-[#080d1a] border border-[#182848] rounded-xl px-3 py-2 text-white">
+              <label class="block text-slate-500 dark:text-slate-400 text-[10px] font-mono uppercase mb-1">Subject</label>
+              <select id="cfg-custom-subject" class="w-full bg-slate-50 border border-slate-300 dark:bg-[#080d1a] dark:border-[#182848] rounded-xl px-3 py-2 text-slate-800 dark:text-white">
                 <option value="All">All Subjects (Full Length)</option>
                 <option value="Section 8: Operating System">Operating Systems</option>
                 <option value="Section 10: Computer Networks">Computer Networks</option>
@@ -1559,15 +1568,15 @@ export const MockTest = {
               </select>
             </div>
             <div>
-              <label class="block text-slate-400 text-[10px] font-mono uppercase mb-1">Question Count</label>
-              <input type="number" id="cfg-custom-count" value="10" min="5" max="65" class="w-full bg-[#080d1a] border border-[#182848] rounded-xl px-3 py-2 text-white">
+              <label class="block text-slate-500 dark:text-slate-400 text-[10px] font-mono uppercase mb-1">Question Count</label>
+              <input type="number" id="cfg-custom-count" value="10" min="5" max="65" class="w-full bg-slate-50 border border-slate-300 dark:bg-[#080d1a] dark:border-[#182848] rounded-xl px-3 py-2 text-slate-800 dark:text-white">
             </div>
             <div>
-              <label class="block text-slate-400 text-[10px] font-mono uppercase mb-1">Duration (Mins)</label>
-              <input type="number" id="cfg-custom-duration" value="20" min="5" max="180" class="w-full bg-[#080d1a] border border-[#182848] rounded-xl px-3 py-2 text-white">
+              <label class="block text-slate-500 dark:text-slate-400 text-[10px] font-mono uppercase mb-1">Duration (Mins)</label>
+              <input type="number" id="cfg-custom-duration" value="20" min="5" max="180" class="w-full bg-slate-50 border border-slate-300 dark:bg-[#080d1a] dark:border-[#182848] rounded-xl px-3 py-2 text-slate-800 dark:text-white">
             </div>
           </div>
-          <button id="btn-launch-custom-mock" class="w-full py-2.5 rounded-xl bg-[#122144] hover:bg-[#1a3062] border border-cyan-500/40 text-cyan-300 font-bold text-xs transition-all">
+          <button id="btn-launch-custom-mock" class="w-full py-2.5 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200 dark:bg-[#122144] dark:hover:bg-[#1a3062] dark:border-cyan-500/40 dark:text-cyan-300 font-bold text-xs transition-all">
             Start Custom Mock in CBT Engine
           </button>
         </div>
@@ -1593,6 +1602,12 @@ export const MockTest = {
       return;
     }
 
+    // CBT Theme Switcher Button
+    document.getElementById('btn-cbt-toggle-theme')?.addEventListener('click', () => {
+      toggleTheme();
+      this.refresh();
+    });
+
     // Sidebar View Navigation
     document.querySelectorAll('.cbt-nav-btn').forEach(btn => {
       btn.addEventListener('click', () => {
@@ -1607,7 +1622,6 @@ export const MockTest = {
       btn.addEventListener('click', () => {
         const sec = btn.getAttribute('data-sec');
         this.activeSection = sec;
-        // Jump to first question of this section
         const targetQ = this.questions.find(q => q.section === sec);
         if (targetQ) {
           const idx = this.questions.indexOf(targetQ);
@@ -2110,7 +2124,6 @@ export const MockTest = {
     showToast('Consulting Gemini Concept Tutor...', 'info');
     input.value = '';
 
-    // Pedagogical Socratic response logic
     try {
       const prompt = `You are the Gemini Concept Tutor inside a GATE Computer Based Test simulation.
 A student is asking a doubt about Question 42 (Distance Vector Routing count-to-infinity problem on a 3-node linear topology with Link X-A broken).
@@ -2124,7 +2137,6 @@ Keep your response under 80 words.`;
       const res = await generateContent(prompt);
       showToast(`Tutor: ${res.text}`, 'info', 8000);
     } catch (e) {
-      // Offline fallback pedagogical response
       showToast(`Tutor Invariant: At every round, Router A updates distance from B (+1), and Router B updates from A (+1). Because neither can see beyond their immediate neighbor without Split Horizon, distance to X grows by 2 units every 2 synchronous cycles.`, 'info', 8000);
     }
   },
@@ -2134,6 +2146,9 @@ Keep your response under 80 words.`;
   // ─────────────────────────────────────────────────────────────
   initDiagnosticCharts() {
     const d = CBT_BENCHMARK_MOCK04;
+    const isDark = getTheme() === 'dark';
+    const gridColor = isDark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.08)';
+    const textColor = isDark ? '#94a3b8' : '#475569';
 
     // 1. Radar Chart (Syllabus Competency Vector)
     const radarCtx = document.getElementById('diagRadarChart')?.getContext('2d');
@@ -2146,20 +2161,20 @@ Keep your response under 80 words.`;
             {
               label: 'Candidate Accuracy',
               data: d.radarData.candidate,
-              borderColor: '#00f2fe',
-              backgroundColor: 'rgba(0, 242, 254, 0.2)',
+              borderColor: isDark ? '#00f2fe' : '#0284c7',
+              backgroundColor: isDark ? 'rgba(0, 242, 254, 0.2)' : 'rgba(2, 132, 199, 0.2)',
               borderWidth: 2,
-              pointBackgroundColor: '#00f2fe',
+              pointBackgroundColor: isDark ? '#00f2fe' : '#0284c7',
               pointRadius: 3
             },
             {
               label: 'Top 100 Benchmark',
               data: d.radarData.top100Benchmark,
-              borderColor: '#a855f7',
-              backgroundColor: 'rgba(168, 85, 247, 0.1)',
+              borderColor: '#8b5cf6',
+              backgroundColor: isDark ? 'rgba(139, 92, 246, 0.1)' : 'rgba(139, 92, 246, 0.15)',
               borderWidth: 1.5,
               borderDash: [4, 4],
-              pointBackgroundColor: '#a855f7',
+              pointBackgroundColor: '#8b5cf6',
               pointRadius: 2
             }
           ]
@@ -2169,9 +2184,9 @@ Keep your response under 80 words.`;
           maintainAspectRatio: false,
           scales: {
             r: {
-              angleLines: { color: 'rgba(255, 255, 255, 0.08)' },
-              grid: { color: 'rgba(255, 255, 255, 0.08)' },
-              pointLabels: { color: '#94a3b8', font: { size: 9, family: 'monospace' } },
+              angleLines: { color: gridColor },
+              grid: { color: gridColor },
+              pointLabels: { color: textColor, font: { size: 9, family: 'monospace' } },
               ticks: { display: false, max: 100 }
             }
           },
@@ -2204,7 +2219,7 @@ Keep your response under 80 words.`;
             {
               label: 'Standard',
               data: d.scatterData.filter(p => p.type === 'normal'),
-              backgroundColor: '#38bdf8',
+              backgroundColor: isDark ? '#38bdf8' : '#0284c7',
               pointRadius: 5
             }
           ]
@@ -2214,16 +2229,16 @@ Keep your response under 80 words.`;
           maintainAspectRatio: false,
           scales: {
             x: {
-              title: { display: true, text: 'Time Spent (Minutes)', color: '#64748b', font: { size: 9 } },
-              grid: { color: 'rgba(255, 255, 255, 0.05)' },
-              ticks: { color: '#94a3b8', font: { size: 9 } },
+              title: { display: true, text: 'Time Spent (Minutes)', color: textColor, font: { size: 9 } },
+              grid: { color: gridColor },
+              ticks: { color: textColor, font: { size: 9 } },
               min: 0,
               max: 6
             },
             y: {
-              title: { display: true, text: 'Weightage (Marks)', color: '#64748b', font: { size: 9 } },
-              grid: { color: 'rgba(255, 255, 255, 0.05)' },
-              ticks: { color: '#94a3b8', font: { size: 9 } },
+              title: { display: true, text: 'Weightage (Marks)', color: textColor, font: { size: 9 } },
+              grid: { color: gridColor },
+              ticks: { color: textColor, font: { size: 9 } },
               min: 0,
               max: 3
             }
@@ -2243,7 +2258,7 @@ Keep your response under 80 words.`;
           datasets: [
             {
               data: [47, 11, 7],
-              backgroundColor: ['#10b981', '#f43f5e', '#64748b'],
+              backgroundColor: ['#10b981', '#f43f5e', isDark ? '#64748b' : '#cbd5e1'],
               borderWidth: 0,
               cutout: '76%'
             }
