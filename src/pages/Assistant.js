@@ -6,7 +6,7 @@ export const Assistant = {
   messages: [
     {
       role: 'model',
-      text: "Hello Bharath! I am your GATE CS AI Tutor. Ask me any question on Data Structures, Operating Systems, Computer Networks, Linear Algebra, or GATE preparation strategy!"
+      text: "Welcome! Ask a study question, request an explanation or work through a concept together. Use AI settings in the menu to connect your preferred provider."
     }
   ],
 
@@ -29,8 +29,8 @@ export const Assistant = {
               <i class="fa-solid fa-robot"></i>
             </div>
             <div>
-              <h3 class="font-display font-extrabold text-sm text-slate-900 dark:text-white">AI Study Assistant</h3>
-              <p class="text-xs text-slate-400 dark:text-slate-400 font-medium">Powered by Google Gemini 1.5 Flash</p>
+              <h3 class="font-display font-extrabold text-sm text-slate-900 dark:text-white">Study assistant</h3>
+              <p class="text-xs text-slate-400 dark:text-slate-400 font-medium">Explanations, study questions and revision support</p>
             </div>
           </div>
 

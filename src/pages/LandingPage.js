@@ -1,3 +1,4 @@
+import { EXAM_CATALOG, icon } from '../config/navigation.js';
 import { auth } from '../config/firebase';
 import { toggleTheme, getTheme } from '../utils/theme';
 import { showToast } from '../utils/toast';
@@ -29,91 +30,13 @@ export const LandingPage = {
     const moonIconClass = theme === 'dark' ? 'inline-block' : 'hidden';
 
     return `
-      <!-- Navbar -->
-      <nav class="fixed top-4 left-4 right-4 z-40 bg-white/85 dark:bg-[#0d1320]/80 backdrop-blur-2xl border border-slate-200/60 dark:border-white/[0.07] rounded-3xl shadow-sm transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <div class="flex items-center gap-3">
-            <div class="h-9 w-9 rounded-2xl bg-gradient-to-tr from-primary-500 to-[#14b8a6] flex items-center justify-center text-white shadow-md">
-              <i class="fa-solid fa-graduation-cap var(--accent-from)ase"></i>
-            </div>
-            <span class="font-display font-extrabold text-lg tracking-tight text-slate-900 dark:text-white">GateLabs</span>
-          </div>
-
-          <div class="flex items-center gap-3">
-            <button id="theme-toggle-btn" class="p-2 rounded-xl border border-slate-200 dark:border-white/10 hover:bg-black/5 dark:hover:bg-white/10 text-slate-500 dark:text-slate-400 transition-all select-none">
-              <i id="theme-sun" class="fa-solid fa-sun ${sunIconClass}"></i>
-              <i id="theme-moon" class="fa-solid fa-moon ${moonIconClass}"></i>
-            </button>
-
-            <button id="nav-login-btn" class="hidden sm:inline-flex text-xs font-bold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white px-4 py-2 transition-colors">Sign In</button>
-            <button id="nav-register-btn" class="inline-flex items-center justify-center px-5 py-2 text-xs font-bold text-white bg-primary-500 hover:bg-[#059669] hover:scale-102 active:scale-95 rounded-full shadow-md transition-all">Get Started</button>
-          </div>
-        </div>
-      </nav>
-
-      <!-- Hero Presentation -->
-      <section class="min-h-screen pt-32 pb-16 px-6 flex flex-col justify-center items-center text-center relative overflow-hidden bg-[#f5f7fa] dark:bg-[#060a13] bg-grid">
-        
-        <!-- Ambient Glowing Background Orbs -->
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary-500/10 rounded-full blur-[120px] pointer-events-none"></div>
-        <div class="absolute bottom-10 left-10 w-[300px] h-[300px] bg-indigo-500/10 rounded-full blur-[100px] pointer-events-none"></div>
-        
-        <div class="max-w-4xl mx-auto space-y-5 relative z-10">
-          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-slate-200 dark:border-white/10 bg-white/70 dark:bg-white/5 backdrop-blur-md shadow-sm">
-            <span class="h-2 w-2 rounded-full bg-primary-500 animate-ping"></span>
-            <span class="text-xs font-extrabold text-primary-500 tracking-tight">GATE CS 2027 Simulator Engine</span>
-          </div>
-
-          <h1 class="font-display font-extrabold text-4xl md:text-6xl text-slate-900 dark:text-white tracking-tight leading-[1.1]">
-            Master GATE CS with <br/>
-            <span class="text-gradient bg-gradient-to-r from-primary-500 to-indigo-500 bg-clip-text text-transparent">Quantum-Grade Precision.</span>
-          </h1>
-
-          <p class="text-xs md:text-sm text-slate-500 dark:text-slate-400 max-w-2xl mx-auto font-medium leading-relaxed">
-            Topic-driven mock test generator, interactive syllabus concept maps, daily streak trackers, and AI assistant — built for top rankers.
-          </p>
-
-          <div class="pt-3 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button id="hero-get-started" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 text-xs font-bold text-white bg-primary-500 hover:bg-[#059669] hover:scale-105 active:scale-95 rounded-full shadow-lg transition-all">
-              <span>Start Preparation Now</span>
-              <i class="fa-solid fa-arrow-right text-xs"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- 3 Feature Highlight Cards -->
-        <div class="max-w-6xl mx-auto mt-16 grid grid-cols-1 md:grid-cols-3 gap-5 relative z-10 w-full">
-          <div class="glass-panel p-7 rounded-3xl border border-slate-200/60 dark:border-white/[0.07] flex flex-col gap-3 text-left">
-            <div class="h-11 w-11 rounded-2xl bg-primary-500/10 text-primary-500 flex items-center justify-center text-xl">
-              🎯
-            </div>
-            <h3 class="font-display font-extrabold var(--accent-from)ase text-slate-900 dark:text-white">CBT Exam Simulator</h3>
-            <p class="text-xs text-slate-500 dark:text-slate-400 font-medium leading-relaxed">Exact GATE exam interface matching standard paper palettes, countdown timers, and virtual calculator.</p>
-          </div>
-
-          <div class="glass-panel p-7 rounded-3xl border border-slate-200/60 dark:border-white/[0.07] flex flex-col gap-3 text-left">
-            <div class="h-11 w-11 rounded-2xl bg-teal-500/10 text-teal-500 flex items-center justify-center text-xl">
-              ⚡
-            </div>
-            <h3 class="font-display font-extrabold var(--accent-from)ase text-slate-900 dark:text-white">Syllabus Mind Maps</h3>
-            <p class="text-xs text-slate-500 dark:text-slate-400 font-medium leading-relaxed">Checklist mind maps across Engineering Mathematics, Operating Systems, Computer Networks, and DBMS.</p>
-          </div>
-
-          <div class="glass-panel p-7 rounded-3xl border border-slate-200/60 dark:border-white/[0.07] flex flex-col gap-3 text-left">
-            <div class="h-11 w-11 rounded-2xl bg-primary-500/10 text-primary-500 flex items-center justify-center text-xl">
-              🤖
-            </div>
-            <h3 class="font-display font-extrabold var(--accent-from)ase text-slate-900 dark:text-white">AI Assistant</h3>
-            <p class="text-xs text-slate-500 dark:text-slate-400 font-medium leading-relaxed">Instant step-by-step math solver and concept explanations powered by Google Gemini API.</p>
-          </div>
-        </div>
-      </section>
+      <div class="landing-workspace"><nav class="landing-nav"><a class="app-brand" href="#/"><span class="brand-mark">g.</span><div>GateLabs<small>Your preparation, organised.</small></div></a><div><button id="theme-toggle-btn" aria-label="Toggle appearance">${icon('moon')}<i id="theme-sun" class="hidden"></i><i id="theme-moon" class="hidden"></i></button><button id="nav-login-btn" class="ui-button">Sign in</button><button id="nav-register-btn" class="ui-button primary">Create account</button></div></nav><section class="landing-intro"><div><span class="eyebrow">A clearer path to your next exam</span><h1>Less searching.<br>More preparing.</h1><p>Find your syllabus, practise with the right paper pattern and learn from every test. Everything you need, organised around your exam.</p><button id="hero-get-started" class="ui-button primary">Start your preparation ${icon('arrow')}</button><small>GATE · AP TET · APPSC Group 2 · RRB · SBI Clerk</small></div><div class="landing-preview"><div class="preview-heading"><span class="eyebrow">Your exam workspace</span><span class="preview-dot"></span></div><h2>One place. A clear plan.</h2><div class="preview-tabs"><span>Overview</span><span>Mock tests</span><span>Syllabus</span></div><div class="preview-task"><span>01</span><div><h3>Know the pattern</h3><p>Question counts, timing and marking rules.</p></div>${icon('book')}</div><div class="preview-task"><span>02</span><div><h3>Practise with purpose</h3><p>A full mock or a focused section drill.</p></div>${icon('edit')}</div><div class="preview-task"><span>03</span><div><h3>See what comes next</h3><p>Answers, explanations and topics to revisit.</p></div>${icon('chart')}</div></div></section><section class="landing-exams"><span class="eyebrow">Find your focus</span><h2>Five exams. The same simple workflow.</h2><div>${EXAM_CATALOG.map(e=>`<article><span class="exam-symbol" style="--exam-color:${e.color}">${e.symbol}</span><h3>${e.name}</h3><p>${e.category}</p></article>`).join('')}</div></section><footer class="workspace-footer"><span>GateLabs · Build your next chapter.</span><a href="#/about">About GateLabs</a></footer></div>
 
       <!-- Auth Modal -->
-      <div id="auth-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/50 dark:bg-black/80 backdrop-blur-md hidden animate-fade-in px-4">
+      <div role="dialog" aria-modal="true" aria-labelledby="auth-title" id="auth-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/50 dark:bg-black/80 backdrop-blur-md hidden animate-fade-in px-4">
         <div class="w-full max-w-md glass-panel p-8 rounded-3xl relative shadow-2xl text-slate-900 dark:text-white border border-slate-200 dark:border-white/10">
-          <button id="close-modal-btn" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
-            <i class="fa-solid fa-xmark text-xl"></i>
+          <button aria-label="Close sign in dialog" id="close-modal-btn" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
+            <span aria-hidden="true" style="display:grid;place-items:center;width:32px;height:32px;font-size:25px">×</span>
           </button>
 
           <div class="text-center mb-5">
@@ -123,17 +46,17 @@ export const LandingPage = {
 
           <form id="auth-form" class="flex flex-col gap-3.5">
             <div id="name-field" class="flex flex-col gap-1">
-              <label class="text-xs font-bold text-slate-400 uppercase tracking-wider">Full Name</label>
+              <label for="auth-name" class="text-xs font-bold text-slate-400 uppercase tracking-wider">Full Name</label>
               <input type="text" id="auth-name" placeholder="Bharath" class="glass-input font-semibold">
             </div>
 
             <div class="flex flex-col gap-1">
-              <label class="text-xs font-bold text-slate-400 uppercase tracking-wider">Email Address</label>
+              <label for="auth-email" class="text-xs font-bold text-slate-400 uppercase tracking-wider">Email Address</label>
               <input type="email" id="auth-email" required placeholder="aspirant@gate.edu" class="glass-input font-semibold">
             </div>
 
             <div class="flex flex-col gap-1">
-              <label class="text-xs font-bold text-slate-400 uppercase tracking-wider">Password</label>
+              <label for="auth-password" class="text-xs font-bold text-slate-400 uppercase tracking-wider">Password</label>
               <input type="password" id="auth-password" required placeholder="••••••••" class="glass-input font-semibold">
             </div>
 
@@ -209,6 +132,7 @@ export const LandingPage = {
         toggleAuthBtn.textContent = "Sign Up";
       }
       authModal?.classList.remove('hidden');
+      (isSignUp?authName:authEmail)?.focus();
     };
 
     const closeModal = () => {
@@ -219,6 +143,7 @@ export const LandingPage = {
     navRegisterBtn?.addEventListener('click', () => openModal(true));
     heroBtn?.addEventListener('click', () => openModal(true));
     closeBtn?.addEventListener('click', closeModal);
+    authModal?.addEventListener('keydown',event=>{if(event.key==='Escape')closeModal();});
 
     authModal?.addEventListener('click', (e) => {
       if (e.target === authModal) closeModal();

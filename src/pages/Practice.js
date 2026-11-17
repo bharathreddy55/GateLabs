@@ -84,6 +84,7 @@ export const Practice = {
 
     return `
       <div class="flex flex-col gap-6 animate-fade-in font-sans">
+        <header class="workspace-page"><div class="page-heading"><div><span class="eyebrow">GATE CS & IT · Study tools</span><h1>Question practice</h1><p>Choose a subject and difficulty, then work through questions at your own pace.</p></div><a class="ui-button" href="#/gate">GATE preparation →</a></div></header>
         <!-- Tabs Navigation -->
         <div class="flex gap-4 border-b border-slate-200/40 dark:border-white/[0.06] pb-px">
           <button id="tab-questions-btn" class="px-5 py-3 border-b-2 font-display text-sm font-extrabold transition-all duration-205 ${
@@ -91,14 +92,14 @@ export const Practice = {
               ? 'border-primary-600 text-primary-600 dark:text-primary-400' 
               : 'border-transparent text-slate-400 dark:text-slate-500 hover:text-slate-655 dark:hover:text-slate-350'
           }">
-            Practice Pool
+            Practice questions
           </button>
           <button id="tab-ingest-btn" class="px-5 py-3 border-b-2 font-display text-sm font-extrabold transition-all duration-205 ${
             this.activeTab === 'ingest' 
               ? 'border-primary-600 text-primary-600 dark:text-primary-400' 
               : 'border-transparent text-slate-400 dark:text-slate-500 hover:text-slate-655 dark:hover:text-slate-355'
           }">
-            <i class="fa-solid fa-file-pdf mr-1.5 animate-pulse"></i> PDF Ingestion & AI Generator
+            <i class="fa-solid fa-file-pdf mr-1.5 animate-pulse"></i> Import & create questions
           </button>
         </div>
 
@@ -111,7 +112,7 @@ export const Practice = {
             <!-- Difficulty filter strip -->
             <div class="flex items-center justify-between gap-4 flex-wrap">
               <div>
-                <h3 class="font-display font-extrabold text-xl text-slate-900 dark:text-white tracking-tight">Select a Subject</h3>
+                <h3 class="font-display font-extrabold text-xl text-slate-900 dark:text-white tracking-tight">Choose a subject</h3>
                 <p class="text-xs text-slate-455 dark:text-slate-500 mt-1 font-semibold">Click any subject to instantly load practice questions</p>
               </div>
               <div class="flex items-center gap-3 flex-wrap">

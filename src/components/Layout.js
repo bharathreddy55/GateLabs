@@ -1,3 +1,5 @@
+import { NAV_GROUPS, PAGE_TITLES, icon } from '../config/navigation.js';
+import { escapeHtml as h } from '../utils/examEngine.js';
 import { auth } from '../config/firebase';
 import { toggleTheme, getTheme } from '../utils/theme';
 import { showToast } from '../utils/toast';
@@ -7,162 +9,25 @@ import { getAiConfig, getApiKey, saveAiConfig, testApiKey, PROVIDERS } from '../
 export const Layout = {
   render(contentHtml, activePage = 'dashboard') {
     const user = auth.currentUser || { displayName: 'Bharath', email: 'aspirant@gate.edu' };
-    const theme = getTheme();
-    const sunIconClass = theme === 'dark' ? 'hidden' : 'inline-block';
-    const moonIconClass = theme === 'dark' ? 'inline-block' : 'hidden';
     const savedPalette = getSavedPalette();
-
-    const getLinkClass = (pageName) => {
-      const base = "flex items-center gap-3 px-4 py-2.5 rounded-2xl text-xs font-bold transition-all duration-200 select-none";
-      if (activePage === pageName) {
-        return `${base} nav-active`;
-      }
-      return `${base} text-slate-600 dark:text-slate-400 hover:bg-black/5 dark:hover:bg-white/10 hover:text-slate-900 dark:hover:text-white`;
-    };
 
     const userInitial = user.displayName ? user.displayName.charAt(0).toUpperCase() : 'B';
     const userName = user.displayName || 'Bharath';
     const userEmail = user.email || 'aspirant@gate.edu';
 
     return `
-      <div class="min-h-screen flex bg-[#f5f7fa] dark:bg-[#060a13] bg-grid transition-colors duration-300 p-4 gap-4 relative overflow-hidden">
-        
-        <!-- Ambient Glowing Background Orbs -->
-        <div class="absolute top-[-20%] left-[-20%] w-[60%] h-[60%] rounded-full bg-gradient-to-tr from-primary-500/10 to-indigo-500/10 blur-[150px] pointer-events-none"></div>
-        <div class="absolute bottom-[-20%] right-[-20%] w-[60%] h-[60%] rounded-full bg-gradient-to-tr from-indigo-500/10 to-purple-500/10 blur-[150px] pointer-events-none"></div>
-
-        <!-- ======= SIDEBAR ======= -->
-        <aside id="sidebar-container" class="w-64 fixed top-4 bottom-4 left-4 z-30 border border-slate-200/60 dark:border-white/[0.07] bg-white/85 dark:bg-[#0d1320]/80 backdrop-blur-2xl flex flex-col rounded-3xl transition-all duration-300 shadow-sm overflow-hidden">
-
-          <!-- Logo & Brand -->
-          <div class="h-16 px-6 border-b border-slate-200/50 dark:border-white/[0.05] flex items-center gap-3 flex-shrink-0">
-            <div class="h-9 w-9 rounded-2xl flex items-center justify-center shadow-md text-white btn-accent flex-shrink-0">
-              <i class="fa-solid fa-graduation-cap text-sm"></i>
-            </div>
-            <div class="flex flex-col">
-              <span class="font-display font-extrabold text-base tracking-tight text-slate-900 dark:text-white">GateLabs</span>
-              <span class="text-[9px] font-semibold text-slate-400 tracking-wider uppercase">Pro Preparation</span>
-            </div>
-          </div>
-
-          <!-- Navigation -->
-          <nav class="flex-1 px-3 py-4 flex flex-col gap-1 overflow-y-auto no-scrollbar">
-            <a href="#/dashboard" class="${getLinkClass('dashboard')}">
-              <i class="fa-solid fa-chart-pie text-sm w-5 text-center"></i> Dashboard
-            </a>
-            <a href="#/assistant" class="${getLinkClass('assistant')}">
-              <i class="fa-solid fa-brain text-sm w-5 text-center"></i> AI Assistant
-            </a>
-            <a href="#/practice" class="${getLinkClass('practice')}">
-              <i class="fa-solid fa-cubes text-sm w-5 text-center"></i> Practice Qs
-            </a>
-            <a href="#/mock-test" class="${getLinkClass('mock-test')}">
-              <i class="fa-solid fa-pen-to-square text-sm w-5 text-center"></i> Mock Tests
-            </a>
-            <a href="#/pyq-mocks" class="${getLinkClass('pyq-mocks')}">
-              <i class="fa-solid fa-file-circle-check text-sm w-5 text-center"></i> PYQ Mock Papers
-            </a>
-            <a href="#/community" class="${getLinkClass('community')}">
-              <i class="fa-solid fa-users text-sm w-5 text-center"></i> Community Hub
-            </a>
-            <a href="#/tet-exams" class="${getLinkClass('tet-exams')}">
-              <i class="fa-solid fa-chalkboard-user text-sm w-5 text-center"></i> TET Exams
-            </a>
-            <a href="#/group2" class="${getLinkClass('group2')}"><i class="fa-solid fa-landmark text-sm w-5 text-center"></i> APPSC Group 2</a>
-            <a href="#/rrb-station-master" class="${getLinkClass('rrb-station-master')}"><i class="fa-solid fa-train text-sm w-5 text-center"></i> RRB Station Master</a>
-            <a href="#/sbi-clerk" class="${getLinkClass('sbi-clerk')}">
-              <i class="fa-solid fa-building-columns text-sm w-5 text-center"></i> SBI Clerk Prep
-            </a>
-            <a href="#/formulas" class="${getLinkClass('formulas')}">
-              <i class="fa-solid fa-book-bookmark text-sm w-5 text-center"></i> Formula Deck
-            </a>
-            <a href="#/analytics" class="${getLinkClass('analytics')}">
-              <i class="fa-solid fa-sliders text-sm w-5 text-center"></i> Mistake Analysis
-            </a>
-            <a href="#/about" class="${getLinkClass('about')}">
-              <i class="fa-solid fa-circle-info text-sm w-5 text-center"></i> About GateLabs
-            </a>
-          </nav>
-
-          <!-- ===== PROFILE SECTION (Clean & Spacious) ===== -->
-          <div class="border-t border-slate-200/50 dark:border-white/[0.05] p-4 flex flex-col gap-3 flex-shrink-0">
-
-            <!-- User Card -->
-            <div class="flex items-center gap-3">
-              <!-- Avatar with gradient ring -->
-              <div class="relative flex-shrink-0">
-                <div class="h-10 w-10 rounded-2xl text-white flex items-center justify-center font-extrabold text-sm shadow-lg btn-accent">
-                  ${userInitial}
-                </div>
-                <span class="absolute -bottom-0.5 -right-0.5 h-3 w-3 bg-emerald-400 border-2 border-white dark:border-[#0d1320] rounded-full"></span>
-              </div>
-              <!-- Name & email -->
-              <div class="flex-1 min-w-0">
-                <p class="text-xs font-extrabold text-slate-900 dark:text-white truncate">${userName}</p>
-                <p class="text-[10px] text-slate-400 font-medium truncate mt-0.5">${userEmail}</p>
-              </div>
-            </div>
-
-            <!-- Action Row: Customise · Config · Sign Out -->
-            <div class="grid grid-cols-3 gap-1.5">
-              <button id="theme-studio-btn" title="Customize your app colours" class="group flex flex-col items-center gap-1 py-2 px-1 rounded-xl hover:bg-black/5 dark:hover:bg-white/8 active:scale-95 transition-all select-none">
-                <span class="h-7 w-7 rounded-xl flex items-center justify-center text-white text-xs shadow-sm btn-accent group-hover:scale-110 transition-transform">
-                  <i class="fa-solid fa-swatchbook"></i>
-                </span>
-                <span class="text-[9px] font-bold text-slate-500 dark:text-slate-400 leading-none">Theme</span>
-              </button>
-
-              <button id="settings-btn" title="Configure Gemini API" class="group flex flex-col items-center gap-1 py-2 px-1 rounded-xl hover:bg-black/5 dark:hover:bg-white/8 active:scale-95 transition-all select-none">
-                <span class="h-7 w-7 rounded-xl flex items-center justify-center bg-slate-100 dark:bg-white/10 text-slate-505 dark:text-slate-400 text-xs group-hover:scale-110 transition-transform">
-                  <i class="fa-solid fa-gear"></i>
-                </span>
-                <span class="text-[9px] font-bold text-slate-500 dark:text-slate-400 leading-none">Config</span>
-              </button>
-
-              <button id="logout-btn" title="Sign out" class="group flex flex-col items-center gap-1 py-2 px-1 rounded-xl hover:bg-rose-50 dark:hover:bg-rose-950/20 active:scale-95 transition-all select-none">
-                <span class="h-7 w-7 rounded-xl flex items-center justify-center bg-rose-50 dark:bg-rose-950/30 text-rose-500 text-xs group-hover:scale-110 transition-transform">
-                  <i class="fa-solid fa-right-from-bracket"></i>
-                </span>
-                <span class="text-[9px] font-bold text-rose-400 leading-none">Sign Out</span>
-              </button>
-            </div>
-          </div>
+      <div class="app-shell" data-page="${activePage}">
+        <a class="skip-link" href="#sub-page-container">Skip to content</a>
+        <button class="sidebar-backdrop" id="sidebar-backdrop" aria-label="Close navigation" hidden></button>
+        <aside id="sidebar-container" class="app-sidebar" aria-label="Main navigation">
+          <a class="app-brand" href="#/dashboard"><span class="brand-mark">g<span>.</span></span><div>GateLabs<small>A little progress, every day.</small></div></a>
+          <nav class="sidebar-nav">${NAV_GROUPS.map(group=>`<div class="nav-group"><p>${group.label}</p>${group.items.map(([route,label,glyph])=>`<a href="#/${route}" class="sidebar-link ${activePage===route?'nav-active':''}" ${activePage===route?'aria-current="page"':''}>${icon(glyph)}<span>${label}</span></a>`).join('')}</div>`).join('')}</nav>
+          <div class="sidebar-footer"><div class="profile-row"><span class="profile-avatar">${h(userInitial)}</span><div><strong>${h(userName)}</strong><small>${h(userEmail)}</small></div><button id="logout-btn" aria-label="Sign out" title="Sign out">${icon('logout')}</button></div><div class="sidebar-settings"><button id="theme-studio-btn">Appearance</button><button id="settings-btn">AI settings</button></div></div>
         </aside>
-
-        <!-- ======= MAIN BODY ======= -->
-        <div class="flex-1 pl-[18rem] flex flex-col min-h-screen pr-2 py-2 relative z-10">
-
-          <!-- Sticky Top Header -->
-          <header id="layout-header" class="h-16 border border-slate-200/60 dark:border-white/[0.07] bg-white/85 dark:bg-[#0d1320]/80 backdrop-blur-2xl sticky top-4 z-20 flex items-center justify-between px-6 rounded-3xl transition-colors duration-300 shadow-sm">
-            <h2 class="font-display font-extrabold text-sm text-slate-900 dark:text-white tracking-tight">${
-              activePage === 'group2' ? 'APPSC Group 2' :
-              activePage === 'rrb-station-master' ? 'RRB Station Master' :
-              activePage === 'sbi-clerk' ? 'SBI Clerk Prep' :
-              activePage === 'tet-exams' ? 'TET Exams' :
-              activePage === 'pyq-mocks' ? 'PYQ Mocks' :
-              activePage === 'mock-test' ? 'Mock Tests' :
-              activePage.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())
-            }</h2>
-
-            <div class="flex items-center gap-3">
-              <!-- Theme toggle -->
-              <button id="layout-theme-toggle" class="p-2 rounded-xl border border-slate-200 dark:border-white/10 hover:bg-black/5 dark:hover:bg-white/10 text-slate-500 dark:text-slate-400 hover:scale-105 active:scale-95 transition-all select-none">
-                <i id="layout-theme-sun" class="fa-solid fa-sun ${sunIconClass}"></i>
-                <i id="layout-theme-moon" class="fa-solid fa-moon ${moonIconClass}"></i>
-              </button>
-
-              <div class="h-5 w-px bg-slate-200 dark:bg-white/10"></div>
-
-              <span class="text-xs font-bold accent-text streak-badge px-3.5 py-1.5 rounded-full border accent-border flex items-center gap-2">
-                <span class="h-2 w-2 rounded-full animate-ping" style="background-color: var(--accent-from)"></span> Exam preparation
-              </span>
-            </div>
-          </header>
-
-          <!-- Sub-page Canvas -->
-          <main id="sub-page-container" class="flex-1 pt-5 page-enter">
-            ${contentHtml}
-          </main>
+        <div class="app-main">
+          <header id="layout-header" class="app-header"><div class="header-location"><button id="mobile-menu-toggle" aria-label="Open navigation" aria-controls="sidebar-container" aria-expanded="false">${icon('menu')}</button><span>Workspace <span class="breadcrumb-divider">/</span> <strong id="page-location">${PAGE_TITLES[activePage]||'GateLabs'}</strong></span></div><div class="header-actions"><a href="#/exams" class="header-exams-link">Explore exams</a><button id="layout-theme-toggle" aria-label="Toggle light and dark appearance" title="Toggle appearance">${icon('moon')}<i id="layout-theme-sun" class="hidden"></i><i id="layout-theme-moon" class="hidden"></i></button><span class="header-avatar" title="${h(userName)}">${h(userInitial)}</span></div></header>
+          <main id="sub-page-container" tabindex="-1">${contentHtml}</main>
+          <footer class="workspace-footer"><span>GateLabs · Build your next chapter.</span><a href="#/about">About & help</a></footer>
         </div>
 
         <!-- ======= 🎨 THEME STUDIO MODAL ======= -->
@@ -325,32 +190,26 @@ export const Layout = {
   },
 
   updateNavigation(activePage) {
-    const sidebar = document.getElementById('sidebar-container');
-    if (!sidebar) return;
-
-    sidebar.querySelectorAll('nav a').forEach(link => {
-      const href = link.getAttribute('href');
-      const pageName = href ? href.replace('#/', '') : '';
-      const base = "flex items-center gap-3 px-4 py-2.5 rounded-2xl text-xs font-bold transition-all duration-200 select-none";
-      link.className = pageName === activePage
-        ? `${base} nav-active`
-        : `${base} text-slate-600 dark:text-slate-400 hover:bg-black/5 dark:hover:bg-white/10 hover:text-slate-900 dark:hover:text-white`;
+    document.querySelector('.app-shell')?.setAttribute('data-page',activePage);
+    document.querySelectorAll('.sidebar-link').forEach(link=>{
+      const selected=link.getAttribute('href')==='#/'+activePage;
+      link.classList.toggle('nav-active',selected);
+      if(selected)link.setAttribute('aria-current','page');else link.removeAttribute('aria-current');
     });
-
-    const titleEl = document.querySelector('header h2');
-    if (titleEl) {
-      titleEl.textContent = activePage === 'group2' ? 'APPSC Group 2' :
-              activePage === 'rrb-station-master' ? 'RRB Station Master' :
-              activePage === 'sbi-clerk' ? 'SBI Clerk Prep' :
-                            activePage === 'tet-exams' ? 'TET Exams' :
-                            activePage === 'pyq-mocks' ? 'PYQ Mocks' :
-                            activePage === 'mock-test' ? 'Mock Tests' :
-                            activePage.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase());
-    }
+    const title=document.getElementById('page-location');if(title)title.textContent=PAGE_TITLES[activePage]||'GateLabs';
+    document.querySelector('.app-shell')?.classList.remove('navigation-open');
+    const backdrop=document.getElementById('sidebar-backdrop');if(backdrop)backdrop.hidden=true;
+    document.getElementById('mobile-menu-toggle')?.setAttribute('aria-expanded','false');
   },
 
   init(activePage = 'dashboard') {
     initAccentPalette();
+    const toggle=document.getElementById('mobile-menu-toggle'),backdrop=document.getElementById('sidebar-backdrop'),shell=document.querySelector('.app-shell');
+    const close=()=>{shell?.classList.remove('navigation-open');if(backdrop)backdrop.hidden=true;toggle?.setAttribute('aria-expanded','false');};
+    toggle?.addEventListener('click',()=>{const open=shell.classList.toggle('navigation-open');backdrop.hidden=!open;toggle.setAttribute('aria-expanded',String(open));if(open)document.querySelector('.sidebar-link')?.focus();});
+    backdrop?.addEventListener('click',close);
+    shell?.addEventListener('keydown',event=>{if(event.key==='Escape'){close();toggle?.focus();}});
+    document.querySelectorAll('.sidebar-link').forEach(link=>link.addEventListener('click',close));
 
     // ---- THEME TOGGLE ----
     document.getElementById('layout-theme-toggle')?.addEventListener('click', () => {
@@ -433,7 +292,7 @@ export const Layout = {
       };
 
       applyAccentPalette(palette);
-      this.updateNavigation(activePage);
+      this.updateNavigation(document.querySelector('.app-shell')?.dataset.page||activePage);
       studioModal?.classList.add('hidden');
       showToast('🎨 Theme applied!', 'success');
     });

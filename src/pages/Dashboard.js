@@ -61,7 +61,7 @@ async function evaluateBadges(attempts, progress) {
 }
 
 export const Dashboard = {
-  activeTab: 'overview',
+  activeTab: 'syllabus',
   syllabusActiveSubject: 'Engineering Mathematics',
   bookmarkActiveSubject: 'All',
   flowchartSelectedSubject: null,
@@ -110,21 +110,18 @@ export const Dashboard = {
     return `
       <div class="flex flex-col gap-6 animate-fade-in font-sans pb-12">
         
-        ${countdownCard('gate')}
+        <header class="workspace-page"><div class="page-heading"><div><span class="eyebrow">GATE study tools</span><h1>Study planner & backup</h1><p>Organise your GATE syllabus, revisit saved questions and manage device backups.</p></div><a class="ui-button" href="#/gate">Back to GATE</a></div></header>
         <!-- Segmented Control Bar -->
         <div class="glass-panel p-2 rounded-full flex items-center justify-between border border-slate-200/60 dark:border-white/[0.07]">
           <div class="flex flex-wrap gap-1">
-            <button class="dashboard-tab-btn ${getTabBtnClass('overview')}" data-tab="overview">
-              <i class="fa-solid fa-chart-pie text-xs"></i> Overview
-            </button>
-            <button class="dashboard-tab-btn ${getTabBtnClass('syllabus')}" data-tab="syllabus">
-              <i class="fa-solid fa-network-wired text-xs"></i> Syllabus Map
+<button class="dashboard-tab-btn ${getTabBtnClass('syllabus')}" data-tab="syllabus">
+              <i class="fa-solid fa-network-wired text-xs"></i> Syllabus planner
             </button>
             <button class="dashboard-tab-btn ${getTabBtnClass('milestones')}" data-tab="milestones">
-              <i class="fa-solid fa-award text-xs"></i> Badges & Streaks
+              <i class="fa-solid fa-award text-xs"></i> Milestones
             </button>
             <button class="dashboard-tab-btn ${getTabBtnClass('bookmarks')}" data-tab="bookmarks">
-              <i class="fa-solid fa-bookmark text-xs"></i> Review Center
+              <i class="fa-solid fa-bookmark text-xs"></i> Saved questions
             </button>
             <button class="dashboard-tab-btn ${getTabBtnClass('backup')}" data-tab="backup">
               <i class="fa-solid fa-floppy-disk text-xs"></i> Data Backup

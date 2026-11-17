@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "test": "node --experimental-vm-modules --test tests/*.test.mjs",
     "test:browser": "node tests/exams.browser.mjs",
-    "build:exam-banks": "node scripts/build-exam-banks.mjs"
+    "build:exam-banks": "node scripts/build-exam-banks.mjs",
+    "test:workspace": "node tests/workspace.browser.mjs"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",

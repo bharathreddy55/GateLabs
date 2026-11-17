@@ -20,6 +20,7 @@ export const Analytics = {
     const queryParams = new URLSearchParams(urlHash.split('?')[1] || '');
     const urlAttemptId = queryParams.get('id');
 
+    if (!urlAttemptId) { this.viewMode='list';this.activeAttemptId=null; }
     if (urlAttemptId) {
       this.viewMode = 'detail';
       this.activeAttemptId = urlAttemptId;
@@ -43,8 +44,8 @@ export const Analytics = {
         <div class="flex flex-col gap-8">
           <!-- Header -->
           <div>
-            <h3 class="font-display font-extrabold text-2xl text-slate-900 dark:text-white">Mistake Analysis</h3>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">All your past mock test attempts and performance analysis.</p>
+            <h3 class="font-display font-extrabold text-2xl text-slate-900 dark:text-white">Results & mistakes</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Review past tests, understand your mistakes and choose what to practise next.</p>
           </div>
           <div class="glass-panel p-16 text-center rounded-2xl flex flex-col items-center justify-center">
             <div class="h-20 w-20 bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900 text-slate-400 rounded-full flex items-center justify-center text-3xl mb-6">
@@ -78,7 +79,7 @@ export const Analytics = {
         <!-- Page Header -->
         <div class="flex items-start justify-between gap-4 flex-wrap">
           <div>
-            <h3 class="font-display font-extrabold text-2xl text-slate-900 dark:text-white">Mistake Analysis</h3>
+            <h3 class="font-display font-extrabold text-2xl text-slate-900 dark:text-white">Results & mistakes</h3>
             <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Click on any attempt to view detailed question-by-question analysis.</p>
           </div>
           <a href="#/mock-test" class="inline-flex items-center gap-2 px-5 py-2.5 bg-primary-600 hover:bg-primary-500 text-white rounded-xl text-xs font-bold shadow-lg shadow-primary-600/20 transition-all active:scale-95">

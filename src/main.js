@@ -1,3 +1,4 @@
+import { WorkspaceHome, ExamLibrary } from './pages/WorkspaceHome.js';
 import { auth } from './config/firebase';
 import { initTheme } from './utils/theme';
 import { showToast } from './utils/toast';
@@ -14,16 +15,15 @@ import { About } from './pages/About';
 import { Formulas } from './pages/Formulas';
 import { PyqMocks } from './pages/PyqMocks';
 import { Community } from './pages/Community';
-import { TetExams } from './pages/TetExams';
-import { Group2, StationMaster } from './pages/ExamPrep.js';
+import { Group2, StationMaster, UnifiedTet, UnifiedSbi, GatePrep } from './pages/ExamPrep.js';
 import './styles/exams.css';
-import { SbiClerkPrep } from './pages/SbiClerkPrep';
 
 // Import Layout Component
 import { Layout } from './components/Layout';
 
 // Styles
 import './styles/index.css';
+import './styles/workspace.css';
 
 // Initialize global theme & accent palette (apply saved colors before first paint)
 initTheme();
@@ -33,17 +33,20 @@ initAccentPalette();
 const routes = {
   '/': { component: LandingPage, requiresAuth: false, name: 'home' },
   '/about': { component: About, requiresAuth: false, name: 'about' },
-  '/dashboard': { component: Dashboard, requiresAuth: true, name: 'dashboard' },
+  '/study-planner': { component: Dashboard, requiresAuth: true, name: 'study-planner' },
+  '/exams': { component: ExamLibrary, requiresAuth: true, name: 'exams' },
+  '/dashboard': { component: WorkspaceHome, requiresAuth: true, name: 'dashboard' },
   '/formulas': { component: Formulas, requiresAuth: true, name: 'formulas' },
   '/assistant': { component: Assistant, requiresAuth: true, name: 'assistant' },
   '/practice': { component: Practice, requiresAuth: true, name: 'practice' },
   '/mock-test': { component: MockTest, requiresAuth: true, name: 'mock-test' },
   '/pyq-mocks': { component: PyqMocks, requiresAuth: true, name: 'pyq-mocks' },
   '/community': { component: Community, requiresAuth: true, name: 'community' },
-  '/tet-exams': { component: TetExams, requiresAuth: true, name: 'tet-exams' },
+  '/gate': { component: GatePrep, requiresAuth: true, name:'gate' },
+  '/tet-exams': { component: UnifiedTet, requiresAuth: true, name: 'tet-exams' },
   '/group2': { component: Group2, requiresAuth: true, name: 'group2' },
   '/rrb-station-master': { component: StationMaster, requiresAuth: true, name: 'rrb-station-master' },
-  '/sbi-clerk': { component: SbiClerkPrep, requiresAuth: true, name: 'sbi-clerk' },
+  '/sbi-clerk': { component: UnifiedSbi, requiresAuth: true, name: 'sbi-clerk' },
   '/analytics': { component: Analytics, requiresAuth: true, name: 'analytics' }
 };
 
@@ -105,23 +108,17 @@ async function router() {
   // Render view
   try {
     if (route.requiresAuth) {
-      const sidebar = document.getElementById('sidebar-container');
-      if (sidebar) {
-        Layout.updateNavigation(route.name);
-        const subPageContainer = document.getElementById('sub-page-container');
-        if (subPageContainer) {
-          const html=await route.component.render();
-          if(generation!==routeGeneration)return;
-          subPageContainer.innerHTML=html;
-          await route.component.init();
-        }
-      } else {
-        const contentHtml = await route.component.render();
-        if(generation!==routeGeneration)return;
-        appContainer.innerHTML = Layout.render(contentHtml, route.name);
+      const loading='<div class="workspace-loading" role="status"><span></span> Opening your workspace…</div>';
+      if(!document.getElementById('sidebar-container')){
+        appContainer.innerHTML=Layout.render(loading,route.name);
         Layout.init(route.name);
-        await route.component.init();
-      }
+      } else Layout.updateNavigation(route.name);
+      const subPageContainer=document.getElementById('sub-page-container');
+      subPageContainer.innerHTML=loading;
+      const html=await route.component.render();
+      if(generation!==routeGeneration)return;
+      subPageContainer.innerHTML=html;
+      await route.component.init();
     } else {
       appContainer.innerHTML = await route.component.render();
       await route.component.init();

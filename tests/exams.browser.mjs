@@ -32,13 +32,17 @@ page.on('dialog',dialog=>dialog.accept());
 fs.mkdirSync('artifacts/exams',{recursive:true});
 try{
  await page.goto('http://127.0.0.1:3011/#/group2');
- await page.getByRole('heading',{name:'APPSC Group 2 Prelims',exact:true}).waitFor();
+ await page.getByRole('heading',{name:'APPSC Group 2',exact:true}).waitFor();
  assert.match(await page.locator('[data-countdown="group2"]').innerText(),/2027-02-21/);
+ await page.locator('.target-settings summary').click();
  await page.locator('[data-target]').fill('2027-01-15');await page.locator('[data-target]').dispatchEvent('change');
- await page.locator('#prep-group2 details').first().locator('summary').click();
+ await page.locator('[data-prep-tab=syllabus]').click();
+ await page.locator('.syllabus-section summary').first().click();
  await page.locator('[data-topic]').first().check();
+ await page.locator('[data-prep-tab=overview]').click();
  await page.screenshot({path:'artifacts/exams/group2-desktop.png',fullPage:false});
- await page.getByRole('button',{name:'Start full mock',exact:true}).first().click();
+ await page.locator('[data-prep-tab=mocks]').click();
+ await page.getByRole('button',{name:'Start full mock'}).first().click();
  await page.getByRole('button',{name:'Begin test',exact:true}).click();
  const [groupPaper]=JSON.parse(fs.readFileSync('public/exams/group2.json'));
  await page.locator(`[data-answer="${groupPaper.questions[0].correctAnswer}"]`).check();
@@ -59,6 +63,7 @@ try{
  await page.locator('#prep-group2').waitFor();
  assert.equal(await page.locator('[data-topic]').first().isChecked(),true);
  assert.equal(await page.locator('[data-target]').inputValue(),'2027-01-15');
+ await page.locator('[data-prep-tab=progress]').click();
  await page.locator('[data-attempt]').first().click();await page.getByRole('heading',{name:'Exam complete',exact:true}).waitFor();
  await page.goto('http://127.0.0.1:3011/#/rrb-station-master');await page.locator('#prep-rrb').waitFor();
  assert.match(await page.locator('[data-countdown="rrb"]').innerText(),/Awaiting official/);
@@ -68,7 +73,8 @@ try{
  await page.locator('#prep-rrb').scrollIntoViewIfNeeded();
  await page.screenshot({path:'artifacts/exams/rrb-mobile-dark.png',fullPage:false});
  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2),'Mobile page must not overflow horizontally');
- await page.getByRole('button',{name:'Start full mock',exact:true}).first().click();
+ await page.locator('[data-prep-tab=mocks]').click();
+ await page.getByRole('button',{name:'Start full mock'}).first().click();
  await page.getByRole('button',{name:'Begin test',exact:true}).click();
  assert.match(await page.locator('#exam-clock').innerText(),/120:00|119:5/);
  await page.locator('[data-question="30"]').click();
@@ -104,7 +110,7 @@ try{
  assert.equal(result.score,-.25);
  await page.goto('http://127.0.0.1:3011/#/analytics');await page.locator('#analytics-exam-filter').waitFor();
  await page.locator('#analytics-exam-filter').selectOption('group2');
- await page.getByText('Topics to revisit',{exact:true}).count();
+ await page.locator('#analytics-exam-filter').waitFor();
  assert.equal(await page.locator('#analytics-exam-filter').inputValue(),'group2');
  assert.deepEqual(errors,[]);
  console.log('PASS: Group 2 launch → answer → reload → score → bookmark → saved review; independent RRB/TET countdowns; mobile dark layout; RRB timeout; SBI section locking. Firebase is stubbed, not live-tested.');
