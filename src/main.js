@@ -71,7 +71,7 @@ async function router() {
   }
 
   // Check if mock test is active and user wants to navigate away
-  if (MockTest.isTesting && hashPath !== '/mock-test') {
+  if (MockTest.isTesting && (hashPath !== '/mock-test'||new URLSearchParams(location.hash.split('?')[1]||'').has('attempt'))) {
     if (!confirm("An exam is currently in progress. Leaving now will forfeit all progress. Are you sure you want to exit?")) {
       window.location.hash = '#/mock-test';
       return;

@@ -1,3 +1,4 @@
+import {getAttemptRecords} from '../utils/attemptRepository.js';
 import {readStored} from '../utils/safeStorage.js';
 import {renderAnswerInputs,readAnswer,answerLabel,renderQuestionContext} from '../components/QuestionView.js';
 import {evaluateAnswer} from '../utils/examEngine.js';
@@ -12,7 +13,7 @@ export const MockTest = {
   startExam({examId, questions, title, full=true, minutes}) {
     const errors=validatePaper(examId,questions,full);
     if(errors.length) { showToast(errors.slice(0,3).join(' · '),'error'); return false; }
-    this.stop(); this.result=null;
+    this.stop(); this.result=null;this.resultError=null;this.reviewFilter='all';
     const duration=full?EXAMS[examId].minutes:(minutes??EXAMS[examId].minutes);
     if(!Number.isFinite(duration)||duration<=0){showToast('Invalid test duration','error');return false;}
     this.pending={examId,questions,title,full,minutes:duration,ruleVersion:EXAMS[examId].version,ownerId:auth.currentUser?.uid};
@@ -21,7 +22,11 @@ export const MockTest = {
     if(document.getElementById('exam-root')) this.refresh();
     return true;
   },
+  reviewId(){return new URLSearchParams(location.hash.split('?')[1]||'').get('attempt');},
   render() {
+    const requested=this.reviewId();
+    if(requested&&this.result?.id!==requested&&!this.resultError)return '<section id="exam-root" class="workspace-loading" role="status">Loading your result…</section>';
+    if(this.resultError)return '<section id="exam-root" class="exam-hub"><h1>Result unavailable</h1><p>Your result may not be saved on this device or account. Check your connection and attempt history.</p><a href="#/analytics">Open attempt history</a></section>';
     if(this.result) {
       const r=this.result;
       return `<section id="exam-root" class="exam-hub"><h1>Exam complete</h1><h2>${h(r.scope)}</h2><div class="exam-card"><strong>${r.score.toFixed(2)} / ${r.totalPossibleMarks}</strong><p>${r.correctCount} correct · ${r.wrongCount} wrong · ${r.skippedCount} unanswered</p><p>Marks deducted: ${r.negativeMarks.toFixed(2)} · Attempted-question accuracy: ${r.accuracy.toFixed(1)}%</p><p role="status">${h(this.saveMessage||'Saved on this device.')}</p><div class="button-row"><button id="retry-save">Retry cloud sync</button><button id="export-result">Export result</button></div></div><a href="#/${r.examId==='group2'?'group2':r.examId==='rrb'?'rrb-station-master':r.examId==='tet'?'tet-exams':r.examId==='sbi'?'sbi-clerk':'gate'}">Return to preparation</a><h2>Answer review</h2>${r.responses.map((q,i)=>`<details class="exam-card"><summary>${i+1}. ${h(q.question)} — ${q.status} (${q.earnedMarks.toFixed(2)})</summary>${q.passage?`<blockquote>${h(q.passage)}</blockquote>`:""}${q.table?`<pre>${h(q.table)}</pre>`:""}${renderFigure(q.figure)}<p>Your answer: ${h(this.answerLabel(q,q.userAnswer))}</p><p>Correct answer: ${h(this.answerLabel(q,q.type==='NAT'?(q.correctNat??`${q.natMin} to ${q.natMax}`):q.type==='MSQ'?q.correctOptions:q.correctAnswer))}</p><p>${h(q.explanation||'Explanation not supplied.')}</p>${q.source?.startsWith('https://')?`<p><a href="${h(q.source)}" target="_blank" rel="noopener">Question source</a>${q.asOf?' · checked '+h(q.asOf):''}</p>`:`<small>${h(q.source||'Source not supplied')}</small>`}<button data-bookmark="${h(q.id)}">Bookmark / remove bookmark</button></details>`).join('')}</section>`;
@@ -33,7 +38,13 @@ export const MockTest = {
     const q=this.questions[this.currentIdx], a=this.answers[q.id], type=q.type||'MCQ';
     return `<section id="exam-root" class="exam-hub"><header class="exam-toolbar"><div><h1>${h(this.pending.title)}</h1><p>${h(q.section||q.subject)} · Question ${this.currentIdx+1}/${this.questions.length} · ${q.marks} mark(s)</p></div><strong id="exam-clock" role="timer">${this.clockText()}</strong></header><div class="exam-card">${renderQuestionContext(q)}<h2>${h(q.question)}</h2>${renderAnswerInputs(q,a,{numericId:'nat-answer'})}<div class="exam-toolbar"><button id="previous-question">Previous</button><button id="clear-answer">Clear answer</button><button id="mark-review">${this.review[q.id]?'Unmark':'Mark'} for review</button><button id="next-question">Save & next</button></div></div><details class="exam-navigation" open><summary>Question navigator <span>Jump to a question</span></summary><nav class="exam-palette" aria-label="Question navigation">${this.questions.map((item,i)=>`<button data-question="${i}" ${this.allowed(i)?'':'disabled'} class="${i===this.currentIdx?'current':''} ${this.answers[item.id]!==undefined?'answered':''} ${this.review[item.id]?'review':''}" aria-label="Question ${i+1}${this.answers[item.id]!==undefined?', answered':''}${this.review[item.id]?', marked for review':''}">${i+1}</button>`).join('')}</nav></details><p>Green: answered · Purple border: marked for review · Outlined: current question</p><button id="submit-exam">Submit test</button><p id="exam-error" role="alert"></p></section>`;
   },
-  init() {
+  async init() {
+    const requested=this.reviewId();
+    if(requested&&this.result?.id!==requested){
+      if(this.restoringReview)return;this.restoringReview=true;
+      try{const {attempts}=await getAttemptRecords();this.result=attempts.find(a=>a.id===requested&&Array.isArray(a.responses));this.ownerId=auth.currentUser?.uid;this.pending=null;if(!this.result)this.resultError=true;}catch{this.resultError=true;}
+      finally{this.restoringReview=false;this.refresh();}return;
+    }
     document.getElementById('begin-exam')?.addEventListener('click',()=>this.begin());
     document.querySelectorAll('[data-answer]').forEach(el=>el.addEventListener('change',()=>{
       if(!this.canAnswer())return;
@@ -82,6 +93,7 @@ export const MockTest = {
     const result={...scorePaper(examId,this.questions,this.answers),examId,ruleVersion:EXAMS[examId].version,mode:this.pending.full?'full':'practice',scope:this.pending.title,timeSpentSeconds:Math.min(this.pending.minutes*60,Math.floor((Date.now()-this.startedAt)/1000)),timestamp:new Date().toISOString(),userId:auth.currentUser?.uid};
     this.stop();this.result=result;
     try{const key=`exam-results:${auth.currentUser?.uid}`;const rows=readStored(key,[]);result.id=crypto.randomUUID();rows.push(result);localStorage.setItem(key,JSON.stringify(rows));localStorage.removeItem(this.storageKey());this.saveMessage='Saved on this device; syncing attempt history.';}catch{this.saveMessage='Device storage failed. Keep this review open until sync completes.';}
+    if(result.id)history.replaceState(null,'','#/mock-test?attempt='+encodeURIComponent(result.id));
     this.refresh();
     await this.saveResult();
   },

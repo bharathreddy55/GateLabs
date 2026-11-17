@@ -65,6 +65,8 @@ try{
  assert.equal(await page.locator('[data-target]').inputValue(),'2027-01-15');
  await page.locator('[data-prep-tab=progress]').click();
  await page.locator('[data-attempt]').first().click();await page.getByRole('heading',{name:'Exam complete',exact:true}).waitFor();
+ assert.match(await page.evaluate(()=>location.hash),/attempt=/);
+ await page.reload();await page.getByRole('heading',{name:'Exam complete',exact:true}).waitFor();
  await page.goto('http://127.0.0.1:3011/#/rrb-station-master');await page.locator('#prep-rrb').waitFor();
  assert.match(await page.locator('[data-countdown="rrb"]').innerText(),/Awaiting official/);
  assert.equal(await page.locator('[data-target]').inputValue(),'');
