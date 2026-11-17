@@ -46,6 +46,9 @@ const go=async route=>{await page.goto('http://127.0.0.1:3011/#/'+route);await r
 try{
  await go('formulas');
  await page.locator('.katex').first().waitFor();
+ const disclosure=page.locator('.formula-card summary').first();await disclosure.focus();await page.keyboard.press('Enter');assert.equal(await page.locator('.formula-card details').first().getAttribute('open'),'');await page.keyboard.press('Enter');
+ assert.ok(await page.locator('.formula-card').first().evaluate(el=>el.offsetHeight<450));
+ assert.equal(await page.getByRole('textbox',{name:'Search formulas'}).count(),1);
  const result=await page.evaluate(async()=>{
  const {loadPdfDocument}=await import('/src/utils/documentLibraries.js');
  const parts=['%PDF-1.4\n'];const offsets=[0];

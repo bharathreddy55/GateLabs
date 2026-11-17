@@ -321,7 +321,7 @@ Used to PROVE a language is NOT regular by contradiction (e.g. L = {a^n b^n | n 
             <div class="flex gap-2">
               <div class="relative flex-1">
                 <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-slate-400 text-xs"></i>
-                <input type="text" id="formula-search" placeholder="Search formulas..." value="${h(this.searchQuery)}" class="glass-input pl-9 text-xs font-semibold">
+                <input type="text" id="formula-search" aria-label="Search formulas" placeholder="Search formulas..." value="${h(this.searchQuery)}" class="glass-input pl-9 text-xs font-semibold">
               </div>
               <button id="btn-open-custom-formula" type="button" class="px-4 py-2.5 rounded-2xl btn-accent text-white text-xs font-bold shadow-md hover:scale-105 active:scale-95 transition-all flex items-center gap-1.5 flex-shrink-0">
                 <i class="fa-solid fa-plus"></i> Add Card
@@ -426,37 +426,7 @@ Used to PROVE a language is NOT regular by contradiction (e.g. L = {a^n b^n | n 
   },
 
   renderFormulaCard(card) {
-    const isFlipped = !!this.flippedCards[card.id];
-    return `
-      <div class="perspective-1000 min-h-[19rem] cursor-pointer group" data-cardid="${h(card.id)}">
-        <div class="relative w-full h-full duration-500 transform-style-3d transition-transform ${isFlipped ? 'rotate-y-180' : ''}">
-          <!-- Front -->
-          <div class="absolute inset-0 bento-card p-6 flex flex-col justify-between backface-hidden border border-slate-200/70 dark:border-white/[0.08] group-hover:border-[var(--accent-from)]/50 transition-all">
-            <div class="flex items-center justify-between border-b border-slate-100 dark:border-white/[0.04] pb-3">
-              <span class="inline-flex items-center gap-1.5 text-[10px] font-bold accent-text uppercase tracking-wider bg-[var(--accent-soft)] px-2.5 py-1 rounded-xl">
-                <i class="${h(card.icon)}"></i> ${h(card.subject)}
-              </span>
-              <span class="text-[10px] font-bold text-amber-500">${h(card.weightage)}</span>
-            </div>
-            <div class="my-auto py-4">
-              <span class="text-[10px] font-bold uppercase text-slate-400 tracking-wider">${h(card.topic)}</span>
-              <h4 class="font-display font-extrabold text-base text-slate-900 dark:text-white">${h(card.concept)}</h4>
-              <div class="mt-4 p-3 rounded-2xl bg-black/5 dark:bg-white/5 font-mono text-xs text-slate-700 dark:text-slate-300 katex-render" data-latex="${h(card.mathLatex)}">
-                ${h(card.mathLatex)}
-              </div>
-            </div>
-          </div>
-          <!-- Back -->
-          <div class="absolute inset-0 bento-card p-6 flex flex-col justify-between backface-hidden rotate-y-180 bg-[#0a0f1d] text-white border border-[var(--accent-from)]/40 shadow-2xl">
-            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-              <span class="text-[10px] font-extrabold accent-text uppercase tracking-wider">Formula</span>
-              <button class="copy-formula-btn h-7 px-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-xs font-bold" data-formula="${encodeURIComponent(card.formula)}">Copy</button>
-            </div>
-            <div class="my-auto overflow-y-auto font-mono text-xs text-slate-200 whitespace-pre-line py-2">${h(card.formula)}</div>
-          </div>
-        </div>
-      </div>
-    `;
+    return `<article class="surface formula-card" data-cardid="${h(card.id)}"><header><span>${h(card.subject)}</span><small>${h(card.weightage)}</small></header><p class="muted">${h(card.topic)}</p><h3>${h(card.concept)}</h3><div class="formula-expression katex-render" data-latex="${h(card.mathLatex)}">${h(card.mathLatex)}</div><details><summary>Show explanation</summary><div class="formula-explanation">${h(card.formula)}</div><button class="ui-button copy-formula-btn" data-formula="${encodeURIComponent(card.formula)}">Copy explanation</button></details></article>`;
   },
 
   init() {
@@ -528,24 +498,6 @@ Used to PROVE a language is NOT regular by contradiction (e.g. L = {a^n b^n | n 
     }
 
     // 3D Card flip handler
-    document.querySelectorAll('[data-cardid]').forEach(cardDom => {
-      cardDom.addEventListener('click', (e) => {
-        // Prevent flip if clicking copy button
-        if (e.target.closest('.copy-formula-btn')) return;
-
-        const id = cardDom.getAttribute('data-cardid');
-        this.flippedCards[id] = !this.flippedCards[id];
-        const innerFlip = cardDom.querySelector('.transform-style-3d');
-        if (innerFlip) {
-          if (this.flippedCards[id]) {
-            innerFlip.classList.add('rotate-y-180');
-          } else {
-            innerFlip.classList.remove('rotate-y-180');
-          }
-        }
-      });
-    });
-
     // Copy formula to clipboard handler
     document.querySelectorAll('.copy-formula-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
