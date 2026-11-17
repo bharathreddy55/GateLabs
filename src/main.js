@@ -114,7 +114,7 @@ async function router() {
 
   // Render view
   try {
-    if (route.requiresAuth) {
+    if (route.requiresAuth || (currentUser && route.name==='about')) {
       const loading='<div class="workspace-loading" role="status"><span></span> Opening your workspace…</div>';
       if(!document.getElementById('sidebar-container')){
         appContainer.innerHTML=Layout.render(loading,route.name);

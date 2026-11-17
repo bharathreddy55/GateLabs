@@ -37,3 +37,10 @@ body,.app-shell,.landing-workspace{font-family:Inter,-apple-system,BlinkMacSyste
 .paper-filters{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:20px;align-items:end}.paper-filters label{font-size:13px;display:grid;gap:6px}.paper-filters select{min-height:44px;padding:8px;border:1px solid var(--ws-border);border-radius:8px;background:var(--ws-panel)}.paper-provenance summary{font-size:13px;cursor:pointer;padding:10px 0}.paper-card .muted{font-size:13px;line-height:1.6}
 .prep-tab-strip{display:flex;align-items:stretch;position:relative}.prep-tab-strip .prep-tabs{flex:1;min-width:0}.tab-continuation{display:none;flex-shrink:0;width:44px;color:var(--ws-primary);background:var(--ws-panel);border-left:1px solid var(--ws-border)}
 @media(max-width:700px){.tab-continuation{display:block}.prep-tab-strip:after{content:'';pointer-events:none;position:absolute;right:44px;top:0;bottom:0;width:18px;background:linear-gradient(90deg,transparent,var(--ws-bg))}}
+/* Shared reading sizes and surfaces for legacy study tools. */
+#sub-page-container .glass-panel,#sub-page-container .glass-card,#sub-page-container .bento-card{background:var(--ws-panel);color:var(--ws-text);border:1px solid var(--ws-border);border-radius:var(--ws-radius);box-shadow:none}
+.workspace-page p,.surface p{font-size:14px;line-height:1.7}.workspace-page .muted,.surface .muted{font-size:13px}
+#sub-page-container [class~="text-[9px]"],#sub-page-container [class~="text-[10px]"],#sub-page-container [class~="text-[11px]"]{font-size:12px}
+.ui-button,.prep-tabs button,.sidebar-link{min-height:44px}.sidebar-link{font-size:13px}.nav-group>p,.sidebar-settings,.profile-row small{font-size:12px}
+#sub-page-container .text-gradient-purple{background:none;color:var(--ws-text);-webkit-text-fill-color:currentColor}
+.about-exams{display:grid;gap:12px;margin-top:16px}.about-exams a{display:grid;gap:6px;border-bottom:1px solid var(--ws-border);padding:14px 0}.about-exams span{font-size:14px;color:var(--ws-muted)}.workspace-page ol{list-style:decimal;padding-left:22px;font-size:15px;line-height:1.9}
