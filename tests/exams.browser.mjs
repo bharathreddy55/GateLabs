@@ -46,6 +46,8 @@ try{
  await page.getByRole('button',{name:'Begin test',exact:true}).click();
  const [groupPaper]=JSON.parse(fs.readFileSync('public/exams/group2.json'));
  await page.locator(`[data-answer="${groupPaper.questions[0].correctAnswer}"]`).check();
+ assert.equal(await page.locator('[data-question="0"]').evaluate(el=>el.classList.contains('answered')),true);
+ assert.match(await page.locator('[data-question="0"]').getAttribute('aria-label'),/answered/);
  await page.getByRole('button',{name:'Save & next',exact:true}).click();
  await page.locator(`[data-answer="${(groupPaper.questions[1].correctAnswer+1)%4}"]`).check();
  await page.getByRole('button',{name:'Mark for review',exact:true}).click();
