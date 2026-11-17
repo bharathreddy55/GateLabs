@@ -9,7 +9,7 @@ export const NAV_GROUPS = [
   {label:'Your workspace',items:[['dashboard','Home','home'],['exams','Explore exams','grid']]},
   {label:'Exam preparation',items:EXAM_CATALOG.map(e=>[e.route,e.short,'book'])},
   {label:'Study & review',items:[['practice','Question practice','edit'],['analytics','Results & mistakes','chart'],['formulas','Formula notes','file'],['assistant','Study assistant','spark']]},
-  {label:'More',items:[['study-planner','Study planner & backup','calendar'],['community','Community','users'],['about','About GateLabs','info']]}
+  {label:'More',items:[['study-planner','Study planner & backup','calendar'],['community','Personal study notes','users'],['about','About GateLabs','info']]}
 ];
 export const PAGE_TITLES=Object.fromEntries(NAV_GROUPS.flatMap(g=>g.items.map(([route,title])=>[route,title])));
 Object.assign(PAGE_TITLES,{'mock-test':'Exam room','pyq-mocks':'GATE paper library',gate:'GATE CS & IT'});

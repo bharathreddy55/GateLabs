@@ -669,54 +669,7 @@ const mockFirestore = {
       resolve(badges);
     });
   },
-  async getCommunityPosts() {
-    return new Promise((resolve) => {
-      const posts = readStored(personalStorageKey('gate_community_posts'),[]);
-      if (posts.length === 0) {
-        const defaultPosts = [
-          {
-            id: 'post_1',
-            title: 'GATE 2027 Strategy: How to balance College with GATE Prep?',
-            author: 'Ananya Sharma',
-            authorTitle: 'Aspirant',
-            authorInitial: 'A',
-            category: 'General Strategy',
-            content: 'I am currently in my 3rd year of B.Tech. I want to prepare for GATE 2027 CS, but the college schedule is extremely hectic. What should be the ideal daily schedule for preparation?',
-            timestamp: new Date(Date.now() - 1000 * 60 * 60 * 5).toISOString(),
-            upvotes: 12,
-            upvoted: false,
-            replies: [
-              {
-                id: 'reply_1_1',
-                author: 'Rohan Verma',
-                authorTitle: 'GATE 2025 AIR 246',
-                authorInitial: 'R',
-                content: 'Dedicate 2 hours in the morning for high-weightage topics like Data Structures & Algorithms, and keep weekends strictly for full-length practice and solving PYQs.',
-                timestamp: new Date(Date.now() - 1000 * 60 * 60 * 3).toISOString()
-              }
-            ]
-          },
-          {
-            id: 'post_2',
-            title: 'Doubt in TOC: Number of states in minimal DFA for binary string ending in 01',
-            author: 'Vikram Singh',
-            authorTitle: 'Aspirant',
-            authorInitial: 'V',
-            category: 'Theory of Computation',
-            content: 'Could someone explain why the minimal DFA for accepting binary strings ending with "01" requires 3 states? I keep drawing it with 4 states.',
-            timestamp: new Date(Date.now() - 1000 * 60 * 60 * 12).toISOString(),
-            upvotes: 8,
-            upvoted: false,
-            replies: []
-          }
-        ];
-        localStorage.setItem(personalStorageKey('gate_community_posts'), JSON.stringify(defaultPosts));
-        resolve(defaultPosts);
-      } else {
-        resolve(posts);
-      }
-    });
-  },
+  async getCommunityPosts(){return readStored(personalStorageKey('gate_community_posts'),[]);},
   async saveCommunityPost(post) {
     return new Promise((resolve) => {
       const posts = readStored(personalStorageKey('gate_community_posts'),[]);
@@ -972,54 +925,7 @@ const realFirestore = {
       resolve(badges);
     });
   },
-  async getCommunityPosts() {
-    return new Promise((resolve) => {
-      const posts = readStored(personalStorageKey('gate_community_posts'),[]);
-      if (posts.length === 0) {
-        const defaultPosts = [
-          {
-            id: 'post_1',
-            title: 'GATE 2027 Strategy: How to balance College with GATE Prep?',
-            author: 'Ananya Sharma',
-            authorTitle: 'Aspirant',
-            authorInitial: 'A',
-            category: 'General Strategy',
-            content: 'I am currently in my 3rd year of B.Tech. I want to prepare for GATE 2027 CS, but the college schedule is extremely hectic. What should be the ideal daily schedule for preparation?',
-            timestamp: new Date(Date.now() - 1000 * 60 * 60 * 5).toISOString(),
-            upvotes: 12,
-            upvoted: false,
-            replies: [
-              {
-                id: 'reply_1_1',
-                author: 'Rohan Verma',
-                authorTitle: 'GATE 2025 AIR 246',
-                authorInitial: 'R',
-                content: 'Dedicate 2 hours in the morning for high-weightage topics like Data Structures & Algorithms, and keep weekends strictly for full-length practice and solving PYQs.',
-                timestamp: new Date(Date.now() - 1000 * 60 * 60 * 3).toISOString()
-              }
-            ]
-          },
-          {
-            id: 'post_2',
-            title: 'Doubt in TOC: Number of states in minimal DFA for binary string ending in 01',
-            author: 'Vikram Singh',
-            authorTitle: 'Aspirant',
-            authorInitial: 'V',
-            category: 'Theory of Computation',
-            content: 'Could someone explain why the minimal DFA for accepting binary strings ending with "01" requires 3 states? I keep drawing it with 4 states.',
-            timestamp: new Date(Date.now() - 1000 * 60 * 60 * 12).toISOString(),
-            upvotes: 8,
-            upvoted: false,
-            replies: []
-          }
-        ];
-        localStorage.setItem(personalStorageKey('gate_community_posts'), JSON.stringify(defaultPosts));
-        resolve(defaultPosts);
-      } else {
-        resolve(posts);
-      }
-    });
-  },
+  async getCommunityPosts(){return readStored(personalStorageKey('gate_community_posts'),[]);},
   async saveCommunityPost(post) {
     return new Promise((resolve) => {
       const posts = readStored(personalStorageKey('gate_community_posts'),[]);

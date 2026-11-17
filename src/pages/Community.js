@@ -118,22 +118,22 @@ export const Community = {
     }).join('');
 
     return `
-      <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 animate-fade-in pb-12">
+      <div class="workspace-page"><header class="page-heading"><div><span class="eyebrow">Saved on this device</span><h1>Personal study notes</h1><p>Your account’s local doubts and study notes. These are not shared with other users. Include them in your backup.</p></div></header><div class="grid grid-cols-1 gap-6 pb-12">
         
         <!-- Main Forum Column -->
-        <div class="lg:col-span-3 flex flex-col gap-5">
+        <div class="flex flex-col gap-5">
           <!-- Top Control Panel -->
           <div class="glass-panel p-5 rounded-3xl border border-slate-200/60 dark:border-white/[0.07] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             
             <!-- Search bar -->
             <div class="relative flex-1">
               <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
-              <input type="text" id="forum-search-input" value="${h(this.searchQuery)}" placeholder="Search doubts, queries, topics..." class="w-full pl-10 pr-4 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-950/20 border border-slate-200/60 dark:border-white/10 text-slate-900 dark:text-white placeholder-slate-450 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 font-semibold transition-all">
+              <input type="text" id="forum-search-input" aria-label="Search personal study notes" value="${h(this.searchQuery)}" placeholder="Search doubts, queries, topics..." class="w-full pl-10 pr-4 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-950/20 border border-slate-200/60 dark:border-white/10 text-slate-900 dark:text-white placeholder-slate-450 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 font-semibold transition-all">
             </div>
 
             <!-- Action: Ask doubt -->
             <button id="btn-open-doubt-modal" class="px-5 py-2.5 rounded-xl btn-accent text-white text-xs font-bold shadow-md hover:scale-102 active:scale-95 transition-all flex items-center justify-center gap-1.5 select-none">
-              <i class="fa-solid fa-plus text-xs"></i> Post a Doubt
+              <i class="fa-solid fa-plus text-xs"></i> Add a study note
             </button>
           </div>
 
@@ -147,70 +147,14 @@ export const Community = {
             ${filteredPosts.length === 0 
               ? `<div class="text-center py-16 glass-panel rounded-3xl">
                    <i class="fa-solid fa-comments text-slate-400 text-3xl mb-3 block"></i>
-                   <p class="text-xs text-slate-500 font-bold">No discussions found matching filters.</p>
+                   <p class="text-xs text-slate-500 font-bold">No notes yet. Add a question or concept you want to revisit.</p>
                  </div>`
               : postsHtml
             }
           </div>
         </div>
 
-        <!-- Leaderboard / Stats Sidebar Column -->
-        <div class="lg:col-span-1 flex flex-col gap-6">
-          <!-- Active Doubt Solvers Leaderboard -->
-          <div class="glass-panel p-5 rounded-3xl border border-slate-200/60 dark:border-white/[0.07] flex flex-col gap-4">
-            <div class="flex items-center gap-2 pb-2 border-b border-slate-100 dark:border-white/[0.04]">
-              <i class="fa-solid fa-trophy text-amber-500"></i>
-              <h4 class="font-display font-extrabold text-xs uppercase tracking-wider text-slate-900 dark:text-white leading-none">Top Doubt Solvers</h4>
-            </div>
-
-            <div class="flex flex-col gap-3.5">
-              <div class="flex items-center justify-between gap-3">
-                <div class="flex items-center gap-3">
-                  <span class="text-xs font-bold text-slate-400">1</span>
-                  <div class="h-8 w-8 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-xs font-extrabold">R</div>
-                  <div>
-                    <p class="text-[11px] font-extrabold text-slate-900 dark:text-white leading-none">Rohan Verma</p>
-                    <p class="text-[9px] text-slate-400 mt-1 font-semibold">AIR 246 &bull; 42 Solved</p>
-                  </div>
-                </div>
-                <span class="text-[10px] font-bold text-primary-500">1,240 pts</span>
-              </div>
-
-              <div class="flex items-center justify-between gap-3">
-                <div class="flex items-center gap-3">
-                  <span class="text-xs font-bold text-slate-400">2</span>
-                  <div class="h-8 w-8 rounded-xl bg-slate-300/20 text-slate-500 flex items-center justify-center text-xs font-extrabold">A</div>
-                  <div>
-                    <p class="text-[11px] font-extrabold text-slate-900 dark:text-white leading-none">Ananya Sharma</p>
-                    <p class="text-[9px] text-slate-400 mt-1 font-semibold">Aspirant &bull; 28 Solved</p>
-                  </div>
-                </div>
-                <span class="text-[10px] font-bold text-primary-500">890 pts</span>
-              </div>
-
-              <div class="flex items-center justify-between gap-3">
-                <div class="flex items-center gap-3">
-                  <span class="text-xs font-bold text-slate-400">3</span>
-                  <div class="h-8 w-8 rounded-xl bg-amber-700/10 text-amber-700 flex items-center justify-center text-xs font-extrabold">A</div>
-                  <div>
-                    <p class="text-[11px] font-extrabold text-slate-900 dark:text-white leading-none">Amit Das</p>
-                    <p class="text-[9px] text-slate-400 mt-1 font-semibold">Aspirant &bull; 15 Solved</p>
-                  </div>
-                </div>
-                <span class="text-[10px] font-bold text-primary-500">620 pts</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Community Guidelines Info Widget -->
-          <div class="glass-panel p-5 rounded-3xl border border-slate-200/60 dark:border-white/[0.07] bg-gradient-to-br from-primary-500/5 to-indigo-500/5 flex flex-col gap-3">
-            <h4 class="font-display font-extrabold text-[11px] uppercase tracking-wider text-slate-900 dark:text-white">Community Mentor</h4>
-            <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed font-semibold">
-              Post detailed equations, concepts, or code. Click **"Ask AI Mentor"** to prompt Gemini for quick mathematical resolutions.
-            </p>
-          </div>
-        </div>
-
+</div>
         <!-- Post Doubt Modal -->
         <div id="doubt-post-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/50 dark:bg-black/80 backdrop-blur-md hidden animate-fade-in px-4">
           <div class="w-full max-w-lg glass-panel p-7 rounded-3xl relative border border-slate-200 dark:border-white/10 shadow-2xl text-slate-900 dark:text-white">
@@ -239,7 +183,7 @@ export const Community = {
               </div>
 
               <button type="submit" class="w-full mt-2 py-3 rounded-xl btn-accent text-white font-bold text-xs shadow-md active:scale-95 transition-all">
-                Publish doubt to Community
+                Save personal note
               </button>
             </form>
           </div>
