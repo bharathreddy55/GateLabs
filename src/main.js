@@ -1,3 +1,4 @@
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import {storageRecoveryEntries,clearStorageRecovery} from './utils/safeStorage.js';
 import { setStorageUser } from './utils/userStorage.js';
 import { WorkspaceHome, ExamLibrary } from './pages/WorkspaceHome.js';

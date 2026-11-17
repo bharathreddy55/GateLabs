@@ -1,3 +1,4 @@
+import {renderMath} from '../utils/documentLibraries.js';
 import {auth} from '../config/firebase';
 import {escapeHtml as h} from '../utils/examEngine.js';
 import {renderStudyText} from '../utils/studyText.js';
@@ -8,6 +9,7 @@ export const Assistant={
   render(){return `<section class="workspace-page assistant-workspace"><header class="page-heading"><div><span class="eyebrow">Study support</span><h1>Study assistant</h1><p>Work through concepts and questions. Check important answers against your study material.</p></div><button class="ui-button" id="assistant-settings">AI settings</button></header><div class="notice" role="status">${getApiKey()?'AI provider connected. Responses may contain mistakes.':'No AI provider connected. Add your own key in AI settings before asking a question.'}</div>${this.error?`<div class="notice" role="alert">${h(this.error)}${this.lastPrompt&&getApiKey()?'<button id="retry-assistant">Retry question</button>':''}</div>`:''}<div id="chat-messages-container" class="surface assistant-messages" aria-live="polite">${this.messages.map(m=>this.renderMessageBubble(m)).join('')}${this.pending?'<p role="status">Getting a response…</p>':''}</div><form id="assistant-form" class="surface assistant-compose"><label for="assistant-input">Your question</label><div class="button-row"><input id="assistant-input" type="text" value="${h(this.draft)}" placeholder="Ask a question or paste a problem…" ${this.pending?'disabled':''} required><button class="ui-button primary" type="submit" ${this.pending?'disabled':''}>${this.pending?'Waiting…':'Send'}</button></div></form></section>`;},
   renderMessageBubble(msg){return `<article class="assistant-message ${msg.role==='user'?'from-user':''}"><strong>${msg.role==='user'?'You':'Study assistant'}</strong><div class="study-rich">${msg.role==='user'?h(msg.text):renderStudyText(msg.text)}</div></article>`;},
   init(){
+    renderMath();
     document.getElementById('assistant-settings')?.addEventListener('click',()=>document.getElementById('settings-btn')?.click());
     document.getElementById('assistant-form')?.addEventListener('submit',event=>{event.preventDefault();this.send(document.getElementById('assistant-input').value);});
     document.getElementById('retry-assistant')?.addEventListener('click',()=>this.send(this.lastPrompt));

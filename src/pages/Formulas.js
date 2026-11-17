@@ -1,3 +1,4 @@
+import {renderMath} from '../utils/documentLibraries.js';
 import {readStored} from '../utils/safeStorage.js';
 import { userStorageKey } from '../utils/userStorage.js';
 import { escapeHtml as h } from '../utils/examEngine.js';
@@ -461,18 +462,7 @@ Used to PROVE a language is NOT regular by contradiction (e.g. L = {a^n b^n | n 
   init() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
-    if (window.katex) {
-      document.querySelectorAll('.katex-render').forEach(elem => {
-        const latex = elem.getAttribute('data-latex');
-        if (latex) {
-          try {
-            window.katex.render(latex, elem, { throwOnError: false, displayMode: false });
-          } catch (e) {
-            console.warn("KaTeX render error:", e);
-          }
-        }
-      });
-    }
+    renderMath();
 
     const modal = document.getElementById('custom-formula-modal');
     const btnOpen = document.getElementById('btn-open-custom-formula');

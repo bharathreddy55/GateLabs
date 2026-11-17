@@ -1,3 +1,4 @@
+import {loadPdfDocument} from '../utils/documentLibraries.js';
 import {renderAnswerInputs,readAnswer,answerLabel,renderQuestionContext} from '../components/QuestionView.js';
 import {evaluateAnswer} from '../utils/examEngine.js';
 import {parseExamText,validateStudyQuestion,questionId} from '../utils/parseExamText.js';
@@ -721,7 +722,7 @@ export const Practice = {
   async processPdfBuffer(buffer, filename) {
     try {
       this.updateStatus('parsing', 20, "Extracting text using PDF.js library...");
-      const pdf = await window.pdfjsLib.getDocument({ data: buffer }).promise;
+      const pdf = await loadPdfDocument(buffer);
       let text = '';
 
       // Parse ALL pages — no artificial cap
@@ -746,6 +747,7 @@ export const Practice = {
         this.updateStatus('parsing', prog, `Extracted page ${i}/${totalPages}...`);
       }
 
+      await pdf.destroy();
       this.extractedText = text;
 
       // Proceed to ingest/generate questions from the text
