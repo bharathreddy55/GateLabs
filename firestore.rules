@@ -5,7 +5,8 @@ service cloud.firestore {
     function owns(data) { return signedIn() && data.userId == request.auth.uid; }
     match /attempts/{attemptId} {
       allow create: if owns(request.resource.data) && request.resource.data.id == attemptId;
-      allow read, delete: if owns(resource.data);
+      allow read: if owns(resource.data);
+      allow delete: if signedIn() && (resource == null || owns(resource.data));
       allow update: if owns(resource.data) && owns(request.resource.data) && request.resource.data.id == attemptId;
     }
     match /users/{uid} {

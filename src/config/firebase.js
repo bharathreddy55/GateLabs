@@ -568,19 +568,7 @@ const mockFirestore = {
     });
   },
 
-  async deleteAttempt(attemptId) {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        const list = readStored(attemptStorageKey(),[]);
-        const updated = list.filter(a => a.id !== attemptId);
-      const resultsKey='exam-results:'+(auth.currentUser?.uid||'anonymous');
-      const results=readStored(resultsKey,[]);
-      localStorage.setItem(resultsKey,JSON.stringify(results.filter(a=>a.id!==attemptId)));
-        localStorage.setItem(attemptStorageKey(), JSON.stringify(updated));
-        resolve(true);
-      }, 200);
-    });
-  },
+  async deleteAttempt(attemptId){const uid=auth.currentUser?.uid||'anonymous';const archived=await readAttemptArchive(uid,{required:true});if(archived.some(row=>row.id===attemptId)&&!await deleteArchivedAttempt(uid,attemptId))throw Error('Device deletion failed. Retry before leaving this result.');for(const key of ['gate_attempts:'+uid,'exam-results:'+uid])localStorage.setItem(key,JSON.stringify(readStored(key,[]).filter(row=>row.id!==attemptId)));return true;},
 
   async addQuestion(question){return (await storeCustomQuestions([question]))[0];},
   async addQuestions(questions){return storeCustomQuestions(questions);},
@@ -825,12 +813,13 @@ const realFirestore = {
 
   async deleteAttempt(attemptId){
     const uid=auth.currentUser?.uid||'anonymous';
+    const archived=await readAttemptArchive(uid,{required:true});
     // Keep the recoverable copy when the remote deletion is rejected or offline.
     if(firestore&&auth.currentUser){const {deleteDoc}=await import('firebase/firestore');await boundedWrite(deleteDoc(doc(firestore,'attempts',attemptId)));}
+    if(archived.some(row=>row.id===attemptId)&&!await deleteArchivedAttempt(uid,attemptId))throw Error('The cloud copy was deleted, but device deletion failed. Retry to remove the retained copy.');
     for(const key of ['gate_attempts:'+uid,'exam-results:'+uid]){
       const rows=readStored(key,[]);localStorage.setItem(key,JSON.stringify(rows.filter(a=>a.id!==attemptId)));
     }
-    await deleteArchivedAttempt(uid,attemptId);
     return true;
   },
 

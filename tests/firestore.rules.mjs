@@ -20,5 +20,7 @@ try{
  await assertSucceeds(getDoc(doc(guest,'questions','q1')));
  await assertFails(setDoc(doc(alice,'connection_tests','test'),{status:'connected'}));
  await assertSucceeds(deleteDoc(doc(alice,'attempts','a1')));
+ await assertSucceeds(deleteDoc(doc(alice,'attempts','not-synced-yet')));
+ await assertFails(deleteDoc(doc(guest,'attempts','not-synced-yet')));
  console.log('PASS Firestore owner isolation, safe queries, publisher authorization and default denial');
 }finally{await env.cleanup();}
