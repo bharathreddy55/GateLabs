@@ -14,10 +14,11 @@ export function validateStudyQuestion(q){
   }
   return errors;
 }
-export function questionId(q){let hash=2166136261;for(const c of `${q.subject||''}\n${q.question}`)hash=Math.imul(hash^c.charCodeAt(0),16777619)>>>0;return 'q_text_'+hash.toString(16);}
+export function questionId(q){let hash=2166136261;for(const c of JSON.stringify([q.subject,q.type,q.passage,q.table,q.question,q.options]))hash=Math.imul(hash^c.charCodeAt(0),16777619)>>>0;return 'q_text_'+hash.toString(16);}
 export function parseExamText(text,examId){
   const canonical=String(text).replace(/^\s*(?:Question|Ques|Q)[.\s-]*(\d+)\s*[.):]\s*/gim,'Q$1: ').replace(/^\s*(\d+)[.)]\s+(?=[A-Z])/gm,'Q$1: ').replace(/^\s*\(([A-E])\)\s*/gim,'option $1: ').replace(/^(?:Ans|Correct Answer)\s*[:.-]\s*\(?([A-E])\)?\s*$/gim,'correct: $1');
   const blocks=canonical.includes('---')?canonical.split(/---/):canonical.split(/(?=^Q\d+[:.])/m),questions=[];
+  let sharedContext=null;
   for(const block of blocks){
     if(!block.trim())continue;
     const q={type:'MCQ',marks:1,question:'',options:[],correctAnswer:null,topic:'Imported practice',explanation:'',subject:''};
@@ -38,6 +39,15 @@ export function parseExamText(text,examId){
     else if(q.type==='MSQ'&&key!==null){const values=key.replace(/[\[\]]/g,'').split(/[ ,;]+/).filter(Boolean).map(index);if(values.every(i=>i!==null))q.correctOptions=values;}
     else if(key!==null)q.correctAnswer=index(key);
     if(!q.subject&&EXAMS[examId]){let end=0;for(const [name,count] of EXAMS[examId].sections){end+=count;if(questions.length<end){q.subject=name;break;}}}
+    const number=questions.length+1;
+    const direction=block.match(/question:\s*Directions?\s*\((\d+)\s*[-–]\s*(\d+)\)\s*:\s*([\s\S]*?)(?=\noption [a-e]:)/i);
+    if(direction){
+      const chunks=direction[3].trim().split(/\n\s*\n/);
+      const passage='Directions ('+direction[1]+'–'+direction[2]+'): '+(chunks.length>1?chunks.slice(0,-1).join('\n\n'):chunks[0]);
+      sharedContext={start:Number(direction[1]),end:Number(direction[2]),passage};
+      if(chunks.length>1)q.question=chunks.at(-1).trim();
+    }
+    if(!q.passage&&sharedContext&&number>=sharedContext.start&&number<=sharedContext.end)q.passage=sharedContext.passage;
     q.id=questionId(q);questions.push(q);
   }
   return EXAMS[examId]?normaliseQuestions(examId,questions):questions;

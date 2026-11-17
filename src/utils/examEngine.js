@@ -11,8 +11,9 @@ export function validatePaper(examId, questions, full = true) {
     if (!q.id || ids.has(q.id)) errors.push(`${label}: missing or duplicate ID`);
     ids.add(q.id);
     const text = typeof q.question === 'string' ? q.question.trim() : '';
-    if (!text || texts.has(text)) errors.push(`${label}: empty or duplicate text`);
-    texts.add(text);
+    const fingerprint=JSON.stringify([text,q.passage||'',q.table||'',q.options||[]]);
+    if (!text || texts.has(fingerprint)) errors.push(`${label}: empty or duplicate question and context`);
+    texts.add(fingerprint);
     const type = q.type || 'MCQ';
     if (!['MCQ','MSQ','NAT'].includes(type) || (examId !== 'gate' && type !== 'MCQ')) errors.push(`${label}: invalid question type`);
     if (type !== 'NAT' && (!Array.isArray(q.options) || ![4,...(examId==='sbi'?[5]:[])].includes(q.options.length) || Array.from(q.options).some(o => typeof o!=='string'||!o.trim()) || new Set(q.options).size!==q.options.length)) errors.push(`${label}: incomplete or duplicate options`);
