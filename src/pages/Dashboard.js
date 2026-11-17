@@ -1,3 +1,4 @@
+import {exportBackup,parseBackup,importBackup} from '../utils/backup.js';
 import {renderAnswerInputs,readAnswer,answerLabel,renderQuestionContext} from '../components/QuestionView.js';
 import {evaluateAnswer} from '../utils/examEngine.js';
 import { userStorageKey } from '../utils/userStorage.js';
@@ -939,14 +940,7 @@ export const Dashboard = {
     } else if (this.activeTab === 'backup') {
       // Backup handlers
       document.getElementById('btn-export-backup')?.addEventListener('click', () => {
-        const backupData = {
-          version: '1.0',
-          exportedAt: new Date().toISOString(),
-          syllabusProgress: JSON.parse(localStorage.getItem(userStorageKey('gate_syllabus_progress')) || '{}'),
-          bookmarks: JSON.parse(localStorage.getItem(userStorageKey('gate_bookmarks')) || '[]'),
-          attempts: JSON.parse(localStorage.getItem('gate_attempts:'+(auth.currentUser?.uid||'anonymous')) || '[]'),
-          customFormulas: JSON.parse(localStorage.getItem(userStorageKey('gate_custom_formulas')) || '[]')
-        };
+        let backupData;try{backupData=exportBackup(auth.currentUser.uid);}catch(error){showToast(error.message,'error');return;}
 
         const jsonStr = JSON.stringify(backupData, null, 2);
         const blob = new Blob([jsonStr], { type: 'application/json' });
@@ -971,16 +965,14 @@ export const Dashboard = {
         const reader = new FileReader();
         reader.onload = (event) => {
           try {
-            const data = JSON.parse(event.target.result);
-            if (data.syllabusProgress) localStorage.setItem(userStorageKey('gate_syllabus_progress'), JSON.stringify(data.syllabusProgress));
-            if (data.bookmarks) localStorage.setItem(userStorageKey('gate_bookmarks'), JSON.stringify(data.bookmarks));
-            if (data.attempts) localStorage.setItem('gate_attempts:'+(auth.currentUser?.uid||'anonymous'), JSON.stringify(data.attempts));
-            if (data.customFormulas) localStorage.setItem(userStorageKey('gate_custom_formulas'), JSON.stringify(data.customFormulas));
-
-            showToast("Backup restored successfully! 🎉", "success");
+            const data=parseBackup(JSON.parse(event.target.result));
+            const names=Object.keys(data.entries);
+            if(!confirm('Restore '+names.length+' data groups from '+(data.owner||'this backup')+' into your current account? Existing arrays are merged. AI keys are not included.'))return;
+            const count=importBackup(data,auth.currentUser.uid);
+            showToast('Restored '+count+' data groups into this account.','success');
             this.refresh();
           } catch (err) {
-            showToast("Failed to restore backup: Invalid JSON file", "error");
+            showToast("Restore failed: "+err.message, "error");
           }
         };
         reader.readAsText(file);
