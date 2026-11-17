@@ -1,3 +1,4 @@
+import {parseExamText,validateStudyQuestion,questionId} from '../utils/parseExamText.js';
 import { escapeHtml as h } from '../utils/examEngine.js';
 import { db, SUBJECT_SYLLABUS } from '../config/firebase';
 import { showToast } from '../utils/toast';
@@ -692,6 +693,7 @@ export const Practice = {
       importAllBtn?.addEventListener('click', async () => {
         if (this.parsedQuestions.length === 0) return;
         try {
+          if(this.parsedQuestions.some(q=>validateStudyQuestion(q).length))throw new Error('Every imported question must have complete options and a verified key.');
           await db.addQuestions(this.parsedQuestions);
           showToast(`Successfully imported ${this.parsedQuestions.length} questions into the pool!`, "success");
           this.parsedQuestions = [];
@@ -841,7 +843,7 @@ Your task:
 1. Extract EVERY multiple-choice question (MCQ) present in this text segment. Do NOT skip any.
 2. For questions where options are labelled (A) (B) (C) (D) or 1 2 3 4, extract them as the options array.
 3. If the correct answer is indicated (e.g. "Answer: B" or "Ans: 2"), use it as correctAnswer (0-indexed integer).
-4. If the correct answer is NOT given, set correctAnswer to 0 as a placeholder.
+4. If the correct answer is NOT given, set correctAnswer to null. Do not invent an answer.
 5. If no complete MCQ is found in this segment, return an empty array [].
 
 Return ONLY a valid JSON array with this exact schema — no markdown, no explanation:
@@ -921,7 +923,9 @@ Return ONLY a valid JSON array — no markdown:
         throw new Error("No questions could be extracted. The PDF may not contain MCQs or the text is unreadable.");
       }
 
-      this.parsedQuestions = allQuestions;
+      this.quarantinedQuestions=allQuestions.filter(q=>validateStudyQuestion({...q,marks:Number(q.marks),type:q.type||'MCQ'}).length);
+      this.parsedQuestions=allQuestions.filter(q=>!this.quarantinedQuestions.includes(q)).map(q=>({...q,id:q.id||questionId(q),type:q.type||'MCQ',marks:Number(q.marks)}));
+      if(this.quarantinedQuestions.length)showToast(this.quarantinedQuestions.length+' questions need verified keys or options and were not imported.','warning');
       showToast(generateMore
         ? `AI generated ${allQuestions.length} new questions!`
         : `Extracted ${allQuestions.length} questions from PDF ✓`,
@@ -941,241 +945,12 @@ Return ONLY a valid JSON array — no markdown:
     }
   },
 
-  localRegexParse(text) {
-    // ═══════════════════════════════════════════════════════════════════
-    //  SMART GATE-FORMAT LOCAL PARSER  (no API key required)
-    //  Handles the most common GATE PYQ / study-material PDF structures:
-    //
-    //  Pattern A — Numbered with labelled options:
-    //    Q.1  Which of the following...?
-    //    (A) opt1  (B) opt2  (C) opt3  (D) opt4
-    //    Ans: (B)
-    //
-    //  Pattern B — Plain numbered:
-    //    1. Which of the following...?
-    //    (a) opt1  (b) opt2  (c) opt3  (d) opt4
-    //    Answer: C
-    //
-    //  Pattern C — Section-numbered:
-    //    Q25. Consider the following...
-    //    A) opt1   B) opt2   C) opt3   D) opt4
-    // ═══════════════════════════════════════════════════════════════════
-
-    // ── Step 1: Detect subject from keywords ──────────────────────────
-    const lowerText = text.toLowerCase();
-    const detectSubject = (t) => {
-      if (t.includes('database') || t.includes('dbms') || t.includes('sql') || t.includes('relational') || t.includes('normalization')) return ['Databases (DBMS)', 'SQL & Normalization'];
-      if (t.includes('network') || t.includes('tcp') || t.includes('udp') || t.includes('ip address') || t.includes('routing')) return ['Computer Networks (CN)', 'Protocols & Routing'];
-      if (t.includes('automata') || t.includes('dfa') || t.includes('nfa') || t.includes('grammar') || t.includes('turing') || t.includes('pushdown')) return ['Theory of Computation (TOC)', 'Automata & Languages'];
-      if (t.includes('process') || t.includes('deadlock') || t.includes('semaphore') || t.includes('scheduling') || t.includes('paging') || t.includes('virtual memory')) return ['Operating Systems', 'Process Management'];
-      if (t.includes('algorithm') || t.includes('complexity') || t.includes('sorting') || t.includes('dynamic programming') || t.includes('graph traversal')) return ['Algorithms', 'Algorithm Design'];
-      if (t.includes('data structure') || t.includes('tree') || t.includes('linked list') || t.includes('stack') || t.includes('queue') || t.includes('heap')) return ['Data Structures', 'Trees & Graphs'];
-      if (t.includes('cache') || t.includes('pipeline') || t.includes('instruction set') || t.includes('risc') || t.includes('cisc') || t.includes('bus')) return ['Computer Organization & Architecture (COA)', 'Pipelining & Cache'];
-      if (t.includes('compiler') || t.includes('lexical') || t.includes('parsing') || t.includes('code generation') || t.includes('symbol table')) return ['Compiler Design', 'Parsing & Code Gen'];
-      if (t.includes('matrix') || t.includes('eigenvalue') || t.includes('probability') || t.includes('differential') || t.includes('calculus') || t.includes('set theory')) return ['Engineering Mathematics', 'Linear Algebra & Calculus'];
-      if (t.includes('digital') || t.includes('logic gate') || t.includes('boolean') || t.includes('flip flop') || t.includes('karnaugh')) return ['Digital Logic (DL)', 'Boolean Algebra'];
-      if (t.includes('software') || t.includes('agile') || t.includes('sdlc') || t.includes('testing') || t.includes('uml')) return ['Software Engineering', 'SDLC & Testing'];
-      if (t.includes('c programming') || t.includes('pointer') || t.includes('struct ') || t.includes('malloc') || t.includes('recursion')) return ['Programming & DS', 'C & Recursion'];
-      return ['General CS', 'Mixed Topics'];
-    };
-    const [subject, topic] = detectSubject(lowerText);
-
-    const detectDifficulty = (qText) => {
-      const l = qText.toLowerCase();
-      if (l.includes('consider') || l.includes('following statements') || l.includes('which of the following is true')) return 'Medium';
-      if (l.includes('minimum') || l.includes('maximum') || l.includes('optimal') || l.includes('worst case') || l.includes('how many')) return 'Hard';
-      return 'Easy';
-    };
-
-    const detectMarks = (qText) => {
-      if (qText.toLowerCase().includes('consider') || qText.length > 200) return 2;
-      return 1;
-    };
-
-    // ── Step 2: Parse year from text header ──────────────────────────
-    const yearMatch = text.match(/\b(20\d{2})\b/);
-    const baseYear = yearMatch ? parseInt(yearMatch[1]) : 2024;
-
-    // ── Step 3: Split text into lines & normalise ──────────────────────
-    const lines = text.split(/\n/).map(l => l.trim()).filter(Boolean);
-
-    // ── Step 4: State-machine parser ─────────────────────────────────
-    //  States: IDLE → READING_QUESTION → READING_OPTIONS → DONE
-    const questions = [];
-
-    // Regex patterns for question starters
-    const qStartPatterns = [
-      /^Q\s*[\.\-\s]?\s*(\d+)\s*[\.\):]?\s+(.+)/i,   // Q.1, Q1, Q-1, Q 1
-      /^(\d+)\s*[\.\)]\s+(.+)/,                         // 1. or 1)
-      /^Question\s+(\d+)\s*[\.\:]?\s*(.+)/i,            // Question 1:
-      /^Ques\s*[\.\-]?\s*(\d+)\s*[\.\):]?\s*(.+)/i,    // Ques.1
-    ];
-
-    // Regex patterns for options
-    const optPatterns = [
-      /^\s*\(([A-Da-d])\)\s*(.+)/,     // (A) text
-      /^\s*([A-Da-d])\s*[\.\)]\s*(.+)/, // A. text  or  A) text
-      /^\s*\(([1-4])\)\s*(.+)/,         // (1) text
-      /^\s*([1-4])\s*[\.\)]\s*(.+)/,    // 1. text  or  1) text
-    ];
-
-    // Regex for answer line
-    const answerPatterns = [
-      /^(?:ans(?:wer)?|correct\s+(?:answer|option|choice))\s*[\:\-\.]?\s*\(?([A-Da-d1-4])\)?/i,
-      /^(?:key|solution)\s*[\:\-\.]?\s*\(?([A-Da-d1-4])\)?/i,
-    ];
-
-    const letterToIndex = { a: 0, b: 1, c: 2, d: 3, '1': 0, '2': 1, '3': 2, '4': 3 };
-
-    let currentQ = null;
-
-    const saveQuestion = () => {
-      if (!currentQ || !currentQ.question || currentQ.question.length < 10) return;
-      // Pad missing options with placeholders
-      while (currentQ.options.length < 4) {
-        currentQ.options.push(`Option ${String.fromCharCode(65 + currentQ.options.length)}`);
-      }
-      questions.push({ ...currentQ });
-      currentQ = null;
-    };
-
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-
-      // ── Check for answer line ────────────────────────────────────
-      if (currentQ) {
-        let ansFound = false;
-        for (const ap of answerPatterns) {
-          const am = line.match(ap);
-          if (am) {
-            const letter = am[1].toLowerCase();
-            currentQ.correctAnswer = letterToIndex[letter] ?? 0;
-            ansFound = true;
-            break;
-          }
-        }
-        if (ansFound) continue;
-      }
-
-      // ── Check for option line ────────────────────────────────────
-      if (currentQ) {
-        let optFound = false;
-        for (const op of optPatterns) {
-          const om = line.match(op);
-          if (om) {
-            const optText = om[2].trim();
-            if (optText.length > 0 && currentQ.options.length < 4) {
-              currentQ.options.push(optText);
-              optFound = true;
-              break;
-            }
-          }
-        }
-        // Options can also be on the same line as each other: "(A) x  (B) y  (C) z  (D) w"
-        if (!optFound && currentQ && currentQ.options.length === 0) {
-          const inlineOpts = line.match(/\(([A-Da-d])\)\s*([^(]{1,80})/g);
-          if (inlineOpts && inlineOpts.length >= 2) {
-            inlineOpts.forEach(o => {
-              const m = o.match(/\(([A-Da-d])\)\s*(.+)/);
-              if (m && currentQ.options.length < 4) currentQ.options.push(m[2].trim());
-            });
-            optFound = true;
-          }
-        }
-        if (optFound) continue;
-      }
-
-      // ── Check for new question start ─────────────────────────────
-      let newQFound = false;
-      for (const qp of qStartPatterns) {
-        const qm = line.match(qp);
-        if (qm) {
-          saveQuestion(); // save previous
-          let qText = qm[2] ? qm[2].trim() : '';
-
-          // Absorb continuation lines until we hit an option or blank
-          let j = i + 1;
-          while (j < lines.length) {
-            const nextLine = lines[j];
-            const isOpt = optPatterns.some(op => nextLine.match(op));
-            const isNewQ = qStartPatterns.some(qp2 => nextLine.match(qp2));
-            const isAns = answerPatterns.some(ap => nextLine.match(ap));
-            const hasInlineOpts = /\([A-Da-d]\)\s/.test(nextLine);
-            if (isOpt || isNewQ || isAns || hasInlineOpts || nextLine.length === 0) break;
-            qText += ' ' + nextLine;
-            j++;
-          }
-          i = j - 1; // advance outer loop
-
-          currentQ = {
-            subject,
-            topic,
-            difficulty: detectDifficulty(qText),
-            marks: detectMarks(qText),
-            year: baseYear,
-            question: qText.trim(),
-            options: [],
-            correctAnswer: 0,
-            explanation: `Extracted directly from PDF using local GATE-format parser (no API key required).`
-          };
-          newQFound = true;
-          break;
-        }
-      }
-      if (newQFound) continue;
-
-      // ── Absorb trailing question text (multi-line question body) ──
-      if (currentQ && currentQ.options.length === 0 && line.length > 5) {
-        // Append if it looks like continuation (not an option, not an answer)
-        const isOpt = optPatterns.some(op => line.match(op));
-        const isAns = answerPatterns.some(ap => line.match(ap));
-        if (!isOpt && !isAns) {
-          currentQ.question += ' ' + line;
-        }
-      }
-    }
-
-    saveQuestion(); // save last question
-
-    // ── Step 5: If structural parse found nothing, try sentence parse ──
-    if (questions.length === 0) {
-      const qSentences = [];
-      const sentenceRe = /([^.!?\n]{25,350}(?:which|how|what|when|where|why|find|determine|calculate|consider)[^.!?\n]{0,200}[?])/gi;
-      let sm;
-      while ((sm = sentenceRe.exec(text)) !== null) {
-        const q = sm[1].trim();
-        if (q && !qSentences.includes(q)) qSentences.push(q);
-      }
-
-      qSentences.forEach((q, idx) => {
-        questions.push({
-          subject, topic,
-          difficulty: detectDifficulty(q),
-          marks: detectMarks(q),
-          year: baseYear - (idx % 3),
-          question: q,
-          options: [
-            'Option A — see original PDF for choices',
-            'Option B — see original PDF for choices',
-            'Option C — see original PDF for choices',
-            'Option D — see original PDF for choices',
-          ],
-          correctAnswer: 0,
-          explanation: 'Options could not be automatically parsed. Please refer to the original PDF. For full extraction, configure a Gemini API key in sidebar → Config.'
-        });
-      });
-    }
-
-    const total = questions.length;
-    if (total > 0) {
-      showToast(`📄 Local parser extracted ${total} question${total > 1 ? 's' : ''} (no API key used)`, 'success');
-    } else {
-      showToast('Could not find structured MCQs. PDF may use images/scanned text. Try a Gemini API key for better results.', 'warning');
-    }
-
-    return questions;
+  localRegexParse(text){
+    const parsed=parseExamText(text);this.quarantinedQuestions=parsed.filter(q=>validateStudyQuestion(q).length);
+    const accepted=parsed.filter(q=>!validateStudyQuestion(q).length);
+    if(this.quarantinedQuestions.length)showToast(this.quarantinedQuestions.length+' incomplete questions held back: add verified options and keys.','warning');
+    return accepted;
   },
-
 
   updateStatus(status, progress, message) {
     this.ingestStatus = status;

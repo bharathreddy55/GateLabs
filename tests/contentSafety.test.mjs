@@ -1,3 +1,4 @@
+import {parseExamText,validateStudyQuestion,questionId} from '../src/utils/parseExamText.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -6,7 +7,7 @@ import { escapeHtml } from '../src/utils/examEngine.js';
 
 async function page(name,db={}) {
   const context=vm.createContext({console,localStorage:{getItem:()=>null},window:{location:{hash:''}},Date,JSON,Math,URLSearchParams});
-  const exports={userStorageKey:k=>k+':test',db,auth:{currentUser:{uid:'test'}},SUBJECT_SYLLABUS:{},escapeHtml,showToast(){},getTheme:()=> 'light',getApiKey:()=>null,generateContent(){},Chart:class{}};
+  const exports={parseExamText,validateStudyQuestion,questionId,userStorageKey:k=>k+':test',db,auth:{currentUser:{uid:'test'}},SUBJECT_SYLLABUS:{},escapeHtml,showToast(){},getTheme:()=> 'light',getApiKey:()=>null,generateContent(){},Chart:class{}};
   const dependency=new vm.SyntheticModule(Object.keys(exports),function(){for(const [k,v] of Object.entries(exports))this.setExport(k,v);},{context});
   const module=new vm.SourceTextModule(fs.readFileSync(`src/pages/${name}.js`,'utf8'),{context});
   await module.link(()=>dependency);await module.evaluate();return module.namespace[name];
