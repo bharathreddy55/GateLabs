@@ -1,3 +1,4 @@
+import { escapeHtml as h } from '../utils/examEngine.js';
 import { db, SUBJECT_SYLLABUS } from '../config/firebase';
 import { showToast } from '../utils/toast';
 import { getApiKey, generateContent } from '../utils/aiService';
@@ -183,27 +184,27 @@ export const Practice = {
               </div>
 
               ${this.questions.map((q, index) => `
-                <div class="glass-panel p-6 rounded-3xl flex flex-col gap-4 hover:shadow-lg transition-all duration-300" data-qid="${q.id}">
+                <div class="glass-panel p-6 rounded-3xl flex flex-col gap-4 hover:shadow-lg transition-all duration-300" data-qid="${h(q.id)}">
                   <!-- Question metadata -->
                   <div class="flex items-center justify-between border-b border-slate-100 dark:border-white/[0.04] pb-3.5">
-                    <span class="text-xs font-bold text-primary-600 dark:text-primary-400 uppercase tracking-wider">${q.subject} &bull; ${q.topic}</span>
+                    <span class="text-xs font-bold text-primary-600 dark:text-primary-400 uppercase tracking-wider">${h(q.subject)} &bull; ${h(q.topic)}</span>
                     <div class="flex gap-2 flex-wrap">
-                      <span class="text-[10px] font-bold bg-slate-100 dark:bg-slate-950/40 border border-slate-200/20 dark:border-white/[0.03] px-2.5 py-1 rounded-lg text-slate-500 dark:text-slate-400 font-semibold">${q.difficulty}</span>
-                      <span class="text-[10px] font-bold bg-indigo-50 dark:bg-indigo-950/20 border border-indigo-200/20 px-2.5 py-1 rounded-lg text-indigo-650 dark:text-indigo-400 font-semibold">${q.marks} Mark${q.marks > 1 ? 's' : ''}</span>
-                      ${q.year ? `<span class="text-[10px] font-bold bg-amber-50 dark:bg-amber-950/20 border border-amber-200/20 px-2.5 py-1 rounded-lg text-amber-650 dark:text-amber-400 font-semibold">GATE ${q.year}</span>` : ''}
+                      <span class="text-[10px] font-bold bg-slate-100 dark:bg-slate-950/40 border border-slate-200/20 dark:border-white/[0.03] px-2.5 py-1 rounded-lg text-slate-500 dark:text-slate-400 font-semibold">${h(q.difficulty)}</span>
+                      <span class="text-[10px] font-bold bg-indigo-50 dark:bg-indigo-950/20 border border-indigo-200/20 px-2.5 py-1 rounded-lg text-indigo-650 dark:text-indigo-400 font-semibold">${h(q.marks)} Mark${q.marks > 1 ? 's' : ''}</span>
+                      ${q.year ? `<span class="text-[10px] font-bold bg-amber-50 dark:bg-amber-950/20 border border-amber-200/20 px-2.5 py-1 rounded-lg text-amber-650 dark:text-amber-400 font-semibold">GATE ${h(q.year)}</span>` : ''}
                       ${q.id.startsWith('q_imp_') ? `<span class="text-[10px] font-bold bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-250/25 px-2.5 py-1 rounded-lg text-emerald-650 dark:text-emerald-400 font-semibold"><i class="fa-solid fa-wand-magic-sparkles mr-0.5 animate-pulse"></i> Ingested</span>` : ''}
                     </div>
                   </div>
                   
                   <!-- Question Body -->
-                  <p class="text-slate-800 dark:text-slate-200 text-sm font-semibold leading-relaxed whitespace-pre-line">Q${index + 1}. ${q.question}</p>
+                  <p class="text-slate-800 dark:text-slate-200 text-sm font-semibold leading-relaxed whitespace-pre-line">Q${index + 1}. ${h(q.question)}</p>
                   
                   <!-- Options selection list -->
                   <div class="flex flex-col gap-2.5 mt-2">
                     ${q.options.map((opt, optIdx) => `
                       <label class="glass-card flex items-start gap-3 p-3.5 rounded-2xl border border-slate-200 dark:border-white/[0.04] bg-white/40 dark:bg-slate-900/20 hover:bg-slate-100/50 dark:hover:bg-slate-800/30 transition-all cursor-pointer relative">
-                        <input type="radio" name="option-${q.id}" value="${optIdx}" class="mt-0.5 text-primary-600 border-slate-350 focus:ring-primary-500 bg-white/50 dark:bg-slate-950/40">
-                        <span class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed font-semibold">${String.fromCharCode(65 + optIdx)}. ${opt}</span>
+                        <input type="radio" name="option-${h(q.id)}" value="${optIdx}" class="mt-0.5 text-primary-600 border-slate-350 focus:ring-primary-500 bg-white/50 dark:bg-slate-950/40">
+                        <span class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed font-semibold">${String.fromCharCode(65 + optIdx)}. ${h(opt)}</span>
                       </label>
                     `).join('')}
                   </div>
@@ -213,10 +214,10 @@ export const Practice = {
                     <button class="check-answer-btn px-5.5 py-2.5 rounded-xl bg-slate-900 dark:bg-slate-100 hover:bg-slate-800 dark:hover:bg-white text-white dark:text-slate-900 text-xs font-bold transition-all shadow-md active:scale-98 hover:scale-102 duration-150">
                       Check Answer
                     </button>
-                    <button class="eli5-btn px-4 py-2.5 rounded-xl border border-indigo-500/30 bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-500/20 text-xs font-bold transition-all active:scale-95 flex items-center gap-1.5" data-qid="${q.id}">
+                    <button class="eli5-btn px-4 py-2.5 rounded-xl border border-indigo-500/30 bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-500/20 text-xs font-bold transition-all active:scale-95 flex items-center gap-1.5" data-qid="${h(q.id)}">
                       <i class="fa-solid fa-wand-magic-sparkles text-indigo-500 animate-pulse"></i> Explain Like I'm 5
                     </button>
-                    <button class="bookmark-btn px-4 py-2.5 rounded-xl border border-slate-200 dark:border-white/[0.08] bg-white/20 dark:bg-slate-900/20 text-slate-650 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-850 text-xs font-bold transition-all active:scale-95 flex items-center gap-1.5" data-qid="${q.id}">
+                    <button class="bookmark-btn px-4 py-2.5 rounded-xl border border-slate-200 dark:border-white/[0.08] bg-white/20 dark:bg-slate-900/20 text-slate-650 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-850 text-xs font-bold transition-all active:scale-95 flex items-center gap-1.5" data-qid="${h(q.id)}">
                       <i class="${this.bookmarkedIds.has(q.id) ? 'fa-solid fa-bookmark text-amber-500 animate-bounce-short' : 'fa-regular fa-bookmark'}"></i> 
                       <span>${this.bookmarkedIds.has(q.id) ? 'Bookmarked' : 'Bookmark'}</span>
                     </button>
@@ -229,7 +230,7 @@ export const Practice = {
                     </div>
                     <div class="p-4 rounded-2xl bg-emerald-55/10 dark:bg-emerald-950/10 border border-emerald-100/40 dark:border-emerald-900/30 text-xs leading-relaxed text-slate-655 dark:text-slate-300 font-semibold">
                       <p class="font-bold text-slate-800 dark:text-slate-100">Correct Answer: Option <span class="correct-opt-char">A</span></p>
-                      <p class="mt-2 whitespace-pre-line explanation-text leading-relaxed font-sans">${q.explanation}</p>
+                      <p class="mt-2 whitespace-pre-line explanation-text leading-relaxed font-sans">${h(q.explanation)}</p>
                     </div>
                   </div>
 
@@ -239,7 +240,7 @@ export const Practice = {
                       <i class="fa-solid fa-lightbulb"></i> Simple Intuition (ELI5):
                     </p>
                     <p class="eli5-text text-slate-700 dark:text-slate-300 leading-relaxed font-sans">
-                      Imagine this concept like a line of people waiting for a bus. The processor serves one by one. ${q.explanation ? q.explanation.slice(0, 140) + '...' : ''}
+                      Imagine this concept like a line of people waiting for a bus. The processor serves one by one. ${q.explanation ? h(q.explanation.slice(0, 140)) + '...' : ''}
                     </p>
                   </div>
                 </div>
@@ -361,14 +362,14 @@ export const Practice = {
               ${this.parsedQuestions.map((q, idx) => `
                 <div class="glass-panel p-6 rounded-3xl flex flex-col gap-4 border-l-4 border-l-primary-500">
                   <div class="flex items-center justify-between border-b border-slate-100 dark:border-white/[0.04] pb-2.5">
-                    <span class="text-xs font-bold text-primary-600 dark:text-primary-400 uppercase tracking-wider">${q.subject} &bull; ${q.topic}</span>
+                    <span class="text-xs font-bold text-primary-600 dark:text-primary-400 uppercase tracking-wider">${h(q.subject)} &bull; ${h(q.topic)}</span>
                     <div class="flex gap-2">
-                      <span class="text-[10px] font-bold bg-slate-100 dark:bg-slate-950/40 border border-slate-200/20 dark:border-white/[0.03] px-2 py-0.5 rounded text-slate-500">${q.difficulty}</span>
-                      <span class="text-[10px] font-bold bg-indigo-50 dark:bg-indigo-950/20 border border-indigo-200/20 px-2 py-0.5 rounded text-indigo-600 dark:text-indigo-400">${q.marks} Marks</span>
+                      <span class="text-[10px] font-bold bg-slate-100 dark:bg-slate-950/40 border border-slate-200/20 dark:border-white/[0.03] px-2 py-0.5 rounded text-slate-500">${h(q.difficulty)}</span>
+                      <span class="text-[10px] font-bold bg-indigo-50 dark:bg-indigo-950/20 border border-indigo-200/20 px-2 py-0.5 rounded text-indigo-600 dark:text-indigo-400">${h(q.marks)} Marks</span>
                     </div>
                   </div>
                   
-                  <p class="text-slate-800 dark:text-slate-200 text-sm font-semibold">Q${idx + 1}. ${q.question}</p>
+                  <p class="text-slate-800 dark:text-slate-200 text-sm font-semibold">Q${idx + 1}. ${h(q.question)}</p>
                   
                   <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs font-semibold">
                     ${q.options.map((opt, optIdx) => {
@@ -378,7 +379,7 @@ export const Practice = {
                           isCorrect ? 'border-emerald-500 bg-emerald-50/10 dark:bg-emerald-950/10 text-emerald-600 dark:text-emerald-400' : 'border-slate-200 dark:border-white/[0.04] bg-white/40 dark:bg-slate-950/10'
                         }">
                           <span class="font-bold ${isCorrect ? 'text-emerald-500' : 'text-slate-400'}">${String.fromCharCode(65 + optIdx)}.</span>
-                          <span class="text-slate-700 dark:text-slate-300 leading-relaxed">${opt}</span>
+                          <span class="text-slate-700 dark:text-slate-300 leading-relaxed">${h(opt)}</span>
                         </div>
                       `;
                     }).join('')}
@@ -386,7 +387,7 @@ export const Practice = {
 
                   <div class="p-4 bg-slate-50 dark:bg-slate-950/20 rounded-2xl text-xs border border-slate-100 dark:border-white/[0.04]">
                     <p class="font-bold text-slate-850 dark:text-slate-100"><i class="fa-solid fa-square-check text-emerald-500 mr-1 animate-pulse"></i> Solution Explanation</p>
-                    <p class="text-slate-500 dark:text-slate-400 mt-1.5 leading-relaxed whitespace-pre-line">${q.explanation}</p>
+                    <p class="text-slate-500 dark:text-slate-400 mt-1.5 leading-relaxed whitespace-pre-line">${h(q.explanation)}</p>
                   </div>
                 </div>
               `).join('')}

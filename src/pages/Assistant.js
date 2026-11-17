@@ -1,3 +1,4 @@
+import { escapeHtml as h } from '../utils/examEngine.js';
 import { db, SUBJECT_SYLLABUS } from '../config/firebase';
 import { showToast } from '../utils/toast';
 import { getApiKey, generateContent } from '../utils/aiService';
@@ -73,7 +74,7 @@ export const Assistant = {
       return `
         <div class="flex justify-end items-end gap-2">
           <div class="max-w-[80%] bg-primary-500 text-white px-4 py-2.5 rounded-3xl rounded-br-none text-xs font-medium leading-relaxed shadow-sm whitespace-pre-line">
-            ${msg.text}
+            ${h(msg.text)}
           </div>
         </div>
       `;
@@ -84,7 +85,7 @@ export const Assistant = {
           <i class="fa-solid fa-robot"></i>
         </div>
         <div class="max-w-[85%] glass-card p-4 rounded-3xl rounded-tl-none border border-slate-200/40 dark:border-white/[0.05] bg-white/70 dark:bg-[#121a2b]/70 text-slate-800 dark:text-slate-200 text-xs leading-relaxed whitespace-pre-line font-medium shadow-sm">
-          ${msg.text}
+          ${h(msg.text)}
         </div>
       </div>
     `;

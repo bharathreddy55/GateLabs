@@ -1,3 +1,4 @@
+import { escapeHtml as h } from '../utils/examEngine.js';
 import { countdownCard, bindCountdowns } from '../components/ExamCountdown.js';
 import { db, auth, SUBJECT_SYLLABUS } from '../config/firebase';
 import { Chart } from 'chart.js/auto';
@@ -805,22 +806,22 @@ export const Dashboard = {
         ` : `
           <div class="flex flex-col gap-4">
             ${filtered.map((q, index) => `
-              <div class="glass-panel p-5 rounded-3xl flex flex-col gap-3.5 border border-slate-200/60 dark:border-white/[0.07]" data-qid="${q.id}">
+              <div class="glass-panel p-5 rounded-3xl flex flex-col gap-3.5 border border-slate-200/60 dark:border-white/[0.07]" data-qid="${h(q.id)}">
                 <div class="flex items-center justify-between border-b border-slate-200/40 dark:border-white/[0.05] pb-3">
-                  <span class="text-xs font-bold text-primary-500 uppercase tracking-wider">${q.subject} &bull; ${q.topic}</span>
+                  <span class="text-xs font-bold text-primary-500 uppercase tracking-wider">${h(q.subject)} &bull; ${h(q.topic)}</span>
                   <div class="flex gap-2 flex-wrap">
-                    <span class="text-[10px] font-bold bg-black/5 dark:bg-white/5 px-2.5 py-0.5 rounded-full text-slate-500 dark:text-slate-400">${q.difficulty}</span>
+                    <span class="text-[10px] font-bold bg-black/5 dark:bg-white/5 px-2.5 py-0.5 rounded-full text-slate-500 dark:text-slate-400">${h(q.difficulty)}</span>
                     <span class="text-[10px] font-bold bg-primary-500/10 text-primary-500 px-2.5 py-0.5 rounded-full">${q.marks} Mark${q.marks > 1 ? 's' : ''}</span>
                   </div>
                 </div>
 
-                <p class="text-slate-900 dark:text-white text-xs font-semibold leading-relaxed whitespace-pre-line">Q${index + 1}. ${q.question}</p>
+                <p class="text-slate-900 dark:text-white text-xs font-semibold leading-relaxed whitespace-pre-line">Q${index + 1}. ${h(q.question)}</p>
 
                 <div class="flex flex-col gap-2 mt-1">
                   ${q.options.map((opt, optIdx) => `
                     <label class="glass-card flex items-start gap-3 p-3 rounded-2xl border border-slate-200/40 dark:border-white/[0.05] bg-white/40 dark:bg-black/20 cursor-pointer relative">
-                      <input type="radio" name="bookmark-option-${q.id}" value="${optIdx}" class="mt-0.5 text-primary-500 border-slate-300 focus:ring-primary-500">
-                      <span class="text-xs text-slate-700 dark:text-slate-300 font-medium">${String.fromCharCode(65 + optIdx)}. ${opt}</span>
+                      <input type="radio" name="bookmark-option-${h(q.id)}" value="${optIdx}" class="mt-0.5 text-primary-500 border-slate-300 focus:ring-primary-500">
+                      <span class="text-xs text-slate-700 dark:text-slate-300 font-medium">${String.fromCharCode(65 + optIdx)}. ${h(opt)}</span>
                     </label>
                   `).join('')}
                 </div>
@@ -829,7 +830,7 @@ export const Dashboard = {
                   <button class="bookmark-check-btn px-5 py-2 rounded-full bg-primary-500 text-white text-xs font-bold shadow-md hover:scale-102 active:scale-95 transition-all">
                     Check Answer
                   </button>
-                  <button class="bookmark-delete-btn px-4 py-2 rounded-full border border-rose-500/30 bg-rose-500/10 text-rose-600 dark:text-rose-400 text-xs font-bold hover:bg-rose-500/20 active:scale-95 transition-all flex items-center gap-1.5" data-qid="${q.id}">
+                  <button class="bookmark-delete-btn px-4 py-2 rounded-full border border-rose-500/30 bg-rose-500/10 text-rose-600 dark:text-rose-400 text-xs font-bold hover:bg-rose-500/20 active:scale-95 transition-all flex items-center gap-1.5" data-qid="${h(q.id)}">
                     <i class="fa-solid fa-trash-can"></i> Remove
                   </button>
                 </div>
@@ -840,7 +841,7 @@ export const Dashboard = {
                   </div>
                   <div class="p-3.5 rounded-2xl bg-primary-500/10 border border-emerald-500/20 text-xs text-slate-700 dark:text-slate-300 whitespace-pre-line font-medium">
                     Correct option: <span class="bookmark-correct-char font-extrabold text-emerald-600 dark:text-emerald-400">N/A</span>.
-                    ${q.explanation || 'No explanation available.'}
+                    ${h(q.explanation || 'No explanation available.')}
                   </div>
                 </div>
               </div>

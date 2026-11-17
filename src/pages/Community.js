@@ -1,3 +1,4 @@
+import { escapeHtml as h } from '../utils/examEngine.js';
 import { db, auth } from '../config/firebase';
 import { showToast } from '../utils/toast';
 import { getApiKey, generateContent } from '../utils/aiService';
@@ -67,26 +68,26 @@ export const Community = {
             <!-- Author initial & category -->
             <div class="flex items-center gap-3">
               <div class="h-8 w-8 rounded-xl bg-gradient-to-tr from-primary-500/15 to-indigo-500/15 text-primary-500 flex items-center justify-center text-xs font-extrabold flex-shrink-0">
-                ${initial}
+                ${h(initial)}
               </div>
               <div>
-                <p class="text-[11px] font-extrabold text-slate-900 dark:text-white leading-none">${post.author}</p>
-                <p class="text-[9px] text-slate-400 mt-1 font-semibold">${post.authorTitle || 'Aspirant'} &bull; ${this.formatTimeAgo(post.timestamp)}</p>
+                <p class="text-[11px] font-extrabold text-slate-900 dark:text-white leading-none">${h(post.author)}</p>
+                <p class="text-[9px] text-slate-400 mt-1 font-semibold">${h(post.authorTitle || 'Aspirant')} &bull; ${this.formatTimeAgo(post.timestamp)}</p>
               </div>
             </div>
             
             <span class="px-2.5 py-1 rounded-lg text-[9px] font-bold bg-slate-100 dark:bg-slate-950/40 border border-slate-200/20 dark:border-white/[0.03] text-slate-505 dark:text-slate-400 uppercase tracking-wider">
-              ${post.category}
+              ${h(post.category)}
             </span>
           </div>
 
           <!-- Post Content -->
-          <div class="cursor-pointer view-post-thread" data-id="${post.id}">
+          <div class="cursor-pointer view-post-thread" data-id="${h(post.id)}">
             <h4 class="font-display font-extrabold text-sm sm:text-base text-slate-900 dark:text-white hover:text-primary-500 transition-colors leading-tight">
-              ${post.title}
+              ${h(post.title)}
             </h4>
             <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 line-clamp-2 leading-relaxed font-medium">
-              ${post.content}
+              ${h(post.content)}
             </p>
           </div>
 
@@ -97,18 +98,18 @@ export const Community = {
                 post.upvoted 
                   ? 'bg-primary-500/10 text-primary-500 border-primary-500/30 shadow-sm' 
                   : 'border-slate-200 dark:border-white/10 text-slate-500 dark:text-slate-400 hover:bg-black/5 dark:hover:bg-white/5'
-              }" data-id="${post.id}">
+              }" data-id="${h(post.id)}">
                 <i class="fa-solid fa-chevron-up"></i>
-                <span>${post.upvotes}</span>
+                <span>${h(post.upvotes)}</span>
               </button>
 
-              <button class="view-post-thread flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-slate-200 dark:border-white/10 text-slate-500 dark:text-slate-400 hover:bg-black/5 dark:hover:bg-white/5 text-xs font-extrabold select-none" data-id="${post.id}">
+              <button class="view-post-thread flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-slate-200 dark:border-white/10 text-slate-500 dark:text-slate-400 hover:bg-black/5 dark:hover:bg-white/5 text-xs font-extrabold select-none" data-id="${h(post.id)}">
                 <i class="fa-regular fa-comment"></i>
                 <span>${repliesCount} Replies</span>
               </button>
             </div>
 
-            <button class="ask-ai-mentor-btn px-3 py-1.5 rounded-xl bg-gradient-to-r from-primary-500 to-indigo-650 text-white text-[10px] font-bold shadow-md hover:scale-102 active:scale-95 transition-all flex items-center gap-1.5 select-none" data-id="${post.id}" data-title="${post.title}" data-content="${post.content}">
+            <button class="ask-ai-mentor-btn px-3 py-1.5 rounded-xl bg-gradient-to-r from-primary-500 to-indigo-650 text-white text-[10px] font-bold shadow-md hover:scale-102 active:scale-95 transition-all flex items-center gap-1.5 select-none" data-id="${h(post.id)}" data-title="${h(post.title)}" data-content="${h(post.content)}">
               <i class="fa-solid fa-sparkles animate-pulse"></i> Ask AI Mentor
             </button>
           </div>
@@ -127,7 +128,7 @@ export const Community = {
             <!-- Search bar -->
             <div class="relative flex-1">
               <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
-              <input type="text" id="forum-search-input" value="${this.searchQuery}" placeholder="Search doubts, queries, topics..." class="w-full pl-10 pr-4 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-950/20 border border-slate-200/60 dark:border-white/10 text-slate-900 dark:text-white placeholder-slate-450 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 font-semibold transition-all">
+              <input type="text" id="forum-search-input" value="${h(this.searchQuery)}" placeholder="Search doubts, queries, topics..." class="w-full pl-10 pr-4 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-950/20 border border-slate-200/60 dark:border-white/10 text-slate-900 dark:text-white placeholder-slate-450 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 font-semibold transition-all">
             </div>
 
             <!-- Action: Ask doubt -->
@@ -260,7 +261,7 @@ export const Community = {
       return `
         <div class="glass-panel p-5 rounded-2xl border border-slate-200/50 dark:border-white/[0.04] bg-slate-50/50 dark:bg-slate-950/10 flex gap-4">
           <div class="h-8 w-8 rounded-xl bg-gradient-to-tr from-primary-500/10 to-indigo-500/10 text-primary-500 flex items-center justify-center text-xs font-extrabold flex-shrink-0">
-            ${initial}
+            ${h(initial)}
           </div>
           <div class="flex-1 min-w-0">
             <div class="flex items-center justify-between gap-4 mb-2">
@@ -290,25 +291,25 @@ export const Community = {
           <div class="flex items-start justify-between gap-4">
             <div class="flex items-center gap-3">
               <div class="h-9 w-9 rounded-2xl bg-gradient-to-tr from-primary-500/15 to-indigo-500/15 text-primary-500 flex items-center justify-center text-xs font-extrabold flex-shrink-0">
-                ${post.authorInitial || 'A'}
+                ${h(post.authorInitial || 'A')}
               </div>
               <div>
-                <p class="text-xs font-extrabold text-slate-909 dark:text-white leading-none">${post.author}</p>
-                <p class="text-[10px] text-slate-400 mt-1 font-semibold">${post.authorTitle || 'Aspirant'} &bull; ${this.formatTimeAgo(post.timestamp)}</p>
+                <p class="text-xs font-extrabold text-slate-909 dark:text-white leading-none">${h(post.author)}</p>
+                <p class="text-[10px] text-slate-400 mt-1 font-semibold">${h(post.authorTitle || 'Aspirant')} &bull; ${this.formatTimeAgo(post.timestamp)}</p>
               </div>
             </div>
             
             <span class="px-2.5 py-1 rounded-lg text-[9px] font-bold bg-slate-100 dark:bg-slate-950/40 border border-slate-200/20 dark:border-white/[0.03] text-slate-500 dark:text-slate-450 uppercase tracking-wider">
-              ${post.category}
+              ${h(post.category)}
             </span>
           </div>
 
           <h3 class="font-display font-extrabold text-base sm:text-lg text-slate-900 dark:text-white leading-tight mt-1">
-            ${post.title}
+            ${h(post.title)}
           </h3>
           
           <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-350 leading-relaxed font-semibold whitespace-pre-line border-l-2 border-primary-500/50 pl-4 py-1">
-            ${post.content}
+            ${h(post.content)}
           </p>
 
           <div class="flex items-center justify-between border-t border-slate-100 dark:border-white/[0.04] pt-4 mt-2">
@@ -316,12 +317,12 @@ export const Community = {
               post.upvoted 
                 ? 'bg-primary-500/10 text-primary-500 border-primary-500/30' 
                 : 'border-slate-200 dark:border-white/10 text-slate-500 dark:text-slate-400 hover:bg-black/5 dark:hover:bg-white/5'
-            }" data-id="${post.id}">
+            }" data-id="${h(post.id)}">
               <i class="fa-solid fa-chevron-up"></i>
-              <span>${post.upvotes} Upvotes</span>
+              <span>${h(post.upvotes)} Upvotes</span>
             </button>
 
-            <button class="ask-ai-mentor-btn px-4 py-1.5 rounded-xl bg-gradient-to-r from-primary-500 to-indigo-650 text-white text-[10px] font-bold shadow-md hover:scale-102 active:scale-95 transition-all flex items-center gap-1.5 select-none" data-id="${post.id}" data-title="${post.title}" data-content="${post.content}">
+            <button class="ask-ai-mentor-btn px-4 py-1.5 rounded-xl bg-gradient-to-r from-primary-500 to-indigo-650 text-white text-[10px] font-bold shadow-md hover:scale-102 active:scale-95 transition-all flex items-center gap-1.5 select-none" data-id="${h(post.id)}" data-title="${h(post.title)}" data-content="${h(post.content)}">
               <i class="fa-solid fa-sparkles animate-pulse"></i> Solve with AI Mentor
             </button>
           </div>

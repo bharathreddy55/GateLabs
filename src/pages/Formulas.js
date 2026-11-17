@@ -1,3 +1,4 @@
+import { escapeHtml as h } from '../utils/examEngine.js';
 import { showToast } from '../utils/toast';
 
 export const Formulas = {
@@ -317,7 +318,7 @@ Used to PROVE a language is NOT regular by contradiction (e.g. L = {a^n b^n | n 
             <div class="flex gap-2">
               <div class="relative flex-1">
                 <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-slate-400 text-xs"></i>
-                <input type="text" id="formula-search" placeholder="Search formulas..." value="${this.searchQuery}" class="glass-input pl-9 text-xs font-semibold">
+                <input type="text" id="formula-search" placeholder="Search formulas..." value="${h(this.searchQuery)}" class="glass-input pl-9 text-xs font-semibold">
               </div>
               <button id="btn-open-custom-formula" type="button" class="px-4 py-2.5 rounded-2xl btn-accent text-white text-xs font-bold shadow-md hover:scale-105 active:scale-95 transition-all flex items-center gap-1.5 flex-shrink-0">
                 <i class="fa-solid fa-plus"></i> Add Card
@@ -424,21 +425,21 @@ Used to PROVE a language is NOT regular by contradiction (e.g. L = {a^n b^n | n 
   renderFormulaCard(card) {
     const isFlipped = !!this.flippedCards[card.id];
     return `
-      <div class="perspective-1000 min-h-[19rem] cursor-pointer group" data-cardid="${card.id}">
+      <div class="perspective-1000 min-h-[19rem] cursor-pointer group" data-cardid="${h(card.id)}">
         <div class="relative w-full h-full duration-500 transform-style-3d transition-transform ${isFlipped ? 'rotate-y-180' : ''}">
           <!-- Front -->
           <div class="absolute inset-0 bento-card p-6 flex flex-col justify-between backface-hidden border border-slate-200/70 dark:border-white/[0.08] group-hover:border-[var(--accent-from)]/50 transition-all">
             <div class="flex items-center justify-between border-b border-slate-100 dark:border-white/[0.04] pb-3">
               <span class="inline-flex items-center gap-1.5 text-[10px] font-bold accent-text uppercase tracking-wider bg-[var(--accent-soft)] px-2.5 py-1 rounded-xl">
-                <i class="${card.icon}"></i> ${card.subject}
+                <i class="${h(card.icon)}"></i> ${h(card.subject)}
               </span>
-              <span class="text-[10px] font-bold text-amber-500">${card.weightage}</span>
+              <span class="text-[10px] font-bold text-amber-500">${h(card.weightage)}</span>
             </div>
             <div class="my-auto py-4">
-              <span class="text-[10px] font-bold uppercase text-slate-400 tracking-wider">${card.topic}</span>
-              <h4 class="font-display font-extrabold text-base text-slate-900 dark:text-white">${card.concept}</h4>
-              <div class="mt-4 p-3 rounded-2xl bg-black/5 dark:bg-white/5 font-mono text-xs text-slate-700 dark:text-slate-300 katex-render" data-latex="${card.mathLatex}">
-                ${card.mathLatex}
+              <span class="text-[10px] font-bold uppercase text-slate-400 tracking-wider">${h(card.topic)}</span>
+              <h4 class="font-display font-extrabold text-base text-slate-900 dark:text-white">${h(card.concept)}</h4>
+              <div class="mt-4 p-3 rounded-2xl bg-black/5 dark:bg-white/5 font-mono text-xs text-slate-700 dark:text-slate-300 katex-render" data-latex="${h(card.mathLatex)}">
+                ${h(card.mathLatex)}
               </div>
             </div>
           </div>
@@ -448,7 +449,7 @@ Used to PROVE a language is NOT regular by contradiction (e.g. L = {a^n b^n | n 
               <span class="text-[10px] font-extrabold accent-text uppercase tracking-wider">Formula</span>
               <button class="copy-formula-btn h-7 px-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-xs font-bold" data-formula="${encodeURIComponent(card.formula)}">Copy</button>
             </div>
-            <div class="my-auto overflow-y-auto font-mono text-xs text-slate-200 whitespace-pre-line py-2">${card.formula}</div>
+            <div class="my-auto overflow-y-auto font-mono text-xs text-slate-200 whitespace-pre-line py-2">${h(card.formula)}</div>
           </div>
         </div>
       </div>
