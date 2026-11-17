@@ -2,24 +2,12 @@ import {initFocusManagement} from './utils/focusManagement.js';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import {storageRecoveryEntries,clearStorageRecovery} from './utils/safeStorage.js';
 import { setStorageUser } from './utils/userStorage.js';
-import { WorkspaceHome, ExamLibrary } from './pages/WorkspaceHome.js';
 import { auth, db } from './config/firebase';
 import { initTheme } from './utils/theme';
 import { showToast } from './utils/toast';
 import { initAccentPalette } from './utils/accentTheme';
 
-// Import Pages
-import { LandingPage } from './pages/LandingPage';
-import { Dashboard } from './pages/Dashboard';
-import { Assistant } from './pages/Assistant';
-import { Practice } from './pages/Practice';
-import { MockTest } from './pages/MockTest';
-import { Analytics } from './pages/Analytics';
-import { About } from './pages/About';
-import { Formulas } from './pages/Formulas';
-import { PyqMocks } from './pages/PyqMocks';
-import { Community } from './pages/Community';
-import { Group2, StationMaster, UnifiedTet, UnifiedSbi, GatePrep } from './pages/ExamPrep.js';
+import {MockTest} from './pages/MockTest.js';
 import './styles/exams.css';
 
 // Import Layout Component
@@ -34,25 +22,28 @@ initFocusManagement();
 initTheme();
 initAccentPalette();
 
+const loadedPages=new Map();
+const lazy=(loader,name)=>async()=>{const page=(await loader())[name];loadedPages.set(name,page);return page;};
+let currentPage=null;
 // Route Configuration
 const routes = {
-  '/': { component: LandingPage, requiresAuth: false, name: 'home' },
-  '/about': { component: About, requiresAuth: false, name: 'about' },
-  '/study-planner': { component: Dashboard, requiresAuth: true, name: 'study-planner' },
-  '/exams': { component: ExamLibrary, requiresAuth: true, name: 'exams' },
-  '/dashboard': { component: WorkspaceHome, requiresAuth: true, name: 'dashboard' },
-  '/formulas': { component: Formulas, requiresAuth: true, name: 'formulas' },
-  '/assistant': { component: Assistant, requiresAuth: true, name: 'assistant' },
-  '/practice': { component: Practice, requiresAuth: true, name: 'practice' },
-  '/mock-test': { component: MockTest, requiresAuth: true, name: 'mock-test' },
-  '/pyq-mocks': { component: PyqMocks, requiresAuth: true, name: 'pyq-mocks' },
-  '/community': { component: Community, requiresAuth: true, name: 'community' },
-  '/gate': { component: GatePrep, requiresAuth: true, name:'gate' },
-  '/tet-exams': { component: UnifiedTet, requiresAuth: true, name: 'tet-exams' },
-  '/group2': { component: Group2, requiresAuth: true, name: 'group2' },
-  '/rrb-station-master': { component: StationMaster, requiresAuth: true, name: 'rrb-station-master' },
-  '/sbi-clerk': { component: UnifiedSbi, requiresAuth: true, name: 'sbi-clerk' },
-  '/analytics': { component: Analytics, requiresAuth: true, name: 'analytics' }
+  '/': { load:lazy(()=>import('./pages/LandingPage.js'),'LandingPage'), requiresAuth: false, name: 'home' },
+  '/about': { load:lazy(()=>import('./pages/About.js'),'About'), requiresAuth: false, name: 'about' },
+  '/study-planner': { load:lazy(()=>import('./pages/Dashboard.js'),'Dashboard'), requiresAuth: true, name: 'study-planner' },
+  '/exams': { load:lazy(()=>import('./pages/WorkspaceHome.js'),'ExamLibrary'), requiresAuth: true, name: 'exams' },
+  '/dashboard': { load:lazy(()=>import('./pages/WorkspaceHome.js'),'WorkspaceHome'), requiresAuth: true, name: 'dashboard' },
+  '/formulas': { load:lazy(()=>import('./pages/Formulas.js'),'Formulas'), requiresAuth: true, name: 'formulas' },
+  '/assistant': { load:lazy(()=>import('./pages/Assistant.js'),'Assistant'), requiresAuth: true, name: 'assistant' },
+  '/practice': { load:lazy(()=>import('./pages/Practice.js'),'Practice'), requiresAuth: true, name: 'practice' },
+  '/mock-test': { load:async()=>MockTest, requiresAuth: true, name: 'mock-test' },
+  '/pyq-mocks': { load:lazy(()=>import('./pages/PyqMocks.js'),'PyqMocks'), requiresAuth: true, name: 'pyq-mocks' },
+  '/community': { load:lazy(()=>import('./pages/Community.js'),'Community'), requiresAuth: true, name: 'community' },
+  '/gate': { load:lazy(()=>import('./pages/ExamPrep.js'),'GatePrep'), requiresAuth: true, name:'gate' },
+  '/tet-exams': { load:lazy(()=>import('./pages/ExamPrep.js'),'UnifiedTet'), requiresAuth: true, name: 'tet-exams' },
+  '/group2': { load:lazy(()=>import('./pages/ExamPrep.js'),'Group2'), requiresAuth: true, name: 'group2' },
+  '/rrb-station-master': { load:lazy(()=>import('./pages/ExamPrep.js'),'StationMaster'), requiresAuth: true, name: 'rrb-station-master' },
+  '/sbi-clerk': { load:lazy(()=>import('./pages/ExamPrep.js'),'UnifiedSbi'), requiresAuth: true, name: 'sbi-clerk' },
+  '/analytics': { load:lazy(()=>import('./pages/Analytics.js'),'Analytics'), requiresAuth: true, name: 'analytics' }
 };
 
 // Main Routing Router
@@ -116,6 +107,8 @@ async function router() {
 
   // Render view
   try {
+    const component=await route.load();if(generation!==routeGeneration)return;
+    if(currentPage&&currentPage!==component)currentPage.cleanup?.();currentPage=component;
     if (route.requiresAuth || (currentUser && route.name==='about')) {
       const loading='<div class="workspace-loading" role="status"><span></span> Opening your workspace…</div>';
       if(!document.getElementById('sidebar-container')){
@@ -124,18 +117,18 @@ async function router() {
       } else Layout.updateNavigation(route.name);
       const subPageContainer=document.getElementById('sub-page-container');
       subPageContainer.innerHTML=loading;
-      const html=await route.component.render();
+      const html=await component.render();
       if(generation!==routeGeneration)return;
       subPageContainer.innerHTML=html;
-      await route.component.init();
+      await component.init();
       const recovery=storageRecoveryEntries();
       if(Object.keys(recovery).length){
         const notice=document.createElement('section');notice.className='notice';notice.setAttribute('role','alert');notice.textContent='Some saved data could not be read. It has been retained. Export it before resetting or restoring a backup.';
         const exportButton=document.createElement('button');exportButton.textContent='Export recovery data';exportButton.onclick=()=>{const url=URL.createObjectURL(new Blob([JSON.stringify(recovery,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='GateLabs-recovery.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};notice.append(exportButton);document.getElementById('sub-page-container')?.prepend(notice);
       }
     } else {
-      appContainer.innerHTML = await route.component.render();
-      await route.component.init();
+      appContainer.innerHTML = await component.render();
+      await component.init();
     }
     if(generation===routeGeneration&&lastRenderedPath!==hashPath){window.scrollTo(0,0);lastRenderedPath=hashPath;}
   } catch (error) {
@@ -159,10 +152,12 @@ auth.onAuthStateChanged((user) => {
   authReady=true;
   if(setStorageUser(user?.uid)){
     clearStorageRecovery();
-    Practice.questions=[];Practice.isApplied=false;Practice.parsedQuestions=[];
-    Assistant.messages=[{role:'model',text:'Ask a study question or connect an AI provider in settings.'}];
-    Formulas.flippedCards={};Formulas.searchQuery='';Community.activePostId=null;Community.posts=[];
-    Dashboard.expandedNodes={};
+    const Practice=loadedPages.get('Practice');if(Practice){Practice.questions=[];Practice.isApplied=false;Practice.parsedQuestions=[];}
+    const Assistant=loadedPages.get('Assistant');if(Assistant){Assistant.messages=[{role:'model',text:'Ask a study question or connect an AI provider in settings.'}];Assistant.draft='';Assistant.error='';Assistant.pending=false;}
+    const Formulas=loadedPages.get('Formulas');if(Formulas){Formulas.flippedCards={};Formulas.searchQuery='';}
+    const Community=loadedPages.get('Community');if(Community){Community.activePostId=null;Community.posts=[];}
+    const Dashboard=loadedPages.get('Dashboard');if(Dashboard)Dashboard.expandedNodes={};
+    for(const page of loadedPages.values())page.cleanup?.();
   }
   // If user signed in or out, refresh current route context
   router();

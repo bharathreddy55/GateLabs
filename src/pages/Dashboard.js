@@ -66,6 +66,7 @@ async function evaluateBadges(attempts, progress) {
 }
 
 export const Dashboard = {
+  cleanup(){this.studyChart?.destroy();this.studyChart=null;},
   activeTab: 'syllabus',
   syllabusActiveSubject: 'Engineering Mathematics',
   bookmarkActiveSubject: 'All',

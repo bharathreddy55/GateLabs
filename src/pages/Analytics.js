@@ -9,6 +9,7 @@ import { showToast } from '../utils/toast';
 import { Chart } from 'chart.js/auto';
 
 export const Analytics = {
+  cleanup(){this.pieChart?.destroy();this.pieChart=null;},
   // State
   examFilter: '',
   viewMode: 'list',        // 'list' | 'detail'
