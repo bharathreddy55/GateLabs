@@ -90,7 +90,7 @@ try{
  await page.screenshot({path:'artifacts/exams/rrb-chart-mobile.png',fullPage:false});
  await page.evaluate(async()=>{const {MockTest}=await import('/src/pages/ExamRunner.js');MockTest.deadline=Date.now()-1;MockTest.tick();});
  await page.getByRole('heading',{name:'Exam complete',exact:true}).waitFor();
- result=await page.evaluate(()=>JSON.parse(localStorage.getItem('exam-results:exam-test-user')).at(-1));
+ result=await page.evaluate(()=>JSON.parse(localStorage.getItem('exam-results:exam-test-user')).find(a=>a.examId==='rrb'));
  assert.equal(result.score,0);assert.equal(result.skippedCount,100);
  await page.goto('http://127.0.0.1:3011/#/tet-exams');await page.locator('[data-countdown="tet"]').waitFor();
  assert.match(await page.locator('[data-countdown="tet"]').innerText(),/Awaiting official/);
@@ -99,7 +99,7 @@ try{
  await page.locator(`[data-answer="${tet.wrong}"]`).check();
  await page.getByRole('button',{name:'Submit test',exact:true}).click();
  await page.getByRole('heading',{name:'Exam complete',exact:true}).waitFor();
- result=await page.evaluate(()=>JSON.parse(localStorage.getItem('exam-results:exam-test-user')).at(-1));
+ result=await page.evaluate(()=>JSON.parse(localStorage.getItem('exam-results:exam-test-user')).find(a=>a.examId==='tet'));
  assert.equal(result.score,0);assert.equal(result.wrongCount,1);assert.equal(result.negativeMarks,0);
  // Exercise actual legacy text parser and separately timed SBI rule in the browser.
  const sbi=await page.evaluate(async()=>{const {parseExamText}=await import('/src/utils/parseExamText.js');const {MockTest}=await import('/src/pages/ExamRunner.js');const text=await(await fetch('/pyqs/sbi_clerk_expected_2026_paper_1.txt')).text();const questions=parseExamText(text,'sbi');return MockTest.startExam({examId:'sbi',questions,title:'SBI regression'});});
@@ -113,7 +113,7 @@ try{
  assert.equal(await page.locator('[data-question="30"]').isDisabled(),false);
  await page.getByRole('button',{name:'Submit test',exact:true}).click();
  await page.getByRole('heading',{name:'Exam complete',exact:true}).waitFor();
- result=await page.evaluate(()=>JSON.parse(localStorage.getItem('exam-results:exam-test-user')).at(-1));
+ result=await page.evaluate(()=>JSON.parse(localStorage.getItem('exam-results:exam-test-user')).find(a=>a.examId==='sbi'));
  assert.equal(result.score,-.25);
  await page.goto('http://127.0.0.1:3011/#/analytics');await page.locator('#analytics-exam-filter').waitFor();
  await page.locator('#analytics-exam-filter').selectOption('group2');

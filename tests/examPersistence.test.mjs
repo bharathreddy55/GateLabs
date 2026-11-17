@@ -9,7 +9,7 @@ test('actual Firebase adapter isolates accounts, preserves IDs and removes local
  let failCloud=false,failLocal=false;
  const storage={getItem:k=>memory.get(k)??null,setItem:(k,v)=>{if(failLocal)throw Error('quota');memory.set(k,String(v));},removeItem:k=>memory.delete(k)};
  const context=vm.createContext({console:{log(){},warn(){},error(){}},localStorage:storage,setTimeout,clearTimeout,Date,JSON,Math});
- const exports={loadPublishedQuestions:async()=>[],filterQuestionBank:list=>list,readStored:(key,fallback)=>readStored(key,fallback,storage),parseExamText,validateStudyQuestion,initializeApp:()=>({}),getAuth:()=>authState,getAnalytics:()=>({}),getFirestore:()=>({}),
+ const exports={readAttemptArchive:async()=>[],writeAttemptArchive:async()=>false,deleteArchivedAttempt:async()=>false,compactAttemptCache:rows=>rows,loadPublishedQuestions:async()=>[],filterQuestionBank:list=>list,readStored:(key,fallback)=>readStored(key,fallback,storage),parseExamText,validateStudyQuestion,initializeApp:()=>({}),getAuth:()=>authState,getAnalytics:()=>({}),getFirestore:()=>({}),
   collection:(_,name)=>({collection:name}),doc:(_,collection,id)=>({collection,id}),where:(field,op,value)=>({field,value}),query:(base,condition)=>({...base,condition}),
   setDoc:async(ref,data)=>{if(failCloud)throw Error('permission-denied');cloud.set(ref.collection+'/'+ref.id,structuredClone(data));},
   getDocs:async q=>({forEach:fn=>{for(const [key,value] of cloud)if(key.startsWith(q.collection+'/')&&(!q.condition||value[q.condition.field]===q.condition.value))fn({data:()=>structuredClone(value)});}}),

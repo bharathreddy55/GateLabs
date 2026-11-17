@@ -1,3 +1,4 @@
+import {exportCompleteBackup,importCompleteBackup} from '../utils/completeBackup.js';
 import {exportBackup,parseBackup,importBackup} from '../utils/backup.js';
 import {renderAnswerInputs,readAnswer,answerLabel,renderQuestionContext} from '../components/QuestionView.js';
 import {evaluateAnswer} from '../utils/examEngine.js';
@@ -940,8 +941,8 @@ export const Dashboard = {
       });
     } else if (this.activeTab === 'backup') {
       // Backup handlers
-      document.getElementById('btn-export-backup')?.addEventListener('click', () => {
-        let backupData;try{backupData=exportBackup(auth.currentUser.uid);}catch(error){showToast(error.message,'error');return;}
+      document.getElementById('btn-export-backup')?.addEventListener('click', async () => {
+        let backupData;try{backupData=await exportCompleteBackup(auth.currentUser.uid);}catch(error){showToast(error.message,'error');return;}
 
         const jsonStr = JSON.stringify(backupData, null, 2);
         const blob = new Blob([jsonStr], { type: 'application/json' });
@@ -964,12 +965,12 @@ export const Dashboard = {
         if (!file) return;
 
         const reader = new FileReader();
-        reader.onload = (event) => {
+        reader.onload = async (event) => {
           try {
             const data=parseBackup(JSON.parse(event.target.result));
             const names=Object.keys(data.entries);
             if(!confirm('Restore '+names.length+' data groups from '+(data.owner||'this backup')+' into your current account? Existing arrays are merged. AI keys are not included.'))return;
-            const count=importBackup(data,auth.currentUser.uid);
+            const count=await importCompleteBackup(data,auth.currentUser.uid);
             showToast('Restored '+count+' data groups into this account.','success');
             this.refresh();
           } catch (err) {

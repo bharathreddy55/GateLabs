@@ -1,3 +1,4 @@
+import {writeAttemptArchive,compactAttemptCache} from '../utils/attemptArchive.js';
 import {getAttemptRecords} from '../utils/attemptRepository.js';
 import {readStored} from '../utils/safeStorage.js';
 import {renderAnswerInputs,readAnswer,answerLabel,renderQuestionContext} from '../components/QuestionView.js';
@@ -99,7 +100,7 @@ export const MockTest = {
     const examId=this.pending.examId;
     const result={...scorePaper(examId,this.questions,this.answers),examId,ruleVersion:EXAMS[examId].version,mode:this.pending.full?'full':'practice',scope:this.pending.title,timeSpentSeconds:Math.min(this.pending.minutes*60,Math.floor((Date.now()-this.startedAt)/1000)),timestamp:new Date().toISOString(),userId:auth.currentUser?.uid};
     this.stop();this.result=result;
-    try{const key=`exam-results:${auth.currentUser?.uid}`;const rows=readStored(key,[]);result.id=crypto.randomUUID();rows.push(result);localStorage.setItem(key,JSON.stringify(rows));localStorage.removeItem(this.storageKey());this.saveMessage='Saved on this device; syncing attempt history.';}catch{this.saveMessage='Device storage failed. Keep this review open until sync completes.';}
+    try{result.id=crypto.randomUUID();const archived=await writeAttemptArchive(result.userId,[result]);const key=`exam-results:${result.userId}`;const rows=readStored(key,[]);rows.push(result);localStorage.setItem(key,JSON.stringify(archived?compactAttemptCache(rows):rows));localStorage.removeItem(this.storageKey());this.saveMessage='Saved on this device; syncing attempt history.';}catch{this.saveMessage='Device storage failed. Keep this review open until sync completes.';}
     if(result.id)history.replaceState(null,'','#/mock-test?attempt='+encodeURIComponent(result.id));
     this.refresh();
     await this.saveResult();
