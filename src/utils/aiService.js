@@ -1,3 +1,4 @@
+import { userStorageKey } from './userStorage.js';
 // Universal Multi-Provider AI Service Utility
 // Supports: Google Gemini, OpenAI, Anthropic Claude, and OpenRouter
 
@@ -29,9 +30,9 @@ export const PROVIDERS = {
 };
 
 export function getAiConfig() {
-  const provider = localStorage.getItem('ai_provider') || 'gemini';
-  const apiKey = (localStorage.getItem('ai_api_key') || localStorage.getItem('gemini_api_key') || '').trim();
-  const model = localStorage.getItem('ai_model') || PROVIDERS[provider]?.defaultModel || 'gemini-1.5-flash';
+  const provider = localStorage.getItem(userStorageKey('ai_provider')) || 'gemini';
+  const apiKey = (localStorage.getItem(userStorageKey('ai_api_key')) || localStorage.getItem(userStorageKey('gemini_api_key')) || '').trim();
+  const model = localStorage.getItem(userStorageKey('ai_model')) || PROVIDERS[provider]?.defaultModel || 'gemini-1.5-flash';
   return { provider, apiKey, model };
 }
 
@@ -45,16 +46,16 @@ export function saveAiConfig(provider, apiKey, model) {
   const key = (apiKey || '').trim();
   const m = model || PROVIDERS[p]?.defaultModel;
 
-  localStorage.setItem('ai_provider', p);
+  localStorage.setItem(userStorageKey('ai_provider'), p);
   if (key) {
-    localStorage.setItem('ai_api_key', key);
-    localStorage.setItem('gemini_api_key', key); // Backward compatibility
+    localStorage.setItem(userStorageKey('ai_api_key'), key);
+    localStorage.setItem(userStorageKey('gemini_api_key'), key); // Backward compatibility
   } else {
-    localStorage.removeItem('ai_api_key');
-    localStorage.removeItem('gemini_api_key');
+    localStorage.removeItem(userStorageKey('ai_api_key'));
+    localStorage.removeItem(userStorageKey('gemini_api_key'));
   }
   if (m) {
-    localStorage.setItem('ai_model', m);
+    localStorage.setItem(userStorageKey('ai_model'), m);
   }
 }
 

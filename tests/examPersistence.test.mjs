@@ -21,7 +21,9 @@ test('actual Firebase adapter isolates accounts, preserves IDs and removes local
  assert.equal(JSON.parse(storage.getItem('gate_attempts:alice')).length,1);
  assert.equal((await db.getAttempts()).length,1);
  assert.equal(cloud.get('attempts/stable-attempt').userId,'alice');
+ await db.saveBookmark({id:'alice-bookmark'});await db.saveSyllabusProgress({algebra:true});
  authState.currentUser={uid:'bob'};
+ assert.equal((await db.getBookmarks()).length,0);assert.equal(Object.keys(await db.getSyllabusProgress()).length,0);
  assert.equal((await db.getAttempts()).length,0);
  await db.saveAttempt({...a,id:'bob-attempt'});
  assert.equal((await db.getAttempts())[0].userId,'bob');

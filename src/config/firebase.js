@@ -336,8 +336,8 @@ function initializeMockDb() {
   if (!localStorage.getItem(attemptStorageKey())) {
     localStorage.setItem(attemptStorageKey(), JSON.stringify([]));
   }
-  if (!localStorage.getItem('gate_study_time')) {
-    localStorage.setItem('gate_study_time', JSON.stringify({
+  if (!localStorage.getItem(personalStorageKey('gate_study_time'))) {
+    localStorage.setItem(personalStorageKey('gate_study_time'), JSON.stringify({
       "Mon": 2.5, "Tue": 3.2, "Wed": 1.8, "Thu": 4.0, "Fri": 2.0, "Sat": 5.5, "Sun": 3.0
     }));
   }
@@ -355,6 +355,7 @@ const firebaseConfig = {
 };
 
 function boundedWrite(operation,ms=5000){let timer;return Promise.race([operation,new Promise((_,reject)=>{timer=setTimeout(()=>reject(new Error('Cloud sync timed out')),ms);})]).finally(()=>clearTimeout(timer));}
+function personalStorageKey(base){const uid=(useMock?JSON.parse(localStorage.getItem('gate_current_user')||'null')?.uid:authInstance?.currentUser?.uid)||'anonymous';return base+':'+uid;}
 function attemptStorageKey(){
   const uid=(useMock ? JSON.parse(localStorage.getItem('gate_current_user')||'null')?.uid : authInstance?.currentUser?.uid) || 'anonymous';
   return 'gate_attempts:'+uid;
@@ -840,7 +841,7 @@ const mockFirestore = {
   async getStudyTime() {
     return new Promise((resolve) => {
       setTimeout(() => {
-        resolve(JSON.parse(localStorage.getItem('gate_study_time') || '{}'));
+        resolve(JSON.parse(localStorage.getItem(personalStorageKey('gate_study_time')) || '{}'));
       }, 300);
     })
   },
@@ -848,9 +849,9 @@ const mockFirestore = {
   async updateStudyTime(day, hours) {
     return new Promise((resolve) => {
       setTimeout(() => {
-        const times = JSON.parse(localStorage.getItem('gate_study_time') || '{}');
+        const times = JSON.parse(localStorage.getItem(personalStorageKey('gate_study_time')) || '{}');
         times[day] = (times[day] || 0) + hours;
-        localStorage.setItem('gate_study_time', JSON.stringify(times));
+        localStorage.setItem(personalStorageKey('gate_study_time'), JSON.stringify(times));
         resolve(times);
       }, 300);
     })
@@ -869,62 +870,62 @@ const mockFirestore = {
 
   async getBookmarks() {
     return new Promise((resolve) => {
-      resolve(JSON.parse(localStorage.getItem('gate_bookmarks') || '[]'));
+      resolve(JSON.parse(localStorage.getItem(personalStorageKey('gate_bookmarks')) || '[]'));
     });
   },
   async saveBookmark(question) {
     return new Promise((resolve) => {
-      const list = JSON.parse(localStorage.getItem('gate_bookmarks') || '[]');
+      const list = JSON.parse(localStorage.getItem(personalStorageKey('gate_bookmarks')) || '[]');
       if (!list.some(q => q.id === question.id)) {
         list.push(question);
-        localStorage.setItem('gate_bookmarks', JSON.stringify(list));
+        localStorage.setItem(personalStorageKey('gate_bookmarks'), JSON.stringify(list));
       }
       resolve(true);
     });
   },
   async deleteBookmark(questionId) {
     return new Promise((resolve) => {
-      const list = JSON.parse(localStorage.getItem('gate_bookmarks') || '[]');
+      const list = JSON.parse(localStorage.getItem(personalStorageKey('gate_bookmarks')) || '[]');
       const updated = list.filter(q => q.id !== questionId);
-      localStorage.setItem('gate_bookmarks', JSON.stringify(updated));
+      localStorage.setItem(personalStorageKey('gate_bookmarks'), JSON.stringify(updated));
       resolve(true);
     });
   },
   async isBookmarked(questionId) {
     return new Promise((resolve) => {
-      const list = JSON.parse(localStorage.getItem('gate_bookmarks') || '[]');
+      const list = JSON.parse(localStorage.getItem(personalStorageKey('gate_bookmarks')) || '[]');
       resolve(list.some(q => q.id === questionId));
     });
   },
   async getSyllabusProgress() {
     return new Promise((resolve) => {
-      resolve(JSON.parse(localStorage.getItem('gate_syllabus_progress') || '{}'));
+      resolve(JSON.parse(localStorage.getItem(personalStorageKey('gate_syllabus_progress')) || '{}'));
     });
   },
   async saveSyllabusProgress(progress) {
     return new Promise((resolve) => {
-      localStorage.setItem('gate_syllabus_progress', JSON.stringify(progress));
+      localStorage.setItem(personalStorageKey('gate_syllabus_progress'), JSON.stringify(progress));
       resolve(progress);
     });
   },
   async getUnlockedBadges() {
     return new Promise((resolve) => {
-      resolve(JSON.parse(localStorage.getItem('gate_unlocked_badges') || '[]'));
+      resolve(JSON.parse(localStorage.getItem(personalStorageKey('gate_unlocked_badges')) || '[]'));
     });
   },
   async unlockBadge(badgeId) {
     return new Promise((resolve) => {
-      const badges = JSON.parse(localStorage.getItem('gate_unlocked_badges') || '[]');
+      const badges = JSON.parse(localStorage.getItem(personalStorageKey('gate_unlocked_badges')) || '[]');
       if (!badges.includes(badgeId)) {
         badges.push(badgeId);
-        localStorage.setItem('gate_unlocked_badges', JSON.stringify(badges));
+        localStorage.setItem(personalStorageKey('gate_unlocked_badges'), JSON.stringify(badges));
       }
       resolve(badges);
     });
   },
   async getCommunityPosts() {
     return new Promise((resolve) => {
-      const posts = JSON.parse(localStorage.getItem('gate_community_posts') || '[]');
+      const posts = JSON.parse(localStorage.getItem(personalStorageKey('gate_community_posts')) || '[]');
       if (posts.length === 0) {
         const defaultPosts = [
           {
@@ -963,7 +964,7 @@ const mockFirestore = {
             replies: []
           }
         ];
-        localStorage.setItem('gate_community_posts', JSON.stringify(defaultPosts));
+        localStorage.setItem(personalStorageKey('gate_community_posts'), JSON.stringify(defaultPosts));
         resolve(defaultPosts);
       } else {
         resolve(posts);
@@ -972,33 +973,33 @@ const mockFirestore = {
   },
   async saveCommunityPost(post) {
     return new Promise((resolve) => {
-      const posts = JSON.parse(localStorage.getItem('gate_community_posts') || '[]');
+      const posts = JSON.parse(localStorage.getItem(personalStorageKey('gate_community_posts')) || '[]');
       post.id = 'post_' + Date.now();
       post.timestamp = new Date().toISOString();
       post.upvotes = 0;
       post.upvoted = false;
       post.replies = [];
       posts.unshift(post);
-      localStorage.setItem('gate_community_posts', JSON.stringify(posts));
+      localStorage.setItem(personalStorageKey('gate_community_posts'), JSON.stringify(posts));
       resolve(post);
     });
   },
   async addPostReply(postId, reply) {
     return new Promise((resolve) => {
-      const posts = JSON.parse(localStorage.getItem('gate_community_posts') || '[]');
+      const posts = JSON.parse(localStorage.getItem(personalStorageKey('gate_community_posts')) || '[]');
       const post = posts.find(p => p.id === postId);
       if (post) {
         reply.id = 'reply_' + Date.now();
         reply.timestamp = new Date().toISOString();
         post.replies.push(reply);
-        localStorage.setItem('gate_community_posts', JSON.stringify(posts));
+        localStorage.setItem(personalStorageKey('gate_community_posts'), JSON.stringify(posts));
       }
       resolve(post);
     });
   },
   async upvotePost(postId) {
     return new Promise((resolve) => {
-      const posts = JSON.parse(localStorage.getItem('gate_community_posts') || '[]');
+      const posts = JSON.parse(localStorage.getItem(personalStorageKey('gate_community_posts')) || '[]');
       const post = posts.find(p => p.id === postId);
       if (post) {
         if (post.upvoted) {
@@ -1008,7 +1009,7 @@ const mockFirestore = {
           post.upvotes += 1;
           post.upvoted = true;
         }
-        localStorage.setItem('gate_community_posts', JSON.stringify(posts));
+        localStorage.setItem(personalStorageKey('gate_community_posts'), JSON.stringify(posts));
       }
       resolve(post);
     });
@@ -1291,62 +1292,62 @@ const realFirestore = {
 
   async getBookmarks() {
     return new Promise((resolve) => {
-      resolve(JSON.parse(localStorage.getItem('gate_bookmarks') || '[]'));
+      resolve(JSON.parse(localStorage.getItem(personalStorageKey('gate_bookmarks')) || '[]'));
     });
   },
   async saveBookmark(question) {
     return new Promise((resolve) => {
-      const list = JSON.parse(localStorage.getItem('gate_bookmarks') || '[]');
+      const list = JSON.parse(localStorage.getItem(personalStorageKey('gate_bookmarks')) || '[]');
       if (!list.some(q => q.id === question.id)) {
         list.push(question);
-        localStorage.setItem('gate_bookmarks', JSON.stringify(list));
+        localStorage.setItem(personalStorageKey('gate_bookmarks'), JSON.stringify(list));
       }
       resolve(true);
     });
   },
   async deleteBookmark(questionId) {
     return new Promise((resolve) => {
-      const list = JSON.parse(localStorage.getItem('gate_bookmarks') || '[]');
+      const list = JSON.parse(localStorage.getItem(personalStorageKey('gate_bookmarks')) || '[]');
       const updated = list.filter(q => q.id !== questionId);
-      localStorage.setItem('gate_bookmarks', JSON.stringify(updated));
+      localStorage.setItem(personalStorageKey('gate_bookmarks'), JSON.stringify(updated));
       resolve(true);
     });
   },
   async isBookmarked(questionId) {
     return new Promise((resolve) => {
-      const list = JSON.parse(localStorage.getItem('gate_bookmarks') || '[]');
+      const list = JSON.parse(localStorage.getItem(personalStorageKey('gate_bookmarks')) || '[]');
       resolve(list.some(q => q.id === questionId));
     });
   },
   async getSyllabusProgress() {
     return new Promise((resolve) => {
-      resolve(JSON.parse(localStorage.getItem('gate_syllabus_progress') || '{}'));
+      resolve(JSON.parse(localStorage.getItem(personalStorageKey('gate_syllabus_progress')) || '{}'));
     });
   },
   async saveSyllabusProgress(progress) {
     return new Promise((resolve) => {
-      localStorage.setItem('gate_syllabus_progress', JSON.stringify(progress));
+      localStorage.setItem(personalStorageKey('gate_syllabus_progress'), JSON.stringify(progress));
       resolve(progress);
     });
   },
   async getUnlockedBadges() {
     return new Promise((resolve) => {
-      resolve(JSON.parse(localStorage.getItem('gate_unlocked_badges') || '[]'));
+      resolve(JSON.parse(localStorage.getItem(personalStorageKey('gate_unlocked_badges')) || '[]'));
     });
   },
   async unlockBadge(badgeId) {
     return new Promise((resolve) => {
-      const badges = JSON.parse(localStorage.getItem('gate_unlocked_badges') || '[]');
+      const badges = JSON.parse(localStorage.getItem(personalStorageKey('gate_unlocked_badges')) || '[]');
       if (!badges.includes(badgeId)) {
         badges.push(badgeId);
-        localStorage.setItem('gate_unlocked_badges', JSON.stringify(badges));
+        localStorage.setItem(personalStorageKey('gate_unlocked_badges'), JSON.stringify(badges));
       }
       resolve(badges);
     });
   },
   async getCommunityPosts() {
     return new Promise((resolve) => {
-      const posts = JSON.parse(localStorage.getItem('gate_community_posts') || '[]');
+      const posts = JSON.parse(localStorage.getItem(personalStorageKey('gate_community_posts')) || '[]');
       if (posts.length === 0) {
         const defaultPosts = [
           {
@@ -1385,7 +1386,7 @@ const realFirestore = {
             replies: []
           }
         ];
-        localStorage.setItem('gate_community_posts', JSON.stringify(defaultPosts));
+        localStorage.setItem(personalStorageKey('gate_community_posts'), JSON.stringify(defaultPosts));
         resolve(defaultPosts);
       } else {
         resolve(posts);
@@ -1394,33 +1395,33 @@ const realFirestore = {
   },
   async saveCommunityPost(post) {
     return new Promise((resolve) => {
-      const posts = JSON.parse(localStorage.getItem('gate_community_posts') || '[]');
+      const posts = JSON.parse(localStorage.getItem(personalStorageKey('gate_community_posts')) || '[]');
       post.id = 'post_' + Date.now();
       post.timestamp = new Date().toISOString();
       post.upvotes = 0;
       post.upvoted = false;
       post.replies = [];
       posts.unshift(post);
-      localStorage.setItem('gate_community_posts', JSON.stringify(posts));
+      localStorage.setItem(personalStorageKey('gate_community_posts'), JSON.stringify(posts));
       resolve(post);
     });
   },
   async addPostReply(postId, reply) {
     return new Promise((resolve) => {
-      const posts = JSON.parse(localStorage.getItem('gate_community_posts') || '[]');
+      const posts = JSON.parse(localStorage.getItem(personalStorageKey('gate_community_posts')) || '[]');
       const post = posts.find(p => p.id === postId);
       if (post) {
         reply.id = 'reply_' + Date.now();
         reply.timestamp = new Date().toISOString();
         post.replies.push(reply);
-        localStorage.setItem('gate_community_posts', JSON.stringify(posts));
+        localStorage.setItem(personalStorageKey('gate_community_posts'), JSON.stringify(posts));
       }
       resolve(post);
     });
   },
   async upvotePost(postId) {
     return new Promise((resolve) => {
-      const posts = JSON.parse(localStorage.getItem('gate_community_posts') || '[]');
+      const posts = JSON.parse(localStorage.getItem(personalStorageKey('gate_community_posts')) || '[]');
       const post = posts.find(p => p.id === postId);
       if (post) {
         if (post.upvoted) {
@@ -1430,7 +1431,7 @@ const realFirestore = {
           post.upvotes += 1;
           post.upvoted = true;
         }
-        localStorage.setItem('gate_community_posts', JSON.stringify(posts));
+        localStorage.setItem(personalStorageKey('gate_community_posts'), JSON.stringify(posts));
       }
       resolve(post);
     });

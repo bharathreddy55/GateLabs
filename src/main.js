@@ -1,3 +1,4 @@
+import { setStorageUser } from './utils/userStorage.js';
 import { WorkspaceHome, ExamLibrary } from './pages/WorkspaceHome.js';
 import { auth, db } from './config/firebase';
 import { initTheme } from './utils/theme';
@@ -142,6 +143,12 @@ window.addEventListener('hashchange', router);
 
 // Handle auth state changes
 auth.onAuthStateChanged((user) => {
+  if(setStorageUser(user?.uid)){
+    Practice.questions=[];Practice.isApplied=false;Practice.parsedQuestions=[];
+    Assistant.messages=[{role:'model',text:'Ask a study question or connect an AI provider in settings.'}];
+    Formulas.flippedCards={};Formulas.searchQuery='';Community.activePostId=null;Community.posts=[];
+    Dashboard.expandedNodes={};
+  }
   // If user signed in or out, refresh current route context
   router();
 });

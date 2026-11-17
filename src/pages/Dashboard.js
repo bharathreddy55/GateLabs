@@ -1,3 +1,4 @@
+import { userStorageKey } from '../utils/userStorage.js';
 import { escapeHtml as h } from '../utils/examEngine.js';
 import { countdownCard, bindCountdowns } from '../components/ExamCountdown.js';
 import { db, auth, SUBJECT_SYLLABUS } from '../config/firebase';
@@ -57,7 +58,7 @@ async function evaluateBadges(attempts, progress) {
   if (attempts.length >= 2) unlocked.add('speed_demon');
 
   const unlockedList = Array.from(unlocked);
-  localStorage.setItem('gate_unlocked_badges', JSON.stringify(unlockedList));
+  localStorage.setItem(userStorageKey('gate_unlocked_badges'), JSON.stringify(unlockedList));
   return unlockedList;
 }
 
@@ -944,10 +945,10 @@ export const Dashboard = {
         const backupData = {
           version: '1.0',
           exportedAt: new Date().toISOString(),
-          syllabusProgress: JSON.parse(localStorage.getItem('gate_syllabus_progress') || '{}'),
-          bookmarks: JSON.parse(localStorage.getItem('gate_bookmarks') || '[]'),
+          syllabusProgress: JSON.parse(localStorage.getItem(userStorageKey('gate_syllabus_progress')) || '{}'),
+          bookmarks: JSON.parse(localStorage.getItem(userStorageKey('gate_bookmarks')) || '[]'),
           attempts: JSON.parse(localStorage.getItem('gate_attempts:'+(auth.currentUser?.uid||'anonymous')) || '[]'),
-          customFormulas: JSON.parse(localStorage.getItem('gate_custom_formulas') || '[]')
+          customFormulas: JSON.parse(localStorage.getItem(userStorageKey('gate_custom_formulas')) || '[]')
         };
 
         const jsonStr = JSON.stringify(backupData, null, 2);
@@ -974,10 +975,10 @@ export const Dashboard = {
         reader.onload = (event) => {
           try {
             const data = JSON.parse(event.target.result);
-            if (data.syllabusProgress) localStorage.setItem('gate_syllabus_progress', JSON.stringify(data.syllabusProgress));
-            if (data.bookmarks) localStorage.setItem('gate_bookmarks', JSON.stringify(data.bookmarks));
+            if (data.syllabusProgress) localStorage.setItem(userStorageKey('gate_syllabus_progress'), JSON.stringify(data.syllabusProgress));
+            if (data.bookmarks) localStorage.setItem(userStorageKey('gate_bookmarks'), JSON.stringify(data.bookmarks));
             if (data.attempts) localStorage.setItem('gate_attempts:'+(auth.currentUser?.uid||'anonymous'), JSON.stringify(data.attempts));
-            if (data.customFormulas) localStorage.setItem('gate_custom_formulas', JSON.stringify(data.customFormulas));
+            if (data.customFormulas) localStorage.setItem(userStorageKey('gate_custom_formulas'), JSON.stringify(data.customFormulas));
 
             showToast("Backup restored successfully! 🎉", "success");
             this.refresh();
