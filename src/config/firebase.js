@@ -769,7 +769,7 @@ const realFirestore = {
     };
     try{writeLocal('pending');}catch(error){console.warn('Local attempt save failed',error);}
     try{
-      if(firestore&&auth.currentUser){
+      if(firestore&&auth.currentUser?.uid===cleanAttempt.userId){
         await boundedWrite(setDoc(doc(firestore,'attempts',cleanAttempt.id),cleanAttempt));cloudSaved=true;
         await writeAttemptArchive(cleanAttempt.userId,[{...cleanAttempt,syncStatus:'synced'}]);try{writeLocal('synced');}catch{}
       }
@@ -780,7 +780,7 @@ const realFirestore = {
 
   async retryPendingAttempts(){
     const uid=auth.currentUser?.uid||'anonymous';
-    const merged=new Map([...await readAttemptArchive(auth.currentUser?.uid||'anonymous'),...readStored(attemptStorageKey(),[])].map(row=>[row.id,row]));const rows=[...merged.values()];
+    const merged=new Map([...await readAttemptArchive(uid),...readStored('gate_attempts:'+uid,[])].map(row=>[row.id,row]));const rows=[...merged.values()];
     const results=[];
     for(const row of rows.filter(a=>a.syncStatus==='pending')){if((auth.currentUser?.uid||'anonymous')!==uid)break;results.push(await this.saveAttempt(row));}
     return results;

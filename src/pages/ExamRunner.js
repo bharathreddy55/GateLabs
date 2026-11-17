@@ -97,18 +97,19 @@ export const MockTest = {
   resetForUser(){if(this.ownerId&&this.ownerId!==auth.currentUser?.uid){this.stop();this.pending=null;this.result=null;this.ownerId=null;}},
   async submitExam(){
     if(!this.isTesting)return;
-    const examId=this.pending.examId;
+    const examId=this.pending.examId,activeKey=this.storageKey();
     const result={...scorePaper(examId,this.questions,this.answers),examId,ruleVersion:EXAMS[examId].version,mode:this.pending.full?'full':'practice',scope:this.pending.title,timeSpentSeconds:Math.min(this.pending.minutes*60,Math.floor((Date.now()-this.startedAt)/1000)),timestamp:new Date().toISOString(),userId:auth.currentUser?.uid};
     this.stop();this.result=result;
-    try{result.id=crypto.randomUUID();const archived=await writeAttemptArchive(result.userId,[result]);const key=`exam-results:${result.userId}`;const rows=readStored(key,[]);rows.push(result);localStorage.setItem(key,JSON.stringify(archived?compactAttemptCache(rows):rows));localStorage.removeItem(this.storageKey());this.saveMessage='Saved on this device; syncing attempt history.';}catch{this.saveMessage='Device storage failed. Keep this review open until sync completes.';}
+    try{result.id=crypto.randomUUID();const archived=await writeAttemptArchive(result.userId,[result]);const key=`exam-results:${result.userId}`;const rows=readStored(key,[]);rows.push(result);localStorage.setItem(key,JSON.stringify(archived?compactAttemptCache(rows):rows));localStorage.removeItem(activeKey);this.saveMessage='Saved on this device; syncing attempt history.';}catch{this.saveMessage='Device storage failed. Keep this review open until sync completes.';}
+    if(auth.currentUser?.uid!==result.userId)return;
     if(result.id)history.replaceState(null,'','#/mock-test?attempt='+encodeURIComponent(result.id));
     this.refresh();
     await this.saveResult();
   },
   async saveResult(){
-    if(this.saving)return;this.saving=true;
-    try{const saved=await db.saveAttempt(this.result);this.result.id=saved.id;this.result.persistence=saved.persistence;const status=saved.persistence;this.saveMessage=status?.cloudSaved?'Synced to your account.':status?.localSaved?'Saved on this device. Cloud sync pending.':'Saved on this device.';}
-    catch(error){this.saveMessage=error.message||'Save failed. Keep this page open; export your result or retry.';}
+    const result=this.result,uid=auth.currentUser?.uid;if(!result||result.userId!==uid||this.saving)return;this.saving=true;
+    try{const saved=await db.saveAttempt(result);if(this.result!==result||auth.currentUser?.uid!==uid)return;this.result.id=saved.id;this.result.persistence=saved.persistence;const status=saved.persistence;this.saveMessage=status?.cloudSaved?'Synced to your account.':status?.localSaved?'Saved on this device. Cloud sync pending.':'Saved on this device.';}
+    catch(error){if(this.result===result&&auth.currentUser?.uid===uid)this.saveMessage=error.message||'Save failed. Keep this page open; export your result or retry.';}
     finally{this.saving=false;if(document.getElementById('exam-root'))this.refresh();}
   },
   answerLabel(q,a){return answerLabel(q,a);}
