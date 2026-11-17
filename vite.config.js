@@ -9,12 +9,9 @@ export default defineConfig({
     outDir: 'dist',
     sourcemap: true,
     chunkSizeWarningLimit: 600,
-    rollupOptions: {
+    rolldownOptions: {
       output: {
-        manualChunks: {
-          firebase: ['firebase/app', 'firebase/firestore', 'firebase/auth'],
-          chart: ['chart.js']
-        }
+        manualChunks(id){if(id.includes('/node_modules/@firebase/')||id.includes('/node_modules/firebase/'))return 'firebase';if(id.includes('/node_modules/chart.js/'))return 'chart';}
       }
     }
   }

@@ -17,20 +17,26 @@
     "test:browser:all": "npm run test:browser && npm run test:workspace && npm run test:auth && npm run test:libraries"
   },
   "devDependencies": {
-    "@firebase/rules-unit-testing": "^3.0.4",
+    "@firebase/rules-unit-testing": "^6.0.0",
     "autoprefixer": "^10.4.19",
     "firebase-tools": "^15.36.0",
     "playwright": "^1.65.1",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.4",
-    "vite": "^5.2.11"
+    "vite": "^8.3.8"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.3.1",
     "chart.js": "^4.4.3",
-    "firebase": "^10.12.2",
+    "firebase": "^13.4.0",
     "katex": "^0.19.1",
     "pdf-parse": "^2.4.5",
     "pdfjs-dist": "^6.5.438"
+  },
+  "engines": {
+    "node": ">=24.12.0"
+  },
+  "overrides": {
+    "@grpc/grpc-js": "^1.13.6"
   }
 }

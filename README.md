@@ -8,7 +8,7 @@ Results support review links, wrong/unanswered/bookmarked filters, missed-questi
 
 ## Development
 
-Use Node.js 24 and npm:
+Use Node.js 24.12 or newer and npm:
 
 ```sh
 npm ci
