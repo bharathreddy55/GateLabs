@@ -25,3 +25,8 @@ body,.app-shell,.landing-workspace{font-family:Inter,-apple-system,BlinkMacSyste
 .workspace-loading{display:flex;gap:12px;align-items:center;justify-content:center;min-height:280px;font-size:13px;color:var(--ws-muted)}.workspace-loading>span{height:18px;width:18px;border:2px solid var(--ws-border);border-top-color:var(--ws-primary);border-radius:50%;animation:workspace-spin .8s linear infinite}@keyframes workspace-spin{to{transform:rotate(360deg)}}
 .prep-tabs button{flex-shrink:0}.app-shell #close-theme-studio,.app-shell #close-settings-modal{font-size:22px}
 .assistant-messages{min-height:260px;max-height:60vh;overflow-y:auto}.assistant-message{padding:18px 0;border-bottom:1px solid var(--ws-border)}.assistant-message>strong{display:block;font-size:12px;color:var(--ws-muted);margin-bottom:9px}.assistant-message.from-user{padding-left:20px;border-left:3px solid var(--ws-primary)}.study-rich{font-size:15px;line-height:1.8;overflow-wrap:anywhere}.study-rich pre{overflow:auto;background:var(--ws-bg);padding:14px}.assistant-compose label{font-size:13px;font-weight:600}.assistant-compose input{flex:1;min-width:120px;padding:12px;border:1px solid var(--ws-border);border-radius:8px;background:var(--ws-panel);color:var(--ws-text)}
+/* One accent across navigation, exam actions and study tools. */
+:root{--ws-primary:var(--accent-link-light,#4263d7);--ws-soft:var(--accent-soft,#edf1ff)}
+.dark{--ws-primary:var(--accent-link-dark,#9aafff);--ws-soft:var(--accent-soft,#252f49)}
+.ui-button.primary,.brand-mark,.btn-primary,.accent-gradient{background:var(--accent-from)!important;color:var(--accent-on,#fff)!important}
+.accent-text{color:var(--ws-primary)}

@@ -1,0 +1,2 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {contrastRatio,readableAccent} from '../src/utils/accentTheme.js';
+test('accent reading colours meet 4.5 contrast on both workspace surfaces',()=>{for(const color of ['#ffffff','#000000','#ffff00','#00ff00','#4263d7','#ff0000'])for(const surface of ['#ffffff','#191f2c'])assert.ok(contrastRatio(readableAccent(color,surface),surface)>=4.5,color+' on '+surface);});
