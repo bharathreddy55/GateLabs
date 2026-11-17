@@ -1,3 +1,5 @@
+import {renderAnswerInputs,readAnswer,answerLabel,renderQuestionContext} from '../components/QuestionView.js';
+import {evaluateAnswer} from '../utils/examEngine.js';
 import { userStorageKey } from '../utils/userStorage.js';
 import { escapeHtml as h } from '../utils/examEngine.js';
 import { countdownCard, bindCountdowns } from '../components/ExamCountdown.js';
@@ -819,12 +821,7 @@ export const Dashboard = {
                 <p class="text-slate-900 dark:text-white text-xs font-semibold leading-relaxed whitespace-pre-line">Q${index + 1}. ${h(q.question)}</p>
 
                 <div class="flex flex-col gap-2 mt-1">
-                  ${q.options.map((opt, optIdx) => `
-                    <label class="glass-card flex items-start gap-3 p-3 rounded-2xl border border-slate-200/40 dark:border-white/[0.05] bg-white/40 dark:bg-black/20 cursor-pointer relative">
-                      <input type="radio" name="bookmark-option-${h(q.id)}" value="${optIdx}" class="mt-0.5 text-primary-500 border-slate-300 focus:ring-primary-500">
-                      <span class="text-xs text-slate-700 dark:text-slate-300 font-medium">${String.fromCharCode(65 + optIdx)}. ${h(opt)}</span>
-                    </label>
-                  `).join('')}
+                  ${renderQuestionContext(q)}${renderAnswerInputs(q,undefined,{name:'bookmark-'+q.id})}
                 </div>
 
                 <div class="flex items-center gap-3 mt-2 flex-wrap">
@@ -1012,37 +1009,11 @@ export const Dashboard = {
         });
 
         checkBtn?.addEventListener('click', async () => {
-          const selectedRadio = panel.querySelector(`input[name="bookmark-option-${qid}"]:checked`);
-          if (!selectedRadio) {
-            showToast("Please select an option to check.", "warning");
-            return;
-          }
-
-          const bookmarks = await db.getBookmarks();
-          const questionObj = bookmarks.find(b => b.id === qid);
-          if (!questionObj) return;
-
-          const selectedIndex = parseInt(selectedRadio.value);
-          const labels = panel.querySelectorAll('label');
-          labels.forEach(l => {
-            l.classList.remove('border-emerald-500', 'bg-emerald-50/20', 'dark:border-emerald-800', 'dark:bg-emerald-950/20', 'border-rose-500', 'bg-rose-50/20', 'dark:border-rose-800', 'dark:bg-rose-950/20');
-          });
-
-          const correctIndex = questionObj.correctAnswer;
-          const correctLabel = labels[correctIndex];
-          const selectedLabel = labels[selectedIndex];
-          
-          if (correctCharSpan) correctCharSpan.textContent = String.fromCharCode(65 + correctIndex);
-          solContainer?.classList.remove('hidden');
-
-          if (selectedIndex === correctIndex) {
-            showToast("Correct Answer!", "success");
-            correctLabel?.classList.add('border-emerald-500', 'bg-emerald-50/20', 'dark:border-emerald-800', 'dark:bg-emerald-950/20');
-          } else {
-            showToast("Incorrect Answer.", "error");
-            selectedLabel?.classList.add('border-rose-500', 'bg-rose-50/20', 'dark:border-rose-800', 'dark:bg-rose-950/20');
-            correctLabel?.classList.add('border-emerald-500', 'bg-emerald-50/20', 'dark:border-emerald-800', 'dark:bg-emerald-950/20');
-          }
+          const questionObj=(await db.getBookmarks()).find(q=>q.id===qid);if(!questionObj)return;
+          const result=evaluateAnswer(questionObj,readAnswer(panel,questionObj));
+          if(result.blank){showToast('Please enter an answer.','warning');return;}
+          if(correctCharSpan)correctCharSpan.textContent=answerLabel(questionObj,questionObj.type==='NAT'?(questionObj.correctNat??questionObj.natMin):questionObj.type==='MSQ'?questionObj.correctOptions:questionObj.correctAnswer);
+          solContainer?.classList.remove('hidden');showToast(result.correct?'Correct answer':'Incorrect answer',result.correct?'success':'error');
         });
       });
     }

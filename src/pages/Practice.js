@@ -1,3 +1,5 @@
+import {renderAnswerInputs,readAnswer,answerLabel,renderQuestionContext} from '../components/QuestionView.js';
+import {evaluateAnswer} from '../utils/examEngine.js';
 import {parseExamText,validateStudyQuestion,questionId} from '../utils/parseExamText.js';
 import { escapeHtml as h } from '../utils/examEngine.js';
 import { db, SUBJECT_SYLLABUS } from '../config/firebase';
@@ -200,16 +202,7 @@ export const Practice = {
                   <!-- Question Body -->
                   <p class="text-slate-800 dark:text-slate-200 text-sm font-semibold leading-relaxed whitespace-pre-line">Q${index + 1}. ${h(q.question)}</p>
                   
-                  <!-- Options selection list -->
-                  <div class="flex flex-col gap-2.5 mt-2">
-                    ${q.options.map((opt, optIdx) => `
-                      <label class="glass-card flex items-start gap-3 p-3.5 rounded-2xl border border-slate-200 dark:border-white/[0.04] bg-white/40 dark:bg-slate-900/20 hover:bg-slate-100/50 dark:hover:bg-slate-800/30 transition-all cursor-pointer relative">
-                        <input type="radio" name="option-${h(q.id)}" value="${optIdx}" class="mt-0.5 text-primary-600 border-slate-350 focus:ring-primary-500 bg-white/50 dark:bg-slate-950/40">
-                        <span class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed font-semibold">${String.fromCharCode(65 + optIdx)}. ${h(opt)}</span>
-                      </label>
-                    `).join('')}
-                  </div>
-
+                  <div class="question-context">${renderQuestionContext(q)}</div>${renderAnswerInputs(q,undefined,{name:'option-'+q.id})}
                   <!-- Action buttons -->
                   <div class="flex items-center gap-3 mt-3 flex-wrap">
                     <button class="check-answer-btn px-5.5 py-2.5 rounded-xl bg-slate-900 dark:bg-slate-100 hover:bg-slate-800 dark:hover:bg-white text-white dark:text-slate-900 text-xs font-bold transition-all shadow-md active:scale-98 hover:scale-102 duration-150">
@@ -230,7 +223,7 @@ export const Practice = {
                       <i class="fa-solid fa-square-check animate-pulse"></i> Solution Engine Explanation
                     </div>
                     <div class="p-4 rounded-2xl bg-emerald-55/10 dark:bg-emerald-950/10 border border-emerald-100/40 dark:border-emerald-900/30 text-xs leading-relaxed text-slate-655 dark:text-slate-300 font-semibold">
-                      <p class="font-bold text-slate-800 dark:text-slate-100">Correct Answer: Option <span class="correct-opt-char">A</span></p>
+                      <p class="font-bold text-slate-800 dark:text-slate-100">Correct answer: <span class="correct-opt-char">A</span></p>
                       <p class="mt-2 whitespace-pre-line explanation-text leading-relaxed font-sans">${h(q.explanation)}</p>
                     </div>
                   </div>
@@ -372,20 +365,7 @@ export const Practice = {
                   
                   <p class="text-slate-800 dark:text-slate-200 text-sm font-semibold">Q${idx + 1}. ${h(q.question)}</p>
                   
-                  <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs font-semibold">
-                    ${q.options.map((opt, optIdx) => {
-                      const isCorrect = q.correctAnswer === optIdx;
-                      return `
-                        <div class="p-3 border rounded-xl flex items-start gap-2.5 ${
-                          isCorrect ? 'border-emerald-500 bg-emerald-50/10 dark:bg-emerald-950/10 text-emerald-600 dark:text-emerald-400' : 'border-slate-200 dark:border-white/[0.04] bg-white/40 dark:bg-slate-950/10'
-                        }">
-                          <span class="font-bold ${isCorrect ? 'text-emerald-500' : 'text-slate-400'}">${String.fromCharCode(65 + optIdx)}.</span>
-                          <span class="text-slate-700 dark:text-slate-300 leading-relaxed">${h(opt)}</span>
-                        </div>
-                      `;
-                    }).join('')}
-                  </div>
-
+                  <p>${renderQuestionContext(q)}Correct answer: ${h(answerLabel(q,q.type==='NAT'?(q.correctNat??q.natMin):q.type==='MSQ'?q.correctOptions:q.correctAnswer))}</p>
                   <div class="p-4 bg-slate-50 dark:bg-slate-950/20 rounded-2xl text-xs border border-slate-100 dark:border-white/[0.04]">
                     <p class="font-bold text-slate-850 dark:text-slate-100"><i class="fa-solid fa-square-check text-emerald-500 mr-1 animate-pulse"></i> Solution Explanation</p>
                     <p class="text-slate-500 dark:text-slate-400 mt-1.5 leading-relaxed whitespace-pre-line">${h(q.explanation)}</p>
@@ -524,36 +504,12 @@ export const Practice = {
         const correctCharSpan = panel.querySelector('.correct-opt-char');
         
         checkBtn?.addEventListener('click', () => {
-          const selectedRadio = panel.querySelector(`input[name="option-${qid}"]:checked`);
-          if (!selectedRadio) {
-            showToast("Please select an option to check.", "warning");
-            return;
-          }
-
-          const selectedIndex = parseInt(selectedRadio.value);
-          const questionObj = this.questions.find(q => q.id === qid);
-          if (!questionObj) return;
-
-          const labels = panel.querySelectorAll('label');
-          labels.forEach(l => {
-            l.classList.remove('border-emerald-500', 'bg-emerald-50/20', 'dark:border-emerald-800', 'dark:bg-emerald-950/20', 'border-rose-500', 'bg-rose-50/20', 'dark:border-rose-800', 'dark:bg-rose-950/20');
-          });
-
-          const correctIndex = questionObj.correctAnswer;
-          const correctLabel = labels[correctIndex];
-          const selectedLabel = labels[selectedIndex];
-          
-          correctCharSpan.textContent = String.fromCharCode(65 + correctIndex);
-          solContainer.classList.remove('hidden');
-
-          if (selectedIndex === correctIndex) {
-            showToast("Correct Answer!", "success");
-            correctLabel.classList.add('border-emerald-500', 'bg-emerald-50/20', 'dark:border-emerald-800', 'dark:bg-emerald-950/20');
-          } else {
-            showToast("Incorrect Answer.", "error");
-            selectedLabel.classList.add('border-rose-500', 'bg-rose-50/20', 'dark:border-rose-800', 'dark:bg-rose-950/20');
-            correctLabel.classList.add('border-emerald-500', 'bg-emerald-50/20', 'dark:border-emerald-800', 'dark:bg-emerald-950/20');
-          }
+          const questionObj=this.questions.find(q=>q.id===qid);if(!questionObj)return;
+          const answer=readAnswer(panel,questionObj),result=evaluateAnswer(questionObj,answer);
+          if(result.blank){showToast('Please enter an answer.','warning');return;}
+          correctCharSpan.textContent=answerLabel(questionObj,questionObj.type==='NAT'?(questionObj.correctNat??questionObj.natMin):questionObj.type==='MSQ'?questionObj.correctOptions:questionObj.correctAnswer);
+          solContainer.classList.remove('hidden');solContainer.setAttribute('role','status');
+          panel.dataset.correct=String(result.correct);showToast(result.correct?'Correct answer':'Incorrect answer',result.correct?'success':'error');
 
           const eli5Btn = panel.querySelector('.eli5-btn');
           const eli5Container = panel.querySelector('.eli5-container');

@@ -30,13 +30,18 @@ export function validatePaper(examId, questions, full = true) {
   }
   return errors;
 }
+export function evaluateAnswer(q,a){
+  const type=q.type||'MCQ';
+  const blank=a===undefined||a===null||a===''||(Array.isArray(a)&&!a.length);
+  const correct=!blank&&(type==='NAT'?String(a).trim()!==''&&Number.isFinite(Number(a))&&Number(a)>=(q.natMin??q.correctNat)&&Number(a)<=(q.natMax??q.correctNat):type==='MSQ'?Array.isArray(a)&&Array.isArray(q.correctOptions)&&[...new Set(a.map(Number))].sort().join(',')===[...q.correctOptions].sort().join(','):Number.isInteger(q.correctAnswer)&&Number(a)===q.correctAnswer);
+  return {blank,correct,status:blank?'skipped':correct?'correct':'wrong'};
+}
 export function scorePaper(examId, questions, answers) {
   const e = EXAMS[examId];
   let score=0, negativeMarks=0, correctCount=0, wrongCount=0, skippedCount=0;
   const responses=questions.map(q=>{
     const a=answers[q.id], type=q.type||'MCQ';
-    const blank=a===undefined || a===null || a==='' || (Array.isArray(a)&&!a.length);
-    const correct=!blank && (type==='NAT' ? Number.isFinite(Number(a)) && Number(a)>=(q.natMin??q.correctNat) && Number(a)<=(q.natMax??q.correctNat) : type==='MSQ' ? [...a].map(Number).sort().join(',')===[...q.correctOptions].sort().join(',') : Number(a)===q.correctAnswer);
+    const {blank,correct}=evaluateAnswer(q,a);
     const penalty=type==='MCQ' ? q.marks*e.penalty : 0;
     const status=blank?'skipped':correct?'correct':'wrong';
     if(blank) skippedCount++; else if(correct){correctCount++;score+=q.marks;} else {wrongCount++;score-=penalty;negativeMarks+=penalty;}
