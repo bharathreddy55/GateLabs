@@ -1,3 +1,4 @@
+import {initFocusManagement} from './utils/focusManagement.js';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import {storageRecoveryEntries,clearStorageRecovery} from './utils/safeStorage.js';
 import { setStorageUser } from './utils/userStorage.js';
@@ -29,6 +30,7 @@ import './styles/index.css';
 import './styles/workspace.css';
 
 // Initialize global theme & accent palette (apply saved colors before first paint)
+initFocusManagement();
 initTheme();
 initAccentPalette();
 

@@ -54,13 +54,15 @@ try{
  }
  await page.locator('[data-prep-tab=mocks]').click();
  assert.equal(await page.locator('.paper-card').count(),18);
- assert.equal(await page.locator('[data-paper]:disabled').count(),4);
+ assert.equal(await page.locator('[data-paper]:disabled').count(),0);
  await page.goto('http://127.0.0.1:3011/#/group2?tab=mocks');
  await page.locator('[data-panel=mocks]').waitFor();
  await page.screenshot({path:'artifacts/workspace/mock-library-desktop.png',fullPage:false});
  await page.setViewportSize({width:390,height:844});
  await page.getByRole('button',{name:'Open navigation',exact:true}).click();
  assert.equal(await page.locator('.app-shell').evaluate(el=>el.classList.contains('navigation-open')),true);
+ await page.waitForFunction(()=>document.querySelector('.app-main').inert);
+ for(let i=0;i<25;i++){await page.keyboard.press('Tab');assert.equal(await page.evaluate(()=>document.getElementById('sidebar-container').contains(document.activeElement)),true);}
  await page.waitForFunction(()=>Math.abs(document.getElementById('sidebar-container').getBoundingClientRect().left)<1);
  await page.screenshot({path:'artifacts/workspace/mobile-navigation.png',fullPage:false});
  await page.locator('.sidebar-link[href="#/dashboard"]').click();
@@ -81,6 +83,8 @@ try{
  await page.screenshot({path:'artifacts/workspace/landing-mobile.png',fullPage:true});
  await page.getByRole('button',{name:'Sign in',exact:true}).click();
  assert.equal(await page.locator('#auth-modal').isVisible(),true);
+ await page.waitForFunction(()=>document.getElementById('auth-modal').getAttribute('aria-modal')==='true');
+ for(let i=0;i<12;i++){await page.keyboard.press('Tab');assert.equal(await page.evaluate(()=>document.getElementById('auth-modal').contains(document.activeElement)),true);}
  await page.getByRole('button',{name:'Close sign in dialog'}).click();
  assert.deepEqual(errors,[]);
  console.log('PASS: home, search, all five exam workspaces and tabs, preserved SBI library, mobile menu, dark appearance, no horizontal overflow, landing and sign-in dialog. Cloud/auth calls isolated.');
