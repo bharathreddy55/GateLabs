@@ -1,3 +1,7 @@
+import { parseExamText } from '../utils/parseExamText.js';
+import { validatePaper } from '../utils/examEngine.js';
+import { normaliseQuestions } from '../utils/examAdapters.js';
+import { countdownCard, bindCountdowns } from '../components/ExamCountdown.js';
 import { db } from '../config/firebase';
 import { showToast } from '../utils/toast';
 import { MockTest } from './MockTest';
@@ -249,6 +253,9 @@ Q2: ...</pre>
   },
 
   async init() {
+    const host=document.getElementById('sub-page-container');
+    if(host&&!host.querySelector('[data-countdown="tet"]'))host.insertAdjacentHTML('afterbegin',countdownCard('tet'));
+    bindCountdowns();
     window.scrollTo(0, 0);
 
     const textarea = document.getElementById('tet-questions-textarea');
@@ -271,10 +278,8 @@ Q2: ...</pre>
     });
 
     // Load sample questions
-    btnLoadSample?.addEventListener('click', () => {
-      textarea.value = this.generateSampleQuestions();
-      showToast("Generated 150 sample TET questions inside input area!", "success");
-      this.parseQuestions(false);
+    btnLoadSample?.addEventListener('click', async () => {
+      try { const response=await fetch('/pyqs/tet_practice_1.txt');if(!response.ok)throw Error('Sample unavailable');textarea.value=await response.text();this.parseQuestions(false); } catch(error){showToast(error.message,'error');}
     });
 
     // Direct exam buttons
@@ -425,45 +430,7 @@ Q2: ...</pre>
   },
 
   launchMockTest(examName) {
-    showToast(`Starting ${examName} Simulator...`, "info");
-
-    // Setup MockTest state parameters
-    MockTest.questions = [...this.parsedQuestions];
-    MockTest.isTesting = true;
-    MockTest.currentIdx = 0;
-    MockTest.answers = {};
-    MockTest.status = {};
-    MockTest.timeLeft = 150 * 60; // 150 minutes
-    MockTest.totalTime = 150 * 60;
-    MockTest.selectedSubject = examName;
-    MockTest.selectedTopic = 'All';
-    MockTest.calcLeft = undefined;
-    MockTest.calcTop = undefined;
-
-    // Setup sections
-    MockTest.sections = {};
-    MockTest.questions.forEach((q, idx) => {
-      const secName = q.subject || 'Child Development';
-      if (!MockTest.sections[secName]) {
-        MockTest.sections[secName] = [];
-      }
-      MockTest.sections[secName].push(idx);
-      MockTest.status[q.id] = 'not-visited';
-    });
-
-    MockTest.status[MockTest.questions[0].id] = 'not-answered';
-
-    document.body.classList.add('fullscreen-exam');
-
-    // Unload guard listener
-    MockTest.unloadHandler = (e) => {
-      e.preventDefault();
-      e.returnValue = 'An exam is currently in progress. Leaving now will forfeit all progress.';
-    };
-    window.addEventListener('beforeunload', MockTest.unloadHandler);
-
-    MockTest.startTimer();
-    window.location.hash = '#/mock-test';
+    MockTest.startExam({examId:'tet', questions:normaliseQuestions('tet',this.parsedQuestions),title:examName});
   },
 
   parseQuestions(silent = false) {
@@ -474,150 +441,10 @@ Q2: ...</pre>
       return;
     }
 
-    let parsed = [];
-
-    if (text.includes('subject:')) {
-      // Standard file format: split by ---
-      const rawBlocks = text.split(/---/);
-      rawBlocks.forEach((block, index) => {
-        const trimmed = block.trim();
-        if (!trimmed) return;
-
-        const lines = trimmed.split('\n').map(l => l.trim()).filter(Boolean);
-        let questionText = '';
-        let options = [];
-        let correctAnswer = 'A';
-        let explanationVal = '';
-        let subjectVal = '';
-        let topicVal = 'General';
-
-        lines.forEach(line => {
-          const lower = line.toLowerCase();
-          if (lower.startsWith('subject:')) {
-            subjectVal = line.substring(8).trim();
-          } else if (lower.startsWith('topic:')) {
-            topicVal = line.substring(6).trim();
-          } else if (lower.startsWith('question:')) {
-            questionText = line.substring(9).trim();
-          } else if (lower.startsWith('option a:') || line.startsWith('A)')) {
-            if (lower.startsWith('option a:')) {
-              options[0] = line.substring(9).trim();
-            } else {
-              options[0] = line.substring(line.indexOf(')') >= 0 ? line.indexOf(')') + 1 : line.indexOf(':') + 1).trim();
-            }
-          } else if (lower.startsWith('option b:') || line.startsWith('B)')) {
-            if (lower.startsWith('option b:')) {
-              options[1] = line.substring(9).trim();
-            } else {
-              options[1] = line.substring(line.indexOf(')') >= 0 ? line.indexOf(')') + 1 : line.indexOf(':') + 1).trim();
-            }
-          } else if (lower.startsWith('option c:') || line.startsWith('C)')) {
-            if (lower.startsWith('option c:')) {
-              options[2] = line.substring(9).trim();
-            } else {
-              options[2] = line.substring(line.indexOf(')') >= 0 ? line.indexOf(')') + 1 : line.indexOf(':') + 1).trim();
-            }
-          } else if (lower.startsWith('option d:') || line.startsWith('D)')) {
-            if (lower.startsWith('option d:')) {
-              options[3] = line.substring(9).trim();
-            } else {
-              options[3] = line.substring(line.indexOf(')') >= 0 ? line.indexOf(')') + 1 : line.indexOf(':') + 1).trim();
-            }
-          } else if (lower.startsWith('correct:') || lower.startsWith('answer:')) {
-            const val = line.substring(line.indexOf(':') + 1).trim().toUpperCase();
-            correctAnswer = val.includes('A') || val === '0' ? 'A' : (val.includes('B') || val === '1' ? 'B' : (val.includes('C') || val === '2' ? 'C' : 'D'));
-          } else if (lower.startsWith('explanation:')) {
-            explanationVal = line.substring(12).trim();
-          }
-        });
-
-        const qNum = parsed.length + 1;
-        let subject = subjectVal || 'Child Development & Pedagogy (1-30)';
-        if (qNum > 30 && qNum <= 60) subject = 'Language I (31-60)';
-        else if (qNum > 60 && qNum <= 90) subject = 'Language II (61-90)';
-        else if (qNum > 90 && qNum <= 120) subject = 'Mathematics (91-120)';
-        else if (qNum > 120) subject = 'Environmental Studies (121-150)';
-
-        parsed.push({
-          id: `q_tet_${Date.now()}_${index}`,
-          type: 'MCQ',
-          question: questionText || `Question details review for TET query #${qNum}`,
-          options: options.length >= 2 ? options : ["Option A", "Option B", "Option C", "Option D"],
-          correctAnswer: correctAnswer === 'A' ? 0 : (correctAnswer === 'B' ? 1 : (correctAnswer === 'C' ? 2 : 3)),
-          explanation: explanationVal || 'TET Exam standard pedagogy solution review.',
-          marks: 1,
-          subject,
-          topic: topicVal,
-          difficulty: 'Hard',
-          year: 2026
-        });
-      });
-    } else {
-      // Paste format (splits by Q1: etc.)
-      const rawBlocks = text.split(/(?=Q\d+[:\.\s]|Ques\s+\d+[:\.\s]|\d+[\.\s]\s*[A-Z])/i);
-      rawBlocks.forEach((block, index) => {
-        const trimmed = block.trim();
-        if (!trimmed) return;
-
-        const lines = trimmed.split('\n').map(l => l.trim()).filter(Boolean);
-        if (lines.length < 2) return;
-
-        let questionText = lines[0].replace(/^Q\d+[:\.]\s*/i, '').replace(/^\d+[:\.\s]\s*/i).trim();
-        
-        const options = [];
-        let correctAnswer = 'A';
-        let explanation = 'TET Exam standard pedagogy solution review.';
-
-        lines.slice(1).forEach(line => {
-          const optMatch = line.match(/^([A-D])[\)\.\s]\s*(.*)/i);
-          if (optMatch) {
-            options.push(optMatch[2].trim());
-          }
-
-          const ansMatch = line.match(/^(?:Answer|Correct\s+Answer)\s*:\s*([A-D])/i);
-          if (ansMatch) {
-            correctAnswer = ansMatch[1].toUpperCase();
-          }
-
-          const expMatch = line.match(/^(?:Explanation)\s*:\s*(.*)/i);
-          if (expMatch) {
-            explanation = expMatch[1].trim();
-          }
-        });
-
-        if (options.length < 2) {
-          options.push("Option A", "Option B", "Option C", "Option D");
-        }
-
-        const qNum = parsed.length + 1;
-        let subject = 'Child Development & Pedagogy (1-30)';
-        if (qNum > 30 && qNum <= 60) {
-          subject = 'Language I (31-60)';
-        } else if (qNum > 60 && qNum <= 90) {
-          subject = 'Language II (61-90)';
-        } else if (qNum > 90 && qNum <= 120) {
-          subject = 'Mathematics (91-120)';
-        } else if (qNum > 120) {
-          subject = 'Environmental Studies (121-150)';
-        }
-
-        parsed.push({
-          id: `q_tet_${Date.now()}_${index}`,
-          type: 'MCQ',
-          question: questionText || `Question details review for TET query #${qNum}`,
-          options,
-          correctAnswer: correctAnswer === 'A' ? 0 : (correctAnswer === 'B' ? 1 : (correctAnswer === 'C' ? 2 : 3)),
-          explanation,
-          marks: 1,
-          subject,
-          topic: 'General Syllabus Review',
-          difficulty: 'Hard',
-          year: 2026
-        });
-      });
-    }
-
-    this.parsedQuestions = parsed;
+    const parsed=parseExamText(text,'tet');
+    const errors=validatePaper('tet',parsed,true);
+    if(errors.length){this.parsedQuestions=[];showToast(errors.slice(0,3).join(' · '),'error');return;}
+    this.parsedQuestions=parsed;
 
     // Update Overview Stats
     const totalCount = parsed.length;

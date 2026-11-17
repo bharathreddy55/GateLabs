@@ -1,3 +1,4 @@
+import { countdownCard, bindCountdowns } from '../components/ExamCountdown.js';
 import { db, auth, SUBJECT_SYLLABUS } from '../config/firebase';
 import { Chart } from 'chart.js/auto';
 import { showToast } from '../utils/toast';
@@ -14,7 +15,7 @@ function getGreeting(name = 'Bharath') {
 }
 
 function calculateStreak(attempts) {
-  if (attempts.length === 0) return 25;
+  if (attempts.length === 0) return 0;
   
   const dates = Array.from(new Set(attempts.map(a => new Date(a.timestamp).toDateString())))
     .map(d => new Date(d))
@@ -27,7 +28,7 @@ function calculateStreak(attempts) {
 
   const latest = dates[0];
   if (latest < yesterday && latest.toDateString() !== today.toDateString()) {
-    return 25;
+    return 0;
   }
 
   let expected = new Date(latest.getTime());
@@ -40,18 +41,18 @@ function calculateStreak(attempts) {
       break;
     }
   }
-  return Math.max(streak, 25);
+  return streak;
 }
 
 async function evaluateBadges(attempts, progress) {
-  const unlocked = new Set(['quick_start', 'dedicated_scholar', 'consistency_king']);
+  const unlocked = new Set();
   if (attempts.length >= 1) unlocked.add('quick_start');
   if (attempts.length >= 5) unlocked.add('dedicated_scholar');
   if (attempts.some(a => a.accuracy >= 85)) unlocked.add('sniper_mode');
   if (attempts.some(a => (a.score / (a.totalPossibleMarks || 10)) >= 0.90)) unlocked.add('subject_specialist');
   if (attempts.some(a => a.scope && a.scope.toLowerCase().includes('mathematics') && a.accuracy >= 70)) unlocked.add('math_prodigy');
   if (Object.values(progress).filter(Boolean).length >= 15) unlocked.add('concept_explorer');
-  unlocked.add('consistency_king');
+  if (calculateStreak(attempts) >= 3) unlocked.add('consistency_king');
   if (attempts.length >= 2) unlocked.add('speed_demon');
 
   const unlockedList = Array.from(unlocked);
@@ -76,7 +77,7 @@ export const Dashboard = {
     const attempts = await db.getAttempts();
     const mockTestsTaken = attempts.length;
 
-    let avgAccuracy = 78;
+    let avgAccuracy = 0;
     if (mockTestsTaken > 0) {
       avgAccuracy = Math.round(attempts.reduce((acc, curr) => acc + curr.accuracy, 0) / mockTestsTaken);
     }
@@ -109,44 +110,7 @@ export const Dashboard = {
     return `
       <div class="flex flex-col gap-6 animate-fade-in font-sans pb-12">
         
-        <!-- GATE 2027 Countdown Timer -->
-        <div class="glass-panel p-5 rounded-3xl border border-slate-200/60 dark:border-white/[0.07] bg-gradient-to-r from-primary-500/5 via-indigo-500/5 to-purple-500/5 flex flex-col md:flex-row items-center justify-between gap-5 relative overflow-hidden">
-          <div class="absolute -right-20 -top-20 w-48 h-48 bg-primary-500/10 rounded-full blur-2xl pointer-events-none"></div>
-          
-          <div class="flex items-center gap-4">
-            <div class="h-12 w-12 rounded-2xl bg-gradient-to-tr from-primary-500/10 to-indigo-650/10 text-primary-500 flex items-center justify-center text-xl flex-shrink-0">
-              <i class="fa-regular fa-clock"></i>
-            </div>
-            <div>
-              <h4 class="font-display font-extrabold text-sm text-slate-900 dark:text-white leading-tight">Countdown to GATE 2027</h4>
-              <p class="text-[10px] text-slate-405 dark:text-slate-400 mt-1 font-semibold">Standard exam schedule date: February 6, 2027. Gear up for your target AIR!</p>
-            </div>
-          </div>
-          
-          <!-- Live Digit Containers -->
-          <div class="flex items-center gap-2" id="gate-countdown-timer">
-            <div class="flex flex-col items-center">
-              <div class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-white/5 h-12 w-12 rounded-xl flex items-center justify-center font-display font-extrabold text-sm text-slate-900 dark:text-white shadow-sm" id="gate-days">00</div>
-              <span class="text-[8px] font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-500 mt-1">Days</span>
-            </div>
-            <span class="text-slate-400 font-extrabold text-sm">:</span>
-            <div class="flex flex-col items-center">
-              <div class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-white/5 h-12 w-12 rounded-xl flex items-center justify-center font-display font-extrabold text-sm text-slate-900 dark:text-white shadow-sm" id="gate-hours">00</div>
-              <span class="text-[8px] font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-500 mt-1">Hrs</span>
-            </div>
-            <span class="text-slate-400 font-extrabold text-sm">:</span>
-            <div class="flex flex-col items-center">
-              <div class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-white/5 h-12 w-12 rounded-xl flex items-center justify-center font-display font-extrabold text-sm text-slate-900 dark:text-white shadow-sm" id="gate-mins">00</div>
-              <span class="text-[8px] font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-500 mt-1">Mins</span>
-            </div>
-            <span class="text-slate-400 font-extrabold text-sm">:</span>
-            <div class="flex flex-col items-center">
-              <div class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-white/5 h-12 w-12 rounded-xl flex items-center justify-center font-display font-extrabold text-sm text-primary-500 shadow-sm animate-pulse" id="gate-secs">00</div>
-              <span class="text-[8px] font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-500 mt-1">Secs</span>
-            </div>
-          </div>
-        </div>
-        
+        ${countdownCard('gate')}
         <!-- Segmented Control Bar -->
         <div class="glass-panel p-2 rounded-full flex items-center justify-between border border-slate-200/60 dark:border-white/[0.07]">
           <div class="flex flex-wrap gap-1">
@@ -984,7 +948,7 @@ export const Dashboard = {
           exportedAt: new Date().toISOString(),
           syllabusProgress: JSON.parse(localStorage.getItem('gate_syllabus_progress') || '{}'),
           bookmarks: JSON.parse(localStorage.getItem('gate_bookmarks') || '[]'),
-          attempts: JSON.parse(localStorage.getItem('gate_attempts') || '[]'),
+          attempts: JSON.parse(localStorage.getItem('gate_attempts:'+(auth.currentUser?.uid||'anonymous')) || '[]'),
           customFormulas: JSON.parse(localStorage.getItem('gate_custom_formulas') || '[]')
         };
 
@@ -1014,7 +978,7 @@ export const Dashboard = {
             const data = JSON.parse(event.target.result);
             if (data.syllabusProgress) localStorage.setItem('gate_syllabus_progress', JSON.stringify(data.syllabusProgress));
             if (data.bookmarks) localStorage.setItem('gate_bookmarks', JSON.stringify(data.bookmarks));
-            if (data.attempts) localStorage.setItem('gate_attempts', JSON.stringify(data.attempts));
+            if (data.attempts) localStorage.setItem('gate_attempts:'+(auth.currentUser?.uid||'anonymous'), JSON.stringify(data.attempts));
             if (data.customFormulas) localStorage.setItem('gate_custom_formulas', JSON.stringify(data.customFormulas));
 
             showToast("Backup restored successfully! 🎉", "success");
@@ -1094,40 +1058,7 @@ export const Dashboard = {
   },
 
   startGateCountdown() {
-    if (this.countdownInterval) clearInterval(this.countdownInterval);
-
-    const targetDate = new Date('February 6, 2027 09:00:00').getTime();
-
-    const updateTimer = () => {
-      const now = new Date().getTime();
-      const distance = targetDate - now;
-
-      const daysEl = document.getElementById('gate-days');
-      const hoursEl = document.getElementById('gate-hours');
-      const minsEl = document.getElementById('gate-mins');
-      const secsEl = document.getElementById('gate-secs');
-
-      if (distance < 0) {
-        if (daysEl) daysEl.innerText = '00';
-        if (hoursEl) hoursEl.innerText = '00';
-        if (minsEl) minsEl.innerText = '00';
-        if (secsEl) secsEl.innerText = '00';
-        clearInterval(this.countdownInterval);
-        return;
-      }
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      if (daysEl) daysEl.innerText = String(days).padStart(2, '0');
-      if (hoursEl) hoursEl.innerText = String(hours).padStart(2, '0');
-      if (minsEl) minsEl.innerText = String(minutes).padStart(2, '0');
-      if (secsEl) secsEl.innerText = String(seconds).padStart(2, '0');
-    };
-
-    updateTimer();
-    this.countdownInterval = setInterval(updateTimer, 1000);
+    if(this.countdownInterval)clearInterval(this.countdownInterval);
+    bindCountdowns();
   }
 };

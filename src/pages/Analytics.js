@@ -1,9 +1,14 @@
+import { escapeHtml } from '../utils/examEngine.js';
+function safeAttempt(a){const clean=v=>{if(Array.isArray(v))return v.map(clean);if(v&&typeof v==='object')return Object.fromEntries(Object.entries(v).map(([k,x])=>[k,clean(x)]));return typeof v==='string'?escapeHtml(v):v;};return clean(a);}
+import { EXAMS } from '../config/exams.js';
+import { auth } from '../config/firebase';
 import { db, SUBJECT_SYLLABUS } from '../config/firebase';
 import { showToast } from '../utils/toast';
 import { Chart } from 'chart.js/auto';
 
 export const Analytics = {
   // State
+  examFilter: '',
   viewMode: 'list',        // 'list' | 'detail'
   activeAttemptId: null,
   selectedSubjectFilter: '',
@@ -30,7 +35,8 @@ export const Analytics = {
   // ATTEMPT LIST VIEW
   // ─────────────────────────────────────────────────────────────
   async renderAttemptList() {
-    const attempts = await db.getAttempts();
+    const allAttempts = (await db.getAttempts()).map(safeAttempt);
+    const attempts = this.examFilter ? allAttempts.filter(a=>a.examId===this.examFilter || (this.examFilter==='legacy'&&!a.examId)) : allAttempts;
 
     if (attempts.length === 0) {
       return `
@@ -100,62 +106,7 @@ export const Analytics = {
           </div>
         </div>
 
-        <!-- Estimated GATE Score & AIR Rank Predictor Bento Card -->
-        ${(() => {
-          const maxScorePct = attempts.reduce((max, a) => {
-            const pct = a.totalPossibleMarks > 0 ? (a.score / a.totalPossibleMarks) * 100 : 0;
-            return Math.max(max, pct);
-          }, 0);
-
-          let estimatedGateScore = 0;
-          let predictedAirRange = "Below Cutoff (AIR > 10,000)";
-          let rankBadgeColor = "text-slate-400 bg-slate-500/10 border-slate-500/20";
-
-          if (maxScorePct >= 28.5) {
-            const rawScore = 350 + (550 * ((maxScorePct - 28.5) / (82 - 28.5)));
-            estimatedGateScore = Math.min(990, Math.max(350, Math.round(rawScore)));
-
-            if (estimatedGateScore >= 850) {
-              predictedAirRange = "AIR 1 – 50 (IISc / IIT Bombay Zone)";
-              rankBadgeColor = "text-indigo-300 bg-indigo-500/10 border-indigo-500/30";
-            } else if (estimatedGateScore >= 750) {
-              predictedAirRange = "AIR 51 – 250 (Top 5 IITs)";
-              rankBadgeColor = "text-indigo-300 bg-indigo-500/10 border-indigo-500/20";
-            } else if (estimatedGateScore >= 650) {
-              predictedAirRange = "AIR 251 – 700 (NITs & New IITs)";
-              rankBadgeColor = "text-indigo-400 bg-indigo-500/10 border-indigo-500/20";
-            } else if (estimatedGateScore >= 500) {
-              predictedAirRange = "AIR 701 – 2,000 (State Universities)";
-              rankBadgeColor = "text-slate-300 bg-slate-800 border-slate-700";
-            } else {
-              predictedAirRange = "AIR 2,001 – 6,000 (Qualified)";
-              rankBadgeColor = "text-slate-300 bg-slate-800 border-slate-700";
-            }
-          }
-
-          return `
-            <div class="bento-card p-6 bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950 text-white border border-slate-800 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-xl">
-              <div class="space-y-1 max-w-lg">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-bold uppercase tracking-wider">
-                  <i class="fa-solid fa-trophy text-indigo-400"></i> IIT GATE Score & AIR Predictor
-                </div>
-                <h4 class="font-display font-extrabold text-xl text-white">Estimated GATE Score: <span class="text-indigo-400 font-mono">${estimatedGateScore > 0 ? estimatedGateScore + ' / 1000' : 'N/A (Take Test)'}</span></h4>
-                <p class="text-xs text-slate-300 font-semibold leading-relaxed">
-                  Based on IIT Madras GATE 2027 normalization benchmarking (${maxScorePct.toFixed(1)}% top score achieved).
-                </p>
-              </div>
-
-              <div class="flex flex-col items-end gap-1.5 w-full md:w-auto">
-                <span class="text-[10px] uppercase tracking-wider font-bold text-slate-400">Predicted Rank</span>
-                <span class="px-4 py-2 rounded-2xl border ${rankBadgeColor} text-xs font-extrabold flex items-center gap-2">
-                  <span class="h-2 w-2 rounded-full bg-emerald-400 animate-ping"></span> ${predictedAirRange}
-                </span>
-                <span class="text-[10px] text-slate-400 font-semibold">General Cutoff: 28.5 marks</span>
-              </div>
-            </div>
-          `;
-        })()}
-
+        <p class="text-sm text-slate-500">These are raw practice scores. Official rank, normalization and qualifying cutoffs cannot be inferred from these attempts.</p>
         <!-- Attempts List -->
         <div>
           <h4 class="font-display font-bold text-lg text-slate-900 dark:text-white mb-4">
@@ -200,7 +151,7 @@ export const Analytics = {
                   <div class="flex-shrink-0 flex items-center gap-4 pr-2">
                     <div class="text-center hidden sm:block">
                       <p class="text-[10px] font-bold text-slate-400 uppercase">Score</p>
-                      <p class="font-display font-extrabold text-lg text-slate-800 dark:text-slate-200">${att.score}<span class="text-xs text-slate-400 font-normal">/${att.totalPossibleMarks}</span></p>
+                      <p class="font-display font-extrabold text-lg text-slate-800 dark:text-slate-200">${Number(att.score).toFixed(2)}<span class="text-xs text-slate-400 font-normal">/${att.totalPossibleMarks}</span></p>
                     </div>
                     <div class="text-center hidden sm:block">
                       <p class="text-[10px] font-bold text-slate-400 uppercase">Accuracy</p>
@@ -253,7 +204,8 @@ export const Analytics = {
   // ─────────────────────────────────────────────────────────────
   async renderAttemptDetail(attemptId) {
     const attempts = await db.getAttempts();
-    const att = attempts.find(a => a.id === attemptId);
+    const found = attempts.find(a => a.id === attemptId);
+    const att = found ? safeAttempt(found) : null;
 
     if (!att) {
       return `
@@ -305,7 +257,7 @@ export const Analytics = {
         <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
           <div class="glass-panel p-5 rounded-2xl text-center col-span-1">
             <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Score</p>
-            <h3 class="font-display font-extrabold text-2xl text-primary-600 dark:text-primary-400 mt-1">${att.score}<span class="text-sm font-normal text-slate-400">/${att.totalPossibleMarks}</span></h3>
+            <h3 class="font-display font-extrabold text-2xl text-primary-600 dark:text-primary-400 mt-1">${Number(att.score).toFixed(2)}<span class="text-sm font-normal text-slate-400">/${att.totalPossibleMarks}</span></h3>
           </div>
           <div class="glass-panel p-5 rounded-2xl text-center">
             <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Accuracy</p>
@@ -317,7 +269,7 @@ export const Analytics = {
           </div>
           <div class="glass-panel p-5 rounded-2xl text-center">
             <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Negative Marks</p>
-            <h3 class="font-display font-extrabold text-2xl text-rose-500 dark:text-rose-400 mt-1">-${att.negativeMarks}</h3>
+            <h3 class="font-display font-extrabold text-2xl text-rose-500 dark:text-rose-400 mt-1">-${Number(att.negativeMarks||0).toFixed(2)}</h3>
           </div>
           <div class="glass-panel p-5 rounded-2xl text-center col-span-2 md:col-span-1">
             <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Time Taken</p>
@@ -530,7 +482,7 @@ export const Analytics = {
                     <div class="p-3 pt-0 bg-white/50 dark:bg-darkbg-50/50 border-t border-slate-200/50 dark:border-slate-800/50">
                       ${q.options.map((opt, oi) => {
                         const isCorrectOption = q.type === 'MSQ' 
-                          ? (q.correctOptions && q.correctOptions.includes(String(oi)))
+                          ? (q.correctOptions && q.correctOptions.map(String).includes(String(oi)))
                           : oi === q.correctAnswer;
                         const isUserOption = q.type === 'MSQ'
                           ? (q.userAnswer && q.userAnswer.includes(String(oi)))
@@ -571,6 +523,21 @@ export const Analytics = {
   },
 
   init() {
+    const host=document.getElementById('sub-page-container');
+    if(this.viewMode==='list' && host && !document.getElementById('analytics-exam-filter')){
+      const panel=document.createElement('div');panel.className='exam-hub exam-card';
+      panel.innerHTML='<label>Exam <select id="analytics-exam-filter"><option value="">All exams</option>'+Object.values(EXAMS).map(e=>'<option value="'+e.id+'">'+e.name+'</option>').join('')+'<option value="legacy">Legacy / unclassified</option></select></label><button id="import-legacy-attempts">Recover older device history</button>';
+      host.prepend(panel);const select=document.getElementById('analytics-exam-filter');select.value=this.examFilter;select.onchange=()=>{this.examFilter=select.value;this.refresh();};
+      document.getElementById('import-legacy-attempts').onclick=()=>{
+        const uid=auth.currentUser?.uid;if(!uid)return;
+        const legacy=JSON.parse(localStorage.getItem('gate_attempts')||'[]').filter(a=>!a.userId||a.userId===uid);
+        if(!legacy.length){showToast('No older device history found.','info');return;}
+        if(!confirm('Older records were stored without reliable account ownership. Copy this device history into your account only if these are your attempts?'))return;
+        const key='gate_attempts:'+uid,rows=JSON.parse(localStorage.getItem(key)||'[]');
+        for(const a of legacy)if(!rows.some(r=>r.id===a.id))rows.push({...a,userId:uid,legacy:true});
+        localStorage.setItem(key,JSON.stringify(rows));this.refresh();
+      };
+    }
     // Back button
     document.getElementById('btn-back-to-list')?.addEventListener('click', () => {
       this.viewMode = 'list';
@@ -741,7 +708,7 @@ export const Analytics = {
   },
 
   async refresh() {
-    const mainNode = document.querySelector('main');
+    const mainNode = document.getElementById('sub-page-container');
     if (mainNode) {
       mainNode.innerHTML = await this.render();
       this.init();

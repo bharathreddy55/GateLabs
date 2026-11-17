@@ -333,8 +333,8 @@ function initializeMockDb() {
   if (!localStorage.getItem('gate_users')) {
     localStorage.setItem('gate_users', JSON.stringify({}));
   }
-  if (!localStorage.getItem('gate_attempts')) {
-    localStorage.setItem('gate_attempts', JSON.stringify([]));
+  if (!localStorage.getItem(attemptStorageKey())) {
+    localStorage.setItem(attemptStorageKey(), JSON.stringify([]));
   }
   if (!localStorage.getItem('gate_study_time')) {
     localStorage.setItem('gate_study_time', JSON.stringify({
@@ -354,6 +354,10 @@ const firebaseConfig = {
   measurementId: "G-XEDG1BBT2S"
 };
 
+function attemptStorageKey(){
+  const uid=(useMock ? JSON.parse(localStorage.getItem('gate_current_user')||'null')?.uid : authInstance?.currentUser?.uid) || 'anonymous';
+  return 'gate_attempts:'+uid;
+}
 let useMock = true;
 let app;
 let authInstance;
@@ -769,11 +773,12 @@ const mockFirestore = {
     return new Promise((resolve) => {
       setTimeout(() => {
         const cleanAttempt = JSON.parse(JSON.stringify(attempt));
-        const attempts = JSON.parse(localStorage.getItem('gate_attempts') || '[]');
-        cleanAttempt.id = 'att_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4);
-        cleanAttempt.timestamp = new Date().toISOString();
-        attempts.push(cleanAttempt);
-        localStorage.setItem('gate_attempts', JSON.stringify(attempts));
+        const attempts = JSON.parse(localStorage.getItem(attemptStorageKey()) || '[]');
+        cleanAttempt.id = cleanAttempt.id || 'att_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4);
+        cleanAttempt.timestamp = cleanAttempt.timestamp || new Date().toISOString();
+    cleanAttempt.userId = auth.currentUser?.uid || 'anonymous';
+        if (!attempts.some(a => a.id === cleanAttempt.id)) attempts.push(cleanAttempt);
+        localStorage.setItem(attemptStorageKey(), JSON.stringify(attempts));
         resolve(cleanAttempt);
       }, 400);
     });
@@ -782,7 +787,7 @@ const mockFirestore = {
   async getAttempts() {
     return new Promise((resolve) => {
       setTimeout(() => {
-        const list = JSON.parse(localStorage.getItem('gate_attempts') || '[]');
+        const list = JSON.parse(localStorage.getItem(attemptStorageKey()) || '[]');
         resolve(list.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp)));
       }, 400);
     });
@@ -791,9 +796,12 @@ const mockFirestore = {
   async deleteAttempt(attemptId) {
     return new Promise((resolve) => {
       setTimeout(() => {
-        const list = JSON.parse(localStorage.getItem('gate_attempts') || '[]');
+        const list = JSON.parse(localStorage.getItem(attemptStorageKey()) || '[]');
         const updated = list.filter(a => a.id !== attemptId);
-        localStorage.setItem('gate_attempts', JSON.stringify(updated));
+      const resultsKey='exam-results:'+(auth.currentUser?.uid||'anonymous');
+      const results=JSON.parse(localStorage.getItem(resultsKey)||'[]');
+      localStorage.setItem(resultsKey,JSON.stringify(results.filter(a=>a.id!==attemptId)));
+        localStorage.setItem(attemptStorageKey(), JSON.stringify(updated));
         resolve(true);
       }, 200);
     });
@@ -1110,14 +1118,15 @@ const realFirestore = {
   async saveAttempt(attempt) {
     // Sanitize object to eliminate all 'undefined' fields for firestore compatibility
     const cleanAttempt = JSON.parse(JSON.stringify(attempt));
-    cleanAttempt.id = 'att_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4);
-    cleanAttempt.timestamp = new Date().toISOString();
+    cleanAttempt.id = cleanAttempt.id || 'att_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4);
+    cleanAttempt.timestamp = cleanAttempt.timestamp || new Date().toISOString();
+    cleanAttempt.userId = auth.currentUser?.uid || 'anonymous';
 
     // Always save to localStorage first
     try {
-      const attempts = JSON.parse(localStorage.getItem('gate_attempts') || '[]');
-      attempts.push(cleanAttempt);
-      localStorage.setItem('gate_attempts', JSON.stringify(attempts));
+      const attempts = JSON.parse(localStorage.getItem(attemptStorageKey()) || '[]');
+      if (!attempts.some(a => a.id === cleanAttempt.id)) attempts.push(cleanAttempt);
+      localStorage.setItem(attemptStorageKey(), JSON.stringify(attempts));
     } catch (e) {
       console.warn("localStorage saveAttempt error:", e);
     }
@@ -1140,7 +1149,7 @@ const realFirestore = {
     
     // Always load from localStorage
     try {
-      list = JSON.parse(localStorage.getItem('gate_attempts') || '[]');
+      list = JSON.parse(localStorage.getItem(attemptStorageKey()) || '[]');
     } catch (e) {
       console.warn("localStorage getAttempts error:", e);
     }
@@ -1169,9 +1178,12 @@ const realFirestore = {
 
   async deleteAttempt(attemptId) {
     try {
-      const list = JSON.parse(localStorage.getItem('gate_attempts') || '[]');
+      const list = JSON.parse(localStorage.getItem(attemptStorageKey()) || '[]');
       const updated = list.filter(a => a.id !== attemptId);
-      localStorage.setItem('gate_attempts', JSON.stringify(updated));
+      const resultsKey='exam-results:'+(auth.currentUser?.uid||'anonymous');
+      const results=JSON.parse(localStorage.getItem(resultsKey)||'[]');
+      localStorage.setItem(resultsKey,JSON.stringify(results.filter(a=>a.id!==attemptId)));
+      localStorage.setItem(attemptStorageKey(), JSON.stringify(updated));
     } catch (e) {
       console.warn("localStorage deleteAttempt error:", e);
     }

@@ -1,3 +1,7 @@
+import { parseExamText } from '../utils/parseExamText.js';
+import { validatePaper } from '../utils/examEngine.js';
+import { normaliseQuestions } from '../utils/examAdapters.js';
+import { countdownCard, bindCountdowns } from '../components/ExamCountdown.js';
 import { showToast } from '../utils/toast';
 import { MockTest } from './MockTest';
 
@@ -898,6 +902,9 @@ Q2: ...</pre>
   },
 
   async init() {
+    const host=document.getElementById('sub-page-container');
+    if(host&&!host.querySelector('[data-countdown="sbi"]'))host.insertAdjacentHTML('afterbegin',countdownCard('sbi'));
+    bindCountdowns();
     window.scrollTo(0, 0);
 
     // Tab switching event listeners
@@ -1099,47 +1106,7 @@ Q2: ...</pre>
   },
 
   launchMockTest(examName) {
-    showToast(`Starting ${examName} CBT Simulator...`, "info");
-
-    // Configure MockTest state for realistic SBI Clerk 2026 Prelims
-    MockTest.questions = [...this.parsedQuestions];
-    MockTest.isTesting = true;
-    MockTest.currentIdx = 0;
-    MockTest.answers = {};
-    MockTest.status = {};
-    MockTest.timeLeft = 60 * 60; // 60 minutes (1 hour)
-    MockTest.totalTime = 60 * 60;
-    MockTest.selectedSubject = examName;
-    MockTest.selectedTopic = 'All';
-    MockTest.calcLeft = undefined;
-    MockTest.calcTop = undefined;
-
-    // Group sections dynamically
-    MockTest.sections = {};
-    MockTest.questions.forEach((q, idx) => {
-      const secName = q.subject || 'General Section';
-      if (!MockTest.sections[secName]) {
-        MockTest.sections[secName] = [];
-      }
-      MockTest.sections[secName].push(idx);
-      MockTest.status[q.id] = 'not-visited';
-    });
-
-    if (MockTest.questions.length > 0) {
-      MockTest.status[MockTest.questions[0].id] = 'not-answered';
-    }
-
-    document.body.classList.add('fullscreen-exam');
-
-    // Unload safety handler
-    MockTest.unloadHandler = (e) => {
-      e.preventDefault();
-      e.returnValue = 'An exam is currently in progress. Leaving now will forfeit all progress.';
-    };
-    window.addEventListener('beforeunload', MockTest.unloadHandler);
-
-    MockTest.startTimer();
-    window.location.hash = '#/mock-test';
+    MockTest.startExam({examId:'sbi', questions:normaliseQuestions('sbi',this.parsedQuestions),title:examName});
   },
 
   parseQuestions(silent = false) {
@@ -1150,137 +1117,10 @@ Q2: ...</pre>
       return;
     }
 
-    let parsed = [];
-
-    if (text.includes('subject:') || text.includes('---')) {
-      // Standard file format separated by ---
-      const rawBlocks = text.split(/---/);
-      rawBlocks.forEach((block, index) => {
-        const trimmed = block.trim();
-        if (!trimmed) return;
-
-        const lines = trimmed.split('\n').map(l => l.trim()).filter(Boolean);
-        let questionText = '';
-        let options = [];
-        let correctAnswer = 'A';
-        let explanationVal = '';
-        let subjectVal = '';
-        let topicVal = 'General';
-        let difficultyVal = 'Medium';
-
-        lines.forEach(line => {
-          const lower = line.toLowerCase();
-          if (lower.startsWith('subject:')) {
-            subjectVal = line.substring(8).trim();
-          } else if (lower.startsWith('topic:')) {
-            topicVal = line.substring(6).trim();
-          } else if (lower.startsWith('difficulty:')) {
-            difficultyVal = line.substring(11).trim();
-          } else if (lower.startsWith('question:')) {
-            questionText = line.substring(9).trim();
-          } else if (lower.startsWith('option a:') || line.startsWith('A)')) {
-            options[0] = lower.startsWith('option a:') ? line.substring(9).trim() : line.substring(line.indexOf(')') + 1).trim();
-          } else if (lower.startsWith('option b:') || line.startsWith('B)')) {
-            options[1] = lower.startsWith('option b:') ? line.substring(9).trim() : line.substring(line.indexOf(')') + 1).trim();
-          } else if (lower.startsWith('option c:') || line.startsWith('C)')) {
-            options[2] = lower.startsWith('option c:') ? line.substring(9).trim() : line.substring(line.indexOf(')') + 1).trim();
-          } else if (lower.startsWith('option d:') || line.startsWith('D)')) {
-            options[3] = lower.startsWith('option d:') ? line.substring(9).trim() : line.substring(line.indexOf(')') + 1).trim();
-          } else if (lower.startsWith('option e:') || line.startsWith('E)')) {
-            options[4] = lower.startsWith('option e:') ? line.substring(9).trim() : line.substring(line.indexOf(')') + 1).trim();
-          } else if (lower.startsWith('correct:') || lower.startsWith('answer:')) {
-            const val = line.substring(line.indexOf(':') + 1).trim().toUpperCase();
-            correctAnswer = val.includes('A') || val === '0' ? 'A' :
-                            val.includes('B') || val === '1' ? 'B' :
-                            val.includes('C') || val === '2' ? 'C' :
-                            val.includes('D') || val === '3' ? 'D' : 'E';
-          } else if (lower.startsWith('explanation:')) {
-            explanationVal = line.substring(12).trim();
-          }
-        });
-
-        const qNum = parsed.length + 1;
-        let subject = subjectVal;
-        if (!subject) {
-          if (qNum <= 30) subject = 'English Language (1-30)';
-          else if (qNum <= 65) subject = 'Quantitative Aptitude (31-65)';
-          else subject = 'Reasoning Ability (66-100)';
-        }
-
-        parsed.push({
-          id: `q_sbi_${Date.now()}_${index}`,
-          type: 'MCQ',
-          question: questionText || `Question review for SBI Clerk #${qNum}`,
-          options: options.length >= 2 ? options : ["Option A", "Option B", "Option C", "Option D", "Option E"],
-          correctAnswer: correctAnswer === 'A' ? 0 : (correctAnswer === 'B' ? 1 : (correctAnswer === 'C' ? 2 : (correctAnswer === 'D' ? 3 : 4))),
-          explanation: explanationVal || 'SBI Clerk 2026 solution review.',
-          marks: 1,
-          negativeMarks: 0.25,
-          subject,
-          topic: topicVal,
-          difficulty: difficultyVal,
-          year: 2026
-        });
-      });
-    } else {
-      // Natural paste format
-      const rawBlocks = text.split(/(?=Q\d+[:\.\s]|Ques\s+\d+[:\.\s]|\d+[\.\s]\s*[A-Z])/i);
-      rawBlocks.forEach((block, index) => {
-        const trimmed = block.trim();
-        if (!trimmed) return;
-
-        const lines = trimmed.split('\n').map(l => l.trim()).filter(Boolean);
-        if (lines.length < 2) return;
-
-        let questionText = lines[0].replace(/^Q\d+[:\.]\s*/i, '').replace(/^\d+[:\.\s]\s*/i).trim();
-        const options = [];
-        let correctAnswer = 'A';
-        let explanation = 'SBI Clerk solution review.';
-
-        lines.slice(1).forEach(line => {
-          const optMatch = line.match(/^([A-E])[\)\.\s]\s*(.*)/i);
-          if (optMatch) {
-            options.push(optMatch[2].trim());
-          }
-
-          const ansMatch = line.match(/^(?:Answer|Correct\s+Answer)\s*:\s*([A-E])/i);
-          if (ansMatch) {
-            correctAnswer = ansMatch[1].toUpperCase();
-          }
-
-          const expMatch = line.match(/^(?:Explanation)\s*:\s*(.*)/i);
-          if (expMatch) {
-            explanation = expMatch[1].trim();
-          }
-        });
-
-        if (options.length < 2) {
-          options.push("Option A", "Option B", "Option C", "Option D", "Option E");
-        }
-
-        const qNum = parsed.length + 1;
-        let subject = 'English Language (1-30)';
-        if (qNum > 30 && qNum <= 65) subject = 'Quantitative Aptitude (31-65)';
-        else if (qNum > 65) subject = 'Reasoning Ability (66-100)';
-
-        parsed.push({
-          id: `q_sbi_${Date.now()}_${index}`,
-          type: 'MCQ',
-          question: questionText || `Question review for SBI Clerk #${qNum}`,
-          options,
-          correctAnswer: correctAnswer === 'A' ? 0 : (correctAnswer === 'B' ? 1 : (correctAnswer === 'C' ? 2 : (correctAnswer === 'D' ? 3 : 4))),
-          explanation,
-          marks: 1,
-          negativeMarks: 0.25,
-          subject,
-          topic: 'General Syllabus Review',
-          difficulty: 'Medium',
-          year: 2026
-        });
-      });
-    }
-
-    this.parsedQuestions = parsed;
+    const parsed=parseExamText(text,'sbi');
+    const errors=validatePaper('sbi',parsed,true);
+    if(errors.length){this.parsedQuestions=[];showToast(errors.slice(0,3).join(' · '),'error');return;}
+    this.parsedQuestions=parsed;
 
     // Update real-time overview counts
     const totalCount = parsed.length;

@@ -15,6 +15,8 @@ import { Formulas } from './pages/Formulas';
 import { PyqMocks } from './pages/PyqMocks';
 import { Community } from './pages/Community';
 import { TetExams } from './pages/TetExams';
+import { Group2, StationMaster } from './pages/ExamPrep.js';
+import './styles/exams.css';
 import { SbiClerkPrep } from './pages/SbiClerkPrep';
 
 // Import Layout Component
@@ -39,12 +41,18 @@ const routes = {
   '/pyq-mocks': { component: PyqMocks, requiresAuth: true, name: 'pyq-mocks' },
   '/community': { component: Community, requiresAuth: true, name: 'community' },
   '/tet-exams': { component: TetExams, requiresAuth: true, name: 'tet-exams' },
+  '/group2': { component: Group2, requiresAuth: true, name: 'group2' },
+  '/rrb-station-master': { component: StationMaster, requiresAuth: true, name: 'rrb-station-master' },
   '/sbi-clerk': { component: SbiClerkPrep, requiresAuth: true, name: 'sbi-clerk' },
   '/analytics': { component: Analytics, requiresAuth: true, name: 'analytics' }
 };
 
 // Main Routing Router
+let routeGeneration=0;
+let lastRenderedPath=null;
 async function router() {
+  const generation=++routeGeneration;
+  MockTest.resetForUser();
   const appContainer = document.getElementById('app');
   // Extract hash path e.g. #/dashboard?id=123 -> /dashboard
   let hashPath = window.location.hash.split('?')[0] || '#/';
@@ -61,7 +69,7 @@ async function router() {
       window.location.hash = '#/mock-test';
       return;
     } else {
-      MockTest.isTesting = false;
+      MockTest.abandon();
       if (MockTest.timer) clearInterval(MockTest.timer);
       if (MockTest.unloadHandler) {
         window.removeEventListener('beforeunload', MockTest.unloadHandler);
@@ -102,11 +110,14 @@ async function router() {
         Layout.updateNavigation(route.name);
         const subPageContainer = document.getElementById('sub-page-container');
         if (subPageContainer) {
-          subPageContainer.innerHTML = await route.component.render();
+          const html=await route.component.render();
+          if(generation!==routeGeneration)return;
+          subPageContainer.innerHTML=html;
           await route.component.init();
         }
       } else {
         const contentHtml = await route.component.render();
+        if(generation!==routeGeneration)return;
         appContainer.innerHTML = Layout.render(contentHtml, route.name);
         Layout.init(route.name);
         await route.component.init();
@@ -115,6 +126,7 @@ async function router() {
       appContainer.innerHTML = await route.component.render();
       await route.component.init();
     }
+    if(generation===routeGeneration&&lastRenderedPath!==hashPath){window.scrollTo(0,0);lastRenderedPath=hashPath;}
   } catch (error) {
     console.error("Routing error:", error);
     appContainer.innerHTML = `

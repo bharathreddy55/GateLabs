@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "node --experimental-vm-modules --test tests/*.test.mjs",
+    "test:browser": "node tests/exams.browser.mjs",
+    "build:exam-banks": "node scripts/build-exam-banks.mjs"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",

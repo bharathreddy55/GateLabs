@@ -1,3 +1,5 @@
+import { parseExamText } from '../utils/parseExamText.js';
+import { normaliseQuestions } from '../utils/examAdapters.js';
 import { db } from '../config/firebase';
 import { showToast } from '../utils/toast';
 import { MockTest } from './MockTest';
@@ -355,7 +357,7 @@ export const PyqMocks = {
         showToast(`Loading GATE ${year} Mock Paper...`, "info");
 
         // Query all questions for this year
-        const allQs = await db.getQuestions({ year });
+        const allQs = (await db.getQuestions({ year })).filter(q => !/tet|child development|pedagogy|language i|environmental studies|sbi|english language|quantitative aptitude|reasoning ability/i.test(q.subject||''));
 
         if (allQs.length === 0) {
           showToast(`No questions found in the database for year ${year}.`, "warning");
@@ -368,46 +370,7 @@ export const PyqMocks = {
           return a.topic.localeCompare(b.topic);
         });
 
-        // Seed simulator state (MockTest configuration)
-        MockTest.questions = sortedQs;
-        MockTest.isTesting = true;
-        MockTest.currentIdx = 0;
-        MockTest.answers = {};
-        MockTest.status = {};
-        MockTest.timeLeft = 180 * 60; // 180 Mins (3 Hours standard exam time)
-        MockTest.totalTime = 180 * 60;
-        MockTest.selectedSubject = `GATE CS ${year} Previous Year Paper`;
-        MockTest.selectedTopic = 'All';
-        MockTest.calcLeft = undefined;
-        MockTest.calcTop = undefined;
-
-        // Group into sections
-        MockTest.sections = {};
-        MockTest.questions.forEach((q, idx) => {
-          const secName = q.subject ? (q.subject.split(': ')[1] || q.subject) : 'General';
-          if (!MockTest.sections[secName]) {
-            MockTest.sections[secName] = [];
-          }
-          MockTest.sections[secName].push(idx);
-          MockTest.status[q.id] = 'not-visited';
-        });
-
-        MockTest.status[MockTest.questions[0].id] = 'not-answered';
-
-        document.body.classList.add('fullscreen-exam');
-
-        // Unload guard listener
-        MockTest.unloadHandler = (e) => {
-          e.preventDefault();
-          e.returnValue = 'An exam is currently in progress. Leaving now will forfeit all progress.';
-        };
-        window.addEventListener('beforeunload', MockTest.unloadHandler);
-
-        // Start countdown timer
-        MockTest.startTimer();
-
-        // Redirect to Mock Test route to render simulator
-        window.location.hash = '#/mock-test';
+        MockTest.startExam({examId:'gate',questions:normaliseQuestions('gate',sortedQs),title:`GATE CS ${year} question-bank practice`,full:false,minutes:180});
       });
     });
 
@@ -425,111 +388,9 @@ export const PyqMocks = {
           if (!res.ok) throw new Error("Failed to fetch mock paper.");
           const text = await res.text();
           
-          // Parse questions
-          const parsed = [];
-          const rawBlocks = text.split(/---/);
-          rawBlocks.forEach((block, index) => {
-            const trimmed = block.trim();
-            if (!trimmed) return;
+          const parsed = parseExamText(text,'tet');
 
-            const lines = trimmed.split('\n').map(l => l.trim()).filter(Boolean);
-            let questionText = '';
-            let options = [];
-            let correctAnswer = 0;
-            let explanation = '';
-            let subject = '';
-            let topic = 'General';
-
-            lines.forEach(line => {
-              const lower = line.toLowerCase();
-              if (lower.startsWith('subject:')) {
-                subject = line.substring(8).trim();
-              } else if (lower.startsWith('topic:')) {
-                topic = line.substring(6).trim();
-              } else if (lower.startsWith('question:')) {
-                questionText = line.substring(9).trim();
-              } else if (lower.startsWith('option a:') || line.startsWith('A)')) {
-                options[0] = lower.startsWith('option a:') ? line.substring(9).trim() : line.substring(line.indexOf(')') + 1).trim();
-              } else if (lower.startsWith('option b:') || line.startsWith('B)')) {
-                options[1] = lower.startsWith('option b:') ? line.substring(9).trim() : line.substring(line.indexOf(')') + 1).trim();
-              } else if (lower.startsWith('option c:') || line.startsWith('C)')) {
-                options[2] = lower.startsWith('option c:') ? line.substring(9).trim() : line.substring(line.indexOf(')') + 1).trim();
-              } else if (lower.startsWith('option d:') || line.startsWith('D)')) {
-                options[3] = lower.startsWith('option d:') ? line.substring(9).trim() : line.substring(line.indexOf(')') + 1).trim();
-              } else if (lower.startsWith('correct:') || lower.startsWith('answer:')) {
-                const val = line.substring(line.indexOf(':') + 1).trim().toUpperCase();
-                correctAnswer = val.includes('A') || val === '0' ? 0 : (val.includes('B') || val === '1' ? 1 : (val.includes('C') || val === '2' ? 2 : 3));
-              } else if (lower.startsWith('explanation:')) {
-                explanation = line.substring(12).trim();
-              }
-            });
-
-            if (questionText && options.length > 0) {
-              const qNum = parsed.length + 1;
-              let subjectName = subject || 'Child Development & Pedagogy (1-30)';
-              if (qNum > 30 && qNum <= 60) subjectName = 'Language I (31-60)';
-              else if (qNum > 60 && qNum <= 90) subjectName = 'Language II (61-90)';
-              else if (qNum > 90 && qNum <= 120) subjectName = 'Mathematics (91-120)';
-              else if (qNum > 120) subjectName = 'Environmental Studies (121-150)';
-
-              parsed.push({
-                id: `q_tet_${Date.now()}_${index}`,
-                type: 'MCQ',
-                question: questionText,
-                options,
-                correctAnswer,
-                explanation,
-                marks: 1,
-                subject: subjectName,
-                topic,
-                difficulty: 'Medium',
-                year: 2026
-              });
-            }
-          });
-
-          if (parsed.length === 0) throw new Error("No questions parsed.");
-
-          // Seed simulator state (MockTest configuration)
-          MockTest.questions = parsed;
-          MockTest.isTesting = true;
-          MockTest.currentIdx = 0;
-          MockTest.answers = {};
-          MockTest.status = {};
-          MockTest.timeLeft = 150 * 60; // 150 Mins for TET
-          MockTest.totalTime = 150 * 60;
-          MockTest.selectedSubject = name;
-          MockTest.selectedTopic = 'All';
-          MockTest.calcLeft = undefined;
-          MockTest.calcTop = undefined;
-
-          // Group into sections
-          MockTest.sections = {};
-          MockTest.questions.forEach((q, idx) => {
-            const secName = q.subject || 'Child Development';
-            if (!MockTest.sections[secName]) {
-              MockTest.sections[secName] = [];
-            }
-            MockTest.sections[secName].push(idx);
-            MockTest.status[q.id] = 'not-visited';
-          });
-
-          MockTest.status[MockTest.questions[0].id] = 'not-answered';
-
-          document.body.classList.add('fullscreen-exam');
-
-          // Unload guard listener
-          MockTest.unloadHandler = (e) => {
-            e.preventDefault();
-            e.returnValue = 'An exam is currently in progress. Leaving now will forfeit all progress.';
-          };
-          window.addEventListener('beforeunload', MockTest.unloadHandler);
-
-          // Start countdown timer
-          MockTest.startTimer();
-
-          // Redirect to Mock Test route
-          window.location.hash = '#/mock-test';
+          MockTest.startExam({examId:'tet',questions:normaliseQuestions('tet',parsed),title:name});
 
         } catch (err) {
           showToast("Error loading exam: " + err.message, "error");

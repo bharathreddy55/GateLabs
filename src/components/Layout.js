@@ -68,6 +68,8 @@ export const Layout = {
             <a href="#/tet-exams" class="${getLinkClass('tet-exams')}">
               <i class="fa-solid fa-chalkboard-user text-sm w-5 text-center"></i> TET Exams
             </a>
+            <a href="#/group2" class="${getLinkClass('group2')}"><i class="fa-solid fa-landmark text-sm w-5 text-center"></i> APPSC Group 2</a>
+            <a href="#/rrb-station-master" class="${getLinkClass('rrb-station-master')}"><i class="fa-solid fa-train text-sm w-5 text-center"></i> RRB Station Master</a>
             <a href="#/sbi-clerk" class="${getLinkClass('sbi-clerk')}">
               <i class="fa-solid fa-building-columns text-sm w-5 text-center"></i> SBI Clerk Prep
             </a>
@@ -133,6 +135,8 @@ export const Layout = {
           <!-- Sticky Top Header -->
           <header id="layout-header" class="h-16 border border-slate-200/60 dark:border-white/[0.07] bg-white/85 dark:bg-[#0d1320]/80 backdrop-blur-2xl sticky top-4 z-20 flex items-center justify-between px-6 rounded-3xl transition-colors duration-300 shadow-sm">
             <h2 class="font-display font-extrabold text-sm text-slate-900 dark:text-white tracking-tight">${
+              activePage === 'group2' ? 'APPSC Group 2' :
+              activePage === 'rrb-station-master' ? 'RRB Station Master' :
               activePage === 'sbi-clerk' ? 'SBI Clerk Prep' :
               activePage === 'tet-exams' ? 'TET Exams' :
               activePage === 'pyq-mocks' ? 'PYQ Mocks' :
@@ -150,7 +154,7 @@ export const Layout = {
               <div class="h-5 w-px bg-slate-200 dark:bg-white/10"></div>
 
               <span class="text-xs font-bold accent-text streak-badge px-3.5 py-1.5 rounded-full border accent-border flex items-center gap-2">
-                <span class="h-2 w-2 rounded-full animate-ping" style="background-color: var(--accent-from)"></span> GATE CS 2027
+                <span class="h-2 w-2 rounded-full animate-ping" style="background-color: var(--accent-from)"></span> Exam preparation
               </span>
             </div>
           </header>
@@ -335,7 +339,9 @@ export const Layout = {
 
     const titleEl = document.querySelector('header h2');
     if (titleEl) {
-      titleEl.textContent = activePage === 'sbi-clerk' ? 'SBI Clerk Prep' :
+      titleEl.textContent = activePage === 'group2' ? 'APPSC Group 2' :
+              activePage === 'rrb-station-master' ? 'RRB Station Master' :
+              activePage === 'sbi-clerk' ? 'SBI Clerk Prep' :
                             activePage === 'tet-exams' ? 'TET Exams' :
                             activePage === 'pyq-mocks' ? 'PYQ Mocks' :
                             activePage === 'mock-test' ? 'Mock Tests' :

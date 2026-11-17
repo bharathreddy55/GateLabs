@@ -1,0 +1,2739 @@
+[
+  {
+    "title": "APPSC Group 2 Prelims · Foundation model 1",
+    "provenance": "GateLabs original practice material",
+    "note": "150-question foundation paper with a sourced 2025–2026 current-affairs snapshot checked 16 November 2026: AP, national and international topics. This is a practice selection, not a prediction or exhaustive coverage; update it as new events occur.",
+    "questions": [
+      {
+        "id": "group2-model1-1",
+        "section": "Indian History",
+        "subject": "Indian History",
+        "topic": "Indian history",
+        "question": "Which feature is strongly associated with Harappan urban planning?",
+        "options": [
+          "Gothic cathedrals",
+          "Covered drainage systems",
+          "Railway terminals",
+          "Gunpowder magazines"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Harappan cities are known for planned streets and drainage.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-2",
+        "section": "Indian History",
+        "subject": "Indian History",
+        "topic": "Indian history",
+        "question": "The Great Bath was excavated at which site?",
+        "options": [
+          "Sanchi",
+          "Pataliputra",
+          "Mohenjo-daro",
+          "Ajanta"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The Great Bath is a major structure at Mohenjo-daro.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-3",
+        "section": "Indian History",
+        "subject": "Indian History",
+        "topic": "Indian history",
+        "question": "Which is the oldest of the four Vedas?",
+        "options": [
+          "Samaveda",
+          "Yajurveda",
+          "Rigveda",
+          "Atharvaveda"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The Rigveda contains the oldest Vedic hymns.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-4",
+        "section": "Indian History",
+        "subject": "Indian History",
+        "topic": "Indian history",
+        "question": "The Four Noble Truths are central to which tradition?",
+        "options": [
+          "Buddhism",
+          "Jainism",
+          "Zoroastrianism",
+          "Sikhism"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The Buddha's teaching explains suffering, its origin, cessation and the path.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-5",
+        "section": "Indian History",
+        "subject": "Indian History",
+        "topic": "Indian history",
+        "question": "Mahavira is traditionally regarded as which Jain Tirthankara?",
+        "options": [
+          "1st",
+          "24th",
+          "10th",
+          "12th"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Jain tradition identifies Mahavira as the twenty-fourth Tirthankara.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-6",
+        "section": "Indian History",
+        "subject": "Indian History",
+        "topic": "Indian history",
+        "question": "Who founded the Mauryan Empire?",
+        "options": [
+          "Ashoka",
+          "Samudragupta",
+          "Harsha",
+          "Chandragupta Maurya"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Chandragupta established the Mauryan dynasty.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-7",
+        "section": "Indian History",
+        "subject": "Indian History",
+        "topic": "Indian history",
+        "question": "Which war is associated with Ashoka's remorse in his inscriptions?",
+        "options": [
+          "Battle of Plassey",
+          "Battle of Talikota",
+          "Third battle of Panipat",
+          "Kalinga war"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Ashoka's Major Rock Edict XIII describes the suffering caused by the Kalinga conquest.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-8",
+        "section": "Indian History",
+        "subject": "Indian History",
+        "topic": "Indian history",
+        "question": "Most Ashokan inscriptions in the subcontinent used which script?",
+        "options": [
+          "Brahmi",
+          "Roman",
+          "Cyrillic",
+          "Persian Nastaliq"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Brahmi predominated, although other scripts were used in some regions.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-9",
+        "section": "Indian History",
+        "subject": "Indian History",
+        "topic": "Indian history",
+        "question": "The Arthashastra is traditionally attributed to whom?",
+        "options": [
+          "Kalidasa",
+          "Kautilya",
+          "Bana",
+          "Tulsidas"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Kautilya, also called Chanakya, is associated with this treatise on statecraft.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-10",
+        "section": "Indian History",
+        "subject": "Indian History",
+        "topic": "Indian history",
+        "question": "The Prayaga inscription praising Samudragupta was composed by whom?",
+        "options": [
+          "Megasthenes",
+          "Al-Biruni",
+          "Harisena",
+          "Amir Khusrau"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Harisena was Samudragupta's court poet.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-11",
+        "section": "Indian History",
+        "subject": "Indian History",
+        "topic": "Indian history",
+        "question": "Aryabhata is especially associated with which field?",
+        "options": [
+          "Mughal painting",
+          "Mathematics and astronomy",
+          "Ocean navigation under the Portuguese",
+          "Colonial revenue administration"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Aryabhata wrote on mathematics and astronomy.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-12",
+        "section": "Indian History",
+        "subject": "Indian History",
+        "topic": "Indian history",
+        "question": "Who wrote the Harshacharita?",
+        "options": [
+          "Kalhana",
+          "Banabhatta",
+          "Kautilya",
+          "Ibn Battuta"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Banabhatta's prose biography describes Harsha.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-13",
+        "section": "Indian History",
+        "subject": "Indian History",
+        "topic": "Indian history",
+        "question": "The Brihadisvara temple at Thanjavur was built under which ruler?",
+        "options": [
+          "Rajaraja I",
+          "Ashoka",
+          "Akbar",
+          "Harshavardhana"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The temple is a major monument of Rajaraja I's Chola reign.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-14",
+        "section": "Indian History",
+        "subject": "Indian History",
+        "topic": "Indian history",
+        "question": "The Uttaramerur inscriptions are noted for information about what?",
+        "options": [
+          "Local village administration",
+          "The 1857 revolt",
+          "Mughal mansabdari",
+          "Portuguese naval warfare"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "They describe local assembly arrangements during the Chola period.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-15",
+        "section": "Indian History",
+        "subject": "Indian History",
+        "topic": "Indian history",
+        "question": "Who founded the Slave or Mamluk dynasty of Delhi?",
+        "options": [
+          "Babur",
+          "Sher Shah",
+          "Qutb-ud-din Aibak",
+          "Alauddin Khalji"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Aibak established independent rule in Delhi in 1206.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-16",
+        "section": "Indian History",
+        "subject": "Indian History",
+        "topic": "Indian history",
+        "question": "Market-control measures in the Delhi Sultanate are associated with whom?",
+        "options": [
+          "Iltutmish",
+          "Alauddin Khalji",
+          "Ibrahim Lodi",
+          "Bahadur Shah Zafar"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Alauddin used price regulation and market supervision.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-17",
+        "section": "Indian History",
+        "subject": "Indian History",
+        "topic": "Indian history",
+        "question": "Which ruler shifted his capital from Delhi to Daulatabad?",
+        "options": [
+          "Akbar",
+          "Balban",
+          "Muhammad bin Tughlaq",
+          "Razia Sultan"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The transfer is associated with Muhammad bin Tughlaq.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-18",
+        "section": "Indian History",
+        "subject": "Indian History",
+        "topic": "Indian history",
+        "question": "The first battle of Panipat in 1526 was fought between Babur and whom?",
+        "options": [
+          "Ibrahim Lodi",
+          "Rana Pratap",
+          "Hemu",
+          "Sher Shah"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Babur defeated Ibrahim Lodi, opening the way for Mughal rule.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-19",
+        "section": "Indian History",
+        "subject": "Indian History",
+        "topic": "Indian history",
+        "question": "The mansabdari system developed under which Mughal ruler?",
+        "options": [
+          "Bahadur Shah II",
+          "Babur only",
+          "Farrukhsiyar",
+          "Akbar"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Akbar organised imperial service through graded mansabs.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-20",
+        "section": "Indian History",
+        "subject": "Indian History",
+        "topic": "Indian history",
+        "question": "Who built the Taj Mahal?",
+        "options": [
+          "Akbar",
+          "Shah Jahan",
+          "Aurangzeb",
+          "Jahangir"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Shah Jahan commissioned the mausoleum in memory of Mumtaz Mahal.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-21",
+        "section": "Indian History",
+        "subject": "Indian History",
+        "topic": "Indian history",
+        "question": "Kabir's verses are known for criticism of what?",
+        "options": [
+          "All forms of poetry",
+          "Agricultural irrigation",
+          "Maritime trade",
+          "Ritualism and sectarian divisions"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Kabir emphasised devotion while questioning rigid religious divisions and empty ritual.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-22",
+        "section": "Indian History",
+        "subject": "Indian History",
+        "topic": "Indian history",
+        "question": "Nizamuddin Auliya belonged to which Sufi order?",
+        "options": [
+          "Jesuit",
+          "Theravada",
+          "Digambara",
+          "Chishti"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Nizamuddin Auliya was a prominent Chishti saint.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-23",
+        "section": "Indian History",
+        "subject": "Indian History",
+        "topic": "Indian history",
+        "question": "Shivaji's council of eight ministers was called what?",
+        "options": [
+          "Navaratna",
+          "Diwan-i-Khas",
+          "Sabha of Forty",
+          "Ashtapradhan"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Ashta means eight; the council comprised eight principal offices.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-24",
+        "section": "Indian History",
+        "subject": "Indian History",
+        "topic": "Indian history",
+        "question": "Vasco da Gama reached Calicut by sea in which year?",
+        "options": [
+          "1526",
+          "1498",
+          "1757",
+          "1857"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "His arrival in 1498 established the direct sea route from Europe to India.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-25",
+        "section": "Indian History",
+        "subject": "Indian History",
+        "topic": "Indian history",
+        "question": "The battle of Plassey took place in which year?",
+        "options": [
+          "1757",
+          "1764",
+          "1857",
+          "1799"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The East India Company defeated Siraj ud-Daulah at Plassey in 1757.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-26",
+        "section": "Indian History",
+        "subject": "Indian History",
+        "topic": "Indian history",
+        "question": "The Permanent Settlement of 1793 was introduced under whom?",
+        "options": [
+          "Lord Cornwallis",
+          "Lord Curzon",
+          "Lord Ripon",
+          "Lord Mountbatten"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Cornwallis implemented the settlement in Bengal and neighbouring areas.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-27",
+        "section": "Indian History",
+        "subject": "Indian History",
+        "topic": "Indian history",
+        "question": "The 1857 uprising first broke out among sepoys at which major centre on 10 May?",
+        "options": [
+          "Meerut",
+          "Bombay",
+          "Madras",
+          "Pondicherry"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Sepoys at Meerut rebelled and then moved toward Delhi.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-28",
+        "section": "Indian History",
+        "subject": "Indian History",
+        "topic": "Indian history",
+        "question": "Who founded the Brahmo Sabha in 1828?",
+        "options": [
+          "Jyotirao Phule",
+          "Dayananda Saraswati",
+          "Raja Rammohan Roy",
+          "Swami Vivekananda"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Rammohan Roy founded the body later known as the Brahmo Samaj.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-29",
+        "section": "Indian History",
+        "subject": "Indian History",
+        "topic": "Indian history",
+        "question": "Gandhi's Salt March in 1930 began at which place?",
+        "options": [
+          "Sabarmati Ashram",
+          "Wardha",
+          "Champaran",
+          "Chauri Chaura"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The march began at Sabarmati and ended at Dandi.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-30",
+        "section": "Indian History",
+        "subject": "Indian History",
+        "topic": "Indian history",
+        "question": "Andhra State was formed in 1953 primarily for speakers of which language?",
+        "options": [
+          "Tamil",
+          "Kannada",
+          "Telugu",
+          "Marathi"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Andhra State was carved out of the Telugu-speaking areas of Madras State.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-31",
+        "section": "Geography",
+        "subject": "Geography",
+        "topic": "Physical, human and AP geography",
+        "question": "Which planet is nearest to the Sun?",
+        "options": [
+          "Venus",
+          "Earth",
+          "Mars",
+          "Mercury"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Mercury is the innermost planet.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-32",
+        "section": "Geography",
+        "subject": "Geography",
+        "topic": "Physical, human and AP geography",
+        "question": "Earth's rotation primarily causes what?",
+        "options": [
+          "The annual seasonal cycle alone",
+          "Ocean salinity",
+          "Continental drift",
+          "Day and night"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Rotation turns different parts of Earth toward and away from the Sun.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-33",
+        "section": "Geography",
+        "subject": "Geography",
+        "topic": "Physical, human and AP geography",
+        "question": "The Earth's crust and uppermost rigid mantle together form what?",
+        "options": [
+          "Lithosphere",
+          "Hydrosphere",
+          "Outer core",
+          "Mesosphere of the atmosphere"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The lithosphere includes the crust and rigid upper mantle.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-34",
+        "section": "Geography",
+        "subject": "Geography",
+        "topic": "Physical, human and AP geography",
+        "question": "Most weather phenomena occur in which atmospheric layer?",
+        "options": [
+          "Thermosphere",
+          "Exosphere",
+          "Troposphere",
+          "Stratosphere above the ozone layer"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The troposphere contains most atmospheric water vapour and weather.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-35",
+        "section": "Geography",
+        "subject": "Geography",
+        "topic": "Physical, human and AP geography",
+        "question": "The ozone layer is concentrated mainly in which layer?",
+        "options": [
+          "Stratosphere",
+          "Troposphere",
+          "Exosphere",
+          "Inner core"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Stratospheric ozone absorbs much harmful ultraviolet radiation.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-36",
+        "section": "Geography",
+        "subject": "Geography",
+        "topic": "Physical, human and AP geography",
+        "question": "Which instrument measures atmospheric pressure?",
+        "options": [
+          "Hygrometer",
+          "Barometer",
+          "Seismograph",
+          "Anemometer"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "A barometer measures air pressure.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-37",
+        "section": "Geography",
+        "subject": "Geography",
+        "topic": "Physical, human and AP geography",
+        "question": "The principal cause of ocean tides is what?",
+        "options": [
+          "Gravitational attraction of Moon and Sun",
+          "Daily fishing activity",
+          "Ocean salinity alone",
+          "Earthquakes every day"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Lunar and solar gravity produce tidal forces.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-38",
+        "section": "Geography",
+        "subject": "Geography",
+        "topic": "Physical, human and AP geography",
+        "question": "The Gulf Stream is classified as which type of current?",
+        "options": [
+          "Cold ocean current",
+          "Underground river",
+          "Tidal bore only",
+          "Warm ocean current"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "It transports warm water in the North Atlantic system.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-39",
+        "section": "Geography",
+        "subject": "Geography",
+        "topic": "Physical, human and AP geography",
+        "question": "Which process forms a river delta?",
+        "options": [
+          "Deposition near a river mouth",
+          "Glacial plucking at a summit",
+          "Volcanic eruption alone",
+          "Wind erosion in a desert"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Sediment accumulation where a river enters a slower body of water can build a delta.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-40",
+        "section": "Geography",
+        "subject": "Geography",
+        "topic": "Physical, human and AP geography",
+        "question": "Black cotton soils are particularly associated with which parent material in India?",
+        "options": [
+          "Basaltic lava",
+          "Coral fragments only",
+          "Recent dune sand only",
+          "Granite alone in every region"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Weathering of Deccan basalt is a major source of black soils.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-41",
+        "section": "Geography",
+        "subject": "Geography",
+        "topic": "Physical, human and AP geography",
+        "question": "Laterite soils develop strongly under which conditions?",
+        "options": [
+          "Permanent ice cover",
+          "No rainfall",
+          "High rainfall and temperature with leaching",
+          "Deep ocean darkness"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Intense tropical weathering and leaching favour laterite formation.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-42",
+        "section": "Geography",
+        "subject": "Geography",
+        "topic": "Physical, human and AP geography",
+        "question": "Which river flows westward into the Arabian Sea?",
+        "options": [
+          "Godavari",
+          "Narmada",
+          "Krishna",
+          "Mahanadi"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The Narmada flows west through a rift valley.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-43",
+        "section": "Geography",
+        "subject": "Geography",
+        "topic": "Physical, human and AP geography",
+        "question": "The Godavari originates near which place?",
+        "options": [
+          "Amarkantak",
+          "Trimbakeshwar",
+          "Gangotri",
+          "Talakaveri"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Its source is near Trimbakeshwar in Maharashtra.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-44",
+        "section": "Geography",
+        "subject": "Geography",
+        "topic": "Physical, human and AP geography",
+        "question": "The Krishna River originates near which place?",
+        "options": [
+          "Nashik",
+          "Amarkantak",
+          "Mahabaleshwar",
+          "Yamunotri"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The Krishna rises in the Western Ghats near Mahabaleshwar.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-45",
+        "section": "Geography",
+        "subject": "Geography",
+        "topic": "Physical, human and AP geography",
+        "question": "Which sea lies along Andhra Pradesh's eastern coast?",
+        "options": [
+          "Arabian Sea",
+          "Bay of Bengal",
+          "Red Sea",
+          "Caspian Sea"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Andhra Pradesh fronts the Bay of Bengal.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-46",
+        "section": "Geography",
+        "subject": "Geography",
+        "topic": "Physical, human and AP geography",
+        "question": "The hills running through eastern peninsular India and Andhra Pradesh are called what?",
+        "options": [
+          "Aravallis",
+          "Karakoram",
+          "Eastern Ghats",
+          "Pir Panjal"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The Eastern Ghats form a discontinuous hill system in eastern India.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-47",
+        "section": "Geography",
+        "subject": "Geography",
+        "topic": "Physical, human and AP geography",
+        "question": "Kolleru Lake lies between the deltas of which rivers?",
+        "options": [
+          "Narmada and Tapi",
+          "Ganga and Yamuna",
+          "Mahanadi and Brahmani",
+          "Godavari and Krishna"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Kolleru is a freshwater lake between the Godavari and Krishna deltas.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-48",
+        "section": "Geography",
+        "subject": "Geography",
+        "topic": "Physical, human and AP geography",
+        "question": "Pulicat Lake is best described as what?",
+        "options": [
+          "A volcanic crater lake",
+          "A glacial tarn",
+          "A coastal lagoon",
+          "An artificial hill reservoir"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Pulicat is a brackish coastal lagoon on the Andhra Pradesh–Tamil Nadu coast.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-49",
+        "section": "Geography",
+        "subject": "Geography",
+        "topic": "Physical, human and AP geography",
+        "question": "Which vegetation is adapted to saline tidal coastal conditions?",
+        "options": [
+          "Alpine meadow",
+          "Tundra moss only",
+          "Mangroves",
+          "Desert cactus alone"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Mangroves tolerate saline intertidal habitats.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-50",
+        "section": "Geography",
+        "subject": "Geography",
+        "topic": "Physical, human and AP geography",
+        "question": "Which is a renewable source of energy?",
+        "options": [
+          "Coal",
+          "Petroleum",
+          "Natural gas",
+          "Solar radiation"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Solar energy is replenished naturally on human timescales.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-51",
+        "section": "Geography",
+        "subject": "Geography",
+        "topic": "Physical, human and AP geography",
+        "question": "Which activity belongs to the primary economic sector?",
+        "options": [
+          "Banking",
+          "Fishing",
+          "Software services",
+          "Car assembly"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Primary activities directly obtain natural resources.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-52",
+        "section": "Geography",
+        "subject": "Geography",
+        "topic": "Physical, human and AP geography",
+        "question": "Cotton textile manufacturing is an example of which industry?",
+        "options": [
+          "Purely mineral-based",
+          "Space-based",
+          "Forest-only",
+          "Agro-based"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Its principal raw material is an agricultural crop.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-53",
+        "section": "Geography",
+        "subject": "Geography",
+        "topic": "Physical, human and AP geography",
+        "question": "Which factor usually favours locating a bulky raw-material industry near its source?",
+        "options": [
+          "Guaranteed absence of labour",
+          "Reduced transport cost",
+          "No need for electricity",
+          "Elimination of all taxes"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Moving bulky inputs can be costly, encouraging source proximity.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-54",
+        "section": "Geography",
+        "subject": "Geography",
+        "topic": "Physical, human and AP geography",
+        "question": "Population density is normally expressed as what?",
+        "options": [
+          "Births per doctor",
+          "Households per school",
+          "Persons per square kilometre",
+          "Deaths per year"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Density relates population size to land area.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-55",
+        "section": "Geography",
+        "subject": "Geography",
+        "topic": "Physical, human and AP geography",
+        "question": "Movement of people from rural areas to towns contributes directly to what?",
+        "options": [
+          "Glaciation",
+          "Desert longitude",
+          "Urbanisation",
+          "Ocean tides"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Rural-to-urban migration adds to urban population.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-56",
+        "section": "Geography",
+        "subject": "Geography",
+        "topic": "Physical, human and AP geography",
+        "question": "Which is a push factor in migration?",
+        "options": [
+          "Better wages at destination",
+          "Better destination universities",
+          "Loss of local livelihood",
+          "More destination hospitals"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "A push factor is an adverse condition at the place of origin.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-57",
+        "section": "Geography",
+        "subject": "Geography",
+        "topic": "Physical, human and AP geography",
+        "question": "The Human Development Index combines health and education with what?",
+        "options": [
+          "Military expenditure",
+          "Land area",
+          "Standard of living",
+          "Number of political parties"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The income dimension represents a decent standard of living.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-58",
+        "section": "Geography",
+        "subject": "Geography",
+        "topic": "Physical, human and AP geography",
+        "question": "Which action is appropriate before a forecast cyclone makes landfall?",
+        "options": [
+          "Move toward the shoreline",
+          "Follow official evacuation advice",
+          "Shelter under isolated trees",
+          "Ignore local warnings"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Evacuation to designated safe shelters reduces exposure to surge and wind.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-59",
+        "section": "Geography",
+        "subject": "Geography",
+        "topic": "Physical, human and AP geography",
+        "question": "Contour lines on a map join points of equal what?",
+        "options": [
+          "Rainfall",
+          "Elevation",
+          "Temperature",
+          "Population"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Contours connect equal heights above a datum.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-60",
+        "section": "Geography",
+        "subject": "Geography",
+        "topic": "Physical, human and AP geography",
+        "question": "A map scale is 1:50,000. What ground distance does 2 cm represent?",
+        "options": [
+          "100 m",
+          "10 km",
+          "1 km",
+          "500 m"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "2 × 50,000 cm = 100,000 cm = 1 km.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-61",
+        "section": "Indian Society",
+        "subject": "Indian Society",
+        "topic": "Society and inclusion",
+        "question": "Kinship refers primarily to relationships based on what?",
+        "options": [
+          "Income tax rates",
+          "Ocean currents",
+          "Descent, marriage or recognised family ties",
+          "Election symbols"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Kinship organises socially recognised familial relationships.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-62",
+        "section": "Indian Society",
+        "subject": "Indian Society",
+        "topic": "Society and inclusion",
+        "question": "A family comprising parents and their dependent children is commonly called what?",
+        "options": [
+          "Joint family of several generations",
+          "Clan of all descendants",
+          "Entire village council",
+          "Nuclear family"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The nuclear family is a small parent–child unit.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-63",
+        "section": "Indian Society",
+        "subject": "Indian Society",
+        "topic": "Society and inclusion",
+        "question": "Marriage within a specified social group is called what?",
+        "options": [
+          "Exogamy",
+          "Endogamy",
+          "Migration",
+          "Secularisation"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Endogamy requires marriage within the defined group.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-64",
+        "section": "Indian Society",
+        "subject": "Indian Society",
+        "topic": "Society and inclusion",
+        "question": "Marriage outside a specified group is called what?",
+        "options": [
+          "Endogamy",
+          "Urbanisation",
+          "Exogamy",
+          "Industrialisation"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Exogamy requires a partner outside the specified group.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-65",
+        "section": "Indian Society",
+        "subject": "Indian Society",
+        "topic": "Society and inclusion",
+        "question": "Descent traced through the mother's line is called what?",
+        "options": [
+          "Patrilineal descent",
+          "Matrilineal descent",
+          "Bilateral tax",
+          "Patrilocal residence"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Matrilineality traces lineage through women; it does not by itself mean female political rule.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-66",
+        "section": "Indian Society",
+        "subject": "Indian Society",
+        "topic": "Society and inclusion",
+        "question": "Residence with or near the husband's family after marriage is called what?",
+        "options": [
+          "Matrilineal descent",
+          "Exogamy",
+          "Patrilocal residence",
+          "Polyandry"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Patrilocality concerns residence, not descent.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-67",
+        "section": "Indian Society",
+        "subject": "Indian Society",
+        "topic": "Society and inclusion",
+        "question": "Which best describes an ascribed social status?",
+        "options": [
+          "A status assigned by birth or involuntarily",
+          "A qualification earned through an exam",
+          "A promotion earned at work",
+          "An elected office won by campaign"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Ascribed status is not primarily acquired through individual achievement.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-68",
+        "section": "Indian Society",
+        "subject": "Indian Society",
+        "topic": "Society and inclusion",
+        "question": "Which is an example of achieved status?",
+        "options": [
+          "Birth order",
+          "Age at birth",
+          "Becoming a trained engineer",
+          "Inherited lineage"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Professional qualification is acquired through education and effort.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-69",
+        "section": "Indian Society",
+        "subject": "Indian Society",
+        "topic": "Society and inclusion",
+        "question": "Socialisation is the process of learning what?",
+        "options": [
+          "Only arithmetic tables",
+          "Social norms and roles",
+          "Only biological reflexes",
+          "Only foreign currency rates"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Socialisation transmits culture, values and expected behaviour.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-70",
+        "section": "Indian Society",
+        "subject": "Indian Society",
+        "topic": "Society and inclusion",
+        "question": "Which is generally an early agent of socialisation?",
+        "options": [
+          "Family",
+          "Stock exchange",
+          "Ocean current",
+          "Customs tariff"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Family interactions are a major influence in childhood social learning.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-71",
+        "section": "Indian Society",
+        "subject": "Indian Society",
+        "topic": "Society and inclusion",
+        "question": "Ethnicity commonly involves shared perceptions of what?",
+        "options": [
+          "Identical personal income",
+          "Same blood group only",
+          "Same occupation for every member",
+          "Cultural origin and identity"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Ethnic identity often draws on ancestry, language, history and culture.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-72",
+        "section": "Indian Society",
+        "subject": "Indian Society",
+        "topic": "Society and inclusion",
+        "question": "Discrimination based on a person's caste is an example of what?",
+        "options": [
+          "Universal inclusion",
+          "Social exclusion",
+          "Ecological succession",
+          "Fiscal decentralisation"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Such discrimination limits equal participation and opportunities.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-73",
+        "section": "Indian Society",
+        "subject": "Indian Society",
+        "topic": "Society and inclusion",
+        "question": "Communalism in the Indian social context involves what?",
+        "options": [
+          "Antagonistic political mobilisation around religious communities",
+          "All community volunteering",
+          "All rural cooperation",
+          "Any shared household"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Communalism treats religious communities as opposed political interests.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-74",
+        "section": "Indian Society",
+        "subject": "Indian Society",
+        "topic": "Society and inclusion",
+        "question": "Regionalism becomes exclusionary when it does what?",
+        "options": [
+          "Protects local language through inclusive teaching",
+          "Studies regional history",
+          "Denies equal treatment to people from other regions",
+          "Improves transport within a state"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Exclusion arises when regional identity is used to deny others equal treatment.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-75",
+        "section": "Indian Society",
+        "subject": "Indian Society",
+        "topic": "Society and inclusion",
+        "question": "Gender stereotyping means what?",
+        "options": [
+          "Providing equal opportunities",
+          "Measuring rainfall",
+          "Assigning fixed roles on the basis of gender",
+          "Recognising each person's individual skills"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Stereotypes generalise what people should do based on gender.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-76",
+        "section": "Indian Society",
+        "subject": "Indian Society",
+        "topic": "Society and inclusion",
+        "question": "Which is an example of unpaid care work?",
+        "options": [
+          "Caring for a dependent family member without pay",
+          "A paid bank job",
+          "A factory wage shift",
+          "A paid transport contract"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Care inside households often lacks monetary remuneration despite its economic value.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-77",
+        "section": "Indian Society",
+        "subject": "Indian Society",
+        "topic": "Society and inclusion",
+        "question": "Which response best supports a child disclosing abuse?",
+        "options": [
+          "Listen without blame and seek appropriate protection",
+          "Blame the child",
+          "Publicly circulate the child's identity",
+          "Ignore the disclosure"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "A supportive, protective response prioritises the child's safety and dignity.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-78",
+        "section": "Indian Society",
+        "subject": "Indian Society",
+        "topic": "Society and inclusion",
+        "question": "Which approach addresses child labour most comprehensively?",
+        "options": [
+          "Punishing the child alone",
+          "Closing every school",
+          "Education, family support and protection from exploitation",
+          "Treating hazardous work as play"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Prevention requires tackling vulnerability while securing education and protection.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-79",
+        "section": "Indian Society",
+        "subject": "Indian Society",
+        "topic": "Society and inclusion",
+        "question": "Which is an example of accessibility for a wheelchair user?",
+        "options": [
+          "Step-free entry with a suitable ramp",
+          "Stairs as the only entrance",
+          "Locked accessible toilets",
+          "Information available only above eye level"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Accessible design removes physical participation barriers.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-80",
+        "section": "Indian Society",
+        "subject": "Indian Society",
+        "topic": "Society and inclusion",
+        "question": "An inclusive classroom aims to do what?",
+        "options": [
+          "Exclude students needing support",
+          "Teach only the highest scorers",
+          "Adapt learning so diverse students can participate",
+          "Use one inaccessible format for everyone"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Inclusion responds to differing needs rather than excluding learners.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-81",
+        "section": "Indian Society",
+        "subject": "Indian Society",
+        "topic": "Society and inclusion",
+        "question": "A social welfare programme is evaluated most meaningfully by what?",
+        "options": [
+          "Coverage and improvement in intended beneficiaries' wellbeing",
+          "Number of posters alone",
+          "Office wall colour",
+          "Length of its name"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Outcome and coverage measures assess whether objectives are achieved.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-82",
+        "section": "Indian Society",
+        "subject": "Indian Society",
+        "topic": "Society and inclusion",
+        "question": "Which measure improves accountability in welfare delivery?",
+        "options": [
+          "Transparent eligibility and grievance redressal",
+          "Undisclosed selection rules",
+          "No appeal mechanism",
+          "Destroying beneficiary records"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Clear rules and accessible complaints mechanisms help correct exclusion and misuse.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-83",
+        "section": "Indian Society",
+        "subject": "Indian Society",
+        "topic": "Society and inclusion",
+        "question": "Why collect data disaggregated by gender and social group?",
+        "options": [
+          "To assume every group is identical",
+          "To eliminate privacy safeguards",
+          "To identify unequal outcomes",
+          "To avoid programme evaluation"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Aggregate averages can hide disparities across groups.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-84",
+        "section": "Indian Society",
+        "subject": "Indian Society",
+        "topic": "Society and inclusion",
+        "question": "What is intersectionality concerned with?",
+        "options": [
+          "Only road intersections",
+          "Overlapping social disadvantages and identities",
+          "Only differences in climate",
+          "Only one category in isolation"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Multiple identities can interact to produce distinct experiences of disadvantage.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-85",
+        "section": "Indian Society",
+        "subject": "Indian Society",
+        "topic": "Society and inclusion",
+        "question": "Which approach can reduce youth unrest constructively?",
+        "options": [
+          "Ignoring grievances",
+          "Channels for participation, education and employment",
+          "Blanket stereotyping of youth",
+          "Withholding all information"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Participation and opportunity can address underlying exclusion and frustration.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-86",
+        "section": "Indian Society",
+        "subject": "Indian Society",
+        "topic": "Society and inclusion",
+        "question": "What distinguishes equality of opportunity from identical treatment in every circumstance?",
+        "options": [
+          "It requires ignoring disability",
+          "Removing barriers may require different support",
+          "It forbids all education",
+          "It guarantees identical outcomes"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Equal opportunity may require accommodations for unequal starting conditions.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-87",
+        "section": "Indian Society",
+        "subject": "Indian Society",
+        "topic": "Society and inclusion",
+        "question": "What is a demographic indicator?",
+        "options": [
+          "Colour of a building",
+          "Length of a poem",
+          "A rock's hardness",
+          "Age distribution of a population"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Demography studies population size, composition and change.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-88",
+        "section": "Indian Society",
+        "subject": "Indian Society",
+        "topic": "Society and inclusion",
+        "question": "Which is a form of social mobility?",
+        "options": [
+          "A river changing course",
+          "A planet revolving",
+          "A train changing platform",
+          "Moving from one occupational status to another"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Social mobility concerns movement within a social hierarchy.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-89",
+        "section": "Indian Society",
+        "subject": "Indian Society",
+        "topic": "Society and inclusion",
+        "question": "Why involve intended beneficiaries in programme design?",
+        "options": [
+          "Their experience helps identify practical barriers",
+          "They can never understand their needs",
+          "Participation removes all need for evidence",
+          "It guarantees unlimited funding"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Participation improves understanding of access barriers and local priorities.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-90",
+        "section": "Indian Society",
+        "subject": "Indian Society",
+        "topic": "Society and inclusion",
+        "question": "What does secular governance seek in relation to religious citizens?",
+        "options": [
+          "Citizenship determined only by one faith",
+          "A ban on every cultural practice without distinction",
+          "Equal civic treatment regardless of religion",
+          "Exclusion of all minorities"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Equal citizenship is a core principle of secular public institutions.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-91",
+        "section": "Current Affairs",
+        "subject": "Current Affairs",
+        "topic": "Current affairs: 2025–2026 snapshot",
+        "question": "Who presented Andhra Pradesh’s 2026–27 finance budget?",
+        "options": [
+          "Payyavula Keshav",
+          "Nirmala Sitharaman",
+          "Piyush Goyal",
+          "S. Jaishankar"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The state finance portal names Keshav.",
+        "source": "https://apfinance.gov.in/...Bud@et26-27/",
+        "asOf": "2026-11-16"
+      },
+      {
+        "id": "group2-model1-92",
+        "section": "Current Affairs",
+        "subject": "Current Affairs",
+        "topic": "Current affairs: 2025–2026 snapshot",
+        "question": "AP’s 2026–27 budget proposed total expenditure of approximately what?",
+        "options": [
+          "₹2,32,205 crore",
+          "₹3,32,205 crore",
+          "₹4,32,205 crore",
+          "₹1,32,205 crore"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "See budget speech, paragraph 86.",
+        "source": "https://apfinance.gov.in/...Bud@et26-27/documents/SpeechEnglish.pdf",
+        "asOf": "2026-11-16"
+      },
+      {
+        "id": "group2-model1-93",
+        "section": "Current Affairs",
+        "subject": "Current Affairs",
+        "topic": "Current affairs: 2025–2026 snapshot",
+        "question": "AP’s 2026–27 budget estimated capital expenditure at what amount?",
+        "options": [
+          "₹23,915 crore",
+          "₹83,915 crore",
+          "₹53,915 crore",
+          "₹13,915 crore"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Paragraph 86 gives this estimate.",
+        "source": "https://apfinance.gov.in/...Bud@et26-27/documents/SpeechEnglish.pdf",
+        "asOf": "2026-11-16"
+      },
+      {
+        "id": "group2-model1-94",
+        "section": "Current Affairs",
+        "subject": "Current Affairs",
+        "topic": "Current affairs: 2025–2026 snapshot",
+        "question": "AP’s 2026–27 estimated revenue expenditure was what?",
+        "options": [
+          "₹1,56,143 crore",
+          "₹2,56,143 crore",
+          "₹3,56,143 crore",
+          "₹56,143 crore"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "This is revenue, not capital expenditure.",
+        "source": "https://apfinance.gov.in/...Bud@et26-27/documents/SpeechEnglish.pdf",
+        "asOf": "2026-11-16"
+      },
+      {
+        "id": "group2-model1-95",
+        "section": "Current Affairs",
+        "subject": "Current Affairs",
+        "topic": "Current affairs: 2025–2026 snapshot",
+        "question": "What fiscal-deficit/GSDP ratio did AP’s 2026–27 budget estimate?",
+        "options": [
+          "3.84%",
+          "1.11%",
+          "5.11%",
+          "2.33%"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Paragraph 86 distinguishes fiscal and revenue deficits.",
+        "source": "https://apfinance.gov.in/...Bud@et26-27/documents/SpeechEnglish.pdf",
+        "asOf": "2026-11-16"
+      },
+      {
+        "id": "group2-model1-96",
+        "section": "Current Affairs",
+        "subject": "Current Affairs",
+        "topic": "Current affairs: 2025–2026 snapshot",
+        "question": "AP’s 2026–27 speech reports Thalliki Vandanam annual assistance per child of what?",
+        "options": [
+          "₹5,000",
+          "₹15,000",
+          "₹25,000",
+          "₹50,000"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Paragraph 32 reports the programme amount.",
+        "source": "https://apfinance.gov.in/...Bud@et26-27/documents/SpeechEnglish.pdf",
+        "asOf": "2026-11-16"
+      },
+      {
+        "id": "group2-model1-97",
+        "section": "Current Affairs",
+        "subject": "Current Affairs",
+        "topic": "Current affairs: 2025–2026 snapshot",
+        "question": "Which AP mobility scheme began on 15 August 2025?",
+        "options": [
+          "Stree Shakti",
+          "SpaDeX",
+          "Biopharma SHAKTI",
+          "Bharat-VISTAAR"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Paragraph 77 records its introduction.",
+        "source": "https://apfinance.gov.in/...Bud@et26-27/documents/SpeechEnglish.pdf",
+        "asOf": "2026-11-16"
+      },
+      {
+        "id": "group2-model1-98",
+        "section": "Current Affairs",
+        "subject": "Current Affairs",
+        "topic": "Current affairs: 2025–2026 snapshot",
+        "question": "The AP education reform called LEAP spans which educational range?",
+        "options": [
+          "Only postgraduate research",
+          "Only preschool",
+          "KG to PG",
+          "Only engineering diplomas"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The speech describes a KG-to-PG model.",
+        "source": "https://apfinance.gov.in/...Bud@et26-27/documents/SpeechEnglish.pdf",
+        "asOf": "2026-11-16"
+      },
+      {
+        "id": "group2-model1-99",
+        "section": "Current Affairs",
+        "subject": "Current Affairs",
+        "topic": "Current affairs: 2025–2026 snapshot",
+        "question": "Which listed state was included in Union Budget 2026–27 rare-earth corridors?",
+        "options": [
+          "Punjab",
+          "Haryana",
+          "Himachal Pradesh",
+          "Andhra Pradesh"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "AP is among the four named states.",
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2221455&lang=3&reg=3",
+        "asOf": "2026-11-16"
+      },
+      {
+        "id": "group2-model1-100",
+        "section": "Current Affairs",
+        "subject": "Current Affairs",
+        "topic": "Current affairs: 2025–2026 snapshot",
+        "question": "The third launch pad approved in January 2025 is at which AP space centre?",
+        "options": [
+          "Vikram Sarabhai Space Centre, Thiruvananthapuram",
+          "UR Rao Satellite Centre, Bengaluru",
+          "Space Applications Centre, Ahmedabad",
+          "Satish Dhawan Space Centre, Sriharikota"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "ISRO’s January summary records the approval.",
+        "source": "https://www.isro.gov.in/media_isro/pdf/Monthly_summary/Montlhly_summary_January2025.pdf",
+        "asOf": "2026-11-16"
+      },
+      {
+        "id": "group2-model1-101",
+        "section": "Current Affairs",
+        "subject": "Current Affairs",
+        "topic": "Current affairs: 2025–2026 snapshot",
+        "question": "Union Budget 2026–27 estimated total spending at approximately what?",
+        "options": [
+          "₹43.5 lakh crore",
+          "₹63.5 lakh crore",
+          "₹53.5 lakh crore",
+          "₹33.5 lakh crore"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "This is the published budget estimate.",
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2221455&lang=3&reg=3",
+        "asOf": "2026-11-16"
+      },
+      {
+        "id": "group2-model1-102",
+        "section": "Current Affairs",
+        "subject": "Current Affairs",
+        "topic": "Current affairs: 2025–2026 snapshot",
+        "question": "What fiscal-deficit/GDP ratio did Union Budget 2026–27 estimate?",
+        "options": [
+          "4.4%",
+          "3.0%",
+          "5.6%",
+          "4.3%"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "4.4% referred to the preceding revised estimate.",
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2221455&lang=3&reg=3",
+        "asOf": "2026-11-16"
+      },
+      {
+        "id": "group2-model1-103",
+        "section": "Current Affairs",
+        "subject": "Current Affairs",
+        "topic": "Current affairs: 2025–2026 snapshot",
+        "question": "Union Budget 2026–27 proposed public capital expenditure of what?",
+        "options": [
+          "₹2.2 lakh crore",
+          "₹22.2 lakh crore",
+          "₹7.2 lakh crore",
+          "₹12.2 lakh crore"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The infrastructure announcement gives ₹12.2 lakh crore.",
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2221455&lang=3&reg=3",
+        "asOf": "2026-11-16"
+      },
+      {
+        "id": "group2-model1-104",
+        "section": "Current Affairs",
+        "subject": "Current Affairs",
+        "topic": "Current affairs: 2025–2026 snapshot",
+        "question": "Which semiconductor initiative was announced in Union Budget 2026–27?",
+        "options": [
+          "Operation Flood",
+          "India Semiconductor Mission 2.0",
+          "Project Tiger",
+          "National Solar Mission only"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "ISM 2.0 targets the semiconductor ecosystem.",
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2221455&lang=3&reg=3",
+        "asOf": "2026-11-16"
+      },
+      {
+        "id": "group2-model1-105",
+        "section": "Current Affairs",
+        "subject": "Current Affairs",
+        "topic": "Current affairs: 2025–2026 snapshot",
+        "question": "Biopharma SHAKTI’s announced five-year outlay in Budget 2026–27 was what?",
+        "options": [
+          "₹1,000 crore",
+          "₹10,000 crore",
+          "₹50,000 crore",
+          "₹500 crore"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The announcement specifies five-year funding.",
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2221455&lang=3&reg=3",
+        "asOf": "2026-11-16"
+      },
+      {
+        "id": "group2-model1-106",
+        "section": "Current Affairs",
+        "subject": "Current Affairs",
+        "topic": "Current affairs: 2025–2026 snapshot",
+        "question": "Budget 2026–27’s Bharat-VISTAAR is principally what?",
+        "options": [
+          "A lunar lander",
+          "A naval submarine",
+          "A sporting league",
+          "A multilingual agricultural AI tool"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "It integrates agricultural information using AI.",
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2221455&lang=3&reg=3",
+        "asOf": "2026-11-16"
+      },
+      {
+        "id": "group2-model1-107",
+        "section": "Current Affairs",
+        "subject": "Current Affairs",
+        "topic": "Current affairs: 2025–2026 snapshot",
+        "question": "ISRO first docked the SpaDeX satellites on which date?",
+        "options": [
+          "16 January 2024",
+          "13 March 2024",
+          "30 December 2025",
+          "16 January 2025"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The ISRO docking release gives this date.",
+        "source": "https://www.isro.gov.in/spadex_docking.html",
+        "asOf": "2026-11-16"
+      },
+      {
+        "id": "group2-model1-108",
+        "section": "Current Affairs",
+        "subject": "Current Affairs",
+        "topic": "Current affairs: 2025–2026 snapshot",
+        "question": "Successful SpaDeX docking made India which nation to demonstrate space docking?",
+        "options": [
+          "Fourth",
+          "First",
+          "Second",
+          "Tenth"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "ISRO’s 2025 achievements summary records fourth place.",
+        "source": "https://www.isro.gov.in/ISRO_EN/Achievements_Department_of_Space_2025.html",
+        "asOf": "2026-11-16"
+      },
+      {
+        "id": "group2-model1-109",
+        "section": "Current Affairs",
+        "subject": "Current Affairs",
+        "topic": "Current affairs: 2025–2026 snapshot",
+        "question": "Which two satellites performed the first SpaDeX docking?",
+        "options": [
+          "SDX-01 and SDX-02",
+          "INSAT-1A and INSAT-1B",
+          "Chandrayaan-1 and Mangalyaan",
+          "Aryabhata and Rohini"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "These identifiers appear in ISRO’s release.",
+        "source": "https://www.isro.gov.in/spadex_docking.html",
+        "asOf": "2026-11-16"
+      },
+      {
+        "id": "group2-model1-110",
+        "section": "Current Affairs",
+        "subject": "Current Affairs",
+        "topic": "Current affairs: 2025–2026 snapshot",
+        "question": "ISRO’s first successful SpaDeX undocking occurred on which date?",
+        "options": [
+          "13 March 2024",
+          "13 March 2025",
+          "23 August 2025",
+          "6 January 2026"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The official undocking update records the date.",
+        "source": "https://www.isro.gov.in/ISRO_EN/spadex_undocking_successful.html",
+        "asOf": "2026-11-16"
+      },
+      {
+        "id": "group2-model1-111",
+        "section": "Current Affairs",
+        "subject": "Current Affairs",
+        "topic": "Current affairs: 2025–2026 snapshot",
+        "question": "Which city hosted COP30 in 2025?",
+        "options": [
+          "Belém",
+          "Baku",
+          "Dubai",
+          "Glasgow"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The UNFCCC proceedings identify Belém.",
+        "source": "https://unfccc.int/sites/default/files/resource/cp2025_12_adv.pdf",
+        "asOf": "2026-11-16"
+      },
+      {
+        "id": "group2-model1-112",
+        "section": "Current Affairs",
+        "subject": "Current Affairs",
+        "topic": "Current affairs: 2025–2026 snapshot",
+        "question": "COP30’s 2025 host country was which?",
+        "options": [
+          "Brazil",
+          "Azerbaijan",
+          "Egypt",
+          "United Arab Emirates"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Belém is the Brazilian host city.",
+        "source": "https://unfccc.int/sites/default/files/resource/cp2025_12_adv.pdf",
+        "asOf": "2026-11-16"
+      },
+      {
+        "id": "group2-model1-113",
+        "section": "Current Affairs",
+        "subject": "Current Affairs",
+        "topic": "Current affairs: 2025–2026 snapshot",
+        "question": "Who was elected president of COP30?",
+        "options": [
+          "Mukhtar Babayev",
+          "André Aranha Corrêa do Lago",
+          "António Guterres",
+          "Jim Skea"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Paragraph 2 records the election.",
+        "source": "https://unfccc.int/sites/default/files/resource/cp2025_12_adv.pdf",
+        "asOf": "2026-11-16"
+      },
+      {
+        "id": "group2-model1-114",
+        "section": "Current Affairs",
+        "subject": "Current Affairs",
+        "topic": "Current affairs: 2025–2026 snapshot",
+        "question": "Which action plan appears as decision 7/CP.30?",
+        "options": [
+          "Montreal aviation action plan",
+          "Kyoto fisheries action plan",
+          "Belém gender action plan",
+          "Paris space action plan"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The proceedings list the decision by this name.",
+        "source": "https://unfccc.int/sites/default/files/resource/cp2025_12_adv.pdf",
+        "asOf": "2026-11-16"
+      },
+      {
+        "id": "group2-model1-115",
+        "section": "Current Affairs",
+        "subject": "Current Affairs",
+        "topic": "Current affairs: 2025–2026 snapshot",
+        "question": "According to its proceedings, COP30 actually ran over which dates?",
+        "options": [
+          "1–5 January 2025",
+          "10–22 November 2025",
+          "10–22 November 2024",
+          "1–15 December 2026"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The report records the actual closing date.",
+        "source": "https://unfccc.int/sites/default/files/resource/cp2025_12_adv.pdf",
+        "asOf": "2026-11-16"
+      },
+      {
+        "id": "group2-model1-116",
+        "section": "Current Affairs",
+        "subject": "Current Affairs",
+        "topic": "Current affairs: 2025–2026 snapshot",
+        "question": "Which city hosted the 2025 G20 leaders’ summit?",
+        "options": [
+          "Pretoria",
+          "Cape Town",
+          "Johannesburg",
+          "Durban"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The leaders’ declaration identifies Johannesburg.",
+        "source": "https://g20.org/wp-content/uploads/2025/11/2025-G20-Summit-Declaration.pdf",
+        "asOf": "2026-11-16"
+      },
+      {
+        "id": "group2-model1-117",
+        "section": "Current Affairs",
+        "subject": "Current Affairs",
+        "topic": "Current affairs: 2025–2026 snapshot",
+        "question": "Which country held the 2025 G20 summit presidency?",
+        "options": [
+          "Brazil",
+          "India",
+          "South Africa",
+          "Indonesia"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The declaration identifies the South African presidency.",
+        "source": "https://g20.org/wp-content/uploads/2025/11/2025-G20-Summit-Declaration.pdf",
+        "asOf": "2026-11-16"
+      },
+      {
+        "id": "group2-model1-118",
+        "section": "Current Affairs",
+        "subject": "Current Affairs",
+        "topic": "Current affairs: 2025–2026 snapshot",
+        "question": "The 2025 G20 summit was the first held on which continent?",
+        "options": [
+          "Asia",
+          "Europe",
+          "South America",
+          "Africa"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The declaration highlights this first.",
+        "source": "https://g20.org/wp-content/uploads/2025/11/2025-G20-Summit-Declaration.pdf",
+        "asOf": "2026-11-16"
+      },
+      {
+        "id": "group2-model1-119",
+        "section": "Current Affairs",
+        "subject": "Current Affairs",
+        "topic": "Current affairs: 2025–2026 snapshot",
+        "question": "The Johannesburg G20 summit took place on which dates?",
+        "options": [
+          "22–23 November 2024",
+          "1–2 February 2026",
+          "22–23 November 2025",
+          "15–16 August 2025"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "These dates appear in the declaration.",
+        "source": "https://g20.org/wp-content/uploads/2025/11/2025-G20-Summit-Declaration.pdf",
+        "asOf": "2026-11-16"
+      },
+      {
+        "id": "group2-model1-120",
+        "section": "Current Affairs",
+        "subject": "Current Affairs",
+        "topic": "Current affairs: 2025–2026 snapshot",
+        "question": "Which three themes framed South Africa’s 2025 G20 presidency?",
+        "options": [
+          "Isolation, exclusion and extraction",
+          "Solidarity, equality and sustainability",
+          "War, tariffs and annexation",
+          "Speed, spectacle and secrecy"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "These are the declaration’s three named pillars.",
+        "source": "https://g20.org/wp-content/uploads/2025/11/2025-G20-Summit-Declaration.pdf",
+        "asOf": "2026-11-16"
+      },
+      {
+        "topic": "Arithmetic and basic science",
+        "question": "What is the HCF of 84 and 126?",
+        "options": [
+          "21",
+          "14",
+          "63",
+          "42"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "84 = 2 × 42 and 126 = 3 × 42; 2 and 3 are coprime.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "id": "group2-model1-121",
+        "section": "Mental Ability",
+        "subject": "Mental Ability"
+      },
+      {
+        "topic": "Arithmetic and basic science",
+        "question": "What is the LCM of 18 and 24?",
+        "options": [
+          "36",
+          "48",
+          "72",
+          "144"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Use the highest prime powers: 2³ × 3² = 72.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "id": "group2-model1-122",
+        "section": "Mental Ability",
+        "subject": "Mental Ability"
+      },
+      {
+        "topic": "Arithmetic and basic science",
+        "question": "A quantity increases from 240 to 300. What is the percentage increase?",
+        "options": [
+          "20%",
+          "30%",
+          "25%",
+          "60%"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Increase 60 divided by original 240 gives 25%.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "id": "group2-model1-123",
+        "section": "Mental Ability",
+        "subject": "Mental Ability"
+      },
+      {
+        "topic": "Arithmetic and basic science",
+        "question": "A sum is divided in the ratio 3:5. If the larger share is ₹250, what is the total?",
+        "options": [
+          "₹150",
+          "₹350",
+          "₹450",
+          "₹400"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "One part is 50; eight parts total 400.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "id": "group2-model1-124",
+        "section": "Mental Ability",
+        "subject": "Mental Ability"
+      },
+      {
+        "topic": "Arithmetic and basic science",
+        "question": "The average of five numbers is 18. Removing 10 leaves what average?",
+        "options": [
+          "16",
+          "22",
+          "18",
+          "20"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Total 90 minus 10 is 80; divide by four.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "id": "group2-model1-125",
+        "section": "Mental Ability",
+        "subject": "Mental Ability"
+      },
+      {
+        "topic": "Arithmetic and basic science",
+        "question": "An item costing ₹800 is sold for ₹920. Find profit percent.",
+        "options": [
+          "15%",
+          "12%",
+          "20%",
+          "10%"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Profit 120 divided by cost 800 gives 15%.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "id": "group2-model1-126",
+        "section": "Mental Ability",
+        "subject": "Mental Ability"
+      },
+      {
+        "topic": "Arithmetic and basic science",
+        "question": "A ₹1,500 marked price receives a 20% discount. What is paid?",
+        "options": [
+          "₹1,200",
+          "₹1,250",
+          "₹1,300",
+          "₹1,000"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "80% of 1500 is 1200.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "id": "group2-model1-127",
+        "section": "Mental Ability",
+        "subject": "Mental Ability"
+      },
+      {
+        "topic": "Arithmetic and basic science",
+        "question": "Find simple interest on ₹2,000 at 6% annually for three years.",
+        "options": [
+          "₹120",
+          "₹360",
+          "₹300",
+          "₹380"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Interest = principal × rate × years / 100.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "id": "group2-model1-128",
+        "section": "Mental Ability",
+        "subject": "Mental Ability"
+      },
+      {
+        "topic": "Arithmetic and basic science",
+        "question": "At 10% compounded annually, ₹1,000 becomes what after two years?",
+        "options": [
+          "₹1,200",
+          "₹1,210",
+          "₹1,100",
+          "₹1,220"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "1000 × 1.1 × 1.1 = 1210.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "id": "group2-model1-129",
+        "section": "Mental Ability",
+        "subject": "Mental Ability"
+      },
+      {
+        "topic": "Arithmetic and basic science",
+        "question": "A train covers 180 km in 2.5 hours. What is its average speed?",
+        "options": [
+          "60 km/h",
+          "72 km/h",
+          "75 km/h",
+          "90 km/h"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Speed = distance / time = 180 / 2.5.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "id": "group2-model1-130",
+        "section": "Mental Ability",
+        "subject": "Mental Ability"
+      },
+      {
+        "topic": "Arithmetic and basic science",
+        "question": "Convert 54 km/h to metres per second.",
+        "options": [
+          "12 m/s",
+          "18 m/s",
+          "15 m/s",
+          "20 m/s"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Multiply by 5/18.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "id": "group2-model1-131",
+        "section": "Mental Ability",
+        "subject": "Mental Ability"
+      },
+      {
+        "topic": "Arithmetic and basic science",
+        "question": "A can finish work in 12 days and B in 6 days. Together they need how long?",
+        "options": [
+          "3 days",
+          "6 days",
+          "9 days",
+          "4 days"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Their combined daily rate is 1/12 + 1/6 = 1/4.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "id": "group2-model1-132",
+        "section": "Mental Ability",
+        "subject": "Mental Ability"
+      },
+      {
+        "topic": "Arithmetic and basic science",
+        "question": "Solve 3x + 7 = 28.",
+        "options": [
+          "7",
+          "5",
+          "6",
+          "9"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Subtract 7 and divide by 3.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "id": "group2-model1-133",
+        "section": "Mental Ability",
+        "subject": "Mental Ability"
+      },
+      {
+        "topic": "Arithmetic and basic science",
+        "question": "If x + y = 12 and x − y = 4, find x.",
+        "options": [
+          "8",
+          "4",
+          "6",
+          "10"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Adding the equations gives 2x = 16.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "id": "group2-model1-134",
+        "section": "Mental Ability",
+        "subject": "Mental Ability"
+      },
+      {
+        "topic": "Arithmetic and basic science",
+        "question": "Find the tenth term of 5, 8, 11, ...",
+        "options": [
+          "29",
+          "35",
+          "32",
+          "30"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "a10 = 5 + 9 × 3.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "id": "group2-model1-135",
+        "section": "Mental Ability",
+        "subject": "Mental Ability"
+      },
+      {
+        "topic": "Arithmetic and basic science",
+        "question": "Find the sum of the first ten positive integers.",
+        "options": [
+          "45",
+          "50",
+          "60",
+          "55"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "n(n+1)/2 = 10 × 11 / 2.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "id": "group2-model1-136",
+        "section": "Mental Ability",
+        "subject": "Mental Ability"
+      },
+      {
+        "topic": "Arithmetic and basic science",
+        "question": "A rectangle is 12 m long and 7 m wide. Find its area.",
+        "options": [
+          "38 m²",
+          "42 m²",
+          "96 m²",
+          "84 m²"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Area = length × width.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "id": "group2-model1-137",
+        "section": "Mental Ability",
+        "subject": "Mental Ability"
+      },
+      {
+        "topic": "Arithmetic and basic science",
+        "question": "Find a circle's circumference for radius 7 cm, using π = 22/7.",
+        "options": [
+          "22 cm",
+          "44 cm",
+          "154 cm",
+          "88 cm"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Circumference = 2πr.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "id": "group2-model1-138",
+        "section": "Mental Ability",
+        "subject": "Mental Ability"
+      },
+      {
+        "topic": "Arithmetic and basic science",
+        "question": "A cube has side 4 cm. Find its volume.",
+        "options": [
+          "16 cm³",
+          "48 cm³",
+          "96 cm³",
+          "64 cm³"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Volume = side cubed.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "id": "group2-model1-139",
+        "section": "Mental Ability",
+        "subject": "Mental Ability"
+      },
+      {
+        "topic": "Arithmetic and basic science",
+        "question": "In a right triangle, sides opposite and adjacent to angle θ are 3 and 4. Find tan θ.",
+        "options": [
+          "4/3",
+          "3/4",
+          "3/5",
+          "4/5"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Tangent is opposite divided by adjacent.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "id": "group2-model1-140",
+        "section": "Mental Ability",
+        "subject": "Mental Ability"
+      },
+      {
+        "topic": "Arithmetic and basic science",
+        "question": "A fair die is rolled once. What is the probability of an even number?",
+        "options": [
+          "1/3",
+          "1/2",
+          "2/3",
+          "1/6"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Three of six outcomes are even.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "id": "group2-model1-141",
+        "section": "Mental Ability",
+        "subject": "Mental Ability"
+      },
+      {
+        "topic": "Arithmetic and basic science",
+        "question": "Find the median of 3, 5, 8, 10, 14.",
+        "options": [
+          "8",
+          "5",
+          "10",
+          "7"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The middle of five ordered observations is the third value.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "id": "group2-model1-142",
+        "section": "Mental Ability",
+        "subject": "Mental Ability"
+      },
+      {
+        "topic": "Series, analogy and coding",
+        "question": "Find the next number: 3, 6, 12, 24, ...",
+        "options": [
+          "36",
+          "48",
+          "42",
+          "30"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Each term is doubled.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "id": "group2-model1-143",
+        "section": "Mental Ability",
+        "subject": "Mental Ability"
+      },
+      {
+        "topic": "Series, analogy and coding",
+        "question": "Find the next number: 2, 5, 10, 17, ...",
+        "options": [
+          "24",
+          "26",
+          "25",
+          "28"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Terms are n² + 1 for n = 1, 2, 3, 4, 5.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "id": "group2-model1-144",
+        "section": "Mental Ability",
+        "subject": "Mental Ability"
+      },
+      {
+        "topic": "Series, analogy and coding",
+        "question": "Find the next number: 81, 27, 9, 3, ...",
+        "options": [
+          "0",
+          "1",
+          "2",
+          "6"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Each term is divided by 3.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "id": "group2-model1-145",
+        "section": "Mental Ability",
+        "subject": "Mental Ability"
+      },
+      {
+        "topic": "Series, analogy and coding",
+        "question": "Find the next number: 1, 4, 9, 16, ...",
+        "options": [
+          "20",
+          "24",
+          "25",
+          "36"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "These are consecutive positive integer squares.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "id": "group2-model1-146",
+        "section": "Mental Ability",
+        "subject": "Mental Ability"
+      },
+      {
+        "topic": "Series, analogy and coding",
+        "question": "Find the next letter: B, D, F, H, ...",
+        "options": [
+          "I",
+          "K",
+          "J",
+          "L"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Advance two alphabet positions each time.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "id": "group2-model1-147",
+        "section": "Mental Ability",
+        "subject": "Mental Ability"
+      },
+      {
+        "topic": "Series, analogy and coding",
+        "question": "Find the next letter: Z, W, T, Q, ...",
+        "options": [
+          "O",
+          "M",
+          "N",
+          "P"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Move back three alphabet positions.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "id": "group2-model1-148",
+        "section": "Mental Ability",
+        "subject": "Mental Ability"
+      },
+      {
+        "topic": "Series, analogy and coding",
+        "question": "If CAT is coded DBU by shifting each letter forward one, how is DOG coded?",
+        "options": [
+          "EOG",
+          "FQI",
+          "CNE",
+          "EPH"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "D becomes E, O becomes P and G becomes H.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "id": "group2-model1-149",
+        "section": "Mental Ability",
+        "subject": "Mental Ability"
+      },
+      {
+        "topic": "Series, analogy and coding",
+        "question": "With A=1, B=2, ..., Z=26, what is the sum for RAIL?",
+        "options": [
+          "40",
+          "38",
+          "42",
+          "44"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "18 + 1 + 9 + 12 = 40.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "id": "group2-model1-150",
+        "section": "Mental Ability",
+        "subject": "Mental Ability"
+      }
+    ]
+  }
+]
