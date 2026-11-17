@@ -52,12 +52,14 @@ const routes = {
 };
 
 // Main Routing Router
+let authReady=false;
 let routeGeneration=0;
 let lastRenderedPath=null;
 async function router() {
   const generation=++routeGeneration;
   MockTest.resetForUser();
   const appContainer = document.getElementById('app');
+  if(!authReady){appContainer.innerHTML='<div class="workspace-loading" role="status">Restoring your sign-in…</div>';return;}
   // Extract hash path e.g. #/dashboard?id=123 -> /dashboard
   let hashPath = window.location.hash.split('?')[0] || '#/';
   if (hashPath.startsWith('#')) {
@@ -96,13 +98,15 @@ async function router() {
   const currentUser = auth.currentUser;
   
   if (route.requiresAuth && !currentUser) {
+    sessionStorage.setItem('gate-return-to',window.location.hash);
     showToast("Please sign in to access this page.", "warning");
     window.location.hash = '#/';
     return;
   }
 
   if (route.name === 'home' && currentUser) {
-    window.location.hash = '#/dashboard';
+    const destination=sessionStorage.getItem('gate-return-to');sessionStorage.removeItem('gate-return-to');
+    window.location.hash=destination?.startsWith('#/')?destination:'#/dashboard';
     return;
   }
 
@@ -143,6 +147,7 @@ window.addEventListener('hashchange', router);
 
 // Handle auth state changes
 auth.onAuthStateChanged((user) => {
+  authReady=true;
   if(setStorageUser(user?.uid)){
     Practice.questions=[];Practice.isApplied=false;Practice.parsedQuestions=[];
     Assistant.messages=[{role:'model',text:'Ask a study question or connect an AI provider in settings.'}];
