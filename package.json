@@ -10,7 +10,11 @@
     "test": "node --experimental-vm-modules --test tests/*.test.mjs",
     "test:browser": "node tests/exams.browser.mjs",
     "build:exam-banks": "node scripts/build-exam-banks.mjs",
-    "test:workspace": "node tests/workspace.browser.mjs"
+    "test:workspace": "node tests/workspace.browser.mjs",
+    "test:rules": "firebase emulators:exec --only firestore --project demo-gatelabs \"node tests/firestore.rules.mjs\"",
+    "test:auth": "node tests/authRestore.browser.mjs",
+    "test:libraries": "node tests/libraries.browser.mjs",
+    "test:browser:all": "npm run test:browser && npm run test:workspace && npm run test:auth && npm run test:libraries"
   },
   "devDependencies": {
     "@firebase/rules-unit-testing": "^3.0.4",
