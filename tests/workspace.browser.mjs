@@ -42,7 +42,8 @@ try{
  await page.locator('#exam-search').fill('');
  for(const route of ['gate','tet-exams','group2','rrb-station-master','sbi-clerk']){
    await page.goto('http://127.0.0.1:3011/#/'+route);
-   await page.locator('.prep-tabs').waitFor();
+   await page.locator('#prep-'+({'tet-exams':'tet','rrb-station-master':'rrb','sbi-clerk':'sbi'}[route]||route)).waitFor();
+   await page.locator('[data-panel]:visible').waitFor();
    assert.equal(await page.locator('[data-panel]:visible').count(),1);
    for(const tab of ['mocks','syllabus','papers','progress','overview']){
      await page.locator('[data-prep-tab='+tab+']').click();
