@@ -1,5 +1,6 @@
+import {readStored} from './safeStorage.js';
 import {auth,db} from '../config/firebase';
-function rows(key){try{const value=JSON.parse(localStorage.getItem(key)||'[]');return Array.isArray(value)?value:[];}catch{return [];}}
+function rows(key){return readStored(key,[]);}
 export async function getAttemptRecords(){
   const uid=auth.currentUser?.uid||'anonymous';
   let remote=[],syncState='device';

@@ -1,3 +1,4 @@
+import {readStored} from '../src/utils/safeStorage.js';
 import {renderStudyText} from '../src/utils/studyText.js';
 import {renderAnswerInputs,readAnswer,answerLabel,renderQuestionContext} from '../src/components/QuestionView.js';
 import {evaluateAnswer} from '../src/utils/examEngine.js';
@@ -10,7 +11,7 @@ import { escapeHtml } from '../src/utils/examEngine.js';
 
 async function page(name,db={}) {
   const context=vm.createContext({console,localStorage:{getItem:()=>null},window:{location:{hash:''}},Date,JSON,Math,URLSearchParams});
-  const exports={renderStudyText,renderAnswerInputs,readAnswer,answerLabel,renderQuestionContext,evaluateAnswer,parseExamText,validateStudyQuestion,questionId,userStorageKey:k=>k+':test',db,auth:{currentUser:{uid:'test'}},SUBJECT_SYLLABUS:{},escapeHtml,showToast(){},getTheme:()=> 'light',getApiKey:()=>null,generateContent(){},Chart:class{}};
+  const exports={readStored:(key,fallback)=>structuredClone(fallback),renderStudyText,renderAnswerInputs,readAnswer,answerLabel,renderQuestionContext,evaluateAnswer,parseExamText,validateStudyQuestion,questionId,userStorageKey:k=>k+':test',db,auth:{currentUser:{uid:'test'}},SUBJECT_SYLLABUS:{},escapeHtml,showToast(){},getTheme:()=> 'light',getApiKey:()=>null,generateContent(){},Chart:class{}};
   const dependency=new vm.SyntheticModule(Object.keys(exports),function(){for(const [k,v] of Object.entries(exports))this.setExport(k,v);},{context});
   const module=new vm.SourceTextModule(fs.readFileSync(`src/pages/${name}.js`,'utf8'),{context});
   await module.link(()=>dependency);await module.evaluate();return module.namespace[name];

@@ -1,3 +1,4 @@
+import {readStored} from '../utils/safeStorage.js';
 import {renderAnswerInputs,readAnswer,answerLabel,renderQuestionContext} from '../components/QuestionView.js';
 import {evaluateAnswer} from '../utils/examEngine.js';
 import { renderFigure } from '../utils/examFigures.js';
@@ -49,7 +50,7 @@ export const MockTest = {
     bind('submit-exam',()=>{if(confirm('Submit your answers? Unanswered questions receive zero marks.'))this.submitExam();});
     document.querySelectorAll('[data-bookmark]').forEach(el=>el.onclick=()=>{
       const key=`exam-bookmarks:${auth.currentUser?.uid}:${this.result.examId}`;
-      const list=JSON.parse(localStorage.getItem(key)||'[]');const id=el.dataset.bookmark;
+      const list=readStored(key,[]);const id=el.dataset.bookmark;
       localStorage.setItem(key,JSON.stringify(list.includes(id)?list.filter(v=>v!==id):[...list,id]));showToast('Bookmark updated','success');
     });
     document.getElementById('retry-save')?.addEventListener('click',()=>this.saveResult());
@@ -63,7 +64,7 @@ export const MockTest = {
   },
   storageKey(){return `exam-active:${this.ownerId||auth.currentUser?.uid||'anonymous'}`;},
   persist(){try{localStorage.setItem(this.storageKey(),JSON.stringify({pending:this.pending,answers:this.answers,review:this.review,currentIdx:this.currentIdx,startedAt:this.startedAt,deadline:this.deadline}));}catch{showToast('Device storage is full; keep this page open.','warning');}},
-  restore(){try{const s=JSON.parse(localStorage.getItem(this.storageKey())||'null');if(s?.pending&&s.pending.ownerId===auth.currentUser?.uid&&s.pending.ruleVersion===EXAMS[s.pending.examId]?.version&&!validatePaper(s.pending.examId,s.pending.questions,s.pending.full).length){Object.assign(this,s);this.ownerId=s.pending.ownerId;this.questions=s.pending.questions;this.isTesting=true;this.installTimer();this.refresh();this.tick();}}catch{showToast('Saved exam could not be restored.','warning');}},
+  restore(){try{const s=readStored(this.storageKey(),null);if(s?.pending&&s.pending.ownerId===auth.currentUser?.uid&&s.pending.ruleVersion===EXAMS[s.pending.examId]?.version&&!validatePaper(s.pending.examId,s.pending.questions,s.pending.full).length){Object.assign(this,s);this.ownerId=s.pending.ownerId;this.questions=s.pending.questions;this.isTesting=true;this.installTimer();this.refresh();this.tick();}}catch{showToast('Saved exam could not be restored.','warning');}},
   installTimer(){clearInterval(this.timer);if(this.unloadHandler)window.removeEventListener('beforeunload',this.unloadHandler);this.unloadHandler=e=>{e.preventDefault();e.returnValue='';};window.addEventListener('beforeunload',this.unloadHandler);this.timer=setInterval(()=>this.tick(),1000);},
   tick(){if(!this.isTesting)return;if(Date.now()>=this.deadline){this.submitExam();return;}if(!this.allowed(this.currentIdx)){this.currentIdx=this.questions.findIndex((_,i)=>this.allowed(i));this.refresh();}const el=document.getElementById('exam-clock');if(el)el.textContent=this.clockText();},
   canAnswer(){if(!this.isTesting)return false;if(Date.now()>=this.deadline||!this.allowed(this.currentIdx)){this.tick();return false;}return true;},
@@ -80,7 +81,7 @@ export const MockTest = {
     const examId=this.pending.examId;
     const result={...scorePaper(examId,this.questions,this.answers),examId,ruleVersion:EXAMS[examId].version,mode:this.pending.full?'full':'practice',scope:this.pending.title,timeSpentSeconds:Math.min(this.pending.minutes*60,Math.floor((Date.now()-this.startedAt)/1000)),timestamp:new Date().toISOString(),userId:auth.currentUser?.uid};
     this.stop();this.result=result;
-    try{const key=`exam-results:${auth.currentUser?.uid}`;const rows=JSON.parse(localStorage.getItem(key)||'[]');result.id=crypto.randomUUID();rows.push(result);localStorage.setItem(key,JSON.stringify(rows));localStorage.removeItem(this.storageKey());this.saveMessage='Saved on this device; syncing attempt history.';}catch{this.saveMessage='Device storage failed. Keep this review open until sync completes.';}
+    try{const key=`exam-results:${auth.currentUser?.uid}`;const rows=readStored(key,[]);result.id=crypto.randomUUID();rows.push(result);localStorage.setItem(key,JSON.stringify(rows));localStorage.removeItem(this.storageKey());this.saveMessage='Saved on this device; syncing attempt history.';}catch{this.saveMessage='Device storage failed. Keep this review open until sync completes.';}
     this.refresh();
     await this.saveResult();
   },

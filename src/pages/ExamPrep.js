@@ -1,3 +1,4 @@
+import {readStored} from '../utils/safeStorage.js';
 import {getAttemptRecords} from '../utils/attemptRepository.js';
 import { auth } from '../config/firebase';
 import { EXAMS } from '../config/exams.js';
@@ -27,8 +28,7 @@ const fallbackTopics={
   'Numerical Ability':'Simplification; number series; arithmetic; percentages and ratios; data interpretation',
   Reasoning:'Puzzles and seating arrangements; inequalities; syllogisms; coding; relations and directions'
 };
-function read(key,fallback=[]){try{return JSON.parse(localStorage.getItem(key))??fallback;}catch{return fallback;}}
-function empty(title,body,link=''){return `<div class="empty-state">${icon('file')}<h3>${title}</h3><p>${body}</p>${link}</div>`;}
+function read(key,fallback=[]){return readStored(key,fallback);}
 export function createExamPrep(examId){return {
   papers:[],activeTab:'overview',loadError:null,
   key(kind){return `exam-${kind}:${auth.currentUser?.uid}:${examId}`;},

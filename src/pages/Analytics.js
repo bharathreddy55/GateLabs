@@ -1,3 +1,4 @@
+import {readStored} from '../utils/safeStorage.js';
 import {getAttemptRecords} from '../utils/attemptRepository.js';
 import { escapeHtml } from '../utils/examEngine.js';
 function safeAttempt(a){const clean=v=>{if(Array.isArray(v))return v.map(clean);if(v&&typeof v==='object')return Object.fromEntries(Object.entries(v).map(([k,x])=>[k,clean(x)]));return typeof v==='string'?escapeHtml(v):v;};return clean(a);}
@@ -532,10 +533,10 @@ export const Analytics = {
       host.prepend(panel);const select=document.getElementById('analytics-exam-filter');select.value=this.examFilter;select.onchange=()=>{this.examFilter=select.value;this.refresh();};
       document.getElementById('import-legacy-attempts').onclick=()=>{
         const uid=auth.currentUser?.uid;if(!uid)return;
-        const legacy=JSON.parse(localStorage.getItem('gate_attempts')||'[]').filter(a=>!a.userId||a.userId===uid);
+        const legacy=readStored('gate_attempts',[]).filter(a=>!a.userId||a.userId===uid);
         if(!legacy.length){showToast('No older device history found.','info');return;}
         if(!confirm('Older records were stored without reliable account ownership. Copy this device history into your account only if these are your attempts?'))return;
-        const key='gate_attempts:'+uid,rows=JSON.parse(localStorage.getItem(key)||'[]');
+        const key='gate_attempts:'+uid,rows=readStored(key,[]);
         for(const a of legacy)if(!rows.some(r=>r.id===a.id))rows.push({...a,userId:uid,legacy:true});
         localStorage.setItem(key,JSON.stringify(rows));this.refresh();
       };

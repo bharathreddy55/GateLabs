@@ -1,3 +1,4 @@
+import {readStored} from '../utils/safeStorage.js';
 import {parseExamText,validateStudyQuestion} from '../utils/parseExamText.js';
 // Firebase configuration and mock fallback system
 import { initializeApp } from "firebase/app";
@@ -326,7 +327,7 @@ const VALID_SUBJECTS = [
 
 // Initialize LocalStorage with mock data if empty
 function initializeMockDb() {
-  const currentQs = JSON.parse(localStorage.getItem('gate_questions') || '[]');
+  const currentQs = readStored('gate_questions',[]);
   const needsAlign = currentQs.some(q => !VALID_SUBJECTS.includes(q.subject));
   if (currentQs.length < DEFAULT_QUESTIONS.length || needsAlign) {
     localStorage.setItem('gate_questions', JSON.stringify(DEFAULT_QUESTIONS));
@@ -356,9 +357,9 @@ const firebaseConfig = {
 };
 
 function boundedWrite(operation,ms=5000){let timer;return Promise.race([operation,new Promise((_,reject)=>{timer=setTimeout(()=>reject(new Error('Cloud sync timed out')),ms);})]).finally(()=>clearTimeout(timer));}
-function personalStorageKey(base){const uid=(useMock?JSON.parse(localStorage.getItem('gate_current_user')||'null')?.uid:authInstance?.currentUser?.uid)||'anonymous';return base+':'+uid;}
+function personalStorageKey(base){const uid=(useMock?readStored('gate_current_user',null)?.uid:authInstance?.currentUser?.uid)||'anonymous';return base+':'+uid;}
 function attemptStorageKey(){
-  const uid=(useMock ? JSON.parse(localStorage.getItem('gate_current_user')||'null')?.uid : authInstance?.currentUser?.uid) || 'anonymous';
+  const uid=(useMock ? readStored('gate_current_user',null)?.uid : authInstance?.currentUser?.uid) || 'anonymous';
   return 'gate_attempts:'+uid;
 }
 let useMock = true;
@@ -375,7 +376,7 @@ async function loadExternalQuestions() {
     if (res.ok) {
       const externalQs = await res.json();
       if (Array.isArray(externalQs) && externalQs.length > 0) {
-        const currentQs = JSON.parse(localStorage.getItem('gate_questions') || '[]');
+        const currentQs = readStored('gate_questions',[]);
         const existingQs = new Set(currentQs.map(q => q.question.trim()));
         let addedCount = 0;
         externalQs.forEach(q => {
@@ -438,7 +439,7 @@ const mockAuth = {
   onAuthStateChanged(callback) {
     this.listeners.push(callback);
     // Trigger immediately with current user
-    const loggedUser = JSON.parse(localStorage.getItem('gate_current_user') || 'null');
+    const loggedUser = readStored('gate_current_user',null);
     this.currentUser = loggedUser;
     callback(loggedUser);
     return () => {
@@ -448,7 +449,7 @@ const mockAuth = {
   signUp(email, password, displayName) {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        const users = JSON.parse(localStorage.getItem('gate_users') || '{}');
+        const users = readStored('gate_users',{});
         if (users[email]) {
           reject(new Error("Email already registered."));
           return;
@@ -466,7 +467,7 @@ const mockAuth = {
   signIn(email, password) {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        const users = JSON.parse(localStorage.getItem('gate_users') || '{}');
+        const users = readStored('gate_users',{});
         const user = users[email];
         if (!user || user.password !== password) {
           reject(new Error("Invalid email or password."));
@@ -573,7 +574,7 @@ const mockFirestore = {
     const textQs = await loadTextQuestions();
     
     // Always clean out cached static text questions from local storage
-    let localQs = JSON.parse(localStorage.getItem('gate_questions') || '[]');
+    let localQs = readStored('gate_questions',[]);
     localQs = localQs.filter(q => q.id && !q.id.startsWith('txt_') && !q.id.includes('tet') && q.options && q.options.every(o => o && o.trim() !== ''));
 
     // Save only custom-created questions back to localStorage
@@ -630,7 +631,7 @@ const mockFirestore = {
     return new Promise((resolve) => {
       setTimeout(() => {
         const cleanAttempt = JSON.parse(JSON.stringify(attempt));
-        const attempts = JSON.parse(localStorage.getItem(attemptStorageKey()) || '[]');
+        const attempts = readStored(attemptStorageKey(),[]);
         cleanAttempt.id = cleanAttempt.id || 'att_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4);
         cleanAttempt.timestamp = cleanAttempt.timestamp || new Date().toISOString();
     cleanAttempt.userId = auth.currentUser?.uid || 'anonymous';
@@ -644,7 +645,7 @@ const mockFirestore = {
   async getAttempts() {
     return new Promise((resolve) => {
       setTimeout(() => {
-        const list = JSON.parse(localStorage.getItem(attemptStorageKey()) || '[]');
+        const list = readStored(attemptStorageKey(),[]);
         resolve(list.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp)));
       }, 400);
     });
@@ -653,10 +654,10 @@ const mockFirestore = {
   async deleteAttempt(attemptId) {
     return new Promise((resolve) => {
       setTimeout(() => {
-        const list = JSON.parse(localStorage.getItem(attemptStorageKey()) || '[]');
+        const list = readStored(attemptStorageKey(),[]);
         const updated = list.filter(a => a.id !== attemptId);
       const resultsKey='exam-results:'+(auth.currentUser?.uid||'anonymous');
-      const results=JSON.parse(localStorage.getItem(resultsKey)||'[]');
+      const results=readStored(resultsKey,[]);
       localStorage.setItem(resultsKey,JSON.stringify(results.filter(a=>a.id!==attemptId)));
         localStorage.setItem(attemptStorageKey(), JSON.stringify(updated));
         resolve(true);
@@ -667,7 +668,7 @@ const mockFirestore = {
   async addQuestion(question) {
     return new Promise((resolve) => {
       setTimeout(() => {
-        const list = JSON.parse(localStorage.getItem('gate_questions') || '[]');
+        const list = readStored('gate_questions',[]);
         question.id = 'q_' + (list.length + 1);
         list.push(question);
         localStorage.setItem('gate_questions', JSON.stringify(list));
@@ -679,7 +680,7 @@ const mockFirestore = {
   async addQuestions(questionsList) {
     return new Promise((resolve) => {
       setTimeout(() => {
-        const list = JSON.parse(localStorage.getItem('gate_questions') || '[]');
+        const list = readStored('gate_questions',[]);
         const updatedList = [...list];
         questionsList.forEach((question, idx) => {
           if (!question.id) {
@@ -696,7 +697,7 @@ const mockFirestore = {
   async getStudyTime() {
     return new Promise((resolve) => {
       setTimeout(() => {
-        resolve(JSON.parse(localStorage.getItem(personalStorageKey('gate_study_time')) || '{}'));
+        resolve(readStored(personalStorageKey('gate_study_time'),{}));
       }, 300);
     })
   },
@@ -704,7 +705,7 @@ const mockFirestore = {
   async updateStudyTime(day, hours) {
     return new Promise((resolve) => {
       setTimeout(() => {
-        const times = JSON.parse(localStorage.getItem(personalStorageKey('gate_study_time')) || '{}');
+        const times = readStored(personalStorageKey('gate_study_time'),{});
         times[day] = (times[day] || 0) + hours;
         localStorage.setItem(personalStorageKey('gate_study_time'), JSON.stringify(times));
         resolve(times);
@@ -715,7 +716,7 @@ const mockFirestore = {
   async getTopicsBySubject(subject) {
     return new Promise((resolve) => {
       setTimeout(() => {
-        const list = JSON.parse(localStorage.getItem('gate_questions') || '[]');
+        const list = readStored('gate_questions',[]);
         const filtered = list.filter(q => q.subject.toLowerCase() === subject.toLowerCase());
         const topics = [...new Set(filtered.map(q => q.topic))];
         resolve(topics);
@@ -725,12 +726,12 @@ const mockFirestore = {
 
   async getBookmarks() {
     return new Promise((resolve) => {
-      resolve(JSON.parse(localStorage.getItem(personalStorageKey('gate_bookmarks')) || '[]'));
+      resolve(readStored(personalStorageKey('gate_bookmarks'),[]));
     });
   },
   async saveBookmark(question) {
     return new Promise((resolve) => {
-      const list = JSON.parse(localStorage.getItem(personalStorageKey('gate_bookmarks')) || '[]');
+      const list = readStored(personalStorageKey('gate_bookmarks'),[]);
       if (!list.some(q => q.id === question.id)) {
         list.push(question);
         localStorage.setItem(personalStorageKey('gate_bookmarks'), JSON.stringify(list));
@@ -740,7 +741,7 @@ const mockFirestore = {
   },
   async deleteBookmark(questionId) {
     return new Promise((resolve) => {
-      const list = JSON.parse(localStorage.getItem(personalStorageKey('gate_bookmarks')) || '[]');
+      const list = readStored(personalStorageKey('gate_bookmarks'),[]);
       const updated = list.filter(q => q.id !== questionId);
       localStorage.setItem(personalStorageKey('gate_bookmarks'), JSON.stringify(updated));
       resolve(true);
@@ -748,13 +749,13 @@ const mockFirestore = {
   },
   async isBookmarked(questionId) {
     return new Promise((resolve) => {
-      const list = JSON.parse(localStorage.getItem(personalStorageKey('gate_bookmarks')) || '[]');
+      const list = readStored(personalStorageKey('gate_bookmarks'),[]);
       resolve(list.some(q => q.id === questionId));
     });
   },
   async getSyllabusProgress() {
     return new Promise((resolve) => {
-      resolve(JSON.parse(localStorage.getItem(personalStorageKey('gate_syllabus_progress')) || '{}'));
+      resolve(readStored(personalStorageKey('gate_syllabus_progress'),{}));
     });
   },
   async saveSyllabusProgress(progress) {
@@ -765,12 +766,12 @@ const mockFirestore = {
   },
   async getUnlockedBadges() {
     return new Promise((resolve) => {
-      resolve(JSON.parse(localStorage.getItem(personalStorageKey('gate_unlocked_badges')) || '[]'));
+      resolve(readStored(personalStorageKey('gate_unlocked_badges'),[]));
     });
   },
   async unlockBadge(badgeId) {
     return new Promise((resolve) => {
-      const badges = JSON.parse(localStorage.getItem(personalStorageKey('gate_unlocked_badges')) || '[]');
+      const badges = readStored(personalStorageKey('gate_unlocked_badges'),[]);
       if (!badges.includes(badgeId)) {
         badges.push(badgeId);
         localStorage.setItem(personalStorageKey('gate_unlocked_badges'), JSON.stringify(badges));
@@ -780,7 +781,7 @@ const mockFirestore = {
   },
   async getCommunityPosts() {
     return new Promise((resolve) => {
-      const posts = JSON.parse(localStorage.getItem(personalStorageKey('gate_community_posts')) || '[]');
+      const posts = readStored(personalStorageKey('gate_community_posts'),[]);
       if (posts.length === 0) {
         const defaultPosts = [
           {
@@ -828,7 +829,7 @@ const mockFirestore = {
   },
   async saveCommunityPost(post) {
     return new Promise((resolve) => {
-      const posts = JSON.parse(localStorage.getItem(personalStorageKey('gate_community_posts')) || '[]');
+      const posts = readStored(personalStorageKey('gate_community_posts'),[]);
       post.id = 'post_' + Date.now();
       post.timestamp = new Date().toISOString();
       post.upvotes = 0;
@@ -841,7 +842,7 @@ const mockFirestore = {
   },
   async addPostReply(postId, reply) {
     return new Promise((resolve) => {
-      const posts = JSON.parse(localStorage.getItem(personalStorageKey('gate_community_posts')) || '[]');
+      const posts = readStored(personalStorageKey('gate_community_posts'),[]);
       const post = posts.find(p => p.id === postId);
       if (post) {
         reply.id = 'reply_' + Date.now();
@@ -854,7 +855,7 @@ const mockFirestore = {
   },
   async upvotePost(postId) {
     return new Promise((resolve) => {
-      const posts = JSON.parse(localStorage.getItem(personalStorageKey('gate_community_posts')) || '[]');
+      const posts = readStored(personalStorageKey('gate_community_posts'),[]);
       const post = posts.find(p => p.id === postId);
       if (post) {
         if (post.upvoted) {
@@ -979,7 +980,7 @@ const realFirestore = {
     cleanAttempt.userId=auth.currentUser?.uid||'anonymous';
     let localSaved=false,cloudSaved=false;
     const writeLocal=(status)=>{
-      const raw=JSON.parse(localStorage.getItem(attemptStorageKey())||'[]');
+      const raw=readStored(attemptStorageKey(),[]);
       const list=Array.isArray(raw)?raw:[];
       const row={...cleanAttempt,syncStatus:status};
       const index=list.findIndex(a=>a.id===row.id);if(index<0)list.push(row);else list[index]=row;
@@ -997,7 +998,7 @@ const realFirestore = {
   },
 
   async retryPendingAttempts(){
-    const rows=JSON.parse(localStorage.getItem(attemptStorageKey())||'[]');
+    const rows=readStored(attemptStorageKey(),[]);
     if(!Array.isArray(rows))return [];
     const results=[];
     for(const row of rows.filter(a=>a.syncStatus==='pending'))results.push(await this.saveAttempt(row));
@@ -1009,7 +1010,7 @@ const realFirestore = {
     
     // Always load from localStorage
     try {
-      list = JSON.parse(localStorage.getItem(attemptStorageKey()) || '[]');
+      list = readStored(attemptStorageKey(),[]);
     } catch (e) {
       console.warn("localStorage getAttempts error:", e);
     }
@@ -1042,7 +1043,7 @@ const realFirestore = {
     // Keep the recoverable copy when the remote deletion is rejected or offline.
     if(firestore&&auth.currentUser){const {deleteDoc}=await import('firebase/firestore');await boundedWrite(deleteDoc(doc(firestore,'attempts',attemptId)));}
     for(const key of [attemptStorageKey(),'exam-results:'+(auth.currentUser?.uid||'anonymous')]){
-      const rows=JSON.parse(localStorage.getItem(key)||'[]');localStorage.setItem(key,JSON.stringify(rows.filter(a=>a.id!==attemptId)));
+      const rows=readStored(key,[]);localStorage.setItem(key,JSON.stringify(rows.filter(a=>a.id!==attemptId)));
     }
     return true;
   },
@@ -1149,12 +1150,12 @@ const realFirestore = {
 
   async getBookmarks() {
     return new Promise((resolve) => {
-      resolve(JSON.parse(localStorage.getItem(personalStorageKey('gate_bookmarks')) || '[]'));
+      resolve(readStored(personalStorageKey('gate_bookmarks'),[]));
     });
   },
   async saveBookmark(question) {
     return new Promise((resolve) => {
-      const list = JSON.parse(localStorage.getItem(personalStorageKey('gate_bookmarks')) || '[]');
+      const list = readStored(personalStorageKey('gate_bookmarks'),[]);
       if (!list.some(q => q.id === question.id)) {
         list.push(question);
         localStorage.setItem(personalStorageKey('gate_bookmarks'), JSON.stringify(list));
@@ -1164,7 +1165,7 @@ const realFirestore = {
   },
   async deleteBookmark(questionId) {
     return new Promise((resolve) => {
-      const list = JSON.parse(localStorage.getItem(personalStorageKey('gate_bookmarks')) || '[]');
+      const list = readStored(personalStorageKey('gate_bookmarks'),[]);
       const updated = list.filter(q => q.id !== questionId);
       localStorage.setItem(personalStorageKey('gate_bookmarks'), JSON.stringify(updated));
       resolve(true);
@@ -1172,13 +1173,13 @@ const realFirestore = {
   },
   async isBookmarked(questionId) {
     return new Promise((resolve) => {
-      const list = JSON.parse(localStorage.getItem(personalStorageKey('gate_bookmarks')) || '[]');
+      const list = readStored(personalStorageKey('gate_bookmarks'),[]);
       resolve(list.some(q => q.id === questionId));
     });
   },
   async getSyllabusProgress() {
     return new Promise((resolve) => {
-      resolve(JSON.parse(localStorage.getItem(personalStorageKey('gate_syllabus_progress')) || '{}'));
+      resolve(readStored(personalStorageKey('gate_syllabus_progress'),{}));
     });
   },
   async saveSyllabusProgress(progress) {
@@ -1189,12 +1190,12 @@ const realFirestore = {
   },
   async getUnlockedBadges() {
     return new Promise((resolve) => {
-      resolve(JSON.parse(localStorage.getItem(personalStorageKey('gate_unlocked_badges')) || '[]'));
+      resolve(readStored(personalStorageKey('gate_unlocked_badges'),[]));
     });
   },
   async unlockBadge(badgeId) {
     return new Promise((resolve) => {
-      const badges = JSON.parse(localStorage.getItem(personalStorageKey('gate_unlocked_badges')) || '[]');
+      const badges = readStored(personalStorageKey('gate_unlocked_badges'),[]);
       if (!badges.includes(badgeId)) {
         badges.push(badgeId);
         localStorage.setItem(personalStorageKey('gate_unlocked_badges'), JSON.stringify(badges));
@@ -1204,7 +1205,7 @@ const realFirestore = {
   },
   async getCommunityPosts() {
     return new Promise((resolve) => {
-      const posts = JSON.parse(localStorage.getItem(personalStorageKey('gate_community_posts')) || '[]');
+      const posts = readStored(personalStorageKey('gate_community_posts'),[]);
       if (posts.length === 0) {
         const defaultPosts = [
           {
@@ -1252,7 +1253,7 @@ const realFirestore = {
   },
   async saveCommunityPost(post) {
     return new Promise((resolve) => {
-      const posts = JSON.parse(localStorage.getItem(personalStorageKey('gate_community_posts')) || '[]');
+      const posts = readStored(personalStorageKey('gate_community_posts'),[]);
       post.id = 'post_' + Date.now();
       post.timestamp = new Date().toISOString();
       post.upvotes = 0;
@@ -1265,7 +1266,7 @@ const realFirestore = {
   },
   async addPostReply(postId, reply) {
     return new Promise((resolve) => {
-      const posts = JSON.parse(localStorage.getItem(personalStorageKey('gate_community_posts')) || '[]');
+      const posts = readStored(personalStorageKey('gate_community_posts'),[]);
       const post = posts.find(p => p.id === postId);
       if (post) {
         reply.id = 'reply_' + Date.now();
@@ -1278,7 +1279,7 @@ const realFirestore = {
   },
   async upvotePost(postId) {
     return new Promise((resolve) => {
-      const posts = JSON.parse(localStorage.getItem(personalStorageKey('gate_community_posts')) || '[]');
+      const posts = readStored(personalStorageKey('gate_community_posts'),[]);
       const post = posts.find(p => p.id === postId);
       if (post) {
         if (post.upvoted) {

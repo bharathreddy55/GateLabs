@@ -1,3 +1,4 @@
+import {readStored} from '../utils/safeStorage.js';
 import { userStorageKey } from '../utils/userStorage.js';
 import { escapeHtml as h } from '../utils/examEngine.js';
 import { showToast } from '../utils/toast';
@@ -261,7 +262,7 @@ Used to PROVE a language is NOT regular by contradiction (e.g. L = {a^n b^n | n 
     ];
 
     // Merge custom user-created formula cards from localStorage
-    const customCards = JSON.parse(localStorage.getItem(userStorageKey('gate_custom_formulas')) || '[]');
+    const customCards = readStored(userStorageKey('gate_custom_formulas'),[]);
     const allFlashcards = [...flashcards, ...customCards];
 
     const subjects = [
@@ -505,7 +506,7 @@ Used to PROVE a language is NOT regular by contradiction (e.g. L = {a^n b^n | n 
         formula
       };
 
-      const existing = JSON.parse(localStorage.getItem(userStorageKey('gate_custom_formulas')) || '[]');
+      const existing = readStored(userStorageKey('gate_custom_formulas'),[]);
       existing.push(newCard);
       localStorage.setItem(userStorageKey('gate_custom_formulas'), JSON.stringify(existing));
 

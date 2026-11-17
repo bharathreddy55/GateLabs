@@ -1,3 +1,4 @@
+import {storageRecoveryEntries,clearStorageRecovery} from './utils/safeStorage.js';
 import { setStorageUser } from './utils/userStorage.js';
 import { WorkspaceHome, ExamLibrary } from './pages/WorkspaceHome.js';
 import { auth, db } from './config/firebase';
@@ -124,6 +125,11 @@ async function router() {
       if(generation!==routeGeneration)return;
       subPageContainer.innerHTML=html;
       await route.component.init();
+      const recovery=storageRecoveryEntries();
+      if(Object.keys(recovery).length){
+        const notice=document.createElement('section');notice.className='notice';notice.setAttribute('role','alert');notice.textContent='Some saved data could not be read. It has been retained. Export it before resetting or restoring a backup.';
+        const exportButton=document.createElement('button');exportButton.textContent='Export recovery data';exportButton.onclick=()=>{const url=URL.createObjectURL(new Blob([JSON.stringify(recovery,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='GateLabs-recovery.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};notice.append(exportButton);document.getElementById('sub-page-container')?.prepend(notice);
+      }
     } else {
       appContainer.innerHTML = await route.component.render();
       await route.component.init();
@@ -149,6 +155,7 @@ window.addEventListener('hashchange', router);
 auth.onAuthStateChanged((user) => {
   authReady=true;
   if(setStorageUser(user?.uid)){
+    clearStorageRecovery();
     Practice.questions=[];Practice.isApplied=false;Practice.parsedQuestions=[];
     Assistant.messages=[{role:'model',text:'Ask a study question or connect an AI provider in settings.'}];
     Formulas.flippedCards={};Formulas.searchQuery='';Community.activePostId=null;Community.posts=[];
