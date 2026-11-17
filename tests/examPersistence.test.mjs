@@ -4,11 +4,12 @@ import vm from 'node:vm';
 import fs from 'node:fs';
 test('actual Firebase adapter isolates accounts, preserves IDs and removes local review copies',async()=>{
  const memory=new Map(),cloud=new Map(),authState={currentUser:{uid:'alice'}};
- const storage={getItem:k=>memory.get(k)??null,setItem:(k,v)=>memory.set(k,String(v)),removeItem:k=>memory.delete(k)};
+ let failCloud=false,failLocal=false;
+ const storage={getItem:k=>memory.get(k)??null,setItem:(k,v)=>{if(failLocal)throw Error('quota');memory.set(k,String(v));},removeItem:k=>memory.delete(k)};
  const context=vm.createContext({console:{log(){},warn(){},error(){}},localStorage:storage,setTimeout,clearTimeout,Date,JSON,Math});
  const exports={initializeApp:()=>({}),getAuth:()=>authState,getAnalytics:()=>({}),getFirestore:()=>({}),
   collection:(_,name)=>({collection:name}),doc:(_,collection,id)=>({collection,id}),where:(field,op,value)=>({field,value}),query:(base,condition)=>({...base,condition}),
-  setDoc:async(ref,data)=>cloud.set(ref.collection+'/'+ref.id,structuredClone(data)),
+  setDoc:async(ref,data)=>{if(failCloud)throw Error('permission-denied');cloud.set(ref.collection+'/'+ref.id,structuredClone(data));},
   getDocs:async q=>({forEach:fn=>{for(const [key,value] of cloud)if(key.startsWith(q.collection+'/')&&(!q.condition||value[q.condition.field]===q.condition.value))fn({data:()=>structuredClone(value)});}}),
   getDoc:async()=>({exists:()=>false}),deleteDoc:async ref=>cloud.delete(ref.collection+'/'+ref.id),
   signInWithEmailAndPassword(){},createUserWithEmailAndPassword(){},signOut(){},onAuthStateChanged(){},updateProfile(){}};
@@ -30,4 +31,11 @@ test('actual Firebase adapter isolates accounts, preserves IDs and removes local
  assert.equal(JSON.parse(storage.getItem('exam-results:alice')).length,0);
  assert.equal((await db.getAttempts()).length,0);
  assert.equal(JSON.parse(storage.getItem('gate_attempts:bob')).length,1);
+ failCloud=true;
+ const pending=await db.saveAttempt({...a,id:'offline-attempt'});
+ assert.equal(pending.persistence.localSaved,true);assert.equal(pending.persistence.cloudSaved,false);assert.equal(pending.persistence.pendingSync,true);
+ failLocal=true;await assert.rejects(db.saveAttempt({...a,id:'nowhere'}),/could not be saved/);
+ failLocal=false;failCloud=false;
+ const retried=await db.retryPendingAttempts();assert.equal(retried[0].persistence.cloudSaved,true);
+ assert.ok(cloud.has('attempts/offline-attempt'));
 });

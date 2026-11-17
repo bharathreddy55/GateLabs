@@ -1,5 +1,5 @@
 import { WorkspaceHome, ExamLibrary } from './pages/WorkspaceHome.js';
-import { auth } from './config/firebase';
+import { auth, db } from './config/firebase';
 import { initTheme } from './utils/theme';
 import { showToast } from './utils/toast';
 import { initAccentPalette } from './utils/accentTheme';
@@ -149,3 +149,5 @@ auth.onAuthStateChanged((user) => {
 // Run router on first load
 window.addEventListener('DOMContentLoaded', router);
 export { router };
+
+window.addEventListener('online',()=>{if(auth.currentUser)db.retryPendingAttempts?.().catch(error=>console.warn('Sync retry pending',error));});

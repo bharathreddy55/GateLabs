@@ -354,6 +354,7 @@ const firebaseConfig = {
   measurementId: "G-XEDG1BBT2S"
 };
 
+function boundedWrite(operation,ms=5000){let timer;return Promise.race([operation,new Promise((_,reject)=>{timer=setTimeout(()=>reject(new Error('Cloud sync timed out')),ms);})]).finally(()=>clearTimeout(timer));}
 function attemptStorageKey(){
   const uid=(useMock ? JSON.parse(localStorage.getItem('gate_current_user')||'null')?.uid : authInstance?.currentUser?.uid) || 'anonymous';
   return 'gate_attempts:'+uid;
@@ -1116,34 +1117,37 @@ const realFirestore = {
   },
   
   async saveAttempt(attempt) {
-    // Sanitize object to eliminate all 'undefined' fields for firestore compatibility
-    const cleanAttempt = JSON.parse(JSON.stringify(attempt));
-    cleanAttempt.id = cleanAttempt.id || 'att_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4);
-    cleanAttempt.timestamp = cleanAttempt.timestamp || new Date().toISOString();
-    cleanAttempt.userId = auth.currentUser?.uid || 'anonymous';
-
-    // Always save to localStorage first
-    try {
-      const attempts = JSON.parse(localStorage.getItem(attemptStorageKey()) || '[]');
-      if (!attempts.some(a => a.id === cleanAttempt.id)) attempts.push(cleanAttempt);
-      localStorage.setItem(attemptStorageKey(), JSON.stringify(attempts));
-    } catch (e) {
-      console.warn("localStorage saveAttempt error:", e);
-    }
-
-    // Try Firestore if available
-    try {
-      if (firestore) {
-        const user = authInstance ? authInstance.currentUser : null;
-        cleanAttempt.userId = user ? user.uid : 'anonymous';
-        await setDoc(doc(firestore, "attempts", cleanAttempt.id), cleanAttempt);
+    const cleanAttempt=JSON.parse(JSON.stringify(attempt));
+    cleanAttempt.id ||= 'att_'+Date.now()+'_'+Math.random().toString(36).slice(2,8);
+    cleanAttempt.timestamp ||= new Date().toISOString();
+    cleanAttempt.userId=auth.currentUser?.uid||'anonymous';
+    let localSaved=false,cloudSaved=false;
+    const writeLocal=(status)=>{
+      const raw=JSON.parse(localStorage.getItem(attemptStorageKey())||'[]');
+      const list=Array.isArray(raw)?raw:[];
+      const row={...cleanAttempt,syncStatus:status};
+      const index=list.findIndex(a=>a.id===row.id);if(index<0)list.push(row);else list[index]=row;
+      localStorage.setItem(attemptStorageKey(),JSON.stringify(list));localSaved=true;
+    };
+    try{writeLocal('pending');}catch(error){console.warn('Local attempt save failed',error);}
+    try{
+      if(firestore&&auth.currentUser){
+        await boundedWrite(setDoc(doc(firestore,'attempts',cleanAttempt.id),cleanAttempt));cloudSaved=true;
+        try{writeLocal('synced');}catch{}
       }
-    } catch (err) {
-      console.warn("Firestore saveAttempt error:", err);
-    }
-    return cleanAttempt;
+    }catch(error){console.warn('Cloud attempt save pending',error);}
+    if(!localSaved&&!cloudSaved){const error=new Error('Your result could not be saved. Keep this page open and export or retry.');error.attempt=cleanAttempt;throw error;}
+    return {...cleanAttempt,persistence:{localSaved,cloudSaved,pendingSync:localSaved&&!cloudSaved}};
   },
-  
+
+  async retryPendingAttempts(){
+    const rows=JSON.parse(localStorage.getItem(attemptStorageKey())||'[]');
+    if(!Array.isArray(rows))return [];
+    const results=[];
+    for(const row of rows.filter(a=>a.syncStatus==='pending'))results.push(await this.saveAttempt(row));
+    return results;
+  },
+
   async getAttempts() {
     let list = [];
     
@@ -1176,25 +1180,11 @@ const realFirestore = {
     return list.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
   },
 
-  async deleteAttempt(attemptId) {
-    try {
-      const list = JSON.parse(localStorage.getItem(attemptStorageKey()) || '[]');
-      const updated = list.filter(a => a.id !== attemptId);
-      const resultsKey='exam-results:'+(auth.currentUser?.uid||'anonymous');
-      const results=JSON.parse(localStorage.getItem(resultsKey)||'[]');
-      localStorage.setItem(resultsKey,JSON.stringify(results.filter(a=>a.id!==attemptId)));
-      localStorage.setItem(attemptStorageKey(), JSON.stringify(updated));
-    } catch (e) {
-      console.warn("localStorage deleteAttempt error:", e);
-    }
-
-    if (firestore) {
-      try {
-        const { deleteDoc } = await import('firebase/firestore');
-        await deleteDoc(doc(firestore, "attempts", attemptId));
-      } catch (err) {
-        console.warn("Firestore deleteAttempt error:", err);
-      }
+  async deleteAttempt(attemptId){
+    // Keep the recoverable copy when the remote deletion is rejected or offline.
+    if(firestore&&auth.currentUser){const {deleteDoc}=await import('firebase/firestore');await boundedWrite(deleteDoc(doc(firestore,'attempts',attemptId)));}
+    for(const key of [attemptStorageKey(),'exam-results:'+(auth.currentUser?.uid||'anonymous')]){
+      const rows=JSON.parse(localStorage.getItem(key)||'[]');localStorage.setItem(key,JSON.stringify(rows.filter(a=>a.id!==attemptId)));
     }
     return true;
   },

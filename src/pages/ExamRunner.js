@@ -21,7 +21,7 @@ export const MockTest = {
   render() {
     if(this.result) {
       const r=this.result;
-      return `<section id="exam-root" class="exam-hub"><h1>Exam complete</h1><h2>${h(r.scope)}</h2><div class="exam-card"><strong>${r.score.toFixed(2)} / ${r.totalPossibleMarks}</strong><p>${r.correctCount} correct · ${r.wrongCount} wrong · ${r.skippedCount} unanswered</p><p>Marks deducted: ${r.negativeMarks.toFixed(2)} · Attempted-question accuracy: ${r.accuracy.toFixed(1)}%</p><p>${h(this.saveMessage||'Saved on this device.')}</p></div><a href="#/${r.examId==='group2'?'group2':r.examId==='rrb'?'rrb-station-master':r.examId==='tet'?'tet-exams':r.examId==='sbi'?'sbi-clerk':'gate'}">Return to preparation</a><h2>Answer review</h2>${r.responses.map((q,i)=>`<details class="exam-card"><summary>${i+1}. ${h(q.question)} — ${q.status} (${q.earnedMarks.toFixed(2)})</summary>${q.passage?`<blockquote>${h(q.passage)}</blockquote>`:""}${q.table?`<pre>${h(q.table)}</pre>`:""}${renderFigure(q.figure)}<p>Your answer: ${h(this.answerLabel(q,q.userAnswer))}</p><p>Correct answer: ${h(this.answerLabel(q,q.type==='NAT'?(q.correctNat??`${q.natMin} to ${q.natMax}`):q.type==='MSQ'?q.correctOptions:q.correctAnswer))}</p><p>${h(q.explanation||'Explanation not supplied.')}</p>${q.source?.startsWith('https://')?`<p><a href="${h(q.source)}" target="_blank" rel="noopener">Question source</a>${q.asOf?' · checked '+h(q.asOf):''}</p>`:`<small>${h(q.source||'Source not supplied')}</small>`}<button data-bookmark="${h(q.id)}">Bookmark / remove bookmark</button></details>`).join('')}</section>`;
+      return `<section id="exam-root" class="exam-hub"><h1>Exam complete</h1><h2>${h(r.scope)}</h2><div class="exam-card"><strong>${r.score.toFixed(2)} / ${r.totalPossibleMarks}</strong><p>${r.correctCount} correct · ${r.wrongCount} wrong · ${r.skippedCount} unanswered</p><p>Marks deducted: ${r.negativeMarks.toFixed(2)} · Attempted-question accuracy: ${r.accuracy.toFixed(1)}%</p><p role="status">${h(this.saveMessage||'Saved on this device.')}</p><div class="button-row"><button id="retry-save">Retry cloud sync</button><button id="export-result">Export result</button></div></div><a href="#/${r.examId==='group2'?'group2':r.examId==='rrb'?'rrb-station-master':r.examId==='tet'?'tet-exams':r.examId==='sbi'?'sbi-clerk':'gate'}">Return to preparation</a><h2>Answer review</h2>${r.responses.map((q,i)=>`<details class="exam-card"><summary>${i+1}. ${h(q.question)} — ${q.status} (${q.earnedMarks.toFixed(2)})</summary>${q.passage?`<blockquote>${h(q.passage)}</blockquote>`:""}${q.table?`<pre>${h(q.table)}</pre>`:""}${renderFigure(q.figure)}<p>Your answer: ${h(this.answerLabel(q,q.userAnswer))}</p><p>Correct answer: ${h(this.answerLabel(q,q.type==='NAT'?(q.correctNat??`${q.natMin} to ${q.natMax}`):q.type==='MSQ'?q.correctOptions:q.correctAnswer))}</p><p>${h(q.explanation||'Explanation not supplied.')}</p>${q.source?.startsWith('https://')?`<p><a href="${h(q.source)}" target="_blank" rel="noopener">Question source</a>${q.asOf?' · checked '+h(q.asOf):''}</p>`:`<small>${h(q.source||'Source not supplied')}</small>`}<button data-bookmark="${h(q.id)}">Bookmark / remove bookmark</button></details>`).join('')}</section>`;
     }
     if(!this.isTesting) {
       const p=this.pending, e=p&&EXAMS[p.examId];
@@ -50,6 +50,8 @@ export const MockTest = {
       const list=JSON.parse(localStorage.getItem(key)||'[]');const id=el.dataset.bookmark;
       localStorage.setItem(key,JSON.stringify(list.includes(id)?list.filter(v=>v!==id):[...list,id]));showToast('Bookmark updated','success');
     });
+    document.getElementById('retry-save')?.addEventListener('click',()=>this.saveResult());
+    document.getElementById('export-result')?.addEventListener('click',()=>{const url=URL.createObjectURL(new Blob([JSON.stringify(this.result,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='GateLabs-result.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
     if(!this.isTesting&&!this.pending&&!this.result)this.restore();
   },
   begin() {
@@ -78,8 +80,13 @@ export const MockTest = {
     this.stop();this.result=result;
     try{const key=`exam-results:${auth.currentUser?.uid}`;const rows=JSON.parse(localStorage.getItem(key)||'[]');result.id=crypto.randomUUID();rows.push(result);localStorage.setItem(key,JSON.stringify(rows));localStorage.removeItem(this.storageKey());this.saveMessage='Saved on this device; syncing attempt history.';}catch{this.saveMessage='Device storage failed. Keep this review open until sync completes.';}
     this.refresh();
-    try{await db.saveAttempt(result);this.saveMessage='Attempt recorded. Detailed review is available below and in Mistake Analysis.';}catch{this.saveMessage='Cloud save failed. Your device result is retained.';}
-    if(document.getElementById('exam-root'))this.refresh();
+    await this.saveResult();
+  },
+  async saveResult(){
+    if(this.saving)return;this.saving=true;
+    try{const saved=await db.saveAttempt(this.result);this.result.id=saved.id;this.result.persistence=saved.persistence;const status=saved.persistence;this.saveMessage=status?.cloudSaved?'Synced to your account.':status?.localSaved?'Saved on this device. Cloud sync pending.':'Saved on this device.';}
+    catch(error){this.saveMessage=error.message||'Save failed. Keep this page open; export your result or retry.';}
+    finally{this.saving=false;if(document.getElementById('exam-root'))this.refresh();}
   },
   answerLabel(q,a){if(a===null||a===undefined||a==='')return 'Unanswered';if(q.type==='NAT')return a;if(Array.isArray(a))return a.map(i=>q.options[Number(i)]).join('; ');return q.options[Number(a)]??a;}
 };
