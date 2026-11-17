@@ -1,3 +1,4 @@
+import {loadPublishedQuestions,filterQuestionBank} from '../utils/questionBank.js';
 import {readStored} from '../utils/safeStorage.js';
 import {parseExamText,validateStudyQuestion} from '../utils/parseExamText.js';
 // Firebase configuration and mock fallback system
@@ -412,16 +413,6 @@ if (hasRealConfig) {
     }
     useMock = false;
 
-    // Write a dummy document to Firestore to verify connection
-    setDoc(doc(firestore, "connection_tests", "test_doc"), {
-      status: "connected",
-      timestamp: new Date().toISOString(),
-      message: "Database connected successfully from GATE Flow web app!"
-    }).then(() => {
-      console.log("Dummy verification document written to collection 'connection_tests' successfully!");
-    }).catch(err => {
-      console.error("Failed to write dummy verification document:", err);
-    });
   } catch (error) {
     console.error("Firebase init failed, switching to mock database mode:", error);
     useMock = true;
@@ -496,37 +487,6 @@ const mockAuth = {
 // Plain text question parser
 function parseTextQuestions(text){return parseExamText(text).filter(q=>validateStudyQuestion(q).length===0);}
 
-// Fetch and load questions from all text files in the pyqs directory dynamically
-async function loadTextQuestions() {
-  // Use Vite's build-time globbing to discover all .txt files in the public directory (lazy mode)
-  const txtModules = import.meta.glob('../../public/pyqs/*.txt', { query: '?url', import: 'default', eager: false });
-  // Resolve each text file URL asynchronously
-  const files = [];
-  for (const path in txtModules) {
-    try {
-      const url = await txtModules[path]();
-      if (url) files.push(url);
-    } catch (err) {
-      console.error(`Failed to resolve module path ${path}:`, err);
-    }
-  }
-
-  let allQs = [];
-  for (const file of files) {
-    try {
-      const res = await fetch(file);
-      if (res.ok) {
-        const text = await res.text();
-        const parsed = parseTextQuestions(text);
-        allQs = allQs.concat(parsed);
-      }
-    } catch (err) {
-      console.error(`Failed to load text questions from ${file}:`, err);
-    }
-  }
-  return allQs;
-}
-
 // Scan database and merge custom topics/subtopics into static SUBJECT_SYLLABUS
 export function mergeCustomTopicsIntoSyllabus(questions) {
   questions.forEach(q => {
@@ -567,66 +527,22 @@ export function mergeCustomTopicsIntoSyllabus(questions) {
   });
 }
 
+async function publishedStudyQuestions(filters={}){
+  const custom=readStored(personalStorageKey('gate_custom_questions'),[]).filter(q=>!validateStudyQuestion(q).length);
+  try{return [...await loadPublishedQuestions(filters),...filterQuestionBank(custom,filters)];}
+  catch(error){if(custom.length)return filterQuestionBank(custom,filters);throw error;}
+}
+async function storeCustomQuestions(questions){
+  if(!auth.currentUser)throw Error('Sign in to save your questions.');
+  if(!Array.isArray(questions)||questions.some(q=>validateStudyQuestion({...q,type:q.type||'MCQ'}).length))throw Error('Questions need complete options and verified keys.');
+  const existing=readStored(personalStorageKey('gate_custom_questions'),[]),map=new Map(existing.map(q=>[q.id,q]));
+  const saved=questions.map(q=>({...q,id:q.id||'custom_'+Date.now()+'_'+Math.random().toString(36).slice(2,8),userId:auth.currentUser.uid,type:q.type||'MCQ'}));
+  saved.forEach(q=>map.set(q.id,q));localStorage.setItem(personalStorageKey('gate_custom_questions'),JSON.stringify([...map.values()]));return saved;
+}
 // Mock Firestore API
 const mockFirestore = {
-  async getQuestions(filters = {}) {
-    // Dynamically load text questions at query time to keep updated
-    const textQs = await loadTextQuestions();
-    
-    // Always clean out cached static text questions from local storage
-    let localQs = readStored('gate_questions',[]);
-    localQs = localQs.filter(q => q.id && !q.id.startsWith('txt_') && !q.id.includes('tet') && q.options && q.options.every(o => o && o.trim() !== ''));
+  async getQuestions(filters={}){return publishedStudyQuestions(filters);},
 
-    // Save only custom-created questions back to localStorage
-    localStorage.setItem('gate_questions', JSON.stringify(localQs));
-
-    // Combine local custom questions and fresh static text questions in memory
-    const allQs = [...localQs, ...textQs];
-    
-    // Scan and merge all topics into syllabus
-    mergeCustomTopicsIntoSyllabus(allQs);
-
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        let list = [...allQs];
-        if (filters.subject) {
-          const filterSub = filters.subject.toLowerCase().replace(/^section\s+\d+\:\s*/i, '');
-          list = list.filter(q => {
-            const qSub = (q.subject || '').toLowerCase().replace(/^section\s+\d+\:\s*/i, '');
-            return qSub === filterSub || filterSub.includes(qSub) || qSub.includes(filterSub);
-          });
-        }
-        if (filters.topics && filters.topics.length > 0) {
-          const lowerTopics = filters.topics.map(t => t.toLowerCase());
-          list = list.filter(q => 
-            lowerTopics.includes(q.topic.toLowerCase()) || 
-            (q.subtopic && lowerTopics.includes(q.subtopic.toLowerCase()))
-          );
-        } else if (filters.topic) {
-          list = list.filter(q => 
-            q.topic.toLowerCase() === filters.topic.toLowerCase() ||
-            (q.subtopic && q.subtopic.toLowerCase() === filters.topic.toLowerCase())
-          );
-        }
-        if (filters.difficultyLimit) {
-          const limit = filters.difficultyLimit.toLowerCase();
-          if (limit === 'easy') {
-            list = list.filter(q => q.difficulty.toLowerCase() === 'easy');
-          } else if (limit === 'medium') {
-            list = list.filter(q => ['easy', 'medium'].includes(q.difficulty.toLowerCase()));
-          }
-          // If limit is 'hard', we include all questions, so no filtering needed
-        } else if (filters.difficulty) {
-          list = list.filter(q => q.difficulty.toLowerCase() === filters.difficulty.toLowerCase());
-        }
-        if (filters.year) {
-          list = list.filter(q => parseInt(q.year) === parseInt(filters.year));
-        }
-        resolve(list);
-      }, 400);
-    });
-  },
-  
   async saveAttempt(attempt) {
     return new Promise((resolve) => {
       setTimeout(() => {
@@ -665,34 +581,8 @@ const mockFirestore = {
     });
   },
 
-  async addQuestion(question) {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        const list = readStored('gate_questions',[]);
-        question.id = 'q_' + (list.length + 1);
-        list.push(question);
-        localStorage.setItem('gate_questions', JSON.stringify(list));
-        resolve(question);
-      }, 400);
-    });
-  },
-
-  async addQuestions(questionsList) {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        const list = readStored('gate_questions',[]);
-        const updatedList = [...list];
-        questionsList.forEach((question, idx) => {
-          if (!question.id) {
-            question.id = 'q_imp_' + Date.now() + '_' + idx + '_' + Math.random().toString(36).substr(2, 4);
-          }
-          updatedList.push(question);
-        });
-        localStorage.setItem('gate_questions', JSON.stringify(updatedList));
-        resolve(questionsList);
-      }, 400);
-    });
-  },
+  async addQuestion(question){return (await storeCustomQuestions([question]))[0];},
+  async addQuestions(questions){return storeCustomQuestions(questions);},
 
   async getStudyTime() {
     return new Promise((resolve) => {
@@ -907,72 +797,8 @@ const DEFAULT_STUDY_TIME = {
 
 // Real Firestore API
 const realFirestore = {
-  async getQuestions(filters = {}) {
-    if (!firestore) return [];
-    await this.seedQuestionsIfEmpty();
-    
-    // Dynamically load, parse and merge questions from public questions.txt
-    const textQs = await loadTextQuestions();
-    if (textQs.length > 0) {
-      const qSnap = await getDocs(collection(firestore, "questions"));
-      const existingQs = new Set();
-      qSnap.forEach(docSnap => {
-        existingQs.add(docSnap.data().question.trim());
-      });
-      const batchPromises = [];
-      textQs.forEach(q => {
-        if (!existingQs.has(q.question.trim())) {
-          batchPromises.push(setDoc(doc(firestore, "questions", q.id), q));
-        }
-      });
-      if (batchPromises.length > 0) {
-        await Promise.all(batchPromises);
-        console.log(`Successfully merged ${batchPromises.length} text questions to Firestore.`);
-      }
-    }
-    
-    const qSnap = await getDocs(collection(firestore, "questions"));
-    let list = [];
-    qSnap.forEach(docSnap => {
-      list.push(docSnap.data());
-    });
-    
-    // Scan all questions (including live DB) to add custom topics to the static syllabus
-    mergeCustomTopicsIntoSyllabus(list);
-    
-    // Client-side filtering exactly matches mock database filtering
-    if (filters.subject) {
-      list = list.filter(q => q.subject.toLowerCase() === filters.subject.toLowerCase());
-    }
-    if (filters.topics && filters.topics.length > 0) {
-      const lowerTopics = filters.topics.map(t => t.toLowerCase());
-      list = list.filter(q => 
-        lowerTopics.includes(q.topic.toLowerCase()) || 
-        (q.subtopic && lowerTopics.includes(q.subtopic.toLowerCase()))
-      );
-    } else if (filters.topic) {
-      list = list.filter(q => 
-        q.topic.toLowerCase() === filters.topic.toLowerCase() ||
-        (q.subtopic && q.subtopic.toLowerCase() === filters.topic.toLowerCase())
-      );
-    }
-    if (filters.difficultyLimit) {
-      const limit = filters.difficultyLimit.toLowerCase();
-      if (limit === 'easy') {
-        list = list.filter(q => q.difficulty.toLowerCase() === 'easy');
-      } else if (limit === 'medium') {
-        list = list.filter(q => ['easy', 'medium'].includes(q.difficulty.toLowerCase()));
-      }
-      // If limit is 'hard', we include all questions, so no filtering needed
-    } else if (filters.difficulty) {
-      list = list.filter(q => q.difficulty.toLowerCase() === filters.difficulty.toLowerCase());
-    }
-    if (filters.year) {
-      list = list.filter(q => parseInt(q.year) === parseInt(filters.year));
-    }
-    return list;
-  },
-  
+  async getQuestions(filters={}){return publishedStudyQuestions(filters);},
+
   async saveAttempt(attempt) {
     const cleanAttempt=JSON.parse(JSON.stringify(attempt));
     cleanAttempt.id ||= 'att_'+Date.now()+'_'+Math.random().toString(36).slice(2,8);
@@ -1048,27 +874,8 @@ const realFirestore = {
     return true;
   },
 
-  async addQuestion(question) {
-    if (!firestore) throw new Error("Firestore is not initialized.");
-    if (!question.id) {
-      const qSnap = await getDocs(collection(firestore, "questions"));
-      question.id = 'q_' + (qSnap.size + 1);
-    }
-    await setDoc(doc(firestore, "questions", question.id), question);
-    return question;
-  },
-
-  async addQuestions(questionsList) {
-    if (!firestore) throw new Error("Firestore is not initialized.");
-    const batchPromises = questionsList.map((question, idx) => {
-      if (!question.id) {
-        question.id = 'q_imp_' + Date.now() + '_' + idx + '_' + Math.random().toString(36).substr(2, 4);
-      }
-      return setDoc(doc(firestore, "questions", question.id), question);
-    });
-    await Promise.all(batchPromises);
-    return questionsList;
-  },
+  async addQuestion(question){return (await storeCustomQuestions([question]))[0];},
+  async addQuestions(questions){return storeCustomQuestions(questions);},
 
   async getStudyTime() {
     if (!firestore) return DEFAULT_STUDY_TIME;
@@ -1108,44 +915,6 @@ const realFirestore = {
     const filtered = list.filter(q => q.subject.toLowerCase() === subject.toLowerCase());
     const topics = [...new Set(filtered.map(q => q.topic))];
     return topics;
-  },
-
-  async seedQuestionsIfEmpty() {
-    if (!firestore) return;
-    try {
-      const qSnap = await getDocs(collection(firestore, "questions"));
-      if (qSnap.empty) {
-        console.log("Firestore questions collection is empty. Seeding questions...");
-        const questionsToSeed = [...DEFAULT_QUESTIONS];
-        try {
-          const res = await fetch('/pyqs/questions.json');
-          if (res.ok) {
-            const externalQs = await res.json();
-            if (Array.isArray(externalQs)) {
-              externalQs.forEach(q => {
-                if (!questionsToSeed.some(existing => existing.question.trim() === q.question.trim())) {
-                  if (!q.id) {
-                    q.id = 'gate_ext_' + Math.random().toString(36).substr(2, 9);
-                  }
-                  questionsToSeed.push(q);
-                }
-              });
-            }
-          }
-        } catch (e) {
-          console.error("Could not fetch external questions for seeding:", e);
-        }
-
-        // Seed to Firestore
-        const batchPromises = questionsToSeed.map(q => 
-          setDoc(doc(firestore, "questions", q.id), q)
-        );
-        await Promise.all(batchPromises);
-        console.log(`Successfully seeded ${questionsToSeed.length} questions to Firestore.`);
-      }
-    } catch (err) {
-      console.error("Failed to seed questions:", err);
-    }
   },
 
   async getBookmarks() {

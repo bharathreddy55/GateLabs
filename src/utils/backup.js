@@ -1,7 +1,7 @@
 import {EXAMS} from '../config/exams.js';
 import {validatePaper} from './examEngine.js';
 const plain=v=>!!v&&typeof v==='object'&&!Array.isArray(v);
-const base=['gate_bookmarks','gate_syllabus_progress','gate_custom_formulas','gate_unlocked_badges','gate_study_time','gate_community_posts','gate_attempts','exam-results','exam-active','last-exam'];
+const base=['gate_custom_questions','gate_bookmarks','gate_syllabus_progress','gate_custom_formulas','gate_unlocked_badges','gate_study_time','gate_community_posts','gate_attempts','exam-results','exam-active','last-exam'];
 const perExam=['exam-progress','exam-bookmarks','exam-target','exam-papers'];
 export const backupNames=[...base,...perExam.flatMap(kind=>Object.keys(EXAMS).map(id=>`${kind}/${id}`))];
 export function backupKey(name,uid){if(!backupNames.includes(name))throw Error('Unknown backup field');const [kind,id]=name.split('/');return `${kind}:${uid}${id?':'+id:''}`;}

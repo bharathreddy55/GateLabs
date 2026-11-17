@@ -25,7 +25,7 @@ export function parseExamText(text,examId){
     let current=null,key=null;
     for(const raw of block.trim().split(/\r?\n/)){
       const line=raw.trim();if(!line)continue;let match;
-      if((match=line.match(/^(subject|section|topic|question|explanation|passage|table|source|difficulty):\s*(.*)$/i))){current=match[1].toLowerCase();q[current]=match[2];}
+      if((match=line.match(/^(subject|section|topic|subtopic|question|explanation|passage|table|source|difficulty):\s*(.*)$/i))){current=match[1].toLowerCase();q[current]=match[2];}
       else if((match=line.match(/^(?:option\s+)?([A-E])[:).]\s*(.*)$/i))){current=`option${match[1].toUpperCase().charCodeAt(0)-65}`;q.options[Number(current.slice(6))]=match[2];}
       else if((match=line.match(/^(?:correct|answer|correct answer|correctOptions):\s*(.*)$/i))){key=match[1].trim();current=null;}
       else if((match=line.match(/^type:\s*(.*)$/i))){q.type=match[1].trim().toUpperCase();current=null;}
