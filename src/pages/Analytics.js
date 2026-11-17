@@ -1,3 +1,4 @@
+import {getAttemptRecords} from '../utils/attemptRepository.js';
 import { escapeHtml } from '../utils/examEngine.js';
 function safeAttempt(a){const clean=v=>{if(Array.isArray(v))return v.map(clean);if(v&&typeof v==='object')return Object.fromEntries(Object.entries(v).map(([k,x])=>[k,clean(x)]));return typeof v==='string'?escapeHtml(v):v;};return clean(a);}
 import { EXAMS } from '../config/exams.js';
@@ -36,7 +37,7 @@ export const Analytics = {
   // ATTEMPT LIST VIEW
   // ─────────────────────────────────────────────────────────────
   async renderAttemptList() {
-    const allAttempts = (await db.getAttempts()).map(safeAttempt);
+    const allAttempts = (await getAttemptRecords()).attempts.map(safeAttempt);
     const attempts = this.examFilter ? allAttempts.filter(a=>a.examId===this.examFilter || (this.examFilter==='legacy'&&!a.examId)) : allAttempts;
 
     if (attempts.length === 0) {
@@ -204,7 +205,7 @@ export const Analytics = {
   // ATTEMPT DETAIL VIEW
   // ─────────────────────────────────────────────────────────────
   async renderAttemptDetail(attemptId) {
-    const attempts = await db.getAttempts();
+    const attempts = (await getAttemptRecords()).attempts;
     const found = attempts.find(a => a.id === attemptId);
     const att = found ? safeAttempt(found) : null;
 
@@ -613,7 +614,7 @@ export const Analytics = {
     const canvas = document.getElementById('attemptPieChart');
     if (canvas && this.viewMode === 'detail' && this.activeAttemptId) {
       (async () => {
-        const attempts = await db.getAttempts();
+        const attempts = (await getAttemptRecords()).attempts;
         const att = attempts.find(a => a.id === this.activeAttemptId);
         if (!att) return;
 

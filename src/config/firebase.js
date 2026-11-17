@@ -1005,7 +1005,7 @@ const realFirestore = {
   },
 
   async getAttempts() {
-    let list = [];
+    let list = [],cloudSucceeded=false;
     
     // Always load from localStorage
     try {
@@ -1020,7 +1020,7 @@ const realFirestore = {
         const user = authInstance ? authInstance.currentUser : null;
         if (user) {
           const q = query(collection(firestore, "attempts"), where("userId", "==", user.uid));
-          const qSnap = await getDocs(q);
+          const qSnap = await boundedWrite(getDocs(q),3000);cloudSucceeded=true;
           qSnap.forEach(docSnap => {
             const data = docSnap.data();
             if (!list.some(item => item.id === data.id)) {
@@ -1033,6 +1033,8 @@ const realFirestore = {
       console.warn("Firestore getAttempts error:", err);
     }
     
+    try{localStorage.setItem(attemptStorageKey(),JSON.stringify(list));}catch{}
+    list.syncState=cloudSucceeded?'synced':firestore?'offline':'device';
     return list.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
   },
 
