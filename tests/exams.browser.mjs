@@ -61,6 +61,11 @@ try{
  assert.equal(await page.evaluate(()=>localStorage.getItem('exam-active:exam-test-user')),null);
  await page.locator('#exam-root details').first().locator('summary').click();
  await page.locator('[data-bookmark]').first().click();
+ await page.locator('#result-filter').selectOption('wrong');assert.equal(await page.locator('#exam-root details').count(),1);
+ await page.locator('#result-filter').selectOption('skipped');assert.equal(await page.locator('#exam-root details').count(),148);
+ await page.locator('#result-filter').selectOption('bookmarked');assert.equal(await page.locator('#exam-root details').count(),1);
+ await page.locator('#result-filter').selectOption('all');assert.equal(await page.locator('#exam-root details').count(),150);
+ assert.equal(await page.locator('#practise-weak').isEnabled(),true);
  await page.getByRole('link',{name:'Return to preparation'}).click();
  await page.locator('#prep-group2').waitFor();
  assert.equal(await page.locator('[data-topic]').first().isChecked(),true);
