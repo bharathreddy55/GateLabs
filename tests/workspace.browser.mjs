@@ -69,6 +69,8 @@ try{
      assert.match(await reader.getByRole('link',{name:'Open in Notion'}).getAttribute('href'),/^https:\/\/app\.notion\.com\//);
      assert.match(page.url(),/tab=notes&note=indus-civilisation$/);
      await reader.getByRole('checkbox',{name:'Mark this note revised'}).check();
+     await page.locator('[data-notes-search]').fill('Human Development');
+     assert.ok(await page.locator('[data-note-section]').getByRole('button',{name:'Human Development',exact:true}).isVisible());
      await page.locator('[data-notes-search]').fill('Jainism');
      assert.equal(await page.locator('[data-note-section] button:visible').count(),1);
      await page.reload();

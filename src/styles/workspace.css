@@ -73,6 +73,15 @@ body,.app-shell,.landing-workspace{font-family:Inter,-apple-system,BlinkMacSyste
 @media(max-width:400px){.countdown-time.countdown-clock{padding:16px 10px;gap:6px}.countdown-clock .countdown-value{font-size:30px;letter-spacing:-1px}.countdown-unit>span{font-size:11px}}
 .exam-notes [data-note-section] {
     margin-block: 1rem;
+    border-top: 1px solid var(--ws-border);
+    padding-top: .75rem;
+}
+.exam-notes summary small {
+    margin-inline-start: .5rem;
+    color: var(--ws-muted);
+}
+.exam-notes-list {
+    margin-top: .5rem;
 }
 .exam-notes [data-note-id], .syllabus-note-links .ui-button {
     margin: .25rem .375rem .25rem 0;

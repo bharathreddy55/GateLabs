@@ -5,6 +5,12 @@ test('versioned backup restores new exam state into an explicitly selected accou
  const backup=exportBackup('alice',source);assert.equal(backup.entries['exam-progress/group2'][0],'0-0');assert.ok(!JSON.stringify(backup).includes('secret'));
  const target=storage();target.setItem('exam-progress:bob:group2',JSON.stringify(['0-1']));importBackup(backup,'bob',target);assert.deepEqual(JSON.parse(target.getItem('exam-progress:bob:group2')),['0-1','0-0']);assert.equal(target.getItem('exam-target:bob:group2'),'2027-02-01');assert.equal(target.getItem('exam-progress:alice:group2'),null);
 });
+test('note revision IDs survive backup and account restore',()=>{
+ const source=storage();source.setItem('exam-note-progress:alice:gate',JSON.stringify(['binary-heaps']));
+ const target=storage();importBackup(exportBackup('alice',source),'bob',target);
+ assert.deepEqual(JSON.parse(target.getItem('exam-note-progress:bob:gate')),['binary-heaps']);
+ assert.equal(target.getItem('exam-note-progress:alice:gate'),null);
+});
 test('restore validates the whole payload before writing and accepts reviewed legacy backups',()=>{
  assert.throws(()=>parseBackup({version:2,entries:{gate_attempts:{}}}),/Invalid backup/);assert.throws(()=>parseBackup({version:2,entries:{unknown:[]}}),/Invalid backup/);
  const legacy=parseBackup({version:'1.0',attempts:[{id:'x',score:3}]});assert.equal(legacy.entries.gate_attempts[0].id,'x');

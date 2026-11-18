@@ -16,21 +16,21 @@ export function notesPanel(examId, active, notes) {
       ${examId === 'sbi' && notes.length ? '<p>Preparation topics based on the SBI handout and GateLabs practice papers.</p>' : ''}
       ${examId === 'tet' && notes.length ? '<p>Study topics based on the AP SCERT Paper 1A syllabus.</p>' : ''}
     </div></div>
-    ${notes.length ? `<div class="surface exam-notes">
-      <label for="notes-search-${examId}">Search topics or subjects</label>
-      <input type="search" id="notes-search-${examId}" data-notes-search>
-      <p hidden data-notes-empty>No topics match your search.</p>
-      ${[...sections].map(([section, rows]) => `<section data-note-section>
-        <h3>${h(section)}</h3>
-        ${rows.map(note => `<button type="button" class="ui-button" data-note-id="${h(note.id)}">${h(note.title)}</button>`).join('')}
-      </section>`).join('')}
-    </div>
-    <article class="surface exam-note" data-note-reader hidden>
+    ${notes.length ? `<article class="surface exam-note" data-note-reader hidden>
       <h3 tabindex="-1" data-note-title></h3>
       <label class="exam-note-revised"><input type="checkbox" data-note-revised disabled> Mark this note revised</label>
       <p data-note-status role="status"></p>
       <div data-note-content></div>
-    </article>` : ''}
+    </article>
+    <div class="surface exam-notes">
+      <label for="notes-search-${examId}">Search topics or subjects</label>
+      <input type="search" id="notes-search-${examId}" data-notes-search>
+      <p hidden data-notes-empty>No topics match your search.</p>
+      ${[...sections].map(([section, rows], index) => `<details data-note-section ${index === 0 ? 'open' : ''}>
+        <summary>${h(section)} <small>${rows.length} notes</small></summary>
+        <div class="exam-notes-list">${rows.map(note => `<button type="button" class="ui-button" data-note-id="${h(note.id)}">${h(note.title)}</button>`).join('')}</div>
+      </details>`).join('')}
+    </div>` : ''}
   </section>`;
 }
 
@@ -164,8 +164,10 @@ export function bindExamNotes(root, examId, notes, selectTab, progressKey) {
     };
   });
   const sections = [...root.querySelectorAll('[data-note-section]')];
+  let openBeforeSearch;
   search.oninput = () => {
     const query = search.value.trim().toLowerCase();
+    if (query && !openBeforeSearch) openBeforeSearch = new Set(sections.filter(section => section.open));
     for (const section of sections) {
       const buttons = [...section.querySelectorAll('[data-note-id]')];
       for (const button of buttons) {
@@ -173,7 +175,10 @@ export function bindExamNotes(root, examId, notes, selectTab, progressKey) {
         button.hidden = !`${note.title} ${note.section}`.toLowerCase().includes(query);
       }
       section.hidden = buttons.every(button => button.hidden);
+      if (query) section.open = !section.hidden;
+      else if (openBeforeSearch) section.open = openBeforeSearch.has(section);
     }
+    if (!query) openBeforeSearch = undefined;
     root.querySelector('[data-notes-empty]').hidden = sections.some(section => !section.hidden);
   };
   const params = new URLSearchParams(location.hash.split('?')[1]);
