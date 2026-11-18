@@ -41,6 +41,11 @@ const ready=async()=>{await page.waitForFunction(()=>!document.querySelector('.w
 page.on('console',m=>{if(m.type()==='warning'||m.type()==='error')console.log(m.text());});
 const go=async route=>{await page.goto('http://127.0.0.1:3011/#/'+route);await page.waitForFunction(async()=>{const {router}=await import('/src/main.js');return typeof router==='function';});await page.evaluate(async()=>{const {router}=await import('/src/main.js');await router();});await ready();};
 try{
+ await go('dashboard');
+ const delayedAnalytics=async route=>{await new Promise(resolve=>setTimeout(resolve,400));return route.fallback();};
+ await context.route('**/src/pages/Analytics.js*',delayedAnalytics);
+ await page.goto('http://127.0.0.1:3011/#/analytics');await page.locator('.workspace-loading').waitFor();await ready();
+ await context.unroute('**/src/pages/Analytics.js*',delayedAnalytics);
  for(const route of ['dashboard','exams','gate','tet-exams','group2','rrb-station-master','sbi-clerk','study-planner','practice','formulas','assistant','community','about','analytics','pyq-mocks']){await go(route);assert.ok(!await page.getByText('Routing Error',{exact:true}).count(),route);assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2),route+' overflow');}
  await go('about');assert.equal(await page.locator('#sidebar-container').count(),1);await page.getByRole('heading',{name:'A clear workspace for exam preparation'}).waitFor();
  await go('community');await page.getByRole('heading',{name:'Personal study notes'}).waitFor();assert.equal(await page.getByRole('textbox',{name:'Search personal study notes'}).count(),1);

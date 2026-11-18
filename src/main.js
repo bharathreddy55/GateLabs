@@ -1,5 +1,8 @@
+import {invalidateAttemptHistory} from './utils/attemptCache.js';
 import {initFocusManagement} from './utils/focusManagement.js';
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import '@fortawesome/fontawesome-free/css/fontawesome.min.css';
+import '@fortawesome/fontawesome-free/css/solid.min.css';
+import '@fortawesome/fontawesome-free/css/regular.min.css';
 import {storageRecoveryEntries,clearStorageRecovery} from './utils/safeStorage.js';
 import { setStorageUser } from './utils/userStorage.js';
 import { auth, db } from './config/firebase';
@@ -107,16 +110,19 @@ async function router() {
 
   // Render view
   try {
+    const workspace=route.requiresAuth || (currentUser && route.name==='about');
+    const loading='<div class="workspace-loading" role="status"><span></span> Opening your workspace…</div>';
+    let pageContainer=appContainer;
+    if(workspace){
+      if(!document.getElementById('sidebar-container')){appContainer.innerHTML=Layout.render(loading,route.name);Layout.init(route.name);}
+      else Layout.updateNavigation(route.name);
+      pageContainer=document.getElementById('sub-page-container');
+    }
+    pageContainer.innerHTML=loading;pageContainer.setAttribute('aria-busy','true');
     const component=await route.load();if(generation!==routeGeneration)return;
     if(currentPage&&currentPage!==component)currentPage.cleanup?.();currentPage=component;
-    if (route.requiresAuth || (currentUser && route.name==='about')) {
-      const loading='<div class="workspace-loading" role="status"><span></span> Opening your workspace…</div>';
-      if(!document.getElementById('sidebar-container')){
-        appContainer.innerHTML=Layout.render(loading,route.name);
-        Layout.init(route.name);
-      } else Layout.updateNavigation(route.name);
-      const subPageContainer=document.getElementById('sub-page-container');
-      subPageContainer.innerHTML=loading;
+    if (workspace) {
+      const subPageContainer=pageContainer;
       const html=await component.render();
       if(generation!==routeGeneration)return;
       subPageContainer.innerHTML=html;
@@ -130,8 +136,11 @@ async function router() {
       appContainer.innerHTML = await component.render();
       await component.init();
     }
+    if(generation!==routeGeneration)return;
+    pageContainer.removeAttribute('aria-busy');
     if(generation===routeGeneration&&lastRenderedPath!==hashPath){window.scrollTo(0,0);lastRenderedPath=hashPath;}
   } catch (error) {
+    if(generation!==routeGeneration)return;
     console.error("Routing error:", error);
     appContainer.innerHTML = `
       <div class="flex-1 flex flex-col items-center justify-center p-8 text-center bg-slate-50 dark:bg-darkbg-200">
@@ -151,6 +160,7 @@ window.addEventListener('hashchange', router);
 auth.onAuthStateChanged((user) => {
   authReady=true;
   if(setStorageUser(user?.uid)){
+    invalidateAttemptHistory();
     clearStorageRecovery();
     const Practice=loadedPages.get('Practice');if(Practice){Practice.questions=[];Practice.isApplied=false;Practice.parsedQuestions=[];}
     const Assistant=loadedPages.get('Assistant');if(Assistant){Assistant.messages=[{role:'model',text:'Ask a study question or connect an AI provider in settings.'}];Assistant.draft='';Assistant.error='';Assistant.pending=false;}
@@ -167,4 +177,7 @@ auth.onAuthStateChanged((user) => {
 window.addEventListener('DOMContentLoaded', router);
 export { router };
 
-window.addEventListener('online',()=>{if(auth.currentUser)db.retryPendingAttempts?.().catch(error=>console.warn('Sync retry pending',error));});
+window.addEventListener('online',()=>{invalidateAttemptHistory();if(auth.currentUser)db.retryPendingAttempts?.().catch(error=>console.warn('Sync retry pending',error));});
+
+window.addEventListener('storage',event=>{if(event.key?.startsWith('gate_attempts:')||event.key?.startsWith('exam-results:'))invalidateAttemptHistory();});
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')invalidateAttemptHistory();});

@@ -1,13 +1,15 @@
 import {readAttemptArchive} from './attemptArchive.js';
+import {getRemoteAttempts} from './attemptCache.js';
 import {readStored} from './safeStorage.js';
 import {auth,db} from '../config/firebase';
 function rows(key){return readStored(key,[]);}
-export async function getAttemptRecords(){
+export async function getAttemptRecords(options={}){
   const uid=auth.currentUser?.uid||'anonymous';
+  const archivePromise=readAttemptArchive(uid);
   let remote=[],syncState='device';
-  try{remote=await db.getAttempts();syncState=remote.syncState||'device';}catch{syncState='offline';}
+  try{remote=await getRemoteAttempts(uid,()=>db.getAttempts(),options);syncState=remote.syncState||'device';}catch{syncState='offline';}
   if((auth.currentUser?.uid||'anonymous')!==uid)return {attempts:[],syncState:'device'};
-  const archived=await readAttemptArchive(uid);
+  const archived=await archivePromise;
   if((auth.currentUser?.uid||'anonymous')!==uid)return {attempts:[],syncState:'device'};
   const merged=new Map();
   for(const row of [...archived,...rows(`exam-results:${uid}`),...rows(`gate_attempts:${uid}`),...(Array.isArray(remote)?remote:[])]){

@@ -289,11 +289,7 @@ Used to PROVE a language is NOT regular by contradiction (e.g. L = {a^n b^n | n 
         matchSub = c.subject === this.activeSubject || c.subject.includes(this.activeSubject);
       }
 
-      const matchQ = !this.searchQuery ||
-        c.concept.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
-        c.topic.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
-        c.formula.toLowerCase().includes(this.searchQuery.toLowerCase());
-      return matchSub && matchQ;
+      return matchSub;
     });
 
     return `
@@ -312,7 +308,7 @@ Used to PROVE a language is NOT regular by contradiction (e.g. L = {a^n b^n | n 
               GATE CS Formula & Theorem Deck
             </h3>
             <p class="text-xs md:text-sm text-slate-500 dark:text-slate-400 mt-2 font-medium leading-relaxed">
-              Interactive 3D flashcards with LaTeX equations, step-by-step proofs, and high-weightage formulas for GATE CS 2027.
+              Formula notes with rendered equations and explanations for GATE CS revision.
             </p>
           </div>
 
@@ -330,9 +326,9 @@ Used to PROVE a language is NOT regular by contradiction (e.g. L = {a^n b^n | n 
 
             <div class="flex items-center justify-between px-4 py-2 rounded-2xl bg-black/5 dark:bg-white/5 border border-black/[0.04] dark:border-white/[0.05] text-[11px] font-bold text-slate-500 dark:text-slate-400">
               <span class="flex items-center gap-1.5">
-                <i class="fa-solid fa-layer-group accent-text"></i> ${filtered.length} of ${allFlashcards.length} Cards
+                <i class="fa-solid fa-layer-group accent-text"></i> <span id="formula-count" role="status">${filtered.length} of ${allFlashcards.length} Cards</span>
               </span>
-              <span class="accent-text">Click card to flip ↺</span>
+              <span class="accent-text">Open an explanation to read more</span>
             </div>
           </div>
         </div>
@@ -353,6 +349,7 @@ Used to PROVE a language is NOT regular by contradiction (e.g. L = {a^n b^n | n 
           ${filtered.map(c => this.renderFormulaCard(c)).join('')}
         </div>
 
+        <p id="formula-search-empty" class="notice" hidden>No formulas match. Try another search or subject.</p>
         <!-- ===== ADD CUSTOM FORMULA MODAL ===== -->
         <div id="custom-formula-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/70 backdrop-blur-md hidden px-4 animate-fade-in">
           <div class="w-full max-w-lg bg-white dark:bg-[#0f1424] text-slate-900 dark:text-white rounded-3xl p-7 shadow-2xl border border-slate-200 dark:border-indigo-500/40 flex flex-col gap-5">
@@ -426,7 +423,7 @@ Used to PROVE a language is NOT regular by contradiction (e.g. L = {a^n b^n | n 
   },
 
   renderFormulaCard(card) {
-    return `<article class="surface formula-card" data-cardid="${h(card.id)}"><header><span>${h(card.subject)}</span><small>${h(card.weightage)}</small></header><p class="muted">${h(card.topic)}</p><h3>${h(card.concept)}</h3><div class="formula-expression katex-render" data-latex="${h(card.mathLatex)}">${h(card.mathLatex)}</div><details><summary>Show explanation</summary><div class="formula-explanation">${h(card.formula)}</div><button class="ui-button copy-formula-btn" data-formula="${encodeURIComponent(card.formula)}">Copy explanation</button></details></article>`;
+    return `<article class="surface formula-card" data-cardid="${h(card.id)}" data-formula-search="${h([card.concept,card.topic,card.formula].join(' ').toLowerCase())}"><header><span>${h(card.subject)}</span><small>${h(card.weightage)}</small></header><p class="muted">${h(card.topic)}</p><h3>${h(card.concept)}</h3><div class="formula-expression katex-render" data-latex="${h(card.mathLatex)}">${h(card.mathLatex)}</div><details><summary>Show explanation</summary><div class="formula-explanation">${h(card.formula)}</div><button class="ui-button copy-formula-btn" data-formula="${encodeURIComponent(card.formula)}">Copy explanation</button></details></article>`;
   },
 
   init() {
@@ -481,23 +478,9 @@ Used to PROVE a language is NOT regular by contradiction (e.g. L = {a^n b^n | n 
       });
     });
 
-    // Search input handler
-    const searchInput = document.getElementById('formula-search');
-    if (searchInput) {
-      searchInput.addEventListener('input', (e) => {
-        const val = e.target.value;
-        const cursor = e.target.selectionStart;
-        this.searchQuery = val;
-        this.refresh();
-        const newSearchInput = document.getElementById('formula-search');
-        if (newSearchInput) {
-          newSearchInput.focus();
-          newSearchInput.setSelectionRange(cursor, cursor);
-        }
-      });
-    }
+    document.getElementById('formula-search')?.addEventListener('input',event=>{this.searchQuery=event.target.value;this.filterCards();});
+    this.filterCards();
 
-    // 3D Card flip handler
     // Copy formula to clipboard handler
     document.querySelectorAll('.copy-formula-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
@@ -510,6 +493,13 @@ Used to PROVE a language is NOT regular by contradiction (e.g. L = {a^n b^n | n 
     });
   },
 
+  filterCards(){
+    const query=this.searchQuery.trim().toLowerCase();let visible=0;
+    const cards=document.querySelectorAll('.formula-card');
+    cards.forEach(card=>{const match=!query||card.dataset.formulaSearch.includes(query);card.hidden=!match;if(match)visible++;});
+    const counter=document.getElementById('formula-count');if(counter)counter.textContent=visible+' of '+cards.length+' Cards';
+    const empty=document.getElementById('formula-search-empty');if(empty)empty.hidden=visible>0;
+  },
   refresh() {
     const mainContainer = document.getElementById('sub-page-container');
     if (mainContainer) {

@@ -1,10 +1,10 @@
+import {invalidateAttemptHistory} from '../utils/attemptCache.js';
 import {readAttemptArchive,writeAttemptArchive,deleteArchivedAttempt,compactAttemptCache} from '../utils/attemptArchive.js';
 import {loadPublishedQuestions,filterQuestionBank} from '../utils/questionBank.js';
 import {readStored} from '../utils/safeStorage.js';
 import {parseExamText,validateStudyQuestion} from '../utils/parseExamText.js';
 // Firebase configuration and mock fallback system
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 import { 
   getAuth, 
   signInWithEmailAndPassword, 
@@ -24,316 +24,8 @@ import {
   where
 } from "firebase/firestore";
 
-// Mock database default data
-const DEFAULT_QUESTIONS = [
-  {
-    id: "q1",
-    subject: "Operating Systems",
-    topic: "Processes & Scheduling",
-    subtopic: "Deadlocks",
-    difficulty: "Medium",
-    marks: 2,
-    year: 2021,
-    question: "Consider a system with 3 processes P1, P2, and P3, and 3 resource types R1, R2, and R3. Each resource type has 2 instances. The allocation matrix and request matrix are given. Is the system in a deadlock state?",
-    options: [
-      "Yes, because there is a cycle containing P1, P2, and P3.",
-      "No, because P2 can finish and release its resources, followed by others.",
-      "Yes, because all resource instances are allocated.",
-      "No, but the system is in an unsafe state."
-    ],
-    correctAnswer: 1,
-    explanation: "Process allocation and requests can be evaluated using Banker's algorithm. P2's request can be satisfied with the currently available resources. Once P2 finishes and releases its allocation, the available resources will be sufficient to satisfy P1 or P3. Hence, the system is not in a deadlock state.",
-    tags: ["Bankers Algorithm", "Resource Allocation Graph"]
-  },
-  {
-    id: "q2",
-    subject: "Operating Systems",
-    topic: "Memory Management",
-    subtopic: "Paging",
-    difficulty: "Hard",
-    marks: 2,
-    year: 2022,
-    question: "A system uses 32-bit virtual addresses and 4KB page size. The page table entry (PTE) size is 4 bytes. If the system uses a multi-level page table, what is the maximum number of levels required to map the virtual address space such that each page table fits in exactly one page frame?",
-    options: [
-      "2 levels",
-      "3 levels",
-      "4 levels",
-      "5 levels"
-    ],
-    type: "MCQ",
-    correctAnswer: 1,
-    explanation: "Page size = 4KB = 2^12 bytes. PTE = 4 bytes = 2^2 bytes.\nMax entries per page table frame = page size / PTE = 4KB / 4B = 1024 = 2^10 entries.\nVirtual Address size = 32 bits.\nOffset size = 12 bits.\nRemaining bits for page directory/page tables = 32 - 12 = 20 bits.\nEach level of page table can resolve at most 10 bits (since each page frame holds 2^10 entries).\nTherefore, we need 20 / 10 = 2 levels. Thus, 2 levels are sufficient.",
-    tags: ["Paging", "Multi-level Page Table"]
-  },
-  {
-    id: "q_msq1",
-    type: "MSQ",
-    subject: "Section 8: Operating System",
-    topic: "Process Management & Concurrency",
-    subtopic: "Deadlock",
-    difficulty: "Medium",
-    marks: 2,
-    year: 2023,
-    question: "Which of the following conditions MUST hold simultaneously for a deadlock to occur in a system? (Select ALL correct options)",
-    options: [
-      "Mutual Exclusion",
-      "Hold and Wait",
-      "Preemption allowed",
-      "Circular Wait"
-    ],
-    correctOptions: [0, 1, 3],
-    explanation: "Coffman's 4 necessary conditions for deadlock are: 1. Mutual Exclusion, 2. Hold and Wait, 3. No Preemption, 4. Circular Wait.",
-    tags: ["Deadlock", "Coffman Conditions"]
-  },
-  {
-    id: "q_nat1",
-    type: "NAT",
-    subject: "Section 1: Engineering Mathematics",
-    topic: "Linear Algebra",
-    subtopic: "Eigenvalues and Eigenvectors",
-    difficulty: "Hard",
-    marks: 2,
-    year: 2024,
-    question: "Consider a 3x3 matrix A with eigenvalues λ1 = 2, λ2 = -3, and λ3 = 5. What is the determinant of matrix A?",
-    options: [],
-    natMin: -30,
-    natMax: -30,
-    correctNat: -30,
-    explanation: "The determinant of a square matrix equals the product of its eigenvalues. Det(A) = 2 * (-3) * 5 = -30.",
-    tags: ["Eigenvalues", "Determinant"]
-  },
-  {
-    id: "q3",
-    subject: "Algorithms",
-    topic: "Graph Algorithms",
-    subtopic: "Dijkstra",
-    difficulty: "Medium",
-    marks: 1,
-    year: 2023,
-    question: "What is the time complexity of Dijkstra's algorithm implemented using a binary heap, where V is the number of vertices and E is the number of edges in a graph?",
-    options: [
-      "O(V^2)",
-      "O(E log V)",
-      "O(V log E)",
-      "O(E + V log V)"
-    ],
-    correctAnswer: 1,
-    explanation: "Dijkstra's algorithm using a binary heap takes O((V + E) log V) time. In a connected graph, E >= V - 1, which simplifies to O(E log V).",
-    tags: ["Dijkstra", "Shortest Path", "Heap"]
-  },
-  {
-    id: "q4",
-    subject: "Engineering Mathematics",
-    topic: "Discrete Mathematics",
-    subtopic: "Graph Theory",
-    difficulty: "Easy",
-    marks: 1,
-    year: 2020,
-    question: "An undirected graph G has 8 vertices. If every vertex has degree 4, how many edges are there in G, and is the graph Eulerian?",
-    options: [
-      "16 edges, Yes",
-      "32 edges, No",
-      "16 edges, No",
-      "8 edges, Yes"
-    ],
-    correctAnswer: 0,
-    explanation: "By Handshaking Lemma, Sum of degrees = 2 * Edges. Thus, 8 * 4 = 32 = 2 * E => E = 16 edges. A connected graph is Eulerian if and only if every vertex has an even degree. Since all vertices have degree 4 (even), it is Eulerian.",
-    tags: ["Degree", "Handshaking Lemma", "Euler Path"]
-  },
-  {
-    id: "q5",
-    subject: "Computer Networks (CN)",
-    topic: "Transport & Application Layer",
-    subtopic: "Congestion Control",
-    difficulty: "Hard",
-    marks: 2,
-    year: 2024,
-    question: "In a TCP congestion control algorithm, suppose the congestion window (cwnd) size is 32 KB. The TCP connection encounters a timeout. What will be the new values of ssthresh and cwnd respectively if the maximum segment size (MSS) is 2 KB?",
-    options: [
-      "ssthresh = 16 KB, cwnd = 2 KB",
-      "ssthresh = 16 KB, cwnd = 16 KB",
-      "ssthresh = 8 KB, cwnd = 2 KB",
-      "ssthresh = 8 KB, cwnd = 8 KB"
-    ],
-    correctAnswer: 0,
-    explanation: "When a timeout occurs, TCP enters Slow Start. The ssthresh is set to half of the current congestion window size: ssthresh = cwnd / 2 = 32 KB / 2 = 16 KB. The cwnd is reset to 1 MSS (which is 2 KB).",
-    tags: ["TCP", "Congestion Control", "Slow Start"]
-  },
-  {
-    id: "q6",
-    subject: "Databases (DBMS)",
-    topic: "Database Tuning",
-    subtopic: "Normalization",
-    difficulty: "Medium",
-    marks: 2,
-    year: 2021,
-    question: "Consider a relation scheme R(A, B, C, D, E, H) with functional dependencies F = {A -> B, BC -> D, E -> C, D -> A}. What is the candidate key of R?",
-    options: [
-      "AE",
-      "AEH",
-      "EH",
-      "ADH"
-    ],
-    correctAnswer: 1,
-    explanation: "Attributes E and H do not appear on the right-hand side of any dependency. Hence, E and H must be part of any candidate key.\nClosure of (AEH)+ = {A, E, H, B, C, D} which contains all attributes. Thus, AEH is the candidate key.",
-    tags: ["Candidate Key", "Closure", "Functional Dependencies"]
-  },
-  {
-    id: "q7",
-    subject: "Compiler Design",
-    topic: "Lexical & Syntax Analysis",
-    subtopic: "Parsing",
-    difficulty: "Easy",
-    marks: 1,
-    year: 2019,
-    question: "Which of the following statements is/are true for LL(1) grammars?\nS1: An LL(1) grammar can be ambiguous.\nS2: LL(1) parser is a top-down parser that uses an explicit stack.",
-    options: [
-      "Only S1 is true",
-      "Only S2 is true",
-      "Both S1 and S2 are true",
-      "Neither S1 nor S2 is true"
-    ],
-    correctAnswer: 1,
-    explanation: "S1 is false: Ambiguous grammars can never be LL(1). S2 is true: LL(1) is a top-down predictive parsing method that uses an explicit stack to guide parsing steps.",
-    tags: ["LL(1) Grammar", "Ambiguity", "Stack Parser"]
-  },
-  {
-    id: "q8",
-    subject: "Computer Organization & Architecture (COA)",
-    topic: "Memory Hierarchy",
-    subtopic: "Cache Memory",
-    difficulty: "Medium",
-    marks: 2,
-    year: 2023,
-    question: "A 2-way set-associative cache memory has a block size of 16 bytes and total size of 64 KB. If the physical address size is 32 bits, what is the size of the Tag field?",
-    options: [
-      "15 bits",
-      "17 bits",
-      "19 bits",
-      "21 bits"
-    ],
-    correctAnswer: 1,
-    explanation: "Offset bits = log2(Block size) = log2(16) = 4 bits.\nNumber of Cache Blocks = Cache size / Block size = 64 KB / 16 B = 4096 blocks.\nNumber of Sets = Blocks / Associativity = 4096 / 2 = 2048 sets.\nSet Index bits = log2(2048) = 11 bits.\nTag bits = Physical Address - Set Index bits - Offset bits = 32 - 11 - 4 = 17 bits.",
-    tags: ["Cache Mapping", "Set Associative", "Tag Bits"]
-  },
-  {
-    id: "q9",
-    subject: "Digital Logic",
-    topic: "Combinational Circuits",
-    subtopic: "Multiplexers",
-    difficulty: "Easy",
-    marks: 1,
-    year: 2018,
-    question: "How many 4-to-1 multiplexers are required to implement an 8-to-1 multiplexer without any additional logic gates?",
-    options: [
-      "2",
-      "3",
-      "4",
-      "5"
-    ],
-    correctAnswer: 1,
-    explanation: "To implement an 8-to-1 multiplexer, we can use two 4-to-1 multiplexers in the first level (handling 8 inputs total). A third 4-to-1 multiplexer is required in the second stage to route the output of the first-level multiplexers based on select lines. Hence, 3 multiplexers are needed.",
-    tags: ["Multiplexer", "Digital Logic Design"]
-  },
-  {
-    id: "q10",
-    subject: "Engineering Mathematics",
-    topic: "Linear Algebra",
-    subtopic: "Eigenvalues",
-    difficulty: "Medium",
-    marks: 1,
-    year: 2022,
-    question: "If a 3x3 matrix A has eigenvalues 1, 2, and 5, what is the trace of matrix A²?",
-    options: [
-      "8",
-      "16",
-      "25",
-      "30"
-    ],
-    correctAnswer: 3,
-    explanation: "Eigenvalues of A² are the squares of the eigenvalues of A. Therefore, eigenvalues of A² are 1² = 1, 2² = 4, and 5² = 25.\nTrace of a matrix is the sum of its eigenvalues. Hence, Trace(A²) = 1 + 4 + 25 = 30.",
-    tags: ["Eigenvalues", "Trace of Matrix", "Linear Algebra"]
-  },
-  {
-    id: "q11",
-    subject: "General Aptitude",
-    topic: "Quantitative Aptitude",
-    subtopic: "Time, Speed & Distance",
-    difficulty: "Medium",
-    marks: 1,
-    year: 2024,
-    question: "A train running at speed S crosses a pole in 10 seconds. If it crosses a platform of length 200m in 20 seconds, what is the length of the train?",
-    options: [
-      "100m",
-      "150m",
-      "200m",
-      "250m"
-    ],
-    correctAnswer: 2,
-    explanation: "Let the length of the train be L. Speed S = L / 10.\nWhen crossing a platform of length 200m: S = (L + 200) / 20.\nEquating speed: L / 10 = (L + 200) / 20 => 2L = L + 200 => L = 200 meters.",
-    tags: ["Aptitude", "Speed Distance", "Quantitative"]
-  },
-  {
-    id: "q12",
-    subject: "Programming & Data Structures",
-    topic: "Programming",
-    subtopic: "Pointers",
-    difficulty: "Medium",
-    marks: 1,
-    year: 2022,
-    question: "What does the following C code print?\n\n#include <stdio.h>\nint main() {\n    int a[] = {10, 20, 30};\n    int *p = a;\n    printf(\"%d\", *(p + 1));\n    return 0;\n}",
-    options: [
-      "10",
-      "20",
-      "30",
-      "Compiler Error"
-    ],
-    correctAnswer: 1,
-    explanation: "a is the base address of the array. p points to a[0]. (p + 1) points to a[1]. Therefore, *(p + 1) is a[1], which is 20.",
-    tags: ["Pointers", "Arrays", "C Programming"]
-  },
-  {
-    id: "q13",
-    subject: "Theory of Computation (TOC)",
-    topic: "Automata & Languages",
-    subtopic: "Regular Expressions",
-    difficulty: "Easy",
-    marks: 1,
-    year: 2023,
-    question: "Which of the following regular expressions represents the set of all binary strings containing an even number of 1s?",
-    options: [
-      "(0*10*10*)*",
-      "0*(10*1)*",
-      "(0+11)*",
-      "(0*+10*1)*"
-    ],
-    correctAnswer: 3,
-    explanation: "The expression (0*+10*1)* generates all strings with an even number of 1s. Any 1 must be paired with another 1, possibly separated by any number of 0s.",
-    tags: ["Regular Expressions", "Even 1s", "Automata"]
-  }
-];
-
-const VALID_SUBJECTS = [
-  "Engineering Mathematics",
-  "Digital Logic",
-  "Computer Organization & Architecture (COA)",
-  "Programming & Data Structures",
-  "Algorithms",
-  "Theory of Computation (TOC)",
-  "Compiler Design",
-  "Operating Systems",
-  "Databases (DBMS)",
-  "Computer Networks (CN)",
-  "General Aptitude"
-];
-
 // Initialize LocalStorage with mock data if empty
 function initializeMockDb() {
-  const currentQs = readStored('gate_questions',[]);
-  const needsAlign = currentQs.some(q => !VALID_SUBJECTS.includes(q.subject));
-  if (currentQs.length < DEFAULT_QUESTIONS.length || needsAlign) {
-    localStorage.setItem('gate_questions', JSON.stringify(DEFAULT_QUESTIONS));
-  }
   if (!localStorage.getItem('gate_users')) {
     localStorage.setItem('gate_users', JSON.stringify({}));
   }
@@ -358,6 +50,7 @@ const firebaseConfig = {
   measurementId: "G-XEDG1BBT2S"
 };
 
+function networkAvailable(){return typeof navigator==='undefined'||navigator.onLine!==false;}
 function boundedWrite(operation,ms=5000){let timer;return Promise.race([operation,new Promise((_,reject)=>{timer=setTimeout(()=>reject(new Error('Cloud sync timed out')),ms);})]).finally(()=>clearTimeout(timer));}
 function personalStorageKey(base){const uid=(useMock?readStored('gate_current_user',null)?.uid:authInstance?.currentUser?.uid)||'anonymous';return base+':'+uid;}
 function attemptStorageKey(){
@@ -368,39 +61,9 @@ let useMock = true;
 let app;
 let authInstance;
 let firestore;
-let analytics;
 
 // Attempt to load standard Firebase library
 // If config has placeholders, fail initialization gracefully to use Mocks
-async function loadExternalQuestions() {
-  try {
-    const res = await fetch('/pyqs/questions.json');
-    if (res.ok) {
-      const externalQs = await res.json();
-      if (Array.isArray(externalQs) && externalQs.length > 0) {
-        const currentQs = readStored('gate_questions',[]);
-        const existingQs = new Set(currentQs.map(q => q.question.trim()));
-        let addedCount = 0;
-        externalQs.forEach(q => {
-          if (!existingQs.has(q.question.trim())) {
-            if (!q.id) {
-              q.id = 'gate_ext_' + Math.random().toString(36).substr(2, 9);
-            }
-            currentQs.push(q);
-            addedCount++;
-          }
-        });
-        if (addedCount > 0) {
-          localStorage.setItem('gate_questions', JSON.stringify(currentQs));
-          console.log(`Loaded and merged ${addedCount} external questions from questions.json`);
-        }
-      }
-    }
-  } catch (err) {
-    console.error("Failed to load external questions:", err);
-  }
-}
-
 const hasRealConfig = firebaseConfig.apiKey && firebaseConfig.apiKey !== "YOUR_API_KEY";
 
 if (hasRealConfig) {
@@ -410,7 +73,8 @@ if (hasRealConfig) {
     authInstance = getAuth(app);
     firestore = getFirestore(app);
     if (typeof window !== "undefined") {
-      analytics = getAnalytics(app);
+      const startAnalytics=()=>import('firebase/analytics').then(async ({getAnalytics,isSupported})=>{if(await isSupported())getAnalytics(app);}).catch(()=>{});
+      if(window.requestIdleCallback)window.requestIdleCallback(startAnalytics,{timeout:3000});else setTimeout(startAnalytics,1500);
     }
     useMock = false;
 
@@ -421,7 +85,6 @@ if (hasRealConfig) {
 } else {
   console.log("Using Mock Database mode (LocalStorage). Please configure Firebase in `src/config/firebase.js` for production.");
   initializeMockDb();
-  loadExternalQuestions();
 }
 
 // Mock Authentication API
@@ -592,16 +255,7 @@ const mockFirestore = {
     })
   },
 
-  async getTopicsBySubject(subject) {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        const list = readStored('gate_questions',[]);
-        const filtered = list.filter(q => q.subject.toLowerCase() === subject.toLowerCase());
-        const topics = [...new Set(filtered.map(q => q.topic))];
-        resolve(topics);
-      }, 200);
-    });
-  },
+  async getTopicsBySubject(subject){const questions=await this.getQuestions({subject});return [...new Set(questions.map(q=>q.topic))];},
 
   async getBookmarks() {
     return new Promise((resolve) => {
@@ -757,7 +411,7 @@ const realFirestore = {
     };
     try{writeLocal('pending');}catch(error){console.warn('Local attempt save failed',error);}
     try{
-      if(firestore&&auth.currentUser?.uid===cleanAttempt.userId){
+      if(firestore&&auth.currentUser?.uid===cleanAttempt.userId&&networkAvailable()){
         await boundedWrite(setDoc(doc(firestore,'attempts',cleanAttempt.id),cleanAttempt));cloudSaved=true;
         await writeAttemptArchive(cleanAttempt.userId,[{...cleanAttempt,syncStatus:'synced'}]);try{writeLocal('synced');}catch{}
       }
@@ -787,7 +441,7 @@ const realFirestore = {
 
     // Load from Firestore if authenticated
     try {
-      if (firestore) {
+      if (firestore&&networkAvailable()) {
         const user = authInstance ? authInstance.currentUser : null;
         if (user) {
           const q = query(collection(firestore, "attempts"), where("userId", "==", user.uid));
@@ -815,6 +469,7 @@ const realFirestore = {
     const uid=auth.currentUser?.uid||'anonymous';
     const archived=await readAttemptArchive(uid,{required:true});
     // Keep the recoverable copy when the remote deletion is rejected or offline.
+    if(firestore&&auth.currentUser&&!networkAvailable())throw Error('You are offline. Reconnect before deleting this attempt.');
     if(firestore&&auth.currentUser){const {deleteDoc}=await import('firebase/firestore');await boundedWrite(deleteDoc(doc(firestore,'attempts',attemptId)));}
     if(archived.some(row=>row.id===attemptId)&&!await deleteArchivedAttempt(uid,attemptId))throw Error('The cloud copy was deleted, but device deletion failed. Retry to remove the retained copy.');
     for(const key of ['gate_attempts:'+uid,'exam-results:'+uid]){
@@ -969,7 +624,11 @@ const realFirestore = {
 
 // Export services depending on configuration mode
 export const auth = useMock ? mockAuth : realAuth;
-export const db = useMock ? mockFirestore : realFirestore;
+const databaseAdapter=useMock?mockFirestore:realFirestore;
+export const db={...databaseAdapter};
+for(const method of ['saveAttempt','deleteAttempt']){
+  db[method]=async function(...args){const uid=auth.currentUser?.uid||'anonymous';invalidateAttemptHistory(uid);try{return await databaseAdapter[method].apply(this,args);}finally{invalidateAttemptHistory(uid);}};
+}
 export const isMockMode = useMock;
 export { firebaseConfig };
 

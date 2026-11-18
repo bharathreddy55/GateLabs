@@ -6,13 +6,13 @@ import vm from 'node:vm';
 import fs from 'node:fs';
 test('actual Firebase adapter isolates accounts, preserves IDs and removes local review copies',async()=>{
  const memory=new Map(),cloud=new Map(),authState={currentUser:{uid:'alice'}};
- let failCloud=false,failLocal=false,archiveBarrier=null;
+ let failCloud=false,failLocal=false,archiveBarrier=null,cloudReads=0;
  const storage={getItem:k=>memory.get(k)??null,setItem:(k,v)=>{if(failLocal)throw Error('quota');memory.set(k,String(v));},removeItem:k=>memory.delete(k)};
  const context=vm.createContext({console:{log(){},warn(){},error(){}},localStorage:storage,setTimeout,clearTimeout,Date,JSON,Math});
- const exports={readAttemptArchive:async()=>[],writeAttemptArchive:async()=>{if(archiveBarrier)await archiveBarrier;return false;},deleteArchivedAttempt:async()=>false,compactAttemptCache:rows=>rows,loadPublishedQuestions:async()=>[],filterQuestionBank:list=>list,readStored:(key,fallback)=>readStored(key,fallback,storage),parseExamText,validateStudyQuestion,initializeApp:()=>({}),getAuth:()=>authState,getAnalytics:()=>({}),getFirestore:()=>({}),
+ const exports={invalidateAttemptHistory(){},readAttemptArchive:async()=>[],writeAttemptArchive:async()=>{if(archiveBarrier)await archiveBarrier;return false;},deleteArchivedAttempt:async()=>false,compactAttemptCache:rows=>rows,loadPublishedQuestions:async()=>[],filterQuestionBank:list=>list,readStored:(key,fallback)=>readStored(key,fallback,storage),parseExamText,validateStudyQuestion,initializeApp:()=>({}),getAuth:()=>authState,getAnalytics:()=>({}),getFirestore:()=>({}),
   collection:(_,name)=>({collection:name}),doc:(_,collection,id)=>({collection,id}),where:(field,op,value)=>({field,value}),query:(base,condition)=>({...base,condition}),
   setDoc:async(ref,data)=>{if(failCloud)throw Error('permission-denied');cloud.set(ref.collection+'/'+ref.id,structuredClone(data));},
-  getDocs:async q=>({forEach:fn=>{for(const [key,value] of cloud)if(key.startsWith(q.collection+'/')&&(!q.condition||value[q.condition.field]===q.condition.value))fn({data:()=>structuredClone(value)});}}),
+  getDocs:async q=>{cloudReads++;return {forEach:fn=>{for(const [key,value] of cloud)if(key.startsWith(q.collection+'/')&&(!q.condition||value[q.condition.field]===q.condition.value))fn({data:()=>structuredClone(value)});}};},
   getDoc:async()=>({exists:()=>false}),deleteDoc:async ref=>cloud.delete(ref.collection+'/'+ref.id),
   signInWithEmailAndPassword(){},createUserWithEmailAndPassword(){},signOut(){},onAuthStateChanged(){},updateProfile(){}};
  const dependency=new vm.SyntheticModule(Object.keys(exports),function(){for(const [k,v]of Object.entries(exports))this.setExport(k,v);},{context});
@@ -46,4 +46,8 @@ test('actual Firebase adapter isolates accounts, preserves IDs and removes local
  assert.ok(JSON.parse(storage.getItem('gate_attempts:alice')).some(row=>row.id==='switch-during-save'));
  assert.ok(!JSON.parse(storage.getItem('gate_attempts:bob')).some(row=>row.id==='switch-during-save'));
  assert.ok(!cloud.has('attempts/switch-during-save'));
+ authState.currentUser={uid:'alice'};context.navigator={onLine:false};const before=cloudReads;
+ const offlineHistory=await db.getAttempts();assert.equal(offlineHistory.syncState,'offline');assert.equal(cloudReads,before);
+ const offlineSave=await db.saveAttempt({...a,id:'known-offline'});assert.equal(offlineSave.persistence.pendingSync,true);assert.ok(!cloud.has('attempts/known-offline'));
+ await assert.rejects(db.deleteAttempt('stable-attempt'),/offline/);
 });

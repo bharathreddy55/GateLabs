@@ -11,7 +11,7 @@ export default defineConfig({
     chunkSizeWarningLimit: 600,
     rolldownOptions: {
       output: {
-        manualChunks(id){if(id.includes('/node_modules/@firebase/')||id.includes('/node_modules/firebase/'))return 'firebase';if(id.includes('/node_modules/chart.js/'))return 'chart';}
+        manualChunks(id){if(id.includes('/@firebase/analytics')||id.includes('/firebase/analytics'))return 'firebase-analytics';if(id.includes('/node_modules/@firebase/')||id.includes('/node_modules/firebase/'))return 'firebase';if(id.includes('/node_modules/chart.js/'))return 'chart';}
       }
     }
   }

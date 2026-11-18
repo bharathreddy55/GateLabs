@@ -46,6 +46,9 @@ try{
  const disclosure=page.locator('.formula-card summary').first();await disclosure.focus();await page.keyboard.press('Enter');assert.equal(await page.locator('.formula-card details').first().getAttribute('open'),'');await page.keyboard.press('Enter');
  assert.ok(await page.locator('.formula-card').first().evaluate(el=>el.offsetHeight<450));
  assert.equal(await page.getByRole('textbox',{name:'Search formulas'}).count(),1);
+ await page.evaluate(()=>{window.__formulaCard=document.querySelector('.formula-card');window.__formulaSearch=document.getElementById('formula-search');window.__formulaCard.querySelector('details').open=true;});
+ await page.locator('#formula-search').fill('no-formula-will-match-9281');assert.equal(await page.locator('.formula-card:visible').count(),0);assert.equal(await page.locator('#formula-search-empty').isVisible(),true);
+ await page.locator('#formula-search').fill('');assert.equal(await page.evaluate(()=>window.__formulaCard===document.querySelector('.formula-card')&&window.__formulaSearch===document.getElementById('formula-search')&&document.activeElement===window.__formulaSearch&&window.__formulaCard.querySelector('details').open),true);
  const result=await page.evaluate(async()=>{
  const {loadPdfDocument}=await import('/src/utils/documentLibraries.js');
  const parts=['%PDF-1.4\n'];const offsets=[0];

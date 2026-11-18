@@ -1,0 +1,21 @@
+{
+  "baseline": {
+    "commit": "ccec49d",
+    "entry": "/assets/index-BbbhXli9.js",
+    "entryBytes": 53472,
+    "firebaseBytes": 589356,
+    "cssBytes": 200698
+  },
+  "after": {
+    "entryBytes": 53877,
+    "firebaseBytes": 579971,
+    "cssBytes": 183906
+  },
+  "historyFixture": {
+    "description": "Three sequential reads with an artificial 100ms cloud delay; not a production latency measurement",
+    "beforeCloudRequests": 3,
+    "afterCloudRequests": 1,
+    "uncachedMs": 323,
+    "cachedMs": 105
+  }
+}
