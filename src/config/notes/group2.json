@@ -74,5 +74,197 @@
         "https://ncert.nic.in/textbook.php"
       ]
     ]
+  },
+  {
+    "id": "mauryan-empire",
+    "title": "Mauryan Empire",
+    "section": "Indian History",
+    "syllabus": [
+      "0-3",
+      "0-4"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f817cb0c3dc7216ce2a96?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "gupta-empire",
+    "title": "Gupta Empire",
+    "section": "Indian History",
+    "syllabus": [
+      "0-3",
+      "0-4"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81d0ba09e6782b60813a?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "harshavardhana",
+    "title": "Harshavardhana and His Achievements",
+    "section": "Indian History",
+    "syllabus": [
+      "0-5"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81f5bf6cef8a38336dfa?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "chola-administration",
+    "title": "Chola Administrative System",
+    "section": "Indian History",
+    "syllabus": [
+      "0-6"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81858101fe9003d8424b?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "delhi-sultanate",
+    "title": "Delhi Sultanate",
+    "section": "Indian History",
+    "syllabus": [
+      "0-7"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81e9811bf164d2d2fafa?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "mughal-empire",
+    "title": "Mughal Empire",
+    "section": "Indian History",
+    "syllabus": [
+      "0-8"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f8112b58ac29eb5745ec2?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "bhakti-movements",
+    "title": "Bhakti Movements",
+    "section": "Indian History",
+    "syllabus": [
+      "0-9"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f817bbc65ca8f0ca708b9?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "sufi-movements",
+    "title": "Sufi Movements",
+    "section": "Indian History",
+    "syllabus": [
+      "0-9"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f814d8cf3c14b68427cce?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "shivaji-marathas",
+    "title": "Shivaji and the Rise of the Marathas",
+    "section": "Indian History",
+    "syllabus": [
+      "0-10"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81159722dfdfe01d6ef2?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "european-arrival",
+    "title": "Advent of Europeans",
+    "section": "Indian History",
+    "syllabus": [
+      "0-11"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f815189cbe2fca63b2f90?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
   }
 ]
