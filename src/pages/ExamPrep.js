@@ -3,7 +3,7 @@ import {getAttemptRecords} from '../utils/attemptRepository.js';
 import { auth } from '../config/firebase';
 import { EXAMS } from '../config/exams.js';
 import { EXAM_CATALOG, icon } from '../config/navigation.js';
-import { countdownCard, bindCountdowns } from '../components/ExamCountdown.js';
+import { countdownCard, bindCountdowns, stopCountdowns } from '../components/ExamCountdown.js';
 import { escapeHtml as h, validatePaper } from '../utils/examEngine.js';
 import { parseExamText } from '../utils/parseExamText.js';
 import { MockTest } from './ExamRunner.js';
@@ -33,6 +33,7 @@ function read(key,fallback=[]){return readStored(key,fallback);}
 function empty(title,body,link=''){return `<div class="empty-state">${icon('file')}<h3>${h(title)}</h3><p>${h(body)}</p>${link}</div>`;}
 export function createExamPrep(examId){return {
   papers:[],activeTab:'overview',loadError:null,
+  cleanup(){stopCountdowns();},
   key(kind){return `exam-${kind}:${auth.currentUser?.uid}:${examId}`;},
   async load(){if(this.loaded)return;if(!this.loading)this.loading=this.loadLibrary().finally(()=>this.loading=null);return this.loading;},
   async loadLibrary(){

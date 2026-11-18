@@ -61,5 +61,8 @@ try{
  await page.locator('[data-open-countdown-target]').click();await page.locator('[data-target]').fill((new Date().getUTCFullYear()+1)+'-01-15');await page.locator('[data-target]').dispatchEvent('change');
  assert.equal(await page.locator('.countdown-badge').textContent(),'Personal target');assert.match(await page.locator('.countdown-date').innerText(),/Personal practice target/);assert.match(await page.locator('.countdown-number').innerText(),/^\d+$/);
  await page.locator('[data-clear-target]').click();assert.equal(await page.locator('.countdown-badge').textContent(),'Schedule pending');
+ await go('gate');const seconds=await page.locator('[data-clock-value="seconds"]').textContent();
+ await page.waitForFunction(previous=>document.querySelector('[data-clock-value="seconds"]').textContent!==previous,seconds);
+ assert.equal(await page.locator('[data-clock-value]').count(),4);assert.equal(await page.locator('[role="timer"]').getAttribute('aria-live'),'off');
  assert.deepEqual(errors,[]);console.log('PASS 15-route smoke, About shell, personal notes, disconnected AI, 320px keyboard tabs and live accent tokens');
 }finally{await browser.close();await vite.close();}

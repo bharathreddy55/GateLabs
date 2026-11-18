@@ -46,6 +46,7 @@ try{
    await page.locator('[data-panel]:visible').waitFor();
    assert.equal(await page.locator('[data-panel]:visible').count(),1);
    assert.equal(await page.locator('.countdown-spotlight').isVisible(),true);
+   assert.equal(await page.locator('[data-clock-value]').count(),4);
    if(route==='gate'){assert.match(await page.locator('.countdown-date').innerText(),/2027-02-06/);assert.equal(await page.locator('.countdown-badge').textContent(),'Official exam window');assert.notEqual(await page.locator('.countdown-number').innerText(),'—');assert.match(await page.locator('.countdown-hint').innerText(),/CS-specific/);}
    assert.ok(await page.locator('.countdown-spotlight').evaluate(el=>el.getBoundingClientRect().top<document.querySelector('.prep-tab-strip').getBoundingClientRect().top),'Countdown must precede the tabs');
    for(const tab of ['mocks','syllabus','papers','progress','overview']){

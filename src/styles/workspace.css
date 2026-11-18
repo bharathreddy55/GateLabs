@@ -66,3 +66,8 @@ body,.app-shell,.landing-workspace{font-family:Inter,-apple-system,BlinkMacSyste
 .countdown-overview-wide{grid-template-columns:minmax(0,1fr)}
 .exam-workspace .countdown-action{background:transparent;border:0;padding:0;color:#304dc2}
 .dark .exam-workspace .countdown-action{color:#c3d1ff}
+/* Live countdown: stable digits and four labelled units at every screen width. */
+.countdown-time.countdown-clock{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));width:360px;min-width:300px;max-width:100%;gap:8px;padding:20px 18px}
+.countdown-unit{display:flex;flex-direction:column;align-items:center;gap:7px;min-width:0}.countdown-clock .countdown-value{font-size:44px;font-weight:800;line-height:1.1;letter-spacing:-1.5px;font-variant-numeric:tabular-nums}.countdown-unit>span{font-size:12px;font-weight:600;letter-spacing:.2px}.countdown-clock>.countdown-clock-caption{grid-column:1/-1;font-size:12px;margin-top:8px;text-align:center}
+@media(max-width:800px){.countdown-feature{flex-direction:column;align-items:stretch;gap:20px}.countdown-time.countdown-clock{width:100%;min-width:0}.countdown-clock .countdown-value{font-size:38px}.countdown-copy{width:100%}}
+@media(max-width:400px){.countdown-time.countdown-clock{padding:16px 10px;gap:6px}.countdown-clock .countdown-value{font-size:30px;letter-spacing:-1px}.countdown-unit>span{font-size:11px}}
