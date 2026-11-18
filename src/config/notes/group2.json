@@ -726,5 +726,281 @@
         "https://samagrashiksha.ap.gov.in/downloadBooks/Social%20Books/6_Soical_SEM-1_Textbook.pdf/6"
       ]
     ]
+  },
+  {
+    "id": "natural-resources",
+    "title": "Natural Resources and Their Distribution",
+    "section": "Geography",
+    "syllabus": [
+      "1-7"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f8172bc83f9514fe8e9cb?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ],
+      [
+        "Census of India tables",
+        "https://www.censusindia.gov.in/census.website/data/census-tables"
+      ]
+    ]
+  },
+  {
+    "id": "agriculture-agro-industries",
+    "title": "Agriculture and Agro-Based Activities",
+    "section": "Geography",
+    "syllabus": [
+      "1-8"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f8154be7ade9bee922b93?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ],
+      [
+        "Census of India tables",
+        "https://www.censusindia.gov.in/census.website/data/census-tables"
+      ]
+    ]
+  },
+  {
+    "id": "industrial-regions",
+    "title": "Industries and Industrial Regions",
+    "section": "Geography",
+    "syllabus": [
+      "1-9"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81e6aca8f9e0b47e6b18?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ],
+      [
+        "Census of India tables",
+        "https://www.censusindia.gov.in/census.website/data/census-tables"
+      ]
+    ]
+  },
+  {
+    "id": "transport-networks",
+    "title": "Transport Networks",
+    "section": "Geography",
+    "syllabus": [
+      "1-10"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81b6ad1cee5eafe3638b?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ],
+      [
+        "Census of India tables",
+        "https://www.censusindia.gov.in/census.website/data/census-tables"
+      ]
+    ]
+  },
+  {
+    "id": "communication-networks",
+    "title": "Communication Networks",
+    "section": "Geography",
+    "syllabus": [
+      "1-10"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f8174b5fbc59dc13d1894?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ],
+      [
+        "Census of India tables",
+        "https://www.censusindia.gov.in/census.website/data/census-tables"
+      ]
+    ]
+  },
+  {
+    "id": "tourism-geography",
+    "title": "Tourism Geography",
+    "section": "Geography",
+    "syllabus": [
+      "1-10"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f8135ae2dd4ca06c757ef?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ],
+      [
+        "Census of India tables",
+        "https://www.censusindia.gov.in/census.website/data/census-tables"
+      ]
+    ]
+  },
+  {
+    "id": "trade-geography",
+    "title": "Trade Geography",
+    "section": "Geography",
+    "syllabus": [
+      "1-10"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f8199b2b3f64c81f992c9?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ],
+      [
+        "Census of India tables",
+        "https://www.censusindia.gov.in/census.website/data/census-tables"
+      ]
+    ]
+  },
+  {
+    "id": "human-development",
+    "title": "Human Development",
+    "section": "Geography",
+    "syllabus": [
+      "1-11"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81daa8efd48ffa8b3a95?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ],
+      [
+        "Census of India tables",
+        "https://www.censusindia.gov.in/census.website/data/census-tables"
+      ]
+    ]
+  },
+  {
+    "id": "demographics",
+    "title": "Demographics of India and Andhra Pradesh",
+    "section": "Geography",
+    "syllabus": [
+      "1-11"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81b7a87df6a4263c9fa1?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ],
+      [
+        "Census of India tables",
+        "https://www.censusindia.gov.in/census.website/data/census-tables"
+      ]
+    ]
+  },
+  {
+    "id": "urbanisation",
+    "title": "Urbanisation and Settlements",
+    "section": "Geography",
+    "syllabus": [
+      "1-11"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f815f9174c3492bc3043a?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ],
+      [
+        "Census of India tables",
+        "https://www.censusindia.gov.in/census.website/data/census-tables"
+      ]
+    ]
+  },
+  {
+    "id": "migration",
+    "title": "Migration",
+    "section": "Geography",
+    "syllabus": [
+      "1-11"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f816ca8f3d3221278d631?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ],
+      [
+        "Census of India tables",
+        "https://www.censusindia.gov.in/census.website/data/census-tables"
+      ]
+    ]
+  },
+  {
+    "id": "population-groups",
+    "title": "Racial, Tribal, Religious and Linguistic Groups",
+    "section": "Geography",
+    "syllabus": [
+      "1-12"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f813ca187e2aa53900306?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ],
+      [
+        "Census of India tables",
+        "https://www.censusindia.gov.in/census.website/data/census-tables"
+      ]
+    ]
   }
 ]

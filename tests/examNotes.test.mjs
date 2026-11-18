@@ -28,11 +28,13 @@ for (const file of readdirSync(catalogs).filter(name => name.endsWith('.json')))
   });
 
   if (exam === 'group2') {
-    test('APPSC Indian History notes cover all current checklist entries', () => {
-      const [, , topics] = EXAMS.group2.sections[0];
-      const covered = new Set(notes.filter(note => note.section === 'Indian History')
-        .flatMap(note => note.syllabus));
-      assert.deepEqual(covered, new Set(topics.split(';').map((_, index) => `0-${index}`)));
-    });
+    for (const sectionIndex of [0, 1]) {
+      const [section, , topics] = EXAMS.group2.sections[sectionIndex];
+      test(`APPSC ${section} notes cover all current checklist entries`, () => {
+        const covered = new Set(notes.filter(note => note.section === section)
+          .flatMap(note => note.syllabus));
+        assert.deepEqual(covered, new Set(topics.split(';').map((_, index) => `${sectionIndex}-${index}`)));
+      });
+    }
   }
 }
