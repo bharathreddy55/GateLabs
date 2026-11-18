@@ -25,5 +25,6 @@ Browser checks use declared Playwright tooling. See package scripts and the CI w
 - [Content corrections and provenance](docs/content-corrections.md)
 - [Protected AI proxy configuration](docs/ai-proxy-configuration.md)
 - [QA review](docs/qa-review-2026-11-17.md)
+- [QA remediation and remaining release checks](docs/qa-resolution-2026-11-18.md)
 
 Model papers and memory-based reconstructions are labelled. Validation checks structure and marking rules; educational accuracy, current notification rules and syllabus coverage require independent review. User target dates are not official schedules.
