@@ -1595,5 +1595,499 @@
         "https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=2335961&lang=2&reg=48"
       ]
     ]
+  },
+  {
+    "id": "deductive-reasoning",
+    "title": "Deductive Reasoning",
+    "section": "Mental Ability",
+    "syllabus": [
+      "4-0"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81e8b338d66156592ea0?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT mathematics textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "inductive-reasoning",
+    "title": "Inductive Reasoning",
+    "section": "Mental Ability",
+    "syllabus": [
+      "4-0"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81feb631f4049c574ffa?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT mathematics textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "abductive-reasoning",
+    "title": "Abductive Reasoning",
+    "section": "Mental Ability",
+    "syllabus": [
+      "4-0"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81f2a9b9c07e22e39937?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT mathematics textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "statement-assumptions",
+    "title": "Statements and Assumptions",
+    "section": "Mental Ability",
+    "syllabus": [
+      "4-1"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81a1b938d7e5d889826a?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT mathematics textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "statement-arguments",
+    "title": "Statements and Arguments",
+    "section": "Mental Ability",
+    "syllabus": [
+      "4-1"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f814f84fcc63c5547a3f9?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT mathematics textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "statement-conclusions",
+    "title": "Statements and Conclusions",
+    "section": "Mental Ability",
+    "syllabus": [
+      "4-1"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81fb9554f3a5a7741d43?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT mathematics textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "course-of-action",
+    "title": "Statements and Courses of Action",
+    "section": "Mental Ability",
+    "syllabus": [
+      "4-1"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f816e9aaecfba249e020e?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT mathematics textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "number-series",
+    "title": "Number Series",
+    "section": "Mental Ability",
+    "syllabus": [
+      "4-2"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f815abc63c2b54ba2d7b4?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT mathematics textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "letter-series",
+    "title": "Letter Series",
+    "section": "Mental Ability",
+    "syllabus": [
+      "4-2"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f816782f9f3e8a48db485?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT mathematics textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "odd-one-out",
+    "title": "Odd One Out",
+    "section": "Mental Ability",
+    "syllabus": [
+      "4-3"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81f18ad6e0b70f55ebf3?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT mathematics textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "coding-decoding",
+    "title": "Coding and Decoding",
+    "section": "Mental Ability",
+    "syllabus": [
+      "4-4"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81538b08d704373cc62f?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT mathematics textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "family-relations",
+    "title": "Problems Relating to Relations",
+    "section": "Mental Ability",
+    "syllabus": [
+      "4-5"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81e29fc3f6ed6a9a5beb?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT mathematics textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "shapes-subdivisions",
+    "title": "Shapes and Their Subdivisions",
+    "section": "Mental Ability",
+    "syllabus": [
+      "4-6"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81099a81e5ff1ec46fed?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT mathematics textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "number-system",
+    "title": "Number Systems",
+    "section": "Mental Ability",
+    "syllabus": [
+      "4-7"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81ae91c6e5c1de905ded?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT mathematics textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "order-of-magnitude",
+    "title": "Order of Magnitude and Estimation",
+    "section": "Mental Ability",
+    "syllabus": [
+      "4-7"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f8179bfa5f95b8925d69b?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT mathematics textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "averages",
+    "title": "Averages",
+    "section": "Mental Ability",
+    "syllabus": [
+      "4-7"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81818047e4a197fda12e?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT mathematics textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "ratio-proportion",
+    "title": "Ratio and Proportion",
+    "section": "Mental Ability",
+    "syllabus": [
+      "4-7"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f8183a25cd72fc3a7299a?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT mathematics textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "percentages",
+    "title": "Percentages",
+    "section": "Mental Ability",
+    "syllabus": [
+      "4-7"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f818880b0c45ba945e197?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT mathematics textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "simple-interest",
+    "title": "Simple Interest",
+    "section": "Mental Ability",
+    "syllabus": [
+      "4-7"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81fba0e6cfd5875ed7bf?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT mathematics textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "compound-interest",
+    "title": "Compound Interest",
+    "section": "Mental Ability",
+    "syllabus": [
+      "4-7"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81aca35cf0ed02482ef2?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT mathematics textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "time-and-work",
+    "title": "Time and Work",
+    "section": "Mental Ability",
+    "syllabus": [
+      "4-7"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81879fbee7f7d9dc2508?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT mathematics textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "time-and-distance",
+    "title": "Time, Speed and Distance",
+    "section": "Mental Ability",
+    "syllabus": [
+      "4-7"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f8197829ac5fcecedbe59?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT mathematics textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "data-tables",
+    "title": "Data Analysis from Tables",
+    "section": "Mental Ability",
+    "syllabus": [
+      "4-8"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f8165892ff2937435a7d8?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT mathematics textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "data-bar-charts",
+    "title": "Data Analysis from Bar Charts",
+    "section": "Mental Ability",
+    "syllabus": [
+      "4-8"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f817ba705ee5188910c23?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT mathematics textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "data-line-graphs",
+    "title": "Data Analysis from Line Graphs",
+    "section": "Mental Ability",
+    "syllabus": [
+      "4-8"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f815b9bd6dc4a89e1bfd2?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT mathematics textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "data-pie-charts",
+    "title": "Data Analysis from Pie Charts",
+    "section": "Mental Ability",
+    "syllabus": [
+      "4-8"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f8147b5fff65e9e49fd95?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT mathematics textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
   }
 ]
