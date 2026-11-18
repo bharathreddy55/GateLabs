@@ -266,5 +266,119 @@
         "https://ncert.nic.in/textbook.php"
       ]
     ]
+  },
+  {
+    "id": "british-consolidation",
+    "title": "Rise and Consolidation of British Power",
+    "section": "Indian History",
+    "syllabus": [
+      "0-12"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81b588efc91e5b528b0b?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "revolt-1857",
+    "title": "The Revolt of 1857 and Its Impact",
+    "section": "Indian History",
+    "syllabus": [
+      "0-13"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81cc8d47dbf049a5f306?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "colonial-administration",
+    "title": "Colonial Administration, Society and Culture",
+    "section": "Indian History",
+    "syllabus": [
+      "0-14"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81fdad9ef41b86c1a554?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "social-religious-reform",
+    "title": "Social and Religious Reform in the 19th and 20th Centuries",
+    "section": "Indian History",
+    "syllabus": [
+      "0-14"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f8179b5b3c1338e2a45f0?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "national-movement",
+    "title": "Indian National Movement",
+    "section": "Indian History",
+    "syllabus": [
+      "0-15"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81ce98ede62e2a314add?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "post-independence-reorganisation",
+    "title": "Post-Independence Integration and Reorganisation",
+    "section": "Indian History",
+    "syllabus": [
+      "0-16"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81f8a3bcd5a31cae78dc?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
   }
 ]
