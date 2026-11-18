@@ -908,5 +908,252 @@
         "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
       ]
     ]
+  },
+  {
+    "id": "regex-finite-automata",
+    "title": "Regular Expressions and Finite Automata",
+    "section": "Theory of Computation",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81daa667eb2754a70eb7?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "regular-languages-pumping",
+    "title": "Regular Languages and the Pumping Lemma",
+    "section": "Theory of Computation",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f818a980cf40a03afb94d?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "cfg-pda",
+    "title": "Context-Free Grammars and Pushdown Automata",
+    "section": "Theory of Computation",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81638a38c8f837b0dc9d?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "context-free-pumping",
+    "title": "Context-Free Languages and Pumping",
+    "section": "Theory of Computation",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81dda188daaea3207ce3?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "turing-undecidability",
+    "title": "Turing Machines and Undecidability",
+    "section": "Theory of Computation",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81aeae08e17e94f6cf1c?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "lexical-analysis",
+    "title": "Lexical Analysis",
+    "section": "Compiler Design",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81a09350ea5da8006278?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "parsing",
+    "title": "Parsing — FIRST, FOLLOW, LL and LR",
+    "section": "Compiler Design",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81a4bcd7f26f65325ae6?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "syntax-directed-translation",
+    "title": "Syntax-Directed Translation",
+    "section": "Compiler Design",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81dcb610ee7d791b4d9d?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "runtime-environments",
+    "title": "Runtime Environments and Activation Records",
+    "section": "Compiler Design",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f819c9a32e0c112fd11d1?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "intermediate-code",
+    "title": "Intermediate Code Generation",
+    "section": "Compiler Design",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f812e8526f7721575a14e?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "compiler-optimisation",
+    "title": "Local Optimisation and Data-Flow Analysis",
+    "section": "Compiler Design",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f8128bfa3e297cccdde2e?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "syscalls-processes-threads",
+    "title": "System Calls, Processes and Threads",
+    "section": "Operating System",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f818d8710dabf6712e65e?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "ipc",
+    "title": "Inter-Process Communication",
+    "section": "Operating System",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f814e86f0d6888dce16e7?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "os-synchronization",
+    "title": "Concurrency and Synchronization",
+    "section": "Operating System",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81a2a82ee09972c13d26?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "deadlock",
+    "title": "Deadlock",
+    "section": "Operating System",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81758562dba845ef2a91?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "cpu-io-scheduling",
+    "title": "CPU and I/O Scheduling",
+    "section": "Operating System",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f813f985dc4c5dbb51d4c?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "memory-management",
+    "title": "Memory Management and Address Translation",
+    "section": "Operating System",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f8198888fdea9cbe5f1c8?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "virtual-memory",
+    "title": "Virtual Memory and Page Replacement",
+    "section": "Operating System",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f813c9d64d9c4895d3b07?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "file-systems",
+    "title": "File Systems",
+    "section": "Operating System",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f819ea43cc0c92c9496c4?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
   }
 ]
