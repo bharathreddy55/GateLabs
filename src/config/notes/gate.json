@@ -1155,5 +1155,239 @@
         "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
       ]
     ]
+  },
+  {
+    "id": "er-model",
+    "title": "Entity–Relationship Modelling",
+    "section": "Databases",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f816bbe2ae857444a86e0?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "relational-model-constraints",
+    "title": "Relational Model and Integrity Constraints",
+    "section": "Databases",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81e4b21ce4909fc4adc1?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "relational-algebra",
+    "title": "Relational Algebra",
+    "section": "Databases",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f812ba03fd247c781c4e2?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "tuple-calculus",
+    "title": "Tuple Relational Calculus",
+    "section": "Databases",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81bfac00fa5bbd34b515?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "sql",
+    "title": "SQL Queries, Grouping and Nulls",
+    "section": "Databases",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81cf9661f60d02df23d7?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "normal-forms",
+    "title": "Functional Dependencies and Normal Forms",
+    "section": "Databases",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f8144a157f60436b2ba19?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "files-index-btrees",
+    "title": "File Organisation and B/B+ Tree Indexes",
+    "section": "Databases",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81808317ee54d22b89c6?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "transactions-concurrency",
+    "title": "Transactions, Serializability and Concurrency Control",
+    "section": "Databases",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81d08ecadc08028c1117?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "network-layering-switching",
+    "title": "Layering and Network Switching",
+    "section": "Computer Networks",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81d782d2defcf0b149f0?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "network-performance",
+    "title": "Network Performance Metrics",
+    "section": "Computer Networks",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81aca323ec47cf64133a?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "link-error-detection",
+    "title": "Data Link Error Detection",
+    "section": "Computer Networks",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f812fae3bc2771f21cf86?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "mac-ethernet",
+    "title": "Medium Access Control and Ethernet",
+    "section": "Computer Networks",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81c7b4ede1a57bd27260?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "routing",
+    "title": "Distance-Vector and Link-State Routing",
+    "section": "Computer Networks",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f8163adc7cfe93d3ae629?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "ipv4-fragmentation",
+    "title": "IPv4 Fragmentation",
+    "section": "Computer Networks",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f810e845ce5db491a1614?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "cidr-nat",
+    "title": "IPv4 CIDR and Network Address Translation",
+    "section": "Computer Networks",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81a19470fa57ef5ce2e1?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "tcp-control",
+    "title": "TCP Flow Control and Congestion Control",
+    "section": "Computer Networks",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81f892bfe03d9a33df59?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "socket-api",
+    "title": "Socket API",
+    "section": "Computer Networks",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f819d9b0dc13ad164852d?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "dns-http",
+    "title": "DNS and HTTP",
+    "section": "Computer Networks",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81ac9392e0712cfa6188?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
   }
 ]
