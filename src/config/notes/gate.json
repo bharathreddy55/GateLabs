@@ -1,0 +1,535 @@
+[
+  {
+    "id": "english-reading",
+    "title": "English Reading Comprehension",
+    "section": "General Aptitude",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81f4864fd89da1882071?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 General Aptitude syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/GA_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "english-vocabulary",
+    "title": "English Vocabulary and Word Formation",
+    "section": "General Aptitude",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f8196888fda7a8864b585?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 General Aptitude syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/GA_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "english-parts-of-speech",
+    "title": "English Parts of Speech, Articles and Agreement",
+    "section": "General Aptitude",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f814ab21dfd6cbf08c93b?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 General Aptitude syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/GA_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "english-tense-voice",
+    "title": "Tense, Aspect and Voice",
+    "section": "General Aptitude",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f810d8a46f352b3ff99e4?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 General Aptitude syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/GA_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "english-linkers-comparison",
+    "title": "Comparison, Cohesion and Language Functions",
+    "section": "General Aptitude",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f816b94b6db28eba41f85?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 General Aptitude syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/GA_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "paragraph-order",
+    "title": "Paragraph Ordering and Sentence Connectors",
+    "section": "General Aptitude",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f813f9b02c860b577ec91?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 General Aptitude syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/GA_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "deductive-reasoning",
+    "title": "Deductive Reasoning",
+    "section": "General Aptitude",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f813c90f0e390e9843334?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 General Aptitude syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/GA_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "inductive-reasoning",
+    "title": "Inductive Reasoning",
+    "section": "General Aptitude",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81ddbe1ed21177a830bd?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 General Aptitude syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/GA_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "ratio-proportion",
+    "title": "Ratio and Proportion",
+    "section": "General Aptitude",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f812991e2fda221c1774c?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 General Aptitude syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/GA_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "percentages",
+    "title": "Percentages",
+    "section": "General Aptitude",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f8179a389e5724f38c521?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 General Aptitude syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/GA_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "number-series",
+    "title": "Number Series",
+    "section": "General Aptitude",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f819bb193ed456f88eb60?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 General Aptitude syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/GA_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "geometry",
+    "title": "Plane Geometry",
+    "section": "General Aptitude",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81d9a4e6cfd79e64bd34?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 General Aptitude syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/GA_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "areas-volumes",
+    "title": "Areas and Volumes",
+    "section": "General Aptitude",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81598128f46d4e9a4505?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 General Aptitude syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/GA_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "basic-statistics",
+    "title": "Basic Statistics",
+    "section": "General Aptitude",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f8172855fcc24cf3a01be?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 General Aptitude syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/GA_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "basic-probability",
+    "title": "Basic Probability",
+    "section": "General Aptitude",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f815798faf86af659b266?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 General Aptitude syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/GA_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "data-tables",
+    "title": "Data Analysis from Tables",
+    "section": "General Aptitude",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81b3a5d5d5878fbfb42c?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 General Aptitude syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/GA_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "data-bar-charts",
+    "title": "Data Analysis from Bar Charts",
+    "section": "General Aptitude",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f811d87aad11fc5193b8b?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 General Aptitude syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/GA_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "data-line-graphs",
+    "title": "Data Analysis from Line Graphs",
+    "section": "General Aptitude",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81d382ddfbc2e8bddd2c?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 General Aptitude syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/GA_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "data-pie-charts",
+    "title": "Data Analysis from Pie Charts",
+    "section": "General Aptitude",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f813ea4d6c25cf93e519e?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 General Aptitude syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/GA_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "scatter-plots",
+    "title": "Scatter Plots",
+    "section": "General Aptitude",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f816290cef401fd78435c?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 General Aptitude syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/GA_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "analogy",
+    "title": "Analogies",
+    "section": "General Aptitude",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f813293bbff74ee41d7ed?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 General Aptitude syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/GA_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "plots-and-maps",
+    "title": "Reading 2D and 3D Plots and Maps",
+    "section": "General Aptitude",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81f68758e4237e48b2f3?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 General Aptitude syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/GA_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "exponents-logarithms",
+    "title": "Powers, Exponents and Logarithms",
+    "section": "General Aptitude",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81c59349eafce0ec22f3?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 General Aptitude syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/GA_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "aptitude-counting",
+    "title": "Permutations and Combinations",
+    "section": "General Aptitude",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81a38b4fef4096d854b5?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 General Aptitude syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/GA_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "spatial-transformations",
+    "title": "Spatial Transformations and Patterns",
+    "section": "General Aptitude",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f816bbc5add35568fea60?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 General Aptitude syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/GA_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "propositional-logic",
+    "title": "Propositional Logic",
+    "section": "Engineering Mathematics",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81088da3cf0b7db86dc2?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "first-order-logic",
+    "title": "First-Order Logic",
+    "section": "Engineering Mathematics",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81b188ddc09bfe532360?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "sets-relations-functions",
+    "title": "Sets, Relations and Functions",
+    "section": "Engineering Mathematics",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81b2baddfcad79d137b0?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "partial-orders-lattices",
+    "title": "Partial Orders and Lattices",
+    "section": "Engineering Mathematics",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f8137ba31eb0e23586d8f?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "monoids-groups",
+    "title": "Monoids and Groups",
+    "section": "Engineering Mathematics",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81a0ab6af08fcba98a3b?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "connectivity-matching-colouring",
+    "title": "Graph Connectivity, Matching and Colouring",
+    "section": "Engineering Mathematics",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f8144acd9cb0981e93bd1?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "combinatorics-counting",
+    "title": "Combinatorics and Counting",
+    "section": "Engineering Mathematics",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81469b79ff8c1383310e?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "recurrences-generating-functions",
+    "title": "Recurrences and Generating Functions",
+    "section": "Engineering Mathematics",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81f2a3dcf0f108aad25c?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "matrix-linear-systems",
+    "title": "Matrices, Determinants, LU and Linear Systems",
+    "section": "Engineering Mathematics",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f8149a541c9351b559fdb?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "eigenvalues-eigenvectors",
+    "title": "Eigenvalues and Eigenvectors",
+    "section": "Engineering Mathematics",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f812ea1c6c3f89d93003c?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "limits-continuity-differentiability",
+    "title": "Limits, Continuity and Differentiability",
+    "section": "Engineering Mathematics",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81cba8a7f672a7a1e162?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "optimisation-mean-value",
+    "title": "Maxima, Minima and the Mean Value Theorem",
+    "section": "Engineering Mathematics",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f8119a4bdc892d7951ce6?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "integration",
+    "title": "Integration",
+    "section": "Engineering Mathematics",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f8119ac78ea0e04c69bb8?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "random-variables-statistics",
+    "title": "Random Variables and Descriptive Statistics",
+    "section": "Engineering Mathematics",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f818e921bf2d2a54783de?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "probability-distributions",
+    "title": "Uniform, Normal, Exponential, Poisson and Binomial Distributions",
+    "section": "Engineering Mathematics",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81d19600e44f5f46af69?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "conditional-probability-bayes",
+    "title": "Conditional Probability and Bayes' Theorem",
+    "section": "Engineering Mathematics",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f8146859ec069470eb818?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  }
+]
