@@ -1002,5 +1002,545 @@
         "https://www.censusindia.gov.in/census.website/data/census-tables"
       ]
     ]
+  },
+  {
+    "id": "family",
+    "title": "Family and Household",
+    "section": "Indian Society",
+    "syllabus": [
+      "2-0"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f814eaef2c6919b80cb21?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT, Understanding Social Institutions",
+        "https://ncert.nic.in/textbook/pdf/kesy103.pdf"
+      ],
+      [
+        "Constitution of India",
+        "https://www.legislative.gov.in/static/uploads/2025/07/359f70a69695affb9d72f8393102bd2e.pdf"
+      ],
+      [
+        "India Code statutory texts",
+        "https://www.indiacode.nic.in/"
+      ]
+    ]
+  },
+  {
+    "id": "marriage",
+    "title": "Marriage as a Social Institution",
+    "section": "Indian Society",
+    "syllabus": [
+      "2-0"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81fb8df7e928a1c793e2?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT, Understanding Social Institutions",
+        "https://ncert.nic.in/textbook/pdf/kesy103.pdf"
+      ],
+      [
+        "Constitution of India",
+        "https://www.legislative.gov.in/static/uploads/2025/07/359f70a69695affb9d72f8393102bd2e.pdf"
+      ],
+      [
+        "India Code statutory texts",
+        "https://www.indiacode.nic.in/"
+      ]
+    ]
+  },
+  {
+    "id": "kinship",
+    "title": "Kinship, Descent and Inheritance",
+    "section": "Indian Society",
+    "syllabus": [
+      "2-0"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81a3b80ed1e055cf99fb?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT, Understanding Social Institutions",
+        "https://ncert.nic.in/textbook/pdf/kesy103.pdf"
+      ],
+      [
+        "Constitution of India",
+        "https://www.legislative.gov.in/static/uploads/2025/07/359f70a69695affb9d72f8393102bd2e.pdf"
+      ],
+      [
+        "India Code statutory texts",
+        "https://www.indiacode.nic.in/"
+      ]
+    ]
+  },
+  {
+    "id": "caste",
+    "title": "Caste and Social Stratification",
+    "section": "Indian Society",
+    "syllabus": [
+      "2-1"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f818995ccf1e8ae195e42?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT, Understanding Social Institutions",
+        "https://ncert.nic.in/textbook/pdf/kesy103.pdf"
+      ],
+      [
+        "Constitution of India",
+        "https://www.legislative.gov.in/static/uploads/2025/07/359f70a69695affb9d72f8393102bd2e.pdf"
+      ],
+      [
+        "India Code statutory texts",
+        "https://www.indiacode.nic.in/"
+      ]
+    ]
+  },
+  {
+    "id": "tribe",
+    "title": "Tribe and Tribal Communities",
+    "section": "Indian Society",
+    "syllabus": [
+      "2-1"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f815f896dd14165df260c?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT, Understanding Social Institutions",
+        "https://ncert.nic.in/textbook/pdf/kesy103.pdf"
+      ],
+      [
+        "Constitution of India",
+        "https://www.legislative.gov.in/static/uploads/2025/07/359f70a69695affb9d72f8393102bd2e.pdf"
+      ],
+      [
+        "India Code statutory texts",
+        "https://www.indiacode.nic.in/"
+      ]
+    ]
+  },
+  {
+    "id": "ethnicity",
+    "title": "Ethnicity and Identity",
+    "section": "Indian Society",
+    "syllabus": [
+      "2-1"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81efabd4de0675fca069?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT, Understanding Social Institutions",
+        "https://ncert.nic.in/textbook/pdf/kesy103.pdf"
+      ],
+      [
+        "Constitution of India",
+        "https://www.legislative.gov.in/static/uploads/2025/07/359f70a69695affb9d72f8393102bd2e.pdf"
+      ],
+      [
+        "India Code statutory texts",
+        "https://www.indiacode.nic.in/"
+      ]
+    ]
+  },
+  {
+    "id": "religion-society",
+    "title": "Religion and Indian Society",
+    "section": "Indian Society",
+    "syllabus": [
+      "2-1"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f817aafa1eaeef4fcf34c?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT, Understanding Social Institutions",
+        "https://ncert.nic.in/textbook/pdf/kesy103.pdf"
+      ],
+      [
+        "Constitution of India",
+        "https://www.legislative.gov.in/static/uploads/2025/07/359f70a69695affb9d72f8393102bd2e.pdf"
+      ],
+      [
+        "India Code statutory texts",
+        "https://www.indiacode.nic.in/"
+      ]
+    ]
+  },
+  {
+    "id": "status-of-women",
+    "title": "Status of Women and Gender Inequality",
+    "section": "Indian Society",
+    "syllabus": [
+      "2-2"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81c3a499ee563f179f49?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT, Understanding Social Institutions",
+        "https://ncert.nic.in/textbook/pdf/kesy103.pdf"
+      ],
+      [
+        "Constitution of India",
+        "https://www.legislative.gov.in/static/uploads/2025/07/359f70a69695affb9d72f8393102bd2e.pdf"
+      ],
+      [
+        "India Code statutory texts",
+        "https://www.indiacode.nic.in/"
+      ]
+    ]
+  },
+  {
+    "id": "casteism",
+    "title": "Casteism and Social Exclusion",
+    "section": "Indian Society",
+    "syllabus": [
+      "2-3"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f8196b561c00557292774?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT, Understanding Social Institutions",
+        "https://ncert.nic.in/textbook/pdf/kesy103.pdf"
+      ],
+      [
+        "Constitution of India",
+        "https://www.legislative.gov.in/static/uploads/2025/07/359f70a69695affb9d72f8393102bd2e.pdf"
+      ],
+      [
+        "India Code statutory texts",
+        "https://www.indiacode.nic.in/"
+      ]
+    ]
+  },
+  {
+    "id": "communalism",
+    "title": "Communalism",
+    "section": "Indian Society",
+    "syllabus": [
+      "2-3"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f817e934ff59255be3d94?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT, Understanding Social Institutions",
+        "https://ncert.nic.in/textbook/pdf/kesy103.pdf"
+      ],
+      [
+        "Constitution of India",
+        "https://www.legislative.gov.in/static/uploads/2025/07/359f70a69695affb9d72f8393102bd2e.pdf"
+      ],
+      [
+        "India Code statutory texts",
+        "https://www.indiacode.nic.in/"
+      ]
+    ]
+  },
+  {
+    "id": "regionalisation",
+    "title": "Regionalisation and Regionalism",
+    "section": "Indian Society",
+    "syllabus": [
+      "2-3"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81dab3f4f11f4d97f3e7?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT, Understanding Social Institutions",
+        "https://ncert.nic.in/textbook/pdf/kesy103.pdf"
+      ],
+      [
+        "Constitution of India",
+        "https://www.legislative.gov.in/static/uploads/2025/07/359f70a69695affb9d72f8393102bd2e.pdf"
+      ],
+      [
+        "India Code statutory texts",
+        "https://www.indiacode.nic.in/"
+      ]
+    ]
+  },
+  {
+    "id": "violence-against-women",
+    "title": "Crimes and Violence Against Women",
+    "section": "Indian Society",
+    "syllabus": [
+      "2-4"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f8126983fcfe794d47014?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT, Understanding Social Institutions",
+        "https://ncert.nic.in/textbook/pdf/kesy103.pdf"
+      ],
+      [
+        "Constitution of India",
+        "https://www.legislative.gov.in/static/uploads/2025/07/359f70a69695affb9d72f8393102bd2e.pdf"
+      ],
+      [
+        "India Code statutory texts",
+        "https://www.indiacode.nic.in/"
+      ]
+    ]
+  },
+  {
+    "id": "child-abuse",
+    "title": "Child Abuse and Protection",
+    "section": "Indian Society",
+    "syllabus": [
+      "2-5"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81c888e8dcccc5de5f99?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT, Understanding Social Institutions",
+        "https://ncert.nic.in/textbook/pdf/kesy103.pdf"
+      ],
+      [
+        "Constitution of India",
+        "https://www.legislative.gov.in/static/uploads/2025/07/359f70a69695affb9d72f8393102bd2e.pdf"
+      ],
+      [
+        "India Code statutory texts",
+        "https://www.indiacode.nic.in/"
+      ]
+    ]
+  },
+  {
+    "id": "child-labour",
+    "title": "Child Labour",
+    "section": "Indian Society",
+    "syllabus": [
+      "2-5"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81e19016f4fe51245128?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT, Understanding Social Institutions",
+        "https://ncert.nic.in/textbook/pdf/kesy103.pdf"
+      ],
+      [
+        "Constitution of India",
+        "https://www.legislative.gov.in/static/uploads/2025/07/359f70a69695affb9d72f8393102bd2e.pdf"
+      ],
+      [
+        "India Code statutory texts",
+        "https://www.indiacode.nic.in/"
+      ]
+    ]
+  },
+  {
+    "id": "youth-unrest",
+    "title": "Youth Unrest and Agitation",
+    "section": "Indian Society",
+    "syllabus": [
+      "2-6"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81febf30fd1d2c3f3229?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT, Understanding Social Institutions",
+        "https://ncert.nic.in/textbook/pdf/kesy103.pdf"
+      ],
+      [
+        "Constitution of India",
+        "https://www.legislative.gov.in/static/uploads/2025/07/359f70a69695affb9d72f8393102bd2e.pdf"
+      ],
+      [
+        "India Code statutory texts",
+        "https://www.indiacode.nic.in/"
+      ]
+    ]
+  },
+  {
+    "id": "social-welfare",
+    "title": "Public Policy and Welfare Programmes",
+    "section": "Indian Society",
+    "syllabus": [
+      "2-7"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f8106aeb1e617f4eca5f3?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT, Understanding Social Institutions",
+        "https://ncert.nic.in/textbook/pdf/kesy103.pdf"
+      ],
+      [
+        "Constitution of India",
+        "https://www.legislative.gov.in/static/uploads/2025/07/359f70a69695affb9d72f8393102bd2e.pdf"
+      ],
+      [
+        "India Code statutory texts",
+        "https://www.indiacode.nic.in/"
+      ]
+    ]
+  },
+  {
+    "id": "sc-st-bc-safeguards",
+    "title": "Safeguards for SCs, STs and Backward Classes",
+    "section": "Indian Society",
+    "syllabus": [
+      "2-7"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81a0b6f2f42116fae5c2?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT, Understanding Social Institutions",
+        "https://ncert.nic.in/textbook/pdf/kesy103.pdf"
+      ],
+      [
+        "Constitution of India",
+        "https://www.legislative.gov.in/static/uploads/2025/07/359f70a69695affb9d72f8393102bd2e.pdf"
+      ],
+      [
+        "India Code statutory texts",
+        "https://www.indiacode.nic.in/"
+      ]
+    ]
+  },
+  {
+    "id": "minority-safeguards",
+    "title": "Constitutional and Statutory Safeguards for Minorities",
+    "section": "Indian Society",
+    "syllabus": [
+      "2-7"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81868a5ee654d0ddf76b?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT, Understanding Social Institutions",
+        "https://ncert.nic.in/textbook/pdf/kesy103.pdf"
+      ],
+      [
+        "Constitution of India",
+        "https://www.legislative.gov.in/static/uploads/2025/07/359f70a69695affb9d72f8393102bd2e.pdf"
+      ],
+      [
+        "India Code statutory texts",
+        "https://www.indiacode.nic.in/"
+      ]
+    ]
+  },
+  {
+    "id": "women-children-safeguards",
+    "title": "Safeguards for Women and Children",
+    "section": "Indian Society",
+    "syllabus": [
+      "2-7"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81bcb763cc84307104cd?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT, Understanding Social Institutions",
+        "https://ncert.nic.in/textbook/pdf/kesy103.pdf"
+      ],
+      [
+        "Constitution of India",
+        "https://www.legislative.gov.in/static/uploads/2025/07/359f70a69695affb9d72f8393102bd2e.pdf"
+      ],
+      [
+        "India Code statutory texts",
+        "https://www.indiacode.nic.in/"
+      ]
+    ]
+  },
+  {
+    "id": "disability-safeguards",
+    "title": "Rights and Safeguards for Persons with Disabilities",
+    "section": "Indian Society",
+    "syllabus": [
+      "2-7"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f8176b038ed51be05a624?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT, Understanding Social Institutions",
+        "https://ncert.nic.in/textbook/pdf/kesy103.pdf"
+      ],
+      [
+        "Constitution of India",
+        "https://www.legislative.gov.in/static/uploads/2025/07/359f70a69695affb9d72f8393102bd2e.pdf"
+      ],
+      [
+        "India Code statutory texts",
+        "https://www.indiacode.nic.in/"
+      ]
+    ]
   }
 ]

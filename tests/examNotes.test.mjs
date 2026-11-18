@@ -28,7 +28,7 @@ for (const file of readdirSync(catalogs).filter(name => name.endsWith('.json')))
   });
 
   if (exam === 'group2') {
-    for (const sectionIndex of [0, 1]) {
+    for (const sectionIndex of [0, 1, 2]) {
       const [section, , topics] = EXAMS.group2.sections[sectionIndex];
       test(`APPSC ${section} notes cover all current checklist entries`, () => {
         const covered = new Set(notes.filter(note => note.section === section)
