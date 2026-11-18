@@ -49,11 +49,24 @@ try{
    assert.equal(await page.locator('[data-clock-value]').count(),4);
    if(route==='gate'){assert.match(await page.locator('.countdown-date').innerText(),/2027-02-06/);assert.equal(await page.locator('.countdown-badge').textContent(),'Official exam window');assert.notEqual(await page.locator('.countdown-number').innerText(),'—');assert.match(await page.locator('.countdown-hint').innerText(),/CS-specific/);}
    assert.ok(await page.locator('.countdown-spotlight').evaluate(el=>el.getBoundingClientRect().top<document.querySelector('.prep-tab-strip').getBoundingClientRect().top),'Countdown must precede the tabs');
-   for(const tab of ['mocks','syllabus','papers','progress','overview']){
+   for(const tab of ['mocks','syllabus','notes','papers','progress','overview']){
      await page.locator('[data-prep-tab='+tab+']').click();
      assert.equal(await page.locator('[data-panel='+tab+']').isVisible(),true);
      assert.equal(await page.locator('[data-panel]:visible').count(),1);
      assert.equal(await page.locator('.countdown-spotlight').isVisible(),true);
+   }
+   if(route==='group2'){
+     await page.locator('[data-prep-tab=syllabus]').click();
+     await page.locator('.syllabus-section').first().locator('summary').click();
+     await page.getByRole('button',{name:'Read notes for Indus Valley Civilisation'}).click();
+     const reader=page.locator('[data-note-reader]');
+     await reader.getByRole('heading',{name:'Worked example'}).waitFor();
+     assert.match(await reader.getByRole('link',{name:'Open in Notion'}).getAttribute('href'),/^https:\/\/app\.notion\.com\//);
+     assert.match(page.url(),/tab=notes&note=indus-civilisation$/);
+     await page.locator('[data-notes-search]').fill('Jainism');
+     assert.equal(await page.locator('[data-note-section] button:visible').count(),1);
+     await page.reload();
+     await reader.getByRole('heading',{name:'Worked example'}).waitFor();
    }
  }
  await page.locator('[data-prep-tab=mocks]').click();

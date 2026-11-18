@@ -71,3 +71,32 @@ body,.app-shell,.landing-workspace{font-family:Inter,-apple-system,BlinkMacSyste
 .countdown-unit{display:flex;flex-direction:column;align-items:center;gap:7px;min-width:0}.countdown-clock .countdown-value{font-size:44px;font-weight:800;line-height:1.1;letter-spacing:-1.5px;font-variant-numeric:tabular-nums}.countdown-unit>span{font-size:12px;font-weight:600;letter-spacing:.2px}.countdown-clock>.countdown-clock-caption{grid-column:1/-1;font-size:12px;margin-top:8px;text-align:center}
 @media(max-width:800px){.countdown-feature{flex-direction:column;align-items:stretch;gap:20px}.countdown-time.countdown-clock{width:100%;min-width:0}.countdown-clock .countdown-value{font-size:38px}.countdown-copy{width:100%}}
 @media(max-width:400px){.countdown-time.countdown-clock{padding:16px 10px;gap:6px}.countdown-clock .countdown-value{font-size:30px;letter-spacing:-1px}.countdown-unit>span{font-size:11px}}
+.exam-notes [data-note-section] {
+    margin-block: 1rem;
+}
+.exam-notes [data-note-id], .syllabus-note-links .ui-button {
+    margin: .25rem .375rem .25rem 0;
+    white-space: normal;
+    text-align: left;
+}
+.exam-notes input {
+    display: block;
+    width: min(100%, 26rem);
+    margin-top: .5rem;
+    color: inherit;
+    border: 1px solid currentColor;
+    border-radius: .5rem;
+    padding: .5rem .75rem;
+}
+.exam-note [data-note-content] {
+    max-width: 75ch;
+    line-height: 1.65;
+    overflow-wrap: anywhere;
+}
+.exam-note [data-note-content] > * {
+    margin-block: .75rem;
+}
+.exam-note ul {
+    list-style: disc;
+    padding-inline-start: 1.5rem;
+}

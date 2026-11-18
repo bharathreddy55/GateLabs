@@ -1,0 +1,78 @@
+[
+  {
+    "id": "indus-civilisation",
+    "title": "Indus Valley Civilisation",
+    "section": "Indian History",
+    "syllabus": [
+      "0-0"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81b98b55c253b8c4e9f4?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "vedic-age",
+    "title": "Vedic Age",
+    "section": "Indian History",
+    "syllabus": [
+      "0-1"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f816180efee92c18242a2?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "buddhism",
+    "title": "Emergence of Buddhism",
+    "section": "Indian History",
+    "syllabus": [
+      "0-2"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81a4b010f6bee3a6a825?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "jainism",
+    "title": "Emergence of Jainism",
+    "section": "Indian History",
+    "syllabus": [
+      "0-2"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f819c8a59f12d5de50df9?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  }
+]
