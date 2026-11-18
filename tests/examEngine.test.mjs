@@ -1,3 +1,4 @@
+import {EXAMS} from '../src/config/exams.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -47,3 +48,5 @@ test('countdown uses IST date boundary and distinguishes no schedule from expire
  assert.equal(countdown('2027-02-21',new Date('2027-02-22T01:00:00Z')),'Scheduled date has passed');
  assert.match(countdown('2027-02-21',new Date('2027-02-19T00:00:00Z')),/^2 days/);
 });
+
+test('announced GATE 2027 window is separate from the unverified CS slot',()=>{const gate=EXAMS.gate;assert.equal(gate.date,null);assert.equal(gate.schedule.paperDate,null);assert.deepEqual(gate.schedule.dates,['2027-02-06','2027-02-07','2027-02-13','2027-02-14','2027-02-20','2027-02-21']);assert.match(countdown(gate.schedule.dates[0],new Date('2026-11-18T00:00:00Z')),/^80 days/);assert.equal(gate.schedule.source,'https://gate2027.iitm.ac.in/important_dates');});
