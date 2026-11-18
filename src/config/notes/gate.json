@@ -531,5 +531,382 @@
         "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
       ]
     ]
+  },
+  {
+    "id": "boolean-algebra",
+    "title": "Boolean Algebra and Algebraic Minimization",
+    "section": "Digital Logic",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81939c07dd670ecb13a6?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "karnaugh-maps",
+    "title": "Karnaugh Maps",
+    "section": "Digital Logic",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f817aa540c449e1e7ac23?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "quine-mccluskey",
+    "title": "Tabular Minimization",
+    "section": "Digital Logic",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81c99048e304cdd7af15?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "combinational-design",
+    "title": "Combinational Circuit Design",
+    "section": "Digital Logic",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f8154a0e8f594897dec40?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "sequential-design",
+    "title": "Sequential Circuits, Flip-Flops and Counters",
+    "section": "Digital Logic",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f8124a32afb812c469b0d?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "fixed-floating-arithmetic",
+    "title": "Number Representation and Binary Arithmetic",
+    "section": "Digital Logic",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81d98975e7c9f96d40e4?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "instruction-set-addressing",
+    "title": "Instruction Sets and Addressing Modes",
+    "section": "Computer Organization and Architecture",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f8104896eef6db06839fd?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "alu-design",
+    "title": "Design of an Arithmetic and Logic Unit",
+    "section": "Computer Organization and Architecture",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81a58178f9d2fc0a2735?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "control-unit",
+    "title": "Hardwired and Microprogrammed Control",
+    "section": "Computer Organization and Architecture",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81d2894dd78c4937d0d4?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "memory-hierarchy",
+    "title": "Memory Interfacing, Hierarchy and Performance",
+    "section": "Computer Organization and Architecture",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81ebbb83f7be144dd0ac?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "cache-mapping",
+    "title": "Cache Memory Mapping",
+    "section": "Computer Organization and Architecture",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f811ea600e4abf9b73a8c?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "interrupts-dma",
+    "title": "I/O Interfaces, Interrupts and DMA",
+    "section": "Computer Organization and Architecture",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81e1ab64d59e45ba566e?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "pipeline-hazards",
+    "title": "Instruction Pipelining and Pipeline Hazards",
+    "section": "Computer Organization and Architecture",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81668e6edfb75d126c09?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "c-programming",
+    "title": "Programming in C",
+    "section": "Programming and Data Structures",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f815ead1fd1338ffde2d9?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "recursion",
+    "title": "Recursion and the Call Stack",
+    "section": "Programming and Data Structures",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f8149815edb35cada1fc0?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "arrays-linked-lists",
+    "title": "Arrays and Linked Lists",
+    "section": "Programming and Data Structures",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81509f9ed44692b27e9d?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "stacks-queues",
+    "title": "Stacks and Queues",
+    "section": "Programming and Data Structures",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f8148843fe0869ba4a01c?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "trees-bst",
+    "title": "Trees and Binary Search Trees",
+    "section": "Programming and Data Structures",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f815d8395e7244a565935?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "binary-heaps",
+    "title": "Binary Heaps",
+    "section": "Programming and Data Structures",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f819ba8ece84250af975d?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "graph-representations",
+    "title": "Graph Representations",
+    "section": "Programming and Data Structures",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81e1a187d854969ab5c1?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "searching-sorting",
+    "title": "Searching and Sorting",
+    "section": "Algorithms",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f8114b7ceddde17e1f5bf?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "hashing",
+    "title": "Hashing and Collision Resolution",
+    "section": "Algorithms",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81bfb1d5f5a0a362bea6?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "complexity",
+    "title": "Worst-Case Time and Space Complexity",
+    "section": "Algorithms",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f817baf0fda96405c457f?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "greedy",
+    "title": "Greedy Algorithms",
+    "section": "Algorithms",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f817e846ad305248ad24d?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "dynamic-programming",
+    "title": "Dynamic Programming",
+    "section": "Algorithms",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f8122b94ad1bb99fed7e5?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "divide-and-conquer",
+    "title": "Divide and Conquer",
+    "section": "Algorithms",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81619c1dcdf695cd38e7?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "bfs-dfs",
+    "title": "Graph Traversals",
+    "section": "Algorithms",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81ea8722d27f9ac970d7?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "mst",
+    "title": "Minimum Spanning Trees",
+    "section": "Algorithms",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f81ebb723ca320514e9fc?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "shortest-paths",
+    "title": "Shortest Paths",
+    "section": "Algorithms",
+    "syllabus": [],
+    "notion": "https://app.notion.com/p/41ca289da24f813a8fa7eb58d1c02605?pvs=204",
+    "sources": [
+      [
+        "GATE 2027 Computer Science and Information Technology syllabus",
+        "https://gate2027.iitm.ac.in/static/doc/GATE2027_Syllabus/CS_GATE2027_Syllabus.pdf"
+      ]
+    ]
   }
 ]
