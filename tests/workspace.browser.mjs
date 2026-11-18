@@ -47,6 +47,11 @@ try{
    assert.equal(await page.locator('[data-panel]:visible').count(),1);
    assert.equal(await page.locator('.countdown-spotlight').isVisible(),true);
    assert.equal(await page.locator('[data-clock-value]').count(),4);
+   await page.locator('[data-prep-tab=notes]').click();
+   const notesTab=page.locator('[data-panel=notes]');
+   await notesTab.locator('[data-note-id]').first().click();
+   await notesTab.getByRole('heading',{name:'Worked example'}).waitFor();
+   assert.ok(await notesTab.getByRole('link',{name:'Open in Notion'}).isVisible());
    if(route==='gate'){assert.match(await page.locator('.countdown-date').innerText(),/2027-02-06/);assert.equal(await page.locator('.countdown-badge').textContent(),'Official exam window');assert.notEqual(await page.locator('.countdown-number').innerText(),'—');assert.match(await page.locator('.countdown-hint').innerText(),/CS-specific/);}
    assert.ok(await page.locator('.countdown-spotlight').evaluate(el=>el.getBoundingClientRect().top<document.querySelector('.prep-tab-strip').getBoundingClientRect().top),'Countdown must precede the tabs');
    for(const tab of ['mocks','syllabus','notes','papers','progress','overview']){

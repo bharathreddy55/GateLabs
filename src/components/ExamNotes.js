@@ -14,7 +14,7 @@ export function notesPanel(examId, active, notes) {
     <div class="section-heading"><div><h2>Detailed notes</h2>
       <p>${notes.length ? `${notes.length} published notes` : 'Notes are being prepared for this exam.'}</p>
       ${examId === 'sbi' && notes.length ? '<p>Preparation topics based on the SBI handout and GateLabs practice papers.</p>' : ''}
-      ${examId === 'tet' && notes.length ? '<p>Topics drawn from the 2026 bulletin and the October 2025 detailed syllabus.</p>' : ''}
+      ${examId === 'tet' && notes.length ? '<p>Study topics based on the AP SCERT Paper 1A syllabus.</p>' : ''}
     </div></div>
     ${notes.length ? `<div class="surface exam-notes">
       <label for="notes-search-${examId}">Search topics or subjects</label>
