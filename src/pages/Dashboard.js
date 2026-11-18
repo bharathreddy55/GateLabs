@@ -5,6 +5,7 @@ import {evaluateAnswer} from '../utils/examEngine.js';
 import { userStorageKey } from '../utils/userStorage.js';
 import { escapeHtml as h } from '../utils/examEngine.js';
 import { countdownCard, bindCountdowns } from '../components/ExamCountdown.js';
+import { gatePlannerNoteIds } from '../config/gatePlannerNotes.js';
 import { db, auth, SUBJECT_SYLLABUS } from '../config/firebase';
 import { Chart } from 'chart.js/auto';
 import { showToast } from '../utils/toast';
@@ -567,8 +568,10 @@ export const Dashboard = {
                       ${topics.map(t => {
                         const key = `${selectedSubj}/${subdiv}/${t}`;
                         const isChecked = !!progress[key];
+                        const noteIds = gatePlannerNoteIds(selectedSubj, t);
 
                         return `
+                          <div>
                           <label class="flex items-center justify-between p-2.5 rounded-xl border transition-all cursor-pointer select-none ${
                             isChecked
                               ? 'bg-emerald-950/40 border-emerald-500/50 text-emerald-200'
@@ -584,6 +587,8 @@ export const Dashboard = {
                               ${isChecked ? 'Mastered' : 'To Study'}
                             </span>
                           </label>
+                          ${noteIds.map((id, index) => `<a class="text-link" href="#/gate?tab=notes&amp;note=${id}">${noteIds.length === 1 ? 'Read notes' : index === 0 ? 'Read fragmentation notes' : 'Read CIDR and NAT notes'}</a>`).join(' ')}
+                          </div>
                         `;
                       }).join('')}
                     </div>

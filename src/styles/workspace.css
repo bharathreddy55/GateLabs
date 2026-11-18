@@ -100,3 +100,20 @@ body,.app-shell,.landing-workspace{font-family:Inter,-apple-system,BlinkMacSyste
     list-style: disc;
     padding-inline-start: 1.5rem;
 }
+.exam-note-revised,
+.syllabus-note-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .5rem;
+    margin-block: .5rem;
+}
+.syllabus-note-row label {
+    border: 0;
+    padding: .25rem;
+    gap: .375rem;
+}
+.syllabus-note-row > button {
+    white-space: normal;
+    text-align: left;
+}

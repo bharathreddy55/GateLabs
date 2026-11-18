@@ -63,10 +63,22 @@ try{
      await reader.getByRole('heading',{name:'Worked example'}).waitFor();
      assert.match(await reader.getByRole('link',{name:'Open in Notion'}).getAttribute('href'),/^https:\/\/app\.notion\.com\//);
      assert.match(page.url(),/tab=notes&note=indus-civilisation$/);
+     await reader.getByRole('checkbox',{name:'Mark this note revised'}).check();
      await page.locator('[data-notes-search]').fill('Jainism');
      assert.equal(await page.locator('[data-note-section] button:visible').count(),1);
      await page.reload();
      await reader.getByRole('heading',{name:'Worked example'}).waitFor();
+     assert.equal(await reader.getByRole('checkbox',{name:'Mark this note revised'}).isChecked(),true);
+     await page.locator('[data-prep-tab=progress]').click();
+     assert.match(await page.locator('[data-note-progress]').textContent(),/^1 of \d+ notes revised$/);
+     await page.locator('[data-prep-tab=syllabus]').click();
+     await page.locator('.syllabus-section').first().locator('summary').click();
+     const revised=page.getByRole('checkbox',{name:'Mark Indus Valley Civilisation revised'});
+     assert.equal(await revised.isChecked(),true);
+     await revised.uncheck();
+     await page.getByRole('button',{name:'Read notes for Indus Valley Civilisation'}).click();
+     await reader.getByRole('heading',{name:'Worked example'}).waitFor();
+     assert.equal(await reader.getByRole('checkbox',{name:'Mark this note revised'}).isChecked(),false);
    }
  }
  await page.locator('[data-prep-tab=mocks]').click();

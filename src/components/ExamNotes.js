@@ -1,4 +1,5 @@
 import {escapeHtml as h} from '../utils/examEngine.js';
+import {readStored} from '../utils/safeStorage.js';
 
 const catalogs = import.meta.glob('../config/notes/*.json', {eager:true, import:'default'});
 
@@ -26,6 +27,7 @@ export function notesPanel(examId, active, notes) {
     </div>
     <article class="surface exam-note" data-note-reader hidden>
       <h3 tabindex="-1" data-note-title></h3>
+      <label class="exam-note-revised"><input type="checkbox" data-note-revised disabled> Mark this note revised</label>
       <p data-note-status role="status"></p>
       <div data-note-content></div>
     </article>` : ''}
@@ -41,24 +43,60 @@ function formatNote(markdown) {
   }).join('');
 }
 
-export function bindExamNotes(root, examId, notes, selectTab) {
+export function bindExamNotes(root, examId, notes, selectTab, progressKey) {
   if (!notes.length) return;
   const reader = root.querySelector('[data-note-reader]');
   const title = reader.querySelector('[data-note-title]');
   const status = reader.querySelector('[data-note-status]');
   const content = reader.querySelector('[data-note-content]');
   const search = root.querySelector('[data-notes-search]');
+  const revisionInput = root.querySelector('[data-note-revised]');
   const byId = new Map(notes.map(note => [note.id, note]));
+  const progressPanel = root.querySelector('[data-panel="progress"]');
+  const summary = document.createElement('section');
+  summary.className = 'surface';
+  summary.innerHTML = '<h2>Detailed notes revision</h2><p data-note-progress></p>';
+  progressPanel.querySelector('.home-stats').after(summary);
+  const revised = new Set(readStored(progressKey, []).filter(id => byId.has(id)));
+  const progressCount = summary.querySelector('[data-note-progress]');
+  let activeId;
   let request = 0;
+
+  function syncRevision() {
+    progressCount.textContent = `${revised.size} of ${notes.length} notes revised`;
+    revisionInput.checked = revised.has(activeId);
+    for (const checkbox of root.querySelectorAll('[data-syllabus-note-revised]')) {
+      checkbox.checked = revised.has(checkbox.dataset.syllabusNoteRevised);
+    }
+  }
+
+  function changeRevision(id, checked) {
+    const next = new Set(readStored(progressKey, []).filter(key => byId.has(key)));
+    if (checked) next.add(id);
+    else next.delete(id);
+    try {
+      localStorage.setItem(progressKey, JSON.stringify([...next]));
+      revised.clear();
+      for (const key of next) revised.add(key);
+    } catch {
+      status.textContent = 'Your device could not save this revision.';
+    }
+    syncRevision();
+  }
+
+  revisionInput.onchange = () => changeRevision(activeId, revisionInput.checked);
 
   async function open(id, focus = true) {
     const note = byId.get(id);
     if (!note) return;
     const current = ++request;
+    activeId = id;
     const url = new URL(location.href);
     url.hash = url.hash.split('?')[0] + '?tab=notes&note=' + encodeURIComponent(id);
     history.replaceState(null, '', url);
     reader.hidden = false;
+    revisionInput.disabled = true;
+    syncRevision();
     title.textContent = note.title;
     content.replaceChildren();
     status.textContent = 'Loading notes…';
@@ -75,28 +113,49 @@ export function bindExamNotes(root, examId, notes, selectTab) {
         ${note.sources.map(([label, link]) => `<li><a href="${h(link)}" target="_blank" rel="noopener">${h(label)}</a></li>`).join('')}
         </ul><a class="ui-button" href="${h(note.notion)}" target="_blank" rel="noopener">Open in Notion ↗</a>`;
       status.textContent = '';
+      revisionInput.disabled = false;
     } catch {
       if (current !== request || !root.isConnected) return;
       status.textContent = 'This note could not load. Select the topic to try again.';
     }
   }
 
+  function makeSyllabusRow(note, abbreviated = false) {
+    const row = document.createElement('div');
+    row.className = 'syllabus-note-row';
+    row.innerHTML = `<button type="button" class="ui-button" data-note-id="${h(note.id)}"
+      aria-label="Read notes for ${h(note.title)}">${abbreviated?'Read notes':h(note.title)}</button>
+      <label><input type="checkbox" data-syllabus-note-revised="${h(note.id)}"
+        aria-label="Mark ${h(note.title)} revised"> Revised</label>`;
+    const checkbox = row.querySelector('input');
+    checkbox.onchange = () => changeRevision(note.id, checkbox.checked);
+    return row;
+  }
+
+  if (examId === 'gate') {
+    const syllabus = root.querySelector('[data-panel="syllabus"]');
+    const officialSyllabus = syllabus.querySelector('.text-link');
+    officialSyllabus.href = notes.find(note => note.section === 'Engineering Mathematics').sources[0][1];
+    for (const [section, rows] of Map.groupBy(notes, note => note.section)) {
+      const details = document.createElement('details');
+      details.className = 'surface syllabus-section';
+      details.innerHTML = `<summary><span>${h(section)}</span><small>${rows.length} notes</small></summary>`;
+      const list = document.createElement('div');
+      list.className = 'syllabus-topics';
+      for (const note of rows) list.append(makeSyllabusRow(note));
+      details.append(list);
+      officialSyllabus.before(details);
+    }
+  }
   for (const checkbox of root.querySelectorAll('[data-topic]')) {
     const matches = notes.filter(note => note.syllabus.includes(checkbox.dataset.topic));
     if (!matches.length) continue;
     const links = document.createElement('div');
     links.className = 'syllabus-note-links';
-    for (const note of matches) {
-      const button = document.createElement('button');
-      button.type = 'button';
-      button.className = 'ui-button';
-      button.dataset.noteId = note.id;
-      button.textContent = matches.length === 1 ? 'Read notes' : `Read notes · ${note.title}`;
-      button.setAttribute('aria-label', `Read notes for ${note.title}`);
-      links.append(button);
-    }
+    for (const note of matches) links.append(makeSyllabusRow(note, matches.length === 1));
     checkbox.closest('label').after(links);
   }
+  syncRevision();
 
   root.querySelectorAll('[data-note-id]').forEach(button => {
     button.onclick = () => {

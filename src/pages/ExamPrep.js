@@ -101,7 +101,7 @@ export function createExamPrep(examId){return {
     const root=document.getElementById(`prep-${examId}`);if(!root)return;
     localStorage.setItem('last-exam:'+auth.currentUser?.uid,examId);
     bindCountdowns();
-    bindExamNotes(root,examId,examNotes(examId),()=>this.selectTab('notes'));
+    bindExamNotes(root,examId,examNotes(examId),()=>this.selectTab('notes'),this.key('note-progress'));
     root.querySelectorAll('[data-paper-filter]').forEach(control=>control.onchange=()=>{const panel=control.closest('[data-panel]');const type=panel.querySelector('[data-paper-filter="type"]').value,status=panel.querySelector('[data-paper-filter="status"]').value;let visible=0;panel.querySelectorAll('[data-library-card]').forEach(card=>{card.hidden=!!((type&&card.dataset.paperType!==type)||(status&&card.dataset.paperStatus!==status));if(!card.hidden)visible++;});panel.querySelector('[data-paper-filter-count]').textContent=visible+' papers shown';});
     root.querySelectorAll('[data-prep-tab]').forEach(el=>{el.onclick=()=>this.selectTab(el.dataset.prepTab);el.onkeydown=event=>{const buttons=[...root.querySelectorAll('[data-prep-tab]')],index=buttons.indexOf(el);let next;if(event.key==='ArrowRight')next=(index+1)%buttons.length;if(event.key==='ArrowLeft')next=(index+buttons.length-1)%buttons.length;if(event.key==='Home')next=0;if(event.key==='End')next=buttons.length-1;if(next!==undefined){event.preventDefault();this.selectTab(buttons[next].dataset.prepTab);buttons[next].focus();}};});
     root.querySelector('[data-tabs-next]')?.addEventListener('click',()=>{const index=tabs.findIndex(([key])=>key===this.activeTab);this.selectTab(tabs[(index+1)%tabs.length][0]);});
