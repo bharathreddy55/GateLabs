@@ -51,5 +51,6 @@ try{
  // Apply directly to isolate palette tokens from the settings form's preview state.
  await page.evaluate(async()=>{const {applyAccentPalette}=await import('/src/utils/accentTheme.js');applyAccentPalette({from:'#cc3300',to:'#cc3300',mid:'#cc3300',glow:'rgba(204,51,0,0.25)'});});
  assert.equal(await page.locator('.ui-button.primary').first().evaluate(el=>getComputedStyle(el).backgroundColor),'rgb(204, 51, 0)');await page.keyboard.press('Escape');
+ for(const route of ['tet-exams','group2','rrb-station-master','sbi-clerk']){await go(route+'?tab=syllabus');const overflow=await page.locator('[data-panel="syllabus"]').evaluate(panel=>[...panel.querySelectorAll('.surface,p')].filter(el=>el.getClientRects().length&&el.getBoundingClientRect().right>innerWidth+1).map(el=>({tag:el.tagName,class:el.className,width:el.getBoundingClientRect().width,right:el.getBoundingClientRect().right})));assert.deepEqual(overflow,[],route+' syllabus content must fit');}
  assert.deepEqual(errors,[]);console.log('PASS 15-route smoke, About shell, personal notes, disconnected AI, 320px keyboard tabs and live accent tokens');
 }finally{await browser.close();await vite.close();}

@@ -49,3 +49,4 @@ body,.app-shell,.landing-workspace{font-family:Inter,-apple-system,BlinkMacSyste
 .workspace-page,.prep-panel,.exam-overview-grid>*,.home-bottom>*{min-width:0;max-width:100%}
 .section-heading{flex-wrap:wrap}.section-heading>div{min-width:0}.syllabus-section summary>span{min-width:0;overflow-wrap:anywhere}.syllabus-section summary small{font-size:12px;line-height:1.5}.syllabus-progress>div{background:var(--ws-primary)}
 @media(max-width:600px){.syllabus-section summary{display:grid;grid-template-columns:14px minmax(0,1fr);gap:8px 12px;font-size:14px}.syllabus-section summary small{grid-column:2}.syllabus-topics label{font-size:14px;line-height:1.6}}
+.workspace-page,.prep-panel{grid-template-columns:minmax(0,1fr)}
