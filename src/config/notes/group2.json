@@ -380,5 +380,189 @@
         "https://ncert.nic.in/textbook.php"
       ]
     ]
+  },
+  {
+    "id": "earth-solar-system",
+    "title": "Earth in the Solar System",
+    "section": "Geography",
+    "syllabus": [
+      "1-0"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f818d8b1ee70ed95fdcc8?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT Class XI Fundamentals of Physical Geography syllabus",
+        "https://www.ncert.nic.in/pdf/syllabus/08HGPES%20%28XI-XII%29.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "earth-interior",
+    "title": "Interior of the Earth",
+    "section": "Geography",
+    "syllabus": [
+      "1-1"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f818b8872fd7e5e394c51?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT Class XI Fundamentals of Physical Geography syllabus",
+        "https://www.ncert.nic.in/pdf/syllabus/08HGPES%20%28XI-XII%29.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "major-landforms",
+    "title": "Major Landforms and Their Features",
+    "section": "Geography",
+    "syllabus": [
+      "1-2"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f815c9daaed82368b93af?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT Class XI Fundamentals of Physical Geography syllabus",
+        "https://www.ncert.nic.in/pdf/syllabus/08HGPES%20%28XI-XII%29.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "atmosphere",
+    "title": "Atmospheric Composition and Structure",
+    "section": "Geography",
+    "syllabus": [
+      "1-3"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81629b94e42b5f8bdba3?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT Class XI Fundamentals of Physical Geography syllabus",
+        "https://www.ncert.nic.in/pdf/syllabus/08HGPES%20%28XI-XII%29.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "weather-and-climate",
+    "title": "Weather and Climate",
+    "section": "Geography",
+    "syllabus": [
+      "1-3"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81c99b32e6a18d3b4832?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT Class XI Fundamentals of Physical Geography syllabus",
+        "https://www.ncert.nic.in/pdf/syllabus/08HGPES%20%28XI-XII%29.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "ocean-tides",
+    "title": "Ocean Tides",
+    "section": "Geography",
+    "syllabus": [
+      "1-4"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f815fadcfe1385a763771?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT Class XI Fundamentals of Physical Geography syllabus",
+        "https://www.ncert.nic.in/pdf/syllabus/08HGPES%20%28XI-XII%29.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "ocean-waves",
+    "title": "Ocean Waves",
+    "section": "Geography",
+    "syllabus": [
+      "1-4"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f8145b3b5d1fab27870b0?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT Class XI Fundamentals of Physical Geography syllabus",
+        "https://www.ncert.nic.in/pdf/syllabus/08HGPES%20%28XI-XII%29.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "ocean-currents",
+    "title": "Ocean Currents",
+    "section": "Geography",
+    "syllabus": [
+      "1-4"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81b59962c687fc177dff?pvs=204",
+    "sources": [
+      [
+        "APPSC Notification 37/2026, Annexure II",
+        "https://files.govtjobsalert.in/2026/11/Group_II_Detailed_Notification_37_2026.pdf"
+      ],
+      [
+        "NCERT Class XI Fundamentals of Physical Geography syllabus",
+        "https://www.ncert.nic.in/pdf/syllabus/08HGPES%20%28XI-XII%29.pdf"
+      ],
+      [
+        "NCERT textbook portal",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
   }
 ]
