@@ -27,10 +27,9 @@ for (const file of readdirSync(catalogs).filter(name => name.endsWith('.json')))
     }
   });
 
-  if (exam === 'group2') {
-    for (const sectionIndex of EXAMS.group2.sections.keys()) {
-      const [section, , topics] = EXAMS.group2.sections[sectionIndex];
-      test(`APPSC ${section} notes cover all current checklist entries`, () => {
+  if (['group2', 'rrb'].includes(exam)) {
+    for (const [sectionIndex, [section, , topics]] of EXAMS[exam].sections.entries()) {
+      test(`${exam} ${section} notes cover all current checklist entries`, () => {
         const covered = new Set(notes.filter(note => note.section === section)
           .flatMap(note => note.syllabus));
         assert.deepEqual(covered, new Set(topics.split(';').map((_, index) => `${sectionIndex}-${index}`)));

@@ -454,5 +454,500 @@
         "https://ncert.nic.in/textbook.php"
       ]
     ]
+  },
+  {
+    "id": "data-tables",
+    "title": "Data Analysis from Tables",
+    "section": "Data Analysis",
+    "syllabus": [
+      "1-0"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f8106843be66b6027042f?pvs=204",
+    "sources": [
+      [
+        "Railway Recruitment Boards CEN 08/2026, section 15.1",
+        "https://files.govtjobsalert.in/2026/10/rrb-station-master-cen-08-2026-detailed-notification-out-notification-2.pdf"
+      ],
+      [
+        "NCERT textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "multi-source-data",
+    "title": "Multi-source Data Analysis",
+    "section": "Data Analysis",
+    "syllabus": [
+      "1-0"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f817da392e019f77a3f05?pvs=204",
+    "sources": [
+      [
+        "Railway Recruitment Boards CEN 08/2026, section 15.1",
+        "https://files.govtjobsalert.in/2026/10/rrb-station-master-cen-08-2026-detailed-notification-out-notification-2.pdf"
+      ],
+      [
+        "NCERT textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "data-bar-charts",
+    "title": "Data Analysis from Bar Charts",
+    "section": "Data Analysis",
+    "syllabus": [
+      "1-1"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81ddb4aecbca56a5fef7?pvs=204",
+    "sources": [
+      [
+        "Railway Recruitment Boards CEN 08/2026, section 15.1",
+        "https://files.govtjobsalert.in/2026/10/rrb-station-master-cen-08-2026-detailed-notification-out-notification-2.pdf"
+      ],
+      [
+        "NCERT textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "data-line-graphs",
+    "title": "Data Analysis from Line Graphs",
+    "section": "Data Analysis",
+    "syllabus": [
+      "1-1"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81aca320ddd28a7357a6?pvs=204",
+    "sources": [
+      [
+        "Railway Recruitment Boards CEN 08/2026, section 15.1",
+        "https://files.govtjobsalert.in/2026/10/rrb-station-master-cen-08-2026-detailed-notification-out-notification-2.pdf"
+      ],
+      [
+        "NCERT textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "scatter-plots",
+    "title": "Scatter Plots",
+    "section": "Data Analysis",
+    "syllabus": [
+      "1-2"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f812faa1dedf6d605f8ae?pvs=204",
+    "sources": [
+      [
+        "Railway Recruitment Boards CEN 08/2026, section 15.1",
+        "https://files.govtjobsalert.in/2026/10/rrb-station-master-cen-08-2026-detailed-notification-out-notification-2.pdf"
+      ],
+      [
+        "NCERT textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "data-pie-charts",
+    "title": "Data Analysis from Pie Charts",
+    "section": "Data Analysis",
+    "syllabus": [
+      "1-3"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81a09009ca36aa5b4f3a?pvs=204",
+    "sources": [
+      [
+        "Railway Recruitment Boards CEN 08/2026, section 15.1",
+        "https://files.govtjobsalert.in/2026/10/rrb-station-master-cen-08-2026-detailed-notification-out-notification-2.pdf"
+      ],
+      [
+        "NCERT textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "statistical-distributions",
+    "title": "Statistical Distributions",
+    "section": "Data Analysis",
+    "syllabus": [
+      "1-4"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81e9b51fea36349cd054?pvs=204",
+    "sources": [
+      [
+        "Railway Recruitment Boards CEN 08/2026, section 15.1",
+        "https://files.govtjobsalert.in/2026/10/rrb-station-master-cen-08-2026-detailed-notification-out-notification-2.pdf"
+      ],
+      [
+        "NCERT textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "venn-diagrams",
+    "title": "Venn Diagrams",
+    "section": "Data Analysis",
+    "syllabus": [
+      "1-5"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f8187b5c2c8d12a36c41e?pvs=204",
+    "sources": [
+      [
+        "Railway Recruitment Boards CEN 08/2026, section 15.1",
+        "https://files.govtjobsalert.in/2026/10/rrb-station-master-cen-08-2026-detailed-notification-out-notification-2.pdf"
+      ],
+      [
+        "NCERT textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "data-sufficiency",
+    "title": "Data Sufficiency",
+    "section": "Data Analysis",
+    "syllabus": [
+      "1-6"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81279a71ed46d31cf051?pvs=204",
+    "sources": [
+      [
+        "Railway Recruitment Boards CEN 08/2026, section 15.1",
+        "https://files.govtjobsalert.in/2026/10/rrb-station-master-cen-08-2026-detailed-notification-out-notification-2.pdf"
+      ],
+      [
+        "NCERT textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "data-arrangement",
+    "title": "Data Arrangement",
+    "section": "Data Analysis",
+    "syllabus": [
+      "1-6"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81eb9a17fb5782c2405a?pvs=204",
+    "sources": [
+      [
+        "Railway Recruitment Boards CEN 08/2026, section 15.1",
+        "https://files.govtjobsalert.in/2026/10/rrb-station-master-cen-08-2026-detailed-notification-out-notification-2.pdf"
+      ],
+      [
+        "NCERT textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "binary-logic",
+    "title": "Binary Logic",
+    "section": "Logical Capability",
+    "syllabus": [
+      "2-0"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f8103a53ded9364773bc6?pvs=204",
+    "sources": [
+      [
+        "Railway Recruitment Boards CEN 08/2026, section 15.1",
+        "https://files.govtjobsalert.in/2026/10/rrb-station-master-cen-08-2026-detailed-notification-out-notification-2.pdf"
+      ],
+      [
+        "NCERT textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "syllogisms",
+    "title": "Syllogisms",
+    "section": "Logical Capability",
+    "syllabus": [
+      "2-1"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f812d96e2de47123b4805?pvs=204",
+    "sources": [
+      [
+        "Railway Recruitment Boards CEN 08/2026, section 15.1",
+        "https://files.govtjobsalert.in/2026/10/rrb-station-master-cen-08-2026-detailed-notification-out-notification-2.pdf"
+      ],
+      [
+        "NCERT textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "clock-angles",
+    "title": "Clocks",
+    "section": "Logical Capability",
+    "syllabus": [
+      "2-2"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81dea046e351f53a2506?pvs=204",
+    "sources": [
+      [
+        "Railway Recruitment Boards CEN 08/2026, section 15.1",
+        "https://files.govtjobsalert.in/2026/10/rrb-station-master-cen-08-2026-detailed-notification-out-notification-2.pdf"
+      ],
+      [
+        "NCERT textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "calendars",
+    "title": "Calendars",
+    "section": "Logical Capability",
+    "syllabus": [
+      "2-2"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81c08265cf7956a329de?pvs=204",
+    "sources": [
+      [
+        "Railway Recruitment Boards CEN 08/2026, section 15.1",
+        "https://files.govtjobsalert.in/2026/10/rrb-station-master-cen-08-2026-detailed-notification-out-notification-2.pdf"
+      ],
+      [
+        "NCERT textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "statement-assumptions",
+    "title": "Statements and Assumptions",
+    "section": "Logical Capability",
+    "syllabus": [
+      "2-3"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81959740e5849ede778a?pvs=204",
+    "sources": [
+      [
+        "Railway Recruitment Boards CEN 08/2026, section 15.1",
+        "https://files.govtjobsalert.in/2026/10/rrb-station-master-cen-08-2026-detailed-notification-out-notification-2.pdf"
+      ],
+      [
+        "NCERT textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "family-relations",
+    "title": "Problems Relating to Relations",
+    "section": "Logical Capability",
+    "syllabus": [
+      "2-4"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81929f8cd55cb243e88e?pvs=204",
+    "sources": [
+      [
+        "Railway Recruitment Boards CEN 08/2026, section 15.1",
+        "https://files.govtjobsalert.in/2026/10/rrb-station-master-cen-08-2026-detailed-notification-out-notification-2.pdf"
+      ],
+      [
+        "NCERT textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "logic-puzzles",
+    "title": "Logic-Based Puzzles",
+    "section": "Logical Capability",
+    "syllabus": [
+      "2-5"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f815994cac2da7dad9c7d?pvs=204",
+    "sources": [
+      [
+        "Railway Recruitment Boards CEN 08/2026, section 15.1",
+        "https://files.govtjobsalert.in/2026/10/rrb-station-master-cen-08-2026-detailed-notification-out-notification-2.pdf"
+      ],
+      [
+        "NCERT textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "comprehension-main-idea",
+    "title": "Reading Comprehension — Main and Supporting Ideas",
+    "section": "Logical Capability",
+    "syllabus": [
+      "2-6",
+      "2-7"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f816895dce28f6c2db6c5?pvs=204",
+    "sources": [
+      [
+        "Railway Recruitment Boards CEN 08/2026, section 15.1",
+        "https://files.govtjobsalert.in/2026/10/rrb-station-master-cen-08-2026-detailed-notification-out-notification-2.pdf"
+      ],
+      [
+        "NCERT textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "comprehension-application",
+    "title": "Reading Comprehension — Application and Inference",
+    "section": "Logical Capability",
+    "syllabus": [
+      "2-7"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f8145a180c1070f619fd1?pvs=204",
+    "sources": [
+      [
+        "Railway Recruitment Boards CEN 08/2026, section 15.1",
+        "https://files.govtjobsalert.in/2026/10/rrb-station-master-cen-08-2026-detailed-notification-out-notification-2.pdf"
+      ],
+      [
+        "NCERT textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "comprehension-structure-style",
+    "title": "Reading Comprehension — Logical Structure and Style",
+    "section": "Logical Capability",
+    "syllabus": [
+      "2-7"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f811086f9f8bde2cc0416?pvs=204",
+    "sources": [
+      [
+        "Railway Recruitment Boards CEN 08/2026, section 15.1",
+        "https://files.govtjobsalert.in/2026/10/rrb-station-master-cen-08-2026-detailed-notification-out-notification-2.pdf"
+      ],
+      [
+        "NCERT textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "analogy",
+    "title": "Analogies",
+    "section": "Mental Reasoning",
+    "syllabus": [
+      "3-0"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81628eb8f3017592a970?pvs=204",
+    "sources": [
+      [
+        "Railway Recruitment Boards CEN 08/2026, section 15.1",
+        "https://files.govtjobsalert.in/2026/10/rrb-station-master-cen-08-2026-detailed-notification-out-notification-2.pdf"
+      ],
+      [
+        "NCERT textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "number-series",
+    "title": "Number Series",
+    "section": "Mental Reasoning",
+    "syllabus": [
+      "3-1"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81cf8569dd8255be9ce9?pvs=204",
+    "sources": [
+      [
+        "Railway Recruitment Boards CEN 08/2026, section 15.1",
+        "https://files.govtjobsalert.in/2026/10/rrb-station-master-cen-08-2026-detailed-notification-out-notification-2.pdf"
+      ],
+      [
+        "NCERT textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "letter-series",
+    "title": "Letter Series",
+    "section": "Mental Reasoning",
+    "syllabus": [
+      "3-1"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f812ab6e2e3f35372a009?pvs=204",
+    "sources": [
+      [
+        "Railway Recruitment Boards CEN 08/2026, section 15.1",
+        "https://files.govtjobsalert.in/2026/10/rrb-station-master-cen-08-2026-detailed-notification-out-notification-2.pdf"
+      ],
+      [
+        "NCERT textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "coding-decoding",
+    "title": "Coding and Decoding",
+    "section": "Mental Reasoning",
+    "syllabus": [
+      "3-2"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f817f84d6d1e1529f9419?pvs=204",
+    "sources": [
+      [
+        "Railway Recruitment Boards CEN 08/2026, section 15.1",
+        "https://files.govtjobsalert.in/2026/10/rrb-station-master-cen-08-2026-detailed-notification-out-notification-2.pdf"
+      ],
+      [
+        "NCERT textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "rankings",
+    "title": "Rankings",
+    "section": "Mental Reasoning",
+    "syllabus": [
+      "3-3"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81479109fbd1d3a603a7?pvs=204",
+    "sources": [
+      [
+        "Railway Recruitment Boards CEN 08/2026, section 15.1",
+        "https://files.govtjobsalert.in/2026/10/rrb-station-master-cen-08-2026-detailed-notification-out-notification-2.pdf"
+      ],
+      [
+        "NCERT textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
+  },
+  {
+    "id": "seating-arrangements",
+    "title": "Seating and Ordering Arrangements",
+    "section": "Mental Reasoning",
+    "syllabus": [
+      "3-3"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f812091d2d2036fdbec10?pvs=204",
+    "sources": [
+      [
+        "Railway Recruitment Boards CEN 08/2026, section 15.1",
+        "https://files.govtjobsalert.in/2026/10/rrb-station-master-cen-08-2026-detailed-notification-out-notification-2.pdf"
+      ],
+      [
+        "NCERT textbooks",
+        "https://ncert.nic.in/textbook.php"
+      ]
+    ]
   }
 ]
