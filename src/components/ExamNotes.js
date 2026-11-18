@@ -11,7 +11,9 @@ export function notesPanel(examId, active, notes) {
   return `<section class="prep-panel" ${active?'':'hidden'} role="tabpanel"
       id="panel-${examId}-notes" aria-labelledby="tab-${examId}-notes" data-panel="notes">
     <div class="section-heading"><div><h2>Detailed notes</h2>
-      <p>${notes.length ? `${notes.length} published notes · coverage in progress` : 'Notes are being prepared for this exam.'}</p>
+      <p>${notes.length ? `${notes.length} published notes` : 'Notes are being prepared for this exam.'}</p>
+      ${examId === 'sbi' && notes.length ? '<p>Preparation topics based on the SBI handout and GateLabs practice papers.</p>' : ''}
+      ${examId === 'tet' && notes.length ? '<p>Topics drawn from the 2026 bulletin and the October 2025 detailed syllabus.</p>' : ''}
     </div></div>
     ${notes.length ? `<div class="surface exam-notes">
       <label for="notes-search-${examId}">Search topics or subjects</label>
