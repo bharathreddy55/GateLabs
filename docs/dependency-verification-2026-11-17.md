@@ -1,9 +1,11 @@
 # Dependency verification — 17 November 2026
 
-Production dependency audit: **0 advisories** after upgrading Firebase/Vite and applying the compatible patched `@grpc/grpc-js` override. The build and emulator permission tests pass with the updated SDK. The declared runtime is Node.js >=24.12, matching Firebase's engine requirement; CI requests the latest Node 24. The local environment currently runs 24.11.1 and emits an engine warning even though the exercised checks pass.
+Both the complete npm dependency tree and production-only audit report **0 vulnerabilities** after updating Firebase/Vite, applying the compatible patched `@grpc/grpc-js` override and removing the deployment CLI from test dependencies.
 
-The full development dependency tree still reports 14 moderate advisories through Firebase CLI tooling (glob/minimatch/uuid/OpenTelemetry and dependent packages). No high or critical advisories remain. These are unresolved; do not call the full dependency tree clean. npm proposes older major Firebase CLI versions for some transitive fixes. Those downgrades were not applied without a compatibility review. Recheck upstream patches before release and limit CLI use to trusted repository inputs.
+The Firestore tests now launch the official emulator v1.22.0 directly, using its pinned SHA-256 checksum from Firebase CLI v15.36.0's published emulator metadata. Cached binaries are verified before use; a first run downloads only from Google's official Firebase emulator bucket. The launcher binds to localhost port 18080 and project `demo-gatelabs`, rejects an occupied port and stops the process after tests. Java 21+ is required. This removes the unused CLI dependency tree instead of forcing incompatible transitive upgrades.
 
-Commands: `npm audit --omit=dev`, `npm audit`, `npm test`, `npm run build`, `npm run test:browser:all`, `npm run test:rules`.
+The declared runtime is Node.js >=24.12, matching Firebase's engine requirement; CI requests the latest Node 24. The local environment currently runs 24.11.1 and emits an engine warning even though the exercised checks pass. Use the declared version for development and deployment.
 
-Migration references: [Vite migration guide](https://vite.dev/guide/migration), [Firebase release notes](https://firebase.google.com/support/release-notes/js).
+Verified commands: `npm audit`, `npm audit --omit=dev`, `npm test`, `npm run build`, `npm run test:browser:all`, `npm run test:rules`. An advisory audit is a point-in-time check, not a guarantee that every dependency or emulator binary is free of defects.
+
+References: [Vite migration guide](https://vite.dev/guide/migration), [Firebase release notes](https://firebase.google.com/support/release-notes/js), [pinned emulator metadata](https://github.com/firebase/firebase-tools/blob/v15.36.0/src/emulator/downloadableEmulatorInfo.json).
