@@ -57,5 +57,9 @@ try{
  await page.evaluate(async()=>{const {applyAccentPalette}=await import('/src/utils/accentTheme.js');applyAccentPalette({from:'#cc3300',to:'#cc3300',mid:'#cc3300',glow:'rgba(204,51,0,0.25)'});});
  assert.equal(await page.locator('.ui-button.primary').first().evaluate(el=>getComputedStyle(el).backgroundColor),'rgb(204, 51, 0)');await page.keyboard.press('Escape');
  for(const route of ['tet-exams','group2','rrb-station-master','sbi-clerk']){await go(route+'?tab=syllabus');const overflow=await page.locator('[data-panel="syllabus"]').evaluate(panel=>[...panel.querySelectorAll('.surface,p')].filter(el=>el.getClientRects().length&&el.getBoundingClientRect().right>innerWidth+1).map(el=>({tag:el.tagName,class:el.className,width:el.getBoundingClientRect().width,right:el.getBoundingClientRect().right})));assert.deepEqual(overflow,[],route+' syllabus content must fit');}
+ await go('rrb-station-master?tab=mocks');assert.equal(await page.locator('[data-countdown="rrb"]').isVisible(),true);
+ await page.locator('[data-open-countdown-target]').click();await page.locator('[data-target]').fill((new Date().getUTCFullYear()+1)+'-01-15');await page.locator('[data-target]').dispatchEvent('change');
+ assert.equal(await page.locator('.countdown-badge').textContent(),'Personal target');assert.match(await page.locator('.countdown-date').innerText(),/Personal practice target/);assert.match(await page.locator('.countdown-number').innerText(),/^\d+$/);
+ await page.locator('[data-clear-target]').click();assert.equal(await page.locator('.countdown-badge').textContent(),'Schedule pending');
  assert.deepEqual(errors,[]);console.log('PASS 15-route smoke, About shell, personal notes, disconnected AI, 320px keyboard tabs and live accent tokens');
 }finally{await browser.close();await vite.close();}

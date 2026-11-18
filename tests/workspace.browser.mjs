@@ -45,10 +45,13 @@ try{
    await page.locator('#prep-'+({'tet-exams':'tet','rrb-station-master':'rrb','sbi-clerk':'sbi'}[route]||route)).waitFor();
    await page.locator('[data-panel]:visible').waitFor();
    assert.equal(await page.locator('[data-panel]:visible').count(),1);
+   assert.equal(await page.locator('.countdown-spotlight').isVisible(),true);
+   assert.ok(await page.locator('.countdown-spotlight').evaluate(el=>el.getBoundingClientRect().top<document.querySelector('.prep-tab-strip').getBoundingClientRect().top),'Countdown must precede the tabs');
    for(const tab of ['mocks','syllabus','papers','progress','overview']){
      await page.locator('[data-prep-tab='+tab+']').click();
      assert.equal(await page.locator('[data-panel='+tab+']').isVisible(),true);
      assert.equal(await page.locator('[data-panel]:visible').count(),1);
+     assert.equal(await page.locator('.countdown-spotlight').isVisible(),true);
    }
  }
  await page.locator('[data-prep-tab=mocks]').click();
