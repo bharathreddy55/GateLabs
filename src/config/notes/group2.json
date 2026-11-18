@@ -1542,5 +1542,58 @@
         "https://www.indiacode.nic.in/"
       ]
     ]
+  },
+  {
+    "id": "international-current-affairs",
+    "title": "International Current Affairs — November 2026",
+    "section": "Current Affairs",
+    "syllabus": [
+      "3-0"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f81eab537e79f9ce676af?pvs=204",
+    "sources": [
+      [
+        "UNFCCC COP31 conference calendar",
+        "https://unfccc.int/cop31"
+      ],
+      [
+        "UNFCCC opening ceremony transcript",
+        "https://unfccc.int/news/un-climate-chief-to-world-leaders-in-antalya-the-political-costs-of-fossil-fuel-dependency-are"
+      ]
+    ]
+  },
+  {
+    "id": "national-current-affairs",
+    "title": "National Current Affairs — November 2026",
+    "section": "Current Affairs",
+    "syllabus": [
+      "3-0"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f8102bc65fc89109945a0?pvs=204",
+    "sources": [
+      [
+        "PIB November 2026 Cabinet decisions",
+        "https://www.pib.gov.in/PMContents/PMContents.aspx?Lang=1&RegionId=35&menuid=6&reg=35"
+      ]
+    ]
+  },
+  {
+    "id": "andhra-pradesh-current-affairs",
+    "title": "Andhra Pradesh Current Affairs — November 2026",
+    "section": "Current Affairs",
+    "syllabus": [
+      "3-0"
+    ],
+    "notion": "https://app.notion.com/p/41ca289da24f8163a839da473bfac8fa?pvs=204",
+    "sources": [
+      [
+        "PIB Vijayawada inaugural session release",
+        "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335391&lang=1&reg=3"
+      ],
+      [
+        "PIB valedictory session release",
+        "https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=2335961&lang=2&reg=48"
+      ]
+    ]
   }
 ]
