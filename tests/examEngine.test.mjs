@@ -3,6 +3,21 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { validatePaper, scorePaper, countdown } from '../src/utils/examEngine.js';
+
+test('Group 2 Mains has two independent 150-minute models and marked practice drills', async () => {
+  const {readFile} = await import('node:fs/promises');
+  for (const exam of ['group2-mains-1', 'group2-mains-2']) {
+    const [model, drill] = JSON.parse(await readFile(new URL(`../public/exams/${exam}.json`, import.meta.url), 'utf8'));
+    assert.equal(EXAMS[exam].minutes, 150);
+    assert.equal(EXAMS[exam].date, null);
+    assert.equal(EXAMS[exam].penalty, 1/3);
+    assert.deepEqual(EXAMS[exam].sections.map(section => section[1]), [75,75]);
+    assert.deepEqual(validatePaper(exam,model.questions,true), []);
+    assert.equal(drill.full,false);
+    assert.deepEqual(validatePaper(exam,drill.questions,false), []);
+    assert.ok(model.questions.every(question => question.explanation && question.source.startsWith('https://')));
+  }
+});
 import { parseExamText } from '../src/utils/parseExamText.js';
 const q={id:'one',question:'Example?',options:['A','B','C','D'],correctAnswer:0,marks:1,type:'MCQ'};
 test('TET never inherits negative marks; blanks never gain marks',()=>{

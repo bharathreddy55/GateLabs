@@ -15,7 +15,10 @@ await context.route('**/*',async route=>{
  if(pathname==='/')return route.fulfill({contentType:'text/html',body:await vite.transformIndexHtml('/',fs.readFileSync('index.html','utf8'))});
  if(pathname.startsWith('/node_modules/')&&/\.(woff2?|ttf)$/.test(pathname)){const file=path.resolve('.'+pathname);if(fs.existsSync(file))return route.fulfill({contentType:'font/woff2',body:fs.readFileSync(file)});}
  const publicFile=path.resolve('public','.'+pathname);
- if(publicFile.startsWith(path.resolve('public')+path.sep)&&fs.existsSync(publicFile)&&fs.statSync(publicFile).isFile())return route.fulfill({contentType:pathname.endsWith('.json')?'application/json':'text/plain',body:fs.readFileSync(publicFile)});
+ if(publicFile.startsWith(path.resolve('public')+path.sep)&&fs.existsSync(publicFile)&&fs.statSync(publicFile).isFile()){
+   const contentType={'.json':'application/json','.svg':'image/svg+xml'}[path.extname(pathname)]||'text/plain';
+   return route.fulfill({contentType,body:fs.readFileSync(publicFile)});
+ }
  try{const transformed=await vite.transformRequest(url.pathname+url.search);if(transformed)return route.fulfill({contentType:'application/javascript',body:transformed.code});}catch(err){console.error(pathname,err.message);}
  return route.fulfill({status:404,body:'Not found'});
 });
@@ -138,10 +141,43 @@ try{
  result=await page.evaluate(()=>JSON.parse(localStorage.getItem('exam-results:exam-test-user')).find(a=>a.examId==='gate'));
  assert.equal(result.score,3);
  assert.equal(result.mode,'practice');
+ await page.goto('http://127.0.0.1:3011/#/group2');
+ await page.getByRole('navigation',{name:'Group 2 stage'}).getByRole('link',{name:'Mains'}).click();
+ await page.locator('#prep-group2-mains-1').waitFor();
+ assert.match(await page.locator('.countdown-badge').textContent(),/Schedule pending/);
+ await page.locator('[data-prep-tab=papers]').click();
+ assert.ok(await page.getByRole('link',{name:/2025 Mains · Paper I, Series A/}).isVisible());
+ await page.locator('[data-prep-tab=mocks]').click();
+ await page.getByRole('button',{name:'Start full mock'}).click();
+ await page.getByRole('button',{name:'Begin test',exact:true}).click();
+ assert.equal(await page.locator('[data-question]').count(),150);
+ await page.getByRole('button',{name:'Submit test',exact:true}).click();
+ await page.getByRole('heading',{name:'Exam complete',exact:true}).waitFor();
+ await page.getByRole('link',{name:'Return to preparation'}).click();
+ await page.locator('#prep-group2-mains-1').waitFor();
+ await page.getByRole('navigation',{name:'Mains paper'}).getByRole('link',{name:'Paper II'}).click();
+ await page.locator('#prep-group2-mains-2').waitFor();
+ await page.locator('[data-prep-tab=notes]').click();
+ await page.locator('[data-panel=notes] [data-note-id]').first().click();
+ await page.getByRole('img',{name:/Visual study guide for National Income/}).waitFor();
+ await page.locator('[data-prep-tab=mocks]').click();
+ assert.ok(await page.getByRole('button',{name:'Start CBT drill'}).isVisible());
+ await page.getByRole('button',{name:'Start full mock'}).click();
+ await page.getByRole('button',{name:'Begin test',exact:true}).click();
+ assert.equal(await page.locator('[data-question]').count(),150);
+ const wrongMains=await page.evaluate(async()=>{const {MockTest}=await import('/src/pages/ExamRunner.js');return (MockTest.questions[0].correctAnswer+1)%4;});
+ await page.locator(`[data-answer="${wrongMains}"]`).check();
+ await page.getByRole('button',{name:'Submit test',exact:true}).click();
+ await page.getByRole('heading',{name:'Exam complete',exact:true}).waitFor();
+ result=await page.evaluate(()=>JSON.parse(localStorage.getItem('exam-results:exam-test-user')).find(a=>a.examId==='group2-mains-2'));
+ assert.equal(result.score,-1/3);
+ assert.equal(result.skippedCount,149);
+ await page.getByRole('link',{name:'Return to preparation'}).click();
+ await page.locator('#prep-group2-mains-2').waitFor();
  await page.goto('http://127.0.0.1:3011/#/analytics');await page.locator('#analytics-exam-filter').waitFor();
  await page.locator('#analytics-exam-filter').selectOption('group2');
  await page.locator('#analytics-exam-filter').waitFor();
  assert.equal(await page.locator('#analytics-exam-filter').inputValue(),'group2');
  assert.deepEqual(errors,[]);
- console.log('PASS: CBT launches and scoring for all five exams, palette state across reload, mobile layout, RRB timeout, SBI section locks and GATE numeric/multiple-select answers. Firebase is stubbed.');
+ console.log('PASS: CBT across all five exams, including Group 2 Mains routes, guides, scoring and saved results; mobile layout, SBI locks and GATE answer types. Firebase is stubbed.');
 }finally{await browser.close();await vite.close();}

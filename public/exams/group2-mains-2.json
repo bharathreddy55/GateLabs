@@ -1,0 +1,2737 @@
+[
+  {
+    "title": "APPSC Group 2 Mains Paper II · Model 1",
+    "category": "Original model",
+    "provenance": "GateLabs original mock based on Notification 37/2026, Annexure II. Separate paper with 75 questions in each of its two sections. Includes recall and applied questions. Chapter counts are editorial practice choices.",
+    "questions": [
+      {
+        "id": "group2-mains-2-model-money-banking-fiscal-trade-2",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Money, Banking, Public Finance and External Accounts",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "What does a current-account deficit mean by itself?",
+        "options": [
+          "A country has no financial inflows",
+          "Every imported product costs more than its exported counterpart",
+          "Government spending exceeds all tax revenue",
+          "Current-account payments exceed receipts under the balance of payments convention"
+        ],
+        "correctAnswer": 3,
+        "explanation": "The current account includes goods, services and specified income flows and transfers."
+      },
+      {
+        "id": "group2-mains-2-model-indian-sectors-10",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Indian Agriculture, Industry and Services",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Which factor directly lowers firms' transaction costs in regulatory compliance?",
+        "options": [
+          "Requiring identical repeated paperwork",
+          "Duplicating every inspection",
+          "Clear and predictable procedures",
+          "Changing approvals without notice"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Predictability and fewer duplications can lower compliance costs."
+      },
+      {
+        "id": "group2-mains-2-model-ap-productive-sectors-1",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Andhra Pradesh Agriculture, Industry and Services",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Why do irrigated deltas and semi-arid uplands often have different crop mixes?",
+        "options": [
+          "District names determine yields mechanically",
+          "Water availability and local production conditions differ",
+          "All input costs are legally fixed at one level",
+          "Only national population explains crop choice"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Water, soils, market access and risk affect crop decisions."
+      },
+      {
+        "id": "group2-mains-2-model-money-banking-fiscal-trade-14",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Money, Banking, Public Finance and External Accounts",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Which comparison best separates nominal rates from actual realised budget figures?",
+        "options": [
+          "Assume no exemptions affect the base",
+          "Treat every budget estimate as audited",
+          "Read the enacted rate and compare revenue receipts in the relevant statement",
+          "Infer tax collections from the announced rate alone"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Realised receipts depend on the tax base and compliance as well as statutory rates."
+      },
+      {
+        "id": "group2-mains-2-model-ap-productive-sectors-6",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Andhra Pradesh Agriculture, Industry and Services",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Which infrastructure primarily improves connectivity over a production corridor?",
+        "options": [
+          "An increase in book sales without logistics changes",
+          "A single local tax announcement",
+          "Integrated freight, power and logistics networks",
+          "Removal of all feeder roads"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Corridors connect clusters and markets through supporting infrastructure."
+      },
+      {
+        "id": "group2-mains-2-model-ap-economy-budget-5",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Andhra Pradesh GSDP and State Finances",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Which is an example of a capital expenditure when classified accordingly?",
+        "options": [
+          "Routine interest payments on debt",
+          "Recurring electricity bills for offices",
+          "Ordinary salary payments",
+          "Construction creating a new public asset"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Expenditure creating a public asset is commonly recorded as capital outlay."
+      },
+      {
+        "id": "group2-mains-2-model-ap-economy-budget-11",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Andhra Pradesh GSDP and State Finances",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "A state diverts funds from maintenance to new asset creation. Which indicator most directly records the classification change?",
+        "options": [
+          "Total population change",
+          "Number of districts per region",
+          "Revenue versus capital expenditure breakdown",
+          "Time series of all participating banks"
+        ],
+        "correctAnswer": 2,
+        "explanation": "The relevant budget breakdown shows movement between revenue and capital heads."
+      },
+      {
+        "id": "group2-mains-2-model-national-income-planning-6",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "National Income, Planning and Economic Reform",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Output rises while school completion and health outcomes stagnate. What distinction matters?",
+        "options": [
+          "Economic growth versus broader development",
+          "GDP versus GDP deflator only",
+          "Public debt versus interest payments",
+          "Nominal versus statutory tax rates"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Development includes outcomes beyond aggregate output."
+      },
+      {
+        "id": "group2-mains-2-model-indian-sectors-11",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Indian Agriculture, Industry and Services",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "What does ITES mean in services-sector discussions?",
+        "options": [
+          "Industrial tax exemption schedules",
+          "Inter-state trade entry statistics",
+          "Information technology enabled services",
+          "Integrated thermal energy sources"
+        ],
+        "correctAnswer": 2,
+        "explanation": "ITES refers to services supported or delivered through information technology."
+      },
+      {
+        "id": "group2-mains-2-model-national-income-planning-11",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "National Income, Planning and Economic Reform",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Which description best fits NITI Aayog?",
+        "options": [
+          "Policy institution and platform for cooperative federalism",
+          "Tribunal enforcing international trade codes",
+          "Constitutional auditor of government accounts",
+          "Central bank responsible for issuing banknotes"
+        ],
+        "correctAnswer": 0,
+        "explanation": "NITI Aayog supports policy analysis and cooperative federalism."
+      },
+      {
+        "id": "group2-mains-2-model-national-income-planning-1",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "National Income, Planning and Economic Reform",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "What distinguishes current-price GDP from constant-price GDP?",
+        "options": [
+          "Current-price GDP uses prices prevailing in the measured period",
+          "Constant-price GDP includes only exports",
+          "Current-price GDP ignores domestic output",
+          "Constant-price GDP uses only interest rates"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Nominal output uses prevailing prices; constant prices permit volume comparisons."
+      },
+      {
+        "id": "group2-mains-2-model-indian-sectors-3",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Indian Agriculture, Industry and Services",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Which risk is most direct for a rainfed crop exposed to erratic monsoon onset?",
+        "options": [
+          "Interest rates must immediately change",
+          "Foreign exchange reserves automatically fall by the same proportion",
+          "Planting may be delayed or establishment can fail",
+          "All monsoon variability raises yield simultaneously"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Rainfed crops depend on moisture at critical growth stages."
+      },
+      {
+        "id": "group2-mains-2-model-national-income-planning-5",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "National Income, Planning and Economic Reform",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Using the expenditure approach, how are imports treated in GDP?",
+        "options": [
+          "They are excluded from all purchased goods before any accounting",
+          "They are added to exports",
+          "They count as domestic value added in full",
+          "They are subtracted as part of net exports"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Subtracting imports removes foreign production included in domestic expenditure."
+      },
+      {
+        "id": "group2-mains-2-model-ap-productive-sectors-11",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Andhra Pradesh Agriculture, Industry and Services",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "What can make a port-adjacent manufacturing location attractive?",
+        "options": [
+          "Lower handling costs for imported inputs or outbound shipments",
+          "A guaranteed solution to every labour shortage",
+          "No need for electricity or water",
+          "Identical freight costs for every location"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Proximity to port and freight connections can reduce some logistics costs."
+      },
+      {
+        "id": "group2-mains-2-model-money-banking-fiscal-trade-10",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Money, Banking, Public Finance and External Accounts",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "What does destination-based taxation of consumption generally emphasise?",
+        "options": [
+          "The country issuing a company's shares",
+          "The location of any intermediate raw material in all cases",
+          "The founder's birthplace",
+          "The jurisdiction of consumption or supply destination"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Destination-based taxes attach revenue to consumption destinations under applicable rules."
+      },
+      {
+        "id": "group2-mains-2-model-ap-productive-sectors-4",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Andhra Pradesh Agriculture, Industry and Services",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "What can a cooperative credit institution help pool?",
+        "options": [
+          "The entire Union Budget",
+          "Only central tax devolution",
+          "All exports at a port",
+          "Local savings and lending relationships for members"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Member-based institutions can pool resources and provide local credit."
+      },
+      {
+        "id": "group2-mains-2-ap-economy-budget",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Andhra Pradesh GSDP and State Finances",
+        "type": "MCQ",
+        "question": "Which comparison best measures the difference between a year's original allocation and final recorded spending?",
+        "options": [
+          "Two revised estimates from future years",
+          "Debt stock and GST rate",
+          "GSDP and population only",
+          "Budget estimate and audited actual"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "explanation": "Budget estimates are plans. Actuals show recorded spending for the year.",
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48"
+      },
+      {
+        "id": "group2-mains-2-model-ap-economy-budget-6",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Andhra Pradesh GSDP and State Finances",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "What does a revised estimate indicate in a budget document?",
+        "options": [
+          "An updated estimate for a year whose outcome may still be incomplete",
+          "A proposal solely for a future year",
+          "Always the audited final amount",
+          "An accounting period that omits spending"
+        ],
+        "correctAnswer": 0,
+        "explanation": "A revised estimate updates the original budget estimate for a period."
+      },
+      {
+        "id": "group2-mains-2-model-national-income-planning-13",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "National Income, Planning and Economic Reform",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "If real GDP grows 6% and population grows 2%, approximate real per-capita growth is what?",
+        "options": [
+          "Exactly 8%",
+          "Exactly 2%",
+          "About 6.1%",
+          "About 3.9%"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Divide the output growth factor 1.06 by population growth factor 1.02 and subtract one."
+      },
+      {
+        "id": "group2-mains-2-model-ap-productive-sectors-12",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Andhra Pradesh Agriculture, Industry and Services",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "How should an announced AP IT policy's period be verified?",
+        "options": [
+          "Date it from the first social media post alone",
+          "Read the issued policy and applicable government orders",
+          "Use a different state's industrial notification",
+          "Assume the policy lasts indefinitely"
+        ],
+        "correctAnswer": 1,
+        "explanation": "The actual instrument establishes scope and duration."
+      },
+      {
+        "id": "group2-mains-2-indian-sectors",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Indian Agriculture, Industry and Services",
+        "type": "MCQ",
+        "question": "Output rises with area unchanged. Which measure must have risen?",
+        "options": [
+          "Farm area",
+          "All input prices",
+          "Yield per hectare",
+          "Number of procurement centres"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "explanation": "With a fixed area the change in output comes from higher output per unit of area.",
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48"
+      },
+      {
+        "id": "group2-mains-2-model-ap-economy-budget-12",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Andhra Pradesh GSDP and State Finances",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "For a consistent growth comparison, what should be checked first about two published GSDP figures?",
+        "options": [
+          "Use a comparable price basis, reference period and series",
+          "Ignore the base year",
+          "Assume all estimates are final",
+          "Use the one with the higher numerical value"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Comparability depends on prices, methodology and period."
+      },
+      {
+        "id": "group2-mains-2-model-national-income-planning-9",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "National Income, Planning and Economic Reform",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "A sector has 40% of employment and 20% of aggregate output. What follows under comparable measures?",
+        "options": [
+          "Each worker earns exactly half the national average wage",
+          "Its average output per worker is half the economy-wide average",
+          "The sector has 40% of total productivity",
+          "The national price level is unchanged"
+        ],
+        "correctAnswer": 1,
+        "explanation": "The ratio of output share to employment share gives relative average output per worker."
+      },
+      {
+        "id": "group2-mains-2-model-ap-productive-sectors-13",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Andhra Pradesh Agriculture, Industry and Services",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Which metric can assess loss during transport in a fisheries value chain?",
+        "options": [
+          "Spoilage or quality loss as a share of the quantity shipped",
+          "Number of service categories in the constitution",
+          "State GSDP alone",
+          "Nominal bank rate alone"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Physical and quality losses directly measure cold-chain or handling performance."
+      },
+      {
+        "id": "group2-mains-2-model-money-banking-fiscal-trade-8",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Money, Banking, Public Finance and External Accounts",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "A budget records expenditure 700, tax and other non-debt receipts 560, and interest 50. What is fiscal deficit?",
+        "options": [
+          "190",
+          "140",
+          "90",
+          "260"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Fiscal deficit here is 700 − 560 = 140."
+      },
+      {
+        "id": "group2-mains-2-model-indian-sectors-5",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Indian Agriculture, Industry and Services",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "What does issue price refer to in a food distribution context?",
+        "options": [
+          "Only the transporter's freight charge",
+          "The exchange rate for agricultural imports",
+          "The highest farm-gate auction price",
+          "Price at which stocks are supplied under the specified arrangement"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Issue prices concern release or distribution of procured stocks."
+      },
+      {
+        "id": "group2-mains-2-model-ap-economy-budget-2",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Andhra Pradesh GSDP and State Finances",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Which adjustment forms an average per-capita measure?",
+        "options": [
+          "Subtract imports from population",
+          "Divide the specified income or output aggregate by population",
+          "Divide fiscal deficit by area",
+          "Divide all state revenue by exports only"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Per-capita amounts are divided by the relevant population."
+      },
+      {
+        "id": "group2-mains-2-model-indian-sectors-1",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Indian Agriculture, Industry and Services",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Why does crop area alone fail to measure production?",
+        "options": [
+          "Prices determine physical output by definition",
+          "Yield per unit of area also matters",
+          "Every crop has the same yield",
+          "Area automatically includes the full quantity harvested"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Production equals area times yield."
+      },
+      {
+        "id": "group2-mains-2-model-ap-economy-budget-8",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Andhra Pradesh GSDP and State Finances",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "If total interest paid rises, which expenditure component is directly affected?",
+        "options": [
+          "Interest payments within the appropriate revenue expenditure head",
+          "Only share of Union taxes",
+          "Area under horticulture",
+          "Own tax receipts by the same amount"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Interest constitutes an expenditure commitment in public finance."
+      },
+      {
+        "id": "group2-mains-2-model-national-income-planning-8",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "National Income, Planning and Economic Reform",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Which quantity best measures an occupational share?",
+        "options": [
+          "Sector value added divided by all expenditure",
+          "Total crop area divided by population",
+          "Domestic investment divided by exports",
+          "Workers in an activity divided by total workers under the same definition"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Occupational shares use employment counts, not output."
+      },
+      {
+        "id": "group2-mains-2-model-money-banking-fiscal-trade-12",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Money, Banking, Public Finance and External Accounts",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "What makes public debt different from fiscal deficit?",
+        "options": [
+          "Both are always equal",
+          "Debt is a flow and deficit a stock",
+          "Debt is a stock and deficit is a flow",
+          "Debt equals annual interest payments only"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Debt is measured at a date while fiscal deficit accumulates over a period."
+      },
+      {
+        "id": "group2-mains-2-model-indian-sectors-7",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Indian Agriculture, Industry and Services",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "What does agricultural credit primarily enable?",
+        "options": [
+          "Eliminating physical crop risk by itself",
+          "Replacing all sales receipts permanently",
+          "Guaranteeing a fixed crop yield",
+          "Paying for inputs and investment over time"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Credit helps bridge the timing gap between expenses and receipts."
+      },
+      {
+        "id": "group2-mains-2-model-money-banking-fiscal-trade-4",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Money, Banking, Public Finance and External Accounts",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Which is a likely first-channel effect of tighter monetary policy, other factors equal?",
+        "options": [
+          "Higher short-term financing costs",
+          "Immediate direct increase in government expenditure",
+          "Lower legal reserve requirements in every case",
+          "Automatic rise in agricultural yield"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Tighter policy generally works through financing conditions and demand."
+      },
+      {
+        "id": "group2-mains-2-model-indian-sectors-8",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Indian Agriculture, Industry and Services",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "What is disinvestment in a public-enterprise context?",
+        "options": [
+          "Purchase of additional inventory by a factory",
+          "Issuing currency to replace old notes",
+          "Sale of part or all of a government's equity stake",
+          "An increase in depreciation allowances alone"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Disinvestment concerns government shareholdings."
+      },
+      {
+        "id": "group2-mains-2-model-money-banking-fiscal-trade-13",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Money, Banking, Public Finance and External Accounts",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "How does FDI differ conceptually from passive portfolio holdings?",
+        "options": [
+          "It can occur only in agriculture",
+          "It is the same as an import of goods",
+          "It is necessarily a grant from a foreign government",
+          "It is associated with lasting interest or significant influence under statistical definitions"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Direct investment is distinguished by the investor's lasting interest in the enterprise."
+      },
+      {
+        "id": "group2-mains-2-model-indian-sectors-13",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Indian Agriculture, Industry and Services",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Why might regional industry clusters arise near one another?",
+        "options": [
+          "Absence of links between firms",
+          "Equal transport costs everywhere",
+          "Shared suppliers, labour pools and infrastructure",
+          "A requirement that all sectors use identical inputs"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Agglomeration can lower costs and improve access to expertise and services."
+      },
+      {
+        "id": "group2-mains-2-model-money-banking-fiscal-trade-11",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Money, Banking, Public Finance and External Accounts",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Inter-state supplies under the Indian GST framework generally involve which component?",
+        "options": [
+          "Only SGST levied independently by both states on the same transaction",
+          "IGST",
+          "A stamp duty on all supplies",
+          "Only a municipal property tax"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Integrated GST applies to inter-state taxable supplies under the framework."
+      },
+      {
+        "id": "group2-mains-2-model-national-income-planning-14",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "National Income, Planning and Economic Reform",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Why check whether GDP is a provisional or revised estimate?",
+        "options": [
+          "Provisional values cannot be expressed in rupees",
+          "Later releases may incorporate more complete source data",
+          "Actual GDP is reported only by courts",
+          "Revision means all growth measures become forecasts"
+        ],
+        "correctAnswer": 1,
+        "explanation": "National accounts can be updated when fuller or revised source data are available."
+      },
+      {
+        "id": "group2-mains-2-model-indian-sectors-2",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Indian Agriculture, Industry and Services",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Which pairing typically matches Indian crop seasons?",
+        "options": [
+          "Kharif with the summer monsoon and rabi with the cooler season",
+          "Rabi with the summer monsoon and kharif with winter sowing",
+          "Kharif only with annual factory shutdowns",
+          "Both with identical sowing calendars everywhere"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Kharif cultivation generally follows the summer monsoon, while rabi crops grow in the cool season."
+      },
+      {
+        "id": "group2-mains-2-model-money-banking-fiscal-trade-7",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Money, Banking, Public Finance and External Accounts",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "How is primary deficit ordinarily obtained?",
+        "options": [
+          "Revenue deficit plus interest payments",
+          "Fiscal deficit plus net exports",
+          "Total debt minus capital expenditure",
+          "Fiscal deficit minus interest payments"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Primary deficit removes interest payments from fiscal deficit."
+      },
+      {
+        "id": "group2-mains-2-national-income-planning",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "National Income, Planning and Economic Reform",
+        "type": "MCQ",
+        "question": "Which adjustment converts a gross aggregate to a net aggregate?",
+        "options": [
+          "Subtract consumption of fixed capital",
+          "Add net exports",
+          "Subtract all taxes",
+          "Add government transfers"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "explanation": "Net national-account aggregates deduct consumption of fixed capital.",
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48"
+      },
+      {
+        "id": "group2-mains-2-model-money-banking-fiscal-trade-1",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Money, Banking, Public Finance and External Accounts",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Which function of money lets it express prices in a common denomination?",
+        "options": [
+          "Medium of exchange only",
+          "Store of value only",
+          "Fiscal multiplier",
+          "Unit of account"
+        ],
+        "correctAnswer": 3,
+        "explanation": "The unit of account provides a shared scale for prices and obligations."
+      },
+      {
+        "id": "group2-mains-2-model-money-banking-fiscal-trade-6",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Money, Banking, Public Finance and External Accounts",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "What is revenue deficit?",
+        "options": [
+          "Fiscal deficit minus interest payments",
+          "Capital expenditure minus asset sales",
+          "Revenue expenditure minus revenue receipts",
+          "Total borrowing minus tax arrears"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Revenue deficit compares expenditure and receipts on the revenue account."
+      },
+      {
+        "id": "group2-mains-2-model-ap-economy-budget-4",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Andhra Pradesh GSDP and State Finances",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Which is normally an example of state non-tax revenue?",
+        "options": [
+          "Fees and user charges recorded under non-tax heads",
+          "An increase in state borrowings",
+          "All state GST receipts",
+          "Proceeds of shareable central income tax"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Government service fees and user charges commonly fall under non-tax receipts."
+      },
+      {
+        "id": "group2-mains-2-model-indian-sectors-9",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Indian Agriculture, Industry and Services",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Which symptom can indicate industrial sickness without identifying its cause?",
+        "options": [
+          "Shortening a product name",
+          "Persistent inability to meet financial obligations",
+          "Opening a new export warehouse with rising sales",
+          "Changing the company's logo"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Financial distress is a symptom; causes require separate investigation."
+      },
+      {
+        "id": "group2-mains-2-model-ap-productive-sectors-9",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Andhra Pradesh Agriculture, Industry and Services",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Which linkage can help MSMEs scale production?",
+        "options": [
+          "Banning transport between industrial sites",
+          "Reliable supplier relationships and access to finance",
+          "Replacing invoices with informal promises in every case",
+          "Closing all small-unit credit facilities"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Finance and supply-chain links help firms respond to demand and procure inputs."
+      },
+      {
+        "id": "group2-mains-2-model-ap-productive-sectors-2",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Andhra Pradesh Agriculture, Industry and Services",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Which is a key allied-sector activity for the AP coast?",
+        "options": [
+          "Coal mining everywhere along the coast",
+          "Aquaculture and fisheries",
+          "Census tabulation only",
+          "Inland snow tourism only"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Coastal and brackish areas provide suitable locations for parts of the fisheries sector."
+      },
+      {
+        "id": "group2-mains-2-model-ap-economy-budget-10",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Andhra Pradesh GSDP and State Finances",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Why inspect both the Annual Financial Statement and demanded grants?",
+        "options": [
+          "One gives only inflation and the other only export totals",
+          "They must always have different financial years",
+          "One shows aggregate fiscal plans and the other details allocations to demands",
+          "Both give institution-wise election results"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Together the statements expose aggregate and spending-level detail."
+      },
+      {
+        "id": "group2-mains-2-model-national-income-planning-7",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "National Income, Planning and Economic Reform",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Which sector normally includes banking and retail?",
+        "options": [
+          "Services",
+          "Manufacturing only",
+          "Mining only",
+          "Agriculture and allied production"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Financial and retail activities are services."
+      },
+      {
+        "id": "group2-mains-2-model-national-income-planning-10",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "National Income, Planning and Economic Reform",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Which reform was a prominent component of India's 1991 industrial changes?",
+        "options": [
+          "Mandatory licensing for every new firm",
+          "Replacement of all banks by a single bank",
+          "Elimination of all tariffs immediately",
+          "Removal of licensing requirements in many industries"
+        ],
+        "correctAnswer": 3,
+        "explanation": "The reforms reduced the reach of industrial licensing."
+      },
+      {
+        "id": "group2-mains-2-model-national-income-planning-4",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "National Income, Planning and Economic Reform",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Which term distinguishes GNI from GDP?",
+        "options": [
+          "Net primary income from the rest of the world",
+          "All imports and domestic purchases",
+          "Domestic investment by every resident",
+          "Consumption of fixed capital only"
+        ],
+        "correctAnswer": 0,
+        "explanation": "GNI adds net primary income across borders to GDP."
+      },
+      {
+        "id": "group2-mains-2-ap-productive-sectors",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Andhra Pradesh Agriculture, Industry and Services",
+        "type": "MCQ",
+        "question": "Which facility most directly slows post-harvest deterioration in perishable produce?",
+        "options": [
+          "A tax tribunal",
+          "Cold storage",
+          "A dry mineral stockyard",
+          "A voting station"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "explanation": "Temperature-controlled storage extends the usable distribution time of many perishable foods.",
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48"
+      },
+      {
+        "id": "group2-mains-2-model-ap-productive-sectors-7",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Andhra Pradesh Agriculture, Industry and Services",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "What is the main purpose of an industrial single-window system?",
+        "options": [
+          "Coordinate approval applications through a common channel",
+          "Replace all industrial lending",
+          "Set the price of every product",
+          "Automatically exempt all projects from statutory requirements"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Single-window systems facilitate handling of approvals without eliminating statutory obligations."
+      },
+      {
+        "id": "group2-mains-2-model-money-banking-fiscal-trade-5",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Money, Banking, Public Finance and External Accounts",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Which scenario most directly represents cost-push inflation?",
+        "options": [
+          "A change in the calendar of statistical releases",
+          "A fall in production costs and selling prices",
+          "A one-time fall in prices due to ample supply",
+          "A broad input-cost shock raises selling prices"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Rising costs can put upward pressure on prices even without stronger demand."
+      },
+      {
+        "id": "group2-mains-2-model-indian-sectors-6",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Indian Agriculture, Industry and Services",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Why can access to storage improve a grower’s marketing choice?",
+        "options": [
+          "It fixes all spot market prices nationally",
+          "It always replaces the need for credit",
+          "It can reduce pressure to sell immediately after harvest",
+          "It removes quality differences"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Storage can allow timing sales and preserve produce when conditions are suitable."
+      },
+      {
+        "id": "group2-mains-2-model-ap-productive-sectors-3",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Andhra Pradesh Agriculture, Industry and Services",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Why are dairy and poultry counted when studying agriculture and allied sectors?",
+        "options": [
+          "They form important animal husbandry and farm-income activities",
+          "They represent only customs revenue",
+          "They are always classified as large-scale mining",
+          "They are solely services exports"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Animal husbandry includes production and associated farm livelihoods."
+      },
+      {
+        "id": "group2-mains-2-model-national-income-planning-3",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "National Income, Planning and Economic Reform",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "GDP at market prices is related to GVA at basic prices by which adjustment?",
+        "options": [
+          "Add only interest paid abroad",
+          "Subtract government borrowing",
+          "Add product taxes and subtract product subsidies",
+          "Subtract all product taxes and add all subsidies"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Net taxes on products bridge these valuation concepts."
+      },
+      {
+        "id": "group2-mains-2-model-ap-economy-budget-7",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Andhra Pradesh GSDP and State Finances",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "What would measure a state's debt burden relative to its economy?",
+        "options": [
+          "Share of services in total employment",
+          "Outstanding liabilities divided by GSDP for compatible periods",
+          "Expenditure divided by number of ministries",
+          "Exports divided by imports only"
+        ],
+        "correctAnswer": 1,
+        "explanation": "A liabilities-to-GSDP ratio scales a debt stock to the size of the economy."
+      },
+      {
+        "id": "group2-mains-2-model-money-banking-fiscal-trade-3",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Money, Banking, Public Finance and External Accounts",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Which body determines India's policy rate under the monetary policy framework?",
+        "options": [
+          "GST Council",
+          "Monetary Policy Committee",
+          "Central Information Commission",
+          "Finance Commission"
+        ],
+        "correctAnswer": 1,
+        "explanation": "The MPC determines the policy rate required under the inflation-targeting framework."
+      },
+      {
+        "id": "group2-mains-2-model-national-income-planning-2",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "National Income, Planning and Economic Reform",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "What is consumption of fixed capital?",
+        "options": [
+          "The full value of all inventory sold",
+          "Government's interest payments",
+          "The total asset stock of households",
+          "An allowance for economic depreciation of produced fixed assets"
+        ],
+        "correctAnswer": 3,
+        "explanation": "It measures the decline in asset value attributable to use and normal ageing."
+      },
+      {
+        "id": "group2-mains-2-model-indian-sectors-12",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Indian Agriculture, Industry and Services",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Which figure would show a service industry's export performance most directly?",
+        "options": [
+          "Only the number of local shop licences",
+          "Aggregate population in the state",
+          "Physical crop output in its district",
+          "Value of its services sold to non-residents"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Services exports record relevant sales to non-residents."
+      },
+      {
+        "id": "group2-mains-2-model-ap-economy-budget-13",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Andhra Pradesh GSDP and State Finances",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "How do central tax devolution and specific-purpose grants differ?",
+        "options": [
+          "They represent distinct transfer mechanisms with different rules",
+          "Every grant is automatically included in own tax revenue",
+          "Specific grants are always identical across states",
+          "Tax devolution is an external commercial loan"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Transfer categories differ by their basis and conditions."
+      },
+      {
+        "id": "group2-mains-2-model-ap-productive-sectors-14",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Andhra Pradesh Agriculture, Industry and Services",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Which Andhra Pradesh budget volume is a direct starting point for planned allocations to the industries department?",
+        "options": [
+          "Only an unrelated state's Outcome Budget",
+          "The detailed Industries and Commerce demand volume",
+          "A monthly RBI policy rate statement",
+          "The National Accounts Statistics methodology volume"
+        ],
+        "correctAnswer": 1,
+        "explanation": "AP Finance lists the Industries and Commerce demand within its 2026–27 budget volumes."
+      },
+      {
+        "id": "group2-mains-2-model-ap-economy-budget-1",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Andhra Pradesh GSDP and State Finances",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "What boundary matters most in a State Domestic Product estimate?",
+        "options": [
+          "Location of any purchaser in the world",
+          "Only the birthplace of each producer",
+          "Location of the Union finance ministry",
+          "Production within the state economy under the accounting definition"
+        ],
+        "correctAnswer": 3,
+        "explanation": "State domestic product measures production attributed to a state's economy."
+      },
+      {
+        "id": "group2-mains-2-model-indian-sectors-4",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Indian Agriculture, Industry and Services",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "What does procurement refer to?",
+        "options": [
+          "An announced minimum price alone",
+          "A forecast of future rainfall",
+          "Actual purchase under applicable arrangements",
+          "Every private sale at a market yard"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Procurement is a transaction, distinct from the MSP announcement."
+      },
+      {
+        "id": "group2-mains-2-model-ap-productive-sectors-8",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Andhra Pradesh Agriculture, Industry and Services",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "What does an industrial incentive eligibility document tell applicants?",
+        "options": [
+          "Which firms, activities and expenditures qualify and how to claim",
+          "The audited GSDP of every district",
+          "The Monetary Policy Committee schedule",
+          "Every port's cargo tonnage"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Eligibility and claim rules should be read separately from project announcements."
+      },
+      {
+        "id": "group2-mains-2-model-ap-productive-sectors-5",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Andhra Pradesh Agriculture, Industry and Services",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "What is one purpose of regulated agricultural markets?",
+        "options": [
+          "Provide an organised framework for sale and market practices",
+          "Set state boundary changes",
+          "Determine the repo rate",
+          "Measure wildlife trade globally"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Market institutions organise trading and may set market procedures."
+      },
+      {
+        "id": "group2-mains-2-model-ap-economy-budget-9",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Andhra Pradesh GSDP and State Finances",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Which distinction is needed when comparing a Union grant and an externally aided project?",
+        "options": [
+          "Both are necessarily state own-tax revenue",
+          "Different financing sources and accounting arrangements",
+          "Neither can appear in a state budget",
+          "Both are automatically the same kind of loan"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Track the grant or financing channel and the budget treatment."
+      },
+      {
+        "id": "group2-mains-2-model-ap-economy-budget-3",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Andhra Pradesh GSDP and State Finances",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Which example is an own-tax receipt for a state under the GST framework?",
+        "options": [
+          "A grant from the Union government",
+          "State GST on applicable intra-state supplies",
+          "Interest on treasury investments",
+          "Proceeds from a loan"
+        ],
+        "correctAnswer": 1,
+        "explanation": "State GST is a state tax receipt; grants, interest and loans are different receipts."
+      },
+      {
+        "id": "group2-mains-2-model-money-banking-fiscal-trade-9",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Money, Banking, Public Finance and External Accounts",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Using the same definitions, what happens to primary deficit if fiscal deficit stays fixed and interest payments rise?",
+        "options": [
+          "It rises by the same amount",
+          "It remains exactly the same",
+          "It becomes equal to total public debt",
+          "It falls"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Primary deficit equals fiscal deficit less interest."
+      },
+      {
+        "id": "group2-mains-2-money-banking-fiscal-trade",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Money, Banking, Public Finance and External Accounts",
+        "type": "MCQ",
+        "question": "Where do foreign direct investment flows ordinarily appear in balance of payments accounting?",
+        "options": [
+          "Goods trade",
+          "Financial account",
+          "Primary income only",
+          "Revenue budget"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "explanation": "FDI is recorded under direct investment in the financial account.",
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48"
+      },
+      {
+        "id": "group2-mains-2-model-ap-productive-sectors-10",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Andhra Pradesh Agriculture, Industry and Services",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Which choice best classifies software support delivered remotely?",
+        "options": [
+          "Cultivation of a perennial crop",
+          "An IT-enabled or software service depending on the activity",
+          "Manufacture of all electronic components",
+          "Local property tax revenue"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Remote software-related support is broadly a service activity."
+      },
+      {
+        "id": "group2-mains-2-model-ap-economy-budget-14",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Andhra Pradesh GSDP and State Finances",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Why is a sector's contribution to GSDP different from the budget allocation to that sector?",
+        "options": [
+          "They are always numerically equal",
+          "Both only measure non-tax revenues",
+          "Value added measures production while allocation is public spending provision",
+          "Budget allocation determines private production one-to-one"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Fiscal allocation and economic value added measure different phenomena."
+      },
+      {
+        "id": "group2-mains-2-model-indian-sectors-14",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Indian Agriculture, Industry and Services",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "Which sectoral comparison helps detect whether output growth was job-intensive?",
+        "options": [
+          "Only changes in nominal exchange rates",
+          "Number of budget volumes issued",
+          "Change in employment alongside change in output",
+          "Industrial area alone"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Output and employment changes together illustrate the employment intensity of growth."
+      },
+      {
+        "id": "group2-mains-2-model-national-income-planning-12",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "National Income, Planning and Economic Reform",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48",
+        "question": "What is an example of fiscal decentralisation?",
+        "options": [
+          "Centralising all local service decisions in one ministry",
+          "Counting agricultural jobs under services",
+          "Granting local bodies both funding and authority for assigned functions",
+          "Increasing the total currency stock"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Fiscal decentralisation concerns spending and resource authority at subnational levels."
+      },
+      {
+        "id": "group2-mains-2-model-technology-missions-10",
+        "section": "Science and Technology",
+        "topic": "Indian Science, Technology and Public Missions",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "Which measure strengthens cybersecurity without changing a department's legal mission?",
+        "options": [
+          "Multi-factor authentication and documented incident response",
+          "Disabling logging for every public service",
+          "Publishing users' credentials",
+          "Sharing one password across users"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Strong authentication and response procedures support resilience."
+      },
+      {
+        "id": "group2-mains-2-model-energy-management-5",
+        "section": "Science and Technology",
+        "topic": "Energy Management, Renewables and Bharat Stage Rules",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "A plant rated at 50 MW produces 600 MWh in 24 hours. What is its capacity factor?",
+        "options": [
+          "100%",
+          "12%",
+          "50%",
+          "25%"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Its maximum at continuous rated power is 1,200 MWh and actual output is half of it."
+      },
+      {
+        "id": "group2-mains-2-model-waste-pollution-remediation-3",
+        "section": "Science and Technology",
+        "topic": "Waste, Pollution and Environmental Remediation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "Which operation is suitable for many properly segregated biodegradable organics?",
+        "options": [
+          "Mixing into scrap metal",
+          "Permanent disposal in a storm drain",
+          "Composting",
+          "Storage with all hazardous materials"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Composting uses biological breakdown of organic materials under managed conditions."
+      },
+      {
+        "id": "group2-mains-2-model-environment-sustainability-health-4",
+        "section": "Science and Technology",
+        "topic": "Climate, Sustainable Development and Public Health",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "What do nationally determined contributions address under the Paris Agreement?",
+        "options": [
+          "Countries' stated climate action contributions",
+          "Election boundaries between regions",
+          "A requirement that every country has identical legislation",
+          "Only the management of wildlife trade"
+        ],
+        "correctAnswer": 0,
+        "explanation": "NDCs are national contributions communicated in the Paris Agreement process."
+      },
+      {
+        "id": "group2-mains-2-model-ecosystems-biodiversity-11",
+        "section": "Science and Technology",
+        "topic": "Ecosystems, Biodiversity and Conservation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "Which agreement focuses broadly on conservation, sustainable use and benefit sharing?",
+        "options": [
+          "Convention on Biological Diversity",
+          "Montreal Protocol",
+          "Convention on Road Traffic",
+          "Paris Agreement alone"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Those are the core objectives of the CBD."
+      },
+      {
+        "id": "group2-mains-2-model-ecosystems-biodiversity-8",
+        "section": "Science and Technology",
+        "topic": "Ecosystems, Biodiversity and Conservation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "Which is an in-situ conservation measure?",
+        "options": [
+          "Maintaining specimens only in a laboratory",
+          "Protecting a species in its natural habitat",
+          "Studying preserved specimens only in a museum",
+          "Storing seeds only in an off-site bank"
+        ],
+        "correctAnswer": 1,
+        "explanation": "In-situ protection maintains organisms and ecological relationships in natural settings."
+      },
+      {
+        "id": "group2-mains-2-model-energy-management-9",
+        "section": "Science and Technology",
+        "topic": "Energy Management, Renewables and Bharat Stage Rules",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "What is an example of demand-side management?",
+        "options": [
+          "Closing the demand forecasting office",
+          "Shifting flexible electricity use away from peak hours",
+          "Increasing the number of generation reports only",
+          "Adding the same load at every existing peak"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Demand-side measures change electricity consumption or its timing."
+      },
+      {
+        "id": "group2-mains-2-model-technology-missions-7",
+        "section": "Science and Technology",
+        "topic": "Indian Science, Technology and Public Missions",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "What historical subject does IGMDP refer to?",
+        "options": [
+          "National Biofuel Mission only",
+          "Satellite weather forecasting programme",
+          "Integrated Guided Missile Development Programme",
+          "A rural digital licensing system"
+        ],
+        "correctAnswer": 2,
+        "explanation": "IGMDP is the historical programme name used in India's defence technology context."
+      },
+      {
+        "id": "group2-mains-2-model-technology-missions-12",
+        "section": "Science and Technology",
+        "topic": "Indian Science, Technology and Public Missions",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "What physical process supplies heat in conventional nuclear power reactors?",
+        "options": [
+          "Combustion of coal in every reactor",
+          "Solar photovoltaic conversion",
+          "Chemical neutralisation alone",
+          "Controlled nuclear fission"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Fission releases heat that can be used to produce electricity."
+      },
+      {
+        "id": "group2-mains-2-model-waste-pollution-remediation-1",
+        "section": "Science and Technology",
+        "topic": "Waste, Pollution and Environmental Remediation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "Which option is highest in a typical waste management hierarchy?",
+        "options": [
+          "Preventing material from becoming waste",
+          "Landfilling mixed waste first",
+          "Final disposal",
+          "Burning all recyclable materials"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Prevention avoids generating the waste in the first place."
+      },
+      {
+        "id": "group2-mains-2-model-energy-management-11",
+        "section": "Science and Technology",
+        "topic": "Energy Management, Renewables and Bharat Stage Rules",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "Which evidence best tests a biofuel's sustainability?",
+        "options": [
+          "Presence of one vehicle advertisement",
+          "Its name alone",
+          "Life-cycle emissions, land and water effects and feedstock sourcing",
+          "Only the colour of the blended fuel"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Sustainability depends on upstream and downstream impacts."
+      },
+      {
+        "id": "group2-mains-2-model-technology-missions-14",
+        "section": "Science and Technology",
+        "topic": "Indian Science, Technology and Public Missions",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "What is a relevant Digital India inclusion concern?",
+        "options": [
+          "The number of ships in a historical fleet",
+          "Joule conversion constants alone",
+          "Only the brand of the oldest computer",
+          "Access, connectivity and ability to use a service"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Access and skills affect who benefits from digital public infrastructure."
+      },
+      {
+        "id": "group2-mains-2-model-waste-pollution-remediation-13",
+        "section": "Science and Technology",
+        "topic": "Waste, Pollution and Environmental Remediation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "Which instrument commonly sets obligations for different waste streams in India?",
+        "options": [
+          "An electoral symbol register",
+          "Population growth estimates alone",
+          "A historical temple inscription",
+          "Applicable environmental rules and authorisations"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Different waste categories are regulated through applicable laws, rules and permissions."
+      },
+      {
+        "id": "group2-mains-2-model-ecosystems-biodiversity-14",
+        "section": "Science and Technology",
+        "topic": "Ecosystems, Biodiversity and Conservation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "What distinction matters when comparing a CITES appendix and a Red List category?",
+        "options": [
+          "Trade-control status and assessed extinction risk use different frameworks",
+          "Both classifications are always identical",
+          "Only CITES measures electricity capacity",
+          "Both establish municipal election terms"
+        ],
+        "correctAnswer": 0,
+        "explanation": "CITES regulates trade, while Red List assessment concerns extinction risk."
+      },
+      {
+        "id": "group2-mains-2-model-ecosystems-biodiversity-6",
+        "section": "Science and Technology",
+        "topic": "Ecosystems, Biodiversity and Conservation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "What makes a region qualify for hotspot designation under the commonly used approach?",
+        "options": [
+          "High rainfall alone without endemism",
+          "Any landscape with low annual temperatures",
+          "Any region containing one protected building",
+          "High endemic plant diversity and substantial historical habitat loss"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Hotspot criteria combine endemism and substantial loss of original habitat."
+      },
+      {
+        "id": "group2-mains-2-model-energy-management-14",
+        "section": "Science and Technology",
+        "topic": "Energy Management, Renewables and Bharat Stage Rules",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "What is the main electricity-system service provided by storage in a low-demand and high-output interval?",
+        "options": [
+          "Increase energy permanently without input",
+          "Set wholesale electricity taxes",
+          "Remove every transmission constraint",
+          "Shift energy to a later interval when it is needed"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Storage can shift when electricity generated earlier is delivered."
+      },
+      {
+        "id": "group2-mains-2-model-energy-management-1",
+        "section": "Science and Technology",
+        "topic": "Energy Management, Renewables and Bharat Stage Rules",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "A generator delivers 25 MW for 4 hours. How much energy is delivered?",
+        "options": [
+          "6.25 MWh",
+          "100 MWh",
+          "25 MWh",
+          "100 MW"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Energy over the interval equals average power times elapsed time."
+      },
+      {
+        "id": "group2-mains-2-model-technology-missions-13",
+        "section": "Science and Technology",
+        "topic": "Indian Science, Technology and Public Missions",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "How should a candidate verify the date of a new national technology policy?",
+        "options": [
+          "Use the date of the first speculative report alone",
+          "Assume every draft took effect immediately",
+          "Infer it from an earlier mission's acronym",
+          "Check the official issued policy or release and its effective date"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Issuance and effective dates should be distinguished from discussion and draft release."
+      },
+      {
+        "id": "group2-mains-2-model-energy-management-13",
+        "section": "Science and Technology",
+        "topic": "Energy Management, Renewables and Bharat Stage Rules",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "Which Indian authority publishes installed generating capacity reports referenced in the syllabus notes?",
+        "options": [
+          "Finance Commission",
+          "National Archives",
+          "Election Commission of India",
+          "Central Electricity Authority"
+        ],
+        "correctAnswer": 3,
+        "explanation": "CEA publishes official power-sector capacity statistics."
+      },
+      {
+        "id": "group2-mains-2-model-energy-management-10",
+        "section": "Science and Technology",
+        "topic": "Energy Management, Renewables and Bharat Stage Rules",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "What is one common aim of a transport biofuel blending policy?",
+        "options": [
+          "Replace all speed limits",
+          "Substitute part of fossil fuel use with specified biofuel",
+          "Merge all fuel taxes into a property tax",
+          "Set electricity transmission voltage"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Blending mixes an approved biofuel with conventional fuel under specified conditions."
+      },
+      {
+        "id": "group2-mains-2-model-environment-sustainability-health-8",
+        "section": "Science and Technology",
+        "topic": "Climate, Sustainable Development and Public Health",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "Which measure counts newly occurring cases during a defined period, under specified population at risk?",
+        "options": [
+          "Life expectancy at birth",
+          "Prevalence",
+          "Incidence",
+          "Case fatality proportion"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Incidence measures new occurrences in the population or person-time at risk."
+      },
+      {
+        "id": "group2-mains-2-model-environment-sustainability-health-14",
+        "section": "Science and Technology",
+        "topic": "Climate, Sustainable Development and Public Health",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "Why use a dated Ministry release when revising a public health programme?",
+        "options": [
+          "All government programmes have identical eligibility",
+          "Features and coverage may change over time",
+          "Publication date defines disease incidence by itself",
+          "A date proves every programme objective was achieved"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Current programme details should be tied to the applicable release and period."
+      },
+      {
+        "id": "group2-mains-2-technology-missions",
+        "section": "Science and Technology",
+        "topic": "Indian Science, Technology and Public Missions",
+        "type": "MCQ",
+        "question": "What is Aditya-L1 primarily designed to study?",
+        "options": [
+          "Mars's moons",
+          "Earth's ocean floor",
+          "The Sun",
+          "Lunar soil"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "explanation": "Aditya-L1 is India's observatory mission for studying the Sun.",
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html"
+      },
+      {
+        "id": "group2-mains-2-ecosystems-biodiversity",
+        "section": "Science and Technology",
+        "topic": "Ecosystems, Biodiversity and Conservation",
+        "type": "MCQ",
+        "question": "Which agreement regulates international trade in listed wildlife specimens?",
+        "options": [
+          "Paris Agreement",
+          "Montreal Protocol",
+          "Ramsar only",
+          "CITES"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "explanation": "CITES regulates international trade in specimens of listed wild fauna and flora.",
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html"
+      },
+      {
+        "id": "group2-mains-2-environment-sustainability-health",
+        "section": "Science and Technology",
+        "topic": "Climate, Sustainable Development and Public Health",
+        "type": "MCQ",
+        "question": "Which agreement focuses specifically on the phase-out of ozone-depleting substances?",
+        "options": [
+          "Paris Agreement",
+          "CITES",
+          "Montreal Protocol",
+          "Convention on Biological Diversity"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "explanation": "The Montreal Protocol established controls on ozone-depleting substances.",
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html"
+      },
+      {
+        "id": "group2-mains-2-model-environment-sustainability-health-12",
+        "section": "Science and Technology",
+        "topic": "Climate, Sustainable Development and Public Health",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "What does a disability-adjusted life year combine?",
+        "options": [
+          "Average patient travel time and inflation only",
+          "Years of life lost and years lived with disability",
+          "Population size and land area",
+          "All diagnoses without considering duration or severity"
+        ],
+        "correctAnswer": 1,
+        "explanation": "DALYs combine mortality and disability burdens in a common measure."
+      },
+      {
+        "id": "group2-mains-2-model-energy-management-7",
+        "section": "Science and Technology",
+        "topic": "Energy Management, Renewables and Bharat Stage Rules",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "Which is a non-renewable fossil energy source?",
+        "options": [
+          "Wind",
+          "Sunlight",
+          "Coal",
+          "River runoff"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Coal forms over geological time and is depleted when extracted."
+      },
+      {
+        "id": "group2-mains-2-model-waste-pollution-remediation-12",
+        "section": "Science and Technology",
+        "topic": "Waste, Pollution and Environmental Remediation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "Which is a reason to measure pollution after a control intervention?",
+        "options": [
+          "Assume all changes were successful without data",
+          "Replace all applicable source testing automatically",
+          "Determine whether environmental conditions or emissions improved",
+          "Remove the need for a prior baseline"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Follow-up data enables comparison with objectives and baselines."
+      },
+      {
+        "id": "group2-mains-2-model-environment-sustainability-health-1",
+        "section": "Science and Technology",
+        "topic": "Climate, Sustainable Development and Public Health",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "What causes ocean acidification principally?",
+        "options": [
+          "Extra ultraviolet light alone",
+          "Atmospheric cooling eliminates dissolved carbon",
+          "Uptake of atmospheric carbon dioxide changes seawater carbonate chemistry",
+          "An increase in ocean salinity always creates acid rain"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Dissolved carbon dioxide shifts carbonate chemistry and lowers average pH."
+      },
+      {
+        "id": "group2-mains-2-model-waste-pollution-remediation-6",
+        "section": "Science and Technology",
+        "topic": "Waste, Pollution and Environmental Remediation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "What is the purpose of treating wastewater before a permitted discharge?",
+        "options": [
+          "Increase contaminant levels intentionally",
+          "Reduce pollutants and meet relevant standards",
+          "Replace every environmental licence automatically",
+          "Change the identity of the receiving river"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Treatment can lower harmful loads under the applicable standards."
+      },
+      {
+        "id": "group2-mains-2-model-ecosystems-biodiversity-2",
+        "section": "Science and Technology",
+        "topic": "Ecosystems, Biodiversity and Conservation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "Which process returns nutrients from dead organic material to an ecosystem?",
+        "options": [
+          "Decomposition",
+          "Migration alone",
+          "Pollination alone",
+          "Transpiration alone"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Decomposers break down organic material and recycle nutrients."
+      },
+      {
+        "id": "group2-mains-2-model-ecosystems-biodiversity-4",
+        "section": "Science and Technology",
+        "topic": "Ecosystems, Biodiversity and Conservation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "Which type of diversity describes genetic variation within a single crop species?",
+        "options": [
+          "Genetic diversity",
+          "Species richness across phyla",
+          "Linguistic diversity",
+          "Ecosystem diversity"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Genetic diversity concerns variation within and among breeding populations."
+      },
+      {
+        "id": "group2-mains-2-model-waste-pollution-remediation-4",
+        "section": "Science and Technology",
+        "topic": "Waste, Pollution and Environmental Remediation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "What happens in anaerobic digestion?",
+        "options": [
+          "Airborne noise is damped in a barrier",
+          "Metals are melted into new alloys by sunlight",
+          "Organic material breaks down without free oxygen, producing biogas and digestate",
+          "Waste polymer is mechanically shredded without biological activity"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Anaerobic digestion is a biological process under oxygen-limited conditions."
+      },
+      {
+        "id": "group2-mains-2-model-ecosystems-biodiversity-10",
+        "section": "Science and Technology",
+        "topic": "Ecosystems, Biodiversity and Conservation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "What can a wildlife corridor help maintain?",
+        "options": [
+          "Connectivity and movement between habitat patches",
+          "A uniform temperature in every protected area",
+          "Permanent isolation between populations",
+          "The same species count in all regions"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Connectivity can support movement and gene flow."
+      },
+      {
+        "id": "group2-mains-2-model-ecosystems-biodiversity-7",
+        "section": "Science and Technology",
+        "topic": "Ecosystems, Biodiversity and Conservation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "What does endemic mean in biogeography?",
+        "options": [
+          "Introduced by every local community",
+          "Universally present in all ecosystems",
+          "Naturally restricted to a specified geographic area",
+          "Always classified as extinct"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Geographic restriction defines endemism independently of threat category."
+      },
+      {
+        "id": "group2-mains-2-model-energy-management-12",
+        "section": "Science and Technology",
+        "topic": "Energy Management, Renewables and Bharat Stage Rules",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "What do Bharat Stage standards concern?",
+        "options": [
+          "Universal vehicle retail prices",
+          "Royalties on every coal mine",
+          "Village electricity consumption norms only",
+          "Specified road-vehicle air emissions"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Bharat Stage standards set limits on specified vehicle pollutants."
+      },
+      {
+        "id": "group2-mains-2-waste-pollution-remediation",
+        "section": "Science and Technology",
+        "topic": "Waste, Pollution and Environmental Remediation",
+        "type": "MCQ",
+        "question": "Which method specifically uses biological activity to manage contaminants?",
+        "options": [
+          "Bioremediation",
+          "Precision levelling",
+          "Fractional distillation only",
+          "Noise insulation"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "explanation": "Bioremediation relies on suitable organisms or biological processes to transform, remove or immobilise pollutants.",
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html"
+      },
+      {
+        "id": "group2-mains-2-model-ecosystems-biodiversity-13",
+        "section": "Science and Technology",
+        "topic": "Ecosystems, Biodiversity and Conservation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "Which is one threat caused by fragmentation?",
+        "options": [
+          "Reduced movement between separated habitat patches",
+          "Automatic expansion of every species' range",
+          "Increased freedom of movement for every species",
+          "Uniformly improved connectivity"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Fragmentation can isolate populations and disrupt movement."
+      },
+      {
+        "id": "group2-mains-2-model-waste-pollution-remediation-11",
+        "section": "Science and Technology",
+        "topic": "Waste, Pollution and Environmental Remediation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "Which example best illustrates source reduction for packaging waste?",
+        "options": [
+          "Transfer the waste to another town without changing material use",
+          "Redesign packaging to use less material",
+          "Relabel the unchanged packaging",
+          "Collect the same waste for final disposal only"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Source reduction prevents material from entering the waste stream."
+      },
+      {
+        "id": "group2-mains-2-model-waste-pollution-remediation-5",
+        "section": "Science and Technology",
+        "topic": "Waste, Pollution and Environmental Remediation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "Which measure targets industrial air pollution at emission source?",
+        "options": [
+          "Switching the units of ambient data",
+          "Monitoring rainfall alone",
+          "Increasing untreated release",
+          "Appropriate emission controls and cleaner production"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Cleaner production and controls before release reduce emissions."
+      },
+      {
+        "id": "group2-mains-2-model-environment-sustainability-health-7",
+        "section": "Science and Technology",
+        "topic": "Climate, Sustainable Development and Public Health",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "How do the SDGs frame development?",
+        "options": [
+          "They combine social, environmental and economic goals",
+          "They measure only GDP growth",
+          "They prescribe one local administrative map",
+          "They concern electricity prices alone"
+        ],
+        "correctAnswer": 0,
+        "explanation": "The goals span multiple dimensions of sustainable development."
+      },
+      {
+        "id": "group2-mains-2-model-environment-sustainability-health-10",
+        "section": "Science and Technology",
+        "topic": "Climate, Sustainable Development and Public Health",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "What task does public health surveillance serve?",
+        "options": [
+          "Reporting only the health budget",
+          "Setting weather forecasts",
+          "Systematic monitoring and communication of health events for action",
+          "One-time publication with no monitoring"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Surveillance collects and interprets data to support public health action."
+      },
+      {
+        "id": "group2-mains-2-model-energy-management-3",
+        "section": "Science and Technology",
+        "topic": "Energy Management, Renewables and Bharat Stage Rules",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "What does a capacity factor express for an electricity generator?",
+        "options": [
+          "Total plant area divided by regional population",
+          "Output over a period relative to continuous operation at rated output",
+          "Unit price divided by total fuel cost",
+          "Average tariff as a fraction of demand"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Capacity factor compares actual energy and hypothetical continuous rated generation."
+      },
+      {
+        "id": "group2-mains-2-model-environment-sustainability-health-3",
+        "section": "Science and Technology",
+        "topic": "Climate, Sustainable Development and Public Health",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "Where is the ozone layer primarily found?",
+        "options": [
+          "Troposphere only",
+          "Ocean mixed layer",
+          "Earth's inner core",
+          "Stratosphere"
+        ],
+        "correctAnswer": 3,
+        "explanation": "The ozone layer is concentrated in the stratosphere."
+      },
+      {
+        "id": "group2-mains-2-model-ecosystems-biodiversity-12",
+        "section": "Science and Technology",
+        "topic": "Ecosystems, Biodiversity and Conservation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "What is the purpose of zoning in a biosphere reserve?",
+        "options": [
+          "Exclude any local resident from every zone automatically",
+          "Manage conservation and human uses under different zone objectives",
+          "Define electoral boundaries",
+          "Apply the same rules to every activity everywhere"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Different zones organise levels and kinds of conservation and use."
+      },
+      {
+        "id": "group2-mains-2-model-technology-missions-11",
+        "section": "Science and Technology",
+        "topic": "Indian Science, Technology and Public Missions",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "Which is a civil application of radioisotopes?",
+        "options": [
+          "Measuring national GDP directly",
+          "Statutory amendment of tax law",
+          "Medical imaging using suitable tracers",
+          "Obtaining internet access without a signal"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Suitable radioisotopes can act as tracers in diagnostic imaging."
+      },
+      {
+        "id": "group2-mains-2-model-waste-pollution-remediation-7",
+        "section": "Science and Technology",
+        "topic": "Waste, Pollution and Environmental Remediation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "What type of pollution is directly related to sustained high sound levels?",
+        "options": [
+          "Radioactive contamination only",
+          "Noise pollution",
+          "Chemical oxygen demand only",
+          "Thermal pollution only"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Sound exposures can be assessed using appropriate noise measures."
+      },
+      {
+        "id": "group2-mains-2-model-environment-sustainability-health-9",
+        "section": "Science and Technology",
+        "topic": "Climate, Sustainable Development and Public Health",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "Which measure captures existing disease cases at a specified time relative to the population?",
+        "options": [
+          "Point prevalence",
+          "Cumulative annual births",
+          "Average household income",
+          "Only the number of new diagnoses next year"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Point prevalence includes cases present at the chosen time."
+      },
+      {
+        "id": "group2-mains-2-model-technology-missions-8",
+        "section": "Science and Technology",
+        "topic": "Indian Science, Technology and Public Missions",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "Which outcome is most directly associated with e-governance?",
+        "options": [
+          "Orbital insertion of satellites",
+          "Delivery or administration of public services through digital systems",
+          "Replacement of all legal rights with software terms",
+          "Automatic creation of new districts"
+        ],
+        "correctAnswer": 1,
+        "explanation": "E-governance involves use of information systems for public administration and access."
+      },
+      {
+        "id": "group2-mains-2-model-waste-pollution-remediation-9",
+        "section": "Science and Technology",
+        "topic": "Waste, Pollution and Environmental Remediation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "What is one relevant environmental assessment issue for an introduced crop trait?",
+        "options": [
+          "Area of unrelated polar ice alone",
+          "The font on the first product label alone",
+          "The number of business letters archived",
+          "Exposure and possible gene flow in the receiving environment"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Environmental risk assessment considers the particular trait and exposure context."
+      },
+      {
+        "id": "group2-mains-2-model-energy-management-8",
+        "section": "Science and Technology",
+        "topic": "Energy Management, Renewables and Bharat Stage Rules",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "Why does a variable generation mix require system flexibility?",
+        "options": [
+          "All generators always produce the same output",
+          "The physical grid no longer requires balancing",
+          "Energy demand becomes permanently constant",
+          "Output and demand do not necessarily align in time"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Flexibility helps balance supply and demand as available generation varies."
+      },
+      {
+        "id": "group2-mains-2-model-waste-pollution-remediation-10",
+        "section": "Science and Technology",
+        "topic": "Waste, Pollution and Environmental Remediation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "Which practice helps reduce erosion on vulnerable farmland?",
+        "options": [
+          "Keeping all slopes bare during heavy rainfall",
+          "Directing water into uncontrolled gullies",
+          "Maintaining appropriate soil cover",
+          "Removing every vegetative buffer"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Cover can reduce raindrop impact and slow runoff."
+      },
+      {
+        "id": "group2-mains-2-model-waste-pollution-remediation-8",
+        "section": "Science and Technology",
+        "topic": "Waste, Pollution and Environmental Remediation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "Why check ambient measurements and emission data together?",
+        "options": [
+          "Only one can ever use standard units",
+          "Ambient measurements guarantee one unique source",
+          "Both always report exactly the same numerical value",
+          "They answer different questions about exposure and source releases"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Exposure depends on emissions, other sources and dispersion or transport."
+      },
+      {
+        "id": "group2-mains-2-model-technology-missions-9",
+        "section": "Science and Technology",
+        "topic": "Indian Science, Technology and Public Missions",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "What quality lets two public-service systems exchange and use compatible data?",
+        "options": [
+          "Redundancy alone",
+          "Interoperability",
+          "Insolation",
+          "Fiscal consolidation"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Interoperability makes systems work together through compatible data and interfaces."
+      },
+      {
+        "id": "group2-mains-2-model-environment-sustainability-health-5",
+        "section": "Science and Technology",
+        "topic": "Climate, Sustainable Development and Public Health",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "Which action is primarily climate mitigation?",
+        "options": [
+          "Preparing heat shelters for existing exposure",
+          "Reducing fossil electricity emissions by switching to a lower-emission source",
+          "Changing a crop calendar to manage drought",
+          "Elevating a flood-prone clinic"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Mitigation addresses emissions or removals, rather than adjustment to impacts."
+      },
+      {
+        "id": "group2-mains-2-model-ecosystems-biodiversity-9",
+        "section": "Science and Technology",
+        "topic": "Ecosystems, Biodiversity and Conservation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "Which is an ex-situ conservation measure?",
+        "options": [
+          "Restoration of the original wetland only",
+          "A seed bank storing viable material away from its origin",
+          "In-place protection of an entire river catchment",
+          "Regulating visitors within an active national park only"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Ex-situ methods maintain material outside its native habitat."
+      },
+      {
+        "id": "group2-mains-2-model-environment-sustainability-health-13",
+        "section": "Science and Technology",
+        "topic": "Climate, Sustainable Development and Public Health",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "What is a reasonable indicator of access to primary care?",
+        "options": [
+          "Number of national holidays",
+          "Whether people can obtain needed essential services within practical constraints",
+          "Electricity installed capacity alone",
+          "Exports of manufactured goods alone"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Availability, affordability and practical ability to use services determine access."
+      },
+      {
+        "id": "group2-mains-2-model-ecosystems-biodiversity-5",
+        "section": "Science and Technology",
+        "topic": "Ecosystems, Biodiversity and Conservation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "What does species richness count?",
+        "options": [
+          "Total number of individuals of one species",
+          "Number of species within a defined assemblage",
+          "Number of land ownership parcels",
+          "Only total biomass"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Richness counts species rather than individual organisms or their abundance distribution."
+      },
+      {
+        "id": "group2-mains-2-model-technology-missions-2",
+        "section": "Science and Technology",
+        "topic": "Indian Science, Technology and Public Missions",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "What is the function of a satellite launch vehicle?",
+        "options": [
+          "Operate all of the satellite's ground data services",
+          "Determine the topics in national science policy",
+          "Deliver a payload to its planned trajectory or orbit",
+          "Replace the satellite's long-term application"
+        ],
+        "correctAnswer": 2,
+        "explanation": "The launch vehicle places payloads on the required flight path."
+      },
+      {
+        "id": "group2-mains-2-model-waste-pollution-remediation-2",
+        "section": "Science and Technology",
+        "topic": "Waste, Pollution and Environmental Remediation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "Why segregate waste at source?",
+        "options": [
+          "Eliminate the need for safe handling procedures",
+          "Increase contamination of dry recyclables",
+          "Make every material chemically identical",
+          "Keep streams suitable for appropriate processing"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Segregation reduces cross-contamination and supports treatment or recovery."
+      },
+      {
+        "id": "group2-mains-2-model-energy-management-6",
+        "section": "Science and Technology",
+        "topic": "Energy Management, Renewables and Bharat Stage Rules",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "Which is a renewable primary energy source?",
+        "options": [
+          "Wind",
+          "Coal",
+          "Conventional natural gas",
+          "Crude petroleum"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Wind is replenished by atmospheric processes."
+      },
+      {
+        "id": "group2-mains-2-model-technology-missions-1",
+        "section": "Science and Technology",
+        "topic": "Indian Science, Technology and Public Missions",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "What is the principal demonstrated capability of Chandrayaan-3?",
+        "options": [
+          "Returning samples from Mars",
+          "Observing a solar eclipse from Earth orbit only",
+          "Soft landing and roving on the Moon",
+          "Rendezvous with a comet"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Chandrayaan-3 demonstrated safe lunar landing and roving."
+      },
+      {
+        "id": "group2-mains-2-model-energy-management-2",
+        "section": "Science and Technology",
+        "topic": "Energy Management, Renewables and Bharat Stage Rules",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "What measure describes the highest instantaneous load in a time period?",
+        "options": [
+          "Installed fuel stock",
+          "Annual energy consumption",
+          "Peak demand",
+          "Average retail tariff"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Peak demand describes the maximum power required over the interval considered."
+      },
+      {
+        "id": "group2-mains-2-model-ecosystems-biodiversity-1",
+        "section": "Science and Technology",
+        "topic": "Ecosystems, Biodiversity and Conservation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "Which organism is a primary producer in a typical pond food chain?",
+        "options": [
+          "Photosynthetic algae",
+          "A decomposing fungus",
+          "A fish that eats other organisms",
+          "An insect larva feeding on detritus"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Producers make organic material from inorganic sources using an energy source such as light."
+      },
+      {
+        "id": "group2-mains-2-model-technology-missions-4",
+        "section": "Science and Technology",
+        "topic": "Indian Science, Technology and Public Missions",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "Which application most directly uses earth-observation imagery?",
+        "options": [
+          "Monitoring land cover or crop conditions",
+          "Adjudicating a Lokayukta case",
+          "Defining a national exchange rate",
+          "Calculating the terms of a loan contract"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Images can be analysed for spatial and temporal features of land and vegetation."
+      },
+      {
+        "id": "group2-mains-2-model-ecosystems-biodiversity-3",
+        "section": "Science and Technology",
+        "topic": "Ecosystems, Biodiversity and Conservation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "Which is an abiotic component of a freshwater ecosystem?",
+        "options": [
+          "Aquatic algae",
+          "Microbial community",
+          "Fish population",
+          "Water temperature"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Abiotic components are nonliving environmental factors."
+      },
+      {
+        "id": "group2-mains-2-model-technology-missions-3",
+        "section": "Science and Technology",
+        "topic": "Indian Science, Technology and Public Missions",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "Which mission is associated with Mars exploration by ISRO?",
+        "options": [
+          "INSAT meteorology alone",
+          "Aditya-L1",
+          "Chandrayaan-3",
+          "Mars Orbiter Mission"
+        ],
+        "correctAnswer": 3,
+        "explanation": "ISRO's Mars Orbiter Mission carried out an interplanetary mission to Mars."
+      },
+      {
+        "id": "group2-mains-2-model-environment-sustainability-health-11",
+        "section": "Science and Technology",
+        "topic": "Climate, Sustainable Development and Public Health",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "What is a direct preparedness measure for a health emergency?",
+        "options": [
+          "Coordinated referral and surge-capacity planning",
+          "Waiting to organise care until after peak demand",
+          "Using a budget figure as a substitute for operational plans",
+          "Cancelling incident communications"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Preparedness identifies resources and coordination before demand surges."
+      },
+      {
+        "id": "group2-mains-2-model-technology-missions-6",
+        "section": "Science and Technology",
+        "topic": "Indian Science, Technology and Public Missions",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "What does DRDO primarily do at an institutional level?",
+        "options": [
+          "Administer tax devolution",
+          "Manage commercial civil aviation fares",
+          "Compute national accounts",
+          "Defence research and development"
+        ],
+        "correctAnswer": 3,
+        "explanation": "DRDO is India's defence research and development organisation."
+      },
+      {
+        "id": "group2-mains-2-model-waste-pollution-remediation-14",
+        "section": "Science and Technology",
+        "topic": "Waste, Pollution and Environmental Remediation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "Which site factor can affect feasibility of bioremediation?",
+        "options": [
+          "Whether conditions support useful biological activity for the contaminant",
+          "Only the name of the road nearby",
+          "The number of unrelated tax filings",
+          "Whether the site has an election booth"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Biological treatment depends on compatibility among organisms, conditions and pollutants."
+      },
+      {
+        "id": "group2-mains-2-model-energy-management-4",
+        "section": "Science and Technology",
+        "topic": "Energy Management, Renewables and Bharat Stage Rules",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "Why can renewable capacity share differ from renewable generation share?",
+        "options": [
+          "Renewables are measured only in tonnes",
+          "Every plant follows the exact same operating schedule",
+          "Generators operate at different capacity factors",
+          "Capacity and generation are always equal"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Capacity measures rated power while generation reflects actual energy over time."
+      },
+      {
+        "id": "group2-mains-2-energy-management",
+        "section": "Science and Technology",
+        "topic": "Energy Management, Renewables and Bharat Stage Rules",
+        "type": "MCQ",
+        "question": "What does an installed capacity of 100 MW describe?",
+        "options": [
+          "Annual electricity production",
+          "Rated power output capacity",
+          "Staple-crop yield",
+          "Total fuel reserves"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "explanation": "MW is a rate of energy production, while generation over time is measured in MWh.",
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html"
+      },
+      {
+        "id": "group2-mains-2-model-environment-sustainability-health-6",
+        "section": "Science and Technology",
+        "topic": "Climate, Sustainable Development and Public Health",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "Which is an example of climate adaptation?",
+        "options": [
+          "Replacing fossil power solely to cut emissions",
+          "Redesigning drainage for stronger rainfall events",
+          "Inventing a new statistical deflator",
+          "Only measuring national greenhouse-gas emissions"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Adaptation reduces harm from current or expected impacts."
+      },
+      {
+        "id": "group2-mains-2-model-technology-missions-5",
+        "section": "Science and Technology",
+        "topic": "Indian Science, Technology and Public Missions",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "Which organisation leads India's civilian space programmes?",
+        "options": [
+          "ISRO",
+          "Central Electricity Authority",
+          "National Human Rights Commission",
+          "DRDO alone"
+        ],
+        "correctAnswer": 0,
+        "explanation": "ISRO is the national space agency under the Department of Space."
+      },
+      {
+        "id": "group2-mains-2-model-environment-sustainability-health-2",
+        "section": "Science and Technology",
+        "topic": "Climate, Sustainable Development and Public Health",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html",
+        "question": "Which pollutants are major precursors of acid deposition?",
+        "options": [
+          "Sulphur dioxide and nitrogen oxides",
+          "Water vapour and helium",
+          "Hydrogen and neon",
+          "Oxygen and argon"
+        ],
+        "correctAnswer": 0,
+        "explanation": "These oxides can form acidic products in the atmosphere."
+      }
+    ]
+  },
+  {
+    "title": "Mains Paper II · Syllabus sampler",
+    "category": "Original drill",
+    "provenance": "GateLabs original questions. One question per Annexure II syllabus unit across both sections.",
+    "full": false,
+    "questions": [
+      {
+        "id": "group2-mains-2-national-income-planning",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "National Income, Planning and Economic Reform",
+        "type": "MCQ",
+        "question": "Which adjustment converts a gross aggregate to a net aggregate?",
+        "options": [
+          "Subtract consumption of fixed capital",
+          "Add net exports",
+          "Subtract all taxes",
+          "Add government transfers"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "explanation": "Net national-account aggregates deduct consumption of fixed capital.",
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48"
+      },
+      {
+        "id": "group2-mains-2-money-banking-fiscal-trade",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Money, Banking, Public Finance and External Accounts",
+        "type": "MCQ",
+        "question": "Where do foreign direct investment flows ordinarily appear in balance of payments accounting?",
+        "options": [
+          "Goods trade",
+          "Financial account",
+          "Primary income only",
+          "Revenue budget"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "explanation": "FDI is recorded under direct investment in the financial account.",
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48"
+      },
+      {
+        "id": "group2-mains-2-indian-sectors",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Indian Agriculture, Industry and Services",
+        "type": "MCQ",
+        "question": "Output rises with area unchanged. Which measure must have risen?",
+        "options": [
+          "Farm area",
+          "All input prices",
+          "Yield per hectare",
+          "Number of procurement centres"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "explanation": "With a fixed area the change in output comes from higher output per unit of area.",
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48"
+      },
+      {
+        "id": "group2-mains-2-ap-economy-budget",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Andhra Pradesh GSDP and State Finances",
+        "type": "MCQ",
+        "question": "Which comparison best measures the difference between a year's original allocation and final recorded spending?",
+        "options": [
+          "Two revised estimates from future years",
+          "Debt stock and GST rate",
+          "GSDP and population only",
+          "Budget estimate and audited actual"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "explanation": "Budget estimates are plans. Actuals show recorded spending for the year.",
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48"
+      },
+      {
+        "id": "group2-mains-2-ap-productive-sectors",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Andhra Pradesh Agriculture, Industry and Services",
+        "type": "MCQ",
+        "question": "Which facility most directly slows post-harvest deterioration in perishable produce?",
+        "options": [
+          "A tax tribunal",
+          "Cold storage",
+          "A dry mineral stockyard",
+          "A voting station"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "explanation": "Temperature-controlled storage extends the usable distribution time of many perishable foods.",
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48"
+      },
+      {
+        "id": "group2-mains-2-technology-missions",
+        "section": "Science and Technology",
+        "topic": "Indian Science, Technology and Public Missions",
+        "type": "MCQ",
+        "question": "What is Aditya-L1 primarily designed to study?",
+        "options": [
+          "Mars's moons",
+          "Earth's ocean floor",
+          "The Sun",
+          "Lunar soil"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "explanation": "Aditya-L1 is India's observatory mission for studying the Sun.",
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html"
+      },
+      {
+        "id": "group2-mains-2-energy-management",
+        "section": "Science and Technology",
+        "topic": "Energy Management, Renewables and Bharat Stage Rules",
+        "type": "MCQ",
+        "question": "What does an installed capacity of 100 MW describe?",
+        "options": [
+          "Annual electricity production",
+          "Rated power output capacity",
+          "Staple-crop yield",
+          "Total fuel reserves"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "explanation": "MW is a rate of energy production, while generation over time is measured in MWh.",
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html"
+      },
+      {
+        "id": "group2-mains-2-ecosystems-biodiversity",
+        "section": "Science and Technology",
+        "topic": "Ecosystems, Biodiversity and Conservation",
+        "type": "MCQ",
+        "question": "Which agreement regulates international trade in listed wildlife specimens?",
+        "options": [
+          "Paris Agreement",
+          "Montreal Protocol",
+          "Ramsar only",
+          "CITES"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "explanation": "CITES regulates international trade in specimens of listed wild fauna and flora.",
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html"
+      },
+      {
+        "id": "group2-mains-2-waste-pollution-remediation",
+        "section": "Science and Technology",
+        "topic": "Waste, Pollution and Environmental Remediation",
+        "type": "MCQ",
+        "question": "Which method specifically uses biological activity to manage contaminants?",
+        "options": [
+          "Bioremediation",
+          "Precision levelling",
+          "Fractional distillation only",
+          "Noise insulation"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "explanation": "Bioremediation relies on suitable organisms or biological processes to transform, remove or immobilise pollutants.",
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html"
+      },
+      {
+        "id": "group2-mains-2-environment-sustainability-health",
+        "section": "Science and Technology",
+        "topic": "Climate, Sustainable Development and Public Health",
+        "type": "MCQ",
+        "question": "Which agreement focuses specifically on the phase-out of ozone-depleting substances?",
+        "options": [
+          "Paris Agreement",
+          "CITES",
+          "Montreal Protocol",
+          "Convention on Biological Diversity"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "explanation": "The Montreal Protocol established controls on ozone-depleting substances.",
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html"
+      }
+    ]
+  }
+]

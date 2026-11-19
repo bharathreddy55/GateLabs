@@ -29,7 +29,7 @@ for (const file of readdirSync(catalogs).filter(name => name.endsWith('.json')))
     }
   });
 
-  if (['group2', 'rrb'].includes(exam)) {
+  if (['group2', 'rrb'].includes(exam) || exam.startsWith('group2-mains-')) {
     for (const [sectionIndex, [section, , topics]] of EXAMS[exam].sections.entries()) {
       test(`${exam} ${section} notes cover all current checklist entries`, () => {
         const covered = new Set(notes.filter(note => note.section === section)

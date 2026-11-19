@@ -144,3 +144,8 @@ body,.app-shell,.landing-workspace{font-family:Inter,-apple-system,BlinkMacSyste
     white-space: normal;
     text-align: left;
 }
+.group2-stage-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}

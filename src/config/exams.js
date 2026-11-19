@@ -1,3 +1,5 @@
+import { GROUP2_MAINS } from './group2Mains.js';
+
 const checked = '2026-11-15';
 export const EXAMS = {
   group2: { id: 'group2', name: 'APPSC Group 2 Prelims', version: '37/2026', count: 150, marks: 150, minutes: 150, penalty: 1/3, date: '2027-02-21', source: 'https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf', note: 'Online practice for the offline OMR screening test. Five blocks of 30 questions. Session time is not yet verified.', sections: [
@@ -18,3 +20,4 @@ export const EXAMS = {
   gate: { id:'gate', name:'GATE CS', schedule:{year:2027,dates:['2027-02-06','2027-02-07','2027-02-13','2027-02-14','2027-02-20','2027-02-21'],label:'6, 7, 13, 14, 20 & 21 February 2027',source:'https://gate2027.iitm.ac.in/important_dates',checked:'2026-11-18',paperDate:null}, version:'2026 pattern', count:65, marks:100, minutes:180, penalty:1/3, date:null, source:'https://gate2026.iitg.ac.in/question-paper-pattern.html', note:'MCQ: −⅓ of question marks. MSQ and NAT: no negative marking, no partial credit. General Aptitude 15 marks; CS including mathematics 85.', sections:[] }
 };
 Object.values(EXAMS).forEach(e => { e.checked = checked; });
+for (const [id, paper] of Object.entries(GROUP2_MAINS)) EXAMS[id] = { id, ...paper };

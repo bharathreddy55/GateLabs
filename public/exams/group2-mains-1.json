@@ -1,0 +1,2737 @@
+[
+  {
+    "title": "APPSC Group 2 Mains Paper I · Model 1",
+    "category": "Original model",
+    "provenance": "GateLabs original mock based on Notification 37/2026, Annexure II. Separate paper with 75 questions in each of its two sections. Includes recall and applied questions. Chapter counts are editorial practice choices.",
+    "questions": [
+      {
+        "id": "group2-mains-1-model-early-andhra-10",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Early Andhra and the Vengi Dynasties",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd",
+        "question": "The Eastern Chalukya area most often designated Vengi lay in which broader region?",
+        "options": [
+          "Coastal Andhra",
+          "Western Himalayan foothills",
+          "Thar Desert",
+          "Kashmir Valley"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Vengi refers to a historical region of coastal Andhra."
+      },
+      {
+        "id": "group2-mains-1-model-medieval-andhradesa-5",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Medieval Andhradesa, 11th–16th Centuries",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd",
+        "question": "Lepakshi's Veerabhadra temple is primarily associated with which period?",
+        "options": [
+          "East India Company",
+          "Vijayanagara",
+          "Early Satavahana",
+          "Mauryan"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Its major surviving temple and mural programme belong to the Vijayanagara period."
+      },
+      {
+        "id": "group2-mains-1-model-andhra-pradesh-reorganisation-8",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Andhra Pradesh Formation and Reorganisation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "Which year is associated with the significant Jai Andhra agitation?",
+        "options": [
+          "1857",
+          "1972",
+          "1922",
+          "1942"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Jai Andhra agitation arose in 1972."
+      },
+      {
+        "id": "group2-mains-1-model-andhra-pradesh-reorganisation-10",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Andhra Pradesh Formation and Reorganisation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "What evidence best tests whether development spending was regionally unequal?",
+        "options": [
+          "Comparable spending by region adjusted for time, definitions and population where relevant",
+          "A list of state capitals",
+          "A dynasty's coin collection",
+          "One isolated expenditure announcement"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Comparable fiscal data can reveal differences while controlling measurement issues."
+      },
+      {
+        "id": "group2-mains-1-model-colonial-nationalist-andhra-14",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Colonial Rule, Reform and Nationalism in Andhra",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "Which comparison best studies the impact of 1857 in Andhra?",
+        "options": [
+          "Compare local records and responses across areas",
+          "Use only evidence from 1922–24",
+          "Assume the events at Delhi occurred everywhere identically",
+          "Use only inscriptions contemporary with Kakatiya rule"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Local evidence can reveal the distinct scale and form of responses."
+      },
+      {
+        "id": "group2-mains-1-model-colonial-nationalist-andhra-12",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Colonial Rule, Reform and Nationalism in Andhra",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "Which example best distinguishes reform and nationalist mobilisation?",
+        "options": [
+          "A direct tax versus a postal route",
+          "A temple painting versus a crop certificate",
+          "A campaign for widow remarriage versus a local boycott of colonial institutions",
+          "A national election versus a modern court ruling"
+        ],
+        "correctAnswer": 2,
+        "explanation": "The first seeks social reform while the second confronts colonial authority."
+      },
+      {
+        "id": "group2-mains-1-model-colonial-nationalist-andhra-7",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Colonial Rule, Reform and Nationalism in Andhra",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "Which public issue was prominent in Kandukuri Veeresalingam's reform work?",
+        "options": [
+          "Coastal defence for Kakatiya ports",
+          "Drafting the Gentlemen's Agreement",
+          "Women's education and widow remarriage",
+          "Creation of the Finance Commission"
+        ],
+        "correctAnswer": 2,
+        "explanation": "His publications and organised reform addressed women's education and widow remarriage."
+      },
+      {
+        "id": "group2-mains-1-model-medieval-andhradesa-14",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Medieval Andhradesa, 11th–16th Centuries",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd",
+        "question": "Which pair most directly links policy and economy in the Kakatiya period?",
+        "options": [
+          "Montreal Protocol and temple land grants",
+          "Article 280 and port customs",
+          "Motupalli charter and maritime exchange",
+          "Andhra State Act and irrigated cultivation"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Motupalli provides evidence for policy concerning coastal trade."
+      },
+      {
+        "id": "group2-mains-1-model-colonial-nationalist-andhra-4",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Colonial Rule, Reform and Nationalism in Andhra",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "Which uprising is associated with Alluri Sitarama Raju?",
+        "options": [
+          "Rampa uprising of 1922–24",
+          "Telangana state formation in 2014",
+          "Salt March from Sabarmati",
+          "Revolt of 1857 at Meerut"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Raju led the Rampa uprising in the agency tracts in the 1920s."
+      },
+      {
+        "id": "group2-mains-1-model-colonial-nationalist-andhra-3",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Colonial Rule, Reform and Nationalism in Andhra",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "What did the Northern Circars represent in Company expansion?",
+        "options": [
+          "A parliamentary committee",
+          "A landlocked Himalayan chain",
+          "A modern irrigation tariff",
+          "Coastal districts strategically important to regional control"
+        ],
+        "correctAnswer": 3,
+        "explanation": "The Northern Circars connected Company commercial and territorial interests on the east coast."
+      },
+      {
+        "id": "group2-mains-1-model-early-andhra-4",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Early Andhra and the Vengi Dynasties",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd",
+        "question": "Amaravati is especially important for the study of which tradition?",
+        "options": [
+          "Colonial railway engineering",
+          "Buddhist stupa reliefs",
+          "Mughal miniature painting",
+          "Late medieval bronze cannon casting"
+        ],
+        "correctAnswer": 1,
+        "explanation": "The stupa complex yielded major examples of Buddhist narrative and decorative sculpture."
+      },
+      {
+        "id": "group2-mains-1-andhra-state-movement",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Andhra Movement and the Formation of Andhra State",
+        "type": "MCQ",
+        "question": "Which city was the capital of Andhra State at its formation in 1953?",
+        "options": [
+          "Hyderabad",
+          "Visakhapatnam",
+          "Madras",
+          "Kurnool"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "explanation": "Kurnool was the capital of the Andhra State inaugurated in October 1953.",
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd"
+      },
+      {
+        "id": "group2-mains-1-model-early-andhra-12",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Early Andhra and the Vengi Dynasties",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd",
+        "question": "A coinage study can most securely establish which claim on its own?",
+        "options": [
+          "The exact area taxed in every regnal year",
+          "The religion of every inhabitant",
+          "The population size of the entire territory",
+          "The coin's inscription, metal and iconography"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Coins directly preserve inscriptions and material features, while broader claims need other evidence."
+      },
+      {
+        "id": "group2-mains-1-model-early-andhra-1",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Early Andhra and the Vengi Dynasties",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd",
+        "question": "Which evidence most directly supports dating a prehistoric occupation layer?",
+        "options": [
+          "An unrelated royal eulogy centuries later",
+          "A district map printed this year",
+          "A securely stratified sample associated with the occupation",
+          "An isolated object with no recorded findspot"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Stratigraphic context establishes association between dated evidence and occupation."
+      },
+      {
+        "id": "group2-mains-1-model-early-andhra-5",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Early Andhra and the Vengi Dynasties",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd",
+        "question": "Which medium most directly records the name of a specific ancient donor?",
+        "options": [
+          "An unlabelled building outline",
+          "An inscription recording the gift",
+          "A chipped tool found nearby",
+          "A modern contour map"
+        ],
+        "correctAnswer": 1,
+        "explanation": "A donative inscription can name the donor and gift explicitly."
+      },
+      {
+        "id": "group2-mains-1-model-medieval-andhradesa-13",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Medieval Andhradesa, 11th–16th Centuries",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd",
+        "question": "If two medieval houses held different parts of Andhradesa at the same time, what does this illustrate?",
+        "options": [
+          "Absence of local rule",
+          "A single nationwide administration",
+          "Overlapping regional political authority",
+          "Uniform succession throughout the region"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Regional polities often overlapped rather than succeeding uniformly."
+      },
+      {
+        "id": "group2-mains-1-model-medieval-andhradesa-1",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Medieval Andhradesa, 11th–16th Centuries",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd",
+        "question": "Warangal was a major capital of which medieval dynasty?",
+        "options": [
+          "Ikshvakus",
+          "Mauryas",
+          "Satavahanas",
+          "Kakatiyas"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Warangal was a centre of Kakatiya political authority."
+      },
+      {
+        "id": "group2-mains-1-model-medieval-andhradesa-11",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Medieval Andhradesa, 11th–16th Centuries",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd",
+        "question": "Which site best pairs with Vijayanagara-era mural study in Andhra Pradesh?",
+        "options": [
+          "Dholavira",
+          "Sanchi's Mauryan pillar",
+          "Nalanda's monastic ruins",
+          "Lepakshi"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Lepakshi is known for paintings associated with the Vijayanagara period."
+      },
+      {
+        "id": "group2-mains-1-model-early-andhra-8",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Early Andhra and the Vengi Dynasties",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd",
+        "question": "A study of the ancient east coast's trade would be most strengthened by finding what?",
+        "options": [
+          "A later legal code with no geographical details",
+          "A myth with no trade references",
+          "Well-dated imported objects associated with a harbour settlement",
+          "An unrelated modern voting register"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Imported items in a secure context can indicate links to long-distance exchange."
+      },
+      {
+        "id": "group2-mains-1-model-medieval-andhradesa-9",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Medieval Andhradesa, 11th–16th Centuries",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd",
+        "question": "Which regional power was important after the fall of Kakatiya rule in parts of coastal Andhra?",
+        "options": [
+          "Reddis",
+          "Indus city states",
+          "Nandas",
+          "Ikshvakus"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Reddi kingdoms emerged as significant regional powers in post-Kakatiya Andhra."
+      },
+      {
+        "id": "group2-mains-1-model-andhra-pradesh-reorganisation-6",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Andhra Pradesh Formation and Reorganisation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "Which law provides the statutory framework for the 2014 bifurcation?",
+        "options": [
+          "Indian Councils Act, 1909",
+          "Government of India Act, 1858",
+          "Andhra State Act, 1953",
+          "Andhra Pradesh Reorganisation Act, 2014"
+        ],
+        "correctAnswer": 3,
+        "explanation": "The 2014 Act provided for creation of Telangana and related arrangements."
+      },
+      {
+        "id": "group2-mains-1-model-early-andhra-9",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Early Andhra and the Vengi Dynasties",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd",
+        "question": "Which early dynasty preceded Eastern Chalukya authority in parts of coastal Andhra?",
+        "options": [
+          "The later Reddis",
+          "Vishnukundins",
+          "The Aravidu dynasty",
+          "The British East India Company"
+        ],
+        "correctAnswer": 1,
+        "explanation": "The Vishnukundins governed parts of the region before the Eastern Chalukya period."
+      },
+      {
+        "id": "group2-mains-1-model-andhra-state-movement-13",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Andhra Movement and the Formation of Andhra State",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "What is the best comparison for identifying the press's role?",
+        "options": [
+          "Only modern population totals",
+          "Only geological maps",
+          "Only agricultural production estimates",
+          "Editorials, circulation evidence and correspondence from local organisers"
+        ],
+        "correctAnswer": 3,
+        "explanation": "The first group of sources connects what the press printed with who read and used it."
+      },
+      {
+        "id": "group2-mains-1-model-andhra-state-movement-7",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Andhra Movement and the Formation of Andhra State",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "How did newspapers contribute to the movement?",
+        "options": [
+          "They replaced the need for leaders and public associations",
+          "They fixed state borders without legislation",
+          "They publicised demands and connected readers across districts",
+          "They formally enacted the Andhra State Act"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Newspapers widened the reach of movement arguments and events."
+      },
+      {
+        "id": "group2-mains-1-model-andhra-state-movement-1",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Andhra Movement and the Formation of Andhra State",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "What was central to the separate Andhra demand within the Madras Presidency?",
+        "options": [
+          "Rail freight electrification",
+          "The spread of medieval irrigation tanks",
+          "Creation of the GST Council",
+          "Language and regional representation"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Language and effective representation helped motivate separate administrative arrangements."
+      },
+      {
+        "id": "group2-mains-1-model-andhra-state-movement-8",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Andhra Movement and the Formation of Andhra State",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "What was an important public role of reading rooms and libraries?",
+        "options": [
+          "Local access to publications and meetings",
+          "Direct appointment of governors",
+          "Collection of sea customs",
+          "Formal delimitation under the Constitution"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Libraries helped circulate reading material and build public association."
+      },
+      {
+        "id": "group2-mains-1-model-colonial-nationalist-andhra-5",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Colonial Rule, Reform and Nationalism in Andhra",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "The Chirala–Perala movement chiefly arose in resistance to what?",
+        "options": [
+          "The 1956 state merger",
+          "Municipal reorganisation and taxation",
+          "A maritime charter issued at Motupalli",
+          "A constitutional amendment in 1992"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Local residents resisted the municipal arrangement and associated burdens."
+      },
+      {
+        "id": "group2-mains-1-andhra-pradesh-reorganisation",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Andhra Pradesh Formation and Reorganisation",
+        "type": "MCQ",
+        "question": "On what date did Andhra Pradesh come into being in the 1956 reorganisation?",
+        "options": [
+          "1 October 1953",
+          "1 November 1956",
+          "26 January 1950",
+          "2 June 2014"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "explanation": "The merger of Andhra State and Telangana took effect on 1 November 1956.",
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd"
+      },
+      {
+        "id": "group2-mains-1-model-andhra-state-movement-4",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Andhra Movement and the Formation of Andhra State",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "Who became the first chief minister of Andhra State in 1953?",
+        "options": [
+          "Neelam Sanjiva Reddy",
+          "V. P. Menon",
+          "Potti Sriramulu",
+          "Tanguturi Prakasam"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Tanguturi Prakasam headed the new Andhra State government."
+      },
+      {
+        "id": "group2-mains-1-model-medieval-andhradesa-2",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Medieval Andhradesa, 11th–16th Centuries",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd",
+        "question": "What function of tanks is central to understanding medieval Deccan agriculture?",
+        "options": [
+          "Producing maritime customs seals",
+          "Recording lineage descent",
+          "Fixing imported textile prices",
+          "Storing seasonal water for later irrigation"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Irrigation tanks can store seasonal rainfall and runoff for cultivation."
+      },
+      {
+        "id": "group2-mains-1-model-andhra-state-movement-10",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Andhra Movement and the Formation of Andhra State",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "What is the most reliable way to study the part played by folk traditions?",
+        "options": [
+          "Treat one account as representative of every community",
+          "Use only a list of chief ministers",
+          "Ignore regional variation",
+          "Relate particular forms and performers to their local context"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Folk traditions vary by community, language, place and performance setting."
+      },
+      {
+        "id": "group2-mains-1-model-early-andhra-11",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Early Andhra and the Vengi Dynasties",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd",
+        "question": "Which early rulers are associated with Telugu inscriptions from the Renadu region?",
+        "options": [
+          "Ikshvakus of Vijayapuri",
+          "Renati Cholas",
+          "Later Mughal nawabs",
+          "Portuguese governors"
+        ],
+        "correctAnswer": 1,
+        "explanation": "The Renati Chola records are important early evidence for written Telugu."
+      },
+      {
+        "id": "group2-mains-1-model-early-andhra-6",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Early Andhra and the Vengi Dynasties",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd",
+        "question": "Which language was prominent in many early Satavahana inscriptions?",
+        "options": [
+          "Portuguese",
+          "Prakrit",
+          "Modern standard Hindi",
+          "English"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Prakrit was widely used in inscriptions from the Satavahana period."
+      },
+      {
+        "id": "group2-mains-1-model-andhra-state-movement-3",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Andhra Movement and the Formation of Andhra State",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "Which act established Andhra State?",
+        "options": [
+          "Andhra State Act, 1953",
+          "Andhra Pradesh Reorganisation Act, 2014",
+          "Government of India Act, 1858",
+          "States Reorganisation Act, 1956 only"
+        ],
+        "correctAnswer": 0,
+        "explanation": "The Andhra State Act of 1953 provided for the new state."
+      },
+      {
+        "id": "group2-mains-1-model-colonial-nationalist-andhra-6",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Colonial Rule, Reform and Nationalism in Andhra",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "Who is closely associated with the Chirala–Perala protest?",
+        "options": [
+          "E. V. Ramasamy",
+          "Nannaya",
+          "Duggirala Gopalakrishnayya",
+          "Rajaraja Narendra"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Duggirala Gopalakrishnayya was a leading organiser of the movement."
+      },
+      {
+        "id": "group2-mains-1-model-colonial-nationalist-andhra-11",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Colonial Rule, Reform and Nationalism in Andhra",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "How can theatre support a nationalist movement?",
+        "options": [
+          "By setting statutory land-revenue rates",
+          "By issuing formal transfer orders",
+          "By circulating political ideas through public performance",
+          "By taking the place of all written records"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Performance can communicate and spread ideas to wider audiences."
+      },
+      {
+        "id": "group2-mains-1-model-medieval-andhradesa-7",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Medieval Andhradesa, 11th–16th Centuries",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd",
+        "question": "Why would the same poet appear in records from several courts?",
+        "options": [
+          "Every record necessarily refers to a different poet",
+          "Publishing required permission from a modern copyright office",
+          "Medieval kingdoms had identical borders",
+          "Patronage networks could cross political boundaries"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Poets could move among courts and retain patronage across regions."
+      },
+      {
+        "id": "group2-mains-1-model-early-andhra-7",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Early Andhra and the Vengi Dynasties",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd",
+        "question": "The Satavahana state's power was centred in which broad region?",
+        "options": [
+          "Punjab plains alone",
+          "Lower Brahmaputra delta",
+          "Upper Himalayan valleys",
+          "Deccan"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Satavahana authority extended over portions of the Deccan, with boundaries changing over time."
+      },
+      {
+        "id": "group2-mains-1-model-early-andhra-2",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Early Andhra and the Vengi Dynasties",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd",
+        "question": "Megalithic burial assemblages are particularly useful for studying what?",
+        "options": [
+          "Press censorship in the nineteenth century",
+          "The precise text of vanished oral narratives",
+          "Mortuary practices and material culture",
+          "Composition of a modern legislature"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Graves and associated artefacts can reveal burial customs and material practices."
+      },
+      {
+        "id": "group2-mains-1-model-colonial-nationalist-andhra-10",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Colonial Rule, Reform and Nationalism in Andhra",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "What distinguishes a kisan movement from a campaign led primarily by port merchants?",
+        "options": [
+          "Its organisers' central demands arise from agrarian conditions",
+          "It must take place before colonial rule",
+          "It cannot use newspapers",
+          "It cannot address government policy"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Kisan movements organise around cultivators' interests and agricultural issues."
+      },
+      {
+        "id": "group2-mains-1-model-andhra-state-movement-2",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Andhra Movement and the Formation of Andhra State",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "Which leader's fast and death in 1952 accelerated the separate state demand?",
+        "options": [
+          "Kandukuri Veeresalingam",
+          "Rajaraja Narendra",
+          "Potti Sriramulu",
+          "Nannaya"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Sriramulu's death intensified popular demands for Andhra State."
+      },
+      {
+        "id": "group2-mains-1-medieval-andhradesa",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Medieval Andhradesa, 11th–16th Centuries",
+        "type": "MCQ",
+        "question": "Which ruler authored the Telugu work Amuktamalyada?",
+        "options": [
+          "Ganapati Deva",
+          "Krishnadevaraya",
+          "Rajaraja Narendra",
+          "Prataparudra"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "explanation": "Amuktamalyada is associated with Krishnadevaraya of Vijayanagara.",
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd"
+      },
+      {
+        "id": "group2-mains-1-model-colonial-nationalist-andhra-2",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Colonial Rule, Reform and Nationalism in Andhra",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "What were European trading factories in the early modern Coromandel context?",
+        "options": [
+          "All-purpose textile mills by definition",
+          "Commercial stations and warehouses",
+          "Electoral constituencies",
+          "Monastic libraries"
+        ],
+        "correctAnswer": 1,
+        "explanation": "A factory was a place where trading agents conducted commerce."
+      },
+      {
+        "id": "group2-mains-1-model-andhra-pradesh-reorganisation-9",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Andhra Pradesh Formation and Reorganisation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "Which region was the focus of the separate-state movement that mobilised strongly in 1969?",
+        "options": [
+          "Malabar",
+          "Vidarbha only",
+          "Saurashtra",
+          "Telangana"
+        ],
+        "correctAnswer": 3,
+        "explanation": "The 1969 movement sought a separate Telangana."
+      },
+      {
+        "id": "group2-mains-1-model-andhra-pradesh-reorganisation-4",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Andhra Pradesh Formation and Reorganisation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "Which city became the capital of Andhra Pradesh after the 1956 merger?",
+        "options": [
+          "Hyderabad",
+          "Rajahmundry",
+          "Kurnool",
+          "Vijayawada"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Hyderabad was capital of the state formed by the merger in 1956."
+      },
+      {
+        "id": "group2-mains-1-model-andhra-pradesh-reorganisation-13",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Andhra Pradesh Formation and Reorganisation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "A question asks whether a safeguard stated in an agreement was implemented. What additional evidence is most useful?",
+        "options": [
+          "Only the original agreement's title",
+          "Later orders, budgets and service recruitment records",
+          "A modern weather map",
+          "A list of prehistoric tools"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Implementation requires checking the acts and outcomes following the agreement."
+      },
+      {
+        "id": "group2-mains-1-model-andhra-pradesh-reorganisation-3",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Andhra Pradesh Formation and Reorganisation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "The 1956 Gentlemen's Agreement concerned what?",
+        "options": [
+          "Minimum support prices for crops",
+          "International trade in threatened species",
+          "Safeguards accompanying the Telangana–Andhra merger",
+          "An East India Company tax settlement"
+        ],
+        "correctAnswer": 2,
+        "explanation": "The agreement was part of the political arrangement for merger and safeguards."
+      },
+      {
+        "id": "group2-mains-1-model-andhra-pradesh-reorganisation-1",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Andhra Pradesh Formation and Reorganisation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "What was the political aim commonly linked to Visalandhra?",
+        "options": [
+          "Ending the Panchayati Raj system",
+          "Bringing Telugu-speaking regions together",
+          "Creating colonial trading stations",
+          "Replacing state boundaries with districts only"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Visalandhra advocates supported a common state for Telugu-speaking regions."
+      },
+      {
+        "id": "group2-mains-1-model-medieval-andhradesa-6",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Medieval Andhradesa, 11th–16th Centuries",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd",
+        "question": "Tikkana is especially associated with which literary project?",
+        "options": [
+          "An English translation of the Constitution",
+          "A Prakrit version of the Arthashastra",
+          "A Portuguese coastal atlas",
+          "Telugu Mahabharata"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Tikkana was one of the major contributors to the Telugu Mahabharata tradition."
+      },
+      {
+        "id": "group2-mains-1-model-colonial-nationalist-andhra-1",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Colonial Rule, Reform and Nationalism in Andhra",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "Which port was a major textile and maritime trading centre under European commercial expansion in Andhra?",
+        "options": [
+          "Kurnool",
+          "Nagarjunakonda",
+          "Warangal",
+          "Masulipatnam"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Masulipatnam connected Coromandel textile production with overseas traders."
+      },
+      {
+        "id": "group2-mains-1-model-medieval-andhradesa-3",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Medieval Andhradesa, 11th–16th Centuries",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd",
+        "question": "Which source best supports a claim that a port offered assurances to merchants?",
+        "options": [
+          "A royal trading charter specifying terms",
+          "A later poem about a royal wedding",
+          "The architectural plan of an unrelated hill shrine",
+          "A merchant's undated seal with no inscription"
+        ],
+        "correctAnswer": 0,
+        "explanation": "A charter directly records terms and protections offered."
+      },
+      {
+        "id": "group2-mains-1-model-andhra-state-movement-14",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Andhra Movement and the Formation of Andhra State",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "Which event immediately preceded the 1956 formation in this sequence?",
+        "options": [
+          "Inauguration of the Republic in 1950 as the last event before merger",
+          "Formation of Madras Presidency under Company rule",
+          "Creation of Andhra State in 1953",
+          "Reorganisation creating Telangana in 2014"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Among these choices, 1953 was the last event before the 1956 merger."
+      },
+      {
+        "id": "group2-mains-1-colonial-nationalist-andhra",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Colonial Rule, Reform and Nationalism in Andhra",
+        "type": "MCQ",
+        "question": "Which reformer is closely associated with widow remarriage advocacy in Andhra?",
+        "options": [
+          "Tikkana",
+          "Rajaraja Narendra",
+          "Kandukuri Veeresalingam",
+          "Potti Sriramulu"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "explanation": "Veeresalingam campaigned for widow remarriage and women's education in the Telugu-speaking region.",
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd"
+      },
+      {
+        "id": "group2-mains-1-model-andhra-pradesh-reorganisation-2",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Andhra Pradesh Formation and Reorganisation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "What is the most accurate description of the States Reorganisation Commission's role?",
+        "options": [
+          "It decided national-party symbols",
+          "It assessed options and made recommendations",
+          "It conducted local-body elections",
+          "It directly enacted and administered all state boundaries"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Its report was advisory and implementation required formal decisions and legislation."
+      },
+      {
+        "id": "group2-mains-1-model-andhra-state-movement-9",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Andhra Movement and the Formation of Andhra State",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "Which person is associated with early Andhra movement organisation?",
+        "options": [
+          "Rajaraja Narendra",
+          "Konda Venkatappayya",
+          "Mahatma Gandhi's son Devdas as state chief minister",
+          "Mahavira"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Venkatappayya was a prominent Telugu public leader and activist in the Andhra movement."
+      },
+      {
+        "id": "group2-mains-1-model-andhra-pradesh-reorganisation-11",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Andhra Pradesh Formation and Reorganisation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "Which sequence is chronological?",
+        "options": [
+          "Andhra State Act → 1956 merger → Andhra Pradesh Reorganisation Act",
+          "1956 merger → Andhra State Act → 2014 Act",
+          "1956 merger → 2014 Act → Andhra State Act",
+          "2014 Act → Andhra State Act → 1956 merger"
+        ],
+        "correctAnswer": 0,
+        "explanation": "The relevant years are 1953, 1956 and 2014."
+      },
+      {
+        "id": "group2-mains-1-model-colonial-nationalist-andhra-8",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Colonial Rule, Reform and Nationalism in Andhra",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "Which movement is closely linked to E. V. Ramasamy?",
+        "options": [
+          "Self-Respect movement",
+          "Rampa uprising",
+          "Visalandhra Mahasabha",
+          "Chirala–Perala movement"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Ramasamy, known as Periyar, led the Self-Respect movement."
+      },
+      {
+        "id": "group2-mains-1-model-early-andhra-3",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Early Andhra and the Vengi Dynasties",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd",
+        "question": "Which ancient dynasty is particularly associated with Vijayapuri at Nagarjunakonda?",
+        "options": [
+          "Reddis",
+          "Ikshvakus",
+          "Vijayanagara Sangamas",
+          "Kakatiyas"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Inscriptions and archaeological remains document Ikshvaku rule and patronage at Vijayapuri."
+      },
+      {
+        "id": "group2-mains-1-model-andhra-state-movement-5",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Andhra Movement and the Formation of Andhra State",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "Which date marks inauguration of Andhra State?",
+        "options": [
+          "1 October 1953",
+          "2 June 2014",
+          "1 November 1956",
+          "15 August 1947"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Andhra State came into existence on 1 October 1953."
+      },
+      {
+        "id": "group2-mains-1-model-medieval-andhradesa-8",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Medieval Andhradesa, 11th–16th Centuries",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd",
+        "question": "Which feature makes an inscription stronger evidence than a modern caption for a land grant?",
+        "options": [
+          "Its materials guarantee objective accuracy",
+          "It can record the donor, recipient and terms in the historical context",
+          "It never requires translation",
+          "It necessarily describes every village in the region"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Inscriptions can directly document specific donations and terms."
+      },
+      {
+        "id": "group2-mains-1-model-andhra-pradesh-reorganisation-7",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Andhra Pradesh Formation and Reorganisation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "When did the 2014 state reorganisation take effect?",
+        "options": [
+          "1 November 2014",
+          "2 June 2014",
+          "26 January 2014",
+          "1 October 2014"
+        ],
+        "correctAnswer": 1,
+        "explanation": "The appointed day was 2 June 2014."
+      },
+      {
+        "id": "group2-mains-1-model-medieval-andhradesa-12",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Medieval Andhradesa, 11th–16th Centuries",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd",
+        "question": "A dated poet's patron is known. What remains necessary to interpret a literary text historically?",
+        "options": [
+          "An assumption that every story is a literal account",
+          "A modern economic-growth forecast",
+          "Genre, audience and purpose",
+          "Removal of its date"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Literary choices depend on genre and audience."
+      },
+      {
+        "id": "group2-mains-1-model-andhra-pradesh-reorganisation-5",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Andhra Pradesh Formation and Reorganisation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "Which territorial pairing describes the 1956 merger?",
+        "options": [
+          "Andhra State and all of Bombay State",
+          "Madras State and all of Mysore State",
+          "Telangana and Orissa only",
+          "Andhra State and Telangana region of Hyderabad State"
+        ],
+        "correctAnswer": 3,
+        "explanation": "The Telangana region joined Andhra State to form Andhra Pradesh."
+      },
+      {
+        "id": "group2-mains-1-model-andhra-pradesh-reorganisation-12",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Andhra Pradesh Formation and Reorganisation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "What exercise would distinguish linguistic arguments and economic safeguards?",
+        "options": [
+          "Treat each Telugu text as evidence of the same policy",
+          "Read only archaeological field reports",
+          "Compare movement resolutions with provisions and political agreements on regional interests",
+          "Use no dated material"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Different sources identify language-based mobilisation and specific economic concerns."
+      },
+      {
+        "id": "group2-mains-1-early-andhra",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Early Andhra and the Vengi Dynasties",
+        "type": "MCQ",
+        "question": "Which court is associated with Nannaya’s Telugu Mahabharata?",
+        "options": [
+          "Eastern Chalukyas of Vengi",
+          "Ikshvakus of Vijayapuri",
+          "Vishnukundins",
+          "Renati Cholas"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "explanation": "Nannaya worked under the patronage of Rajaraja Narendra of the Eastern Chalukya line.",
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd"
+      },
+      {
+        "id": "group2-mains-1-model-early-andhra-13",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Early Andhra and the Vengi Dynasties",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd",
+        "question": "If sculpture, inscriptions and archaeological layers disagree about a site's date, what is the strongest response?",
+        "options": [
+          "Discard the records with any date",
+          "Use the latest calendar year mentioned in any study",
+          "Test whether the evidence belongs to different construction phases",
+          "Assign every feature to one ruler"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Monuments can be rebuilt, reused and decorated across several periods."
+      },
+      {
+        "id": "group2-mains-1-model-andhra-state-movement-11",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Andhra Movement and the Formation of Andhra State",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "What can minutes of an Andhra conference establish most directly?",
+        "options": [
+          "Resolutions recorded as adopted at that meeting",
+          "The economic output of the whole presidency",
+          "A future law without further proceedings",
+          "The views of every Telugu speaker"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Minutes directly record proceedings and formal resolutions."
+      },
+      {
+        "id": "group2-mains-1-model-colonial-nationalist-andhra-9",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Colonial Rule, Reform and Nationalism in Andhra",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "The Justice Party arose in which political setting?",
+        "options": [
+          "The Lok Sabha after 1992",
+          "Rampa forest administration only",
+          "Madras Presidency non-Brahmin politics",
+          "Ikshvaku royal patronage"
+        ],
+        "correctAnswer": 2,
+        "explanation": "It was an important part of non-Brahmin political mobilisation in the Madras Presidency."
+      },
+      {
+        "id": "group2-mains-1-model-andhra-pradesh-reorganisation-14",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Andhra Pradesh Formation and Reorganisation",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "Which comparison avoids anachronism when using statistics around 2014?",
+        "options": [
+          "Reconstruct consistent state boundaries before comparing years",
+          "Replace population estimates with dates of speeches",
+          "Treat each historical district label as geographically unchanged",
+          "Compare undivided and divided totals as if the territory were identical"
+        ],
+        "correctAnswer": 0,
+        "explanation": "A territorial break changes the base underlying reported statistics."
+      },
+      {
+        "id": "group2-mains-1-model-andhra-state-movement-6",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Andhra Movement and the Formation of Andhra State",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "From which state was Andhra State mainly separated in 1953?",
+        "options": [
+          "Mysore State",
+          "Assam State",
+          "Orissa State",
+          "Madras State"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Telugu-speaking districts of Madras formed the core of the new Andhra State."
+      },
+      {
+        "id": "group2-mains-1-model-early-andhra-14",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Early Andhra and the Vengi Dynasties",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd",
+        "question": "Which river valley contains the Nagarjunakonda archaeological site?",
+        "options": [
+          "Krishna",
+          "Mahanadi",
+          "Kaveri",
+          "Narmada"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Nagarjunakonda is in the Krishna valley."
+      },
+      {
+        "id": "group2-mains-1-model-medieval-andhradesa-4",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Medieval Andhradesa, 11th–16th Centuries",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd",
+        "question": "Which dynasty is associated with the Ramappa temple?",
+        "options": [
+          "Ikshvakus",
+          "Pallavas of Kanchi",
+          "Eastern Gangas of Kalinga",
+          "Kakatiyas"
+        ],
+        "correctAnswer": 3,
+        "explanation": "The temple is a major surviving example of Kakatiya architecture."
+      },
+      {
+        "id": "group2-mains-1-model-colonial-nationalist-andhra-13",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Colonial Rule, Reform and Nationalism in Andhra",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "Which person is associated with both Indian public mobilisation and institution-building for women?",
+        "options": [
+          "Alluri Sitarama Raju",
+          "Prakasam's predecessor in 1956",
+          "Durgabai Deshmukh",
+          "Krishnadevaraya"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Durgabai Deshmukh combined participation in public life with institution-building."
+      },
+      {
+        "id": "group2-mains-1-model-andhra-state-movement-12",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Andhra Movement and the Formation of Andhra State",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf",
+        "question": "A newspaper and a government order report different dates for a boundary change. Which date answers when the change legally took effect?",
+        "options": [
+          "The effective date fixed by the relevant legal instrument",
+          "The first editorial that supported the change",
+          "The date the map was redrawn in an atlas",
+          "The date of the most recent historical essay"
+        ],
+        "correctAnswer": 0,
+        "explanation": "The effective date and the dates of reporting or implementation activity can differ."
+      },
+      {
+        "id": "group2-mains-1-model-medieval-andhradesa-10",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Medieval Andhradesa, 11th–16th Centuries",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd",
+        "question": "What does a temple land grant most directly illustrate?",
+        "options": [
+          "Links among political authority, patronage and agrarian revenue",
+          "The abolition of trade",
+          "The direct election of medieval rulers",
+          "Complete absence of religious diversity"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Land grants connected rulers, cultivators and patronised religious institutions."
+      },
+      {
+        "id": "group2-mains-1-model-constitution-foundations-13",
+        "section": "Indian Constitution",
+        "topic": "Constitutional Development, Rights and Basic Structure",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Which statement best describes a directive principle?",
+        "options": [
+          "It concerns only parliamentary internal procedure",
+          "It is enforceable through Article 32 on its own",
+          "It guides state policy and legislation",
+          "It is identical to a statutory rule in force in every state"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Directive principles are goals for governance and can inform legislation."
+      },
+      {
+        "id": "group2-mains-1-model-constitution-foundations-10",
+        "section": "Indian Constitution",
+        "topic": "Constitutional Development, Rights and Basic Structure",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Which article principally sets out the amendment procedure?",
+        "options": [
+          "Article 368",
+          "Article 356",
+          "Article 352",
+          "Article 360"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Article 368 sets out Parliament’s amendment power and procedure."
+      },
+      {
+        "id": "group2-mains-1-model-union-state-institutions-12",
+        "section": "Indian Constitution",
+        "topic": "Union–State Powers and Accountability Institutions",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "What is vertical tax devolution in a federal fiscal discussion?",
+        "options": [
+          "Distribution between levels of government",
+          "Distribution only among departments of a single state",
+          "Distribution between importers and exporters",
+          "Allocation of parliamentary seats"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Vertical devolution concerns allocation across levels such as the Union and the states."
+      },
+      {
+        "id": "group2-mains-1-local-government",
+        "section": "Indian Constitution",
+        "topic": "Decentralisation and Local Self-Government",
+        "type": "MCQ",
+        "question": "Which schedule lists subjects associated with Panchayats?",
+        "options": [
+          "Seventh",
+          "Tenth",
+          "Eleventh",
+          "Twelfth"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "explanation": "The Eleventh Schedule is associated with rural Panchayats under Part IX.",
+        "source": "https://www.legislative.gov.in/documents"
+      },
+      {
+        "id": "group2-mains-1-model-federalism-elections-defection-5",
+        "section": "Indian Constitution",
+        "topic": "Federalism, Political Parties, Elections and Defection",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Which article gives the Election Commission superintendence, direction and control over the specified elections?",
+        "options": [
+          "Article 324",
+          "Article 280",
+          "Article 338B",
+          "Article 243K"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Article 324 concerns parliamentary, state legislature, presidential and vice-presidential elections."
+      },
+      {
+        "id": "group2-mains-1-model-government-branches-2",
+        "section": "Indian Constitution",
+        "topic": "Legislature, Executive and Judiciary",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "What distinguishes the Rajya Sabha’s institutional duration?",
+        "options": [
+          "It dissolves with each Lok Sabha",
+          "It dissolves every five years as a whole",
+          "It continues only at presidential pleasure",
+          "It is not subject to dissolution"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Under Article 83 the Council of States is not subject to dissolution."
+      },
+      {
+        "id": "group2-mains-1-model-constitution-foundations-1",
+        "section": "Indian Constitution",
+        "topic": "Constitutional Development, Rights and Basic Structure",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "When did most provisions of the Constitution of India commence?",
+        "options": [
+          "26 January 1950",
+          "15 August 1947",
+          "2 October 1950",
+          "26 November 1949"
+        ],
+        "correctAnswer": 0,
+        "explanation": "The Constitution was adopted on 26 November 1949 and principally commenced on 26 January 1950."
+      },
+      {
+        "id": "group2-mains-1-model-constitution-foundations-11",
+        "section": "Indian Constitution",
+        "topic": "Constitutional Development, Rights and Basic Structure",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "What is an additional requirement for amendments affecting certain federal provisions?",
+        "options": [
+          "Approval from every Gram Sabha",
+          "A simple majority in the Rajya Sabha alone",
+          "Ratification by at least half of the state legislatures",
+          "Approval by the Finance Commission"
+        ],
+        "correctAnswer": 2,
+        "explanation": "The proviso to Article 368 requires ratification by legislatures of not less than half the states for specified matters."
+      },
+      {
+        "id": "group2-mains-1-model-local-government-5",
+        "section": "Indian Constitution",
+        "topic": "Decentralisation and Local Self-Government",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "What is a Gram Sabha under the constitutional definition?",
+        "options": [
+          "All officers employed at one district headquarters",
+          "Group of ministers appointed by the Governor",
+          "Body of persons registered in the electoral rolls for a village within the Panchayat area",
+          "Council of all state legislators"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Article 243 uses electoral registration in the relevant village to define the body."
+      },
+      {
+        "id": "group2-mains-1-model-federalism-elections-defection-6",
+        "section": "Indian Constitution",
+        "topic": "Federalism, Political Parties, Elections and Defection",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Who supervises elections to Panchayats under Article 243K?",
+        "options": [
+          "Rajya Sabha Secretariat",
+          "State Election Commission",
+          "Central Information Commission",
+          "Union Finance Ministry"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Article 243K provides for state-level election administration for Panchayats."
+      },
+      {
+        "id": "group2-mains-1-model-federalism-elections-defection-12",
+        "section": "Indian Constitution",
+        "topic": "Federalism, Political Parties, Elections and Defection",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Which act is most directly relevant to political-party registration under section 29A?",
+        "options": [
+          "Representation of the People Act, 1951",
+          "Representation of the People Act, 1950",
+          "Delimitation Act, 2002 only",
+          "Right to Information Act, 2005"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Section 29A of the 1951 Act deals with registration of associations and bodies as political parties."
+      },
+      {
+        "id": "group2-mains-1-model-union-state-institutions-3",
+        "section": "Indian Constitution",
+        "topic": "Union–State Powers and Accountability Institutions",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "What ordinarily happens if a valid Union law and a State law conflict on a concurrent subject, absent an applicable exception?",
+        "options": [
+          "The Union law prevails to the extent of repugnancy",
+          "Both automatically cease to operate nationwide",
+          "The Finance Commission resolves the legal conflict",
+          "The State law always prevails"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Article 254 sets the general rule and specifies an exception for certain assented state laws."
+      },
+      {
+        "id": "group2-mains-1-model-government-branches-7",
+        "section": "Indian Constitution",
+        "topic": "Legislature, Executive and Judiciary",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "What does legislative bicameralism mean?",
+        "options": [
+          "The executive has two heads with equal authority",
+          "Every bill requires a referendum",
+          "There are two constitutions",
+          "The legislature has two houses"
+        ],
+        "correctAnswer": 3,
+        "explanation": "A bicameral legislature has two chambers."
+      },
+      {
+        "id": "group2-mains-1-model-federalism-elections-defection-13",
+        "section": "Indian Constitution",
+        "topic": "Federalism, Political Parties, Elections and Defection",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Which measure most directly helps voters assess candidates' declared background?",
+        "options": [
+          "Reducing all constituency sizes without documentation",
+          "Mandatory candidate disclosure under applicable electoral requirements",
+          "Changing legislative committee names only",
+          "Restricting public access to candidate information"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Disclosure gives voters relevant information before casting votes."
+      },
+      {
+        "id": "group2-mains-1-model-federalism-elections-defection-1",
+        "section": "Indian Constitution",
+        "topic": "Federalism, Political Parties, Elections and Defection",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Which state appointed the Rajamannar Committee?",
+        "options": [
+          "Andhra Pradesh",
+          "Tamil Nadu",
+          "Rajasthan",
+          "Punjab"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Tamil Nadu appointed the committee to examine centre–state relations."
+      },
+      {
+        "id": "group2-mains-1-model-government-branches-8",
+        "section": "Indian Constitution",
+        "topic": "Legislature, Executive and Judiciary",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Which article concerns the creation or abolition of a State Legislative Council?",
+        "options": [
+          "Article 280",
+          "Article 250",
+          "Article 123",
+          "Article 169"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Article 169 provides the parliamentary process after a qualifying assembly resolution."
+      },
+      {
+        "id": "group2-mains-1-union-state-institutions",
+        "section": "Indian Constitution",
+        "topic": "Union–State Powers and Accountability Institutions",
+        "type": "MCQ",
+        "question": "Which constitutional article provides for the Finance Commission?",
+        "options": [
+          "Article 148",
+          "Article 324",
+          "Article 356",
+          "Article 280"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "explanation": "Article 280 deals with the Finance Commission.",
+        "source": "https://www.legislative.gov.in/documents"
+      },
+      {
+        "id": "group2-mains-1-model-local-government-9",
+        "section": "Indian Constitution",
+        "topic": "Decentralisation and Local Self-Government",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Which article concerns reservation of seats in Panchayats?",
+        "options": [
+          "Article 243K",
+          "Article 280",
+          "Article 243I",
+          "Article 243D"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Article 243D sets reservation arrangements."
+      },
+      {
+        "id": "group2-mains-1-government-branches",
+        "section": "Indian Constitution",
+        "topic": "Legislature, Executive and Judiciary",
+        "type": "MCQ",
+        "question": "The Union Council of Ministers is collectively responsible to which body?",
+        "options": [
+          "Rajya Sabha",
+          "Lok Sabha",
+          "Supreme Court",
+          "Election Commission"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "explanation": "Article 75(3) makes the Council of Ministers collectively responsible to the House of the People.",
+        "source": "https://www.legislative.gov.in/documents"
+      },
+      {
+        "id": "group2-mains-1-model-union-state-institutions-13",
+        "section": "Indian Constitution",
+        "topic": "Union–State Powers and Accountability Institutions",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "What distinguishes the GST Council from the Finance Commission?",
+        "options": [
+          "Both are the same body under Article 280",
+          "Their constitutional bases and recommendation mandates differ",
+          "One is a court and the other an election authority",
+          "Both directly conduct parliamentary elections"
+        ],
+        "correctAnswer": 1,
+        "explanation": "The GST Council arises under Article 279A, while the Finance Commission arises under Article 280."
+      },
+      {
+        "id": "group2-mains-1-model-government-branches-4",
+        "section": "Indian Constitution",
+        "topic": "Legislature, Executive and Judiciary",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "What can the Rajya Sabha do with a Union Money Bill?",
+        "options": [
+          "Convert it to a constitutional amendment",
+          "Propose a joint sitting to override the Lok Sabha",
+          "Veto it outright",
+          "Recommend amendments within the specified fourteen-day period"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Article 109 allows recommendations rather than a veto."
+      },
+      {
+        "id": "group2-mains-1-model-union-state-institutions-8",
+        "section": "Indian Constitution",
+        "topic": "Union–State Powers and Accountability Institutions",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Whose records can an eligible RTI request ordinarily seek under the Act?",
+        "options": [
+          "Records held by or accessible to a covered public authority",
+          "Unrecorded personal opinions by every elected official",
+          "A newly authored opinion that does not exist on file",
+          "Any private individual's records regardless of law"
+        ],
+        "correctAnswer": 0,
+        "explanation": "The RTI framework concerns information held by or under the control of public authorities, subject to its terms."
+      },
+      {
+        "id": "group2-mains-1-model-local-government-12",
+        "section": "Indian Constitution",
+        "topic": "Decentralisation and Local Self-Government",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "What did the Community Development Programme primarily seek to promote?",
+        "options": [
+          "Reorganisation of parliamentary constituency boundaries",
+          "Judicial review of constitutional amendments",
+          "Development and participation in rural areas",
+          "Creation of international trade tribunals"
+        ],
+        "correctAnswer": 2,
+        "explanation": "The programme was an early rural development initiative."
+      },
+      {
+        "id": "group2-mains-1-model-local-government-6",
+        "section": "Indian Constitution",
+        "topic": "Decentralisation and Local Self-Government",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "What is the usual constitutional term of a Panchayat, unless sooner dissolved?",
+        "options": [
+          "Four years",
+          "Five years",
+          "Three years",
+          "Six years"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Article 243E provides for five years from the date appointed for its first meeting unless sooner dissolved."
+      },
+      {
+        "id": "group2-mains-1-model-government-branches-6",
+        "section": "Indian Constitution",
+        "topic": "Legislature, Executive and Judiciary",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Who appoints the Prime Minister under Article 75?",
+        "options": [
+          "President",
+          "Chairman of Rajya Sabha",
+          "Speaker of the Lok Sabha",
+          "Chief Election Commissioner"
+        ],
+        "correctAnswer": 0,
+        "explanation": "The President appoints the Prime Minister under Article 75."
+      },
+      {
+        "id": "group2-mains-1-model-constitution-foundations-6",
+        "section": "Indian Constitution",
+        "topic": "Constitutional Development, Rights and Basic Structure",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Which article provides the Supreme Court remedy for enforcement of fundamental rights?",
+        "options": [
+          "Article 136",
+          "Article 368",
+          "Article 143",
+          "Article 32"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Article 32 gives the right to move the Supreme Court for enforcement of Part III rights."
+      },
+      {
+        "id": "group2-mains-1-model-union-state-institutions-4",
+        "section": "Indian Constitution",
+        "topic": "Union–State Powers and Accountability Institutions",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Which article provides for a possible Inter-State Council?",
+        "options": [
+          "Article 263",
+          "Article 110",
+          "Article 356",
+          "Article 165"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Article 263 concerns establishment and duties of an Inter-State Council."
+      },
+      {
+        "id": "group2-mains-1-model-federalism-elections-defection-2",
+        "section": "Indian Constitution",
+        "topic": "Federalism, Political Parties, Elections and Defection",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Which commission chaired by a former Supreme Court judge examined Union–state relations after the Rajamannar Committee and before Punchhi?",
+        "options": [
+          "Mandal Commission",
+          "Sarkaria Commission",
+          "Kothari Commission",
+          "Finance Commission"
+        ],
+        "correctAnswer": 1,
+        "explanation": "The Sarkaria Commission was appointed in the 1980s to study Union–state relations."
+      },
+      {
+        "id": "group2-mains-1-model-constitution-foundations-8",
+        "section": "Indian Constitution",
+        "topic": "Constitutional Development, Rights and Basic Structure",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "What does Article 37 state about directive principles?",
+        "options": [
+          "They are enforced only by ordinary civil suits",
+          "They bind only municipal councils",
+          "They supersede every fundamental right without exception",
+          "They are not enforceable by any court but fundamental in governance"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Article 37 gives their non-justiciable but fundamental status."
+      },
+      {
+        "id": "group2-mains-1-model-union-state-institutions-5",
+        "section": "Indian Constitution",
+        "topic": "Union–State Powers and Accountability Institutions",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Who audits and reports on government accounts subject to the constitutional and statutory framework?",
+        "options": [
+          "Lokpal alone",
+          "Comptroller and Auditor General",
+          "Election Commission",
+          "NITI Aayog"
+        ],
+        "correctAnswer": 1,
+        "explanation": "The CAG undertakes public audit under constitutional and statutory authority."
+      },
+      {
+        "id": "group2-mains-1-model-federalism-elections-defection-10",
+        "section": "Indian Constitution",
+        "topic": "Federalism, Political Parties, Elections and Defection",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Which amendment initially introduced the Tenth Schedule?",
+        "options": [
+          "73rd Amendment",
+          "52nd Amendment",
+          "44th Amendment",
+          "42nd Amendment"
+        ],
+        "correctAnswer": 1,
+        "explanation": "The 52nd Amendment inserted the anti-defection schedule."
+      },
+      {
+        "id": "group2-mains-1-model-union-state-institutions-9",
+        "section": "Indian Constitution",
+        "topic": "Union–State Powers and Accountability Institutions",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Which office should ordinarily receive an initial request for information under RTI?",
+        "options": [
+          "Designated Public Information Officer",
+          "Chief Justice of India in all cases",
+          "Speaker of every legislature",
+          "Chairperson of the Finance Commission"
+        ],
+        "correctAnswer": 0,
+        "explanation": "The Act provides for Public Information Officers to process requests."
+      },
+      {
+        "id": "group2-mains-1-model-federalism-elections-defection-8",
+        "section": "Indian Constitution",
+        "topic": "Federalism, Political Parties, Elections and Defection",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Which statute lowered the voting age from twenty-one to eighteen by constitutional amendment?",
+        "options": [
+          "44th Amendment",
+          "42nd Amendment",
+          "61st Amendment",
+          "52nd Amendment"
+        ],
+        "correctAnswer": 2,
+        "explanation": "The 61st Amendment lowered the constitutional voting age."
+      },
+      {
+        "id": "group2-mains-1-model-constitution-foundations-4",
+        "section": "Indian Constitution",
+        "topic": "Constitutional Development, Rights and Basic Structure",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Which constitutional provision guarantees equality before law and equal protection of laws?",
+        "options": [
+          "Article 19",
+          "Article 21A",
+          "Article 32",
+          "Article 14"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Article 14 sets out both phrases."
+      },
+      {
+        "id": "group2-mains-1-model-federalism-elections-defection-9",
+        "section": "Indian Constitution",
+        "topic": "Federalism, Political Parties, Elections and Defection",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Which constitutional mechanism primarily addresses failure of constitutional machinery in a state?",
+        "options": [
+          "Article 123",
+          "Article 110",
+          "Article 280",
+          "Article 356"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Article 356 provides for a proclamation in the specified circumstances."
+      },
+      {
+        "id": "group2-mains-1-model-local-government-1",
+        "section": "Indian Constitution",
+        "topic": "Decentralisation and Local Self-Government",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "What did the Balwant Rai Mehta Committee recommend?",
+        "options": [
+          "A national urban court network",
+          "A two-tier district–mandal model as its main plan",
+          "A three-tier Panchayati Raj model",
+          "An entirely centrally appointed village executive"
+        ],
+        "correctAnswer": 2,
+        "explanation": "The committee recommended a three-tier Panchayati Raj framework."
+      },
+      {
+        "id": "group2-mains-1-model-constitution-foundations-7",
+        "section": "Indian Constitution",
+        "topic": "Constitutional Development, Rights and Basic Structure",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Which constitutional provision expressly provides free and compulsory education for children aged six to fourteen?",
+        "options": [
+          "Article 22",
+          "Article 21A",
+          "Article 23",
+          "Article 25"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Article 21A specifies ages six to fourteen."
+      },
+      {
+        "id": "group2-mains-1-model-federalism-elections-defection-14",
+        "section": "Indian Constitution",
+        "topic": "Federalism, Political Parties, Elections and Defection",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Why should a recommendation of a commission be traced to later legal material?",
+        "options": [
+          "A recommendation replaces the need to identify its subject",
+          "All commission recommendations become automatic amendments",
+          "A recommendation does not itself make a binding constitutional change",
+          "Commissions are courts of final appeal"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Implementation requires checking later legal, policy or administrative action."
+      },
+      {
+        "id": "group2-mains-1-model-union-state-institutions-11",
+        "section": "Indian Constitution",
+        "topic": "Union–State Powers and Accountability Institutions",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "How should a State Lokayukta's exact jurisdiction be checked?",
+        "options": [
+          "Use the Election Symbols Order",
+          "Read only Article 280",
+          "Read the applicable state legislation and rules",
+          "Assume it equals the Union Lokpal's in every detail"
+        ],
+        "correctAnswer": 2,
+        "explanation": "State arrangements and jurisdiction depend on the relevant legal provisions."
+      },
+      {
+        "id": "group2-mains-1-model-local-government-3",
+        "section": "Indian Constitution",
+        "topic": "Decentralisation and Local Self-Government",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Which amendment gave constitutional status to Panchayats?",
+        "options": [
+          "42nd Amendment",
+          "73rd Amendment",
+          "74th Amendment",
+          "52nd Amendment"
+        ],
+        "correctAnswer": 1,
+        "explanation": "The 73rd Amendment inserted Part IX."
+      },
+      {
+        "id": "group2-mains-1-model-constitution-foundations-5",
+        "section": "Indian Constitution",
+        "topic": "Constitutional Development, Rights and Basic Structure",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Which article abolishes untouchability?",
+        "options": [
+          "Article 20",
+          "Article 17",
+          "Article 29",
+          "Article 16"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Article 17 abolishes untouchability and provides that enforcing any resulting disability is an offence punishable by law."
+      },
+      {
+        "id": "group2-mains-1-model-constitution-foundations-14",
+        "section": "Indian Constitution",
+        "topic": "Constitutional Development, Rights and Basic Structure",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "An amendment seeks to remove all constitutional limits on the amending power. Which doctrine is directly relevant?",
+        "options": [
+          "Colourable legislation only",
+          "Promissory estoppel",
+          "Basic structure",
+          "Prospective overruling only"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Basic structure limits the exercise of the constitutional amendment power."
+      },
+      {
+        "id": "group2-mains-1-model-government-branches-14",
+        "section": "Indian Constitution",
+        "topic": "Legislature, Executive and Judiciary",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "In the parliamentary system, which actor normally directs day-to-day Union policy through the Cabinet?",
+        "options": [
+          "Prime Minister and the Council of Ministers",
+          "Chief Justice of India",
+          "Election Commission",
+          "Comptroller and Auditor General"
+        ],
+        "correctAnswer": 0,
+        "explanation": "The political executive formulates policy and is responsible to the elected House."
+      },
+      {
+        "id": "group2-mains-1-model-federalism-elections-defection-4",
+        "section": "Indian Constitution",
+        "topic": "Federalism, Political Parties, Elections and Defection",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "What is a federal feature of the Constitution?",
+        "options": [
+          "A parliamentary committee appointing all state ministers",
+          "All subjects exclusively allocated to one central legislature",
+          "A uniform list of every municipal service provider",
+          "Constitutional distribution of powers between Union and states"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Division of legislative competence is a federal feature."
+      },
+      {
+        "id": "group2-mains-1-model-constitution-foundations-3",
+        "section": "Indian Constitution",
+        "topic": "Constitutional Development, Rights and Basic Structure",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Which amendment inserted the words Socialist and Secular into the Preamble?",
+        "options": [
+          "52nd Amendment",
+          "44th Amendment",
+          "61st Amendment",
+          "42nd Amendment"
+        ],
+        "correctAnswer": 3,
+        "explanation": "The 42nd Amendment added Socialist and Secular and also modified the reference to the nation's unity."
+      },
+      {
+        "id": "group2-mains-1-model-government-branches-9",
+        "section": "Indian Constitution",
+        "topic": "Legislature, Executive and Judiciary",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Who is the constitutional head of a state executive?",
+        "options": [
+          "Chief Secretary",
+          "Governor",
+          "Chief Minister alone",
+          "Assembly Speaker"
+        ],
+        "correctAnswer": 1,
+        "explanation": "The Constitution vests state executive power in the Governor, within the parliamentary structure."
+      },
+      {
+        "id": "group2-mains-1-model-federalism-elections-defection-11",
+        "section": "Indian Constitution",
+        "topic": "Federalism, Political Parties, Elections and Defection",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Who ordinarily decides a disqualification question under the Tenth Schedule in a House?",
+        "options": [
+          "President of the national party alone",
+          "Governor exclusively in all circumstances",
+          "Finance Commission",
+          "Speaker or Chairman under the applicable procedure"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Paragraph 6 provides decision by the Speaker or Chairman subject to the schedule and judicial review."
+      },
+      {
+        "id": "group2-mains-1-model-federalism-elections-defection-3",
+        "section": "Indian Constitution",
+        "topic": "Federalism, Political Parties, Elections and Defection",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Which commission followed the Sarkaria Commission in a later review of centre–state relations?",
+        "options": [
+          "Balwant Rai Mehta Committee",
+          "Kothari Commission",
+          "Ashok Mehta Committee",
+          "Punchhi Commission"
+        ],
+        "correctAnswer": 3,
+        "explanation": "The Punchhi Commission undertook a later review of centre–state relations."
+      },
+      {
+        "id": "group2-mains-1-model-constitution-foundations-12",
+        "section": "Indian Constitution",
+        "topic": "Constitutional Development, Rights and Basic Structure",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "With which judgment is the basic structure doctrine principally associated?",
+        "options": [
+          "A. K. Gopalan",
+          "Kihoto Hollohan",
+          "Kesavananda Bharati",
+          "Shankari Prasad"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Kesavananda Bharati established constitutional limits on the amending power through the basic structure doctrine."
+      },
+      {
+        "id": "group2-mains-1-model-local-government-7",
+        "section": "Indian Constitution",
+        "topic": "Decentralisation and Local Self-Government",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Which body reviews the financial position of Panchayats under Article 243I?",
+        "options": [
+          "Union Public Service Commission",
+          "Central Election Commission",
+          "State Finance Commission",
+          "Inter-State Council"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Article 243I provides for a Finance Commission constituted by the Governor to review Panchayat finances."
+      },
+      {
+        "id": "group2-mains-1-model-union-state-institutions-7",
+        "section": "Indian Constitution",
+        "topic": "Union–State Powers and Accountability Institutions",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "The National Human Rights Commission takes its statutory basis from which law?",
+        "options": [
+          "Representation of the People Act, 1950",
+          "Finance Commission Act",
+          "Right to Information Act",
+          "Protection of Human Rights Act"
+        ],
+        "correctAnswer": 3,
+        "explanation": "The NHRC was constituted under the Protection of Human Rights Act, 1993."
+      },
+      {
+        "id": "group2-mains-1-model-government-branches-5",
+        "section": "Indian Constitution",
+        "topic": "Legislature, Executive and Judiciary",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Who certifies whether a parliamentary bill is a Money Bill under Article 110?",
+        "options": [
+          "Chairman of the Rajya Sabha",
+          "Finance Commission chairperson",
+          "Chief Justice of India",
+          "Speaker of the Lok Sabha"
+        ],
+        "correctAnswer": 3,
+        "explanation": "The Speaker’s decision is specified in Article 110."
+      },
+      {
+        "id": "group2-mains-1-federalism-elections-defection",
+        "section": "Indian Constitution",
+        "topic": "Federalism, Political Parties, Elections and Defection",
+        "type": "MCQ",
+        "question": "Which schedule contains the Constitution's anti-defection provisions?",
+        "options": [
+          "Tenth",
+          "Eighth",
+          "Ninth",
+          "Eleventh"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "explanation": "The Tenth Schedule contains the disqualification rules for defection.",
+        "source": "https://www.legislative.gov.in/documents"
+      },
+      {
+        "id": "group2-mains-1-model-constitution-foundations-2",
+        "section": "Indian Constitution",
+        "topic": "Constitutional Development, Rights and Basic Structure",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Which law established the broad framework of provincial autonomy before independence?",
+        "options": [
+          "Indian Councils Act, 1861",
+          "Government of India Act, 1858",
+          "Government of India Act, 1935",
+          "Charter Act, 1813"
+        ],
+        "correctAnswer": 2,
+        "explanation": "The 1935 Act provided for provincial autonomy."
+      },
+      {
+        "id": "group2-mains-1-model-government-branches-10",
+        "section": "Indian Constitution",
+        "topic": "Legislature, Executive and Judiciary",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Who can exercise High Court writ jurisdiction under Article 226?",
+        "options": [
+          "A district collector",
+          "A High Court",
+          "A parliamentary committee",
+          "A State Election Commission"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Article 226 confers writ jurisdiction on High Courts."
+      },
+      {
+        "id": "group2-mains-1-model-local-government-11",
+        "section": "Indian Constitution",
+        "topic": "Decentralisation and Local Self-Government",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "What does transfer of functions without funds generally illustrate?",
+        "options": [
+          "Complete fiscal decentralisation",
+          "Change in legislative chamber count",
+          "A gap between assigned responsibility and operating capacity",
+          "An increase in judicial review power"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Local authorities need funding and personnel to carry out responsibilities."
+      },
+      {
+        "id": "group2-mains-1-model-union-state-institutions-10",
+        "section": "Indian Constitution",
+        "topic": "Union–State Powers and Accountability Institutions",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Which body performs a statutory anti-corruption ombudsman function for covered Union public functionaries?",
+        "options": [
+          "Finance Commission",
+          "National Development Council",
+          "Lokpal",
+          "GST Council"
+        ],
+        "correctAnswer": 2,
+        "explanation": "The Lokpal’s jurisdiction and procedure arise from the Lokpal and Lokayuktas Act."
+      },
+      {
+        "id": "group2-mains-1-model-union-state-institutions-14",
+        "section": "Indian Constitution",
+        "topic": "Union–State Powers and Accountability Institutions",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Which article establishes the GST Council?",
+        "options": [
+          "Article 280",
+          "Article 279A",
+          "Article 324",
+          "Article 300A"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Article 279A concerns the Goods and Services Tax Council."
+      },
+      {
+        "id": "group2-mains-1-model-government-branches-11",
+        "section": "Indian Constitution",
+        "topic": "Legislature, Executive and Judiciary",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Article 226 can be used for fundamental rights and which additional purpose?",
+        "options": [
+          "Only presidential elections",
+          "Any other legally cognisable purpose within the provision",
+          "Only disputes about parliamentary membership",
+          "Only constitutional amendments"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Its text extends to enforcement of rights and for any other purpose."
+      },
+      {
+        "id": "group2-mains-1-model-local-government-8",
+        "section": "Indian Constitution",
+        "topic": "Decentralisation and Local Self-Government",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Which schedule lists matters associated with Municipalities?",
+        "options": [
+          "Twelfth Schedule",
+          "Eleventh Schedule",
+          "Seventh Schedule's Union List only",
+          "Tenth Schedule"
+        ],
+        "correctAnswer": 0,
+        "explanation": "The Twelfth Schedule indicates municipal functions."
+      },
+      {
+        "id": "group2-mains-1-model-local-government-2",
+        "section": "Indian Constitution",
+        "topic": "Decentralisation and Local Self-Government",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "What model is most closely associated with the Ashok Mehta Committee?",
+        "options": [
+          "Two-tier district and mandal institutions",
+          "Four levels beginning with Parliament",
+          "A three-tier model identical to the Balwant Rai Mehta proposal",
+          "A court-led municipal system"
+        ],
+        "correctAnswer": 0,
+        "explanation": "The committee proposed a two-tier model centred on district and mandal levels."
+      },
+      {
+        "id": "group2-mains-1-model-union-state-institutions-2",
+        "section": "Indian Constitution",
+        "topic": "Union–State Powers and Accountability Institutions",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Which article provides the basic distribution of legislative fields in the Seventh Schedule?",
+        "options": [
+          "Article 148",
+          "Article 324",
+          "Article 368",
+          "Article 246"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Article 246 allocates competence across the lists, subject to constitutional provisions."
+      },
+      {
+        "id": "group2-mains-1-model-local-government-10",
+        "section": "Indian Constitution",
+        "topic": "Decentralisation and Local Self-Government",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Which provision concerns Municipalities' reservation of seats?",
+        "options": [
+          "Article 243T",
+          "Article 243D",
+          "Article 243I",
+          "Article 243K"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Article 243T addresses reservation of seats in Municipalities."
+      },
+      {
+        "id": "group2-mains-1-model-government-branches-13",
+        "section": "Indian Constitution",
+        "topic": "Legislature, Executive and Judiciary",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Which provision gives the President ordinance-making power when Parliament is not fully in session and immediate action is considered necessary?",
+        "options": [
+          "Article 169",
+          "Article 324",
+          "Article 123",
+          "Article 280"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Article 123 provides the ordinance power under specified conditions."
+      },
+      {
+        "id": "group2-mains-1-model-union-state-institutions-1",
+        "section": "Indian Constitution",
+        "topic": "Union–State Powers and Accountability Institutions",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Which schedule contains the Union, State and Concurrent Lists?",
+        "options": [
+          "Seventh Schedule",
+          "Tenth Schedule",
+          "Eighth Schedule",
+          "Eleventh Schedule"
+        ],
+        "correctAnswer": 0,
+        "explanation": "The three legislative lists appear in the Seventh Schedule."
+      },
+      {
+        "id": "group2-mains-1-model-local-government-4",
+        "section": "Indian Constitution",
+        "topic": "Decentralisation and Local Self-Government",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Which amendment added Part IXA on Municipalities?",
+        "options": [
+          "73rd Amendment",
+          "44th Amendment",
+          "74th Amendment",
+          "61st Amendment"
+        ],
+        "correctAnswer": 2,
+        "explanation": "The 74th Amendment added Part IXA and the Twelfth Schedule."
+      },
+      {
+        "id": "group2-mains-1-model-government-branches-12",
+        "section": "Indian Constitution",
+        "topic": "Legislature, Executive and Judiciary",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "What does judicial review assess?",
+        "options": [
+          "Compatibility of challenged action or legislation with controlling law",
+          "Which policy is politically most popular",
+          "Every department’s expenditure as the statutory auditor",
+          "How many legislators should belong to each party by policy preference"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Courts review legality and constitutional validity within their jurisdiction."
+      },
+      {
+        "id": "group2-mains-1-model-local-government-14",
+        "section": "Indian Constitution",
+        "topic": "Decentralisation and Local Self-Government",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "What does a District Planning Committee help consolidate?",
+        "options": [
+          "Orders of every High Court",
+          "Plans prepared by Panchayats and Municipalities in the district",
+          "Monetary policy resolutions",
+          "Political party membership lists"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Article 243ZD gives district planning committees a plan-consolidation role."
+      },
+      {
+        "id": "group2-mains-1-model-federalism-elections-defection-7",
+        "section": "Indian Constitution",
+        "topic": "Federalism, Political Parties, Elections and Defection",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "What is the main difference between party registration and recognition?",
+        "options": [
+          "Every registered party automatically becomes nationally recognised",
+          "Registration is determined by the Finance Commission",
+          "Recognition by the Lokpal replaces registration",
+          "Registration and recognition have separate legal requirements and consequences"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Registration and recognition are governed by different criteria and procedures."
+      },
+      {
+        "id": "group2-mains-1-model-government-branches-1",
+        "section": "Indian Constitution",
+        "topic": "Legislature, Executive and Judiciary",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Which institutions constitute Parliament under Article 79?",
+        "options": [
+          "Prime Minister, President and Supreme Court",
+          "President, Council of States and House of the People",
+          "Council of States and Finance Commission only",
+          "House of the People and Council of Ministers only"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Article 79 includes the President and the two Houses."
+      },
+      {
+        "id": "group2-mains-1-model-local-government-13",
+        "section": "Indian Constitution",
+        "topic": "Decentralisation and Local Self-Government",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Which comparison focuses on decentralisation in practice?",
+        "options": [
+          "Legal duties, own revenue, transfers and workforce control",
+          "Only the number of Houses at the Union level",
+          "Only the number of districts nationwide",
+          "Only the existence of a council's printed letterhead"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Actual devolution depends on functions, funds and functionaries."
+      },
+      {
+        "id": "group2-mains-1-model-union-state-institutions-6",
+        "section": "Indian Constitution",
+        "topic": "Union–State Powers and Accountability Institutions",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Which article concerns the Comptroller and Auditor General?",
+        "options": [
+          "Article 280",
+          "Article 148",
+          "Article 324",
+          "Article 344"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Article 148 establishes the office of CAG."
+      },
+      {
+        "id": "group2-mains-1-model-constitution-foundations-9",
+        "section": "Indian Constitution",
+        "topic": "Constitutional Development, Rights and Basic Structure",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Where are the Fundamental Duties listed?",
+        "options": [
+          "Article 52",
+          "Article 48A",
+          "Article 50",
+          "Article 51A"
+        ],
+        "correctAnswer": 3,
+        "explanation": "The duties are in Article 51A in Part IVA."
+      },
+      {
+        "id": "group2-mains-1-model-government-branches-3",
+        "section": "Indian Constitution",
+        "topic": "Legislature, Executive and Judiciary",
+        "type": "MCQ",
+        "marks": 1,
+        "source": "https://www.legislative.gov.in/documents",
+        "question": "Which House can a Union Money Bill be introduced in?",
+        "options": [
+          "Lok Sabha",
+          "Rajya Sabha",
+          "Either House by the same procedure",
+          "Joint sitting only"
+        ],
+        "correctAnswer": 0,
+        "explanation": "A Money Bill must originate in the House of the People."
+      },
+      {
+        "id": "group2-mains-1-constitution-foundations",
+        "section": "Indian Constitution",
+        "topic": "Constitutional Development, Rights and Basic Structure",
+        "type": "MCQ",
+        "question": "Which part contains the Directive Principles of State Policy?",
+        "options": [
+          "Part II",
+          "Part III",
+          "Part IV",
+          "Part IVA"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "explanation": "Directive Principles appear in Part IV.",
+        "source": "https://www.legislative.gov.in/documents"
+      }
+    ]
+  },
+  {
+    "title": "Mains Paper I · Syllabus sampler",
+    "category": "Original drill",
+    "provenance": "GateLabs original questions. One question per Annexure II syllabus unit across both sections.",
+    "full": false,
+    "questions": [
+      {
+        "id": "group2-mains-1-early-andhra",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Early Andhra and the Vengi Dynasties",
+        "type": "MCQ",
+        "question": "Which court is associated with Nannaya’s Telugu Mahabharata?",
+        "options": [
+          "Eastern Chalukyas of Vengi",
+          "Ikshvakus of Vijayapuri",
+          "Vishnukundins",
+          "Renati Cholas"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "explanation": "Nannaya worked under the patronage of Rajaraja Narendra of the Eastern Chalukya line.",
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd"
+      },
+      {
+        "id": "group2-mains-1-medieval-andhradesa",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Medieval Andhradesa, 11th–16th Centuries",
+        "type": "MCQ",
+        "question": "Which ruler authored the Telugu work Amuktamalyada?",
+        "options": [
+          "Ganapati Deva",
+          "Krishnadevaraya",
+          "Rajaraja Narendra",
+          "Prataparudra"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "explanation": "Amuktamalyada is associated with Krishnadevaraya of Vijayanagara.",
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd"
+      },
+      {
+        "id": "group2-mains-1-colonial-nationalist-andhra",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Colonial Rule, Reform and Nationalism in Andhra",
+        "type": "MCQ",
+        "question": "Which reformer is closely associated with widow remarriage advocacy in Andhra?",
+        "options": [
+          "Tikkana",
+          "Rajaraja Narendra",
+          "Kandukuri Veeresalingam",
+          "Potti Sriramulu"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "explanation": "Veeresalingam campaigned for widow remarriage and women's education in the Telugu-speaking region.",
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd"
+      },
+      {
+        "id": "group2-mains-1-andhra-state-movement",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Andhra Movement and the Formation of Andhra State",
+        "type": "MCQ",
+        "question": "Which city was the capital of Andhra State at its formation in 1953?",
+        "options": [
+          "Hyderabad",
+          "Visakhapatnam",
+          "Madras",
+          "Kurnool"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "explanation": "Kurnool was the capital of the Andhra State inaugurated in October 1953.",
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd"
+      },
+      {
+        "id": "group2-mains-1-andhra-pradesh-reorganisation",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Andhra Pradesh Formation and Reorganisation",
+        "type": "MCQ",
+        "question": "On what date did Andhra Pradesh come into being in the 1956 reorganisation?",
+        "options": [
+          "1 October 1953",
+          "1 November 1956",
+          "26 January 1950",
+          "2 June 2014"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "explanation": "The merger of Andhra State and Telangana took effect on 1 November 1956.",
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd"
+      },
+      {
+        "id": "group2-mains-1-constitution-foundations",
+        "section": "Indian Constitution",
+        "topic": "Constitutional Development, Rights and Basic Structure",
+        "type": "MCQ",
+        "question": "Which part contains the Directive Principles of State Policy?",
+        "options": [
+          "Part II",
+          "Part III",
+          "Part IV",
+          "Part IVA"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "explanation": "Directive Principles appear in Part IV.",
+        "source": "https://www.legislative.gov.in/documents"
+      },
+      {
+        "id": "group2-mains-1-government-branches",
+        "section": "Indian Constitution",
+        "topic": "Legislature, Executive and Judiciary",
+        "type": "MCQ",
+        "question": "The Union Council of Ministers is collectively responsible to which body?",
+        "options": [
+          "Rajya Sabha",
+          "Lok Sabha",
+          "Supreme Court",
+          "Election Commission"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "explanation": "Article 75(3) makes the Council of Ministers collectively responsible to the House of the People.",
+        "source": "https://www.legislative.gov.in/documents"
+      },
+      {
+        "id": "group2-mains-1-union-state-institutions",
+        "section": "Indian Constitution",
+        "topic": "Union–State Powers and Accountability Institutions",
+        "type": "MCQ",
+        "question": "Which constitutional article provides for the Finance Commission?",
+        "options": [
+          "Article 148",
+          "Article 324",
+          "Article 356",
+          "Article 280"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "explanation": "Article 280 deals with the Finance Commission.",
+        "source": "https://www.legislative.gov.in/documents"
+      },
+      {
+        "id": "group2-mains-1-federalism-elections-defection",
+        "section": "Indian Constitution",
+        "topic": "Federalism, Political Parties, Elections and Defection",
+        "type": "MCQ",
+        "question": "Which schedule contains the Constitution's anti-defection provisions?",
+        "options": [
+          "Tenth",
+          "Eighth",
+          "Ninth",
+          "Eleventh"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "explanation": "The Tenth Schedule contains the disqualification rules for defection.",
+        "source": "https://www.legislative.gov.in/documents"
+      },
+      {
+        "id": "group2-mains-1-local-government",
+        "section": "Indian Constitution",
+        "topic": "Decentralisation and Local Self-Government",
+        "type": "MCQ",
+        "question": "Which schedule lists subjects associated with Panchayats?",
+        "options": [
+          "Seventh",
+          "Tenth",
+          "Eleventh",
+          "Twelfth"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "explanation": "The Eleventh Schedule is associated with rural Panchayats under Part IX.",
+        "source": "https://www.legislative.gov.in/documents"
+      }
+    ]
+  }
+]

@@ -14,7 +14,7 @@ export const WorkspaceHome={
    const {attempts,syncState}=await getAttemptRecords();
    attempts.sort((a,b)=>new Date(b.timestamp)-new Date(a.timestamp));
    const recentId=localStorage.getItem('last-exam:'+auth.currentUser?.uid);
-   const recent=EXAM_CATALOG.find(e=>e.id===recentId);
+   const recent=EXAM_CATALOG.find(e=>e.id===recentId)||EXAMS[recentId];
    const right=attempts.filter(a=>Number.isFinite(a.accuracy));
    const accuracy=right.length?Math.round(right.reduce((n,a)=>n+a.accuracy,0)/right.length)+'%':'—';
    const active=localStorage.getItem('exam-active:'+auth.currentUser?.uid);
