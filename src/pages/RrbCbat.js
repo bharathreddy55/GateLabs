@@ -1,5 +1,7 @@
 import { auth } from '../config/firebase';
 import { CBAT_BATTERIES, RDSO_FAQ, RDSO_GUIDE, RRB_NOTICE, rrbStageNav } from '../config/rrbCbat.js';
+import { EXAM_CATALOG, icon } from '../config/navigation.js';
+import { mockLibraryBanner } from '../components/ExamMockLibrary.js';
 import { buildCbatQuestions, cbatSummary, validCbatResult } from '../utils/cbat.js';
 import { escapeHtml as h } from '../utils/examEngine.js';
 import { readStored } from '../utils/safeStorage.js';
@@ -31,6 +33,8 @@ function streetMap({size,start,end,edges,houseCells}) {
 const optionLabel = (option, index) => Array.isArray(option) ? `Figure ${index+1}` : String(option);
 const timeLabel = seconds => `${Math.floor(seconds/60)}:${String(seconds%60).padStart(2,'0')}`;
 const completedLabel = result => result.correct === null ? `${result.attempted}/${result.total} completed` : `${result.correct}/${result.total} correct`;
+const stationMaster = EXAM_CATALOG.find(exam=>exam.id==='rrb');
+const batteryIcons = {intelligence:'grid',attention:'edit',spatial:'chart',ordering:'file',personality:'users'};
 
 export const RrbCbat = {
   render(){
@@ -38,7 +42,10 @@ export const RrbCbat = {
       <header class="exam-page-heading"><div class="exam-heading-main"><a class="back-link" href="#/exams">← All exams</a>
       <span class="eyebrow">Railway recruitment · CEN 08/2026</span><h1>RRB Station Master</h1><p>Practise the aptitude batteries for the second stage.</p></div></header>
       ${rrbStageNav(true)}
-      <section class="surface"><h2>Computer Based Aptitude Test</h2>
+      <div class="mock-test-library" style="--mock-accent:${stationMaster.color}">
+      ${mockLibraryBanner({title:'Computer Based Aptitude Test',metrics:[['practice batteries',CBAT_BATTERIES.length]],symbol:stationMaster.symbol})}
+      <div data-cbat-panel></div>
+      <details class="surface mock-cbat-rules"><summary>Official scoring & recruitment rules</summary>
         <div class="pattern-metrics"><div><strong>42</strong><span>Minimum T-score per battery</span></div>
         <div><strong>None</strong><span>Negative marking</span></div><div><strong>70 / 30</strong><span>CBT / CBAT merit weight</span></div>
         <div><strong>EN / HI</strong><span>Official exam languages</span></div></div>
@@ -47,7 +54,7 @@ export const RrbCbat = {
         <div class="button-row"><a class="text-link" href="${RRB_NOTICE}" target="_blank" rel="noopener">Recruitment notice §15.2 ↗</a>
         <a class="text-link" href="${RDSO_GUIDE}" target="_blank" rel="noopener">RDSO samples and guidance ↗</a>
         <a class="text-link" href="${RDSO_FAQ}" target="_blank" rel="noopener">RDSO FAQ ↗</a></div>
-      </section><div data-cbat-panel></div></section>`;
+      </details></div></section>`;
   },
   init(){
     this.panel = document.querySelector('[data-cbat-panel]');
@@ -62,14 +69,16 @@ export const RrbCbat = {
   },
   showLibrary(){
     const results = readStored(this.key,{});
-    this.panel.innerHTML = `<div class="section-heading"><h2>Practice batteries</h2></div><div class="paper-grid">
+    this.panel.innerHTML = `<section class="mock-library-section"><h3>Practice batteries</h3><div class="mock-picks">
       ${CBAT_BATTERIES.map(battery => {
         const last = results[battery.id];
-        return `<article class="surface paper-card"><h3>${battery.title}</h3><p>${battery.instruction}</p>
-          <p class="muted">${battery.count} items · ${battery.seconds?`${battery.seconds/60} min practice`:'Untimed'}</p>
-          ${validCbatResult(battery.id,last)?`<p class="muted">Last practice · ${completedLabel(last)}</p>`:''}
-          <button type="button" class="ui-button primary" data-cbat-start="${battery.id}">Start ${battery.title}</button></article>`;
-      }).join('')}</div>`;
+        return `<article class="surface mock-pick">
+          <span class="mock-pick-icon">${icon(batteryIcons[battery.id])}</span>
+          <div><p class="mock-pick-label">${battery.count} items · ${battery.seconds?`${battery.seconds/60} min practice`:'Untimed'}</p>
+          <h4>${battery.title}</h4><p>${battery.instruction}</p>
+          ${validCbatResult(battery.id,last)?`<p>Last practice · ${completedLabel(last)}</p>`:''}</div>
+          <button type="button" class="ui-button primary" data-cbat-start="${battery.id}">Start ${battery.title} ${icon('arrow')}</button></article>`;
+      }).join('')}</div></section>`;
   },
   start(battery){
     const questions = buildCbatQuestions(battery.id);

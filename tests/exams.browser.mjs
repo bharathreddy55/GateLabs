@@ -180,6 +180,9 @@ try{
  assert.equal(await page.locator('#analytics-exam-filter').inputValue(),'group2');
  for(const exam of ['rrb-station-master','group2','group2/mains','group2/mains/paper-2','gate']){
    await page.goto(`http://127.0.0.1:3011/#/${exam}?tab=mocks`);
+   await page.locator('[data-mock-jump="drills"]').click();
+   assert.equal(await page.getByRole('heading',{name:'Challenge & short drills',exact:true}).count(),1);
+   assert.equal(await page.locator('.mock-paper-grid [data-paper-group="full"]:visible').count(),0);
    const challenge=page.locator('[data-paper-type="Challenge drill"]');
    await challenge.getByRole('button',{name:'Start CBT drill'}).click();
    await page.getByRole('button',{name:'Begin test',exact:true}).click();
@@ -197,8 +200,34 @@ try{
      assert.match(await page.locator('#exam-root').innerText(),/Marks deducted: 0\.67/);
    }
  }
+ await page.setViewportSize({width:360,height:800});
+ for(const [route,subjectCount] of [['rrb-station-master',4],['group2',5],['group2/mains',2],['group2/mains/paper-2',2],['gate',3],['tet-exams',5],['sbi-clerk',3]]){
+   await page.goto(`http://127.0.0.1:3011/#/${route}?tab=mocks`);
+   const library=page.locator('[data-panel=mocks] .mock-test-library');
+   await library.getByRole('heading',{name:'Quick start'}).waitFor();
+   await library.locator('.mock-tile[data-mock-jump="subjects"]').click();
+   assert.equal(await library.locator('.mock-subject:visible').count(),subjectCount);
+   assert.equal(await library.locator('[data-mock-papers]').isHidden(),true);
+   assert.ok(await library.evaluate(el=>el.scrollWidth<=el.clientWidth+1),`${route} mock library overflows`);
+   await library.getByRole('button',{name:'Show all tests'}).click();
+   assert.ok(await library.locator('[data-mock-papers]').isVisible());
+ }
+ await page.goto('http://127.0.0.1:3011/#/rrb-station-master?tab=mocks');
+ await page.getByRole('button',{name:/Related past papers/}).click();
+ assert.ok(await page.getByRole('link',{name:/Older NTPC papers/}).isVisible());
+ await page.getByRole('tab',{name:'Mock tests'}).click();
+ await page.locator('.mock-tile[data-mock-jump="subjects"]').click();
+ const dataDrills=page.locator('.mock-subject').filter({has:page.locator('summary').getByText('Data Analysis',{exact:true})});
+ await dataDrills.locator('summary').click();
+ await dataDrills.getByRole('button',{name:'Start subject test'}).first().click();
+ assert.match(await page.locator('#exam-root').innerText(),/30 questions · 36 minutes · 30 marks/);
+ await page.getByRole('button',{name:'Begin test',exact:true}).click();
+ assert.equal(await page.locator('[data-question]').count(),30);
+ await page.getByRole('button',{name:'Submit test',exact:true}).click();
+ await page.getByRole('heading',{name:'Exam complete',exact:true}).waitFor();
  await page.goto('http://127.0.0.1:3011/#/rrb-station-master');
- await page.getByRole('link',{name:'Stage 2 · CBAT'}).click();
+ await page.getByRole('tab',{name:'Mock tests'}).click();
+ await page.getByRole('link',{name:/Stage 2 · CBAT.*aptitude batteries/}).click();
  await page.getByRole('heading',{name:'Computer Based Aptitude Test'}).waitFor();
  assert.equal(await page.locator('[data-cbat-start]').count(),5);
  await page.getByRole('button',{name:'Start Intelligence'}).click();
