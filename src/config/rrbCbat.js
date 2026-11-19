@@ -1,6 +1,7 @@
 export const RRB_NOTICE = 'https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments';
 export const RDSO_GUIDE = 'https://rdso.indianrailways.gov.in/works/uploads/File/ASM_guidline.pdf';
 export const RDSO_FAQ = 'https://rdso.indianrailways.gov.in/uploads/File/FAQ%20.pdf';
+export const CBAT_PRACTICE_SETS = [1,2];
 
 export const CBAT_BATTERIES = [
   { id:'intelligence', title:'Intelligence', count:12, seconds:180, instruction:'Find the one figure that cannot be made by rotating the other figures.' },

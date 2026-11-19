@@ -1,13 +1,15 @@
 import { currentAffairs2026 } from './current-affairs-2026.mjs';
 import { rrbModel2 } from './rrb-model-2.mjs';
 import { rrbModel3 } from './rrb-model-3.mjs';
+import { stationMasterSeries } from './rrb-practice-series.mjs';
 // Original model questions. Deterministic construction; no scraped or AI-labelled PYQs.
 import fs from 'node:fs';
 import { EXAMS } from '../src/config/exams.js';
 import { validatePaper } from '../src/utils/examEngine.js';
 const banks={group2:[],rrb:[]};
 function modelQuestion(exam,model,index,section,topic,question,answer,others,explanation,extra={}) {
-  let hash=2166136261;for(const char of question)hash=Math.imul(hash^char.charCodeAt(0),16777619)>>>0;
+  const seed=model>3?`${model}:${question}`:question;
+  let hash=2166136261;for(const char of seed)hash=Math.imul(hash^char.charCodeAt(0),16777619)>>>0;
   const position=hash%4, options=others.map(String);
   options.splice(position,0,String(answer));
   return {id:`${exam}-model${model}-${index+1}`,section:EXAMS[exam].sections[section][0],subject:EXAMS[exam].sections[section][0],topic,question,options,correctAnswer:position,marks:1,type:'MCQ',explanation,source:'GateLabs original model question; '+EXAMS[exam].source,...extra};
@@ -252,11 +254,11 @@ for(const original of [...banks.rrb.slice(0,22),...banks.rrb.slice(80,88)]) {
 fs.mkdirSync('public/exams',{recursive:true});
 for(const [exam,questions] of Object.entries(banks)){
  const paper={title:EXAMS[exam].name+' · Foundation model 1',provenance:'GateLabs original practice material',note:exam==='group2'?'150-question foundation paper with a sourced 2025–2026 current-affairs snapshot checked 16 November 2026: AP, national and international topics. This is a practice selection, not a prediction or exhaustive coverage; update it as new events occur.':'100-question foundation paper using the indicative 30/30/20/20 distribution. Difficulty is introductory; this is not an official paper or a calibrated prediction.',questions};
- const papers=exam==='rrb'?[paper,rrbPracticePaper(2,rrbModel2),rrbPracticePaper(3,rrbModel3)]:[paper];
+ const papers=exam==='rrb'?[paper,rrbPracticePaper(2,rrbModel2),rrbPracticePaper(3,rrbModel3),...stationMasterSeries(modelQuestion,EXAMS.rrb.name)]:[paper];
  for(const candidate of papers) {
-   const errors=validatePaper(exam,candidate.questions,true);
+   const errors=validatePaper(exam,candidate.questions,candidate.full!==false);
    if(errors.length) throw Error(candidate.title+': '+errors.join(' · '));
  }
  fs.writeFileSync(`public/exams/${exam}.json`,JSON.stringify(papers,null,2)+'\n');
- console.log(`${exam}: ${papers.length} full papers validated`);
+ console.log(`${exam}: ${papers.length} papers and drills validated`);
 }

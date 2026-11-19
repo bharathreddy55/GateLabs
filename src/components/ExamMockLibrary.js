@@ -1,5 +1,5 @@
 import { icon } from '../config/navigation.js';
-import { CBAT_BATTERIES } from '../config/rrbCbat.js';
+import { CBAT_BATTERIES, CBAT_PRACTICE_SETS } from '../config/rrbCbat.js';
 import { escapeHtml as h } from '../utils/examEngine.js';
 import '../styles/mock-library.css';
 
@@ -51,7 +51,7 @@ function featuredTest(entry, exam, label, glyph) {
   });
 }
 
-function subjectTests(entries, exam) {
+function subjectTests(entries) {
   const subjects = new Map();
   for(const {paper,index,view} of entries) {
     for(const [name,questions] of view.sections) {
@@ -60,6 +60,10 @@ function subjectTests(entries, exam) {
       subjects.set(name,subject);
     }
   }
+  return subjects;
+}
+
+function renderSubjects(subjects,exam) {
   return [...subjects].map(([name,tests])=>`<details class="surface mock-subject">
     <summary><span>${h(name)}</span><small>${testCount(tests.length)}</small></summary>
     <ul>${tests.map(({paper,index,questions})=>`<li>
@@ -73,16 +77,18 @@ export function mockLibrary({exam,accent,symbol,papers,viewPaper,renderPaper,imp
   const ready = entries.filter(({view})=>!view.errors.length);
   const full = ready.filter(({paper})=>paper.full!==false);
   const drills = ready.filter(({paper})=>paper.full===false);
-  const subjects = subjectTests(ready,exam);
+  const subjects = subjectTests(ready);
   const tiles = [
     full.length && {key:'full',title:'Full mock tests',caption:testCount(full.length),glyph:'file'},
     drills.length && {key:'drills',title:'Challenge & short drills',caption:testCount(drills.length),glyph:'spark'},
-    subjects.length && {key:'subjects',title:'Subject tests',caption:`${subjects.length} ${subjects.length===1?'subject':'subjects'}`,glyph:'grid'}
+    subjects.size && {key:'subjects',title:'Subject tests',caption:exam.id==='rrb'
+      ? `${testCount([...subjects.values()].reduce((n,tests)=>n+tests.length,0))} across ${subjects.size} subjects`
+      : `${subjects.size} ${subjects.size===1?'subject':'subjects'}`,glyph:'grid'}
   ].filter(Boolean);
   const primary = full[0];
   const drill = drills.find(({paper})=>paper.category==='Challenge drill') ?? drills[0];
-  const shortPractice = !drill && subjects.length ? featuredCard({
-    label:'Focused practice', title:'Practise one subject', stats:`Choose from ${subjects.length} subjects`, glyph:'grid',
+  const shortPractice = !drill && subjects.size ? featuredCard({
+    label:'Focused practice', title:'Practise one subject', stats:`Choose from ${subjects.size} subjects`, glyph:'grid',
     action:`<button type="button" class="ui-button" data-mock-jump="subjects">Choose a subject ${icon('arrow')}</button>`
   }) : '';
   const pastGate = exam.id==='gate' ? featuredCard({
@@ -100,11 +106,11 @@ export function mockLibrary({exam,accent,symbol,papers,viewPaper,renderPaper,imp
     ? { title:'Previous papers',caption:'Year-wise question bank',glyph:'book',href:'#/pyq-mocks' }
     : (exam.papers?.length || pastCount) && {
       title:exam.id==='rrb'?'Related past papers':'Previous papers',
-      caption:pastCount ? `${pastCount} practice reconstructions` : (exam.id==='rrb'?'Older NTPC papers & guidance':'Question papers & answer keys'),
+      caption:exam.relatedPapers ? `${exam.relatedPapers.length} older NTPC papers` : pastCount ? `${pastCount} practice reconstructions` : 'Question papers & answer keys',
       glyph:'book',attributes:'data-open-tab="papers"'
     };
   const cbatTile = exam.id==='rrb' && practiceTile({
-    title:'Stage 2 · CBAT',caption:`${CBAT_BATTERIES.length} aptitude batteries`,glyph:'chart',href:'#/rrb-station-master/cbat'
+    title:'Stage 2 · CBAT',caption:`${CBAT_BATTERIES.length*CBAT_PRACTICE_SETS.length} practice sets`,glyph:'chart',href:'#/rrb-station-master/cbat'
   });
   const hasCategories = tiles.length || pastTile || cbatTile || exam.id==='gate';
   return `<div class="mock-test-library" style="--mock-accent:${accent}">
@@ -128,7 +134,7 @@ export function mockLibrary({exam,accent,symbol,papers,viewPaper,renderPaper,imp
         <div class="paper-grid mock-paper-grid">${entries.map(({paper})=>renderPaper(paper)).join('')}</div>
         <p class="surface mock-empty" data-mock-empty ${entries.length?'hidden':''}>No tests match this view.</p>
       </div>
-      <div class="mock-subjects" data-mock-subjects hidden>${subjects.join('')}</div>
+      <div class="mock-subjects" data-mock-subjects hidden>${renderSubjects(subjects,exam).join('')}</div>
     </section>
     ${importPanel}
   </div>`;

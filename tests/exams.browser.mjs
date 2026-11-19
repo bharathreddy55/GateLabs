@@ -107,9 +107,11 @@ try{
  await page.goto('http://127.0.0.1:3011/#/rrb-station-master?tab=mocks');
  const stationTests=page.locator('[data-mock-list]');
  await stationTests.getByRole('heading',{name:'All tests',exact:true}).waitFor();
- assert.equal(await stationTests.locator('[data-paper-group="full"]:visible').count(),3);
+ assert.equal(await stationTests.locator('[data-paper-group="full"]:visible').count(),10);
+ assert.equal(await stationTests.locator('[data-paper-group="drills"]:visible').count(),10);
+ assert.match(await page.locator('[data-mock-jump="subjects"]').innerText(),/80 tests across 4 subjects/);
  assert.equal(await page.locator('.mock-picks').getByText(/Practice model [23]/).count(),0);
- for(const model of [2,3]){
+ for(const model of [2,3,10]){
    const card=stationTests.locator('[data-library-card]').filter({hasText:`Practice model ${model}`});
    assert.match(await card.innerText(),/100 questions · 100 marks · 120 min/);
    await card.getByRole('button',{name:'Start full mock'}).click();
@@ -223,10 +225,11 @@ try{
  }
  await page.goto('http://127.0.0.1:3011/#/rrb-station-master?tab=mocks');
  await page.getByRole('button',{name:/Related past papers/}).click();
- assert.ok(await page.getByRole('link',{name:/Older NTPC papers/}).isVisible());
+ assert.equal(await page.locator('[data-related-papers] a:visible').count(),10);
  await page.getByRole('tab',{name:'Mock tests'}).click();
  await page.locator('.mock-tile[data-mock-jump="subjects"]').click();
  const dataDrills=page.locator('.mock-subject').filter({has:page.locator('summary').getByText('Data Analysis',{exact:true})});
+ assert.match(await dataDrills.locator('summary').innerText(),/20 tests/);
  await dataDrills.locator('summary').click();
  await dataDrills.getByRole('button',{name:'Start subject test'}).first().click();
  assert.match(await page.locator('#exam-root').innerText(),/30 questions · 36 minutes · 30 marks/);
@@ -236,10 +239,10 @@ try{
  await page.getByRole('heading',{name:'Exam complete',exact:true}).waitFor();
  await page.goto('http://127.0.0.1:3011/#/rrb-station-master');
  await page.getByRole('tab',{name:'Mock tests'}).click();
- await page.getByRole('link',{name:/Stage 2 · CBAT.*aptitude batteries/}).click();
+ await page.getByRole('link',{name:/Stage 2 · CBAT.*10 practice sets/}).click();
  await page.getByRole('heading',{name:'Computer Based Aptitude Test'}).waitFor();
- assert.equal(await page.locator('[data-cbat-start]').count(),5);
- await page.getByRole('button',{name:'Start Intelligence'}).click();
+ assert.equal(await page.locator('[data-cbat-start]').count(),10);
+ await page.getByRole('button',{name:'Start Intelligence Set 1'}).click();
  assert.equal(await page.locator('svg.cbat-shape').count(),5);
  assert.ok((await page.locator('svg.cbat-shape').first().boundingBox()).width>=48);
  await page.getByRole('button',{name:'Figure 1'}).click();
@@ -252,18 +255,18 @@ try{
  await page.getByText(/Correct answer: Figure/).first().waitFor();
  await page.getByRole('button',{name:'Back to batteries'}).click();
  await page.clock.install();
- await page.getByRole('button',{name:'Start Spatial Scanning'}).click();
+ await page.getByRole('button',{name:'Start Spatial Scanning Set 2'}).click();
  await page.getByRole('img',{name:/Street map/}).waitFor();
  await page.clock.fastForward(245_000);
  await page.getByText(/Time is up/).waitFor();
  await page.getByRole('button',{name:'Back to batteries'}).click();
- await page.getByRole('button',{name:'Start Personality'}).click();
+ await page.getByRole('button',{name:'Start Personality Set 1'}).click();
  await page.locator('[data-cbat-option="0"]').click();
  await page.getByRole('button',{name:'Submit battery'}).click();
  await page.getByText(/1\/8 completed/).waitFor();
  assert.equal(await page.getByText('Review answers',{exact:true}).count(),0);
  await page.reload();
- await page.getByText('Last practice · 1/8 completed').waitFor();
+ await page.getByText('Set 1 · 1/8 completed').waitFor();
  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth),false);
  await page.getByRole('link',{name:'Stage 1 · CBT'}).click();
  await page.locator('#prep-rrb').waitFor();

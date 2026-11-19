@@ -1,8 +1,8 @@
 import { auth } from '../config/firebase';
-import { CBAT_BATTERIES, RDSO_FAQ, RDSO_GUIDE, RRB_NOTICE, rrbStageNav } from '../config/rrbCbat.js';
+import { CBAT_BATTERIES, CBAT_PRACTICE_SETS, RDSO_FAQ, RDSO_GUIDE, RRB_NOTICE, rrbStageNav } from '../config/rrbCbat.js';
 import { EXAM_CATALOG, icon } from '../config/navigation.js';
 import { mockLibraryBanner } from '../components/ExamMockLibrary.js';
-import { buildCbatQuestions, cbatSummary, validCbatResult } from '../utils/cbat.js';
+import { buildCbatSet, cbatResultKey, cbatSummary, validCbatResult } from '../utils/cbat.js';
 import { escapeHtml as h } from '../utils/examEngine.js';
 import { readStored } from '../utils/safeStorage.js';
 
@@ -43,7 +43,7 @@ export const RrbCbat = {
       <span class="eyebrow">Railway recruitment · CEN 08/2026</span><h1>RRB Station Master</h1><p>Practise the aptitude batteries for the second stage.</p></div></header>
       ${rrbStageNav(true)}
       <div class="mock-test-library" style="--mock-accent:${stationMaster.color}">
-      ${mockLibraryBanner({title:'Computer Based Aptitude Test',metrics:[['practice batteries',CBAT_BATTERIES.length]],symbol:stationMaster.symbol})}
+      ${mockLibraryBanner({title:'Computer Based Aptitude Test',metrics:[['practice sets',CBAT_BATTERIES.length*CBAT_PRACTICE_SETS.length],['battery types',CBAT_BATTERIES.length]],symbol:stationMaster.symbol})}
       <div data-cbat-panel></div>
       <details class="surface mock-cbat-rules"><summary>Official scoring & recruitment rules</summary>
         <div class="pattern-metrics"><div><strong>42</strong><span>Minimum T-score per battery</span></div>
@@ -70,19 +70,21 @@ export const RrbCbat = {
   showLibrary(){
     const results = readStored(this.key,{});
     this.panel.innerHTML = `<section class="mock-library-section"><h3>Practice batteries</h3><div class="mock-picks">
-      ${CBAT_BATTERIES.map(battery => {
-        const last = results[battery.id];
-        return `<article class="surface mock-pick">
+      ${CBAT_BATTERIES.map(battery => `<article class="surface mock-pick">
           <span class="mock-pick-icon">${icon(batteryIcons[battery.id])}</span>
           <div><p class="mock-pick-label">${battery.count} items · ${battery.seconds?`${battery.seconds/60} min practice`:'Untimed'}</p>
           <h4>${battery.title}</h4><p>${battery.instruction}</p>
-          ${validCbatResult(battery.id,last)?`<p>Last practice · ${completedLabel(last)}</p>`:''}</div>
-          <button type="button" class="ui-button primary" data-cbat-start="${battery.id}">Start ${battery.title} ${icon('arrow')}</button></article>`;
-      }).join('')}</div></section>`;
+          ${validCbatResult(battery.id,results[battery.id])?`<p>Earlier practice · ${completedLabel(results[battery.id])}</p>`:''}</div>
+          <div class="cbat-set-buttons">${CBAT_PRACTICE_SETS.map(set=>{
+            const key=cbatResultKey(battery.id,set),last=results[key];
+            return `<div><button type="button" class="ui-button ${set===1?'primary':''}" data-cbat-start="${battery.id}" data-cbat-set="${set}" aria-label="Start ${battery.title} Set ${set}">Start Set ${set} ${icon('arrow')}</button>
+              ${validCbatResult(key,last)?`<p>Set ${set} · ${completedLabel(last)}</p>`:''}</div>`;
+          }).join('')}</div></article>`).join('')}</div></section>`;
   },
-  start(battery){
-    const questions = buildCbatQuestions(battery.id);
-    this.session = { battery, questions, answers:Array(questions.length).fill(null), index:0,
+  start(battery,set){
+    const questions = buildCbatSet(battery.id,set);
+    if (!questions.length) return;
+    this.session = { battery, set, questions, answers:Array(questions.length).fill(null), index:0,
       deadline:battery.seconds ? Date.now()+battery.seconds*1000 : null };
     this.showQuestion();
     if (battery.seconds) this.timer = setInterval(() => this.tick(), 250);
@@ -95,10 +97,10 @@ export const RrbCbat = {
     if (clock) clock.textContent = timeLabel(seconds);
   },
   showQuestion(){
-    const {battery,questions,answers,index,deadline} = this.session;
+    const {battery,set,questions,answers,index,deadline} = this.session;
     const q = questions[index];
     this.panel.innerHTML = `<section class="surface cbat-session" aria-labelledby="cbat-question">
-      <div class="section-heading"><h2>${battery.title}</h2>
+      <div class="section-heading"><h2>${battery.title} · Set ${set}</h2>
       ${deadline?`<span class="subtle-tag" aria-label="Time remaining"><time data-cbat-clock>${timeLabel(Math.max(0,Math.ceil((deadline-Date.now())/1000)))}</time></span>`:''}</div>
       <p class="muted">Question ${index+1} of ${questions.length} · ${answers.filter(Number.isInteger).length} answered</p>
       <h3 id="cbat-question" tabindex="-1">${h(q.prompt)}</h3>
@@ -123,7 +125,7 @@ export const RrbCbat = {
       return;
     }
     const battery = CBAT_BATTERIES.find(item=>item.id===button.dataset.cbatStart);
-    if (battery) return this.start(battery);
+    if (battery) return this.start(battery,Number(button.dataset.cbatSet));
     if (!this.session) return;
     if (this.session.deadline && Date.now() >= this.session.deadline) return this.finish(true);
     if (button.hasAttribute('data-cbat-option')) {
@@ -136,18 +138,18 @@ export const RrbCbat = {
   },
   finish(expired){
     clearInterval(this.timer);
-    const {battery,questions,answers} = this.session;
+    const {battery,set,questions,answers} = this.session;
     const result = cbatSummary(questions,answers);
     this.session = null;
     let saveWarning = '';
     try {
       const latest = Object.fromEntries(Object.entries(readStored(this.key,{})).filter(([id,summary])=>validCbatResult(id,summary)));
-      latest[battery.id] = result;
+      latest[cbatResultKey(battery.id,set)] = result;
       localStorage.setItem(this.key,JSON.stringify(latest));
     } catch {
       saveWarning = '<p role="status">This browser could not save the result.</p>';
     }
-    this.panel.innerHTML = `<section class="surface cbat-session"><h2 tabindex="-1">${battery.title} results</h2>
+    this.panel.innerHTML = `<section class="surface cbat-session"><h2 tabindex="-1">${battery.title} results · Set ${set}</h2>
       <p>${expired?'Time is up. ':''}${completedLabel(result)}${result.correct===null?'':` · ${result.attempted} attempted`}</p>${saveWarning}
       ${result.correct===null?'<p class="muted">Your individual responses are discarded.</p>':`<details><summary>Review answers</summary><ol class="cbat-review">
         ${questions.map((q,i)=>`<li><strong>${h(q.prompt)}</strong><p>Your answer: ${answers[i]===null?'Skipped':h(optionLabel(q.options[answers[i]],answers[i]))}. Correct answer: ${h(optionLabel(q.options[q.correct],q.correct))}.</p>

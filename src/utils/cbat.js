@@ -1,4 +1,4 @@
-import { CBAT_BATTERIES } from '../config/rrbCbat.js';
+import { CBAT_BATTERIES, CBAT_PRACTICE_SETS } from '../config/rrbCbat.js';
 
 function shuffle(items, random) {
   const order = [...items];
@@ -120,7 +120,7 @@ function ordering(random, index) {
     rules, ...choices(sequence.join(' → '),distractors,random), explanation:reason };
 }
 
-const preferences = [
+const preferences = [[
   ['an outline before I begin','to develop a plan as I go'],
   ['to discuss a new idea aloud','to think through a new idea privately'],
   ['a regular routine','variety from day to day'],
@@ -129,9 +129,18 @@ const preferences = [
   ['to finish one task at a time','to alternate between tasks'],
   ['to work independently','to work alongside other people'],
   ['to explore several approaches','to settle on one approach quickly']
-];
+],[
+  ['to sketch a diagram','to write a description'],
+  ['an example before the general rule','the rule before the example'],
+  ['a few long study sessions','several short study sessions'],
+  ['a written agenda','an informal opening discussion'],
+  ['to review a draft on screen','to review it on paper'],
+  ['to ask for feedback early','to ask after making a first complete draft'],
+  ['to set aside a fixed time for revision','to revise as individual questions come up'],
+  ['to consult several reference books','to begin with one familiar reference']
+]];
 
-export function buildCbatQuestions(id, random = Math.random) {
+export function buildCbatQuestions(id, random = Math.random, set = 1) {
   const battery = CBAT_BATTERIES.find(item => item.id === id);
   if (!battery) return [];
   const orderedFigures = id === 'intelligence' ? shuffle(figures, random) : [];
@@ -140,10 +149,20 @@ export function buildCbatQuestions(id, random = Math.random) {
     if (id === 'attention') return attention(random);
     if (id === 'spatial') return spatial(random);
     if (id === 'ordering') return ordering(random,i);
-    const [first,last] = preferences[i];
+    const [first,last] = preferences[set-1][i];
     return { prompt:'I generally prefer…', options:[first,'Either suits me',last] };
   });
 }
+
+export function buildCbatSet(id, set) {
+  const index=CBAT_BATTERIES.findIndex(battery=>battery.id===id);
+  if(index<0||!CBAT_PRACTICE_SETS.includes(set)) return [];
+  let state=(index+1)*123457+set*891371;
+  const random=()=>((state=(Math.imul(state,1664525)+1013904223)>>>0)/2**32);
+  return buildCbatQuestions(id,random,set);
+}
+
+export const cbatResultKey = (id,set) => `${id}:${set}`;
 
 export function cbatSummary(questions, answers) {
   const attempted = answers.filter(answer => Number.isInteger(answer)).length;
@@ -154,7 +173,7 @@ export function cbatSummary(questions, answers) {
 }
 
 export function validCbatResult(id, result) {
-  const battery = CBAT_BATTERIES.find(item=>item.id===id);
+  const battery = CBAT_BATTERIES.find(item=>item.id===id||CBAT_PRACTICE_SETS.some(set=>cbatResultKey(item.id,set)===id));
   return !!battery && result?.total === battery.count &&
     Object.keys(result).length===3 &&
     Number.isInteger(result.attempted) && result.attempted >= 0 && result.attempted <= result.total &&

@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { EXAMS } from '../src/config/exams.js';
 import { CBAT_BATTERIES } from '../src/config/rrbCbat.js';
-import { buildCbatQuestions, cbatSummary, rotateFigure, validCbatResult } from '../src/utils/cbat.js';
+import { buildCbatQuestions, buildCbatSet, cbatResultKey, cbatSummary, rotateFigure, validCbatResult } from '../src/utils/cbat.js';
 import { scorePaper, validatePaper } from '../src/utils/examEngine.js';
 
 test('challenge drills cover the configured blocks and use each exam’s marking rules', () => {
@@ -28,6 +28,22 @@ function seeded(seed) {
 }
 
 const cellKey = cells => [...cells].sort((a,b)=>a-b).join(',');
+
+test('each CBAT battery has two repeatable, distinct sets with separate result keys',()=>{
+  for(const {id,count} of CBAT_BATTERIES){
+    const first=buildCbatSet(id,1), second=buildCbatSet(id,2);
+    assert.equal(first.length,count);
+    assert.equal(second.length,count);
+    assert.notDeepEqual(first,second);
+    assert.deepEqual(second,buildCbatSet(id,2));
+    const result=cbatSummary(second,[]);
+    assert.ok(validCbatResult(id,result));
+    assert.ok(validCbatResult(cbatResultKey(id,1),result));
+    assert.ok(validCbatResult(cbatResultKey(id,2),result));
+    assert.notEqual(cbatResultKey(id,1),cbatResultKey(id,2));
+    assert.equal(buildCbatSet(id,3).length,0);
+  }
+});
 
 test('generated CBAT answers match their figures, digit totals and street routes', () => {
   for (let seed=1;seed<=25;seed++) {

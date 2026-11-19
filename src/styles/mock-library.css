@@ -143,6 +143,7 @@
 .mock-subject li strong { font-size: .83rem; overflow-wrap: anywhere; }
 .mock-subject .ui-button { min-height: 2.5rem; }
 .mock-cbat-rules summary { font-weight: 700; }
+.cbat-set-buttons { grid-column: 2; display: flex; flex-wrap: wrap; gap: .5rem; }
 @media (max-width: 600px) {
     .mock-picks, .mock-subjects { grid-template-columns: 1fr; }
     .mock-tile-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
