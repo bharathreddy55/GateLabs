@@ -40,6 +40,25 @@ const dir='artifacts/qa-2026-11-17',report={};
 const ready=async()=>{await page.waitForFunction(()=>!document.querySelector('.workspace-loading')&&document.querySelector('#app')?.textContent.trim().length>50);await page.waitForFunction(()=>[...document.querySelectorAll('.animate-fade-in')].every(e=>parseFloat(getComputedStyle(e).opacity)>.99));};
 page.on('console',m=>{if(m.type()==='warning'||m.type()==='error')console.log(m.text());});
 const go=async route=>{await page.goto('http://127.0.0.1:3011/#/'+route);await page.waitForFunction(async()=>{const {router}=await import('/src/main.js');return typeof router==='function';});await page.evaluate(async()=>{const {router}=await import('/src/main.js');await router();});await ready();};
+async function assertDropdownContrast(selector, theme){
+ const dropdown=page.locator(selector);
+ await dropdown.waitFor({state:'attached'});
+ const styles=await dropdown.evaluate(select=>{
+  const luminance=color=>{
+   const channels=color.match(/\d+(?:\.\d+)?/g).slice(0,3).map(channel=>Number(channel)/255)
+    .map(channel=>channel<=0.04045?channel/12.92:((channel+0.055)/1.055)**2.4);
+   return .2126*channels[0]+.7152*channels[1]+.0722*channels[2];
+  };
+  const contrasts=Array.from(select.querySelectorAll('option:not(:disabled)'),option=>{
+   const style=getComputedStyle(option);
+   const a=luminance(style.color), b=luminance(style.backgroundColor);
+   return (Math.max(a,b)+.05)/(Math.min(a,b)+.05);
+  });
+  return {scheme:getComputedStyle(select).colorScheme,contrasts};
+ });
+ assert.equal(styles.scheme,theme,selector);
+ assert.ok(styles.contrasts.length>0 && styles.contrasts.every(ratio=>ratio>=4.5),`${selector} has a low-contrast option in ${theme} mode`);
+}
 try{
  await go('dashboard');
  const delayedAnalytics=async route=>{await new Promise(resolve=>setTimeout(resolve,400));return route.fallback();};
@@ -64,5 +83,23 @@ try{
  await go('gate');const seconds=await page.locator('[data-clock-value="seconds"]').textContent();
  await page.waitForFunction(previous=>document.querySelector('[data-clock-value="seconds"]').textContent!==previous,seconds);
  assert.equal(await page.locator('[data-clock-value]').count(),4);assert.equal(await page.locator('[role="timer"]').getAttribute('aria-live'),'off');
- assert.deepEqual(errors,[]);console.log('PASS 14-route smoke, About shell, personal notes, disconnected AI, 320px keyboard tabs and live accent tokens');
+ await page.setViewportSize({width:1024,height:768});
+ for(const theme of ['dark','light']){
+  await page.emulateMedia({colorScheme:theme==='dark'?'light':'dark'});
+  await go('analytics');
+  if(await page.locator('html').evaluate(el=>el.classList.contains('dark'))!==(theme==='dark')){
+   await page.getByRole('button',{name:'Toggle light and dark appearance'}).click();
+  }
+  await assertDropdownContrast('#analytics-exam-filter',theme);
+  await assertDropdownContrast('#settings-provider',theme);
+  await assertDropdownContrast('#settings-model',theme);
+  await go('rrb-station-master?tab=mocks');
+  await page.getByText('Filter tests',{exact:true}).click();
+  await assertDropdownContrast('[data-paper-filter="type"]',theme);
+  await assertDropdownContrast('[data-paper-filter="status"]',theme);
+ }
+ await go('analytics');
+ await page.locator('#analytics-exam-filter').press('ArrowDown');
+ await page.waitForFunction(()=>document.getElementById('analytics-exam-filter')?.value==='group2');
+ assert.deepEqual(errors,[]);console.log('PASS 14-route smoke, mobile keyboard tabs, live accent tokens, and shared dropdown contrast in both themes');
 }finally{await browser.close();await vite.close();}

@@ -130,28 +130,33 @@
   @apply text-slate-400 dark:text-slate-500;
 }
 
-/* ===========================
-   SELECT / DROPDOWN MENUS
-   Native <select> + <option> colors fixed for light & dark.
-   =========================== */
+/* Match native popups to the app theme even when the browser uses a different theme. */
+select {
+  color-scheme: light;
+}
+.dark select {
+  color-scheme: dark;
+}
+select :is(option, optgroup) {
+  background-color: var(--ws-panel);
+  color: var(--ws-text);
+}
+select :is(option, optgroup):disabled {
+  color: GrayText;
+}
+
 select.glass-input {
-  /* Keep native arrow, just fix colors */
   appearance: auto;
   -webkit-appearance: auto;
   cursor: pointer;
-  /* Light mode */
   background-color: rgba(255, 255, 255, 0.85);
   color: #1e293b;
 }
 select.glass-input option {
-  background-color: #ffffff;
-  color: #1e293b;
   font-weight: 600;
   padding: 6px 12px;
 }
 select.glass-input optgroup {
-  background-color: #f1f5f9;
-  color: #64748b;
   font-weight: 700;
   font-size: 10px;
   text-transform: uppercase;
@@ -163,15 +168,6 @@ select.glass-input optgroup {
   background-color: #121a2b;
   color: #f1f5f9;
   border-color: rgba(255,255,255,0.1);
-  color-scheme: dark;
-}
-.dark select.glass-input option {
-  background-color: #1a2540;
-  color: #f1f5f9;
-}
-.dark select.glass-input optgroup {
-  background-color: #0d1320;
-  color: #94a3b8;
 }
 
 /* ===========================
