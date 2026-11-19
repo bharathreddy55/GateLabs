@@ -42,7 +42,6 @@ const routes = {
   '/pyq-mocks': { load:lazy(()=>import('./pages/PyqMocks.js'),'PyqMocks'), requiresAuth: true, name: 'pyq-mocks' },
   '/community': { load:lazy(()=>import('./pages/Community.js'),'Community'), requiresAuth: true, name: 'community' },
   '/gate': { load:lazy(()=>import('./pages/ExamPrep.js'),'GatePrep'), requiresAuth: true, name:'gate' },
-  '/tet-exams': { load:lazy(()=>import('./pages/ExamPrep.js'),'UnifiedTet'), requiresAuth: true, name: 'tet-exams' },
   '/group2': { load:lazy(()=>import('./pages/ExamPrep.js'),'Group2'), requiresAuth: true, name: 'group2' },
   '/group2/mains': { load:lazy(()=>import('./pages/ExamPrep.js'),'Group2MainsPaper1'), requiresAuth: true, name: 'group2' },
   '/group2/mains/paper-2': { load:lazy(()=>import('./pages/ExamPrep.js'),'Group2MainsPaper2'), requiresAuth: true, name: 'group2' },

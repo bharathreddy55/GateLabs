@@ -1,7 +1,7 @@
 import fs from 'node:fs';import {execFileSync} from 'node:child_process';import {createHash} from 'node:crypto';
 import {parseExamText,validateStudyQuestion,questionId} from '../src/utils/parseExamText.js';
 // Publish tracked content deliberately. Uncommitted personal bank edits are never included implicitly.
-const files=execFileSync('git',['ls-files','public/pyqs/*.txt'],{encoding:'utf8'}).trim().split(/\r?\n/).filter(p=>!/(sbi_clerk|tet_|ap_tet|antigravity)/.test(p));
+const files=execFileSync('git',['ls-files','public/pyqs/*.txt'],{encoding:'utf8'}).trim().split(/\r?\n/).filter(p=>!p.startsWith('public/pyqs/sbi_clerk'));
 const records=new Map();let quarantined=0;
 for(const file of [...files,'public/pyqs/questions.json']){
  const text=execFileSync('git',['show','HEAD:'+file],{encoding:'utf8',maxBuffer:50000000});

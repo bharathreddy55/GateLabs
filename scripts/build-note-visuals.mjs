@@ -51,7 +51,7 @@ function buildVisual(row, markdown){
   };
   const w=1440, margin=48, gap=26, half=(w-2*margin-gap)/2;
   const title=wrap(row.title,24);
-  const labels={gate:"GATE CS 2027",group2:"APPSC Group 2 Prelims",rrb:"RRB Station Master CBT",sbi:"SBI Clerk Prelims",tet:"AP TET Paper 1A","group2-mains-1":"APPSC Group 2 Mains Paper I","group2-mains-2":"APPSC Group 2 Mains Paper II"};
+  const labels={gate:"GATE CS 2027",group2:"APPSC Group 2 Prelims",rrb:"RRB Station Master CBT",sbi:"SBI Clerk Prelims","group2-mains-1":"APPSC Group 2 Mains Paper I","group2-mains-2":"APPSC Group 2 Mains Paper II"};
   const out=[];
   const write=(ln,x,y,size,fill="#192644",bold=false)=>`<text x="${x}" y="${y}" font-size="${size}" fill="${fill}"${bold?' font-weight="700"':''}>${esc(ln)}</text>`;
   out.push(`<rect x="48" y="46" width="204" height="42" rx="20" fill="#f9df9a"/>${write("VISUAL STUDY GUIDE",65,74,17,"#523f24",true)}`);

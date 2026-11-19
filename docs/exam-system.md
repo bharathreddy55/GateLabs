@@ -8,7 +8,6 @@ Sidebar → exam section → syllabus / sources / model paper → instructions �
 
 - `#/group2`: APPSC Group 2 screening, notification 37/2026. 150 MCQs, 150 marks, 150 minutes; five sections of 30; wrong answers deduct one third. The actual screening is OMR; this is an online practice simulation.
 - `#/rrb-station-master`: dedicated Station Master CEN 08/2026. 100 MCQs, 100 marks, 120 minutes; indicative 30 basic science/maths, 30 data analysis, 20 logical capability, 20 mental reasoning. Wrong answers deduct one third. Older NTPC papers do not define this new pattern.
-- Existing AP TET Paper 1A launches use 150 questions / marks / minutes and zero negative marking.
 - Existing SBI prelims launches use 100 questions, 60 minutes, one-quarter deduction and three locked 20-minute sections (30 English, 35 numerical, 35 reasoning).
 - GATE bank practice retains MCQ proportional penalties and zero MSQ/NAT penalties. An incomplete bank pool is labelled practice, not an official full paper.
 
@@ -37,8 +36,7 @@ No new backend service or secret is required. Attempts use the existing Firebase
 - APPSC historical PDFs and final-key index are linked. They have not been transcribed into verified interactive PYQs. The large 2024 PDF and older scanned papers require question/key comparison and handling of deleted questions before import.
 - Older railway archives are labelled supplemental/memory-based. A previous sitting for the new standalone Station Master notice was not established.
 - CBAT is an information section, not a simulated aptitude battery. No fabricated T-scores, AIR, recruitment cutoffs or normalization are shown.
-- Group 2 uses the verified **21 February 2027** date, without inventing an hour. TET and RRB show awaiting schedule based on the research snapshot. GATE/SBI show the next date as unverified. Each section permits a separately labelled personal target. Recheck official notices before changing dates or rules.
-- Papers are currently in English except the existing TET/SBI files; bilingual editorial production is not included.
+- Each exam uses its published schedule when available and supports a separately labelled personal practice target. Recheck official notices before changing dates or rules.
 
 ## Storage and existing history
 

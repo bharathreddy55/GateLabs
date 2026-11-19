@@ -20,8 +20,7 @@ test('Group 2 Mains has two independent 150-minute models and marked practice dr
 });
 import { parseExamText } from '../src/utils/parseExamText.js';
 const q={id:'one',question:'Example?',options:['A','B','C','D'],correctAnswer:0,marks:1,type:'MCQ'};
-test('TET never inherits negative marks; blanks never gain marks',()=>{
- assert.equal(scorePaper('tet',[{...q,negativeMarks:1}],{one:1}).score,0);
+test('blanks never earn or lose marks',()=>{
  assert.equal(scorePaper('rrb',[q],{}).score,0);
  assert.equal(scorePaper('rrb',[q],{}).skippedCount,1);
 });
@@ -36,9 +35,9 @@ test('GATE MSQ exact match, NAT inclusive range and no negative marking',()=>{
  assert.equal(scorePaper('gate',[msq,nat],{one:[0],two:2.2}).score,0);
 });
 test('paper validation rejects bad keys, sparse options, nulls and wrong section quotas',()=>{
- assert.ok(validatePaper('tet',[{...q,correctAnswer:null}],false).length);
- assert.ok(validatePaper('tet',[{...q,options:['a',,'c','d']}],false).length);
- assert.ok(validatePaper('tet',[null],false).length);
+ assert.ok(validatePaper('group2',[{...q,correctAnswer:null}],false).length);
+ assert.ok(validatePaper('group2',[{...q,options:['a',,'c','d']}],false).length);
+ assert.ok(validatePaper('group2',[null],false).length);
  assert.ok(validatePaper('rrb',[q],true).length);
  assert.ok(validatePaper('gate',[{...q,type:'NAT',natMin:5,natMax:2}],false).length);
 });

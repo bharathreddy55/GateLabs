@@ -1,6 +1,6 @@
 # GateLabs
 
-An exam preparation workspace for GATE CS & IT, AP TET Paper 1A, Andhra Pradesh APPSC Group 2 screening, RRB Station Master and SBI Clerk prelims.
+An exam preparation workspace for GATE CS & IT, APPSC Group 2 Prelims and Mains, RRB Station Master CBT and CBAT, and SBI Clerk Prelims.
 
 Choose an exam to find its pattern, official source links, syllabus checklist, target countdown, practice papers and progress. Each runner uses the configured exam's marking rules. Full papers and section practice are distinguished. GATE study questions support MCQ, MSQ and numeric answers.
 

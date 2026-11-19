@@ -35,17 +35,35 @@ try{
  fs.mkdirSync('artifacts/workspace',{recursive:true});
  await page.goto('http://127.0.0.1:3011/#/dashboard');
  await page.getByRole('heading',{name:'Welcome back, Exam.'}).waitFor();
- assert.equal(await page.locator('.home-exams .exam-tile').count(),5);
+ await page.evaluate(()=>{
+   localStorage.setItem('last-exam:exam-test-user','tet');
+   localStorage.setItem('exam-active:exam-test-user',JSON.stringify({pending:{examId:'tet'}}));
+   localStorage.setItem('exam-results:exam-test-user',JSON.stringify([
+     {id:'retired-attempt',examId:'tet',scope:'AP TET Model',score:100,timestamp:new Date().toISOString()}
+   ]));
+ });
+ await page.goto('http://127.0.0.1:3011/#/tet-exams?tab=mocks');
+ await page.waitForURL('**/#/dashboard');
+ await page.reload();
+ await page.getByRole('heading',{name:'Welcome back, Exam.'}).waitFor();
+ assert.equal(await page.getByRole('link',{name:'Resume test'}).count(),0);
+ assert.equal(await page.getByText(/AP TET/i).count(),0);
+ for(const asset of ['public/pyqs/tet_practice_1.txt','public/notes/tet','public/notes/visuals/tet']) {
+   assert.equal(fs.existsSync(asset),false);
+ }
+ assert.equal(await page.locator('.home-exams .exam-tile').count(),4);
  await page.screenshot({path:'artifacts/workspace/home-desktop.png',fullPage:true});
  await page.getByRole('link',{name:'Choose an exam',exact:false}).first().click();
  await page.locator('#exam-search').fill('railways');
  assert.equal(await page.locator('.exam-tile:visible').count(),1);
  await page.locator('#exam-search').fill('not-an-exam');
  assert.equal(await page.locator('#exam-search-empty').isVisible(),true);
+ await page.locator('#exam-search').fill('AP TET');
+ assert.equal(await page.locator('.exam-tile:visible').count(),0);
  await page.locator('#exam-search').fill('');
- for(const route of ['gate','tet-exams','group2','rrb-station-master','sbi-clerk']){
+ for(const route of ['gate','group2','rrb-station-master','sbi-clerk']){
    await page.goto('http://127.0.0.1:3011/#/'+route);
-   await page.locator('#prep-'+({'tet-exams':'tet','rrb-station-master':'rrb','sbi-clerk':'sbi'}[route]||route)).waitFor();
+   await page.locator('#prep-'+({'rrb-station-master':'rrb','sbi-clerk':'sbi'}[route]||route)).waitFor();
    await page.locator('[data-panel]:visible').waitFor();
    assert.equal(await page.locator('[data-panel]:visible').count(),1);
    assert.equal(await page.locator('.countdown-spotlight').isVisible(),true);
@@ -59,7 +77,7 @@ try{
    await visual.waitFor();
    assert.ok(await visual.evaluate(img=>img.naturalWidth>0));
    const noteId=new URLSearchParams(new URL(page.url()).hash.split('?')[1]).get('note');
-   const examId={'tet-exams':'tet','rrb-station-master':'rrb','sbi-clerk':'sbi'}[route]||route;
+   const examId={'rrb-station-master':'rrb','sbi-clerk':'sbi'}[route]||route;
    assert.equal(await visual.getAttribute('src'),`http://127.0.0.1:3011/notes/visuals/${examId}/${noteId}.svg`);
    if(route==='gate'){assert.match(await page.locator('.countdown-date').innerText(),/2027-02-06/);assert.equal(await page.locator('.countdown-badge').textContent(),'Official exam window');assert.notEqual(await page.locator('.countdown-number').innerText(),'—');assert.match(await page.locator('.countdown-hint').innerText(),/CS-specific/);}
    assert.ok(await page.locator('.countdown-spotlight').evaluate(el=>el.getBoundingClientRect().top<document.querySelector('.prep-tab-strip').getBoundingClientRect().top),'Countdown must precede the tabs');
@@ -139,5 +157,5 @@ try{
  for(let i=0;i<12;i++){await page.keyboard.press('Tab');assert.equal(await page.evaluate(()=>document.getElementById('auth-modal').contains(document.activeElement)),true);}
  await page.getByRole('button',{name:'Close sign in dialog'}).click();
  assert.deepEqual(errors,[]);
- console.log('PASS: home, search, all five exam workspaces and tabs, preserved SBI library, mobile menu, dark appearance, no horizontal overflow, landing and sign-in dialog. Cloud/auth calls isolated.');
+ console.log('PASS: home, search, all four exam workspaces and tabs, preserved SBI library, mobile menu, dark appearance, no horizontal overflow, landing and sign-in dialog. Cloud/auth calls isolated.');
 }finally{await browser.close();await vite.close();}

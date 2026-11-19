@@ -46,7 +46,7 @@ try{
  await context.route('**/src/pages/Analytics.js*',delayedAnalytics);
  await page.goto('http://127.0.0.1:3011/#/analytics');await page.locator('.workspace-loading').waitFor();await ready();
  await context.unroute('**/src/pages/Analytics.js*',delayedAnalytics);
- for(const route of ['dashboard','exams','gate','tet-exams','group2','rrb-station-master','sbi-clerk','study-planner','practice','formulas','assistant','community','about','analytics','pyq-mocks']){await go(route);assert.ok(!await page.getByText('Routing Error',{exact:true}).count(),route);assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2),route+' overflow');}
+ for(const route of ['dashboard','exams','gate','group2','rrb-station-master','sbi-clerk','study-planner','practice','formulas','assistant','community','about','analytics','pyq-mocks']){await go(route);assert.ok(!await page.getByText('Routing Error',{exact:true}).count(),route);assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2),route+' overflow');}
  await go('about');assert.equal(await page.locator('#sidebar-container').count(),1);await page.getByRole('heading',{name:'A clear workspace for exam preparation'}).waitFor();
  await go('community');await page.getByRole('heading',{name:'Personal study notes'}).waitFor();assert.equal(await page.getByRole('textbox',{name:'Search personal study notes'}).count(),1);
  await page.locator('#btn-open-doubt-modal').click();await page.waitForFunction(()=>document.getElementById('doubt-post-modal').getAttribute('aria-modal')==='true');await page.keyboard.press('Escape');assert.equal(await page.locator('#doubt-post-modal').isHidden(),true);
@@ -56,7 +56,7 @@ try{
  // Apply directly to isolate palette tokens from the settings form's preview state.
  await page.evaluate(async()=>{const {applyAccentPalette}=await import('/src/utils/accentTheme.js');applyAccentPalette({from:'#cc3300',to:'#cc3300',mid:'#cc3300',glow:'rgba(204,51,0,0.25)'});});
  assert.equal(await page.locator('.ui-button.primary').first().evaluate(el=>getComputedStyle(el).backgroundColor),'rgb(204, 51, 0)');await page.keyboard.press('Escape');
- for(const route of ['tet-exams','group2','rrb-station-master','sbi-clerk']){await go(route+'?tab=syllabus');const overflow=await page.locator('[data-panel="syllabus"]').evaluate(panel=>[...panel.querySelectorAll('.surface,p')].filter(el=>el.getClientRects().length&&el.getBoundingClientRect().right>innerWidth+1).map(el=>({tag:el.tagName,class:el.className,width:el.getBoundingClientRect().width,right:el.getBoundingClientRect().right})));assert.deepEqual(overflow,[],route+' syllabus content must fit');}
+ for(const route of ['group2','rrb-station-master','sbi-clerk']){await go(route+'?tab=syllabus');const overflow=await page.locator('[data-panel="syllabus"]').evaluate(panel=>[...panel.querySelectorAll('.surface,p')].filter(el=>el.getClientRects().length&&el.getBoundingClientRect().right>innerWidth+1).map(el=>({tag:el.tagName,class:el.className,width:el.getBoundingClientRect().width,right:el.getBoundingClientRect().right})));assert.deepEqual(overflow,[],route+' syllabus content must fit');}
  await go('rrb-station-master?tab=mocks');assert.equal(await page.locator('[data-countdown="rrb"]').isVisible(),true);
  await page.locator('[data-open-countdown-target]').click();await page.locator('[data-target]').fill((new Date().getUTCFullYear()+1)+'-01-15');await page.locator('[data-target]').dispatchEvent('change');
  assert.equal(await page.locator('.countdown-badge').textContent(),'Personal target');assert.match(await page.locator('.countdown-date').innerText(),/Personal practice target/);assert.match(await page.locator('.countdown-number').innerText(),/^\d+$/);
@@ -64,5 +64,5 @@ try{
  await go('gate');const seconds=await page.locator('[data-clock-value="seconds"]').textContent();
  await page.waitForFunction(previous=>document.querySelector('[data-clock-value="seconds"]').textContent!==previous,seconds);
  assert.equal(await page.locator('[data-clock-value]').count(),4);assert.equal(await page.locator('[role="timer"]').getAttribute('aria-live'),'off');
- assert.deepEqual(errors,[]);console.log('PASS 15-route smoke, About shell, personal notes, disconnected AI, 320px keyboard tabs and live accent tokens');
+ assert.deepEqual(errors,[]);console.log('PASS 14-route smoke, About shell, personal notes, disconnected AI, 320px keyboard tabs and live accent tokens');
 }finally{await browser.close();await vite.close();}

@@ -1,4 +1,5 @@
 import {exportCompleteBackup,importCompleteBackup} from '../utils/completeBackup.js';
+import {isRetiredExamAttempt} from '../utils/attemptRepository.js';
 import {exportBackup,parseBackup,importBackup} from '../utils/backup.js';
 import {renderAnswerInputs,readAnswer,answerLabel,renderQuestionContext} from '../components/QuestionView.js';
 import {evaluateAnswer} from '../utils/examEngine.js';
@@ -82,7 +83,7 @@ export const Dashboard = {
     const firstName = rawName.split(' ')[0];
     const greetingText = getGreeting(firstName);
 
-    const attempts = await db.getAttempts();
+    const attempts = (await db.getAttempts()).filter(attempt=>!isRetiredExamAttempt(attempt));
     const mockTestsTaken = attempts.length;
 
     let avgAccuracy = 0;
@@ -939,7 +940,7 @@ export const Dashboard = {
             delete progress[key];
           }
           await db.saveSyllabusProgress(progress);
-          const attempts = await db.getAttempts();
+          const attempts = (await db.getAttempts()).filter(attempt=>!isRetiredExamAttempt(attempt));
           await evaluateBadges(attempts, progress);
           this.refresh();
         });

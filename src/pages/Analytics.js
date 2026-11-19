@@ -720,7 +720,6 @@ export const Analytics = {
   },
 
   generateFocusAdvice(att) {
-    const isTET = (att.scope || '').toUpperCase().includes('TET');
     const items = att.responses || att.mistakes || [];
     if (items.length === 0) return '';
 
@@ -764,27 +763,8 @@ export const Analytics = {
       `;
     }
 
-    // Generate targeted advice text
-    let adviceText = '';
-    if (isTET) {
-      const cleanSub = worstSub.replace(/^Section\s+\d+\:\s*/i, '');
-      if (cleanSub.toLowerCase().includes('development') || cleanSub.toLowerCase().includes('pedagogy')) {
-        adviceText = "Focus on Child Development & Pedagogy. Review developmental milestones, Jean Piaget's cognitive stages, Lev Vygotsky's socio-cultural theory, and child-centered teaching paradigms.";
-      } else if (cleanSub.toLowerCase().includes('language i')) {
-        adviceText = "Focus on Language I pedagogy and grammar. Practice reading comprehension inferences, parts of speech syntax rules, and language acquisition methods.";
-      } else if (cleanSub.toLowerCase().includes('language ii')) {
-        adviceText = "Focus on Language II grammar structures. Practice syntax parameters, reading comprehension worksheets, and vocabulary builder revisions.";
-      } else if (cleanSub.toLowerCase().includes('math')) {
-        adviceText = "Focus on elementary TET Mathematics. Review core arithmetic rules, numbers, basic algebra transitions, and pedagogy of teaching mathematics in schools.";
-      } else if (cleanSub.toLowerCase().includes('environmental') || cleanSub.toLowerCase().includes('studies')) {
-        adviceText = "Focus on Environmental Studies. Review ecological food chains, biodiversity protection acts, water resource recycling, and teaching methods of environmental sciences.";
-      } else {
-        adviceText = `Focus on ${cleanSub} syllabus revision. Solve PYQs regarding these domains and review concepts in the practice pool.`;
-      }
-    } else {
-      const cleanSub = worstSub.replace(/^Section\s+\d+\:\s*/i, '');
-      adviceText = `Focus on ${cleanSub} revision. Review the related equations in the **Formula Deck**, practice targeted subject pools on the Practice page, and prompt the **AI Assistant** for step-by-step math breakdowns of complex questions.`;
-    }
+    const cleanSub = worstSub.replace(/^Section\s+\d+\:\s*/i, '');
+    const adviceText = `Focus on ${cleanSub} revision. Review the related equations in the **Formula Deck**, practice targeted subject pools on the Practice page, and prompt the **AI Assistant** for step-by-step math breakdowns of complex questions.`;
 
     return `
       <div class="glass-panel p-5 rounded-3xl border border-rose-500/20 bg-rose-500/5 flex items-start gap-4">

@@ -6,6 +6,11 @@ const base=['gate_custom_questions','gate_bookmarks','gate_syllabus_progress','g
 const perExam=['exam-progress','exam-note-progress','exam-bookmarks','exam-target','exam-papers'];
 export const backupNames=[...base,...perExam.flatMap(kind=>Object.keys(EXAMS).map(id=>`${kind}/${id}`))];
 export function backupKey(name,uid){if(!backupNames.includes(name))throw Error('Unknown backup field');const [kind,id]=name.split('/');return `${kind}:${uid}${id?':'+id:''}`;}
+function retiredBackupEntry(name,value){
+ return (name.endsWith('/tet')&&perExam.includes(name.slice(0,-4))) ||
+   (name==='last-exam'&&value==='tet') ||
+   (name==='exam-active'&&value?.pending?.examId==='tet');
+}
 function valid(name,value){
  if(name==='last-exam')return typeof value==='string'&&!!EXAMS[value];
  if(name==='rrb-cbat-practice')return plain(value)&&Object.entries(value).every(([id,result])=>validCbatResult(id,result));
@@ -19,20 +24,22 @@ function valid(name,value){
  return value.every(plain);
 }
 export function exportBackup(uid,storage=localStorage){
- const entries={};for(const name of backupNames){const raw=storage.getItem(backupKey(name,uid));if(raw!==null){const value=['last-exam',...backupNames.filter(n=>n.startsWith('exam-target/'))].includes(name)?raw:JSON.parse(raw);if(!valid(name,value))throw Error(`Invalid saved data in ${name}. Export recovery data before importing.`);entries[name]=value;}}
+ const entries={};for(const name of backupNames){const raw=storage.getItem(backupKey(name,uid));if(raw!==null){const value=['last-exam',...backupNames.filter(n=>n.startsWith('exam-target/'))].includes(name)?raw:JSON.parse(raw);if(retiredBackupEntry(name,value))continue;if(!valid(name,value))throw Error(`Invalid saved data in ${name}. Export recovery data before importing.`);entries[name]=value;}}
  return {version:2,exportedAt:new Date().toISOString(),owner:uid,entries};
 }
 export function parseBackup(value){
  if(!plain(value))throw Error('Backup must be an object');
  if(value.version==='1.0'||value.version===1){const entries={};for(const [old,name]of Object.entries({syllabusProgress:'gate_syllabus_progress',bookmarks:'gate_bookmarks',attempts:'gate_attempts',customFormulas:'gate_custom_formulas'}))if(value[old]!==undefined)entries[name]=value[old];value={version:2,owner:'legacy device data',entries};}
  if(value.version!==2||!plain(value.entries))throw Error('Unsupported backup version');
- for(const [name,data]of Object.entries(value.entries))if(!backupNames.includes(name)||!valid(name,data))throw Error(`Invalid backup field: ${name}`);
- return value;
+ const entries=Object.fromEntries(Object.entries(value.entries).filter(([name,data])=>!retiredBackupEntry(name,data)));
+ for(const [name,data]of Object.entries(entries))if(!backupNames.includes(name)||!valid(name,data))throw Error(`Invalid backup field: ${name}`);
+ return {...value,entries};
 }
 export function importBackup(input,uid,storage=localStorage){
  const backup=parseBackup(input),changes=[];
  for(const [name,incoming]of Object.entries(backup.entries)){
   const key=backupKey(name,uid),raw=storage.getItem(key);let current;try{current=raw===null?null:(name==='last-exam'||name.startsWith('exam-target/'))?raw:JSON.parse(raw);}catch{current=null;}
+  if(retiredBackupEntry(name,current))current=null;
   let value=incoming;
   if(Array.isArray(value)){
     const records=new Map();for(const item of [...(Array.isArray(current)?current:[]),...value]){const record=plain(item)&&['gate_attempts','exam-results'].includes(name)?{...item,userId:uid,syncStatus:'pending'}:item;records.set(typeof record==='string'?record:record.id||record.title||JSON.stringify(record),record);}value=[...records.values()];

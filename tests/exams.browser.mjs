@@ -104,17 +104,6 @@ try{
  await page.getByRole('heading',{name:'Exam complete',exact:true}).waitFor();
  result=await page.evaluate(()=>JSON.parse(localStorage.getItem('exam-results:exam-test-user')).find(a=>a.examId==='rrb'));
  assert.equal(result.score,0);assert.equal(result.skippedCount,100);
- await page.goto('http://127.0.0.1:3011/#/tet-exams');await page.locator('[data-countdown="tet"]').waitFor();
- assert.match(await page.locator('[data-countdown="tet"]').innerText(),/Awaiting official/);
- await page.locator('[data-prep-tab=mocks]').click();
- await page.getByRole('button',{name:'Start full mock'}).first().click();
- await page.getByRole('button',{name:'Begin test',exact:true}).click();
- const wrongTet=await page.evaluate(async()=>{const {MockTest}=await import('/src/pages/ExamRunner.js');return (MockTest.questions[0].correctAnswer+1)%4;});
- await page.locator(`[data-answer="${wrongTet}"]`).check();
- await page.getByRole('button',{name:'Submit test',exact:true}).click();
- await page.getByRole('heading',{name:'Exam complete',exact:true}).waitFor();
- result=await page.evaluate(()=>JSON.parse(localStorage.getItem('exam-results:exam-test-user')).find(a=>a.examId==='tet'));
- assert.equal(result.score,0);assert.equal(result.wrongCount,1);assert.equal(result.negativeMarks,0);
  // Exercise actual legacy text parser and separately timed SBI rule in the browser.
  await page.goto('http://127.0.0.1:3011/#/sbi-clerk?tab=mocks');
  await page.getByRole('button',{name:'Start full mock'}).first().click();
@@ -201,7 +190,7 @@ try{
    }
  }
  await page.setViewportSize({width:360,height:800});
- for(const [route,subjectCount] of [['rrb-station-master',4],['group2',5],['group2/mains',2],['group2/mains/paper-2',2],['gate',3],['tet-exams',5],['sbi-clerk',3]]){
+ for(const [route,subjectCount] of [['rrb-station-master',4],['group2',5],['group2/mains',2],['group2/mains/paper-2',2],['gate',3],['sbi-clerk',3]]){
    await page.goto(`http://127.0.0.1:3011/#/${route}?tab=mocks`);
    const library=page.locator('[data-panel=mocks] .mock-test-library');
    await library.getByRole('heading',{name:'Quick start'}).waitFor();
@@ -259,5 +248,5 @@ try{
  await page.getByRole('link',{name:'Stage 1 · CBT'}).click();
  await page.locator('#prep-rrb').waitFor();
  assert.deepEqual(errors,[]);
- console.log('PASS: CBT across all five exams, challenge drills and GATE marking, Station Master CBAT timing and results, Group 2 Mains routes, mobile layout and SBI locks. Firebase is stubbed.');
+ console.log('PASS: CBT across all four exams, challenge drills and GATE marking, Station Master CBAT timing and results, Group 2 Mains routes, mobile layout and SBI locks. Firebase is stubbed.');
 }finally{await browser.close();await vite.close();}

@@ -15,3 +15,18 @@ test('restore validates the whole payload before writing and accepts reviewed le
  assert.throws(()=>parseBackup({version:2,entries:{gate_attempts:{}}}),/Invalid backup/);assert.throws(()=>parseBackup({version:2,entries:{unknown:[]}}),/Invalid backup/);
  const legacy=parseBackup({version:'1.0',attempts:[{id:'x',score:3}]});assert.equal(legacy.entries.gate_attempts[0].id,'x');
 });
+test('backups with retired AP TET settings still restore supported exam progress',()=>{
+ const device=storage();
+ device.setItem('last-exam:alice','tet');
+ device.setItem('exam-active:alice',JSON.stringify({pending:{examId:'tet'}}));
+ assert.deepEqual(exportBackup('alice',device).entries,{});
+ const original={version:2,entries:{
+   'exam-progress/tet':['0-0'],'exam-target/tet':'2027-01-01',
+   'last-exam':'group2','exam-progress/group2':['0-1']
+ }};
+ assert.equal(importBackup(original,'alice',device),2);
+ assert.equal(device.getItem('last-exam:alice'),'group2');
+ assert.deepEqual(JSON.parse(device.getItem('exam-progress:alice:group2')),['0-1']);
+ assert.equal(device.getItem('exam-target:alice:tet'),null);
+ assert.ok(original.entries['exam-progress/tet']);
+});
