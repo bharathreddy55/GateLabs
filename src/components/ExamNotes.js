@@ -19,6 +19,12 @@ export function notesPanel(examId, active, notes) {
     ${notes.length ? `<article class="surface exam-note" data-note-reader hidden>
       <h3 tabindex="-1" data-note-title></h3>
       <label class="exam-note-revised"><input type="checkbox" data-note-revised disabled> Mark this note revised</label>
+      <figure class="exam-note-visual" data-note-visual hidden>
+        <a target="_blank" rel="noopener">
+          <img decoding="async" alt="">
+          <span>Open full-size guide ↗</span>
+        </a>
+      </figure>
       <p data-note-status role="status"></p>
       <div data-note-content></div>
     </article>
@@ -51,6 +57,8 @@ export function bindExamNotes(root, examId, notes, selectTab, progressKey) {
   const content = reader.querySelector('[data-note-content]');
   const search = root.querySelector('[data-notes-search]');
   const revisionInput = root.querySelector('[data-note-revised]');
+  const visual = reader.querySelector('[data-note-visual]');
+  const visualLink = visual.querySelector('a');
   const byId = new Map(notes.map(note => [note.id, note]));
   const progressPanel = root.querySelector('[data-panel="progress"]');
   const summary = document.createElement('section');
@@ -98,6 +106,16 @@ export function bindExamNotes(root, examId, notes, selectTab, progressKey) {
     revisionInput.disabled = true;
     syncRevision();
     title.textContent = note.title;
+    const image = document.createElement('img');
+    image.alt = `Visual study guide for ${note.title}`;
+    image.decoding = 'async';
+    image.onload = () => {
+      if (current === request && root.isConnected) visual.hidden = false;
+    };
+    visual.hidden = true;
+    visualLink.href = `/notes/visuals/${examId}/${id}.svg`;
+    visualLink.querySelector('img').replaceWith(image);
+    image.src = visualLink.href;
     content.replaceChildren();
     status.textContent = 'Loading notes…';
     if (focus) {

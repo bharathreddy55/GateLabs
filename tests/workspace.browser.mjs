@@ -15,7 +15,10 @@ await context.route('**/*',async route=>{
  if(pathname==='/')return route.fulfill({contentType:'text/html',body:await vite.transformIndexHtml('/',fs.readFileSync('index.html','utf8'))});
  if(pathname.startsWith('/node_modules/')&&/\.(woff2?|ttf)$/.test(pathname)){const file=path.resolve('.'+pathname);if(fs.existsSync(file))return route.fulfill({contentType:'font/woff2',body:fs.readFileSync(file)});}
  const publicFile=path.resolve('public','.'+pathname);
- if(publicFile.startsWith(path.resolve('public')+path.sep)&&fs.existsSync(publicFile)&&fs.statSync(publicFile).isFile())return route.fulfill({contentType:pathname.endsWith('.json')?'application/json':'text/plain',body:fs.readFileSync(publicFile)});
+ if(publicFile.startsWith(path.resolve('public')+path.sep)&&fs.existsSync(publicFile)&&fs.statSync(publicFile).isFile()){
+   const contentType={'.json':'application/json','.svg':'image/svg+xml'}[path.extname(pathname)]||'text/plain';
+   return route.fulfill({contentType,body:fs.readFileSync(publicFile)});
+ }
  try{const transformed=await vite.transformRequest(url.pathname+url.search);if(transformed)return route.fulfill({contentType:'application/javascript',body:transformed.code});}catch(err){console.error(pathname,err.message);}
  return route.fulfill({status:404,body:'Not found'});
 });
@@ -52,6 +55,12 @@ try{
    await notesTab.locator('[data-note-id]').first().click();
    await notesTab.getByRole('heading',{name:'Worked example'}).waitFor();
    assert.ok(await notesTab.getByRole('link',{name:'Open in Notion'}).isVisible());
+   const visual=notesTab.getByRole('img',{name:/Visual study guide for/});
+   await visual.waitFor();
+   assert.ok(await visual.evaluate(img=>img.naturalWidth>0));
+   const noteId=new URLSearchParams(new URL(page.url()).hash.split('?')[1]).get('note');
+   const examId={'tet-exams':'tet','rrb-station-master':'rrb','sbi-clerk':'sbi'}[route]||route;
+   assert.equal(await visual.getAttribute('src'),`http://127.0.0.1:3011/notes/visuals/${examId}/${noteId}.svg`);
    if(route==='gate'){assert.match(await page.locator('.countdown-date').innerText(),/2027-02-06/);assert.equal(await page.locator('.countdown-badge').textContent(),'Official exam window');assert.notEqual(await page.locator('.countdown-number').innerText(),'—');assert.match(await page.locator('.countdown-hint').innerText(),/CS-specific/);}
    assert.ok(await page.locator('.countdown-spotlight').evaluate(el=>el.getBoundingClientRect().top<document.querySelector('.prep-tab-strip').getBoundingClientRect().top),'Countdown must precede the tabs');
    for(const tab of ['mocks','syllabus','notes','papers','progress','overview']){
@@ -112,6 +121,13 @@ try{
  await page.locator('[data-prep-tab=syllabus]').click();
  await page.screenshot({path:'artifacts/workspace/syllabus-mobile-dark.png',fullPage:false});
  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2));
+ await page.goto('http://127.0.0.1:3011/#/sbi-clerk?tab=notes&note=english-reading');
+ const readingGuide=page.getByRole('img',{name:'Visual study guide for English Reading Comprehension'});
+ await readingGuide.waitFor();
+ assert.ok(await readingGuide.evaluate(img=>img.naturalWidth>0&&img.getBoundingClientRect().right<=innerWidth));
+ const guideLink=page.getByRole('link',{name:/Open full-size guide/});
+ assert.equal(await guideLink.getAttribute('target'),'_blank');
+ assert.match(await guideLink.getAttribute('href'),/\/notes\/visuals\/sbi\/english-reading\.svg$/);
  // Signed-out render and existing auth form integration, using an isolated test user.
  await page.evaluate(async()=>{const {auth}=await import('/src/config/firebase.js');auth.currentUser=null;location.hash='#/';});
  await page.getByRole('heading',{name:/Less searching/}).waitFor();

@@ -102,6 +102,24 @@ body,.app-shell,.landing-workspace{font-family:Inter,-apple-system,BlinkMacSyste
     line-height: 1.65;
     overflow-wrap: anywhere;
 }
+.exam-note-visual {
+    max-width: 64rem;
+    margin-block: 1rem;
+}
+.exam-note-visual img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: .75rem;
+}
+.exam-note-visual a {
+    display: block;
+}
+.exam-note-visual span {
+    display: inline-block;
+    margin-top: .5rem;
+    color: var(--ws-primary);
+}
 .exam-note [data-note-content] > * {
     margin-block: .75rem;
 }

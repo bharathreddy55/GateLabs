@@ -9,12 +9,14 @@ for (const file of readdirSync(catalogs).filter(name => name.endsWith('.json')))
   const exam = file.slice(0, -5);
   const notes = JSON.parse(readFileSync(new URL(file, catalogs), 'utf8'));
   const folder = new URL(`../public/notes/${exam}/`, import.meta.url);
+  const visuals = new URL(`../public/notes/visuals/${exam}/`, import.meta.url);
 
   test(`${exam} notes have unique keys, readable content and Notion links`, () => {
     assert.ok(EXAMS[exam]);
     assert.equal(new Set(notes.map(note => note.id)).size, notes.length);
     assert.equal(new Set(notes.map(note => note.notion)).size, notes.length);
     assert.deepEqual(readdirSync(folder).sort(), notes.map(note => note.id + '.md').sort());
+    assert.deepEqual(readdirSync(visuals).sort(), notes.map(note => note.id + '.svg').sort());
     for (const note of notes) {
       assert.match(note.id, /^[a-z\d]+(?:-[a-z\d]+)*$/);
       assert.equal(new URL(note.notion).hostname, 'app.notion.com');
