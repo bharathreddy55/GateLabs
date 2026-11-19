@@ -1,5 +1,6 @@
 import { auth } from '../config/firebase';
 import { CBAT_BATTERIES, CBAT_PRACTICE_SETS, RDSO_FAQ, RDSO_GUIDE, RRB_NOTICE, rrbStageNav } from '../config/rrbCbat.js';
+import { CBAT_NOTES } from '../config/rrbCbatNotes.js';
 import { EXAM_CATALOG, icon } from '../config/navigation.js';
 import { mockLibraryBanner } from '../components/ExamMockLibrary.js';
 import { buildCbatSet, cbatResultKey, cbatSummary, validCbatResult } from '../utils/cbat.js';
@@ -36,6 +37,35 @@ const completedLabel = result => result.correct === null ? `${result.attempted}/
 const stationMaster = EXAM_CATALOG.find(exam=>exam.id==='rrb');
 const batteryIcons = {intelligence:'grid',attention:'edit',spatial:'chart',ordering:'file',personality:'users'};
 
+function studyNotes(){
+  return `<section class="mock-library-section cbat-notes" id="cbat-study-notes" aria-labelledby="cbat-notes-heading" hidden>
+    <div class="surface cbat-notes-intro">
+      <h2 id="cbat-notes-heading" tabindex="-1">CBAT Detailed notes</h2>
+      <h3>CBAT syllabus guide</h3>
+      <p>The Station Master notice gives the CBAT rules and points to RDSO for aptitude-test guidance. RDSO lists these five indicative battery types. Follow the instructions and time limit given for each battery on the day.</p>
+      <ul>${CBAT_BATTERIES.map(({id,title})=>`<li><button type="button" class="text-link cbat-topic-link" data-cbat-note="${id}">${h(title)}</button><span>${h(CBAT_NOTES[id].skill)}</span></li>`).join('')}</ul>
+      <p>The official CBAT uses English or Hindi, has no negative marking, and requires a standardised T-score of at least 42 in each battery. GateLabs uses practice timers and shows raw practice results.</p>
+      <div class="button-row"><a class="text-link" href="${RDSO_GUIDE}" target="_blank" rel="noopener">RDSO aptitude guide ↗</a>
+      <a class="text-link" href="${RRB_NOTICE}" target="_blank" rel="noopener">CEN 08/2026, section 15.2 ↗</a></div>
+    </div>
+    ${CBAT_BATTERIES.map(({id,title})=>{
+      const note=CBAT_NOTES[id];
+      return `<details class="surface cbat-note" data-cbat-lesson="${id}">
+        <summary>${h(title)}</summary>
+        <h3>${id==='personality'?'How to approach the prompts':'How to solve it'}</h3>
+        <ol>${note.method.map(step=>`<li>${h(step)}</li>`).join('')}</ol>
+        <h3>${id==='personality'?'Sample prompt':'Worked example'}</h3>
+        <p>${h(note.prompt)}</p>
+        ${note.map?streetMap(note.map):''}
+        ${note.figures?`<div class="cbat-options cbat-figures">${note.figures.map((cells,index)=>`<div>Figure ${'ABC'[index]}${shape(cells)}</div>`).join('')}</div>`:''}
+        <p>${h(note.solution)}</p>
+        <h3>Common mistake</h3><p>${h(note.mistake)}</p>
+        <h3>Practice focus</h3><p>${h(note.practice)}</p>
+      </details>`;
+    }).join('')}
+  </section>`;
+}
+
 export const RrbCbat = {
   render(){
     return `<section class="workspace-page exam-workspace" id="rrb-cbat">
@@ -44,7 +74,12 @@ export const RrbCbat = {
       ${rrbStageNav(true)}
       <div class="mock-test-library" style="--mock-accent:${stationMaster.color}">
       ${mockLibraryBanner({title:'Computer Based Aptitude Test',metrics:[['practice sets',CBAT_BATTERIES.length*CBAT_PRACTICE_SETS.length],['battery types',CBAT_BATTERIES.length]],symbol:stationMaster.symbol})}
-      <div data-cbat-panel></div>
+      <nav class="exam-stage-nav" aria-label="CBAT study resources">
+        <button type="button" class="ui-button primary" data-cbat-view="practice" aria-pressed="true" aria-controls="cbat-practice">Practice sets</button>
+        <button type="button" class="ui-button" data-cbat-view="notes" aria-pressed="false" aria-controls="cbat-study-notes">Detailed notes &amp; syllabus</button>
+      </nav>
+      <div id="cbat-practice" data-cbat-panel></div>
+      ${studyNotes()}
       <details class="surface mock-cbat-rules"><summary>Official scoring & recruitment rules</summary>
         <div class="pattern-metrics"><div><strong>42</strong><span>Minimum T-score per battery</span></div>
         <div><strong>None</strong><span>Negative marking</span></div><div><strong>70 / 30</strong><span>CBT / CBAT merit weight</span></div>
@@ -57,15 +92,42 @@ export const RrbCbat = {
       </details></div></section>`;
   },
   init(){
-    this.panel = document.querySelector('[data-cbat-panel]');
+    this.cleanup();
+    this.root = document.getElementById('rrb-cbat');
+    this.panel = this.root.querySelector('[data-cbat-panel]');
     this.key = `rrb-cbat-practice:${auth.currentUser?.uid}`;
     this.panel.addEventListener('click', event => this.handleClick(event));
+    this.root.addEventListener('click',event=>{
+      const button=event.target.closest('button');
+      if(button?.dataset.cbatView) this.showView(button.dataset.cbatView);
+      if(button?.dataset.cbatNote) this.showView('notes',button.dataset.cbatNote);
+    });
     this.showLibrary();
+    this.showView(new URLSearchParams(location.hash.split('?')[1]).get('tab')==='notes'?'notes':'practice',null,false);
   },
   cleanup(){
     clearInterval(this.timer);
     this.session = null;
     this.panel = null;
+    this.root = null;
+  },
+  showView(view,topic,focus=true){
+    if(this.session) return;
+    const notes = this.root.querySelector('#cbat-study-notes');
+    const showNotes = view==='notes';
+    notes.hidden=!showNotes;
+    this.panel.hidden=showNotes;
+    for(const button of this.root.querySelectorAll('[data-cbat-view]')){
+      const selected=button.dataset.cbatView===view;
+      button.classList.toggle('primary',selected);
+      button.setAttribute('aria-pressed',String(selected));
+    }
+    if(!focus) return;
+    history.replaceState(null,'',`#/rrb-station-master/cbat${showNotes?'?tab=notes':''}`);
+    if(!showNotes) return;
+    const lesson=topic&&[...notes.querySelectorAll('[data-cbat-lesson]')].find(item=>item.dataset.cbatLesson===topic);
+    if(lesson) lesson.open=true;
+    (lesson?.querySelector('summary')||notes.querySelector('h2')).focus();
   },
   showLibrary(){
     const results = readStored(this.key,{});
@@ -79,13 +141,14 @@ export const RrbCbat = {
             const key=cbatResultKey(battery.id,set),last=results[key];
             return `<div><button type="button" class="ui-button ${set===1?'primary':''}" data-cbat-start="${battery.id}" data-cbat-set="${set}" aria-label="Start ${battery.title} Set ${set}">Start Set ${set} ${icon('arrow')}</button>
               ${validCbatResult(key,last)?`<p>Set ${set} · ${completedLabel(last)}</p>`:''}</div>`;
-          }).join('')}</div></article>`).join('')}</div></section>`;
+          }).join('')}<button type="button" class="ui-button" data-cbat-note="${battery.id}" aria-label="Read ${battery.title} notes">Read notes</button></div></article>`).join('')}</div></section>`;
   },
   start(battery,set){
     const questions = buildCbatSet(battery.id,set);
     if (!questions.length) return;
     this.session = { battery, set, questions, answers:Array(questions.length).fill(null), index:0,
       deadline:battery.seconds ? Date.now()+battery.seconds*1000 : null };
+    this.root.querySelector('[data-cbat-view="notes"]').disabled=true;
     this.showQuestion();
     if (battery.seconds) this.timer = setInterval(() => this.tick(), 250);
   },
@@ -141,6 +204,7 @@ export const RrbCbat = {
     const {battery,set,questions,answers} = this.session;
     const result = cbatSummary(questions,answers);
     this.session = null;
+    this.root.querySelector('[data-cbat-view="notes"]').disabled=false;
     let saveWarning = '';
     try {
       const latest = Object.fromEntries(Object.entries(readStored(this.key,{})).filter(([id,summary])=>validCbatResult(id,summary)));

@@ -144,6 +144,13 @@
 .mock-subject .ui-button { min-height: 2.5rem; }
 .mock-cbat-rules summary { font-weight: 700; }
 .cbat-set-buttons { grid-column: 2; display: flex; flex-wrap: wrap; gap: .5rem; }
+.cbat-notes-intro, .cbat-note[open] { display: grid; gap: .65rem; }
+.cbat-notes-intro ul { display: grid; gap: .45rem; }
+.cbat-notes-intro li { display: flex; flex-wrap: wrap; gap: 0 .6rem; font-size: .85rem; }
+.cbat-topic-link { padding-block: .2rem; text-align: start; text-decoration: underline; font-weight: 700; }
+.cbat-note summary { cursor: pointer; font-weight: 700; }
+.cbat-note ol { list-style: decimal; padding-inline-start: 1.3rem; font-size: .85rem; }
+.cbat-note ol li + li { margin-top: .3rem; }
 @media (max-width: 600px) {
     .mock-picks, .mock-subjects { grid-template-columns: 1fr; }
     .mock-tile-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
