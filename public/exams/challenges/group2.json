@@ -1,0 +1,285 @@
+[
+  {
+    "title": "Group 2 Prelims · Challenge drill",
+    "category": "Challenge drill",
+    "provenance": "Original GateLabs questions informed by the published exam pattern. Pattern reference: https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf",
+    "note": "Original statement analysis, applied geography and data interpretation. Current-affairs items are dated and link to their primary sources.",
+    "full": false,
+    "questions": [
+      {
+        "id": "group2-challenge-1-1",
+        "section": "Indian History",
+        "subject": "Indian History",
+        "topic": "Colonial constitutional developments",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "Arrange these in chronological order: I. Cabinet Mission plan. II. Cripps proposals. III. Government of India Act introducing provincial autonomy. IV. Wavell Plan discussed at Simla.",
+        "options": [
+          "III–II–IV–I",
+          "III–IV–II–I",
+          "II–III–I–IV",
+          "III–II–I–IV"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Provincial autonomy was provided for by the 1935 Act. Cripps came in 1942, Simla was in 1945, and the Cabinet Mission followed in 1946.",
+        "source": "https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-challenge-1-2",
+        "section": "Indian History",
+        "subject": "Indian History",
+        "topic": "Agrarian and revenue administration",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "Consider these statements about British land revenue. I. The Permanent Settlement fixed the demand on zamindars. II. Ryotwari generally settled directly with the cultivator. III. Mahalwari made revenue demand permanently fixed for village estates. Which statements are correct?",
+        "options": [
+          "I and II only",
+          "II and III only",
+          "I and III only",
+          "I, II and III"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Permanent Settlement fixed the state demand on zamindars. Ryotwari dealt with cultivators directly. Mahalwari was normally subject to periodic revision.",
+        "source": "https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-challenge-1-3",
+        "section": "Indian History",
+        "subject": "Indian History",
+        "topic": "Social reform chronology",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "Which combination correctly pairs movements with their founders? I. Satyashodhak Samaj — Jyotirao Phule. II. Prarthana Samaj — Atmaram Pandurang. III. Brahmo Samaj — Debendranath Tagore as founder in 1828.",
+        "options": [
+          "II only",
+          "I and III only",
+          "II and III only",
+          "I and II only"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Phule founded the Satyashodhak Samaj and Atmaram Pandurang founded Prarthana Samaj. Rammohan Roy founded the Brahmo movement organisation in 1828. Tagore led it later.",
+        "source": "https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-challenge-1-4",
+        "section": "Geography",
+        "subject": "Geography",
+        "topic": "Monsoon and rain shadow",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "Two settlements lie at similar latitude on opposite sides of the Western Ghats. X is much wetter in July. Which pair explains X and the other settlement during the southwest monsoon?",
+        "options": [
+          "X lies east and gets rain from descending air; the west is sheltered",
+          "X lies west and gets rain from uplifted moist air; the east is in a rain shadow",
+          "X lies west and gets rain when offshore winds cool above the Arabian Sea; the east is wetter at elevation",
+          "X lies east and receives the first Arabian Sea branch rainfall; the west receives depleted air"
+        ],
+        "correctAnswer": 1,
+        "explanation": "The Arabian Sea branch rises on the western windward slopes. After losing moisture, air descends on the eastern side and rainfall is lower.",
+        "source": "https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-challenge-1-5",
+        "section": "Geography",
+        "subject": "Geography",
+        "topic": "Tides",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "Which combination places tidal conditions in the correct order? I. New Moon — spring tides. II. First quarter — neap tides. III. Full Moon — spring tides. IV. Third quarter — spring tides.",
+        "options": [
+          "I and III only",
+          "II and IV only",
+          "I, II and III only",
+          "I, II, III and IV"
+        ],
+        "correctAnswer": 2,
+        "explanation": "At new and full Moon, the solar and lunar tidal effects align. At either quarter they partly offset, giving neap tides.",
+        "source": "https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-challenge-1-6",
+        "section": "Geography",
+        "subject": "Geography",
+        "topic": "Demography and migration",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "A region begins the year with 800,000 residents. Its birth and death rates are 19 and 8 per thousand respectively, both applied to the starting population. Its population ends at 804,800. What is net migration?",
+        "options": [
+          "4,000 net inward",
+          "8,800 net outward",
+          "13,600 net inward",
+          "4,000 net outward"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Natural increase is 8,800, while observed increase is 4,800. Net migration is 4,800−8,800 = −4,000.",
+        "source": "https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-challenge-1-7",
+        "section": "Indian Society",
+        "subject": "Indian Society",
+        "topic": "Demography and dependency",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "District A has 24% aged 0–14 and 8% aged 65 or above. District B has 18% aged 0–14 and 17% aged 65 or above. Using ages 15–64 as the denominator, which comparison is correct?",
+        "options": [
+          "A has higher child and total dependency",
+          "B has lower child dependency but higher total dependency",
+          "B has both higher child dependency and higher total dependency",
+          "A and B have equal total dependency"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Child dependency is 24/68 in A and 18/65 in B. Overall dependency is 32/68 in A and 35/65 in B, so B has lower child but higher total dependency.",
+        "source": "https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-challenge-1-8",
+        "section": "Indian Society",
+        "subject": "Indian Society",
+        "topic": "Kinship and residence",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "In a community, descent and family membership follow the mother’s line. Newly married couples usually live near the husband’s family. What follows from these two observations?",
+        "options": [
+          "Matrilineal descent and patrilocal residence",
+          "Patrilineal descent and matrilocal residence",
+          "Matrilineal descent and matrilocal residence",
+          "Bilateral descent and neolocal residence"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Matrilineality describes how descent is traced. Patrilocal residence describes living with or near the husband’s family after marriage. These features can coexist.",
+        "source": "https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-challenge-1-9",
+        "section": "Indian Society",
+        "subject": "Indian Society",
+        "topic": "Social stratification and measurement",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "A survey finds that earnings gaps between two groups are small among workers with the same schooling, but large across all workers. Group X is much less likely to complete school. What is the best conclusion?",
+        "options": [
+          "The total gap proves unequal pay for equivalent schooling",
+          "Schooling cannot matter because within-schooling gaps are small",
+          "Unequal access to schooling can contribute to the total gap, and the comparison alone cannot establish causality",
+          "The overall gap must vanish when differences in group size are removed"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Different distributions across schooling levels can produce an aggregate earnings gap. The survey comparison by itself does not identify causal mechanisms.",
+        "source": "https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-challenge-1-10",
+        "section": "Current Affairs",
+        "subject": "Current Affairs",
+        "topic": "Belém climate decisions",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "Which statements describe the Belém Adaptation Indicators agreed at COP30 in November 2025? I. They are voluntary. II. They are intended to rank parties against each other. III. They serve the global goal on adaptation.",
+        "options": [
+          "I only",
+          "I and III only",
+          "II and III only",
+          "I, II and III"
+        ],
+        "correctAnswer": 1,
+        "explanation": "The decision adopted the indicators for the global adaptation goal and made them voluntary. It excludes using them to compare parties.",
+        "source": "https://unfccc.int/sites/default/files/resource/gga_cop30_5.pdf",
+        "asOf": "2025-11-21"
+      },
+      {
+        "id": "group2-challenge-1-11",
+        "section": "Current Affairs",
+        "subject": "Current Affairs",
+        "topic": "Sixteenth Finance Commission",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "The Union’s February 2026 announcement accepted a 41% vertical share of tax devolution. Which interpretation is correct?",
+        "options": [
+          "Each state receives 41% of the taxes collected within it",
+          "The states as a group receive 41% of the divisible pool, with their individual shares determined separately",
+          "41% of each state’s budget must come from the Union",
+          "41% is the horizontal share allotted to the largest state"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Vertical allocation is the Union–states split. Horizontal allocation divides the states’ collective share among individual states.",
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2221390&lang=1&reg=3",
+        "asOf": "2026-02-01"
+      },
+      {
+        "id": "group2-challenge-1-12",
+        "section": "Current Affairs",
+        "subject": "Current Affairs",
+        "topic": "Amaravati development package",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "Which interpretation of the May 2025 Amaravati development announcement follows from the official release?",
+        "options": [
+          "The quoted aggregate cost applied to multiple announced projects, not solely to the capital’s government buildings",
+          "The aggregate cost referred exclusively to the finished Secretariat",
+          "The figure was a grant exclusively for rural local bodies",
+          "The figure was a completed capital expenditure audited for the preceding year"
+        ],
+        "correctAnswer": 0,
+        "explanation": "The release covers a portfolio of inaugurations and foundation-stone events. The combined value cannot be attributed to one category of buildings.",
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2126248&lang=2&reg=48",
+        "asOf": "2025-05-02"
+      },
+      {
+        "id": "group2-challenge-1-13",
+        "section": "Mental Ability",
+        "subject": "Mental Ability",
+        "topic": "Work rates and changing crews",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "A does a job in 18 days and B in 24 days. They work together for 6 days, then A leaves and C joins B. B and C finish the job in 4 days. How long would C take alone?",
+        "options": [
+          "12 days",
+          "16 days",
+          "18 days",
+          "24 days"
+        ],
+        "correctAnswer": 1,
+        "explanation": "A and B complete 7/12 in 6 days. B and C must work at 5/48 per day. Subtract B’s 2/48 to get C at 1/16 per day.",
+        "source": "https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-challenge-1-14",
+        "section": "Mental Ability",
+        "subject": "Mental Ability",
+        "topic": "Data interpretation",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "Which division shows the greatest percentage increase in actual output from Year 1 to Year 2? Actual output equals target multiplied by achievement rate.",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Actuals are A 80→90, B 90→99, C 84→105, D 100→110. Their increases are 12.5%, 10%, 25% and 10% respectively.",
+        "source": "https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf",
+        "table": "Division | Year 1 target | Achievement | Year 2 target | Achievement\\nA | 100 | 80% | 120 | 75%\\nB | 120 | 75% | 110 | 90%\\nC | 140 | 60% | 150 | 70%\\nD | 125 | 80% | 200 | 55%"
+      },
+      {
+        "id": "group2-challenge-1-15",
+        "section": "Mental Ability",
+        "subject": "Mental Ability",
+        "topic": "Conditional reasoning",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "A proposal is reviewed only if it has a water plan. Every reviewed proposal that exceeds its land ceiling is rejected. A particular proposal was reviewed and was not rejected. Which conclusion is forced?",
+        "options": [
+          "It has a water plan and does not exceed its land ceiling",
+          "It has a water plan and was approved",
+          "It does not exceed its land ceiling and was funded",
+          "Every proposal with a water plan is reviewed"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Review implies a water plan. If it also exceeded the land ceiling, the second rule would force rejection. No funding or approval status is established.",
+        "source": "https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      }
+    ]
+  }
+]

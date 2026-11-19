@@ -144,8 +144,24 @@ body,.app-shell,.landing-workspace{font-family:Inter,-apple-system,BlinkMacSyste
     white-space: normal;
     text-align: left;
 }
-.group2-stage-nav {
+.exam-stage-nav {
     display: flex;
     flex-wrap: wrap;
     gap: .5rem;
 }
+.cbat-session { display:grid; gap:1rem; }
+.cbat-session > button { justify-self:start; }
+.cbat-digits { max-width:38ch; font:600 1.25rem/1.7 ui-monospace,monospace; word-spacing:.4ch; }
+.cbat-options { display:flex; flex-wrap:wrap; gap:.5rem; }
+.cbat-options .ui-button { white-space:normal; }
+.cbat-figures > * { display:grid; justify-items:center; gap:.35rem; }
+.cbat-figures .cbat-shape { width:3.75rem; height:3.75rem; }
+.cbat-shape rect { fill:transparent; stroke:currentColor; stroke-width:.35; }
+.cbat-shape .filled { fill:currentColor; }
+.cbat-map { width:min(100%,17rem); color:var(--ws-primary); }
+.cbat-map line { stroke:currentColor; stroke-width:2; }
+.cbat-map rect { fill:currentColor; }
+.cbat-map text { fill:var(--accent-on,#fff); font-weight:700; font-size:11px; }
+.cbat-rules { list-style:disc; padding-inline-start:1.5rem; }
+.cbat-review { list-style:decimal; padding-inline-start:1.5rem; }
+.cbat-review li { margin-block:.8rem; }

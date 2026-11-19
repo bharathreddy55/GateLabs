@@ -71,10 +71,10 @@ export const GROUP2_MAINS = {
 export function group2StageNav(id) {
   if (id !== 'group2' && !Object.hasOwn(GROUP2_MAINS,id)) return '';
   const isPrelims = id === 'group2';
-  return `<nav class="group2-stage-nav" aria-label="Group 2 stage">
+  return `<nav class="exam-stage-nav" aria-label="Group 2 stage">
     <a class="ui-button ${isPrelims?'primary':''}" href="#/group2" ${isPrelims?'aria-current="page"':''}>Prelims</a>
     <a class="ui-button ${isPrelims?'':'primary'}" href="#/group2/mains" ${isPrelims?'':'aria-current="true"'}>Mains</a>
-  </nav>${isPrelims?'':`<nav class="group2-stage-nav" aria-label="Mains paper">
+  </nav>${isPrelims?'':`<nav class="exam-stage-nav" aria-label="Mains paper">
     ${Object.entries(GROUP2_MAINS).map(([key,paper],index)=>
       `<a class="ui-button ${key===id?'primary':''}" href="#/${paper.route}" ${key===id?'aria-current="page"':''}>Paper ${index===0?'I':'II'}</a>`).join('')}
   </nav>`}`;

@@ -1,0 +1,264 @@
+[
+  {
+    "title": "Group 2 Mains Paper II · Challenge drill",
+    "category": "Challenge drill",
+    "provenance": "Original GateLabs questions informed by the published exam pattern. Pattern reference: https://portal-psc.ap.gov.in/HomePages/KeysToPapers",
+    "note": "Original quantitative economy questions and applied science and technology cases, based on the two Paper II syllabus blocks.",
+    "full": false,
+    "questions": [
+      {
+        "id": "group2-mains-2-challenge-1-1",
+        "section": "Indian and Andhra Pradesh Economy",
+        "subject": "Indian and Andhra Pradesh Economy",
+        "topic": "Deficit accounting",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "A budget shows total expenditure of ₹8,200 crore, revenue receipts of ₹6,500 crore, non-debt capital receipts of ₹450 crore and interest payments of ₹620 crore. What is its primary deficit?",
+        "options": [
+          "₹630 crore",
+          "₹1,080 crore",
+          "₹1,250 crore",
+          "₹1,870 crore"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Fiscal deficit is 8,200−6,500−450 = 1,250. Primary deficit subtracts the interest bill: 1,250−620 = 630 crore.",
+        "source": "https://portal-psc.ap.gov.in/HomePages/KeysToPapers"
+      },
+      {
+        "id": "group2-mains-2-challenge-1-2",
+        "section": "Indian and Andhra Pradesh Economy",
+        "subject": "Indian and Andhra Pradesh Economy",
+        "topic": "Nominal and real GSDP",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "Andhra Pradesh’s hypothetical nominal GSDP rises by 12.2% while the GSDP deflator rises by 10%. What is real GSDP growth?",
+        "options": [
+          "1.8%",
+          "2.0%",
+          "2.2%",
+          "3.0%"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Divide nominal growth factor by the deflator factor: 1.122/1.10 = 1.02. Subtract 1 to obtain 2%.",
+        "source": "https://portal-psc.ap.gov.in/HomePages/KeysToPapers"
+      },
+      {
+        "id": "group2-mains-2-challenge-1-3",
+        "section": "Indian and Andhra Pradesh Economy",
+        "subject": "Indian and Andhra Pradesh Economy",
+        "topic": "Gross to net domestic product",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "At current prices, aggregate gross value added at basic prices is ₹900 crore, product taxes ₹110 crore, product subsidies ₹30 crore and consumption of fixed capital ₹80 crore. What is net domestic product at market prices?",
+        "options": [
+          "₹820 crore",
+          "₹870 crore",
+          "₹900 crore",
+          "₹980 crore"
+        ],
+        "correctAnswer": 2,
+        "explanation": "GDP at market prices is GVA plus net product taxes, or 980. Subtract consumption of fixed capital of 80 for net domestic product of 900.",
+        "source": "https://portal-psc.ap.gov.in/HomePages/KeysToPapers"
+      },
+      {
+        "id": "group2-mains-2-challenge-1-4",
+        "section": "Indian and Andhra Pradesh Economy",
+        "subject": "Indian and Andhra Pradesh Economy",
+        "topic": "External accounts",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "During a quarter, a hypothetical economy’s goods balance is −40, services balance +25, primary income balance −7, secondary income balance +10, and net inward FDI 30, all in identical units. What is the current-account balance?",
+        "options": [
+          "−12",
+          "−22",
+          "+18",
+          "+25"
+        ],
+        "correctAnswer": 0,
+        "explanation": "The current account is −40+25−7+10 = −12. FDI belongs to the financial account.",
+        "source": "https://portal-psc.ap.gov.in/HomePages/KeysToPapers"
+      },
+      {
+        "id": "group2-mains-2-challenge-1-5",
+        "section": "Indian and Andhra Pradesh Economy",
+        "subject": "Indian and Andhra Pradesh Economy",
+        "topic": "Indian and AP sectoral productivity",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "In an economy, agriculture contributes 18% of GVA and employs 45% of workers. Services contribute 54% of GVA and employ 30% of workers. What is services GVA per worker as a multiple of agricultural GVA per worker?",
+        "options": [
+          "2.7",
+          "3.0",
+          "4.0",
+          "4.5"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Relative to economy-wide GVA per worker, the ratios are 54/30 = 1.8 and 18/45 = 0.4. Dividing gives 4.5.",
+        "source": "https://portal-psc.ap.gov.in/HomePages/KeysToPapers"
+      },
+      {
+        "id": "group2-mains-2-challenge-1-6",
+        "section": "Indian and Andhra Pradesh Economy",
+        "subject": "Indian and Andhra Pradesh Economy",
+        "topic": "Monetary transmission",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "Assume banks’ loan rates are linked one-for-one to the policy repo rate and savings deposit rates remain fixed for a year. With loan principal unchanged, a repo rate cut would immediately do what?",
+        "options": [
+          "Reduce nominal interest on linked loans and narrow the spread over savings rates",
+          "Raise linked loan payments and narrow the spread",
+          "Keep linked loan payments fixed and widen the spread",
+          "Reduce loan rates and widen the spread over unchanged savings rates"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Linked loan rates fall by the amount of the cut. Since savings rates remain fixed, the loan–savings spread narrows by the same amount.",
+        "source": "https://portal-psc.ap.gov.in/HomePages/KeysToPapers"
+      },
+      {
+        "id": "group2-mains-2-challenge-1-7",
+        "section": "Indian and Andhra Pradesh Economy",
+        "subject": "Indian and Andhra Pradesh Economy",
+        "topic": "Agricultural price policy",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "A crop has a declared MSP of ₹2,250 per quintal. In district A, procurement buys at that rate and farmers can sell immediately. In district B, farmers sell at a local market price of ₹2,080 and lack access to procurement. Which conclusion follows?",
+        "options": [
+          "All B farmers receive the difference automatically because MSP is declared",
+          "The declared price lifts the observed B market price to at least ₹2,250",
+          "Procurement access can cause different realised prices despite an identical national MSP",
+          "B’s MSP is ₹2,080 since that is the observed market price"
+        ],
+        "correctAnswer": 2,
+        "explanation": "The MSP is a declared benchmark. Effective procurement at the price can change the amount farmers realise. No payment mechanism for B is specified.",
+        "source": "https://portal-psc.ap.gov.in/HomePages/KeysToPapers"
+      },
+      {
+        "id": "group2-mains-2-challenge-1-8",
+        "section": "Science and Technology",
+        "subject": "Science and Technology",
+        "topic": "Power generation and capacity factor",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "A 120 MW solar park runs at a 25% capacity factor over a year of 8,760 hours. Twenty per cent of its energy is routed through storage with 75% round-trip efficiency. The rest is delivered directly. How much electricity reaches the grid?",
+        "options": [
+          "197.100 GWh",
+          "249.660 GWh",
+          "256.230 GWh",
+          "262.800 GWh"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Generation is 120×8760×0.25 = 262.8 GWh. The delivered share is 0.80+0.20×0.75 = 0.95, giving 249.66 GWh.",
+        "source": "https://portal-psc.ap.gov.in/HomePages/KeysToPapers"
+      },
+      {
+        "id": "group2-mains-2-challenge-1-9",
+        "section": "Science and Technology",
+        "subject": "Science and Technology",
+        "topic": "Wastewater treatment performance",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "An inlet has BOD 240 mg/L. A primary step removes 30% of the incoming BOD and a secondary step removes 85% of the BOD reaching that step. Assume flow is unchanged. What is the final BOD?",
+        "options": [
+          "20.4 mg/L",
+          "24.0 mg/L",
+          "25.2 mg/L",
+          "36.0 mg/L"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Each removal percentage applies to its own inlet. The final fraction is 0.70×0.15 = 0.105. Multiply by 240 to obtain 25.2 mg/L.",
+        "source": "https://portal-psc.ap.gov.in/HomePages/KeysToPapers"
+      },
+      {
+        "id": "group2-mains-2-challenge-1-10",
+        "section": "Science and Technology",
+        "subject": "Science and Technology",
+        "topic": "Biodiversity and ecosystems",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "A proposed conservation plan banks several crop varieties and also protects the wild relatives in their native habitat. Which distinction is correct?",
+        "options": [
+          "The seed bank is in situ because varieties come from the region",
+          "The seed bank is ex situ while native habitat protection is in situ",
+          "Both measures are ex situ because human intervention is involved",
+          "Habitat protection is ex situ if threatened species are monitored"
+        ],
+        "correctAnswer": 1,
+        "explanation": "In situ conservation maintains populations within natural habitats. Storing seeds in a managed collection outside those habitats is ex situ.",
+        "source": "https://portal-psc.ap.gov.in/HomePages/KeysToPapers"
+      },
+      {
+        "id": "group2-mains-2-challenge-1-11",
+        "section": "Science and Technology",
+        "subject": "Science and Technology",
+        "topic": "SpaDeX and technology demonstration",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "Which combination was demonstrated during the April 2025 SpaDeX experiments? I. Autonomous closing and docking from the final approach. II. Bidirectional electrical power transfer while docked. III. Debris capture and deorbiting.",
+        "options": [
+          "I and II only",
+          "I and III only",
+          "II and III only",
+          "I, II and III"
+        ],
+        "correctAnswer": 0,
+        "explanation": "ISRO reported a fully autonomous final approach during the second docking and power transfer in both directions the following day.",
+        "source": "https://www.isro.gov.in/ISRO_EN/Spadex_Successful_demonstration_of_Second_Docking_and_Power_Transfer.html",
+        "asOf": "2025-04-21"
+      },
+      {
+        "id": "group2-mains-2-challenge-1-12",
+        "section": "Science and Technology",
+        "subject": "Science and Technology",
+        "topic": "Ocean acidification",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "When additional atmospheric CO₂ dissolves in seawater, what change most directly makes calcium carbonate formation more difficult, all else equal?",
+        "options": [
+          "Higher pH and a rise in carbonate ions",
+          "Lower pH and a decline in available carbonate ions",
+          "Lower pH and an increase in available carbonate ions",
+          "A decline in dissolved carbon dioxide and no change in pH"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Dissolved CO₂ increases hydrogen ion concentration. Hydrogen ions combine with carbonate to form bicarbonate, reducing carbonate available for shell formation.",
+        "source": "https://portal-psc.ap.gov.in/HomePages/KeysToPapers"
+      },
+      {
+        "id": "group2-mains-2-challenge-1-13",
+        "section": "Science and Technology",
+        "subject": "Science and Technology",
+        "topic": "Public-health screening",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "Among 10,000 people, 2% have a condition. A screening test has sensitivity 90% and specificity 95%. Assuming exactly these rates, what fraction of positive results are true positives?",
+        "options": [
+          "18/67",
+          "18/49",
+          "90/95",
+          "95/100"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Of 200 affected people, 180 test positive. Of 9,800 unaffected, 490 test positive. The fraction is 180/(180+490) = 18/67.",
+        "source": "https://portal-psc.ap.gov.in/HomePages/KeysToPapers"
+      },
+      {
+        "id": "group2-mains-2-challenge-1-14",
+        "section": "Science and Technology",
+        "subject": "Science and Technology",
+        "topic": "Air pollution and emissions controls",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "A transport inventory finds that a fuel-quality change reduced exhaust sulfur dioxide between two surveys, while roadside coarse particulate matter stayed high. Which interpretation is best supported?",
+        "options": [
+          "Lower exhaust sulfur dioxide proves all particulate sources declined",
+          "Fuel sulfur and coarse particles must respond in the same proportion",
+          "Road dust and other non-exhaust sources can sustain coarse particulate levels despite lower exhaust sulfur dioxide",
+          "Coarse particulate matter directly measures only tailpipe sulfur releases"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Emitted sulfur dioxide responds to fuel sulfur, whereas coarse particles can come from resuspended dust and wear. Their trends can therefore diverge.",
+        "source": "https://portal-psc.ap.gov.in/HomePages/KeysToPapers"
+      }
+    ]
+  }
+]

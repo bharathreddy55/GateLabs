@@ -1,0 +1,384 @@
+[
+  {
+    "title": "Station Master CBT · Challenge drill",
+    "category": "Challenge drill",
+    "provenance": "Original GateLabs questions informed by the published exam pattern. Pattern reference: https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+    "note": "Original multi-step questions across all four published CBT blocks at the same pace per question as the full CBT. The difficulty label describes the question design.",
+    "full": false,
+    "questions": [
+      {
+        "id": "rrb-challenge-1-1",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Time, speed and distance",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "A 180 m train overtakes a 120 m train moving at 36 km/h in 30 seconds. How long will the faster train take to clear a 270 m platform?",
+        "options": [
+          "18 s",
+          "20 s",
+          "22.5 s",
+          "25 s"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Relative speed is 300/30 = 10 m/s. Adding 36 km/h = 10 m/s gives 20 m/s. Clearing the platform requires 450/20 = 22.5 s.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-challenge-1-2",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Electric circuits and power",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "A 12 V ideal source feeds a 3 Ω resistor in series with a parallel pair of 6 Ω and 3 Ω resistors. What is the power in the 6 Ω resistor?",
+        "options": [
+          "3.84 W",
+          "4.80 W",
+          "9.60 W",
+          "24.00 W"
+        ],
+        "correctAnswer": 0,
+        "explanation": "The parallel resistance is 2 Ω, so total current is 2.4 A. The parallel voltage is 4.8 V and power in 6 Ω is 4.8²/6 = 3.84 W.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-challenge-1-3",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Work rates",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "P and Q can finish a job in 12 and 18 days respectively. They work together for 4 days. Q leaves and R joins P. They finish the remaining work in 4 days. How many days would R take alone?",
+        "options": [
+          "24",
+          "30",
+          "36",
+          "48"
+        ],
+        "correctAnswer": 2,
+        "explanation": "The first pair completes 5/9 of the job. To finish 4/9 in 4 days, P and R need rate 1/9. Subtracting P’s 1/12 leaves R at 1/36.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-challenge-1-4",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Friction and mechanical power",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "A 30 kg crate is pulled along a level floor at 2 m/s. The kinetic friction coefficient is 0.25. A second horizontal force of 15 N opposes the motion. With g = 10 m/s², what is the pulling power at constant speed?",
+        "options": [
+          "120 W",
+          "150 W",
+          "180 W",
+          "210 W"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Friction is 0.25 × 300 = 75 N. Add the opposing 15 N, then multiply the required 90 N pull by 2 m/s.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-challenge-1-5",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Measurement and density",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "A hollow metal cylinder is 14 cm tall with outer radius 5 cm and inner radius 3 cm. Its mass is 4.928 kg. Using π = 22/7, what is the density of the metal?",
+        "options": [
+          "4.4 g/cm³",
+          "5.6 g/cm³",
+          "7.0 g/cm³",
+          "8.0 g/cm³"
+        ],
+        "correctAnswer": 2,
+        "explanation": "The metal volume is (25−9) × 14 × 22/7 = 704 cm³. The ratio 4928/704 is 7.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-challenge-1-19",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Heat and temperature",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "An insulated calorimeter initially at 20°C has the same heat capacity as 100 g of water. It contains 200 g of water at 20°C. A further 200 g of water at 80°C is added. Ignore evaporation. What is the final equilibrium temperature?",
+        "options": ["40°C", "44°C", "50°C", "56°C"],
+        "correctAnswer": 1,
+        "explanation": "The effective cold mass is 300 g, with 200 g of hot water. Heat balance gives 300(T−20) = 200(80−T), so T = 44°C.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-challenge-1-6",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Weighted rates",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "If departures from C double while each station’s on-time rate stays fixed, what is the new network on-time percentage?",
+        "options": [
+          "80%",
+          "80.4%",
+          "81%",
+          "82.4%"
+        ],
+        "correctAnswer": 0,
+        "explanation": "The new on-time count is 108+136+156 = 400 of 120+160+220 = 500 departures.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Station | Departures | On time\\nA | 120 | 108\\nB | 160 | 136\\nC | 110 | 78"
+      },
+      {
+        "id": "rrb-challenge-1-7",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Data sufficiency",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "P and Q together sold 360 tickets across two shifts. Did P sell more tickets than Q overall? I. P sold 40 more than Q in the first shift. II. In the second shift, Q sold 32 more than P.",
+        "options": [
+          "I alone is sufficient",
+          "II alone is sufficient",
+          "Both together are needed",
+          "Even together they are insufficient"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Overall P−Q is the sum of the shift differences. With both statements that sum is 40−32 = 8. Either shift alone leaves the other difference unknown.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-challenge-1-8",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Venn diagrams",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "Among 120 staff, 63 took A, 49 took B and 42 took C. Pair overlaps including the triple are 28 for A/B, 21 for B/C and 18 for A/C. Fifteen took none. How many took exactly two?",
+        "options": [
+          "13",
+          "18",
+          "31",
+          "49"
+        ],
+        "correctAnswer": 0,
+        "explanation": "The union is 105; adding singles and subtracting pairs gives 87, so the triple is 18. Exactly two is 67−3×18 = 13.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-challenge-1-9",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Percentage point change",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "In which month did the percentage of delayed trips fall most relative to the immediately preceding month, measured in percentage points?",
+        "options": [
+          "February",
+          "March",
+          "April",
+          "May"
+        ],
+        "correctAnswer": 2,
+        "explanation": "The delay rates are 15%, 10%, 12%, 6% and 5%. April’s reduction of 6 percentage points is largest.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Month | Trips | Delays\\nJanuary | 180 | 27\\nFebruary | 240 | 24\\nMarch | 300 | 36\\nApril | 350 | 21\\nMay | 440 | 22"
+      },
+      {
+        "id": "rrb-challenge-1-10",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Scatter plots",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "For the six observations shown, remove the point with highest traffic. What is the median delay of the remaining observations?",
+        "options": [
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+        "correctAnswer": 2,
+        "explanation": "The largest traffic value 36 has delay 15. The others sorted are 5, 6, 8, 9, 12, with median 8.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "figure": {
+          "type": "scatter",
+          "labels": [
+            "10",
+            "15",
+            "20",
+            "25",
+            "30",
+            "36"
+          ],
+          "values": [
+            9,
+            5,
+            12,
+            6,
+            8,
+            15
+          ]
+        }
+      },
+      {
+        "id": "rrb-challenge-1-20",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Weighted averages from distributions",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "The delay distribution below excludes ten late-arriving reports. When all reports are included, the mean delay is 3.2 minutes. What is the mean delay among the ten late reports?",
+        "options": ["3.6 min", "4.0 min", "4.4 min", "4.8 min"],
+        "correctAnswer": 2,
+        "explanation": "The 50 included reports total 148 delay minutes. All 60 total 3.2 × 60 = 192 minutes. The omitted ten therefore total 44 minutes and average 4.4.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Delay (minutes) | Reports\n0 | 12\n2 | 14\n4 | 15\n6 | 6\n8 | 3"
+      },
+      {
+        "id": "rrb-challenge-1-11",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Inference and causal reasoning",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "Which new fact most directly weakens the conclusion that the display itself reduced missed transfers?",
+        "options": [
+          "Passengers generally understand the display",
+          "The comparison stations started unusually low",
+          "The upgraded stations also lengthened connection gaps on the same day",
+          "The display used two smaller screens at each station"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Longer connection gaps are a separate plausible cause that changed exactly where and when the display changed.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "passage": "After an electronic display was introduced at several stations, missed transfers fell at those stations. During the same period, missed transfers were stable at stations without the display. The authority concluded that the display itself caused the reduction."
+      },
+      {
+        "id": "rrb-challenge-1-12",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Syllogisms",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "Every express service uses a numbered platform. No maintenance service uses a numbered platform. Some booked services are maintenance services. Which conclusion must follow?",
+        "options": [
+          "All booked services are express services",
+          "Some booked services are not express services",
+          "Some numbered-platform services are maintenance services",
+          "No booked service uses a numbered platform"
+        ],
+        "correctAnswer": 1,
+        "explanation": "The booked maintenance services cannot use numbered platforms; hence none of those services is express. Other booked services are unrestricted.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-challenge-1-13",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Clock angles",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "At what time between 7:00 and 8:00 are the two clock hands exactly opposite?",
+        "options": [
+          "7:05 5/11",
+          "7:10 10/11",
+          "7:21 9/11",
+          "7:32 8/11"
+        ],
+        "correctAnswer": 0,
+        "explanation": "At 7:00 the hour hand is 210° ahead. The minute hand gains 5.5° per minute. Reducing the lead by 30° takes 60/11 min = 5 5/11 min.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-challenge-1-14",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Binary logic",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "Exactly one of A, B and C moved a token. A says “B moved it.” B says “C moved it.” C says “B’s statement is false.” Exactly two statements are true. Who moved it?",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "Cannot be determined"
+        ],
+        "correctAnswer": 1,
+        "explanation": "B and C make complementary claims, so exactly one of them is true. To have two true statements, A is also true and B moved it.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-challenge-1-15",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Letter series",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "Complete the series AZ, CX, FU, JQ, OL, …",
+        "options": [
+          "TI",
+          "UF",
+          "UG",
+          "VH"
+        ],
+        "correctAnswer": 1,
+        "explanation": "First-letter positions increase by 2,3,4,5, then 6 to U. Second-letter positions decrease by 2,3,4,5, then 6 to F.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-challenge-1-16",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Linear arrangements",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "Six files A–F are arranged left to right. C is immediately left of F. Exactly one file sits between C and D. A is right of F and immediately left of E. B is left of D. Which file is fourth?",
+        "options": [
+          "A",
+          "C",
+          "F",
+          "D"
+        ],
+        "correctAnswer": 3,
+        "explanation": "C must be at most third to leave space for F and A–E. If D is right of C, the only possible A–E pair is at slots 5–6 with C at slot 2, leaving B at slot 1 and D fourth. If D is left of C, it would be first, leaving no slot for B.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-challenge-1-17",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Numeric coding",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "A three-letter word is coded by shifting its first, second and third letters forward by 1, 3 and 5 places respectively, wrapping past Z, then reversing the result. Which word is coded as “CCB”?",
+        "options": [
+          "AZX",
+          "AZZ",
+          "AXX",
+          "BZX"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Reverse to BCC. Shift back by 1, 3 and 5 to get A, Z and X.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-challenge-1-18",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Number series",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "Find the next term: 3, 9, 8, 24, 21, 63, 58, …",
+        "options": [
+          "116",
+          "167",
+          "174",
+          "189"
+        ],
+        "correctAnswer": 2,
+        "explanation": "The operations alternate multiplying by 3 and subtracting successive odds 1, 3 and 5. The next term is 58×3 = 174.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      }
+    ]
+  }
+]

@@ -1,12 +1,14 @@
 import {EXAMS} from '../config/exams.js';
 import {validatePaper} from './examEngine.js';
+import {validCbatResult} from './cbat.js';
 const plain=v=>!!v&&typeof v==='object'&&!Array.isArray(v);
-const base=['gate_custom_questions','gate_bookmarks','gate_syllabus_progress','gate_custom_formulas','gate_unlocked_badges','gate_study_time','gate_community_posts','gate_attempts','exam-results','exam-active','last-exam'];
+const base=['gate_custom_questions','gate_bookmarks','gate_syllabus_progress','gate_custom_formulas','gate_unlocked_badges','gate_study_time','gate_community_posts','gate_attempts','exam-results','exam-active','last-exam','rrb-cbat-practice'];
 const perExam=['exam-progress','exam-note-progress','exam-bookmarks','exam-target','exam-papers'];
 export const backupNames=[...base,...perExam.flatMap(kind=>Object.keys(EXAMS).map(id=>`${kind}/${id}`))];
 export function backupKey(name,uid){if(!backupNames.includes(name))throw Error('Unknown backup field');const [kind,id]=name.split('/');return `${kind}:${uid}${id?':'+id:''}`;}
 function valid(name,value){
  if(name==='last-exam')return typeof value==='string'&&!!EXAMS[value];
+ if(name==='rrb-cbat-practice')return plain(value)&&Object.entries(value).every(([id,result])=>validCbatResult(id,result));
  if(name.startsWith('exam-target/'))return typeof value==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(value)&&Number.isFinite(Date.parse(value));
  if(name==='exam-active')return plain(value)&&plain(value.pending)&&!!EXAMS[value.pending.examId]&&Number.isFinite(value.deadline)&&Number.isFinite(value.startedAt)&&!validatePaper(value.pending.examId,value.pending.questions,value.pending.full).length;
  if(['gate_syllabus_progress','gate_study_time'].includes(name))return plain(value)&&Object.entries(value).every(([k,v])=>!['__proto__','constructor','prototype'].includes(k)&&(name==='gate_study_time'?Number.isFinite(v)&&v>=0:typeof v==='boolean'));

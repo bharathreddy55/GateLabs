@@ -47,6 +47,7 @@ const routes = {
   '/group2/mains': { load:lazy(()=>import('./pages/ExamPrep.js'),'Group2MainsPaper1'), requiresAuth: true, name: 'group2' },
   '/group2/mains/paper-2': { load:lazy(()=>import('./pages/ExamPrep.js'),'Group2MainsPaper2'), requiresAuth: true, name: 'group2' },
   '/rrb-station-master': { load:lazy(()=>import('./pages/ExamPrep.js'),'StationMaster'), requiresAuth: true, name: 'rrb-station-master' },
+  '/rrb-station-master/cbat': { load:lazy(()=>import('./pages/RrbCbat.js'),'RrbCbat'), requiresAuth: true, name: 'rrb-station-master' },
   '/sbi-clerk': { load:lazy(()=>import('./pages/ExamPrep.js'),'UnifiedSbi'), requiresAuth: true, name: 'sbi-clerk' },
   '/analytics': { load:lazy(()=>import('./pages/Analytics.js'),'Analytics'), requiresAuth: true, name: 'analytics' }
 };

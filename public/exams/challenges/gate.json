@@ -1,0 +1,400 @@
+[
+  {
+    "title": "GATE CS · Challenge drill",
+    "category": "Challenge drill",
+    "provenance": "Original GateLabs questions informed by the published exam pattern. Pattern reference: https://gate2027.iitm.ac.in/question_paper_pattern",
+    "note": "Original one- and two-mark MCQ, MSQ and NAT items drawn from the 2027 GATE CS syllabus. The CBT uses the official marking rules. This drill targets reasoning and multi-step application.",
+    "full": false,
+    "questions": [
+      {
+        "id": "gate-challenge-1-1",
+        "section": "General Aptitude",
+        "subject": "General Aptitude",
+        "topic": "Weighted mixtures",
+        "type": "MCQ",
+        "marks": 2,
+        "question": "A vessel contains 60 litres of a 40% solution. Twelve litres are withdrawn and replaced with water. A further 12 litres of the resulting well-mixed solution are withdrawn and replaced with a 50% solution. What percentage of the final mixture is solute?",
+        "options": [
+          "32.0%",
+          "35.6%",
+          "37.6%",
+          "42.0%"
+        ],
+        "correctAnswer": 1,
+        "explanation": "After the first replacement there are 19.2 litres of solute. The second withdrawal leaves 15.36 litres and the replacement adds 6 litres, giving 21.36/60 = 35.6%.",
+        "source": "https://gate2027.iitm.ac.in/question_paper_pattern"
+      },
+      {
+        "id": "gate-challenge-1-2",
+        "section": "General Aptitude",
+        "subject": "General Aptitude",
+        "topic": "Data interpretation",
+        "type": "MCQ",
+        "marks": 2,
+        "question": "Unit X delivered 40% of a company’s output in Year 1. X output then grew by 20% while the rest grew by 5%. What share of Year 2 output came from X, rounded to one decimal place?",
+        "options": [
+          "42.4%",
+          "43.2%",
+          "48.0%",
+          "45.7%"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Normalise Year 1 output to 100. Year 2 output is 48 from X and 63 from the rest. The share is 48/111 ≈ 43.2%.",
+        "source": "https://gate2027.iitm.ac.in/question_paper_pattern"
+      },
+      {
+        "id": "gate-challenge-1-3",
+        "section": "General Aptitude",
+        "subject": "General Aptitude",
+        "topic": "Argument structure",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "A panel concluded that an applicant who passed the interview or the skills test could be considered only after document verification. Ila passed the skills test but was not considered. What follows from these facts alone?",
+        "options": [
+          "Her documents were not verified",
+          "She failed the interview",
+          "She must be considered upon verification",
+          "Her verification status cannot be determined"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Verification is a necessary condition for consideration. Nonconsideration leaves open whether verification occurred. Passing one test does not determine the result of the other.",
+        "source": "https://gate2027.iitm.ac.in/question_paper_pattern"
+      },
+      {
+        "id": "gate-challenge-1-4",
+        "section": "General Aptitude",
+        "subject": "General Aptitude",
+        "topic": "Counting and arrangements",
+        "type": "MCQ",
+        "marks": 2,
+        "question": "Five distinct presentations A, B, C, D and E are scheduled in a row. A must precede C, B must precede D, and A and C must not be adjacent. How many schedules are possible?",
+        "options": [
+          "12",
+          "18",
+          "24",
+          "30"
+        ],
+        "correctAnswer": 1,
+        "explanation": "There are 5!/4 = 30 orders respecting the two independent precedences. Making AC one consecutive block leaves 4!/2 = 12 with B before D. The answer is 18.",
+        "source": "https://gate2027.iitm.ac.in/question_paper_pattern"
+      },
+      {
+        "id": "gate-challenge-1-5",
+        "section": "Engineering Mathematics",
+        "subject": "Engineering Mathematics",
+        "topic": "Conditional probability",
+        "type": "MCQ",
+        "marks": 2,
+        "question": "A jointly calibrated detector independently flags each faulty item with probability 3/4 and each sound item with probability 1/4. Two items are drawn independently from a population in which each item is faulty with probability 1/4. Given that both are flagged, what is the probability exactly one is faulty?",
+        "options": [
+          "3/8",
+          "1/2",
+          "9/16",
+          "5/8"
+        ],
+        "correctAnswer": 1,
+        "explanation": "For each flagged item, Bayes gives (3/4 × 1/4)/(3/4 × 1/4 + 1/4 × 3/4) = 1/2. The posteriors remain independent, so the probability of exactly one is 2×1/2×1/2.",
+        "source": "https://gate2027.iitm.ac.in/question_paper_pattern"
+      },
+      {
+        "id": "gate-challenge-1-6",
+        "section": "Engineering Mathematics",
+        "subject": "Engineering Mathematics",
+        "topic": "Graph theory and bipartition",
+        "type": "MSQ",
+        "marks": 2,
+        "question": "A simple connected bipartite graph has parts of sizes 4 and 6. Every vertex in the first part has degree 3. Which statements must hold?",
+        "options": [
+          "The graph contains a cycle",
+          "Exactly three vertices of the second part have degree 2",
+          "There is a vertex of degree at least 2 in the second part",
+          "The graph has exactly 10 edges"
+        ],
+        "correctOptions": [
+          0,
+          2
+        ],
+        "explanation": "Summing degrees on the first part gives 12 edges. A tree on 10 vertices has 9 edges, so there is a cycle. The average degree in the second part is 2. For example, a 12-edge graph with all six vertices of degree 2 can be made by subdividing each edge of K₄.",
+        "source": "https://gate2027.iitm.ac.in/question_paper_pattern"
+      },
+      {
+        "id": "gate-challenge-1-7",
+        "section": "Engineering Mathematics",
+        "subject": "Engineering Mathematics",
+        "topic": "Linear algebra",
+        "type": "NAT",
+        "marks": 2,
+        "question": "A is a real symmetric 3×3 matrix with A² = 4A and trace(A) = 8. What is the rank of A?",
+        "correctNat": 2,
+        "explanation": "All eigenvalues are 0 or 4 by the polynomial identity. The trace forces two eigenvalues equal to 4. Symmetry gives diagonalizability, so rank is 2.",
+        "source": "https://gate2027.iitm.ac.in/question_paper_pattern"
+      },
+      {
+        "id": "gate-challenge-1-8",
+        "section": "Engineering Mathematics",
+        "subject": "Engineering Mathematics",
+        "topic": "Counting surjections",
+        "type": "NAT",
+        "marks": 2,
+        "question": "How many functions from a five-element labelled set onto a three-element labelled set have exactly one preimage of size 3?",
+        "correctNat": 60,
+        "explanation": "Choose the image with three preimages in 3 ways and choose those preimages in C(5,3)=10 ways. The two remaining domain elements go bijectively to the remaining labels in 2 ways.",
+        "source": "https://gate2027.iitm.ac.in/question_paper_pattern"
+      },
+      {
+        "id": "gate-challenge-1-9",
+        "section": "Computer Science",
+        "subject": "Computer Science",
+        "topic": "Algorithms · recurrence and tight bounds",
+        "type": "MCQ",
+        "marks": 2,
+        "question": "For n a power of two, T(n)=2T(n/2)+n log₂ n with T(1)=1. Which expressions are asymptotically tight?",
+        "options": [
+          "Θ(n log n)",
+          "Θ(n log² n)",
+          "Θ(n²)",
+          "Θ(n(log n)³)"
+        ],
+        "correctAnswer": 1,
+        "explanation": "At depth k the nonrecursive cost is n(log₂ n−k). Summing the decreasing arithmetic sequence of costs and adding n leaves gives Θ(n log² n).",
+        "source": "https://gate2027.iitm.ac.in/question_paper_pattern"
+      },
+      {
+        "id": "gate-challenge-1-10",
+        "section": "Computer Science",
+        "subject": "Computer Science",
+        "topic": "Algorithms · shortest paths",
+        "type": "NAT",
+        "marks": 2,
+        "question": "A directed weighted graph has edges S→A 6, S→B 2, B→A 3, B→C 6, A→C −4, C→T 4 and A→T 8. In Bellman–Ford with synchronous rounds, a round uses only distances from the end of the preceding round. After how many rounds does the shortest distance to T first appear?",
+        "correctNat": 4,
+        "explanation": "The cheapest route S→B→A→C→T costs 5 and uses four edges. The best route with at most three edges costs 6 via S→A→C→T. The synchronous method reaches paths of up to r edges in round r.",
+        "source": "https://gate2027.iitm.ac.in/question_paper_pattern"
+      },
+      {
+        "id": "gate-challenge-1-11",
+        "section": "Computer Science",
+        "subject": "Computer Science",
+        "topic": "Minimum spanning tree",
+        "type": "MSQ",
+        "marks": 2,
+        "question": "For a connected undirected weighted graph, which statements are true even when edge weights can tie?",
+        "options": [
+          "A unique minimum-weight edge crossing a cut belongs to every MST",
+          "A unique maximum-weight edge on a cycle belongs to no MST",
+          "Any globally lightest edge belongs to every MST",
+          "Adding the same constant to every edge weight preserves the set of MSTs"
+        ],
+        "correctOptions": [
+          0,
+          1,
+          3
+        ],
+        "explanation": "The cut and cycle exchange arguments yield the first two claims. A triangle with all edges tied refutes the third. All spanning trees contain the same number of edges, so their relative costs are preserved by the same per-edge shift.",
+        "source": "https://gate2027.iitm.ac.in/question_paper_pattern"
+      },
+      {
+        "id": "gate-challenge-1-12",
+        "section": "Computer Science",
+        "subject": "Computer Science",
+        "topic": "Programming · recursive call counts",
+        "type": "NAT",
+        "marks": 2,
+        "question": "The function f(n) returns 1 if n≤1. Otherwise it returns f(n−1)+f(n−2), with no memoisation. How many invocations of f occur during evaluation of f(6), counting the initial invocation?",
+        "correctNat": 25,
+        "explanation": "The call counts satisfy C(0)=C(1)=1 and C(n)=1+C(n−1)+C(n−2). Then C(2) through C(6) are 3, 5, 9, 15 and 25.",
+        "source": "https://gate2027.iitm.ac.in/question_paper_pattern"
+      },
+      {
+        "id": "gate-challenge-1-13",
+        "section": "Computer Science",
+        "subject": "Computer Science",
+        "topic": "Data structures · AVL insertion",
+        "type": "MCQ",
+        "marks": 2,
+        "question": "Insert keys 40, 20, 70, 10, 30, 25 in this order into an initially empty AVL tree. What is the root key after all rebalancing?",
+        "options": [
+          "20",
+          "25",
+          "30",
+          "40"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Insertion of 25 causes a left-right imbalance at 40. Rotate left at 20 and then right at 40. The new root is 30.",
+        "source": "https://gate2027.iitm.ac.in/question_paper_pattern"
+      },
+      {
+        "id": "gate-challenge-1-14",
+        "section": "Computer Science",
+        "subject": "Computer Science",
+        "topic": "Computer organisation · cache mapping",
+        "type": "NAT",
+        "marks": 2,
+        "question": "A byte-addressed cache is 2-way set-associative with capacity 256 bytes, block size 16 bytes and LRU replacement. It starts empty. The only accesses, in order, are to byte addresses 0, 128, 8, 256, 136, 16, 264, 136. How many accesses miss?",
+        "correctNat": 5,
+        "explanation": "There are 8 sets. Blocks 0, 8 and 16 map to set 0. Misses occur at 0, 128, 256 (evicts block 8), 136 (evicts block 0) and 16 (block 1 in set 1). The other accesses hit.",
+        "source": "https://gate2027.iitm.ac.in/question_paper_pattern"
+      },
+      {
+        "id": "gate-challenge-1-15",
+        "section": "Computer Science",
+        "subject": "Computer Science",
+        "topic": "Digital logic · signed overflow",
+        "type": "MSQ",
+        "marks": 2,
+        "question": "Eight-bit two’s-complement addition is performed with the carry out discarded. Which pairs of signed operands cause overflow?",
+        "options": [
+          "90 and 45",
+          "−90 and −50",
+          "−120 and 100",
+          "70 and −80"
+        ],
+        "correctOptions": [
+          0,
+          1
+        ],
+        "explanation": "The representable range is −128 through 127. The sums are 135, −140, −20 and −10. The first two lie outside the range.",
+        "source": "https://gate2027.iitm.ac.in/question_paper_pattern"
+      },
+      {
+        "id": "gate-challenge-1-16",
+        "section": "Computer Science",
+        "subject": "Computer Science",
+        "topic": "Operating systems · page replacement",
+        "type": "NAT",
+        "marks": 2,
+        "question": "With three initially empty page frames and true LRU replacement, how many page faults does the sequence 1, 2, 3, 2, 4, 1, 2, 5, 2, 4 incur?",
+        "correctNat": 7,
+        "explanation": "Faults occur at positions 1, 2, 3, 5, 6, 8 and 10. Page 2 remains in memory at position 7. Page 5 then evicts page 4, so the last reference faults.",
+        "source": "https://gate2027.iitm.ac.in/question_paper_pattern"
+      },
+      {
+        "id": "gate-challenge-1-17",
+        "section": "Computer Science",
+        "subject": "Computer Science",
+        "topic": "Operating systems · scheduling",
+        "type": "NAT",
+        "marks": 2,
+        "question": "Three jobs A, B, C arrive at times 0, 1, 3 and need 7, 4, 1 time units respectively. Preemptive shortest-remaining-time scheduling is used, context switches cost zero and there is no I/O. What is A’s waiting time?",
+        "correctNat": 5,
+        "explanation": "A runs from 0 to 1, B from 1 to 3, C from 3 to 4 and B from 4 to 6. A waits from time 1 until time 6, then runs its remaining 6 units.",
+        "source": "https://gate2027.iitm.ac.in/question_paper_pattern"
+      },
+      {
+        "id": "gate-challenge-1-18",
+        "section": "Computer Science",
+        "subject": "Computer Science",
+        "topic": "Databases · keys and dependencies",
+        "type": "MSQ",
+        "marks": 2,
+        "question": "Relation R(A,B,C,D) has only the functional dependencies implied by A→B, B→C and CD→A. Which sets are candidate keys?",
+        "options": [
+          "AD",
+          "BD",
+          "CD",
+          "AB"
+        ],
+        "correctOptions": [
+          0,
+          1,
+          2
+        ],
+        "explanation": "D cannot be derived, so every key includes D. Any one of A, B or C combined with D derives all attributes. AB omits D.",
+        "source": "https://gate2027.iitm.ac.in/question_paper_pattern"
+      },
+      {
+        "id": "gate-challenge-1-19",
+        "section": "Computer Science",
+        "subject": "Computer Science",
+        "topic": "Databases · precedence graphs",
+        "type": "NAT",
+        "marks": 2,
+        "question": "Consider a schedule in which conflicting operations yield exactly the precedence edges T₁→T₃, T₂→T₃ and T₂→T₄. How many serial orders are conflict-equivalent to the schedule?",
+        "correctNat": 5,
+        "explanation": "Start with T₁: T₂ must come next, followed by T₃ and T₄ in either order (2). Start with T₂: the remaining three only require T₁ before T₃ (3). Total 5.",
+        "source": "https://gate2027.iitm.ac.in/question_paper_pattern"
+      },
+      {
+        "id": "gate-challenge-1-20",
+        "section": "Computer Science",
+        "subject": "Computer Science",
+        "topic": "Computer networks · IPv4 longest-prefix matching",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "A router’s routing table has 10.2.0.0/16→A, 10.2.128.0/17→B, 10.2.192.0/18→C and 10.2.224.0/19→D. A packet for 10.2.223.253 takes which route?",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correctAnswer": 2,
+        "explanation": "The /18 prefix covers third octets 192–255. The /19 route starts at 224, so 223 matches /18 as the longest prefix.",
+        "source": "https://gate2027.iitm.ac.in/question_paper_pattern"
+      },
+      {
+        "id": "gate-challenge-1-21",
+        "section": "Computer Science",
+        "subject": "Computer Science",
+        "topic": "Computer networks · sliding window",
+        "type": "NAT",
+        "marks": 2,
+        "question": "A 20 Mb/s point-to-point link carries 1,000-byte data frames. The round-trip propagation delay is 24 ms. ACK transmission and processing times are negligible. ACKs are sent as soon as a full frame arrives. What is the smallest sliding window, in frames, that makes the sender continuously busy?",
+        "correctNat": 61,
+        "explanation": "A frame transmits in 0.4 ms. The first ACK comes back 24.4 ms after the first frame starts. The initial window must cover 24.4/0.4 = 61 transmission slots.",
+        "source": "https://gate2027.iitm.ac.in/question_paper_pattern"
+      },
+      {
+        "id": "gate-challenge-1-22",
+        "section": "Computer Science",
+        "subject": "Computer Science",
+        "topic": "Theory of computation · product automata",
+        "type": "NAT",
+        "marks": 2,
+        "question": "Over {0,1}, L contains precisely the strings with an even number of 0s and a number of 1s divisible by 3. What is the number of states in the minimal complete DFA?",
+        "correctNat": 6,
+        "explanation": "Track the two residues, giving 2×3=6 reachable states. For any pair, a suffix completing one state to (0,0) will fail to complete the other, so all six are distinguishable.",
+        "source": "https://gate2027.iitm.ac.in/question_paper_pattern"
+      },
+      {
+        "id": "gate-challenge-1-23",
+        "section": "Computer Science",
+        "subject": "Computer Science",
+        "topic": "Theory of computation · closure",
+        "type": "MSQ",
+        "marks": 2,
+        "question": "Which languages over {a,b,c} are context-free?",
+        "options": [
+          "{aⁱbʲcᵏ : i = j or j = k}",
+          "{aⁿbⁿcⁿ : n ≥ 0}",
+          "{aⁱbʲcᵏ : i = j and k is even}",
+          "{aⁱbʲcᵏ : i = j and j = k}"
+        ],
+        "correctOptions": [
+          0,
+          2
+        ],
+        "explanation": "A union of the two equality languages in the first option is context-free. The third follows by concatenating aⁿbⁿ with an even-length block of c’s. The second and fourth are the same non-context-free language.",
+        "source": "https://gate2027.iitm.ac.in/question_paper_pattern"
+      },
+      {
+        "id": "gate-challenge-1-24",
+        "section": "Computer Science",
+        "subject": "Computer Science",
+        "topic": "Compilers · FIRST and FOLLOW",
+        "type": "MCQ",
+        "marks": 2,
+        "question": "Consider S → AB, A → aA | ε, B → bB | c. Which statement is correct for predictive parsing?",
+        "options": [
+          "FIRST(S) = {a,b,c} and FOLLOW(A) = {b,c}",
+          "FIRST(S) = {a,ε} and FOLLOW(A) = {b,c,$}",
+          "FIRST(S) = {b,c} and FOLLOW(A) = {$}",
+          "FIRST(S) = {a,b,c,ε} and FOLLOW(A) = {c}"
+        ],
+        "correctAnswer": 0,
+        "explanation": "A is nullable, so both its terminal a and FIRST(B)={b,c} can begin S. B is not nullable; therefore FOLLOW(A) receives b and c and does not receive the end marker.",
+        "source": "https://gate2027.iitm.ac.in/question_paper_pattern"
+      }
+    ]
+  }
+]

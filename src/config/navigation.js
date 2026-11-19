@@ -2,7 +2,7 @@ export const EXAM_CATALOG = [
   {id:'gate',route:'gate',name:'GATE CS & IT',short:'GATE',category:'Engineering',description:'Computer science, mathematics and general aptitude.',symbol:'⌘',color:'#4563d8'},
   {id:'tet',route:'tet-exams',name:'AP TET Paper 1A',short:'AP TET',category:'Teaching',description:'Child development, languages, mathematics and environment.',symbol:'Aa',color:'#087f78'},
   {id:'group2',route:'group2',name:'APPSC Group 2',short:'Group 2',category:'State services',description:'Prelims and Mains preparation for Andhra Pradesh Group II services.',symbol:'Ⅱ',color:'#9b642b'},
-  {id:'rrb',route:'rrb-station-master',name:'RRB Station Master',short:'Station Master',category:'Railways',description:'Science, mathematics, data analysis and reasoning.',symbol:'↔',color:'#8759bd'},
+  {id:'rrb',route:'rrb-station-master',name:'RRB Station Master',short:'Station Master',category:'Railways',description:'CBT syllabus and mock tests, followed by CBAT aptitude practice.',symbol:'↔',color:'#8759bd'},
   {id:'sbi',route:'sbi-clerk',name:'SBI Clerk Prelims',short:'SBI Clerk',category:'Banking',description:'English, numerical ability and reasoning with section timers.',symbol:'₹',color:'#3470a3'}
 ];
 export const NAV_GROUPS = [

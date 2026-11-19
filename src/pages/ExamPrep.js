@@ -3,6 +3,7 @@ import {getAttemptRecords} from '../utils/attemptRepository.js';
 import { auth } from '../config/firebase';
 import { EXAMS } from '../config/exams.js';
 import { GROUP2_MAINS, group2StageNav } from '../config/group2Mains.js';
+import { rrbStageNav } from '../config/rrbCbat.js';
 import { EXAM_CATALOG, icon } from '../config/navigation.js';
 import { countdownCard, bindCountdowns, stopCountdowns } from '../components/ExamCountdown.js';
 import { examNotes, notesPanel, bindExamNotes } from '../components/ExamNotes.js';
@@ -20,6 +21,12 @@ const textPapers = {
   ]
 };
 const tabs=[['overview','Overview'],['mocks','Mock tests'],['syllabus','Syllabus'],['notes','Detailed notes'],['papers','Previous papers'],['progress','My progress']];
+const challengeExams = new Set(['rrb','group2','group2-mains-1','group2-mains-2','gate']);
+async function loadPaperBank(url) {
+  const response = await fetch(url);
+  if (!response.ok) throw Error('Paper library could not be loaded. Please try again.');
+  return response.json();
+}
 const fallbackTopics={
   'Child Development':'Development and learning; individual differences; inclusive education; pedagogy and assessment',
   'Language I':'Language comprehension; vocabulary and grammar; language development and teaching',
@@ -51,8 +58,13 @@ export function createExamPrep(examId){
         try{const corrected=corrections.find(c=>c.file===p.file+'.txt');if(corrected)return {...p,...corrected,category:['2025 memory-based','Practice reconstruction'].includes(p.category)?'Practice reconstruction':p.category};const res=await fetch(`/pyqs/${p.file}.txt`);if(!res.ok)throw Error('Paper could not be loaded');return {...p,provenance:p.category,questions:parseExamText(await res.text(),examId)};}
         catch(error){return {...p,questions:[],error:error.message};}
       }));
-    }else if(examId!=='gate'){
-      const res=await fetch(`/exams/${examId}.json`);if(!res.ok)throw Error('Paper library could not be loaded. Please try again.');this.papers=await res.json();
+    }else{
+      const [baseBank, challengeBank] = await Promise.allSettled([
+        examId==='gate' ? [] : loadPaperBank(`/exams/${examId}.json`),
+        challengeExams.has(examId) ? loadPaperBank(`/exams/challenges/${examId}.json`) : []
+      ]);
+      this.papers = [...(baseBank.value ?? []), ...(challengeBank.value ?? [])];
+      if (baseBank.reason || challengeBank.reason) throw baseBank.reason || challengeBank.reason;
     }
     this.loaded=true;
   },
@@ -72,6 +84,7 @@ export function createExamPrep(examId){
     return `<section id="prep-${examId}" class="workspace-page exam-workspace">
       <header class="exam-page-heading"><div class="exam-heading-main"><a href="#/exams" class="back-link">← All exams</a><div class="exam-heading-title"><span class="exam-symbol" style="--exam-color:${meta.color}">${meta.symbol}</span><div><span class="eyebrow">${meta.category} · ${h(e.version)}</span><h1>${h(meta.name)}</h1></div></div><p>${h(meta.description)}</p></div><button class="ui-button primary" data-open-tab="mocks">Find a mock test ${icon('arrow')}</button></header>
       ${group2StageNav(examId)}
+      ${examId==='rrb'?rrbStageNav():''}
       ${countdownCard(mains?'group2-mains-1':examId)}
       <div class="prep-tab-strip"><nav role="tablist" class="prep-tabs" aria-label="${h(meta.name)} sections">${tabs.map(([key,label])=>`<button role="tab" id="tab-${examId}-${key}" aria-controls="panel-${examId}-${key}" aria-selected="${this.activeTab===key}" tabindex="${this.activeTab===key?0:-1}" data-prep-tab="${key}" aria-current="${this.activeTab===key?'page':'false'}" class="${this.activeTab===key?'active':''}">${label}</button>`).join('')}</nav><button class="tab-continuation" data-tabs-next aria-label="Next exam section">→</button></div>
       <div class="prep-panel" ${this.activeTab==='overview'?'':'hidden'} role="tabpanel" id="panel-${examId}-overview" aria-labelledby="tab-${examId}-overview" data-panel="overview">
@@ -86,14 +99,22 @@ export function createExamPrep(examId){
   },
   paperView(p){
     let view=paperViews.get(p);
-    if(!view||view.examId!==examId||view.questions!==p.questions){view={examId,questions:p.questions,errors:validatePaper(examId,p.questions,p.full!==false),coverage:EXAMS[examId].sections.map(([name])=>name+': '+p.questions.filter(q=>(q.section||q.subject)===name).length).join(' · ')};paperViews.set(p,view);}
+    if(!view||view.examId!==examId||view.questions!==p.questions){
+      const names = EXAMS[examId].sections.length ? EXAMS[examId].sections.map(([name])=>name)
+        : [...new Set(p.questions.map(q=>q.section).filter(Boolean))];
+      view = {
+        examId, questions:p.questions, errors:validatePaper(examId,p.questions,p.full!==false), names,
+        coverage:names.map(name=>name+': '+p.questions.filter(q=>(q.section||q.subject)===name).length).join(' · ')
+      };
+      paperViews.set(p,view);
+    }
     return view;
   },
   paperFilters(){return `<div class="paper-filters"><label>Paper type<select data-paper-filter="type"><option value="">All types</option>${[...new Set(this.available.map(p=>p.category||'Original model'))].map(type=>`<option>${h(type)}</option>`).join('')}</select></label><label>Status<select data-paper-filter="status"><option value="">All statuses</option><option value="ready">Ready</option><option value="unavailable">Needs correction</option></select></label><span data-paper-filter-count role="status"></span></div>`;},
   paperCard(p){
-    const i=this.available.indexOf(p),{errors,coverage}=this.paperView(p),e=EXAMS[examId];
+    const i=this.available.indexOf(p),{errors,coverage,names}=this.paperView(p),e=EXAMS[examId];
     const full=p.full!==false, duration=full?e.minutes:Math.max(1,Math.ceil(p.questions.length*e.minutes/e.count));
-    return `<article class="surface paper-card" data-library-card data-paper-type="${h(p.category||'Original model')}" data-paper-status="${errors.length?'unavailable':'ready'}"><div class="paper-card-top"><span class="subtle-tag">${h(p.category||'Original model')}</span><span class="paper-count">${p.questions.length} Q · ${duration} min</span></div><h3>${h(p.title)}</h3><p class="muted">${errors.length?'Needs correction':'Ready'} · Difficulty: not calibrated</p><p class="muted">${h(coverage)}</p><details class="paper-provenance"><summary>Source & notes</summary><p>${h(p.note||p.provenance||'Exam-pattern practice with answer review.')}</p></details>${errors.length?`<details class="paper-issue"><summary>Unavailable · needs content correction</summary><p>${h(p.error||errors.slice(0,2).join(' · '))}</p></details>`:''}<div class="paper-actions"><button class="ui-button primary" data-paper="${i}" ${errors.length?'disabled':''}>${full?'Start full mock':'Start CBT drill'} ${icon('arrow')}</button><label class="drill-picker"><span>Or practise a section</span><select data-section="${i}" ${errors.length?'disabled':''}><option value="">Choose section</option>${e.sections.filter(([s])=>p.questions.some(q=>q.section===s)).map(([s])=>`<option>${h(s)}</option>`).join('')}</select></label></div></article>`;
+    return `<article class="surface paper-card" data-library-card data-paper-type="${h(p.category||'Original model')}" data-paper-status="${errors.length?'unavailable':'ready'}"><div class="paper-card-top"><span class="subtle-tag">${h(p.category||'Original model')}</span><span class="paper-count">${p.questions.length} Q · ${duration} min</span></div><h3>${h(p.title)}</h3><p class="muted">${errors.length?'Needs correction':'Ready'} · ${p.category==='Challenge drill'?'Advanced practice':'Difficulty: not calibrated'}</p><p class="muted">${h(coverage)}</p><details class="paper-provenance"><summary>Source & notes</summary><p>${h(p.note||p.provenance||'Exam-pattern practice with answer review.')}</p></details>${errors.length?`<details class="paper-issue"><summary>Unavailable · needs content correction</summary><p>${h(p.error||errors.slice(0,2).join(' · '))}</p></details>`:''}<div class="paper-actions"><button class="ui-button primary" data-paper="${i}" ${errors.length?'disabled':''}>${full?'Start full mock':'Start CBT drill'} ${icon('arrow')}</button><label class="drill-picker"><span>Or practise a section</span><select data-section="${i}" ${errors.length?'disabled':''}><option value="">Choose section</option>${names.filter(s=>p.questions.some(q=>q.section===s)).map(s=>`<option>${h(s)}</option>`).join('')}</select></label></div></article>`;
   },
   importPanel(){return `<details class="surface import-panel"><summary>Add your own paper <span>Advanced</span></summary><p>Import a reviewed JSON paper using the <a href="/exams/group2.json" target="_blank" rel="noopener">example format</a>. Required: title, provenance, questions with stable IDs, section, topic, options, answer key, marks, explanation and source.</p><label>Choose JSON file<input type="file" accept="application/json,.json" id="import-${examId}"></label><p id="import-status" role="status"></p></details>`;},
   weakTopics(){const topics=Object.create(null);this.attempts.forEach(a=>(a.responses||[]).forEach(r=>{const t=r.topic||r.section||r.subject;topics[t]??={correct:0,total:0};topics[t].total++;if(r.status==='correct')topics[t].correct++;}));return Object.entries(topics).sort((a,b)=>a[1].correct/a[1].total-b[1].correct/b[1].total).slice(0,5).map(([topic,v])=>`<div class="topic-score"><span>${h(topic)}</span><strong>${v.correct}/${v.total}</strong></div>`).join('')||'<p class="muted">Topic results will appear after your first test.</p>';},

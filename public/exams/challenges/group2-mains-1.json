@@ -1,0 +1,263 @@
+[
+  {
+    "title": "Group 2 Mains Paper I · Challenge drill",
+    "category": "Challenge drill",
+    "provenance": "Original GateLabs questions informed by the published exam pattern. Pattern reference: https://portal-psc.ap.gov.in/HomePages/KeysToPapers",
+    "note": "Original Andhra history and constitutional questions modelled on the statement sets and close alternatives used in APPSC papers.",
+    "full": false,
+    "questions": [
+      {
+        "id": "group2-mains-1-challenge-1-1",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "subject": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Dynasties and historical geography",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "Consider four pairs of historical centres and dynasties. I. Vijayapuri — Ikshvakus. II. Vengi — Eastern Chalukyas. III. Orugallu — Kakatiyas. IV. Penukonda — initial capital of the Sangama rulers. Which pairs are correct?",
+        "options": [
+          "I and II only",
+          "I, II and III only",
+          "II, III and IV only",
+          "I, II, III and IV"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Vijayapuri, Vengi and Orugallu are correctly associated. The Sangamas initially ruled from Vijayanagara. Penukonda became important as a later imperial seat.",
+        "source": "https://portal-psc.ap.gov.in/HomePages/KeysToPapers"
+      },
+      {
+        "id": "group2-mains-1-challenge-1-2",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "subject": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Archaeology and inscriptions",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "A researcher wants evidence linking a royal title to the name of a Satavahana ruler’s mother and evidence of Buddhist patronage under the Ikshvakus. Which combination best answers those questions?",
+        "options": [
+          "Nasik inscription of Gautami Balashri and Nagarjunakonda donative inscriptions",
+          "Aihole inscription of Ravikirti and Amaravati railings alone",
+          "Hathigumpha inscription and the Allahabad pillar inscription",
+          "Kalinga rock edicts and the copper plates of Rajaraja Narendra"
+        ],
+        "correctAnswer": 0,
+        "explanation": "The Nasik inscription links Gautami Balashri to Gautamiputra Satakarni. Inscribed donations at Nagarjunakonda record Buddhist patronage in the Ikshvaku period.",
+        "source": "https://portal-psc.ap.gov.in/HomePages/KeysToPapers"
+      },
+      {
+        "id": "group2-mains-1-challenge-1-3",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "subject": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Medieval Andhra chronology",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "Put these events in order: I. Establishment of Vijayanagara. II. Fall of Orugallu to the Tughluqs. III. Battle of Talikota. IV. Reign of Rajaraja Narendra.",
+        "options": [
+          "II–IV–I–III",
+          "IV–I–II–III",
+          "IV–II–I–III",
+          "II–I–III–IV"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Rajaraja Narendra ruled in the 11th century. Orugallu fell in 1323, Vijayanagara was established traditionally in 1336, and Talikota took place in 1565.",
+        "source": "https://portal-psc.ap.gov.in/HomePages/KeysToPapers"
+      },
+      {
+        "id": "group2-mains-1-challenge-1-4",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "subject": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Colonial trade and territorial control",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "Which sequence best distinguishes the early European trading presence on the Andhra coast from later territorial control? I. English factory at Masulipatnam. II. French acquisition of the Northern Circars under Bussy. III. Mughal grant of the Northern Circars to the English East India Company.",
+        "options": [
+          "II–I–III",
+          "I–III–II",
+          "III–II–I",
+          "I–II–III"
+        ],
+        "correctAnswer": 3,
+        "explanation": "English commercial presence at Masulipatnam began in the early 17th century. French influence under Bussy came in the mid-18th century, before the imperial grant to the English Company in 1765.",
+        "source": "https://portal-psc.ap.gov.in/HomePages/KeysToPapers"
+      },
+      {
+        "id": "group2-mains-1-challenge-1-5",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "subject": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Andhra movement",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "Which sequence correctly connects the Andhra movement to state formation? I. First Andhra Mahasabha at Bapatla. II. Potti Sriramulu’s fatal fast. III. Formation of Andhra State. IV. Merger of Andhra State and the Telugu-speaking Telangana region of Hyderabad State.",
+        "options": [
+          "I–III–II–IV",
+          "I–II–III–IV",
+          "II–I–III–IV",
+          "I–II–IV–III"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Bapatla was in 1913, the fatal fast was in 1952, Andhra State was created in 1953, and Andhra Pradesh was formed in 1956.",
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf"
+      },
+      {
+        "id": "group2-mains-1-challenge-1-6",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "subject": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Formation and safeguards",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "Consider these statements. I. Andhra State in 1953 had Kurnool as its capital. II. The States Reorganisation Commission recommended immediate merger without any conditions. III. The Gentlemen’s Agreement addressed safeguards for Telangana in a united state. Which are correct?",
+        "options": [
+          "I and II only",
+          "II and III only",
+          "I and III only",
+          "I, II and III"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Kurnool was Andhra State’s capital. The Commission recommended a separate Telangana initially with a possible later merger subject to conditions. The 1956 agreement set out safeguards.",
+        "source": "https://www.mha.gov.in/files/commissions_committees_documents/CCSAP_REPORT_060111.pdf"
+      },
+      {
+        "id": "group2-mains-1-challenge-1-7",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "subject": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Telugu literature",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "Which grouping correctly orders the customary attribution of the Telugu Mahabharata tradition and places a separate work with its author?",
+        "options": [
+          "Nannaya → Tikkana → Errana; Amuktamalyada — Krishnadevaraya",
+          "Tikkana → Nannaya → Errana; Amuktamalyada — Pothana",
+          "Nannaya → Errana → Tikkana; Amuktamalyada — Srinatha",
+          "Errana → Nannaya → Tikkana; Amuktamalyada — Nannaya"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Nannaya began the Telugu rendering, Tikkana later translated much of the text, and Errana completed the remaining portion of the Aranya Parva. Amuktamalyada is attributed to Krishnadevaraya.",
+        "source": "https://portal-psc.ap.gov.in/HomePages/KeysToPapers"
+      },
+      {
+        "id": "group2-mains-1-challenge-1-8",
+        "section": "Indian Constitution",
+        "subject": "Indian Constitution",
+        "topic": "Money Bills and Rajya Sabha",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "A valid Money Bill passed by the Lok Sabha is sent to the Rajya Sabha. The Rajya Sabha sends recommendations within the prescribed time and the Lok Sabha rejects all of them. What follows?",
+        "options": [
+          "A joint sitting decides between the versions",
+          "The Bill lapses because the two Houses disagree",
+          "It is deemed passed in the form passed by the Lok Sabha",
+          "The Rajya Sabha’s recommendations become part of the Bill"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Article 109 allows the Lok Sabha to reject the Rajya Sabha’s recommendations. The Bill is deemed passed in its Lok Sabha form.",
+        "source": "https://www.legislative.gov.in/constitution-of-india/"
+      },
+      {
+        "id": "group2-mains-1-challenge-1-9",
+        "section": "Indian Constitution",
+        "subject": "Indian Constitution",
+        "topic": "Articles 249 and 252",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "Which statements about Parliamentary legislation on a State List subject are correct? I. Article 249 requires a Rajya Sabha resolution supported by at least two-thirds of members present and voting. II. Article 252 starts with resolutions from two or more state legislatures. III. Under Article 252 an adopting state can repeal the resulting Parliamentary law by its own Act.",
+        "options": [
+          "I only",
+          "I and II only",
+          "II and III only",
+          "I, II and III"
+        ],
+        "correctAnswer": 1,
+        "explanation": "I and II identify the distinct triggers. Article 252(2) reserves amendment or repeal of such an Act to Parliament.",
+        "source": "https://www.legislative.gov.in/constitution-of-india/"
+      },
+      {
+        "id": "group2-mains-1-challenge-1-10",
+        "section": "Indian Constitution",
+        "subject": "Indian Constitution",
+        "topic": "Anti-defection and mergers",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "A party has 24 members in a state legislature. Fourteen of them claim the merger exception under the Tenth Schedule. Assuming the merger threshold is the only issue, how many additional members must agree?",
+        "options": [
+          "One",
+          "Two",
+          "Three",
+          "Four"
+        ],
+        "correctAnswer": 1,
+        "explanation": "At least two-thirds of the legislature party must agree. Two-thirds of 24 is 16. Fourteen therefore fall short by two.",
+        "source": "https://www.legislative.gov.in/constitution-of-india/"
+      },
+      {
+        "id": "group2-mains-1-challenge-1-11",
+        "section": "Indian Constitution",
+        "subject": "Indian Constitution",
+        "topic": "Local government elections",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "A panchayat is dissolved with four months left in its ordinary term. Which statement is correct under Article 243E?",
+        "options": [
+          "An election must be held within six months in all circumstances",
+          "An election is mandatory within two months",
+          "The Constitution dispenses with an election solely for the unexpired period in this case",
+          "Any replacement elected to fill the vacancy gets a new five-year term"
+        ],
+        "correctAnswer": 2,
+        "explanation": "The six-month election rule has an exception when the remainder is under six months. A panchayat constituted after premature dissolution ordinarily serves only the remainder.",
+        "source": "https://www.legislative.gov.in/constitution-of-india/"
+      },
+      {
+        "id": "group2-mains-1-challenge-1-12",
+        "section": "Indian Constitution",
+        "subject": "Indian Constitution",
+        "topic": "Federal amendment procedure",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "A constitutional amendment changes how the President of India is elected. Which combination of approvals is required under Article 368?",
+        "options": [
+          "Special majority in each House and ratification by at least half of state legislatures",
+          "Special majority at a joint sitting and consent of every state",
+          "Simple majority in each House and ratification by at least half of the states",
+          "Special majority in each House alone"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Changing Articles 54 or 55 is covered by the ratification proviso. Each House passes the Bill separately by the constitutional special majority, followed by ratification by at least half the states.",
+        "source": "https://www.legislative.gov.in/constitution-of-india/"
+      },
+      {
+        "id": "group2-mains-1-challenge-1-13",
+        "section": "Indian Constitution",
+        "subject": "Indian Constitution",
+        "topic": "Parliamentary financial procedure",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "In Parliament, expenditure charged on the Consolidated Fund of India is placed before the Houses. Which treatment applies?",
+        "options": [
+          "Both Houses vote on it separately",
+          "It can be discussed in either House and is excluded from voting on demands for grants",
+          "Only the Rajya Sabha may discuss it",
+          "The Lok Sabha can vote on it if its approval is requested by the CAG"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Article 113 excludes charged expenditure from voting but permits discussion in either House. Other expenditure goes to the Lok Sabha as demands for grants.",
+        "source": "https://www.legislative.gov.in/constitution-of-india/"
+      },
+      {
+        "id": "group2-mains-1-challenge-1-14",
+        "section": "Indian Constitution",
+        "subject": "Indian Constitution",
+        "topic": "State Legislative Council",
+        "type": "MCQ",
+        "marks": 1,
+        "question": "An ordinary Bill originates in a State Legislative Assembly. The Council rejects it, the Assembly passes it again, and the Council rejects it again. Which result follows under Article 197?",
+        "options": [
+          "The Governor must convene a joint sitting",
+          "The Bill lapses on the second rejection",
+          "The Bill becomes a Money Bill",
+          "The Bill is deemed passed in the form the Assembly passed it the second time, with any Council amendments agreed to by the Assembly"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Article 197 gives the Council a suspensive role on an Assembly-originated ordinary Bill. The second rejection triggers deemed passage in the applicable Assembly form.",
+        "source": "https://www.legislative.gov.in/constitution-of-india/"
+      }
+    ]
+  }
+]

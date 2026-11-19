@@ -161,7 +161,7 @@ try{
  await page.locator('[data-panel=notes] [data-note-id]').first().click();
  await page.getByRole('img',{name:/Visual study guide for National Income/}).waitFor();
  await page.locator('[data-prep-tab=mocks]').click();
- assert.ok(await page.getByRole('button',{name:'Start CBT drill'}).isVisible());
+ assert.ok(await page.getByRole('button',{name:'Start CBT drill'}).first().isVisible());
  await page.getByRole('button',{name:'Start full mock'}).click();
  await page.getByRole('button',{name:'Begin test',exact:true}).click();
  assert.equal(await page.locator('[data-question]').count(),150);
@@ -178,6 +178,57 @@ try{
  await page.locator('#analytics-exam-filter').selectOption('group2');
  await page.locator('#analytics-exam-filter').waitFor();
  assert.equal(await page.locator('#analytics-exam-filter').inputValue(),'group2');
+ for(const exam of ['rrb-station-master','group2','group2/mains','group2/mains/paper-2','gate']){
+   await page.goto(`http://127.0.0.1:3011/#/${exam}?tab=mocks`);
+   const challenge=page.locator('[data-paper-type="Challenge drill"]');
+   await challenge.getByRole('button',{name:'Start CBT drill'}).click();
+   await page.getByRole('button',{name:'Begin test',exact:true}).click();
+   await page.locator('[data-answer="0"]').check();
+   if(exam==='gate'){
+     await page.locator('[data-question="5"]').click();
+     await page.locator('[data-answer="0"]').check();
+     await page.locator('[data-question="6"]').click();
+     await page.locator('#nat-answer').fill('2');
+   }
+   await page.getByRole('button',{name:'Submit test',exact:true}).click();
+   await page.getByRole('heading',{name:'Exam complete',exact:true}).waitFor();
+   if(exam==='gate'){
+     assert.match(await page.locator('#exam-root').innerText(),/1 correct · 2 wrong/);
+     assert.match(await page.locator('#exam-root').innerText(),/Marks deducted: 0\.67/);
+   }
+ }
+ await page.goto('http://127.0.0.1:3011/#/rrb-station-master');
+ await page.getByRole('link',{name:'Stage 2 · CBAT'}).click();
+ await page.getByRole('heading',{name:'Computer Based Aptitude Test'}).waitFor();
+ assert.equal(await page.locator('[data-cbat-start]').count(),5);
+ await page.getByRole('button',{name:'Start Intelligence'}).click();
+ assert.equal(await page.locator('svg.cbat-shape').count(),5);
+ assert.ok((await page.locator('svg.cbat-shape').first().boundingBox()).width>=48);
+ await page.getByRole('button',{name:'Figure 1'}).click();
+ await page.getByRole('button',{name:'Next',exact:true}).click();
+ await page.getByRole('button',{name:'Previous',exact:true}).click();
+ assert.equal(await page.locator('[data-cbat-option="0"]').getAttribute('aria-pressed'),'true');
+ await page.getByRole('button',{name:'Submit battery'}).click();
+ await page.getByRole('heading',{name:'Intelligence results'}).waitFor();
+ await page.getByText('Review answers',{exact:true}).click();
+ await page.getByText(/Correct answer: Figure/).first().waitFor();
+ await page.getByRole('button',{name:'Back to batteries'}).click();
+ await page.clock.install();
+ await page.getByRole('button',{name:'Start Spatial Scanning'}).click();
+ await page.getByRole('img',{name:/Street map/}).waitFor();
+ await page.clock.fastForward(245_000);
+ await page.getByText(/Time is up/).waitFor();
+ await page.getByRole('button',{name:'Back to batteries'}).click();
+ await page.getByRole('button',{name:'Start Personality'}).click();
+ await page.locator('[data-cbat-option="0"]').click();
+ await page.getByRole('button',{name:'Submit battery'}).click();
+ await page.getByText(/1\/8 completed/).waitFor();
+ assert.equal(await page.getByText('Review answers',{exact:true}).count(),0);
+ await page.reload();
+ await page.getByText('Last practice · 1/8 completed').waitFor();
+ assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth),false);
+ await page.getByRole('link',{name:'Stage 1 · CBT'}).click();
+ await page.locator('#prep-rrb').waitFor();
  assert.deepEqual(errors,[]);
- console.log('PASS: CBT across all five exams, including Group 2 Mains routes, guides, scoring and saved results; mobile layout, SBI locks and GATE answer types. Firebase is stubbed.');
+ console.log('PASS: CBT across all five exams, challenge drills and GATE marking, Station Master CBAT timing and results, Group 2 Mains routes, mobile layout and SBI locks. Firebase is stubbed.');
 }finally{await browser.close();await vite.close();}
