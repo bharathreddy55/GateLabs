@@ -104,6 +104,26 @@ try{
  await page.getByRole('heading',{name:'Exam complete',exact:true}).waitFor();
  result=await page.evaluate(()=>JSON.parse(localStorage.getItem('exam-results:exam-test-user')).find(a=>a.examId==='rrb'));
  assert.equal(result.score,0);assert.equal(result.skippedCount,100);
+ await page.goto('http://127.0.0.1:3011/#/rrb-station-master?tab=mocks');
+ const stationTests=page.locator('[data-mock-list]');
+ await stationTests.getByRole('heading',{name:'All tests',exact:true}).waitFor();
+ assert.equal(await stationTests.locator('[data-paper-group="full"]:visible').count(),3);
+ assert.equal(await page.locator('.mock-picks').getByText(/Practice model [23]/).count(),0);
+ for(const model of [2,3]){
+   const card=stationTests.locator('[data-library-card]').filter({hasText:`Practice model ${model}`});
+   assert.match(await card.innerText(),/100 questions · 100 marks · 120 min/);
+   await card.getByRole('button',{name:'Start full mock'}).click();
+   await page.getByRole('button',{name:'Begin test',exact:true}).click();
+   assert.equal(await page.locator('[data-question]').count(),100);
+   const wrongAnswer=await page.evaluate(async()=>{const {MockTest}=await import('/src/pages/ExamRunner.js');return (MockTest.questions[0].correctAnswer+1)%4;});
+   await page.locator(`[data-answer="${wrongAnswer}"]`).check();
+   await page.getByRole('button',{name:'Submit test',exact:true}).click();
+   await page.getByRole('heading',{name:'Exam complete',exact:true}).waitFor();
+   assert.match(await page.locator('#exam-root').innerText(),/0 correct · 1 wrong · 99 unanswered/);
+   assert.match(await page.locator('#exam-root').innerText(),/Marks deducted: 0\.33/);
+   await page.goto('http://127.0.0.1:3011/#/rrb-station-master?tab=mocks');
+   await stationTests.getByRole('heading',{name:'All tests',exact:true}).waitFor();
+ }
  // Exercise actual legacy text parser and separately timed SBI rule in the browser.
  await page.goto('http://127.0.0.1:3011/#/sbi-clerk?tab=mocks');
  await page.getByRole('button',{name:'Start full mock'}).first().click();

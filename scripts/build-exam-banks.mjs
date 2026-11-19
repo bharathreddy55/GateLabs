@@ -1,15 +1,37 @@
 import { currentAffairs2026 } from './current-affairs-2026.mjs';
+import { rrbModel2 } from './rrb-model-2.mjs';
+import { rrbModel3 } from './rrb-model-3.mjs';
 // Original model questions. Deterministic construction; no scraped or AI-labelled PYQs.
 import fs from 'node:fs';
 import { EXAMS } from '../src/config/exams.js';
 import { validatePaper } from '../src/utils/examEngine.js';
 const banks={group2:[],rrb:[]};
-function add(exam,section,topic,question,answer,others,explanation,extra={}) {
-  const index=banks[exam].length;
+function modelQuestion(exam,model,index,section,topic,question,answer,others,explanation,extra={}) {
   let hash=2166136261;for(const char of question)hash=Math.imul(hash^char.charCodeAt(0),16777619)>>>0;
   const position=hash%4, options=others.map(String);
   options.splice(position,0,String(answer));
-  banks[exam].push({id:`${exam}-model1-${index+1}`,section:EXAMS[exam].sections[section][0],subject:EXAMS[exam].sections[section][0],topic,question,options,correctAnswer:position,marks:1,type:'MCQ',explanation,source:'GateLabs original model question; '+EXAMS[exam].source,...extra});
+  return {id:`${exam}-model${model}-${index+1}`,section:EXAMS[exam].sections[section][0],subject:EXAMS[exam].sections[section][0],topic,question,options,correctAnswer:position,marks:1,type:'MCQ',explanation,source:'GateLabs original model question; '+EXAMS[exam].source,...extra};
+}
+function add(exam,...data) {
+  banks[exam].push(modelQuestion(exam,1,banks[exam].length,...data));
+}
+function rrbPracticePaper(model,groups) {
+  const questions=[];
+  for(const [section,text,context] of groups) {
+    for(const line of text.trim().split('\n')) {
+      const fields=line.split('|').map(field=>field.trim());
+      if(fields.length!==7||fields.some(field=>!field)) throw Error(`RRB model ${model}, question ${questions.length+1}: invalid content row`);
+      const [topic,stem,answer,b,c,d,explanation]=fields;
+      questions.push(modelQuestion('rrb',model,questions.length,section,topic,stem,answer,[b,c,d],explanation,context));
+    }
+  }
+  return {
+    title:`${EXAMS.rrb.name} · Practice model ${model}`,
+    category:'Model paper',
+    provenance:'GateLabs original practice material',
+    note:'Full-length CBT practice with multi-step maths and science, shared data sets, English comprehension and reasoning. Uses the indicative 30/30/20/20 breakdown of CEN 08/2026.',
+    questions
+  };
 }
 function rows(exam,section,topic,text) {
   for(const line of text.trim().split('\n')) {
@@ -229,8 +251,12 @@ for(const original of [...banks.rrb.slice(0,22),...banks.rrb.slice(80,88)]) {
 }
 fs.mkdirSync('public/exams',{recursive:true});
 for(const [exam,questions] of Object.entries(banks)){
- const errors=validatePaper(exam,questions,true);if(errors.length)throw Error(exam+': '+errors.join('; '));
  const paper={title:EXAMS[exam].name+' · Foundation model 1',provenance:'GateLabs original practice material',note:exam==='group2'?'150-question foundation paper with a sourced 2025–2026 current-affairs snapshot checked 16 November 2026: AP, national and international topics. This is a practice selection, not a prediction or exhaustive coverage; update it as new events occur.':'100-question foundation paper using the indicative 30/30/20/20 distribution. Difficulty is introductory; this is not an official paper or a calibrated prediction.',questions};
- fs.writeFileSync(`public/exams/${exam}.json`,JSON.stringify([paper],null,2)+'\n');
- console.log(`${exam}: ${questions.length} questions validated`);
+ const papers=exam==='rrb'?[paper,rrbPracticePaper(2,rrbModel2),rrbPracticePaper(3,rrbModel3)]:[paper];
+ for(const candidate of papers) {
+   const errors=validatePaper(exam,candidate.questions,true);
+   if(errors.length) throw Error(candidate.title+': '+errors.join(' · '));
+ }
+ fs.writeFileSync(`public/exams/${exam}.json`,JSON.stringify(papers,null,2)+'\n');
+ console.log(`${exam}: ${papers.length} full papers validated`);
 }

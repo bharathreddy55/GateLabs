@@ -2315,5 +2315,4141 @@
         "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
       }
     ]
+  },
+  {
+    "title": "RRB Station Master CBT · Practice model 2",
+    "category": "Model paper",
+    "provenance": "GateLabs original practice material",
+    "note": "Full-length CBT practice with multi-step maths and science, shared data sets, English comprehension and reasoning. Uses the indicative 30/30/20/20 breakdown of CEN 08/2026.",
+    "questions": [
+      {
+        "id": "rrb-model2-1",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Ratio and mixtures",
+        "question": "An 18 L mixture contains milk and water in the ratio 3:2. How much water should be added to make the two quantities equal?",
+        "options": [
+          "2.4 L",
+          "6.0 L",
+          "7.2 L",
+          "3.6 L"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Each of the five parts is 3.6 L. Milk exceeds water by one part, so add 3.6 L of water.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-2",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "HCF and LCM",
+        "question": "Two positive integers have HCF 12 and LCM 1,260. One integer is 84. What is the other?",
+        "options": [
+          "168",
+          "192",
+          "210",
+          "180"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The product of the two integers is 12 × 1,260. Dividing by 84 gives 180.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-3",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Discounts and profit",
+        "question": "A trader bought an item for ₹640 and sold it for ₹720 after successive discounts of 10% and 20% off its marked price. What was the marked price?",
+        "options": [
+          "₹1,000",
+          "₹936",
+          "₹1,020",
+          "₹1,080"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The sale price is 0.9 × 0.8 = 0.72 of the marked price. Thus the price before the discounts was 720/0.72.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-4",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Weighted averages",
+        "question": "The mean mass of 24 parcels is 50 kg. Four parcels with a mean mass of 65 kg are removed. What is the mean mass of the remaining parcels?",
+        "options": [
+          "47 kg",
+          "45 kg",
+          "48 kg",
+          "49 kg"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The remaining mass is 24×50−4×65 = 940 kg for 20 parcels.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-5",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Time and work",
+        "question": "A needs 15 days to complete a job and B needs 20 days. They work together for 6 days. A then leaves. How many more days does B need?",
+        "options": [
+          "4",
+          "6",
+          "5",
+          "7"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "They complete 6(1/15+1/20) = 7/10 of the work. B completes the remaining 3/10 in 6 days.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-6",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Average speed",
+        "question": "A vehicle travels from P to Q at 48 km/h and returns by the same route at 72 km/h. Find its average speed for the complete trip.",
+        "options": [
+          "55.2 km/h",
+          "60.0 km/h",
+          "57.6 km/h",
+          "62.4 km/h"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "For equal distances the average is 2/(1/48+1/72) = 57.6 km/h.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-7",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Relative speed",
+        "question": "A 150 m train clears a 350 m bridge in 20 s. It then overtakes a cyclist moving at 5 m/s in the same direction. How many seconds does the train take to pass the cyclist?",
+        "options": [
+          "7.5 s",
+          "6 s",
+          "8.75 s",
+          "10 s"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The train speed is (150+350)/20 = 25 m/s. Relative to the cyclist it gains 20 m/s, so passing takes 150/20 = 7.5 s.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-8",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Linear equations",
+        "question": "A counter sells 70 tickets. Adult tickets cost ₹50 and child tickets cost ₹30. The total is ₹2,980. How many adult tickets were sold?",
+        "options": [
+          "36",
+          "40",
+          "48",
+          "44"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "If all tickets were child tickets, the total would be ₹2,100. Each adult ticket adds ₹20. The ₹880 difference represents 44 adult tickets.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-9",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Arithmetic progressions",
+        "question": "The fourth and tenth terms of an arithmetic progression are 23 and 53. What is the sum of the first 15 terms?",
+        "options": [
+          "615",
+          "660",
+          "645",
+          "675"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The common difference is (53−23)/6 = 5. The first and fifteenth terms are 8 and 78, so their sum over 15 terms is 15(8+78)/2.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-10",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Number systems",
+        "question": "What is the remainder when 7 to the power 103 is divided by 5?",
+        "options": [
+          "1",
+          "3",
+          "2",
+          "4"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Seven is congruent to 2 modulo 5. The remainders of powers of 2 cycle through 2, 4, 3, 1. Exponent 103 is 3 modulo 4.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-11",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Probability without replacement",
+        "question": "A box has 5 red, 4 blue and 3 green tokens. Two are drawn without replacement. What is the probability that exactly one is red?",
+        "options": [
+          "25/66",
+          "7/22",
+          "5/12",
+          "35/66"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Select one red and one of the seven nonred tokens in 35 ways. All unordered pairs number 12×11/2 = 66.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-12",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Areas",
+        "question": "A 32 m by 24 m rectangular courtyard is surrounded by a 2 m wide path outside its boundary. The outer boundary is rectangular. What is the area of the path?",
+        "options": [
+          "240 m²",
+          "224 m²",
+          "232 m²",
+          "256 m²"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The outer dimensions are 36 m by 28 m. Subtract the courtyard area from 1,008 m² to get 240 m².",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-13",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Trigonometry",
+        "question": "A 12 m vertical pole casts a 16 m shadow on level ground. What is the sine of the angle of elevation from the shadow tip to the pole top?",
+        "options": [
+          "3/5",
+          "3/4",
+          "4/5",
+          "4/3"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The right triangle has sides 12, 16 and 20. The sine is opposite over hypotenuse, or 12/20.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-14",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Volumes",
+        "question": "A solid cylinder of radius 6 cm and height 20 cm is melted into identical spheres of radius 3 cm without loss. How many spheres can be made?",
+        "options": [
+          "15",
+          "18",
+          "24",
+          "20"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The cylinder volume is 720π cm³. Each sphere has volume 36π cm³, so the count is 20.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-15",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Mean and median",
+        "question": "The five observations 6, 8, 10, 12 and 14 have their smallest value replaced by 20. What are the new mean and median respectively?",
+        "options": [
+          "12.8 and 10",
+          "12.8 and 12",
+          "12 and 12.8",
+          "13.2 and 12"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The new sum is 50−6+20 = 64. The sorted values are 8, 10, 12, 14 and 20, so the middle value is 12.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-16",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Density",
+        "question": "Two pieces of different materials each have mass 300 g. Their densities are 2 and 5 g/cm³. If combined without voids or volume change, what is their overall density?",
+        "options": [
+          "7/2 g/cm³",
+          "5/2 g/cm³",
+          "20/7 g/cm³",
+          "10/3 g/cm³"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Volume is 300/2 + 300/5 = 210 cm³ and mass is 600 g. Their ratio is 20/7 g/cm³.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-17",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Mass and weight",
+        "question": "An object weighs 147 N where gravitational acceleration is 9.8 m/s². What are its mass and weight at a site where the acceleration is 1.6 m/s²?",
+        "options": [
+          "15 kg and 147 N",
+          "15 kg and 24 N",
+          "24 kg and 15 N",
+          "24 kg and 38.4 N"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The mass is 147/9.8 = 15 kg everywhere. At the second site it weighs 15×1.6 = 24 N.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-18",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Static friction",
+        "question": "A 10 kg box rests on a level floor. Its coefficient of static friction is 0.30 and g = 10 m/s². A horizontal pull of 26 N is applied. What friction force acts on it?",
+        "options": [
+          "30 N opposite the pull",
+          "4 N opposite the pull",
+          "26 N opposite the pull",
+          "0 N"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Static friction adjusts to balance the 26 N pull because the required force is below the 30 N limit.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-19",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Work and kinetic energy",
+        "question": "A 4 kg object speeds up from 3 m/s to 7 m/s. What is the net work done on it?",
+        "options": [
+          "32 J",
+          "98 J",
+          "116 J",
+          "80 J"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The work–energy theorem gives ΔK = ½ × 4 × (49−9) = 80 J.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-20",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Power and efficiency",
+        "question": "A motor raises a 50 kg load through 6 m in 20 s at steady speed. With g = 10 m/s² and efficiency of 75%, what is the input power?",
+        "options": [
+          "112.5 W",
+          "150 W",
+          "250 W",
+          "200 W"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Useful power is 50×10×6/20 = 150 W. Since that is 75% of input, the motor takes 200 W.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-21",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Levers",
+        "question": "An ideal lever raises a 240 N load vertically by 5 cm. The effort point moves 20 cm in the direction of the applied force. What effort force is required?",
+        "options": [
+          "48 N",
+          "60 N",
+          "120 N",
+          "960 N"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Equal input and output work gives effort × 20 = 240 × 5 in N·cm.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-22",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Heat and temperature",
+        "question": "A 600 W heater operates for 2 minutes. Seventy percent of its energy heats 0.4 kg of water of specific heat capacity 4,200 J/(kg·°C). What is the temperature rise?",
+        "options": [
+          "30°C",
+          "21°C",
+          "36°C",
+          "42°C"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The water receives 0.7×600×120 = 50,400 J. Dividing by 0.4×4,200 gives a rise of 30°C.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-23",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Parallel circuits",
+        "question": "A 12 Ω resistor and an 8 Ω resistor are connected in parallel across 24 V. When the 12 Ω branch is disconnected, by what percentage does the supply current decrease?",
+        "options": [
+          "25%",
+          "40%",
+          "50%",
+          "60%"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The two initial currents are 2 A and 3 A. The supply current drops from 5 A to 3 A, a 40% decrease.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-24",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Electrical energy",
+        "question": "A 900 W heater runs 40 minutes daily for 14 days. How much electrical energy does it use?",
+        "options": [
+          "5.6 kWh",
+          "8.4 kWh",
+          "9.8 kWh",
+          "12.6 kWh"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Convert to 0.9 kW and 2/3 hour daily. The product 0.9×2/3×14 is 8.4 kWh.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-25",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Forces and acceleration",
+        "question": "A 10 kg trolley starts from rest. Forces of 28 N east and 8 N west act on it for 4 s. What speed does it reach?",
+        "options": [
+          "3.2 m/s",
+          "11.2 m/s",
+          "8 m/s",
+          "14.4 m/s"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The net force is 20 N east, so the acceleration is 2 m/s². In 4 s it gains 8 m/s of speed.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-26",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Units and measurement",
+        "question": "A sheet measures 18 cm by 25 cm with a thickness of 3.6 mm. What is its volume?",
+        "options": [
+          "16.2 cm³",
+          "450 cm³",
+          "1,620 cm³",
+          "162 cm³"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Convert 3.6 mm to 0.36 cm before multiplying 18×25×0.36.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-27",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Mass and volume",
+        "question": "A liquid has density 1.2 g/cm³. What is the mass of 1.5 L of the liquid?",
+        "options": [
+          "0.8 kg",
+          "1.25 kg",
+          "2.7 kg",
+          "1.8 kg"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The volume is 1,500 cm³, giving mass of 1,800 g or 1.8 kg.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-28",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Temperature calibration",
+        "question": "A linear thermometer shows 5 units in melting ice and 95 units in boiling water at standard pressure. What Celsius temperature corresponds to a reading of 59 units?",
+        "options": [
+          "54°C",
+          "60°C",
+          "59°C",
+          "65°C"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The reading is 54 of the 90 scale units above zero Celsius. Thus the temperature is 100×54/90 = 60°C.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-29",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Simple machines",
+        "question": "Three vertical rope segments equally support a 210 N load in an ideal pulley system. With ropes and pulleys ideal, how much rope must be pulled to lift the load by 0.8 m?",
+        "options": [
+          "2.4 m",
+          "0.27 m",
+          "0.8 m",
+          "1.6 m"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "All three supporting segments shorten by 0.8 m, so the free end moves through 3×0.8 m.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-30",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Friction and stopping distance",
+        "question": "A 25 kg trolley moves at 10 m/s on a horizontal track. A constant 250 N force opposes the motion. How far does the trolley travel before stopping?",
+        "options": [
+          "2.5 m",
+          "10 m",
+          "12.5 m",
+          "5 m"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Initial kinetic energy is ½×25×100 = 1,250 J. The braking force uses that energy over 1,250/250 metres.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-31",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Weighted rates",
+        "question": "What percentage of all scheduled departures across the four stations were on time?",
+        "options": [
+          "80%",
+          "82%",
+          "84%",
+          "86%"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Add the on-time counts to get 420 and divide by 500 departures.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Station | Scheduled | On time\nA | 100 | 86\nB | 120 | 96\nC | 140 | 126\nD | 140 | 112"
+      },
+      {
+        "id": "rrb-model2-32",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Rates versus counts",
+        "question": "Which station had the highest share of its own departures on time?",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The four rates are 86%, 80%, 90% and 80% respectively.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Station | Scheduled | On time\nA | 100 | 86\nB | 120 | 96\nC | 140 | 126\nD | 140 | 112"
+      },
+      {
+        "id": "rrb-model2-33",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Two-stage calculations",
+        "question": "Station D wants 85% punctuality with the same number of departures. How many of its currently late departures must become on time?",
+        "options": [
+          "7",
+          "5",
+          "10",
+          "14"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Eighty-five percent of 140 is 119. The station currently has 112 on-time departures, so it needs seven more.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Station | Scheduled | On time\nA | 100 | 86\nB | 120 | 96\nC | 140 | 126\nD | 140 | 112"
+      },
+      {
+        "id": "rrb-model2-34",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Recomputed denominator",
+        "question": "Twelve late departures at Station B are excluded from the records. Its on-time count is unchanged. What is the new system-wide punctuality rate to one decimal place?",
+        "options": [
+          "84.0%",
+          "86.4%",
+          "86.1%",
+          "87.5%"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The numerator remains 420. The denominator decreases to 488, giving 420/488 ≈ 86.1%.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Station | Scheduled | On time\nA | 100 | 86\nB | 120 | 96\nC | 140 | 126\nD | 140 | 112"
+      },
+      {
+        "id": "rrb-model2-35",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Share of a subset",
+        "question": "Stations B and D together account for what fraction of all delayed departures?",
+        "options": [
+          "13/25",
+          "3/5",
+          "7/10",
+          "13/20"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "B and D have 24+28 = 52 delays. All four stations have 80 delays, so the fraction is 52/80 = 13/20.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Station | Scheduled | On time\nA | 100 | 86\nB | 120 | 96\nC | 140 | 126\nD | 140 | 112"
+      },
+      {
+        "id": "rrb-model2-36",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Pie chart interpretation",
+        "question": "Of the surveyed trips, how many were by bus or bicycle?",
+        "options": [
+          "144",
+          "156",
+          "168",
+          "180"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The two sectors span 126° out of 360°. Multiply 480 by 126/360 to obtain 168.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "480 trips. Half of the walking trips took at most 20 minutes.",
+        "figure": {
+          "type": "pie",
+          "labels": [
+            "Train",
+            "Bus",
+            "Walk",
+            "Taxi",
+            "Bicycle"
+          ],
+          "values": [
+            162,
+            108,
+            54,
+            18,
+            18
+          ],
+          "title": "Transport modes (sector angles in degrees)"
+        }
+      },
+      {
+        "id": "rrb-model2-37",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Conditional share",
+        "question": "Among trips made using train or bus, what percentage were made by train?",
+        "options": [
+          "50%",
+          "54%",
+          "62.5%",
+          "60%"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Compare angles within the subset: 162/(162+108) = 60%.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "480 trips. Half of the walking trips took at most 20 minutes.",
+        "figure": {
+          "type": "pie",
+          "labels": [
+            "Train",
+            "Bus",
+            "Walk",
+            "Taxi",
+            "Bicycle"
+          ],
+          "values": [
+            162,
+            108,
+            54,
+            18,
+            18
+          ],
+          "title": "Transport modes (sector angles in degrees)"
+        }
+      },
+      {
+        "id": "rrb-model2-38",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Combining sources",
+        "question": "How many trips were made on foot by passengers who reported a trip of at most 20 minutes?",
+        "options": [
+          "30",
+          "36",
+          "45",
+          "54"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Walking represents 480×54/360 = 72 trips. Half of these meet the time condition, giving 36.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "480 trips. Half of the walking trips took at most 20 minutes.",
+        "figure": {
+          "type": "pie",
+          "labels": [
+            "Train",
+            "Bus",
+            "Walk",
+            "Taxi",
+            "Bicycle"
+          ],
+          "values": [
+            162,
+            108,
+            54,
+            18,
+            18
+          ],
+          "title": "Transport modes (sector angles in degrees)"
+        }
+      },
+      {
+        "id": "rrb-model2-39",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Percent and percentage points",
+        "question": "If 24 bus trips switch to train while the total stays fixed, by how many percentage points does the train share increase?",
+        "options": [
+          "5",
+          "4",
+          "6",
+          "8"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Moving 24 of 480 trips to train increases its share by 24/480 = 5 percentage points.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "480 trips. Half of the walking trips took at most 20 minutes.",
+        "figure": {
+          "type": "pie",
+          "labels": [
+            "Train",
+            "Bus",
+            "Walk",
+            "Taxi",
+            "Bicycle"
+          ],
+          "values": [
+            162,
+            108,
+            54,
+            18,
+            18
+          ],
+          "title": "Transport modes (sector angles in degrees)"
+        }
+      },
+      {
+        "id": "rrb-model2-40",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Chart recalculation",
+        "question": "If the original bicycle count doubles and all other counts stay the same, what is the new bicycle-sector angle, rounded to the nearest degree?",
+        "options": [
+          "32°",
+          "36°",
+          "34°",
+          "38°"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Bicycle trips rise from 24 to 48, and the total becomes 504. The angle is 360×48/504 ≈ 34°.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "480 trips. Half of the walking trips took at most 20 minutes.",
+        "figure": {
+          "type": "pie",
+          "labels": [
+            "Train",
+            "Bus",
+            "Walk",
+            "Taxi",
+            "Bicycle"
+          ],
+          "values": [
+            162,
+            108,
+            54,
+            18,
+            18
+          ],
+          "title": "Transport modes (sector angles in degrees)"
+        }
+      },
+      {
+        "id": "rrb-model2-41",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Set operations",
+        "question": "How many workers used at least one of the two training modules?",
+        "options": [
+          "92",
+          "78",
+          "86",
+          "98"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The union is 120−28 = 92, since 28 used neither.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Workers surveyed: 120\nSafety module: 70\nScheduling module: 48\nNeither module: 28"
+      },
+      {
+        "id": "rrb-model2-42",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Set intersection",
+        "question": "How many workers used both training modules?",
+        "options": [
+          "18",
+          "28",
+          "30",
+          "26"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Add the module totals and subtract the union: 70+48−92 = 26.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Workers surveyed: 120\nSafety module: 70\nScheduling module: 48\nNeither module: 28"
+      },
+      {
+        "id": "rrb-model2-43",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Conditional probability",
+        "question": "A worker is chosen from those who used the safety module. What is the probability that this worker used the scheduling module as well?",
+        "options": [
+          "13/24",
+          "13/35",
+          "11/35",
+          "23/35"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Of the 70 safety-module users exactly 26 also used the scheduling module, giving 26/70.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Workers surveyed: 120\nSafety module: 70\nScheduling module: 48\nNeither module: 28"
+      },
+      {
+        "id": "rrb-model2-44",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Exactly one category",
+        "question": "How many workers used exactly one training module?",
+        "options": [
+          "58",
+          "70",
+          "78",
+          "66"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Subtract the 26 who used both from the union of 92.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Workers surveyed: 120\nSafety module: 70\nScheduling module: 48\nNeither module: 28"
+      },
+      {
+        "id": "rrb-model2-45",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Counterfactual update",
+        "question": "Six workers who originally used only the scheduling module subsequently complete safety training as well. How many workers then belong to exactly one module?",
+        "options": [
+          "54",
+          "60",
+          "66",
+          "72"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Each of the six moves from a one-module group into both. The original count for exactly one was 66.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Workers surveyed: 120\nSafety module: 70\nScheduling module: 48\nNeither module: 28"
+      },
+      {
+        "id": "rrb-model2-46",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Frequency tables",
+        "question": "How many of the recorded queues had at least 8 passengers?",
+        "options": [
+          "12",
+          "16",
+          "20",
+          "14"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Add the frequencies for 8, 12 and 16 passengers: 8+4+2 = 14.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "figure": {
+          "type": "bar",
+          "labels": [
+            "0",
+            "4",
+            "8",
+            "12",
+            "16"
+          ],
+          "values": [
+            2,
+            8,
+            8,
+            4,
+            2
+          ],
+          "title": "Observed queue size (horizontal) and frequency (vertical)"
+        }
+      },
+      {
+        "id": "rrb-model2-47",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Weighted mean",
+        "question": "What was the mean queue size across the 24 observations, to two decimal places?",
+        "options": [
+          "7.33",
+          "6.67",
+          "7.50",
+          "8.00"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The weighted sum is 0×2+4×8+8×8+12×4+16×2 = 176. Divide by 24.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "figure": {
+          "type": "bar",
+          "labels": [
+            "0",
+            "4",
+            "8",
+            "12",
+            "16"
+          ],
+          "values": [
+            2,
+            8,
+            8,
+            4,
+            2
+          ],
+          "title": "Observed queue size (horizontal) and frequency (vertical)"
+        }
+      },
+      {
+        "id": "rrb-model2-48",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Median",
+        "question": "What was the median queue size?",
+        "options": [
+          "8",
+          "4",
+          "6",
+          "10"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The two middle observations are the 12th and 13th. Both lie in the range occupied by queues of size 8.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "figure": {
+          "type": "bar",
+          "labels": [
+            "0",
+            "4",
+            "8",
+            "12",
+            "16"
+          ],
+          "values": [
+            2,
+            8,
+            8,
+            4,
+            2
+          ],
+          "title": "Observed queue size (horizontal) and frequency (vertical)"
+        }
+      },
+      {
+        "id": "rrb-model2-49",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Corrected records",
+        "question": "One queue recorded as having 12 passengers actually had 16. What is the corrected mean queue size to two decimal places?",
+        "options": [
+          "7.17",
+          "7.33",
+          "7.50",
+          "7.67"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The total rises from 176 to 180 with the sample size still 24. The new mean is 180/24 = 7.50.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "figure": {
+          "type": "bar",
+          "labels": [
+            "0",
+            "4",
+            "8",
+            "12",
+            "16"
+          ],
+          "values": [
+            2,
+            8,
+            8,
+            4,
+            2
+          ],
+          "title": "Observed queue size (horizontal) and frequency (vertical)"
+        }
+      },
+      {
+        "id": "rrb-model2-50",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Shares and bounds",
+        "question": "What fraction of observations had a queue size strictly below the mean?",
+        "options": [
+          "1/3",
+          "1/2",
+          "7/12",
+          "5/12"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The mean is about 7.33. The values below it are 0 and 4, with frequencies 2 and 8. Thus 10 of 24 observations qualify.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "figure": {
+          "type": "bar",
+          "labels": [
+            "0",
+            "4",
+            "8",
+            "12",
+            "16"
+          ],
+          "values": [
+            2,
+            8,
+            8,
+            4,
+            2
+          ],
+          "title": "Observed queue size (horizontal) and frequency (vertical)"
+        }
+      },
+      {
+        "id": "rrb-model2-51",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Trends",
+        "question": "Between which adjacent months did the inspections total decrease by 15?",
+        "options": [
+          "January to February",
+          "February to March",
+          "April to May",
+          "March to April"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The levels from April to May fell from 145 to 130.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Month | Passed\nJan | 80\nFeb | 96\nMar | 88\nApr | 131\nMay | 89",
+        "figure": {
+          "type": "line",
+          "labels": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May"
+          ],
+          "values": [
+            100,
+            120,
+            110,
+            145,
+            130
+          ],
+          "title": "Monthly inspections"
+        }
+      },
+      {
+        "id": "rrb-model2-52",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Recomputed monthly figures",
+        "question": "What is the combined pass rate for April and May to one decimal place?",
+        "options": [
+          "78.2%",
+          "80.0%",
+          "81.1%",
+          "82.5%"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "April and May give 131+89 = 220 passes from 145+130 = 275 inspections, or 80.0%.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Month | Passed\nJan | 80\nFeb | 96\nMar | 88\nApr | 131\nMay | 89",
+        "figure": {
+          "type": "line",
+          "labels": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May"
+          ],
+          "values": [
+            100,
+            120,
+            110,
+            145,
+            130
+          ],
+          "title": "Monthly inspections"
+        }
+      },
+      {
+        "id": "rrb-model2-53",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Comparison with averages",
+        "question": "In how many months was the number of inspections strictly above the five-month average?",
+        "options": [
+          "1",
+          "3",
+          "2",
+          "4"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The five counts average (100+120+110+145+130)/5 = 121. Only April and May are above this mean.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Month | Passed\nJan | 80\nFeb | 96\nMar | 88\nApr | 131\nMay | 89",
+        "figure": {
+          "type": "line",
+          "labels": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May"
+          ],
+          "values": [
+            100,
+            120,
+            110,
+            145,
+            130
+          ],
+          "title": "Monthly inspections"
+        }
+      },
+      {
+        "id": "rrb-model2-54",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Percentage comparison",
+        "question": "From which month to the following month did the number of passes fall by the greatest percentage?",
+        "options": [
+          "January to February",
+          "February to March",
+          "March to April",
+          "April to May"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The two declines are 96 to 88 (8.3%) and 131 to 89 (32.1%). The latter is larger.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Month | Passed\nJan | 80\nFeb | 96\nMar | 88\nApr | 131\nMay | 89",
+        "figure": {
+          "type": "line",
+          "labels": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May"
+          ],
+          "values": [
+            100,
+            120,
+            110,
+            145,
+            130
+          ],
+          "title": "Monthly inspections"
+        }
+      },
+      {
+        "id": "rrb-model2-55",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Missing data",
+        "question": "How many inspections would need to be added in June to bring the six-month mean to 125?",
+        "options": [
+          "130",
+          "145",
+          "140",
+          "150"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The six-month total must be 750. The five existing months sum to 605, leaving 145.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Month | Passed\nJan | 80\nFeb | 96\nMar | 88\nApr | 131\nMay | 89",
+        "figure": {
+          "type": "line",
+          "labels": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May"
+          ],
+          "values": [
+            100,
+            120,
+            110,
+            145,
+            130
+          ],
+          "title": "Monthly inspections"
+        }
+      },
+      {
+        "id": "rrb-model2-56",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Data sufficiency",
+        "question": "Counters P and Q together sold 280 tickets. How many did P sell? Statement I: P sold 30 more than Q. Statement II: Q sold fewer than 140.",
+        "options": [
+          "II alone is sufficient",
+          "I alone is sufficient",
+          "Both are needed",
+          "Both together are insufficient"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The sum and difference determine P as 155. An upper bound on Q leaves several possibilities.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-57",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Data sufficiency",
+        "question": "Three routes handled a total of 420 tickets. What was the count on route A? I: A handled twice as many as B. II: C handled as many as A and B combined.",
+        "options": [
+          "I alone is sufficient",
+          "II alone is sufficient",
+          "Both together are insufficient",
+          "Both are needed"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "II fixes A+B at 210. I then gives B = 70 and A = 140. Neither relation fixes A by itself.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-58",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Data sufficiency",
+        "question": "Does counter X sell more tickets per hour than counter Y? I: X sells three times as many tickets as Y. II: X operates twice as many hours as Y. Both counters sell a positive number of tickets.",
+        "options": [
+          "Both are needed",
+          "I alone is sufficient",
+          "II alone is sufficient",
+          "Both together are insufficient"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Rates require both counts and operating times. The two ratios give X a rate 3/2 times Y’s rate.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-59",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Data arrangement",
+        "question": "Three counters A, B and C sold 70, 90 and 110 tickets in some order. A sold more than B, and C did not sell 70. What is the number sold by B?",
+        "options": [
+          "70",
+          "90",
+          "110",
+          "Either 70 or 90"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "If B sold 90, A would have sold 110 and C would be left with 70. Therefore B sold 70.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-60",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Data arrangement",
+        "question": "Four services A, B, C and D last 30, 40, 60 and 80 minutes, all different. A takes twice as long as B, C is longer than D, and D is not the shortest. Which service takes 60 minutes?",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "If A and B took 80 and 40, C and D would be 60 and 30, making D the shortest. Thus A and B take 60 and 30, with C at 80 and D at 40.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-61",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Syllogisms",
+        "question": "All express services have reserved coaches. Some night services are express services. No unstaffed service has a reserved coach. Which conclusion follows?",
+        "options": [
+          "All night services are staffed.",
+          "Some unstaffed services are express.",
+          "Some night services are staffed.",
+          "Every staffed service has a reserved coach."
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "At least one night service is express, hence has a reserved coach and cannot be unstaffed.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-62",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Conditional deductions",
+        "question": "A parcel is held if it is unlabelled or exceeds the mass limit. A particular parcel was not held. What must be true under this rule?",
+        "options": [
+          "It is labelled or over the mass limit.",
+          "It is within the limit but unlabelled.",
+          "It has been accepted for delivery.",
+          "It is labelled and within the mass limit."
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Either listed condition would trigger holding. Not being held rules out both, without establishing acceptance.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-63",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Binary logic",
+        "question": "P is true only if Q is true. R is true exactly when Q is false. If R is true, which truth values are forced for P and Q?",
+        "options": [
+          "P true, Q false",
+          "P false, Q true",
+          "P true, Q true",
+          "P false, Q false"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "R being true forces Q false. Since P requires Q, P must also be false.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-64",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Clock angles",
+        "question": "What is the smaller angle between the hands of a clock at 4:40?",
+        "options": [
+          "110°",
+          "120°",
+          "100°",
+          "140°"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The minute hand is at 240° and the hour hand at 120°+20° = 140°. Their difference is 100°.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-65",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Calendar arithmetic",
+        "question": "If 1 January of a leap year is a Monday, what weekday is 1 March that year?",
+        "options": [
+          "Thursday",
+          "Saturday",
+          "Friday",
+          "Sunday"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "January and February supply 31+29 = 60 days. The shift is four weekdays.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-66",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Family relations",
+        "question": "M is the sister of N. N is the father of P. Q is P’s son. How is M related to Q?",
+        "options": [
+          "Grand-aunt",
+          "Paternal aunt",
+          "Grandmother",
+          "Cousin"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "M is the sister of Q’s grandfather, so she is Q’s grand-aunt.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-67",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Statement and assumption",
+        "question": "A notice asks passengers to use the west entrance during repairs. Which assumption is necessary for that instruction to be workable?",
+        "options": [
+          "Every passenger enters from the west each day.",
+          "Passengers can reach the west entrance during the repairs.",
+          "Repairs will finish before the next train arrives.",
+          "The west entrance has the lowest footfall at all times."
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "An instruction to use that entrance presupposes it can be reached. The other conditions are unnecessary.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-68",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Argument evaluation",
+        "question": "Platform signs were revised and queries to the help desk fell. Which additional finding best supports the claim that the signs helped people find platforms?",
+        "options": [
+          "The drop was in direction queries at stations with revised signs, while comparable unchanged stations saw no drop.",
+          "All help desks shortened opening hours on the same date.",
+          "The number of passengers fell sharply at every station.",
+          "Queries about refunds fell, but direction queries stayed the same."
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The targeted decrease and comparison group support a link to the signs more directly than other changes do.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-69",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Logical possibility",
+        "question": "Exactly two of A, B, C and D are selected. A and B cannot both be selected. Selecting C requires D. Which pair is impossible?",
+        "options": [
+          "A and D",
+          "B and D",
+          "A and C",
+          "C and D"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "A and C would require a third selection, D. The other listed pairs meet both constraints.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-70",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Truth statements",
+        "question": "Exactly one of Arun, Bela and Charan took a file. Arun says “Bela took it.” Bela says “Charan did not take it.” Charan says “Arun did not take it.” Exactly one statement is true. Who took the file?",
+        "options": [
+          "Arun only",
+          "Arun or Charan",
+          "Bela only",
+          "Charan only"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "If Arun took it, only Bela’s statement is true. If Charan took it, only Charan’s is true. Bela taking it would make all three true.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-71",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Reading comprehension",
+        "question": "What is the central proposal of the passage?",
+        "options": [
+          "Compare intervention stations with similar stations and measure the result the change was meant to affect.",
+          "Treat a fall in complaints as conclusive evidence that directions improved.",
+          "Use total enquiries as the main measure of platform clarity.",
+          "Remove the painted arrows so that the two groups remain identical."
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The passage recommends a comparison group and a measure specific to directions.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "passage": "Several stations painted directional arrows on concourse floors after passengers reported difficulty finding platforms. Complaints were fewer a month later, but the review team knew that train timings had also changed. It proposed comparing the pilot stations with similar stations that had kept their previous signs. The team would count requests for directions separately from refund and connection enquiries. It considered the early results encouraging and wanted to find out which changes had contributed to them."
+      },
+      {
+        "id": "rrb-model2-72",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Reading comprehension",
+        "question": "Why is the altered timetable mentioned?",
+        "options": [
+          "It proves the arrows made passengers complain less.",
+          "It provides an estimate of the cost of repainting.",
+          "It offers another possible cause for the reduction in complaints.",
+          "It shows that late trains increased at the comparison stations."
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Changing train timings may independently change the number or type of questions asked.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "passage": "Several stations painted directional arrows on concourse floors after passengers reported difficulty finding platforms. Complaints were fewer a month later, but the review team knew that train timings had also changed. It proposed comparing the pilot stations with similar stations that had kept their previous signs. The team would count requests for directions separately from refund and connection enquiries. It considered the early results encouraging and wanted to find out which changes had contributed to them."
+      },
+      {
+        "id": "rrb-model2-73",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Reading comprehension",
+        "question": "Which observation would best fit the review team’s suggested evaluation?",
+        "options": [
+          "Direction enquiries fell at the stations with arrows and remained steady at comparable stations without them.",
+          "All enquiries fell at both sets of stations in the same proportion.",
+          "Only refund enquiries fell at the stations with arrows.",
+          "The trial stations recorded fewer passengers and the enquiries per passenger rose."
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "This comparison uses the specific outcome and shows a change concentrated where the arrows were introduced.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "passage": "Several stations painted directional arrows on concourse floors after passengers reported difficulty finding platforms. Complaints were fewer a month later, but the review team knew that train timings had also changed. It proposed comparing the pilot stations with similar stations that had kept their previous signs. The team would count requests for directions separately from refund and connection enquiries. It considered the early results encouraging and wanted to find out which changes had contributed to them."
+      },
+      {
+        "id": "rrb-model2-74",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Reading comprehension",
+        "question": "What does the passage imply about a busy information desk?",
+        "options": [
+          "A busy desk necessarily means every platform is hard to find.",
+          "Its overall workload is an imperfect measure of the arrows’ effect.",
+          "Staff cannot distinguish between different types of enquiries.",
+          "The trial can succeed only if the desk becomes unnecessary."
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Desk workload includes refunds and missed connections, which may move independently of direction enquiries.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "passage": "Several stations painted directional arrows on concourse floors after passengers reported difficulty finding platforms. Complaints were fewer a month later, but the review team knew that train timings had also changed. It proposed comparing the pilot stations with similar stations that had kept their previous signs. The team would count requests for directions separately from refund and connection enquiries. It considered the early results encouraging and wanted to find out which changes had contributed to them."
+      },
+      {
+        "id": "rrb-model2-75",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Reading comprehension",
+        "question": "Which phrase best describes the review team’s stance?",
+        "options": [
+          "Convinced the trial was ineffective.",
+          "Uninterested in differences between stations.",
+          "Cautiously supportive and interested in testing explanations.",
+          "Ready to infer success from the total alone."
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The team calls the preliminary result useful and proposes a way to discriminate among causes.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "passage": "Several stations painted directional arrows on concourse floors after passengers reported difficulty finding platforms. Complaints were fewer a month later, but the review team knew that train timings had also changed. It proposed comparing the pilot stations with similar stations that had kept their previous signs. The team would count requests for directions separately from refund and connection enquiries. It considered the early results encouraging and wanted to find out which changes had contributed to them."
+      },
+      {
+        "id": "rrb-model2-76",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Reading comprehension",
+        "question": "Why did the archive retain the original timetables after scanning them?",
+        "options": [
+          "The scans cannot be read remotely.",
+          "The originals preserve the only legible departure times.",
+          "Physical marks can reveal how a timetable was used.",
+          "Keeping originals removes the need for digital backups."
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The passage uses pencilled notes and folded corners as evidence from the original objects.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "passage": "A local archive scanned working timetables so readers could consult them remotely and staff could reduce handling of brittle sheets. Conservators kept the originals. A pencilled alteration or a frequently folded corner may reveal how a timetable was used, even when the scan already shows its printed departures clearly. The catalogue identifies issues separately because spring and winter revisions from one year can contain different services."
+      },
+      {
+        "id": "rrb-model2-77",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Reading comprehension",
+        "question": "Which claim about the digital copies follows from the passage?",
+        "options": [
+          "They make paper conservation unnecessary.",
+          "They eliminate errors in every revision.",
+          "They preserve the texture and size of every sheet without loss.",
+          "They widen access and reduce handling of the originals."
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Remote access lets visitors inspect the printed information without repeatedly touching the paper copies.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "passage": "A local archive scanned working timetables so readers could consult them remotely and staff could reduce handling of brittle sheets. Conservators kept the originals. A pencilled alteration or a frequently folded corner may reveal how a timetable was used, even when the scan already shows its printed departures clearly. The catalogue identifies issues separately because spring and winter revisions from one year can contain different services."
+      },
+      {
+        "id": "rrb-model2-78",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Reading comprehension",
+        "question": "Why catalogue several editions from the same year?",
+        "options": [
+          "Every copy within a year contains identical services.",
+          "It guarantees the issues were published at equally spaced intervals.",
+          "Different editions can record timetable changes during that year.",
+          "Doing so removes the need to identify publication dates."
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The example of a spring and winter revision shows why year alone cannot identify the relevant schedule.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "passage": "A local archive scanned working timetables so readers could consult them remotely and staff could reduce handling of brittle sheets. Conservators kept the originals. A pencilled alteration or a frequently folded corner may reveal how a timetable was used, even when the scan already shows its printed departures clearly. The catalogue identifies issues separately because spring and winter revisions from one year can contain different services."
+      },
+      {
+        "id": "rrb-model2-79",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Reading comprehension",
+        "question": "Which research task best matches the strength of the physical records?",
+        "options": [
+          "Comparing printed departure times from multiple towns without travelling.",
+          "Studying marks distant readers might not see, such as folded page corners.",
+          "Distributing one scanned sheet to many readers simultaneously.",
+          "Finding the catalogue entry by its online issue number."
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Material traces are specifically presented as an advantage of the originals.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "passage": "A local archive scanned working timetables so readers could consult them remotely and staff could reduce handling of brittle sheets. Conservators kept the originals. A pencilled alteration or a frequently folded corner may reveal how a timetable was used, even when the scan already shows its printed departures clearly. The catalogue identifies issues separately because spring and winter revisions from one year can contain different services."
+      },
+      {
+        "id": "rrb-model2-80",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Reading comprehension",
+        "question": "How does the archive combine the two formats?",
+        "options": [
+          "It uses digital copies for routine access and preserves originals for conservation and material research.",
+          "It digitises the sheets solely so that they can be destroyed.",
+          "It restricts all readers to originals to keep the copies intact.",
+          "It stores the scans but prevents identification of editions."
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The two formats serve complementary access and research functions.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "passage": "A local archive scanned working timetables so readers could consult them remotely and staff could reduce handling of brittle sheets. Conservators kept the originals. A pencilled alteration or a frequently folded corner may reveal how a timetable was used, even when the scan already shows its printed departures clearly. The catalogue identifies issues separately because spring and winter revisions from one year can contain different services."
+      },
+      {
+        "id": "rrb-model2-81",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Number series",
+        "question": "Complete the series 8, 13, 23, 38, 58, …",
+        "options": [
+          "78",
+          "81",
+          "88",
+          "83"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The successive differences are 5, 10, 15 and 20. Add the next difference, 25.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-82",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Alternating series",
+        "question": "What comes next in 7, 21, 17, 51, 47, 141, …?",
+        "options": [
+          "137",
+          "134",
+          "145",
+          "423"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The operations alternate between multiplying by three and subtracting four.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-83",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Interleaved series",
+        "question": "Complete 3, 24, 6, 20, 12, 16, 24, …",
+        "options": [
+          "8",
+          "12",
+          "20",
+          "48"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The odd-position terms double. The even-position terms decrease by four, so the eighth term is 12.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-84",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Letter series",
+        "question": "Complete the series BD, EG, IK, NP, …",
+        "options": [
+          "TV",
+          "SU",
+          "UW",
+          "VX"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Each pair has a two-letter gap in position. The first letters advance by 3, 4, 5, then 6 from N to T, giving TV.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-85",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Coding",
+        "question": "The first, second and third letters of a word are shifted forward by 2, 4 and 1 places respectively, wrapping after Z. The result is then reversed. How is CAR coded?",
+        "options": [
+          "SDE",
+          "EES",
+          "SEE",
+          "SGE"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "C advances to E, A to E and R to S. Reverse EES to get SEE.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-86",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Coding by substitution",
+        "question": "In a code, red signal reads ni ta, red lamp reads ni po, and green lamp reads su po. How is green signal written in the same adjective–noun order?",
+        "options": [
+          "ta su",
+          "ni su",
+          "po ta",
+          "su ta"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Green is su and signal is ta, based on the repeated words.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-87",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Analogies",
+        "question": "Pentagon is to five diagonals as octagon is to how many diagonals?",
+        "options": [
+          "20",
+          "16",
+          "24",
+          "28"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Each octagon vertex has five nonadjacent vertices. Counting each diagonal twice gives 8×5/2 = 20.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-88",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Odd one out",
+        "question": "Which pair does not obey the rule that the second number is the product of the distinct prime factors of the first?",
+        "options": [
+          "36 and 6",
+          "48 and 12",
+          "45 and 15",
+          "70 and 70"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The distinct prime factors of 48 are 2 and 3, whose product is 6. The other pairs follow the rule.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-89",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Ranking",
+        "question": "Nila is 17th from the front of a queue. Omar is 12th from the back and stands four places behind Nila. How many people are in the queue?",
+        "options": [
+          "28",
+          "31",
+          "32",
+          "33"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Omar is 21st from the front. Add 21 and 12 and subtract one because Omar is counted twice.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-90",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Ranking and swaps",
+        "question": "M is 8th from the left in a row of 27. N is 6th from the right. After M and N swap, what is M’s rank from the left?",
+        "options": [
+          "20th",
+          "21st",
+          "22nd",
+          "23rd"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "N’s original position from the left is 27−6+1 = 22. M moves there.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-91",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Directions and displacement",
+        "question": "A person walks 8 m east, 6 m north, 2 m west and 1 m south. In which direction is the final point from the start?",
+        "options": [
+          "North-west",
+          "North-east",
+          "South-east",
+          "East"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The net displacement is 6 m east and 5 m north, in the north-east quadrant.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-92",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Letter operations",
+        "question": "If letters in STATION are written in alphabetical order, which letter is third from the right?",
+        "options": [
+          "N",
+          "O",
+          "S",
+          "T"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The ordering is A, I, N, O, S, T, T. Third from the right is S.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-93",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Arrangement",
+        "question": "Five files P, Q, R, S, T are placed in a row. P is before Q, R is immediately after S, and T is first. Q is last. Which file must be fourth if P is second?",
+        "options": [
+          "P",
+          "R",
+          "S",
+          "Q"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "T and Q occupy the ends and P is second. The consecutive pair S–R fills slots three and four.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-94",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Arrangement",
+        "question": "A sits immediately to the left of B. Two people sit between B and E, with E to B’s right. C sits immediately to the right of B. In a row of five occupied entirely by A–E, who sits immediately left of E?",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The positions are forced to A, B, C, D, E.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-95",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Analogies",
+        "question": "Choose the pair following the same rule as 13:170, where the second number is one more than the square of the first.",
+        "options": [
+          "16:257",
+          "14:195",
+          "15:225",
+          "17:288"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Sixteen squared is 256, and adding one gives 257.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-96",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Counting arrangements",
+        "question": "Four files P, Q, R and S are placed in a line. P must precede Q, and R must precede S. How many orders are possible?",
+        "options": [
+          "4",
+          "8",
+          "12",
+          "6"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Choose the two positions for P and Q in 4 choose 2 ways. The remaining positions are filled by R then S.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-97",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Relative ordering",
+        "question": "K is taller than M but shorter than P. Q is shorter than P and taller than K. Of P, Q, K and M, who is second tallest?",
+        "options": [
+          "Q",
+          "K",
+          "M",
+          "P"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The clues give the strict order P, Q, K, M from tallest to shortest.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-98",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Number mapping",
+        "question": "A mapping sends 12 to 6 and 23 to 14 by adding one to the sum of the squares of its digits. What does it send 34 to?",
+        "options": [
+          "24",
+          "25",
+          "26",
+          "27"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "For 34, the rule gives 3²+4²+1 = 26.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-99",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Series of ratios",
+        "question": "Find the next number in 4, 12, 24, 72, 144, …",
+        "options": [
+          "216",
+          "432",
+          "288",
+          "576"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The multipliers alternate between three and two. The next operation is ×3.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model2-100",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Reverse coding",
+        "question": "A code substitutes every letter with its alphabetic mirror, so A becomes Z and B becomes Y. What word is encoded as GIRK?",
+        "options": [
+          "TRIK",
+          "SRIP",
+          "TRIP",
+          "TRJP"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The inverse mirror substitutions give G→T, I→R, R→I and K→P.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      }
+    ]
+  },
+  {
+    "title": "RRB Station Master CBT · Practice model 3",
+    "category": "Model paper",
+    "provenance": "GateLabs original practice material",
+    "note": "Full-length CBT practice with multi-step maths and science, shared data sets, English comprehension and reasoning. Uses the indicative 30/30/20/20 breakdown of CEN 08/2026.",
+    "questions": [
+      {
+        "id": "rrb-model3-1",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Concentration",
+        "question": "A 40 L tank contains a well-mixed 30% solution. Ten litres are removed and replaced by 10 L of a 50% solution. What is the final concentration?",
+        "options": [
+          "35%",
+          "32.5%",
+          "37.5%",
+          "40%"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The remaining 30 L contains 9 L of solute. The replacement adds 5 L, giving 14 L in 40 L.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-2",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Successive percentages",
+        "question": "A town’s annual ridership increases by 25% one year and falls by 16% the next year. What is the net change over the two years?",
+        "options": [
+          "9% increase",
+          "4% increase",
+          "5% decrease",
+          "5% increase"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The factors multiply: 1.25×0.84 = 1.05.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-3",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Combined averages",
+        "question": "A small depot handles 60 consignments with mean processing time 12 minutes and a larger depot handles 90 with mean time 20 minutes. Nine consignments at the larger depot took 10 minutes each and are excluded. What is the mean processing time of the remaining 141 consignments to two decimal places?",
+        "options": [
+          "17.23 min",
+          "16.80 min",
+          "17.48 min",
+          "18.43 min"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The adjusted total is 60×12+90×20−9×10 = 2,430 minutes, and 2,430/141 ≈ 17.23.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-4",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Time and work",
+        "question": "A pipe can fill a tank in 12 hours. A leak can empty the full tank in 18 hours. At constant rates, how long will the pipe take to fill the remaining two-thirds of the tank with the leak open?",
+        "options": [
+          "24 h",
+          "18 h",
+          "30 h",
+          "36 h"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The net rate is 1/12−1/18 = 1/36 tank per hour. Filling two-thirds takes (2/3)×36 hours.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-5",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Relative speed",
+        "question": "Two runners start together on a 360 m circular track and run in opposite directions at constant speeds of 5 m/s and 7 m/s. How long after starting do they first meet again?",
+        "options": [
+          "36 s",
+          "60 s",
+          "30 s",
+          "180 s"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The two runners together cover one lap at a combined speed of 12 m/s. Divide 360 by 12.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-6",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Train lengths and speeds",
+        "question": "Two trains 180 m and 220 m long move towards each other at 54 and 90 km/h. How long do they take to pass each other completely, starting when the fronts meet?",
+        "options": [
+          "8 s",
+          "10 s",
+          "12 s",
+          "16 s"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The closing speed is 144 km/h = 40 m/s. Both lengths, totalling 400 m, must pass.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-7",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Profit and loss",
+        "question": "A supplier sells two items for ₹960 each. On one it gains 20% and on the other it loses 20%. What is its overall result?",
+        "options": [
+          "Break-even",
+          "4% profit",
+          "4% loss",
+          "8% loss"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The cost prices are ₹800 and ₹1,200, totalling ₹2,000. The ₹1,920 received is 4% lower.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-8",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Linear equations",
+        "question": "An older sibling is 6 years older than a younger sibling. Four years ago the older sibling was twice the age of the younger one. What is the sum of their current ages?",
+        "options": [
+          "22 years",
+          "24 years",
+          "26 years",
+          "30 years"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "If the younger sibling is x, then x+2 = 2(x−4), so x = 10. Their current ages sum to 26.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-9",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Arithmetic progressions",
+        "question": "A hall has 16 rows. The first has 12 seats, and each successive row has 7 more seats than the previous one. How many seats are in the hall?",
+        "options": [
+          "960",
+          "1,024",
+          "1,032",
+          "1,088"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The last row has 12+15×7 = 117 seats. Multiply the average of the first and last rows by 16.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-10",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Remainders",
+        "question": "What is the remainder when 2 to the ninth power multiplied by 3 to the fifth power is divided by 7?",
+        "options": [
+          "1",
+          "3",
+          "5",
+          "6"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Since 2³ leaves remainder 1, so does 2⁹. The remainder of 3⁵ is 5 because 3²≡2 and 3⁴≡4 modulo 7.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-11",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Die probability",
+        "question": "Two fair dice are rolled. What is the probability that their sum is 9 or that both dice show the same number?",
+        "options": [
+          "1/6",
+          "7/36",
+          "11/36",
+          "5/18"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Four ordered outcomes sum to 9 and six are doubles. The two events are disjoint, giving 10/36.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-12",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Complementary probability",
+        "question": "A bag holds 3 white and 5 black counters. Two counters are drawn independently with replacement. What is the probability of drawing at least one white counter?",
+        "options": [
+          "15/32",
+          "39/64",
+          "3/8",
+          "55/64"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The probability of two black draws is (5/8)² = 25/64. Subtract it from one.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-13",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Similar triangles",
+        "question": "At the same moment on level ground, a vertical 1.6 m post casts a 2.4 m shadow and a tower casts an 18 m shadow. What is the tower’s height?",
+        "options": [
+          "12 m",
+          "10 m",
+          "15 m",
+          "27 m"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The height-to-shadow ratio is shared because the sun’s elevation is the same. Multiply 18 by 1.6/2.4.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-14",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Combined areas",
+        "question": "In an 8 m square, a quarter circle of radius 4 m is drawn inside each corner. The quarter circles touch without overlapping. What area lies outside all four sectors?",
+        "options": [
+          "64−16π m²",
+          "64−8π m²",
+          "64−32π m²",
+          "32−16π m²"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Four quarter circles make one complete radius-4 circle, of area 16π m². Subtract it from 64 m².",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-15",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Flow and volume",
+        "question": "Water fills a pipe of radius 2 cm and moves at 25 m/min. At what rate is water delivered in litres per minute?",
+        "options": [
+          "4π",
+          "25π",
+          "100π",
+          "10π"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The cross-section is 4π cm² and the speed is 2,500 cm/min. The resulting 10,000π cm³/min is 10π L/min.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-16",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Median and outliers",
+        "question": "A dataset is 4, 7, 9, 12, 13 and 15. If the largest value is changed to 45, by how much do the mean and median increase respectively?",
+        "options": [
+          "5 and 5",
+          "6 and 0",
+          "6 and 3",
+          "5 and 0"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The total increases by 30 across six values. The middle two observations remain 9 and 12.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-17",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Derived units",
+        "question": "Which expression gives the SI unit of pressure in terms of kilograms, metres and seconds?",
+        "options": [
+          "kg·m/s²",
+          "kg·m²/s²",
+          "kg/(m·s²)",
+          "kg/(m²·s)"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Pressure is force divided by area. Dividing kg·m/s² by m² gives kg/(m·s²).",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-18",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Heat exchange",
+        "question": "In an insulated vessel, 200 g of water at 70°C is mixed with 300 g of water at 20°C. Neglect the heat capacity of the vessel. What is the equilibrium temperature?",
+        "options": [
+          "40°C",
+          "35°C",
+          "45°C",
+          "50°C"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Equal specific heats make the final temperature the mass-weighted average: (200×70+300×20)/500.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-19",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Heat capacity",
+        "question": "Two blocks of equal mass receive the same amount of heat. Block X warms up by 18°C and block Y by 12°C, with no heat losses. What is the ratio of X’s specific heat capacity to Y’s?",
+        "options": [
+          "2:3",
+          "3:2",
+          "4:9",
+          "1:1"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Specific heat capacity is inversely proportional to the rise when added heat and mass are the same.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-20",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Series circuits",
+        "question": "A 4 Ω resistor and an 8 Ω resistor are in series across an ideal 24 V source. What power is dissipated in the 8 Ω resistor?",
+        "options": [
+          "16 W",
+          "48 W",
+          "32 W",
+          "72 W"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The circuit current is 24/(4+8) = 2 A. The 8 Ω resistor dissipates I²R = 32 W.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-21",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Energy cost",
+        "question": "A 1.2 kW appliance operates for 45 minutes each day for 20 days. At ₹7.50 per kWh, what is its energy cost?",
+        "options": [
+          "₹120",
+          "₹150",
+          "₹135",
+          "₹180"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The energy used is 1.2×0.75×20 = 18 kWh, costing 18×7.50.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-22",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Kinetic friction",
+        "question": "A 20 kg box slides along a level floor with coefficient of kinetic friction 0.25. With g = 10 m/s², how much work does friction do while the box moves 6 m?",
+        "options": [
+          "−300 J",
+          "−50 J",
+          "+300 J",
+          "−1,200 J"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The friction force is 0.25×200 = 50 N. Its work is negative because it opposes the 6 m displacement.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-23",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Net work and motion",
+        "question": "A 2 kg cart moves at 4 m/s. A net force transfers another 20 J of energy into its kinetic energy. What is the new speed?",
+        "options": [
+          "5 m/s",
+          "8 m/s",
+          "9 m/s",
+          "6 m/s"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Initial kinetic energy is 16 J. The new kinetic energy is 36 J and equals v² for a 2 kg cart.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-24",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Specific power",
+        "question": "Two identical loads are lifted the same vertical distance at constant speed. Motor A takes 24 s and motor B takes 18 s. What is the ratio of B’s useful power to A’s useful power?",
+        "options": [
+          "3:4",
+          "7:6",
+          "4:3",
+          "1:1"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The work is the same, so the power ratio is the inverse time ratio 24:18.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-25",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Mechanical advantage",
+        "question": "A real machine lifts a 360 N load by 0.8 m while its input point moves 3 m. If its efficiency is 80%, what input force is needed along the motion?",
+        "options": [
+          "96 N",
+          "108 N",
+          "120 N",
+          "144 N"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The useful work is 288 J. Input work is 288/0.8 = 360 J, requiring 120 N over 3 m.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-26",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Density and dimensions",
+        "question": "A rectangular metal block measures 10 cm by 5 cm by 4 cm. A 2 cm by 5 cm by 4 cm piece is cut out. The density is 7.5 g/cm³. What is the remaining mass?",
+        "options": [
+          "1.0 kg",
+          "1.2 kg",
+          "1.4 kg",
+          "1.5 kg"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Volume falls from 200 to 160 cm³. Multiply by 7.5 g/cm³ to get 1,200 g.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-27",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Speed and travel time",
+        "question": "A trolley covers 30 m in the first 5 s and 24 m in the next 3 s. What is its average speed over the full motion?",
+        "options": [
+          "6.5 m/s",
+          "6.75 m/s",
+          "7.0 m/s",
+          "7.25 m/s"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The total distance is 54 m in 8 s, giving 54/8 = 6.75 m/s.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-28",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Electrical power comparison",
+        "question": "Two resistors of 6 Ω and 12 Ω are connected in parallel to an ideal source. What is the ratio of their dissipated powers, 6 Ω to 12 Ω?",
+        "options": [
+          "1:2",
+          "2:1",
+          "1:1",
+          "4:1"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Their voltages are equal. Power is V²/R, so the 6 Ω resistor dissipates twice the power.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-29",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Thermal expansion",
+        "question": "A 2.0 m rail expands by 0.024 mm per degree Celsius over the temperature range considered. How long is it after a 50°C rise?",
+        "options": [
+          "2.00012 m",
+          "2.012 m",
+          "2.0012 m",
+          "2.12 m"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The increase is 0.024×50 = 1.2 mm or 0.0012 m.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-30",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Lever equilibrium",
+        "question": "A 120 N load is 0.30 m to the left of a frictionless pivot. A second 60 N load is 0.20 m to the right. How far to the right must an additional 80 N load be placed to balance the lever?",
+        "options": [
+          "0.20 m",
+          "0.36 m",
+          "0.30 m",
+          "0.45 m"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The left moment is 36 N·m and the existing right moment is 12 N·m. The remaining 24 N·m requires a 0.30 m arm for 80 N.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-31",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Actual versus target",
+        "question": "Which unit recorded the largest absolute gain in actual output from period 1 to period 2?",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Actual output changes by +45, −12, +20 and +40 for A, B, C and D respectively.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Unit | Period 1 target | % attained | Period 2 target | % attained\nA | 150 | 60 | 180 | 75\nB | 200 | 70 | 160 | 80\nC | 120 | 75 | 200 | 55\nD | 160 | 50 | 150 | 80"
+      },
+      {
+        "id": "rrb-model3-32",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Percentage growth",
+        "question": "By what percentage did total actual output grow from period 1 to period 2?",
+        "options": [
+          "23.25%",
+          "20.00%",
+          "21.50%",
+          "24.50%"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The actual totals are 400 and 493 units, so the growth is 93/400 = 23.25%.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Unit | Period 1 target | % attained | Period 2 target | % attained\nA | 150 | 60 | 180 | 75\nB | 200 | 70 | 160 | 80\nC | 120 | 75 | 200 | 55\nD | 160 | 50 | 150 | 80"
+      },
+      {
+        "id": "rrb-model3-33",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Weighted attainment",
+        "question": "What percentage of the combined target did all units attain in period 2, to two decimal places?",
+        "options": [
+          "72.50%",
+          "73.00%",
+          "71.45%",
+          "74.70%"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Total output is 493 and the combined target is 690. The required percentage is 100×493/690.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Unit | Period 1 target | % attained | Period 2 target | % attained\nA | 150 | 60 | 180 | 75\nB | 200 | 70 | 160 | 80\nC | 120 | 75 | 200 | 55\nD | 160 | 50 | 150 | 80"
+      },
+      {
+        "id": "rrb-model3-34",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Reconciling indicators",
+        "question": "Which unit increased its actual output even though its target fell?",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "D’s target fell from 160 to 150 while its actual output rose from 80 to 120.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Unit | Period 1 target | % attained | Period 2 target | % attained\nA | 150 | 60 | 180 | 75\nB | 200 | 70 | 160 | 80\nC | 120 | 75 | 200 | 55\nD | 160 | 50 | 150 | 80"
+      },
+      {
+        "id": "rrb-model3-35",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Relative contribution",
+        "question": "What fraction of actual period 2 output came from A and D together?",
+        "options": [
+          "240/493",
+          "255/493",
+          "248/493",
+          "275/493"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Add 135 for A and 120 for D, then divide by the overall actual total of 493.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Unit | Period 1 target | % attained | Period 2 target | % attained\nA | 150 | 60 | 180 | 75\nB | 200 | 70 | 160 | 80\nC | 120 | 75 | 200 | 55\nD | 160 | 50 | 150 | 80"
+      },
+      {
+        "id": "rrb-model3-36",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Scatter plot",
+        "question": "How many plotted observations have a delay strictly greater than the overall mean delay?",
+        "options": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The six delays total 75, so the mean is 12.5. Delays 14, 15 and 19 exceed it.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "figure": {
+          "type": "scatter",
+          "labels": [
+            "10",
+            "15",
+            "20",
+            "25",
+            "30",
+            "35"
+          ],
+          "values": [
+            6,
+            12,
+            9,
+            15,
+            14,
+            19
+          ],
+          "title": "Traffic observations (horizontal) and delay in minutes (vertical)"
+        }
+      },
+      {
+        "id": "rrb-model3-37",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Subset median",
+        "question": "If the observations at traffic levels 10 and 35 are removed, what is the median of the remaining delays?",
+        "options": [
+          "12 min",
+          "12.5 min",
+          "14 min",
+          "13 min"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The remaining delays sort to 9, 12, 14 and 15. Average the middle two.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "figure": {
+          "type": "scatter",
+          "labels": [
+            "10",
+            "15",
+            "20",
+            "25",
+            "30",
+            "35"
+          ],
+          "values": [
+            6,
+            12,
+            9,
+            15,
+            14,
+            19
+          ],
+          "title": "Traffic observations (horizontal) and delay in minutes (vertical)"
+        }
+      },
+      {
+        "id": "rrb-model3-38",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Variation",
+        "question": "What is the range of delays in the observations with traffic of at least 25?",
+        "options": [
+          "4 min",
+          "5 min",
+          "6 min",
+          "9 min"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The relevant delays are 15, 14 and 19. The range is 19−14.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "figure": {
+          "type": "scatter",
+          "labels": [
+            "10",
+            "15",
+            "20",
+            "25",
+            "30",
+            "35"
+          ],
+          "values": [
+            6,
+            12,
+            9,
+            15,
+            14,
+            19
+          ],
+          "title": "Traffic observations (horizontal) and delay in minutes (vertical)"
+        }
+      },
+      {
+        "id": "rrb-model3-39",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Ordered observations",
+        "question": "When traffic increases across the plotted observations in ascending order, at which two transitions does delay fall?",
+        "options": [
+          "10 to 15 and 20 to 25",
+          "15 to 20 and 25 to 30",
+          "20 to 25 and 25 to 30",
+          "15 to 20 and 30 to 35"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Delay falls from 12 to 9 and from 15 to 14 at those transitions.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "figure": {
+          "type": "scatter",
+          "labels": [
+            "10",
+            "15",
+            "20",
+            "25",
+            "30",
+            "35"
+          ],
+          "values": [
+            6,
+            12,
+            9,
+            15,
+            14,
+            19
+          ],
+          "title": "Traffic observations (horizontal) and delay in minutes (vertical)"
+        }
+      },
+      {
+        "id": "rrb-model3-40",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Comparing means",
+        "question": "How much higher is the mean delay for traffic levels 25 and above than for traffic levels below 25?",
+        "options": [
+          "5 min",
+          "8 min",
+          "9 min",
+          "7 min"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The low-traffic mean is (6+12+9)/3 = 9, and the high-traffic mean is (15+14+19)/3 = 16.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "figure": {
+          "type": "scatter",
+          "labels": [
+            "10",
+            "15",
+            "20",
+            "25",
+            "30",
+            "35"
+          ],
+          "values": [
+            6,
+            12,
+            9,
+            15,
+            14,
+            19
+          ],
+          "title": "Traffic observations (horizontal) and delay in minutes (vertical)"
+        }
+      },
+      {
+        "id": "rrb-model3-41",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Three-set union",
+        "question": "How many surveyed workers attended none of the courses?",
+        "options": [
+          "23",
+          "12",
+          "35",
+          "47"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The union is 78+70+65−35−28−25+12 = 137. Subtract from 160.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "160 workers were surveyed. Course attendance: A = 78, B = 70, C = 65.\nPairs including anyone who attended all three: A and B = 35, B and C = 28, A and C = 25.\nAll three = 12."
+      },
+      {
+        "id": "rrb-model3-42",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Exactly two sets",
+        "question": "How many workers attended exactly two of the courses?",
+        "options": [
+          "40",
+          "64",
+          "76",
+          "52"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The sum of pair counts is 88 and counts the triple intersection three times. Subtract 36 to get 52.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "160 workers were surveyed. Course attendance: A = 78, B = 70, C = 65.\nPairs including anyone who attended all three: A and B = 35, B and C = 28, A and C = 25.\nAll three = 12."
+      },
+      {
+        "id": "rrb-model3-43",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Exactly one set",
+        "question": "How many workers attended exactly one course?",
+        "options": [
+          "61",
+          "85",
+          "73",
+          "97"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The union of 137 consists of exactly one, exactly two and exactly three. Subtract 52 and 12.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "160 workers were surveyed. Course attendance: A = 78, B = 70, C = 65.\nPairs including anyone who attended all three: A and B = 35, B and C = 28, A and C = 25.\nAll three = 12."
+      },
+      {
+        "id": "rrb-model3-44",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Conditional proportion",
+        "question": "Among workers who attended course A, what fraction also attended course B?",
+        "options": [
+          "23/78",
+          "35/70",
+          "12/78",
+          "35/78"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The inclusive A-and-B count is 35 out of the 78 A attendees.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "160 workers were surveyed. Course attendance: A = 78, B = 70, C = 65.\nPairs including anyone who attended all three: A and B = 35, B and C = 28, A and C = 25.\nAll three = 12."
+      },
+      {
+        "id": "rrb-model3-45",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "One set only",
+        "question": "How many workers attended B but neither A nor C?",
+        "options": [
+          "19",
+          "7",
+          "31",
+          "47"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Subtract the two overlaps from 70 and add back the triple intersection, which was subtracted twice.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "160 workers were surveyed. Course attendance: A = 78, B = 70, C = 65.\nPairs including anyone who attended all three: A and B = 35, B and C = 28, A and C = 25.\nAll three = 12."
+      },
+      {
+        "id": "rrb-model3-46",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Weighted consumption",
+        "question": "What was the mean waiting time across all recorded observations?",
+        "options": [
+          "14.4 min",
+          "13.8 min",
+          "14.8 min",
+          "15.0 min"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The weighted sum is 5×4+10×5+15×8+20×6+25×2 = 360. Divide by 25.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Waiting time (min) | Observations\n5 | 4\n10 | 5\n15 | 8\n20 | 6\n25 | 2"
+      },
+      {
+        "id": "rrb-model3-47",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Subset mean",
+        "question": "What was the average of the waits of at least 20 minutes?",
+        "options": [
+          "20.50 min",
+          "21.25 min",
+          "22.50 min",
+          "23.75 min"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The eight waits in the subgroup total 20×6+25×2 = 170 minutes. Divide by eight.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Waiting time (min) | Observations\n5 | 4\n10 | 5\n15 | 8\n20 | 6\n25 | 2"
+      },
+      {
+        "id": "rrb-model3-48",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Additional records",
+        "question": "One wait is added and the overall mean becomes 15 minutes. What was the recorded length of the additional wait?",
+        "options": [
+          "30 min",
+          "24 min",
+          "25 min",
+          "35 min"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The adjusted total must be 26×15 = 390. The original total was 360.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Waiting time (min) | Observations\n5 | 4\n10 | 5\n15 | 8\n20 | 6\n25 | 2"
+      },
+      {
+        "id": "rrb-model3-49",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Median update",
+        "question": "If the four shortest observations are removed, what is the median of the remaining waits?",
+        "options": [
+          "15 min",
+          "10 min",
+          "17.5 min",
+          "20 min"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The remaining 21 observations have five waits of 10 and eight of 15. The 11th is therefore 15.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Waiting time (min) | Observations\n5 | 4\n10 | 5\n15 | 8\n20 | 6\n25 | 2"
+      },
+      {
+        "id": "rrb-model3-50",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Tail probability",
+        "question": "If one of the original records is drawn uniformly at random, what is the probability it shows a wait exceeding 15 minutes?",
+        "options": [
+          "6/25",
+          "9/25",
+          "16/25",
+          "8/25"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "There are six observations at 20 minutes and two at 25 minutes out of 25.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Waiting time (min) | Observations\n5 | 4\n10 | 5\n15 | 8\n20 | 6\n25 | 2"
+      },
+      {
+        "id": "rrb-model3-51",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Pie chart percentages",
+        "question": "What percentage of the operating budget was used on wages and track work together?",
+        "options": [
+          "45%",
+          "52.5%",
+          "60%",
+          "55%"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Wages and track work account for 144°+54° = 198° of 360°, which is 55%.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Total operating budget: ₹12 lakh.",
+        "figure": {
+          "type": "pie",
+          "labels": [
+            "Wages",
+            "Energy",
+            "Track work",
+            "Passenger services",
+            "Other"
+          ],
+          "values": [
+            144,
+            90,
+            54,
+            45,
+            27
+          ],
+          "title": "Operating budget (sector angles in degrees)"
+        }
+      },
+      {
+        "id": "rrb-model3-52",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Chart to amount",
+        "question": "How much was allocated to energy?",
+        "options": [
+          "₹2.4 lakh",
+          "₹3.6 lakh",
+          "₹3 lakh",
+          "₹4 lakh"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The 90° energy sector is one quarter of the ₹12 lakh budget.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Total operating budget: ₹12 lakh.",
+        "figure": {
+          "type": "pie",
+          "labels": [
+            "Wages",
+            "Energy",
+            "Track work",
+            "Passenger services",
+            "Other"
+          ],
+          "values": [
+            144,
+            90,
+            54,
+            45,
+            27
+          ],
+          "title": "Operating budget (sector angles in degrees)"
+        }
+      },
+      {
+        "id": "rrb-model3-53",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Budget reallocation",
+        "question": "If ₹0.6 lakh is transferred from energy to passenger services, what angle represents energy after the transfer?",
+        "options": [
+          "66°",
+          "72°",
+          "75°",
+          "84°"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Energy becomes ₹2.4 lakh. The total is still ₹12 lakh, giving a 72° angle.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Total operating budget: ₹12 lakh.",
+        "figure": {
+          "type": "pie",
+          "labels": [
+            "Wages",
+            "Energy",
+            "Track work",
+            "Passenger services",
+            "Other"
+          ],
+          "values": [
+            144,
+            90,
+            54,
+            45,
+            27
+          ],
+          "title": "Operating budget (sector angles in degrees)"
+        }
+      },
+      {
+        "id": "rrb-model3-54",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Different denominators",
+        "question": "If the budget next year is 25% higher and the rupee allocation for track work stays unchanged, what percentage of the new budget goes to track work?",
+        "options": [
+          "10%",
+          "12%",
+          "15%",
+          "18.75%"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Track work is 15% of the old total. Divide its fixed share of the old denominator by 1.25, giving 12% of the new total.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Total operating budget: ₹12 lakh.",
+        "figure": {
+          "type": "pie",
+          "labels": [
+            "Wages",
+            "Energy",
+            "Track work",
+            "Passenger services",
+            "Other"
+          ],
+          "values": [
+            144,
+            90,
+            54,
+            45,
+            27
+          ],
+          "title": "Operating budget (sector angles in degrees)"
+        }
+      },
+      {
+        "id": "rrb-model3-55",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Comparison of sectors",
+        "question": "By what percentage does the wage amount exceed the combined amounts for passenger services and other costs?",
+        "options": [
+          "50%",
+          "75%",
+          "100%",
+          "120%"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Wages span 144°. The two comparison sectors span 45°+27° = 72°. Wages are double, hence 100% greater.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Total operating budget: ₹12 lakh.",
+        "figure": {
+          "type": "pie",
+          "labels": [
+            "Wages",
+            "Energy",
+            "Track work",
+            "Passenger services",
+            "Other"
+          ],
+          "values": [
+            144,
+            90,
+            54,
+            45,
+            27
+          ],
+          "title": "Operating budget (sector angles in degrees)"
+        }
+      },
+      {
+        "id": "rrb-model3-56",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Data sufficiency",
+        "question": "Three counters A, B and C collect ₹9,600 in total. How much does A collect? I: A collects the same amount as B. II: C collects ₹2,400.",
+        "options": [
+          "I alone is sufficient",
+          "Both are needed",
+          "II alone is sufficient",
+          "Both together are insufficient"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Statement II gives A+B = ₹7,200, and I makes the split equal. Neither statement alone fixes A.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-57",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Data sufficiency",
+        "question": "Is the combined punctuality rate of two stations above 80%? I: Each station’s rate exceeds 80%. II: They have equal departure counts.",
+        "options": [
+          "II alone is sufficient",
+          "Both are needed",
+          "I alone is sufficient",
+          "Both together are insufficient"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "A weighted average of two rates above 80% is above 80%. Equal counts alone give no rate information.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-58",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Data sufficiency",
+        "question": "What is station X’s passenger count? I: X accounts for 40% of the three stations’ passengers. II: Station Y served 120 passengers.",
+        "options": [
+          "I alone is sufficient",
+          "II alone is sufficient",
+          "Both are needed",
+          "Both together are insufficient"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Y’s count alone does not fix the combined count because Z’s count is unknown. The 40% share cannot yet give a unique count.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-59",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Recording an order",
+        "question": "Four counters A, B, C and D sold 40, 50, 60 and 70 tickets in some order. A sold 20 more than D, C sold more than B, and C did not sell 70. How many tickets did D sell?",
+        "options": [
+          "40",
+          "50",
+          "60",
+          "70"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "If A and D were 60 and 40, C would have to take 70 to exceed B. Therefore A and D are 70 and 50.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-60",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Bounds and inferred data",
+        "question": "The mean of four positive integer counts is 18. The largest is 26, the smallest is 10, and the other two differ by 4. What is the second largest count?",
+        "options": [
+          "16",
+          "18",
+          "20",
+          "22"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The middle counts sum to 4×18−26−10 = 36. Two numbers with sum 36 and difference 4 are 16 and 20.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-61",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Syllogisms",
+        "question": "Every service is classified as delayed or on time. No delayed service was assigned platform 1. Some services assigned platform 1 were express. Which conclusion follows?",
+        "options": [
+          "Some express services were on time.",
+          "No express service was delayed.",
+          "Every express service used platform 1.",
+          "No on-time service used a different platform."
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The platform 1 expresses cannot be delayed. Under the two-way classification they were on time.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-62",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Negating a statement",
+        "question": "Which statement negates “Every parcel is checked and labelled”?",
+        "options": [
+          "Every parcel is unchecked and unlabelled.",
+          "At least one parcel is checked and labelled.",
+          "No parcel is checked unless it is labelled.",
+          "At least one parcel is unchecked or unlabelled."
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "One parcel failing either requirement is sufficient to make the universal statement false.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-63",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Binary logic",
+        "question": "A lamp lights when exactly one of switches P and Q is closed. The lamp is dark while Q is open. What must be true?",
+        "options": [
+          "P is open.",
+          "P is closed.",
+          "P and Q are closed.",
+          "P may be either open or closed."
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "If P were closed with Q open, exactly one switch would be closed and the lamp would light.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-64",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Clocks",
+        "question": "When between 2:00 and 3:00 do the clock hands first coincide?",
+        "options": [
+          "2:10 exactly",
+          "2:11 and 1/11 min",
+          "2:10 and 10/11 min",
+          "2:12 exactly"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The hour hand starts 60° ahead. The minute hand gains 5.5° per minute. The time required is 60/5.5 = 120/11 minutes.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-65",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Calendars",
+        "question": "In a non-leap year 1 February falls on Friday. What day is 1 May?",
+        "options": [
+          "Wednesday",
+          "Monday",
+          "Thursday",
+          "Friday"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The February, March and April lengths sum to 28+31+30 = 89 days. The remainder modulo 7 is five, shifting Friday to Wednesday.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-66",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Family trees",
+        "question": "Asha is the mother of siblings Bhanu and Chitra. Dev is Chitra’s son and Esha is Bhanu’s daughter. How are Dev and Esha related?",
+        "options": [
+          "Siblings",
+          "Second cousins",
+          "Uncle and niece",
+          "First cousins"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Their parents are siblings, so they are first cousins.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-67",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Necessary assumptions",
+        "question": "A depot opts to add an online timetable to reduce calls asking when services leave. Which assumption is necessary for this reasoning?",
+        "options": [
+          "Some callers can access the timetable instead of calling.",
+          "Every caller owns the same type of phone.",
+          "The depot will abolish telephone support.",
+          "Call volumes never change for other reasons."
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "To replace some timetable calls, the online service needs to be usable by at least some of those callers.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-68",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Evaluating evidence",
+        "question": "A pilot programme claims that a new sign cut walking time to exits. Which fact most weakens the claim?",
+        "options": [
+          "The sign used a new font and larger lettering.",
+          "The pilot recorded times for similar numbers of passengers before and after.",
+          "A temporary shortcut opened alongside the new sign and closed after the pilot.",
+          "Some passengers used an exit on the opposite side."
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "A shortcut introduced at the same time could cut walking time without the sign having any effect.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-69",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Constraints",
+        "question": "Exactly two of four routes P, Q, R and S will operate. P can operate only with Q. R and Q cannot operate together. Which pair is possible?",
+        "options": [
+          "P and S",
+          "P and R",
+          "R and S",
+          "Q and R"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Only R and S avoid both a missing prerequisite for P and the Q–R conflict.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-70",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Truth and lies",
+        "question": "Exactly one of three boxes A, B and C contains a token. The labels are A: “The token is in C.” B: “The token is not in A.” C: “The token is not in C.” Exactly two labels are true. Which conclusion follows?",
+        "options": [
+          "The token must be in A.",
+          "The token must be in B.",
+          "The token is in B or C.",
+          "The token must be in C."
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The labels on A and C are complements, so precisely one is true. B’s label must also be true, excluding box A.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-71",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Reading comprehension",
+        "question": "What flaw did the revised river survey aim to correct?",
+        "options": [
+          "The sampling site was too close to the town.",
+          "The volunteers measured water quality instead of river height.",
+          "Sampling only after clear weather missed the period of greatest short-term change.",
+          "The samples were taken downstream of every drain."
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The revised sampling period captures short-lived pulses that fair-weather measurements tend to miss.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "passage": "A river survey relied on a weekly sample, usually taken after several clear days. Residents reported that water looked different immediately after storms. Researchers kept the weekly record as a baseline and added readings during the first hours after heavy rain. The extra measurements captured short-lived pulses that routine visits had missed. The readings showed when changes occurred downstream. Identifying a specific drain as the source would require additional upstream sites."
+      },
+      {
+        "id": "rrb-model3-72",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Reading comprehension",
+        "question": "Why did the researchers keep the original weekly counts?",
+        "options": [
+          "They prove no short pulses occur.",
+          "They provide a baseline for comparing storm-period readings with typical conditions.",
+          "They record the same information as the storm measurements.",
+          "They allow the researchers to stop sampling after rain."
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Regular weekly data characterize ordinary conditions, making comparison with storm data possible.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "passage": "A river survey relied on a weekly sample, usually taken after several clear days. Residents reported that water looked different immediately after storms. Researchers kept the weekly record as a baseline and added readings during the first hours after heavy rain. The extra measurements captured short-lived pulses that routine visits had missed. The readings showed when changes occurred downstream. Identifying a specific drain as the source would require additional upstream sites."
+      },
+      {
+        "id": "rrb-model3-73",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Reading comprehension",
+        "question": "Which policy is best supported by the methodology described?",
+        "options": [
+          "Drop routine monitoring when storm equipment arrives.",
+          "Judge the river exclusively by its clearest reading.",
+          "Identify each polluting drain from one downstream result.",
+          "Use both routine and storm-period readings before characterising river conditions."
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The study explicitly uses the two methods for different purposes and withholds claims about individual drains.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "passage": "A river survey relied on a weekly sample, usually taken after several clear days. Residents reported that water looked different immediately after storms. Researchers kept the weekly record as a baseline and added readings during the first hours after heavy rain. The extra measurements captured short-lived pulses that routine visits had missed. The readings showed when changes occurred downstream. Identifying a specific drain as the source would require additional upstream sites."
+      },
+      {
+        "id": "rrb-model3-74",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Reading comprehension",
+        "question": "What is meant by “short-lived pulses” in context?",
+        "options": [
+          "Temporary surges that a later reading could miss.",
+          "Regular weekly gaps in the monitoring record.",
+          "Changes in the laboratory’s equipment settings.",
+          "Permanent changes in average weather."
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The spikes occur soon after rain and may subside before ordinary weekly sampling.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "passage": "A river survey relied on a weekly sample, usually taken after several clear days. Residents reported that water looked different immediately after storms. Researchers kept the weekly record as a baseline and added readings during the first hours after heavy rain. The extra measurements captured short-lived pulses that routine visits had missed. The readings showed when changes occurred downstream. Identifying a specific drain as the source would require additional upstream sites."
+      },
+      {
+        "id": "rrb-model3-75",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Reading comprehension",
+        "question": "What limitation do the researchers acknowledge?",
+        "options": [
+          "The new measures cannot detect any change after storms.",
+          "Routine counts reveal the source with certainty.",
+          "Water sampled during rain cannot be analysed.",
+          "The survey can detect a downstream change without identifying the source of each change."
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The final sentence separates detection of changes from attribution to particular drains.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "passage": "A river survey relied on a weekly sample, usually taken after several clear days. Residents reported that water looked different immediately after storms. Researchers kept the weekly record as a baseline and added readings during the first hours after heavy rain. The extra measurements captured short-lived pulses that routine visits had missed. The readings showed when changes occurred downstream. Identifying a specific drain as the source would require additional upstream sites."
+      },
+      {
+        "id": "rrb-model3-76",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Reading comprehension",
+        "question": "What is the primary point of the passage?",
+        "options": [
+          "Volunteers could run the library without giving any guidance.",
+          "A fixed opening schedule can complement personal assistance and make attendance more predictable.",
+          "Every resident prefers the library in the evening.",
+          "The library should measure success by book prices."
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The pilot uses a fixed schedule for predictable access and retains volunteer support for first-time visitors.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "passage": "A rural library used to announce its evening opening times week by week. It began a trial with fixed evenings so readers could plan their visits. Volunteers still helped first-time visitors use the catalogue and borrowing desk. The team counted both first-time and repeat visits, and compared evenings with and without late buses to see whether transport might influence turnout. It planned to review those records before deciding whether to extend the trial."
+      },
+      {
+        "id": "rrb-model3-77",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Reading comprehension",
+        "question": "Why did the team compare attendance on evenings with and without late buses?",
+        "options": [
+          "It had already established that bus services caused the increase.",
+          "Late buses transported only volunteers.",
+          "Bus availability could influence attendance independently of the schedule.",
+          "It wished to estimate library visits at lunchtime."
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The comparison checks whether changes in transport contributed to differences in turnout.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "passage": "A rural library used to announce its evening opening times week by week. It began a trial with fixed evenings so readers could plan their visits. Volunteers still helped first-time visitors use the catalogue and borrowing desk. The team counted both first-time and repeat visits, and compared evenings with and without late buses to see whether transport might influence turnout. It planned to review those records before deciding whether to extend the trial."
+      },
+      {
+        "id": "rrb-model3-78",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Reading comprehension",
+        "question": "Which fact would best support the idea that predictability helped regular visitors?",
+        "options": [
+          "Repeat visits increased on fixed-opening days compared with similar days when opening times varied.",
+          "Visits rose only during a single book fair.",
+          "The same number of readers visited every evening before the change.",
+          "Several late bus routes were cancelled at the same time."
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "An increase in repeat visits concentrated on predictable opening days supports access through a dependable schedule.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "passage": "A rural library used to announce its evening opening times week by week. It began a trial with fixed evenings so readers could plan their visits. Volunteers still helped first-time visitors use the catalogue and borrowing desk. The team counted both first-time and repeat visits, and compared evenings with and without late buses to see whether transport might influence turnout. It planned to review those records before deciding whether to extend the trial."
+      },
+      {
+        "id": "rrb-model3-79",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Reading comprehension",
+        "question": "What does the treatment of first-time visitors indicate?",
+        "options": [
+          "First-time visitors were excluded from the trial.",
+          "Opening hours were changed for each individual reader.",
+          "Only people familiar with the catalogue used the library.",
+          "Some barriers involve learning how to use the library even after opening times are clear."
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The volunteers helped people navigate the library, addressing a difficulty beyond knowing when it opens.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "passage": "A rural library used to announce its evening opening times week by week. It began a trial with fixed evenings so readers could plan their visits. Volunteers still helped first-time visitors use the catalogue and borrowing desk. The team counted both first-time and repeat visits, and compared evenings with and without late buses to see whether transport might influence turnout. It planned to review those records before deciding whether to extend the trial."
+      },
+      {
+        "id": "rrb-model3-80",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Reading comprehension",
+        "question": "Which conclusion would go beyond the evidence given?",
+        "options": [
+          "The team considered access to late buses when comparing turnout.",
+          "The trial retained volunteers to help first-time readers.",
+          "Fixed hours make it easier to predict when the library opens.",
+          "The same policy would increase visits in every village."
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The trial examined one library. Its results do not establish that every village would respond the same way.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "passage": "A rural library used to announce its evening opening times week by week. It began a trial with fixed evenings so readers could plan their visits. Volunteers still helped first-time visitors use the catalogue and borrowing desk. The team counted both first-time and repeat visits, and compared evenings with and without late buses to see whether transport might influence turnout. It planned to review those records before deciding whether to extend the trial."
+      },
+      {
+        "id": "rrb-model3-81",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Second differences",
+        "question": "Complete 5, 12, 23, 38, 57, …",
+        "options": [
+          "80",
+          "76",
+          "78",
+          "82"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The differences are 7, 11, 15 and 19. The next difference is 23.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-82",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Alternating terms",
+        "question": "Complete 3, 15, 6, 13, 12, 11, …",
+        "options": [
+          "9",
+          "18",
+          "24",
+          "22"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The next term is in an odd position, where the sequence doubles: 3, 6, 12, 24.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-83",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Series of operations",
+        "question": "What comes next in 2, 5, 12, 27, 58, …?",
+        "options": [
+          "116",
+          "121",
+          "119",
+          "124"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Double each term and add successive integers starting at 1. The next value is 2×58+5.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-84",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Letter pairs",
+        "question": "What pair follows CL, FK, IJ, LI, …?",
+        "options": [
+          "PH",
+          "OG",
+          "OH",
+          "NH"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "First letters advance by three positions. Second letters move one position back. L→O and I→H give OH.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-85",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Position-based coding",
+        "question": "Shift letters at odd positions forward one step and letters at even positions backward one step. How is TRAIN coded?",
+        "options": [
+          "UQBHM",
+          "UQBHO",
+          "SQBHO",
+          "URBHO"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "T→U, R→Q, A→B, I→H and N→O.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-86",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Decoding",
+        "question": "A word is first reversed and then each letter is advanced two places, wrapping over Z. If the output is GVCT, what was the input?",
+        "options": [
+          "TEAR",
+          "RATE",
+          "TARE",
+          "RAVE"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Shifting back gives ETAR. Reversing gives RATE.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-87",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Code from overlap",
+        "question": "In a code that preserves word order, blue board reads ke ru, blue lamp reads ke fu, and bright lamp reads so fu. What is bright board?",
+        "options": [
+          "ru so",
+          "ke so",
+          "so ru",
+          "ke ru"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Bright corresponds to so and board corresponds to ru.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-88",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Number analogy",
+        "question": "Which pair follows the same rule as 14:196 and 17:289?",
+        "options": [
+          "18:343",
+          "19:361",
+          "21:462",
+          "22:462"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The second number is the square of the first. Nineteen squared is 361.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-89",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Classification",
+        "question": "Which number is the exception to the rule followed by 27, 64, 125 and 200?",
+        "options": [
+          "27",
+          "200",
+          "64",
+          "125"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "27, 64 and 125 are the cubes of 3, 4 and 5. Two hundred is not a perfect cube.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-90",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Analogy with measures",
+        "question": "An hour is to 3,600 seconds as 2.5 minutes is to how many seconds?",
+        "options": [
+          "120",
+          "125",
+          "180",
+          "150"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Multiplying minutes by 60 gives 2.5×60 = 150 seconds.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-91",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Ranks in a queue",
+        "question": "L is 9th from the front of a 28-person queue. M stands six places behind L. What is M’s position from the back?",
+        "options": [
+          "13th",
+          "15th",
+          "14th",
+          "16th"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "M is 15th from the front. Counting from the back gives 28−15+1 = 14.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-92",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Ranking and insertion",
+        "question": "Ami is 10th from the left and 14th from the right in a row. Three people join at the left end and two at the right end. What is Ami’s new position from the right?",
+        "options": [
+          "14th",
+          "15th",
+          "19th",
+          "16th"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Only the two additions at the right end affect Ami’s rank from the right.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-93",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Linear order",
+        "question": "Five seats from left to right are filled by R, S, T, U and V. T is directly between S and U, S is left of U, R is at the far right, and V is left of S. Which person is third?",
+        "options": [
+          "R",
+          "T",
+          "S",
+          "U"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The constraints force V, S, T, U, R. T occupies the middle seat.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-94",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Consecutive pairs",
+        "question": "Six tasks P, Q, R, S, T and U are done one at a time. P is immediately before Q, R is immediately after T, S is first, and U is last. If R comes before Q, which task is fourth?",
+        "options": [
+          "Q",
+          "R",
+          "P",
+          "T"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The middle blocks occur in the order T–R then P–Q. The complete order is S, T, R, P, Q, U.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-95",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Spatial direction",
+        "question": "From a starting point, Sana walks 12 m south and 5 m west. What straight-line distance separates Sana from that starting point?",
+        "options": [
+          "7 m",
+          "15 m",
+          "17 m",
+          "13 m"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The legs are perpendicular so the distance is √(12²+5²) = 13 m.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-96",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Relative rankings",
+        "question": "G scored more than H. H scored more than J. K scored less than G but more than H. L scored more than G. Who placed third from the top among the five?",
+        "options": [
+          "G",
+          "H",
+          "K",
+          "L"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Descending order is L, G, K, H, J.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-97",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Counting orders",
+        "question": "Four tasks K, L, M and N can be done in any order subject to K and L being consecutive in either order. How many schedules satisfy this condition?",
+        "options": [
+          "6",
+          "8",
+          "12",
+          "24"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Treat K and L as a single block to get 3! arrangements. The block has two orientations, yielding 12.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-98",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Letter sorting",
+        "question": "Write PLATFORM in alphabetical order, retaining every letter. Which letter is fifth from the left?",
+        "options": [
+          "P",
+          "M",
+          "R",
+          "O"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The sorted letters are A, F, L, M, O, P, R, T, so the fifth letter is O.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-99",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Arithmetic coding",
+        "question": "A two-digit code replaces a number by twice its units digit plus three times its tens digit. What number does 57 produce?",
+        "options": [
+          "24",
+          "26",
+          "31",
+          "29"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Use 2×7+3×5 = 29.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      },
+      {
+        "id": "rrb-model3-100",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Modular alphabet progression",
+        "question": "Beginning again at A after Z, find the next letter in W, Z, D, I, …",
+        "options": [
+          "O",
+          "N",
+          "P",
+          "Q"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The advances are +3, +4 and +5 with wraparound. Add six to I to obtain O.",
+        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
+      }
+    ]
   }
 ]

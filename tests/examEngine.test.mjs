@@ -50,6 +50,34 @@ test('both original model papers have exact counts, valid keys and explanations'
  assert.equal(scorePaper(id,p.questions,allCorrect).score,p.questions.length);
  }
 });
+test('additional Station Master models are full CBT papers with distinct questions',()=>{
+ const papers=JSON.parse(fs.readFileSync('public/exams/rrb.json'));
+ const [challenge]=JSON.parse(fs.readFileSync('public/exams/challenges/rrb.json'));
+ const [foundation,...newModels]=papers;
+ const ids=new Set([...foundation.questions,...challenge.questions].map(q=>q.id));
+ const stems=new Set([...foundation.questions,...challenge.questions].map(q=>q.question.trim()));
+ assert.deepEqual(newModels.slice(0,2).map(p=>p.title),[
+   'RRB Station Master CBT · Practice model 2','RRB Station Master CBT · Practice model 3'
+ ]);
+ for(const {questions,full} of newModels){
+   assert.notEqual(full,false);
+   assert.deepEqual(validatePaper('rrb',questions,true),[]);
+   assert.equal(questions.filter(q=>q.passage).length,10);
+   assert.ok(questions.some(q=>q.figure?.type==='pie'));
+   for(const q of questions) {
+     assert.ok(q.explanation&&q.source.startsWith('GateLabs original model question'));
+     assert.equal(ids.has(q.id),false);
+     assert.equal(stems.has(q.question.trim()),false);
+     ids.add(q.id);
+     stems.add(q.question.trim());
+   }
+   const allCorrect=Object.fromEntries(questions.map(q=>[q.id,q.correctAnswer]));
+   assert.equal(scorePaper('rrb',questions,allCorrect).score,100);
+   const firstWrong=scorePaper('rrb',questions,{[questions[0].id]:(questions[0].correctAnswer+1)%4});
+   assert.equal(firstWrong.score,-1/3);
+   assert.equal(firstWrong.skippedCount,99);
+ }
+});
 test('parser keeps fifth SBI option and never defaults missing keys to A',()=>{
  const text='subject: English\nquestion: Which?\noption a: A\noption b: B\noption c: C\noption d: D\noption e: E\ncorrect: E';
  assert.equal(parseExamText(text,'sbi')[0].correctAnswer,4);
