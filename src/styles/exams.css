@@ -5,3 +5,71 @@
 .exam-countdown{width:100%}
 
 .exam-card{overflow-wrap:anywhere}
+.cbt-room .cbt-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(15rem, 20rem);
+  gap: 1rem;
+  align-items: start;
+}
+.cbt-room .cbt-question {
+  overflow-wrap: anywhere;
+}
+.cbt-question-meta {
+  color: var(--ws-muted);
+  font-size: .875rem;
+  margin-bottom: .75rem;
+}
+.cbt-question-actions {
+  margin-top: 1rem;
+}
+.cbt-sidebar {
+  display: grid;
+  min-width: 0;
+  gap: 1rem;
+}
+.cbt-room .exam-palette {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(2.5rem, 1fr));
+  gap: .5rem;
+  max-height: 20rem;
+}
+.cbt-room .exam-palette button {
+  min-width: 0;
+}
+.cbt-legend {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .375rem;
+  margin-top: .75rem;
+  font-size: .75rem;
+}
+.cbt-legend span {
+  border-radius: .375rem;
+  padding: .25rem .375rem;
+}
+.cbt-legend .answered {
+  background: #047857;
+  color: white;
+}
+.cbt-room .unanswered {
+  background: #923b16;
+  color: white;
+}
+.cbt-room .review {
+  background: #6b3294;
+  color: white;
+}
+.cbt-legend .unvisited {
+  border: 1px solid var(--ws-border);
+}
+.cbt-room #exam-clock {
+  font-variant-numeric: tabular-nums;
+}
+.cbt-question {
+  scroll-margin-block-start: 8rem;
+}
+@media (max-width: 860px) {
+  .cbt-room .cbt-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

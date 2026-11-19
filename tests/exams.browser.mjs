@@ -23,7 +23,11 @@ await context.route('**/*',async route=>{
 await context.route('**/src/config/firebase*',route=>route.fulfill({contentType:'application/javascript',body:`
 export const auth={currentUser:{uid:'exam-test-user',displayName:'Exam Test',email:'test@example.invalid'},onAuthStateChanged(fn){queueMicrotask(()=>fn(this.currentUser));},signOut:async()=>{}};
 export const SUBJECT_SYLLABUS={};export const isMockMode=true;
-export const db={saveAttempt:async a=>{const key='gate_attempts:exam-test-user';const rows=JSON.parse(localStorage.getItem(key)||'[]');rows.push(a);localStorage.setItem(key,JSON.stringify(rows));return a;},getAttempts:async()=>JSON.parse(localStorage.getItem('gate_attempts:exam-test-user')||'[]'),getBookmarks:async()=>[],getSyllabusProgress:async()=>({}),getQuestions:async()=>[]};
+const gateQuestions=[
+  {id:'gate-nat',year:'2025',subject:'Algorithms',topic:'A',type:'NAT',question:'What is 3 plus 4?',correctNat:7,marks:1},
+  {id:'gate-msq',year:'2025',subject:'Algorithms',topic:'B',type:'MSQ',question:'Select the even numbers.',options:['2','3','4','5'],correctOptions:[0,2],marks:2}
+];
+export const db={saveAttempt:async a=>{const key='gate_attempts:exam-test-user';const rows=JSON.parse(localStorage.getItem(key)||'[]');rows.push(a);localStorage.setItem(key,JSON.stringify(rows));return a;},getAttempts:async()=>JSON.parse(localStorage.getItem('gate_attempts:exam-test-user')||'[]'),getBookmarks:async()=>[],getSyllabusProgress:async()=>({}),getQuestions:async()=>gateQuestions};
 `}));
 const page=await context.newPage();const errors=[];page.on('pageerror',err=>errors.push(err.message));
 page.on('dialog',dialog=>dialog.accept());
@@ -42,6 +46,8 @@ try{
  await page.locator('[data-prep-tab=mocks]').click();
  await page.getByRole('button',{name:'Start full mock'}).first().click();
  await page.getByRole('button',{name:'Begin test',exact:true}).click();
+ assert.equal(await page.locator('[data-cbt-count="unanswered"]').textContent(),'1 unanswered');
+ assert.equal(await page.locator('[data-cbt-count="unvisited"]').textContent(),'149 not visited');
  const [groupPaper]=JSON.parse(fs.readFileSync('public/exams/group2.json'));
  await page.locator(`[data-answer="${groupPaper.questions[0].correctAnswer}"]`).check();
  assert.equal(await page.locator('[data-question="0"]').evaluate(el=>el.classList.contains('answered')),true);
@@ -49,8 +55,10 @@ try{
  await page.getByRole('button',{name:'Save & next',exact:true}).click();
  await page.locator(`[data-answer="${(groupPaper.questions[1].correctAnswer+1)%4}"]`).check();
  await page.getByRole('button',{name:'Mark for review',exact:true}).click();
+ assert.equal(await page.locator('[data-cbt-count="review"]').textContent(),'1 marked for review');
  const deadline=await page.evaluate(()=>JSON.parse(localStorage.getItem('exam-active:exam-test-user')).deadline);
  await page.reload();await page.locator('#exam-clock').waitFor();
+ assert.equal(await page.locator('[data-cbt-count="review"]').textContent(),'1 marked for review');
  assert.equal(await page.evaluate(()=>JSON.parse(localStorage.getItem('exam-active:exam-test-user')).deadline),deadline);
  await page.getByRole('button',{name:'Submit test',exact:true}).click();
  await page.getByRole('heading',{name:'Exam complete',exact:true}).waitFor();
@@ -86,6 +94,7 @@ try{
  assert.match(await page.locator('#exam-clock').innerText(),/120:00|119:5/);
  await page.locator('[data-question="30"]').click();
  await page.locator('.exam-figure svg').waitFor();
+ assert.ok(await page.locator('.cbt-layout').evaluate(el=>el.getBoundingClientRect().right<=innerWidth));
  await page.locator('#exam-root').scrollIntoViewIfNeeded();
  await page.screenshot({path:'artifacts/exams/rrb-chart-mobile.png',fullPage:false});
  await page.evaluate(async()=>{const {MockTest}=await import('/src/pages/ExamRunner.js');MockTest.deadline=Date.now()-1;MockTest.tick();});
@@ -94,16 +103,18 @@ try{
  assert.equal(result.score,0);assert.equal(result.skippedCount,100);
  await page.goto('http://127.0.0.1:3011/#/tet-exams');await page.locator('[data-countdown="tet"]').waitFor();
  assert.match(await page.locator('[data-countdown="tet"]').innerText(),/Awaiting official/);
- const tet=await page.evaluate(async()=>{const {parseExamText}=await import('/src/utils/parseExamText.js');const {MockTest}=await import('/src/pages/ExamRunner.js');const questions=parseExamText(await(await fetch('/pyqs/tet_practice_1.txt')).text(),'tet');return {started:MockTest.startExam({examId:'tet',questions,title:'TET regression'}),wrong:(questions[0].correctAnswer+1)%4};});
- assert.equal(tet.started,true);await page.getByRole('button',{name:'Begin test',exact:true}).click();
- await page.locator(`[data-answer="${tet.wrong}"]`).check();
+ await page.locator('[data-prep-tab=mocks]').click();
+ await page.getByRole('button',{name:'Start full mock'}).first().click();
+ await page.getByRole('button',{name:'Begin test',exact:true}).click();
+ const wrongTet=await page.evaluate(async()=>{const {MockTest}=await import('/src/pages/ExamRunner.js');return (MockTest.questions[0].correctAnswer+1)%4;});
+ await page.locator(`[data-answer="${wrongTet}"]`).check();
  await page.getByRole('button',{name:'Submit test',exact:true}).click();
  await page.getByRole('heading',{name:'Exam complete',exact:true}).waitFor();
  result=await page.evaluate(()=>JSON.parse(localStorage.getItem('exam-results:exam-test-user')).find(a=>a.examId==='tet'));
  assert.equal(result.score,0);assert.equal(result.wrongCount,1);assert.equal(result.negativeMarks,0);
  // Exercise actual legacy text parser and separately timed SBI rule in the browser.
- const sbi=await page.evaluate(async()=>{const {parseExamText}=await import('/src/utils/parseExamText.js');const {MockTest}=await import('/src/pages/ExamRunner.js');const text=await(await fetch('/pyqs/sbi_clerk_expected_2026_paper_1.txt')).text();const questions=parseExamText(text,'sbi');return MockTest.startExam({examId:'sbi',questions,title:'SBI regression'});});
- assert.equal(sbi,true);
+ await page.goto('http://127.0.0.1:3011/#/sbi-clerk?tab=mocks');
+ await page.getByRole('button',{name:'Start full mock'}).first().click();
  await page.getByRole('button',{name:'Begin test',exact:true}).click();
  const wrongSbi=await page.evaluate(async()=>{const {MockTest}=await import('/src/pages/ExamRunner.js');return (MockTest.questions[0].correctAnswer+1)%4;});
  await page.locator(`[data-answer="${wrongSbi}"]`).check();
@@ -115,10 +126,22 @@ try{
  await page.getByRole('heading',{name:'Exam complete',exact:true}).waitFor();
  result=await page.evaluate(()=>JSON.parse(localStorage.getItem('exam-results:exam-test-user')).find(a=>a.examId==='sbi'));
  assert.equal(result.score,-.25);
+ await page.goto('http://127.0.0.1:3011/#/pyq-mocks');
+ await page.getByRole('button',{name:/Start CBT practice/}).click();
+ await page.getByRole('button',{name:'Begin test',exact:true}).click();
+ await page.locator('#nat-answer').fill('7');
+ await page.getByRole('button',{name:'Save & next',exact:true}).click();
+ await page.locator('[data-answer="0"]').check();
+ await page.locator('[data-answer="2"]').check();
+ await page.getByRole('button',{name:'Submit test',exact:true}).click();
+ await page.getByRole('heading',{name:'Exam complete',exact:true}).waitFor();
+ result=await page.evaluate(()=>JSON.parse(localStorage.getItem('exam-results:exam-test-user')).find(a=>a.examId==='gate'));
+ assert.equal(result.score,3);
+ assert.equal(result.mode,'practice');
  await page.goto('http://127.0.0.1:3011/#/analytics');await page.locator('#analytics-exam-filter').waitFor();
  await page.locator('#analytics-exam-filter').selectOption('group2');
  await page.locator('#analytics-exam-filter').waitFor();
  assert.equal(await page.locator('#analytics-exam-filter').inputValue(),'group2');
  assert.deepEqual(errors,[]);
- console.log('PASS: Group 2 launch → answer → reload → score → bookmark → saved review; independent RRB/TET countdowns; mobile dark layout; RRB timeout; SBI section locking. Firebase is stubbed, not live-tested.');
+ console.log('PASS: CBT launches and scoring for all five exams, palette state across reload, mobile layout, RRB timeout, SBI section locks and GATE numeric/multiple-select answers. Firebase is stubbed.');
 }finally{await browser.close();await vite.close();}

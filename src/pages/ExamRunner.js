@@ -39,7 +39,54 @@ export const MockTest = {
       return `<section id="exam-root" class="exam-hub"><h1>${h(p?.title||'Choose an exam')}</h1>${p?`<div class="exam-card"><h2>${h(e.name)} · ${p.full?'Full-length mock':'Practice drill'}</h2><p>${p.questions.length} questions · ${p.minutes} minutes · ${p.questions.reduce((n,q)=>n+q.marks,0)} marks</p><p>Wrong MCQ: −${e.penalty===0?'0':e.penalty===.25?'¼':'⅓'} of question marks. Unanswered: 0. ${p.examId==='gate'?'MSQ and NAT have no penalty.':''}</p><p>${h(e.note)}</p><p>Answered questions marked for review are scored. Timer starts only when you begin. Reloading does not pause the timer.</p><a href="${e.source}" target="_blank" rel="noopener">Verified rule source</a><p>Rule version: ${h(e.version)} · checked ${e.checked}</p><button id="begin-exam">Begin test</button></div>`:`<div class="exam-grid">${[['group2','APPSC Group 2'],['rrb-station-master','RRB Station Master'],['tet-exams','AP TET'],['sbi-clerk','SBI Clerk'],['pyq-mocks','GATE question papers']].map(([route,label])=>`<a class="exam-card" href="#/${route}">${label}</a>`).join('')}</div>`}</section>`;
     }
     const q=this.questions[this.currentIdx], a=this.answers[q.id], type=q.type||'MCQ';
-    return `<section id="exam-root" class="exam-hub"><header class="exam-toolbar"><div><h1>${h(this.pending.title)}</h1><p>${h(q.section||q.subject)} · Question ${this.currentIdx+1}/${this.questions.length} · ${q.marks} mark(s)</p></div><strong id="exam-clock" role="timer">${this.clockText()}</strong></header><div class="exam-card">${renderQuestionContext(q)}<h2>${h(q.question)}</h2>${renderAnswerInputs(q,a,{numericId:'nat-answer'})}<div class="exam-toolbar"><button id="previous-question">Previous</button><button id="clear-answer">Clear answer</button><button id="mark-review">${this.review[q.id]?'Unmark':'Mark'} for review</button><button id="next-question">Save & next</button></div></div><details class="exam-navigation" open><summary>Question navigator <span>Jump to a question</span></summary><nav class="exam-palette" aria-label="Question navigation">${this.questions.map((item,i)=>`<button data-question="${i}" ${this.allowed(i)?'':'disabled'} class="${i===this.currentIdx?'current':''} ${!evaluateAnswer(item,this.answers[item.id]).blank?'answered':''} ${this.review[item.id]?'review':''}" aria-label="Question ${i+1}${!evaluateAnswer(item,this.answers[item.id]).blank?', answered':''}${this.review[item.id]?', marked for review':''}">${i+1}</button>`).join('')}</nav></details><p>Green: answered · Purple border: marked for review · Outlined: current question</p><button id="submit-exam">Submit test</button><p id="exam-error" role="alert"></p></section>`;
+    return this.renderCbt();
+  },
+  renderCbt() {
+    const q = this.questions[this.currentIdx];
+    const buttons = this.questions.map((item, index) => {
+      const state = this.questionState(item);
+      const current = index === this.currentIdx;
+      return `<button type="button" data-question="${index}" class="${state} ${current?'current':''}"
+        ${current?'aria-current="step"':''} ${this.allowed(index)?'':'disabled'}
+        aria-label="Question ${index+1}, ${this.stateLabel(state)}">${index+1}</button>`;
+    }).join('');
+    return `<section id="exam-root" class="exam-hub cbt-room">
+      <header class="exam-toolbar">
+        <div><p class="eyebrow">CBT practice</p><h1>${h(this.pending.title)}</h1></div>
+        <strong id="exam-clock" role="timer">${this.clockText()}</strong>
+      </header>
+      <div class="cbt-layout">
+        <article class="exam-card cbt-question" tabindex="-1" aria-labelledby="cbt-question-title">
+          <p class="cbt-question-meta">${h(q.section||q.subject||EXAMS[this.pending.examId].name)} · Question ${this.currentIdx+1} of ${this.questions.length} · ${q.marks} mark${q.marks===1?'':'s'}</p>
+          ${renderQuestionContext(q)}
+          <h2 id="cbt-question-title">${h(q.question)}</h2>
+          ${renderAnswerInputs(q,this.answers[q.id],{numericId:'nat-answer'})}
+          <div class="exam-toolbar cbt-question-actions">
+            <button id="previous-question" ${this.nextIndex(-1)<0?'disabled':''}>Previous</button>
+            <button id="clear-answer">Clear answer</button>
+            <button id="mark-review" aria-pressed="${Boolean(this.review[q.id])}">${this.review[q.id]?'Unmark':'Mark'} for review</button>
+            <button id="next-question" ${this.nextIndex(1)<0?'disabled':''}>Save & next</button>
+          </div>
+        </article>
+        <aside class="cbt-sidebar">
+          <details class="exam-navigation" open>
+            <summary>Question palette</summary>
+            <div class="cbt-legend">${['answered','unanswered','review','unvisited'].map(state=>
+              `<span data-cbt-count="${state}" class="${state}"></span>`).join('')}</div>
+            <nav class="exam-palette" aria-label="Question navigation">${buttons}</nav>
+          </details>
+          <button id="submit-exam">Submit test</button>
+        </aside>
+      </div>
+    </section>`;
+  },
+  questionState(q) {
+    if (this.review[q.id]) return 'review';
+    if (!evaluateAnswer(q,this.answers[q.id]).blank) return 'answered';
+    return this.visited[q.id] ? 'unanswered' : 'unvisited';
+  },
+  stateLabel(state) {
+    return {answered:'answered',unanswered:'unanswered',review:'marked for review',unvisited:'not visited'}[state];
   },
   async init() {
     const requested=this.reviewId();
@@ -56,7 +103,8 @@ export const MockTest = {
       this.persist();this.updatePalette();
     }));
     document.getElementById('nat-answer')?.addEventListener('input',e=>{if(!this.canAnswer())return;const id=this.questions[this.currentIdx].id;if(e.target.value==='')delete this.answers[id];else this.answers[id]=e.target.value;this.persist();this.updatePalette();});
-    document.querySelectorAll('[data-question]').forEach(el=>el.onclick=()=>{const i=Number(el.dataset.question);if(this.allowed(i)){this.currentIdx=i;this.persist();this.refresh();}});
+    document.querySelectorAll('[data-question]').forEach(el=>el.onclick=()=>this.selectQuestion(Number(el.dataset.question)));
+    if (this.isTesting) this.updatePalette();
     const bind=(id,fn)=>document.getElementById(id)?.addEventListener('click',fn);
     bind('previous-question',()=>this.move(-1));bind('next-question',()=>this.move(1));
     bind('clear-answer',()=>{if(!this.canAnswer())return;delete this.answers[this.questions[this.currentIdx].id];this.persist();this.refresh();});
@@ -74,23 +122,74 @@ export const MockTest = {
     if(!this.isTesting&&!this.pending&&!this.result)this.restore();
   },
   begin() {
-    this.questions=this.pending.questions;this.answers={};this.review={};this.currentIdx=0;
+    this.questions=this.pending.questions;this.answers={};this.review={};this.visited={};this.currentIdx=0;
     this.startedAt=Date.now();this.deadline=this.startedAt+this.pending.minutes*60000;this.isTesting=true;
+    if (!this.allowed(this.currentIdx)) this.currentIdx=this.nextIndex(1, -1);
+    this.visited[this.questions[this.currentIdx].id]=true;
     this.installTimer();this.persist();this.refresh();window.scrollTo(0,0);
   },
   storageKey(){return `exam-active:${this.ownerId||auth.currentUser?.uid||'anonymous'}`;},
-  persist(){try{localStorage.setItem(this.storageKey(),JSON.stringify({pending:this.pending,answers:this.answers,review:this.review,currentIdx:this.currentIdx,startedAt:this.startedAt,deadline:this.deadline}));}catch{showToast('Device storage is full; keep this page open.','warning');}},
-  restore(){try{const s=readStored(this.storageKey(),null);if(s?.pending&&s.pending.ownerId===auth.currentUser?.uid&&s.pending.ruleVersion===EXAMS[s.pending.examId]?.version&&!validatePaper(s.pending.examId,s.pending.questions,s.pending.full).length){Object.assign(this,s);this.ownerId=s.pending.ownerId;this.questions=s.pending.questions;this.isTesting=true;this.installTimer();this.refresh();this.tick();}}catch{showToast('Saved exam could not be restored.','warning');}},
-  installTimer(){clearInterval(this.timer);if(this.unloadHandler)window.removeEventListener('beforeunload',this.unloadHandler);this.unloadHandler=e=>{e.preventDefault();e.returnValue='';};window.addEventListener('beforeunload',this.unloadHandler);this.timer=setInterval(()=>this.tick(),1000);},
-  tick(){if(!this.isTesting)return;if(Date.now()>=this.deadline){this.submitExam();return;}if(!this.allowed(this.currentIdx)){this.currentIdx=this.questions.findIndex((_,i)=>this.allowed(i));this.refresh();}const el=document.getElementById('exam-clock');if(el)el.textContent=this.clockText();},
-  canAnswer(){if(!this.isTesting)return false;if(Date.now()>=this.deadline||!this.allowed(this.currentIdx)){this.tick();return false;}return true;},
-  activeSection(){const e=EXAMS[this.pending.examId];return e.sectionalMinutes&&this.pending.full?Math.min(2,Math.floor((Date.now()-this.startedAt)/(e.sectionalMinutes*60000))):-1;},
-  allowed(i){const section=this.activeSection();return section===-1||this.questions[i].section===EXAMS[this.pending.examId].sections[section][0];},
-  clockText(){const section=this.activeSection();const end=section===-1?this.deadline:Math.min(this.deadline,this.startedAt+(section+1)*1200000);const seconds=Math.max(0,Math.ceil((end-Date.now())/1000));return `${section===-1?'Remaining':'Section remaining'} ${Math.floor(seconds/60)}:${String(seconds%60).padStart(2,'0')}`;},
-  updatePalette(){
-    document.querySelectorAll('[data-question]').forEach(button=>{const index=Number(button.dataset.question),q=this.questions[index];if(!q)return;const answered=!evaluateAnswer(q,this.answers[q.id]).blank;button.classList.toggle('answered',answered);button.classList.toggle('review',!!this.review[q.id]);button.setAttribute('aria-label','Question '+(index+1)+(answered?', answered':', unanswered')+(this.review[q.id]?', marked for review':''));if(index===this.currentIdx)button.setAttribute('aria-current','step');else button.removeAttribute('aria-current');});
+  persist(){try{localStorage.setItem(this.storageKey(),JSON.stringify({pending:this.pending,answers:this.answers,review:this.review,visited:this.visited,currentIdx:this.currentIdx,startedAt:this.startedAt,deadline:this.deadline}));}catch{showToast('Device storage is full; keep this page open.','warning');}},
+  restore(){
+    try {
+      const saved=readStored(this.storageKey(),null);
+      if (!saved?.pending || saved.pending.ownerId!==auth.currentUser?.uid ||
+          saved.pending.ruleVersion!==EXAMS[saved.pending.examId]?.version ||
+          validatePaper(saved.pending.examId,saved.pending.questions,saved.pending.full).length) return;
+      Object.assign(this,saved);
+      this.ownerId=saved.pending.ownerId;
+      this.questions=saved.pending.questions;
+      this.visited=saved.visited||Object.fromEntries([...Object.keys(this.answers),...Object.keys(this.review)].map(id=>[id,true]));
+      if (!this.allowed(this.currentIdx)) this.currentIdx=this.nextIndex(1,-1);
+      this.visited[this.questions[this.currentIdx].id]=true;
+      this.isTesting=true;
+      this.installTimer();
+      if (Date.now()>=this.deadline) this.submitExam();
+      else this.refresh();
+    } catch {
+      showToast('Saved exam could not be restored.','warning');
+    }
   },
-  move(delta){const i=this.currentIdx+delta;if(i>=0&&i<this.questions.length&&this.allowed(i)){this.currentIdx=i;this.persist();this.refresh();}},
+  installTimer(){clearInterval(this.timer);if(this.unloadHandler)window.removeEventListener('beforeunload',this.unloadHandler);this.unloadHandler=e=>{e.preventDefault();e.returnValue='';};window.addEventListener('beforeunload',this.unloadHandler);this.timer=setInterval(()=>this.tick(),1000);},
+  tick(){if(!this.isTesting)return;if(Date.now()>=this.deadline){this.submitExam();return;}if(!this.allowed(this.currentIdx))this.selectQuestion(this.nextIndex(1,-1));const el=document.getElementById('exam-clock');if(el)el.textContent=this.clockText();},
+  canAnswer(){if(!this.isTesting)return false;if(Date.now()>=this.deadline||!this.allowed(this.currentIdx)){this.tick();return false;}return true;},
+  activeSection(){const e=EXAMS[this.pending.examId];return e.sectionalMinutes&&this.pending.full?Math.max(0,Math.min(e.sections.length-1,Math.floor((Date.now()-this.startedAt)/(e.sectionalMinutes*60000)))):-1;},
+  allowed(i){const section=this.activeSection();return Boolean(this.questions[i])&&(section===-1||this.questions[i].section===EXAMS[this.pending.examId].sections[section][0]);},
+  clockText(){const section=this.activeSection();const end=section===-1?this.deadline:Math.min(this.deadline,this.startedAt+(section+1)*EXAMS[this.pending.examId].sectionalMinutes*60000);const seconds=Math.max(0,Math.ceil((end-Date.now())/1000));return `${section===-1?'Remaining':'Section remaining'} ${Math.floor(seconds/60)}:${String(seconds%60).padStart(2,'0')}`;},
+  updatePalette(){
+    const counts={answered:0,unanswered:0,review:0,unvisited:0};
+    document.querySelectorAll('[data-question]').forEach(button=>{
+      const index=Number(button.dataset.question), q=this.questions[index];
+      const state=this.questionState(q);
+      counts[state]++;
+      for (const key of Object.keys(counts)) button.classList.toggle(key,key===state);
+      const answer=state==='review'?(!evaluateAnswer(q,this.answers[q.id]).blank?', answered':', unanswered'):'';
+      button.setAttribute('aria-label',`Question ${index+1}, ${this.stateLabel(state)}${answer}`);
+    });
+    document.querySelectorAll('[data-cbt-count]').forEach(item=>{
+      const state=item.dataset.cbtCount;
+      item.textContent=`${counts[state]} ${this.stateLabel(state)}`;
+    });
+  },
+  nextIndex(direction, from=this.currentIdx){
+    for (let index=from+direction;index>=0&&index<this.questions.length;index+=direction) {
+      if (this.allowed(index)) return index;
+    }
+    return -1;
+  },
+  selectQuestion(index){
+    if (Date.now()>=this.deadline) {
+      this.tick();
+      return;
+    }
+    if (!this.allowed(index)) return;
+    this.currentIdx=index;
+    this.visited[this.questions[index].id]=true;
+    this.persist();
+    this.refresh();
+    document.querySelector('#exam-root .cbt-question')?.focus();
+  },
+  move(direction){this.selectQuestion(this.nextIndex(direction));},
   refresh(){const root=document.getElementById('exam-root');if(root){root.outerHTML=this.render();this.init();}},
   stop(){this.isTesting=false;clearInterval(this.timer);if(this.unloadHandler)window.removeEventListener('beforeunload',this.unloadHandler);this.unloadHandler=null;},
   abandon(){this.stop();localStorage.removeItem(this.storageKey());this.pending=null;},
