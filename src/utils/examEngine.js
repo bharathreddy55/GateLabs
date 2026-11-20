@@ -4,6 +4,10 @@ export function validQuestionImage(q) {
   return typeof q.questionImage==='string' && /^\/questions\/figures\/[a-z0-9-]+\.png$/.test(q.questionImage)
     && typeof q.imageAlt==='string' && q.imageAlt.trim().length>0;
 }
+export function questionFingerprint(q) {
+  const text=typeof q.question==='string'?q.question.trim():'';
+  return JSON.stringify([text,q.passage||'',q.table||'',q.options||[],q.questionImage||'']);
+}
 export function validatePaper(examId, questions, full = true) {
   const e = EXAMS[examId], errors = [];
   if (!e) return ['Unknown exam'];
@@ -15,7 +19,7 @@ export function validatePaper(examId, questions, full = true) {
     if (!q.id || ids.has(q.id)) errors.push(`${label}: missing or duplicate ID`);
     ids.add(q.id);
     const text = typeof q.question === 'string' ? q.question.trim() : '';
-    const fingerprint=JSON.stringify([text,q.passage||'',q.table||'',q.options||[]]);
+    const fingerprint=questionFingerprint(q);
     if (!text || texts.has(fingerprint)) errors.push(`${label}: empty or duplicate question and context`);
     texts.add(fingerprint);
     const type = q.type || 'MCQ';

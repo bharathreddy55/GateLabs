@@ -16,7 +16,13 @@ export function validateStudyQuestion(q){
   }
   return errors;
 }
-export function questionId(q){let hash=2166136261;for(const c of JSON.stringify([q.subject,q.type,q.passage,q.table,q.question,q.options]))hash=Math.imul(hash^c.charCodeAt(0),16777619)>>>0;return 'q_text_'+hash.toString(16);}
+export function questionId(q){
+  const fields=[q.subject,q.type,q.passage,q.table,q.question,q.options];
+  if(q.questionImage)fields.push(q.questionImage);
+  let hash=2166136261;
+  for(const c of JSON.stringify(fields))hash=Math.imul(hash^c.charCodeAt(0),16777619)>>>0;
+  return 'q_text_'+hash.toString(16);
+}
 
 function splitSharedPrompt(text, number) {
   const chunks = text.split(/\n\n+/);
