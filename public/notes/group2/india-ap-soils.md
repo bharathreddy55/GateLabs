@@ -2,6 +2,14 @@ Soils form through interactions among parent material, climate, organisms, topog
 
 In Andhra Pradesh, alluvial soils support intensively cultivated delta plains. Red soils are widespread in parts of the uplands and Rayalaseema. Black soils occur in pockets, including parts of interior valleys and plains. Coastal and irrigated tracts can experience salinity or waterlogging where drainage is inadequate. Crop suitability also depends on slope, water supply, depth and soil management.
 
+## Concepts in depth
+
+Alluvial soils form from transported deposits and vary by age and texture. Black soils often have swelling clays and retain moisture. Many red soils reflect oxidised iron. Lateritic profiles develop under strong leaching in appropriate climates.
+
+## How to apply it
+
+Coastal deltaic alluvium differs from shallower upland soils. Match crops to moisture, fertility, management and local climate together. Red colour alone does not establish nutrient status or suitability for a particular crop.
+
 ## Worked example
 
 Deep clay develops wide cracks in the dry season and swells after rain. This shrink–swell behaviour points to a black soil with expansive clay.

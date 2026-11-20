@@ -2,6 +2,14 @@ Early Andhra archaeology records diverse livelihoods before large states formed.
 
 The Satavahanas ruled across parts of the Deccan, and trade and religious gifts connected routes, settlements and Buddhist establishments. Read Amaravati's stupa reliefs as material evidence of patronage and narrative art across several periods. At Nagarjunakonda, inscriptions and remains illuminate Ikshvaku rule, Buddhist establishments and royal and non-royal donors. Prakrit appears prominently in early inscriptions. Later Vishnukundin, Eastern Chalukya and local Chola records show changing administration, temple patronage and linguistic practice. Associate Nannaya's Telugu Mahabharata with the Eastern Chalukya court of Rajaraja Narendra. The Renati Cholas are important in the study of early Telugu inscriptions.
 
+## Concepts in depth
+
+Put the early kingdoms in sequence and learn the kind of evidence each left. Satavahana coinage and inscriptions reveal circulation and patronage. Nagarjunakonda is important for the Ikshvaku period and for records of Buddhist donations. The Vishnukundins belong before the rise of the Eastern Chalukyas in Vengi. Eastern Chalukya patronage and the later Chola connection matter for coastal Andhra's political and literary history.
+
+## How to apply it
+
+Make a matrix with dynasty, region, religious or material evidence, language and art. Relate Nannaya's Telugu Mahabharata enterprise to the Vengi court of Rajaraja Narendra. Distinguish a patronage relationship from a claim that a single ruler originated Telugu literature. Use evidence rather than making an inscription report conditions throughout an entire kingdom.
+
 ## Worked example
 
 A question combines a stupa at Amaravati with an inscription at Nagarjunakonda. First identify the site and associated evidence, then connect the latter to Ikshvaku patronage.

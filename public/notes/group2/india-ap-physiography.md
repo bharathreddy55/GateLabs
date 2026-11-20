@@ -2,6 +2,14 @@ India's major physical regions include the Himalayan mountains, the northern riv
 
 In Andhra Pradesh, locate the Bay of Bengal coastal plain, the discontinuous Eastern Ghats and the inland plateau. The Krishna and Godavari build broad lowland deltas. The Nallamala ranges and the Kadapa basin help distinguish the southern interior, while the Araku region illustrates higher terrain in the northern Eastern Ghats. River valleys interrupt the Ghats and link upland catchments to coastal plains.
 
+## Concepts in depth
+
+Group India's major units as northern mountains and plains, peninsular plateau and associated ranges, desert, coastal plains and islands. In Andhra Pradesh, the coast and river deltas, discontinuous Eastern Ghats, and interior plateau of Rayalaseema present different relief and drainage settings.
+
+## How to apply it
+
+Locate Godavari and Krishna deltas on the Bay of Bengal coast. Compare eastern and western peninsular drainage using slope and coastal configuration. Avoid treating administrative districts as identical to physiographic units.
+
 ## Worked example
 
 Identify the region most likely to contain broad, flat tracts built by river sediment. Choose the Krishna or Godavari delta. Hill valleys in the Eastern Ghats may contain local alluvium but have very different relief.

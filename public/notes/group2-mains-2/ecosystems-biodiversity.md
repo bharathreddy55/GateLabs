@@ -2,6 +2,14 @@ An ecosystem includes organisms and physical conditions connected by energy flow
 
 In-situ conservation protects organisms in natural settings. Ex-situ conservation uses settings such as seed banks and managed collections. Biosphere reserves support conservation, sustainable use and research through zones with different functions. CITES regulates international trade in listed species. The Convention on Biological Diversity concerns conservation, sustainable use and fair sharing of benefits. Review India's wildlife legislation, protected areas and dated conservation projects through official releases.
 
+## Concepts in depth
+
+Ecosystems transfer energy and cycle matter. Biodiversity spans genetic variation, species and habitats. Threats include habitat loss, invasive species, pollution and exploitation. In situ conservation protects populations in natural habitat. Ex situ methods preserve material or populations elsewhere. Species status, legal protection and trade controls are separate categories.
+
+## How to apply it
+
+A seed bank is ex situ. Conserving wild relatives in natural habitat is in situ. CITES concerns international trade in listed species, while a protected area centres on a location and its management. Compare approaches by threat removed and evidence of population or habitat recovery.
+
 ## Worked example
 
 A protected wetland keeps species within their habitat, an in-situ approach. A seed bank holds material away from the original habitat, an ex-situ approach.

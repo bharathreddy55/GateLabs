@@ -1,5 +1,13 @@
 A nonzero vector v is an eigenvector when Av=λv. Solve det(A−λI)=0 for eigenvalues and (A−λI)v=0 for eigenvectors. For a triangular matrix, eigenvalues are the diagonal entries with multiplicity. The trace and determinant equal the sum and product of eigenvalues over the complex numbers with algebraic multiplicity.
 
+## Concepts in depth
+
+Eigenvalues solve the characteristic equation. Find vectors in the null space of A−λI and exclude the zero vector. Algebraic multiplicity counts a root in the characteristic polynomial. Geometric multiplicity is the eigenspace dimension.
+
+## How to apply it
+
+For a triangular matrix, eigenvalues are diagonal entries. Repeated eigenvalues do not guarantee enough eigenvectors for diagonalisation. A real symmetric matrix has an orthogonal eigenbasis, so its rank counts nonzero eigenvalues with multiplicity.
+
 ## Worked example
 
 For diagonal A=diag(2,5), the basis vectors e₁ and e₂ are eigenvectors for 2 and 5. Its trace is 7 and determinant 10.

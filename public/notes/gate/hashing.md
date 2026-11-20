@@ -1,5 +1,13 @@
 A hash function maps keys into buckets. Separate chaining stores colliding entries together. Open addressing probes the table according to a sequence. Load factor is entries divided by slots and influences expected operations. Bad collisions can make lookup linear even when a suitable randomized or well-distributed model yields expected constant time.
 
+## Concepts in depth
+
+Separate chaining keeps lists or buckets. Open addressing probes for another slot. Expected lookup can be constant under appropriate hashing and load. Open-address deletion may require a tombstone so lookups can follow the original probe chain.
+
+## How to apply it
+
+In linear probing an erased slot treated as never occupied can hide a key stored later in the probe sequence. Higher load makes probe sequences longer. A collision means equal hash locations, even if the keys differ.
+
 ## Worked example
 
 With table size 7 and h(k)=k mod 7, keys 10 and 17 both start at index 3. Linear probing puts the later key at index 4 if it is free.

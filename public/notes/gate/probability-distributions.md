@@ -1,5 +1,13 @@
 A continuous uniform distribution has constant density across its interval. A normal distribution is symmetric about its mean and standardizes with z=(x−μ)/σ. Exponential waiting times have survival e^(−λt) and memorylessness. Poisson models a count over an interval with mean λ and mass e^(−λ)λᵏ/k!. Binomial counts successes in n independent equal-probability trials and has mean np and variance np(1−p).
 
+## Concepts in depth
+
+Binomial counts successes in a fixed number of independent equal-probability trials. Poisson models counts with a mean-rate parameter. Exponential models positive waiting time with constant hazard and is memoryless. Uniform density is constant on its interval. Normal probabilities can be standardised.
+
+## How to apply it
+
+For Poisson(λ), P(X=0)=exp(−λ). For exponential rate λ, P(T>t)=exp(−λt). Their matching expressions represent different events and units. For normal X with mean μ and deviation σ, use Z=(X−μ)/σ.
+
 ## Worked example
 
 For three independent trials with p=1/2, exactly two successes has probability C(3,2)(1/2)³=3/8. For Poisson with mean 2, the chance of zero is e⁻².

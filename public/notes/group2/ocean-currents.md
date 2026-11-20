@@ -2,6 +2,14 @@ Surface ocean currents move water persistently under wind stress, Earth's rotati
 
 Differences in temperature and salinity affect water density and help drive overturning circulation. Winds can also cause surface water to diverge from a coast, drawing nutrient-rich water upward. This upwelling supports productivity and fisheries. In the northern Indian Ocean, seasonal monsoon winds influence current directions.
 
+## Concepts in depth
+
+Surface currents respond to winds, rotation and continental boundaries. Deep circulation depends on density differences related to temperature and salinity. Upwelling brings deeper nutrient-rich water to the surface and can support productive fisheries.
+
+## How to apply it
+
+Cold currents often cool adjacent coasts and can favour fog where moist air is cooled. Western boundary currents such as the Gulf Stream carry warm water poleward. Read current direction and temperature separately in a map question.
+
 ## Worked example
 
 A question describes cold, nutrient-rich water surfacing near Peru. The process is upwelling. It supplies nutrients to the sunlit surface layer, supporting a productive food web.

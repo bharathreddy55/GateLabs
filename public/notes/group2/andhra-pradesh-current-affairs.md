@@ -4,6 +4,14 @@ Visakhapatnam hosted the 31st CII Partnership Summit. The Union Commerce and Ind
 
 For APPSC, connect each location to its activity and place it on a state map. The named projects illustrate different location needs. Hydrogen production can depend on electricity, water, industrial customers and handling infrastructure. An aerospace or drone cluster can benefit from suppliers, testing facilities and skilled workers.
 
+## Concepts in depth
+
+Use the dated summit below to practise map and sector matching. Learn the district or economic region alongside the location. Review which inputs or infrastructure a project might require, such as power and transport for energy or testing and suppliers for drones.
+
+## How to apply it
+
+Distinguish a summit announcement, memorandum, approval, construction and commercial operation. Treat each as a different milestone. If a question quotes an investment figure, check whether it represents one facility, several projects or a commitment.
+
 ## Worked example
 
 A matching question gives Pudimadaka, Orvakal and Tirupati. Pair them with green hydrogen, drones and space-related development respectively, using the locations named in the official address.

@@ -1,5 +1,13 @@
 Demographic analysis studies population size, distribution, density, growth, age structure and sex composition. Population change arises through natural increase and net migration. A high proportion of children and older people relative to working-age groups raises the age dependency ratio by the conventional measure. Andhra Pradesh comparisons using 2011 Census data must specify how district or state boundaries were reconciled with the 2014 bifurcation and later district changes.
 
+## Concepts in depth
+
+Population change is births minus deaths plus net migration for a defined period. Rates use denominators and units such as per thousand. Age structure affects dependency, and the census measures are tied to a particular reference date and definition.
+
+## How to apply it
+
+If population grows by 4,000 and natural increase is 6,000, net migration is −2,000. Distinguish total fertility rate from crude birth rate, and dependency ratio from share of dependants in the total population.
+
 ## Worked example
 
 A district has 600,000 residents on 2,000 square kilometres. Its average density is 300 people per square kilometre, even if settlement is uneven.

@@ -2,6 +2,14 @@ The Cholas governed through a hierarchy often described as mandalam, valanadu, n
 
 Inscriptions distinguish the ur of ordinary villages, the sabha of Brahmana settlements and the nagaram associated with merchants. Uttaramerur records set eligibility and disqualification rules for members of committees that handled local functions. The kudavolai process involved drawing names from a pot among eligible candidates. The records document particular institutions and settlements.
 
+## Concepts in depth
+
+Imperial Chola territorial administration worked through provinces and local divisions. Village institutions included ur, sabha in many Brahmadeya settlements and nagaram in commercial settings. The Uttaramerur inscriptions describe committee selection in a particular local context.
+
+## How to apply it
+
+Kudavolai selection involved lots among qualified candidates in the recorded system. Eligibility rules tell us who could participate. Do not extrapolate the procedure to every settlement or equate local bodies with universal adult franchise.
+
 ## Worked example
 
 A question asks which body managed a Brahmadeya village through committees. Pick the sabha. If the clue concerns a merchant organization, look for nagaram.

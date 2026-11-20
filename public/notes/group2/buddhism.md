@@ -2,6 +2,14 @@ Buddhism developed amid urban growth, new kingdoms and competing renunciant trad
 
 The Middle Way steers practice between sensual indulgence and severe self-mortification. Buddhist teaching emphasizes impermanence and examines how suffering arises through conditions. In later centuries, patronage and monastic networks encouraged Buddhist traditions to spread. Ashokan inscriptions are a source for Mauryan royal policy and should be read in their own historical context.
 
+## Concepts in depth
+
+The Four Noble Truths diagnose suffering, its arising, its cessation, and a path to cessation. The Eightfold Path groups ethical conduct, concentration and wisdom. Early Buddhist ideas also include impermanence and dependent origination. The Sangha sustains monastic practice, supported by lay communities.
+
+## How to apply it
+
+Match traditional places to events. Use Lumbini for birth, Bodh Gaya for awakening, Sarnath for the first sermon, Kushinagar for parinirvana. Ashoka's Dhamma issued ethical guidance to a wider population. Do not equate every edict exclusively with monastic discipline.
+
 ## Worked example
 
 An item asks which Noble Truth identifies the origin of suffering. The second truth identifies craving as the origin. The fourth truth gives a practical response through the Eightfold Path.

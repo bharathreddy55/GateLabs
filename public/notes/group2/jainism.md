@@ -2,6 +2,14 @@ Jainism belongs to the broader renunciant traditions that flourished in ancient 
 
 The Three Jewels combine right faith, right knowledge and right conduct. Five vows guide conduct: nonviolence, truthfulness, non-stealing, celibacy and non-possession. Monastics observe the great vows strictly, and householders typically practise adapted vows. Anekantavada recognizes that a complex thing can be described from more than one standpoint.
 
+## Concepts in depth
+
+Jain tradition identifies 24 Tirthankaras, with Parshvanatha conventionally 23rd and Mahavira 24th. The three jewels are right faith, knowledge and conduct. Nonviolence is central alongside truth, non-stealing, chastity and non-possession, with discipline differing by lay and monastic context.
+
+## How to apply it
+
+Anekantavada stresses the many-sided character of reality. Syadvada articulates qualified predication from a standpoint. In matching items distinguish these philosophical ideas from institutional labels such as Digambara and Svetambara.
+
 ## Worked example
 
 A question describes travellers avoiding unnecessary injury to insects. The relevant vow is ahimsa, or nonviolence. Giving up excessive possessions illustrates aparigraha, and telling the truth illustrates satya.

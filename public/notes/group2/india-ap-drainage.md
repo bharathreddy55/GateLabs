@@ -2,6 +2,14 @@ A drainage basin collects runoff for a river and its tributaries. A watershed di
 
 The Godavari crosses the Eastern Ghats before reaching the Andhra coastal plain and delta. The Krishna is joined by the Tungabhadra upstream and passes through the state toward its delta. The Penna, or Pennar, drains parts of Rayalaseema and Nellore. The Vamsadhara and Nagavali are distinct rivers in the north coastal region. Kolleru is a freshwater lake between the Krishna and Godavari deltas, while Pulicat is a coastal brackish lagoon on the Andhra Pradesh–Tamil Nadu border.
 
+## Concepts in depth
+
+Compare Himalayan rivers often supported by rain and snowmelt with largely monsoon-fed peninsular systems. Many east-flowing peninsular rivers enter the Bay of Bengal and build deltas under favourable sediment and coastal conditions. Basin boundaries follow relief, not political lines.
+
+## How to apply it
+
+For Andhra Pradesh, locate the Godavari, Krishna and Pennar and track headwaters separately from the state they drain. A tributary joins the parent river. A distributary branches away, often near the delta.
+
 ## Worked example
 
 An exam item describes a lake between the Krishna and Godavari deltas. The location identifies Kolleru. A brackish lagoon shared with Tamil Nadu identifies Pulicat.

@@ -2,6 +2,14 @@ Installed capacity is rated power and is expressed in watts and their multiples.
 
 Biofuel policy concerns feedstocks, blending, supply chains and sustainability. Bharat Stage standards target specified emissions from road vehicles. Keep the standard stage, date and vehicle category separate. Use the Central Electricity Authority for dated power-sector totals and the Ministry of New and Renewable Energy for programme details and capacity series.
 
+## Concepts in depth
+
+Installed capacity is potential output rate, while delivered energy accumulates over time. Capacity factor relates actual generation to theoretical full-capacity generation. Storage has round-trip losses. Renewable options differ in intermittency, location, material requirements and grid needs. Bharat Stage standards concern vehicle emissions, distinct from all aspects of transport pollution.
+
+## How to apply it
+
+A 120 MW solar park at 25% capacity factor generates 262.8 GWh over 8,760 hours. If a share goes through storage, apply the efficiency only to that share. Compare energy policy instruments such as standards, capacity targets and incentives by what each changes.
+
 ## Worked example
 
 A 100 MW plant delivering 30 MW on average for 24 hours generates 720 MWh. Nameplate capacity remains 100 MW.

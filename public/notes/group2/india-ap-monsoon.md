@@ -2,6 +2,14 @@ India's seasonal rainfall depends strongly on the monsoon. During the southwest 
 
 Andhra Pradesh experiences marked local variation. The coastal belt is exposed to Bay of Bengal depressions and cyclones. Parts of Rayalaseema are relatively dry and vulnerable to rainfall deficits. Southern coastal districts such as Nellore receive an important share of rain during the northeast monsoon season. Compare monthly distributions alongside annual totals. A district can have sufficient annual rainfall for a crop yet experience dry spells during a sensitive growth stage.
 
+## Concepts in depth
+
+Seasonal shifts in circulation and land–sea contrast support the monsoon. Southwest winds commonly bring major summer rain, with relief redistributing totals. During retreating and northeast monsoon conditions, parts of the southern east coast receive important rain, including cyclone-related rainfall.
+
+## How to apply it
+
+Windward slopes get rising moist air and leeward areas can lie in rain shadow. Andhra Pradesh's coastal and interior rainfall patterns differ. A weather system or a single district's total should not stand in for the whole state's annual pattern.
+
 ## Worked example
 
 A station in southeastern Andhra Pradesh receives a prominent October–December rainfall peak. Use the timing and location to identify a strong northeast monsoon contribution.

@@ -2,6 +2,14 @@ Study major cropping systems in irrigated and rainfed regions alongside horticul
 
 Industrial location reflects power, water, inputs, workforce and freight access. Corridors and port links can connect firms to markets. Single-window systems coordinate approvals, while incentives have separate eligibility and claim rules. Study MSME finance and supplier links, then distinguish the roles of services, IT, electronics and communications. Recent AP industrial and IT policy questions require the issued document and effective period.
 
+## Concepts in depth
+
+Cover Andhra Pradesh agriculture, horticulture, livestock, fisheries and operating conditions of cooperatives or rural credit. Industrial corridors connect transport routes and nodes. Single-window mechanisms coordinate approvals, and MSME performance also depends on finance, infrastructure and demand. IT, electronics and logistics are separate service or industrial activities in different classifications.
+
+## How to apply it
+
+Map irrigated deltas, dryland interiors, coastal fisheries and port-linked manufacturing. Use a sector example such as aquaculture to trace input supply, cold-chain and processing access, exports and ecological costs. Distinguish announced incentives, actual uptake and measured outcomes.
+
 ## Worked example
 
 For perishable horticulture, compare a road investment with cold storage. Their value depends on the bottleneck and travel time to markets.

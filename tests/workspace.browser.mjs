@@ -142,8 +142,10 @@ try{
  await page.goto('http://127.0.0.1:3011/#/sbi-clerk?tab=notes&note=english-reading');
  const readingGuide=page.getByRole('img',{name:'Visual study guide for English Reading Comprehension'});
  await readingGuide.waitFor();
+ await page.getByRole('heading',{name:'Concepts in depth',exact:true}).waitFor();
+ await page.getByRole('heading',{name:'How to apply it',exact:true}).waitFor();
  assert.ok(await readingGuide.evaluate(img=>img.naturalWidth>0&&img.getBoundingClientRect().right<=innerWidth));
- const guideLink=page.getByRole('link',{name:/Open full-size guide/});
+ const guideLink=page.getByRole('link',{name:/Open full-size recall card/});
  assert.equal(await guideLink.getAttribute('target'),'_blank');
  assert.match(await guideLink.getAttribute('href'),/\/notes\/visuals\/sbi\/english-reading\.svg$/);
  // Signed-out render and existing auth form integration, using an isolated test user.

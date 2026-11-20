@@ -1,5 +1,13 @@
 Human development examines people's capabilities and opportunities. The UNDP's Human Development Index combines life expectancy, education and gross national income per person into a composite index. Literacy, school attendance, health access and incomes vary within India and Andhra Pradesh, and state averages can hide differences across districts, genders and social groups. Comparisons should use the same indicator definitions, reference year and geographic units.
 
+## Concepts in depth
+
+Human development concerns capabilities and choices. UNDP's HDI combines longevity, education and standard of living via a geometric mean of indices. Inequality-adjusted measures account for uneven distribution. Income alone does not capture education or health outcomes.
+
+## How to apply it
+
+Compare two regions with similar income but different life expectancy or schooling. The one with poorer outcomes may rank lower on broader human development even when per-capita income matches. Identify the index year before comparing rankings.
+
 ## Worked example
 
 Two districts have similar incomes, but one has higher school attainment and longer life expectancy. A broader assessment of development recognizes that income alone misses those outcomes.

@@ -2,6 +2,14 @@ India uses a parliamentary executive. At Union level, the Council of Ministers i
 
 Courts interpret the Constitution and laws, adjudicate disputes and enforce legal limits through judicial review. Cases can raise validity of legislation or executive action. Judicial activism describes a style or intensity of judicial intervention, often discussed alongside public interest litigation, and is distinct from the power of judicial review itself.
 
+## Concepts in depth
+
+India's parliamentary design links the political executive to legislative confidence. A Money Bill has a special procedure, including a limited role for the Rajya Sabha. Ordinary bills and constitutional amendment bills have different passage rules. The President and governors have constitutional roles. Routine advice and exceptional discretionary contexts require separate analysis.
+
+## How to apply it
+
+Practice a bill decision tree by classification, originating House and consequence of disagreement. Judicial review tests legal validity under constitutional standards. Judicial activism describes a broader judicial posture, not a substitute for identifying jurisdiction or remedy. Compare oversight questions, no-confidence motions and court review by who can act and what follows.
+
 ## Worked example
 
 If a no-confidence motion succeeds in the Lok Sabha, identify the collective responsibility of the Council of Ministers as the governing principle.

@@ -2,6 +2,14 @@ Bhakti centres on devotion to a deity or to a divine reality. Tamil Alvars sang 
 
 Saguna traditions describe the divine with attributes and forms. Nirguna traditions emphasize the divine beyond form. Kabir's verses are often associated with nirguna devotion and criticism of empty ritual. Religious communities differed in social composition and in their attitudes toward caste, gender and authority. Temple-centred devotion and criticism of established practice both appear in this broad movement.
 
+## Concepts in depth
+
+Bhakti foregrounded personal devotion, often communicated through vernacular songs and poetry. Saguna traditions focus on a deity with attributes. Nirguna traditions emphasise the formless divine. Southern Alvars and Nayanars belong to Vaishnava and Shaiva traditions respectively.
+
+## How to apply it
+
+Compare Kabir's criticism of ritual exclusivity with the devotional idiom of Mirabai or the Tamil hymns. Bhakti was a collection of traditions across periods, so avoid giving all saints one uniform position on caste, ritual, or institutional authority.
+
 ## Worked example
 
 An item pairs Tamil devotional poets with Vishnu and Shiva. Match Alvars with Vishnu and Nayanars with Shiva, then use the region and period to rule out later northern figures.

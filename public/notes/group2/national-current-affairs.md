@@ -4,6 +4,14 @@ On 4 November, the Union Cabinet approved Viksit Bharat Initiative for Statistic
 
 On 11 November, the Cabinet approved nutrient-based subsidy rates for phosphatic and potassic fertilizers for the 2026–27 rabi season, covering 1 October 2026 through 31 March 2027. Learning the scope of the rate decision helps distinguish the nutrients covered, the policy period and a particular fertilizer product's retail price.
 
+## Concepts in depth
+
+Use the Cabinet items in the dated snapshot to practise distinguishing an approval from implementation. Track the relevant ministry, instrument, period and beneficiary or capacity target. Energy quantities measured in GWh differ from power capacity measured in GW.
+
+## How to apply it
+
+Compare direct budget support with viability-gap support, which addresses a project's financing shortfall. Record the fertilizer decision's nutrient or product scope and season separately from the announcement date. Later revised orders require their own dates.
+
 ## Worked example
 
 Compare 92 GWh of storage and a grid connection rated in MW. GWh expresses energy stored or delivered over a period. MW expresses the rate of power transfer at a moment. A battery rated at 100 MW and 400 MWh can nominally deliver full rated power for four hours.

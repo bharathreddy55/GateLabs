@@ -21,7 +21,7 @@ export function notesPanel(examId, active, notes) {
       <figure class="exam-note-visual" data-note-visual hidden>
         <a target="_blank" rel="noopener">
           <img decoding="async" alt="">
-          <span>Open full-size guide ↗</span>
+          <span>Open full-size recall card ↗</span>
         </a>
       </figure>
       <p data-note-status role="status"></p>

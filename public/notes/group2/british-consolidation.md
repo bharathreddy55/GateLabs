@@ -2,6 +2,14 @@ The East India Company gained political leverage through Bengal's succession dis
 
 Under the Subsidiary Alliance, a ruler accepted British troops and restrictions on external relations, often paying for the force. Dalhousie's Doctrine of Lapse facilitated annexations where the Company refused to recognize an adopted heir for succession. Awadh was annexed in 1856 on the stated grounds of misgovernment.
 
+## Concepts in depth
+
+Plassey (1757) shifted political influence in Bengal. Buxar (1764) strengthened Company power before Company receipt of the diwani of Bengal, Bihar and Orissa in 1765. Subsidiary alliances and annexation policies later broadened indirect and direct control.
+
+## How to apply it
+
+Distinguish a treaty requiring forces and political dependence from the Doctrine of Lapse used in some annexations. Order events by military action, formal fiscal rights and later administrative measures.
+
 ## Worked example
 
 Order four events: Buxar, Diwani, Plassey, and Awadh annexation. The timeline is Plassey 1757 → Buxar 1764 → Diwani 1765 → Awadh annexation 1856.

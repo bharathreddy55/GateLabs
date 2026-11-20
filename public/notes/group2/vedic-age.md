@@ -2,6 +2,14 @@ The Rigveda preserves hymns associated with the earlier Vedic period. They descr
 
 Compare evidence by genre. The Samhitas collect hymns or ritual formulas. The Brahmanas explain ritual. The Aranyakas develop ritual interpretations, and the Upanishads explore ideas including the self and ultimate reality. These categories overlap in time and contain diverse views. Archaeology adds evidence about settlements and technology, with correlations between particular texts and finds treated cautiously.
 
+## Concepts in depth
+
+Use the Rig Veda for early Vedic society, while later Vedic literature reflects broader agrarian settlement, more elaborate rituals and growing territorial organisation. Archaeological cultures are material classifications. Mapping them precisely to texts or groups requires care.
+
+## How to apply it
+
+Compare jana-based political vocabulary with later janapada developments. Terms such as sabha and samiti refer to collective institutions, but a precise modern electoral model is anachronistic. When a question asks chronology, separate pastoral emphases from increasingly agrarian settings.
+
 ## Worked example
 
 A question contrasts cattle as wealth in hymns with royal rituals such as the rajasuya in later texts. The first clue points to early Vedic priorities. The second illustrates how later texts articulate kingship and authority through ritual.

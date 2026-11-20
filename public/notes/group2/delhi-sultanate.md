@@ -2,6 +2,14 @@ The Delhi Sultanate is conventionally divided into the Mamluk, Khalji, Tughlaq, 
 
 The iqta assigned revenue from a territory to maintain officials and troops, with administrative obligations changing over time. Cultivators, merchants and craftspeople supported the economy, and towns linked production to courts and markets. Persian was prominent in administration and chronicles, while regional languages and Sanskrit continued to develop. Sufi institutions, mosques and older religious communities shaped social life. The Qutb complex and Tughlaq tombs illustrate distinct phases of Sultanate architecture.
 
+## Concepts in depth
+
+Keep the broad order Mamluk, Khalji, Tughluq, Sayyid and Lodi. An iqta assigned a revenue interest and duties rather than unrestricted ownership. Alauddin Khalji's market and military measures and Muhammad bin Tughluq's currency experiment belong to different reigns.
+
+## How to apply it
+
+When matching policy to ruler, distinguish Delhi Sultanate iqtas from Mughal jagirs and mansabs. Study the limits of expansion and provincial autonomy. A sultan's announced change and its successful implementation are separate historical claims.
+
 ## Worked example
 
 A question pairs regulated grain prices with the maintenance of a large standing army. Alauddin Khalji's market regulations fit the pairing. Muhammad bin Tughlaq fits token currency.

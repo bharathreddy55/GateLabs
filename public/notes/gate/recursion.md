@@ -1,5 +1,13 @@
 A recursive function needs terminating base cases and calls on strictly smaller or otherwise progressing states. Each active call has its own state. A recurrence describes cost while the deepest active path governs stack space. Tail calls may still use stack frames absent an optimization guarantee.
 
+## Concepts in depth
+
+Each active call has its own arguments and local state. A recursive branch needs progress towards a base case. Maximum active depth governs stack space, while total calls contribute to time. Branching recursions can have exponentially many calls with linear depth.
+
+## How to apply it
+
+A naïve Fibonacci call tree recomputes smaller arguments. Memoisation spends extra storage to compute each index once. In a trace, separate work before the recursive call from work after the return.
+
 ## Worked example
 
 factorial(4) calls factorial(3), factorial(2), factorial(1) and factorial(0) under the base case n=0, then multiplies to 24 on return.

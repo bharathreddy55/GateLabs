@@ -1,5 +1,13 @@
 X→Y means agreeing on X forces agreement on Y. Attribute closure determines what a set can derive. 2NF removes partial dependency of nonprime attributes on candidate keys. 3NF allows a nontrivial X→A when X is a superkey or A is prime. BCNF requires X to be a superkey. Test losslessness and dependency preservation separately when decomposing.
 
+## Concepts in depth
+
+Attribute closure applies functional dependencies until no more attributes can be added. In BCNF each nontrivial dependency has a superkey determinant. 3NF also allows a prime attribute on the right under its usual formal condition.
+
+## How to apply it
+
+For R(A,B,C) with A→B and B→C, A is a key and B→C violates BCNF. Test lossless join separately from dependency preservation. A decomposition can have one property without the other.
+
 ## Worked example
 
 For R(A,B,C) with A→B and B→C, A is a key and B→C violates BCNF. Decompose into AB and BC. B is their common attribute and determines BC, so the binary decomposition is lossless.

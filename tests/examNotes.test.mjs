@@ -2,8 +2,19 @@ import assert from 'node:assert/strict';
 import {readFileSync, readdirSync} from 'node:fs';
 import {test} from 'node:test';
 import {EXAMS} from '../src/config/exams.js';
+import {CBAT_BATTERIES} from '../src/config/rrbCbat.js';
+import {CBAT_NOTES} from '../src/config/rrbCbatNotes.js';
 
 const catalogs = new URL('../src/config/notes/', import.meta.url);
+
+function checkRecallCard(svg, details, id) {
+  assert.match(svg, /<svg .*viewBox=/, id);
+  assert.match(svg, />QUICK RECALL<\/text>/, id);
+  const cues = svg.match(/<desc id="description">(.+)<\/desc>/)?.[1].split('. ');
+  assert.ok(cues?.length >= 3 && cues.length <= 4, id);
+  assert.ok(cues.every(cue => cue.split(/\s+/).length <= 8), id);
+  for (const paragraph of details) assert.ok(!svg.includes(paragraph), id);
+}
 
 for (const file of readdirSync(catalogs).filter(name => name.endsWith('.json'))) {
   const exam = file.slice(0, -5);
@@ -26,6 +37,13 @@ for (const file of readdirSync(catalogs).filter(name => name.endsWith('.json')))
       assert.match(body, /^## Worked example$/m);
       assert.match(body, /^## Practice$/m);
       assert.match(body, /\*\*Answer:\*\*/);
+      const explanation = body.match(/\n## Concepts in depth\n\n([^\n]+)/)?.[1];
+      const application = body.match(/\n## How to apply it\n\n([^\n]+)/)?.[1];
+      assert.ok(explanation?.split(/\s+/).length >= 28, note.id);
+      assert.ok(application?.split(/\s+/).length >= 26, note.id);
+      assert.ok(body.trim().split(/\s+/).length >= 150, note.id);
+      const svg = readFileSync(new URL(note.id + '.svg', visuals), 'utf8');
+      checkRecallCard(svg, [explanation, application], note.id);
     }
   });
 
@@ -39,3 +57,14 @@ for (const file of readdirSync(catalogs).filter(name => name.endsWith('.json')))
     }
   }
 }
+
+test('all CBAT batteries have detailed lessons and brief recall cards', () => {
+  const visuals = new URL('../public/notes/visuals/rrb-cbat/', import.meta.url);
+  assert.deepEqual(readdirSync(visuals).sort(), CBAT_BATTERIES.map(({ id }) => id + '.svg').sort());
+  for (const { id } of CBAT_BATTERIES) {
+    const note = CBAT_NOTES[id];
+    assert.ok(note.details.every(paragraph => paragraph.split(/\s+/).length >= 45), id);
+    const svg = readFileSync(new URL(id + '.svg', visuals), 'utf8');
+    checkRecallCard(svg, note.details, id);
+  }
+});

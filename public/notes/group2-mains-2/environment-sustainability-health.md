@@ -2,6 +2,14 @@ Greenhouse gas accumulation warms the climate. Ocean uptake of carbon dioxide lo
 
 Sustainable development considers social, economic and environmental outcomes. The UN Sustainable Development Goals frame targets and monitoring. Public health compares incidence, prevalence, deaths and disability, accounting for data and access. Outbreak preparedness includes surveillance, communication, laboratory and healthcare capacity, coordination and equitable access. Study India's current public health initiatives from dated Ministry and programme publications.
 
+## Concepts in depth
+
+Separate warming from stratospheric ozone depletion, acid rain and ocean acidification. Mitigation changes emissions or sinks and adaptation reduces vulnerability. Health questions can test prevention, surveillance, burden measures and delivery. A screening test's predictive value also depends on population prevalence.
+
+## How to apply it
+
+In a 2%-prevalence group with 90% sensitivity and 95% specificity, 10,000 screenings yield 180 true positives and 490 false positives. That makes positive predictive value 180/670, despite high sensitivity. For sustainability goals, separate a broad target, an indicator and causal evidence of improvement.
+
 ## Worked example
 
 Protecting a flood-prone clinic with reliable backup services reduces climate vulnerability. Cutting emissions from energy production is mitigation.

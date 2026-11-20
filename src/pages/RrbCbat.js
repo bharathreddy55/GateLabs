@@ -52,6 +52,14 @@ function studyNotes(){
       const note=CBAT_NOTES[id];
       return `<details class="surface cbat-note" data-cbat-lesson="${id}">
         <summary>${h(title)}</summary>
+        <figure class="exam-note-visual">
+          <a href="/notes/visuals/rrb-cbat/${id}.svg" target="_blank" rel="noopener">
+            <img src="/notes/visuals/rrb-cbat/${id}.svg" alt="Visual study guide for ${h(title)}" width="760" loading="lazy" decoding="async">
+            <span>Open full-size recall card ↗</span>
+          </a>
+        </figure>
+        <h3>Concepts in depth</h3>
+        ${note.details.map(paragraph=>`<p>${h(paragraph)}</p>`).join('')}
         <h3>${id==='personality'?'How to approach the prompts':'How to solve it'}</h3>
         <ol>${note.method.map(step=>`<li>${h(step)}</li>`).join('')}</ol>
         <h3>${id==='personality'?'Sample prompt':'Worked example'}</h3>

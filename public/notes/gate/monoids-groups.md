@@ -1,5 +1,13 @@
 A semigroup has a closed associative operation. A monoid adds an identity. A group requires an inverse for every element, and an abelian group also has commutativity. Associativity concerns parentheses; commutativity concerns order. A subgroup must be closed under the group operation and inverses.
 
+## Concepts in depth
+
+A semigroup needs closure and associativity. A monoid adds identity. A group also gives each element a two-sided inverse. Commutativity is an additional condition for an abelian group.
+
+## How to apply it
+
+Nonnegative integers under addition form a monoid, since 0 is the identity. Positive members lack additive inverses in the domain. Integers modulo m under addition form an abelian group. Specify the operation before testing the axioms.
+
 ## Worked example
 
 Nonnegative integers under addition form a monoid with identity 0. Positive integers such as 2 have no additive inverse in that set. All integers under addition form a group.
