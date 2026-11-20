@@ -893,7 +893,7 @@ topic: Quadratic Equations
 difficulty: Easy-Moderate
 marks: 1
 year: 2026
-question: Solve the equations:
+question: Choose the most precise relation that holds for every pair of real roots.
 I. x² – 14x + 48 = 0
 II. y² – 18y + 80 = 0
 option a: x ≤ y
@@ -909,7 +909,7 @@ topic: Quadratic Equations
 difficulty: Easy-Moderate
 marks: 1
 year: 2026
-question: Solve the equations:
+question: Choose the most precise relation that holds for every pair of real roots.
 I. x² – 7x + 12 = 0
 II. y² – 11y + 30 = 0
 option a: x ≤ y
@@ -1231,8 +1231,8 @@ option b: Only I is true
 option c: Only II is true
 option d: Neither is true
 option e: Either I or II is true
-correct: A
-explanation: E ≥ F = G > H ≥ I => E > I (I is true). G > H < J has opposing signs between G and J (Wait: Only I is true).
+correct: B
+explanation: E ≥ F = G > H ≥ I gives E > I. The statements put both G and J above H and leave their relative order open. Only conclusion I follows.
 ---
 subject: Reasoning Ability (66-100)
 topic: Digit Series
@@ -1361,7 +1361,7 @@ topic: Order and Ranking
 difficulty: Easy-Moderate
 marks: 1
 year: 2026
-question: Five boxes J, K, L, M, N have different weights.
+question: Directions (90-91): Five boxes J, K, L, M, N have different weights.
 - K is heavier than M but lighter than J.
 - L is heavier than J.
 - N is lighter than M.

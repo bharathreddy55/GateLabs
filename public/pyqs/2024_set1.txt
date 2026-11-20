@@ -78,7 +78,8 @@ Subtopic: Fill in the blanks / Idioms and Phrases
 Difficulty: Medium
 Marks: 1
 Year: 2024
-Question: In the given text, the blanks are numbered (i)-(iv). Select the best match for all the blanks.\nSteve was advised to keep his head (i) before heading (ii) to bat; for, while he had a head (iii) batting, he could only do so with a cool head (iv) his shoulders.
+Question: In the given text, the blanks are numbered (i)-(iv). Select the best match for all the blanks.
+Steve was advised to keep his head (i) before heading (ii) to bat; for, while he had a head (iii) batting, he could only do so with a cool head (iv) his shoulders.
 Option A: (i) down (ii) down (iii) on (iv) for
 Option B: (i) on (ii) down (iii) for (iv) on
 Option C: (i) down (ii) out (iii) for (iv) on
@@ -258,7 +259,13 @@ Subtopic: C Programming / Control Flow
 Difficulty: Medium
 Marks: 1
 Year: 2024
-Question: What happens when the following C code executes?\n\nint a = 6; int b = 0;\nwhile (a < 10) {\n    a = a / 12 + 1;\n    a += b;\n}
+Question: What happens when the following C code executes?
+
+int a = 6; int b = 0;
+while (a < 10) {
+    a = a / 12 + 1;
+    a += b;
+}
 Option A: The program prints 9
 Option B: The program prints 10
 Option C: The program gets stuck in an infinite loop
@@ -273,7 +280,7 @@ Subtopic: C Programming / Recursion
 Difficulty: Medium
 Marks: 1
 Year: 2024
-Question: Consider the recursive C function: void fX() { char a; if ((a = getchar()) != '\\n') fX(); if (a != '\\n') putchar(a); }. If the input is "1234\\n", what is the output?
+Question: Consider the recursive C function: void fX() { char a; if ((a = getchar()) != '\n') fX(); if (a != '\n') putchar(a); }. If the input is "1234\n", what is the output?
 Option A: The program will not terminate
 Option B: The program will terminate with no output
 Option C: The program will terminate with 4321 as output
@@ -302,9 +309,14 @@ Subject: Databases (DBMS)
 Subtopic: Normalization / 1NF
 Difficulty: Medium
 Marks: 1
+Type: MSQ
 Year: 2024
-Question: Which of the following statements about a relation R in first normal form (1NF) is/are TRUE?\nOption A: R can have a multi-attribute key\nOption B: R cannot have a foreign key\nOption C: R cannot have a composite attribute\nOption D: R cannot have more than one candidate key
-Correct: A
+Question: Which of the following statements about a relation R in first normal form (1NF) is/are TRUE?
+Option A: R can have a multi-attribute key
+Option B: R cannot have a foreign key
+Option C: R cannot have a composite attribute
+Option D: R cannot have more than one candidate key
+Correct: A,C
 Explanation: 1NF only requires that all attributes contain atomic values. It does not forbid multi-attribute keys (A is true). It does forbid composite/non-atomic attributes (C is true).
 
 ---
@@ -313,10 +325,15 @@ Subject: Theory of Computation (TOC)
 Subtopic: Regular Languages / Closure Properties
 Difficulty: Medium
 Marks: 1
+Type: MSQ
 Year: 2024
-Question: Let L1 and L2 be two regular languages and L3 a non-regular language. Which of the following statements is/are always TRUE?\nOption A: L1 = L2 if and only if (L1 ∩ L2') is empty\nOption B: L1 ∪ L3 is not regular\nOption C: L3' is not regular\nOption D: L1' ∪ L2' is regular
-Correct: C
-Explanation: Since regular languages are closed under complement, the complement of a non-regular language L3 must also be non-regular (C is true). Similarly, regular complement and union closure make D true. A is also a standard identity for equal languages. Thus, A, C, and D are true.
+Question: Let L1 and L2 be two regular languages and L3 a non-regular language. Which of the following statements is/are always TRUE?
+Option A: L1 = L2 if and only if (L1 ∩ L2') is empty
+Option B: L1 ∪ L3 is not regular
+Option C: L3' is not regular
+Option D: L1' ∪ L2' is regular
+Correct: C,D
+Explanation: C follows because a regular complement for L3 would make L3 regular after taking the complement again. D follows by closure of regular languages under complement and union. An empty L1 ∩ L2′ only proves L1 is a subset of L2, and taking L1 to be the full language gives a counterexample to B.
 
 ---
 
@@ -324,8 +341,13 @@ Subject: Operating Systems
 Subtopic: Threads / Process Management
 Difficulty: Easy
 Marks: 1
+Type: MSQ
 Year: 2024
-Question: Which of the following statements about threads is/are TRUE?\nOption A: Threads can only be implemented in kernel space\nOption B: Each thread has its own file descriptor table for open files\nOption C: All the threads belonging to a process share a common stack\nOption D: Threads belonging to a process are by default not protected from each other
+Question: Which of the following statements about threads is/are TRUE?
+Option A: Threads can only be implemented in kernel space
+Option B: Each thread has its own file descriptor table for open files
+Option C: All the threads belonging to a process share a common stack
+Option D: Threads belonging to a process are by default not protected from each other
 Correct: D
 Explanation: Threads share the same virtual address space of the parent process, so there is no memory protection between threads of the same process by default.
 
@@ -335,9 +357,14 @@ Subject: Operating Systems
 Subtopic: Process States / Scheduling
 Difficulty: Easy
 Marks: 1
+Type: MSQ
 Year: 2024
-Question: Which of the following process state transitions is/are NOT possible?\nOption A: Running to Ready\nOption B: Waiting to Running\nOption C: Ready to Waiting\nOption D: Running to Terminated
-Correct: C
+Question: Which of the following process state transitions is/are NOT possible?
+Option A: Running to Ready
+Option B: Waiting to Running
+Option C: Ready to Waiting
+Option D: Running to Terminated
+Correct: B,C
 Explanation: A process cannot go from Ready directly to Waiting because it must first be executed (Running) to request I/O or block on an event. Waiting to Running also must go through Ready first. Thus, B and C are not directly possible.
 
 ---
@@ -346,9 +373,14 @@ Subject: Compiler Design
 Subtopic: Parsing / Bottom-up Parsing
 Difficulty: Easy
 Marks: 1
+Type: MSQ
 Year: 2024
-Question: Which of the following is/are Bottom-Up Parser(s)?\nOption A: Shift-reduce Parser\nOption B: Predictive Parser\nOption C: LL(1) Parser\nOption D: LR Parser
-Correct: A
+Question: Which of the following is/are Bottom-Up Parser(s)?
+Option A: Shift-reduce Parser
+Option B: Predictive Parser
+Option C: LL(1) Parser
+Option D: LR Parser
+Correct: A,D
 Explanation: Shift-reduce and LR parsers build the parse tree from leaves up to the root (Bottom-Up). LL(1) and Predictive parsers are Top-Down. Thus, A and D are correct.
 
 ---
@@ -357,9 +389,14 @@ Subject: Engineering Mathematics
 Subtopic: Probability / Independence and Complements
 Difficulty: Medium
 Marks: 1
+Type: MSQ
 Year: 2024
-Question: Let A and B be events with P(A) = 0.3, P(B) = 0.5, and P(A ∩ B) = 0.1. Which statements are TRUE?\nOption A: The two events A and B are independent\nOption B: P(A ∪ B) = 0.7\nOption C: P(A ∩ B') = 0.2\nOption D: P(A' ∩ B') = 0.4
-Correct: B
+Question: Let A and B be events with P(A) = 0.3, P(B) = 0.5, and P(A ∩ B) = 0.1. Which statements are TRUE?
+Option A: The two events A and B are independent
+Option B: P(A ∪ B) = 0.7
+Option C: P(A ∩ B') = 0.2
+Option D: P(A' ∩ B') = 0.4
+Correct: B,C
 Explanation: P(A ∪ B) = 0.3 + 0.5 - 0.1 = 0.7 (B is true). P(A ∩ B') = P(A) - P(A ∩ B) = 0.3 - 0.1 = 0.2 (C is true). P(A)P(B) = 0.15 != 0.1, so they are not independent. P(A' ∩ B') = 1 - 0.7 = 0.3. Thus, B and C are true.
 
 ---
@@ -368,9 +405,14 @@ Subject: Computer Networks (CN)
 Subtopic: TCP / 3-way Handshake
 Difficulty: Easy
 Marks: 1
+Type: MSQ
 Year: 2024
-Question: TCP client P establishes a connection to server Q. N_P is the sequence number in P's SYN. N_Q is the acknowledgement number in Q's SYN ACK. Which statements are CORRECT?\nOption A: The sequence number N_P is chosen randomly by P\nOption B: The sequence number N_P is always 0 for a new connection\nOption C: The acknowledgement number N_Q is equal to N_P\nOption D: The acknowledgement number N_Q is equal to N_P + 1
-Correct: A
+Question: TCP client P establishes a connection to server Q. N_P is the sequence number in P's SYN. N_Q is the acknowledgement number in Q's SYN ACK. Which statements are CORRECT?
+Option A: The sequence number N_P is chosen randomly by P
+Option B: The sequence number N_P is always 0 for a new connection
+Option C: The acknowledgement number N_Q is equal to N_P
+Option D: The acknowledgement number N_Q is equal to N_P + 1
+Correct: A,D
 Explanation: Initial Sequence Numbers (ISNs) are selected randomly for security (A is true). Q acknowledges P's SYN packet by setting the ACK number to the next expected byte: N_P + 1 (D is true).
 
 ---
@@ -379,9 +421,14 @@ Subject: Computer Organization & Architecture (COA)
 Subtopic: Pipelining / Data Hazards
 Difficulty: Medium
 Marks: 1
+Type: MSQ
 Year: 2024
-Question: Consider a 5-stage pipeline (IF, ID, EX, MEM, WB). Which of the following statements about forwarding is/are CORRECT?\nOption A: Forwarding passes results from a source stage of an earlier instruction to a destination stage of a later one\nOption B: Data from output of MEM stage can be passed to input of EX stage of the next instruction\nOption C: Forwarding cannot prevent all pipeline stalls\nOption D: Forwarding does not require any extra hardware
-Correct: A
+Question: Consider a 5-stage pipeline (IF, ID, EX, MEM, WB). Which of the following statements about forwarding is/are CORRECT?
+Option A: Forwarding passes results from a source stage of an earlier instruction to a destination stage of a later one
+Option B: Data from output of MEM stage can be passed to input of EX stage of the next instruction
+Option C: Forwarding cannot prevent all pipeline stalls
+Option D: Forwarding does not require any extra hardware
+Correct: A,B,C
 Explanation: Forwarding routes data directly from register/latch outputs to inputs, bypassing normal writeback (A & B are true). It cannot prevent stalls for load-use hazards (C is true). It does require extra multiplexers and control logic (D is false).
 
 ---
@@ -390,9 +437,14 @@ Subject: Computer Networks (CN)
 Subtopic: Network Layer / NAT
 Difficulty: Easy
 Marks: 1
+Type: MSQ
 Year: 2024
-Question: Which of the following fields are modified in the IP header of a packet going out of a NAT device from an internal network to an external network?\nOption A: Source IP\nOption B: Destination IP\nOption C: Header Checksum\nOption D: Total Length
-Correct: A
+Question: Which of the following fields are modified in the IP header of a packet going out of a NAT device from an internal network to an external network?
+Option A: Source IP
+Option B: Destination IP
+Option C: Header Checksum
+Option D: Total Length
+Correct: A,C
 Explanation: NAT translates the internal private Source IP to a public IP (A is true). Because the header fields change, the Header Checksum must also be recalculated (C is true).
 
 ---

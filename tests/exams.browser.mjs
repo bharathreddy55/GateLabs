@@ -16,7 +16,7 @@ await context.route('**/*',async route=>{
  if(pathname.startsWith('/node_modules/')&&/\.(woff2?|ttf)$/.test(pathname)){const file=path.resolve('.'+pathname);if(fs.existsSync(file))return route.fulfill({contentType:'font/woff2',body:fs.readFileSync(file)});}
  const publicFile=path.resolve('public','.'+pathname);
  if(publicFile.startsWith(path.resolve('public')+path.sep)&&fs.existsSync(publicFile)&&fs.statSync(publicFile).isFile()){
-   const contentType={'.json':'application/json','.svg':'image/svg+xml'}[path.extname(pathname)]||'text/plain';
+   const contentType={'.json':'application/json','.svg':'image/svg+xml','.png':'image/png'}[path.extname(pathname)]||'text/plain';
    return route.fulfill({contentType,body:fs.readFileSync(publicFile)});
  }
  try{const transformed=await vite.transformRequest(url.pathname+url.search);if(transformed)return route.fulfill({contentType:'application/javascript',body:transformed.code});}catch(err){console.error(pathname,err.message);}
@@ -28,7 +28,8 @@ export const auth={currentUser:{uid:'exam-test-user',displayName:'Exam Test',ema
 export const SUBJECT_SYLLABUS={};export const isMockMode=true;
 const gateQuestions=[
   {id:'gate-nat',year:'2025',subject:'Algorithms',topic:'A',type:'NAT',question:'What is 3 plus 4?',correctNat:7,marks:1},
-  {id:'gate-msq',year:'2025',subject:'Algorithms',topic:'B',type:'MSQ',question:'Select the even numbers.',options:['2','3','4','5'],correctOptions:[0,2],marks:2}
+  {id:'gate-msq',year:'2025',subject:'Algorithms',topic:'B',type:'MSQ',question:'Select the even numbers.',options:['2','3','4','5'],correctOptions:[0,2],marks:2,
+    questionImage:'/questions/figures/gate-2022-q10.png',imageAlt:'Test question diagram'}
 ];
 export const db={saveAttempt:async a=>{const key='gate_attempts:exam-test-user';const rows=JSON.parse(localStorage.getItem(key)||'[]');rows.push(a);localStorage.setItem(key,JSON.stringify(rows));return a;},getAttempts:async()=>JSON.parse(localStorage.getItem('gate_attempts:exam-test-user')||'[]'),getBookmarks:async()=>[],getSyllabusProgress:async()=>({}),getQuestions:async()=>gateQuestions};
 `}));
@@ -132,6 +133,14 @@ try{
  await page.getByRole('button',{name:'Begin test',exact:true}).click();
  const wrongSbi=await page.evaluate(async()=>{const {MockTest}=await import('/src/pages/ExamRunner.js');return (MockTest.questions[0].correctAnswer+1)%4;});
  await page.locator(`[data-answer="${wrongSbi}"]`).check();
+ await page.locator('[data-question="23"]').click();
+ assert.match(await page.locator('#cbt-question-title').innerText(),/PRUDENT[\s\S]+\(A\)[\s\S]+\(B\)[\s\S]+\(C\)/);
+ await page.locator('[data-question="24"]').click();
+ assert.match(await page.locator('#cbt-question-title').innerText(),/FIRST sentence after rearrangement/);
+ const sharedParagraph = await page.locator('.cbt-question blockquote').innerText();
+ assert.match(sharedParagraph,/\(A\)[\s\S]+\(E\) Small neighborhood vendors/);
+ await page.locator('[data-question="25"]').click();
+ assert.equal(await page.locator('.cbt-question blockquote').innerText(),sharedParagraph);
  assert.equal(await page.locator('[data-question="30"]').isDisabled(),true);
  await page.evaluate(async()=>{const {MockTest}=await import('/src/pages/ExamRunner.js');MockTest.startedAt=Date.now()-20*60000-1000;MockTest.tick();});
  assert.equal(await page.locator('[data-question="0"]').isDisabled(),true);
@@ -145,6 +154,8 @@ try{
  await page.getByRole('button',{name:'Begin test',exact:true}).click();
  await page.locator('#nat-answer').fill('7');
  await page.getByRole('button',{name:'Save & next',exact:true}).click();
+ await page.getByRole('img',{name:'Test question diagram'}).waitFor();
+ await page.waitForFunction(()=>document.querySelector('.cbt-question img')?.naturalWidth>0);
  await page.locator('[data-answer="0"]').check();
  await page.locator('[data-answer="2"]').check();
  await page.getByRole('button',{name:'Submit test',exact:true}).click();

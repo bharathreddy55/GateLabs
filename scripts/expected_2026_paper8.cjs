@@ -1026,7 +1026,7 @@ module.exports = [
     "difficulty": "Easy-Moderate",
     "marks": 1,
     "year": 2026,
-    "question": "Solve the equations:\nI. x² – 18x + 80 = 0\nII. y² – 22y + 120 = 0",
+    "question": "Choose the most precise relation that holds for every pair of real roots.\nI. x² – 18x + 80 = 0\nII. y² – 22y + 120 = 0",
     "options": [
       "x ≤ y",
       "x < y",
@@ -1043,7 +1043,7 @@ module.exports = [
     "difficulty": "Easy-Moderate",
     "marks": 1,
     "year": 2026,
-    "question": "Solve the equations:\nI. x² – 13x + 42 = 0\nII. y² – 17y + 70 = 0",
+    "question": "Choose the most precise relation that holds for every pair of real roots.\nI. x² – 13x + 42 = 0\nII. y² – 17y + 70 = 0",
     "options": [
       "x ≤ y",
       "x < y",
@@ -1519,7 +1519,7 @@ module.exports = [
     "difficulty": "Easy-Moderate",
     "marks": 1,
     "year": 2026,
-    "question": "Five students scored different marks:\n- A scored more than C but less than B.\n- D scored more than B.\n- E scored less than C.\n\nWho scored the second highest marks?",
+    "question": "Directions (90-91): Five students scored different marks:\n- A scored more than C but less than B.\n- D scored more than B.\n- E scored less than C.\n\nWho scored the second highest marks?",
     "options": [
       "B",
       "D",

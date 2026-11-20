@@ -1,6 +1,11 @@
-import {escapeHtml as h} from '../utils/examEngine.js';
+import {escapeHtml as h, validQuestionImage} from '../utils/examEngine.js';
 import {renderFigure} from '../utils/examFigures.js';
-export function renderQuestionContext(q){return `${q.passage?`<blockquote>${h(q.passage)}</blockquote>`:''}${q.table?`<pre>${h(q.table)}</pre>`:''}${renderFigure(q.figure)}`;}
+export function renderQuestionContext(q){
+  const image=validQuestionImage(q)
+    ? `<figure class="exam-question-image"><img src="${h(q.questionImage)}" alt="${h(q.imageAlt)}" decoding="async"></figure>`
+    : '';
+  return `${q.passage?`<blockquote>${h(q.passage)}</blockquote>`:''}${q.table?`<pre>${h(q.table)}</pre>`:''}${renderFigure(q.figure)}${image}`;
+}
 export function renderAnswerInputs(q,answer,{name='exam-answer',numericId=''}={}){
   if(q.type==='NAT')return `<label class="numeric-answer">Numeric answer<input ${numericId?`id="${h(numericId)}"`:''} data-numeric type="number" step="any" inputmode="decimal" value="${h(answer??'')}" aria-label="Numeric answer"></label>`;
   return (q.options||[]).map((option,i)=>`<label class="exam-option"><input type="${q.type==='MSQ'?'checkbox':'radio'}" name="${h(name)}" data-answer="${i}" value="${i}" ${q.type==='MSQ'?(answer||[]).map(Number).includes(i)?'checked':'':answer!==undefined&&answer!==null&&Number(answer)===i?'checked':''}><span>${String.fromCharCode(65+i)}. ${h(option)}</span></label>`).join('');

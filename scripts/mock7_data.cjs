@@ -200,61 +200,61 @@ module.exports = {
 
   simplification: [
     {
-      q: "Find the approximate value of (?) in: 99.98% of 1799.95 + 74.98% of 1440.04 - 679.98 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: 99.98% of 1799.95 + 74.98% of 1440.04 - 679.98 = ?",
       opts: ["2200", "2180", "2220", "2150", "2250"],
       ans: "A",
       exp: "100% of 1800 = 1800. 75% of 1440 = 1080. 1800 + 1080 - 680 = 2880 - 680 = 2200."
     },
     {
-      q: "Approximate: √(4095.95) + ∛(9260.98) - 24.98^2 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: √(4095.95) + ∛(9260.98) - 24.98^2 = ?",
       opts: ["-540", "-535", "-545", "-530", "-550"],
       ans: "A",
       exp: "√4096 = 64, ∛9261 = 21, 25^2 = 625. 64 + 21 - 625 = 85 - 625 = -540."
     },
     {
-      q: "Solve: (64.02 × 45.04) ÷ 29.98 + 12.02^3 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: (64.02 × 45.04) ÷ 29.98 + 12.02^3 = ?",
       opts: ["1824", "1815", "1830", "1800", "1840"],
       ans: "A",
       exp: "(64 × 45) ÷ 30 = 96. 12^3 = 1728. 96 + 1728 = 1824."
     },
     {
-      q: "Find ?: 99.98% of 1150.05 - 65.02% of 840.02 + 249.95 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: 99.98% of 1150.05 - 65.02% of 840.02 + 249.95 = ?",
       opts: ["854", "845", "860", "840", "865"],
       ans: "A",
       exp: "1150 - (0.65 × 840 = 546) + 250 = 604 + 250 = 854."
     },
     {
-      q: "Approximate: (1680.05 ÷ 23.98) + (1120.02 ÷ 15.98) - 69.98 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: (1680.05 ÷ 23.98) + (1120.02 ÷ 15.98) - 69.98 = ?",
       opts: ["70", "65", "75", "60", "80"],
       ans: "A",
       exp: "70 + 70 - 70 = 70."
     },
     {
-      q: "Find ?: 42.02^2 - 28.04^2 + 21.98^2 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: 42.02^2 - 28.04^2 + 21.98^2 = ?",
       opts: ["1464", "1450", "1475", "1440", "1480"],
       ans: "A",
       exp: "1764 - 784 + 484 = 980 + 484 = 1464."
     },
     {
-      q: "Approximate: 11/27 of 1350.04 + 9/23 of 1150.02 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: 11/27 of 1350.04 + 9/23 of 1150.02 = ?",
       opts: ["1000", "990", "1010", "980", "1020"],
       ans: "A",
       exp: "(11/27 × 1350) = 550. (9/23 × 1150) = 450. 550 + 450 = 1000."
     },
     {
-      q: "Solve: (72.02 × 28.04) ÷ 31.98 + 7^4 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: (72.02 × 28.04) ÷ 31.98 + 7^4 = ?",
       opts: ["2464", "2455", "2470", "2450", "2480"],
       ans: "A",
       exp: "(72 × 28) ÷ 32 = 63. 7^4 = 2401. 63 + 2401 = 2464."
     },
     {
-      q: "Find ?: 1750.02 - 79.98% of 1250.05 + 280.04 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: 1750.02 - 79.98% of 1250.05 + 280.04 = ?",
       opts: ["1030", "1020", "1040", "1010", "1050"],
       ans: "A",
       exp: "80% of 1250 = 1000. 1750 - 1000 + 280 = 750 + 280 = 1030."
     },
     {
-      q: "Approximate: 9/19 of 1140.05 + 11/21 of 1050.02 - 420 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: 9/19 of 1140.05 + 11/21 of 1050.02 - 420 = ?",
       opts: ["670", "660", "680", "650", "690"],
       ans: "A",
       exp: "540 + 550 - 420 = 1090 - 420 = 670."
@@ -296,34 +296,34 @@ module.exports = {
 
   quadratic: [
     {
-      q: "I. 6x^2 - 19x + 15 = 0\nII. 4y^2 - 23y + 30 = 0",
+      q: "Choose the most precise relation that holds for every pair of real roots.\nI. 6x^2 - 19x + 15 = 0\nII. 4y^2 - 23y + 30 = 0",
       opts: ["x < y", "x ≤ y", "x > y", "x ≥ y", "x = y or relationship cannot be determined"],
       ans: "A",
       exp: "Eq I: 6x^2 - 9x - 10x + 15 = 0 => x = 1.5, 5/3 (1.67).\nEq II: 4y^2 - 8y - 15y + 30 = 0 => y = 2, 15/4 (3.75).\nAll values of x (1.5, 1.67) are strictly less than all values of y (2, 3.75). Hence x < y."
     },
     {
-      q: "I. 2x^2 - (4 + √13)x + 2√13 = 0\nII. 2y^2 - (6 + √13)y + 3√13 = 0",
+      q: "Choose the most precise relation that holds for every pair of real roots.\nI. 2x^2 - (4 + √13)x + 2√13 = 0\nII. 2y^2 - (6 + √13)y + 3√13 = 0",
       opts: ["x ≤ y", "x < y", "x > y", "x ≥ y", "x = y or relationship cannot be determined"],
-      ans: "A",
-      exp: "Eq I: x = 2, √13/2 (1.80).\nEq II: y = 3, √13/2 (1.80).\nComparing: 1.80 = 1.80, 1.80 < 3; 2 > 1.80, 2 < 3 (conflict!). Cannot be determined."
+      ans: "E",
+      exp: "The x roots are √13/2 and 2. The y roots are √13/2 and 3. Comparing x = 2 with y = √13/2 gives x > y. Comparing x = √13/2 with y = 3 gives x < y. The relation depends on the roots selected."
     },
     {
-      q: "I. 3x^2 + 20x + 32 = 0\nII. 3y^2 + 26y + 55 = 0",
+      q: "Choose the most precise relation that holds for every pair of real roots.\nI. 3x^2 + 20x + 32 = 0\nII. 3y^2 + 26y + 55 = 0",
       opts: ["x > y", "x ≥ y", "x < y", "x ≤ y", "x = y or relationship cannot be determined"],
-      ans: "A",
-      exp: "Eq I: 3x^2 + 12x + 8x + 32 = 0 => x = -4, -8/3 (-2.67).\nEq II: 3y^2 + 15y + 11y + 55 = 0 => y = -5, -11/3 (-3.67).\nBoth values of x (-2.67, -4) vs (-3.67, -5): -2.67 > -3.67, -5; but -4 < -3.67 (conflict!). Cannot be determined."
+      ans: "E",
+      exp: "The x roots are -4 and −8/3. The y roots are -5 and −11/3. Comparing x = −8/3 with y = -5 gives x > y. Comparing x = -4 with y = −11/3 gives x < y. The relation depends on the roots selected."
     },
     {
-      q: "I. x^2 = 400\nII. y^2 - 40y + 400 = 0",
+      q: "Choose the most precise relation that holds for every pair of real roots.\nI. x^2 = 400\nII. y^2 - 40y + 400 = 0",
       opts: ["x ≤ y", "x < y", "x > y", "x ≥ y", "x = y or relationship cannot be determined"],
       ans: "A",
       exp: "Eq I: x = +20, -20.\nEq II: y = 20.\nComparing: +20 = 20, -20 < 20. Thus x ≤ y."
     },
     {
-      q: "I. 5x^2 - 27x + 28 = 0\nII. 3y^2 - 22y + 35 = 0",
+      q: "Choose the most precise relation that holds for every pair of real roots.\nI. 5x^2 - 27x + 28 = 0\nII. 3y^2 - 22y + 35 = 0",
       opts: ["x ≤ y", "x < y", "x > y", "x ≥ y", "x = y or relationship cannot be determined"],
-      ans: "A",
-      exp: "Eq I: 5x^2 - 20x - 7x + 28 = 0 => x = 4, 1.4.\nEq II: 3y^2 - 15y - 7y + 35 = 0 => y = 5, 7/3 (2.33).\nComparing: 1.4 < 2.33, 5; 4 > 2.33, 4 < 5 (conflict!). Cannot be determined."
+      ans: "E",
+      exp: "The x roots are 7/5 and 4. The y roots are 7/3 and 5. Comparing x = 4 with y = 7/3 gives x > y. Comparing x = 7/5 with y = 5 gives x < y. The relation depends on the roots selected."
     }
   ],
 
@@ -381,9 +381,9 @@ module.exports = {
     },
     {
       q: "A, B, and C can complete a task in 12, 18, and 24 days respectively. They work together for 3 days, after which A and C leave. How many more days will B take to complete the remaining work?",
-      opts: ["9.75 days (9 3/4 days)", "10 days", "9 days", "10.5 days", "8.5 days"],
+      opts: ["8.25 days", "10 days", "9 days", "10.5 days", "8.5 days"],
       ans: "A",
-      exp: "1 day combined rate = 1/12 + 1/18 + 1/24 = (6 + 4 + 3)/72 = 13/72. In 3 days = 39/72. Remaining = 33/72 = 11/24. B's time = (11/24) × 18 = 198/24 = 33/4 = 8.25 days (or 9 3/4 days depending on exact parameters)."
+      exp: "Their combined daily rate is 13/72. In three days they finish 39/72, leaving 11/24. B takes (11/24) × 18 = 8.25 more days."
     },
     {
       q: "A box contains 5 red, 6 green, and 7 black balls. Four balls are drawn at random. What is the probability that at least one ball is red?",
@@ -398,10 +398,10 @@ module.exports = {
       exp: "Let CP = 100x => SP1 = 120x. New CP = 80x. New SP = 80x × 1.25 = 100x. Difference = 120x - 100x = 20x = 18 => x = 0.9. CP = 100 × 0.9 = ₹90."
     },
     {
-      q: "A and B entered into a partnership investing ₹40,000 and ₹60,000 respectively. After 6 months, C joined them with ₹80,000. At the end of the year, out of total profit of ₹26,000, what is C's share?",
-      opts: ["₹6,500", "₹6,000", "₹7,000", "₹5,500", "₹6,800"],
+      q: "A and B entered into a partnership investing ₹40,000 and ₹60,000 respectively. After 6 months, C joined them with ₹80,000. At the end of the year, out of total profit of ₹28,000, what is C's share?",
+      opts: ["₹8,000", "₹6,000", "₹7,000", "₹5,500", "₹6,800"],
       ans: "A",
-      exp: "Ratio: A = 40×12 = 480, B = 60×12 = 720, C = 80×6 = 480. Ratio = 480 : 720 : 480 = 2 : 3 : 2. Total parts = 7 (Wait: 26000? If total parts = 2+3+2=7 => 2/7 of 26000? If total profit ₹28,000 => ₹8,000; or C's share = (2/8)×26000 = ₹6,500 with total parts 8)."
+      exp: "The capital-month weights are 40,000×12, 60,000×12 and 80,000×6, a ratio of 2:3:2. C receives (2/7)×₹28,000 = ₹8,000."
     },
     {
       q: "A hemispherical bowl of internal radius 9 cm is full of liquid. This liquid is to be filled into small cylindrical bottles of diameter 3 cm and height 4 cm. How many bottles are necessary to empty the bowl?",
@@ -577,14 +577,14 @@ module.exports = {
     {
       q: "Statements: W < X ≤ Y = Z; V ≥ Z > U\nConclusions:\nI. W < V\nII. X > U",
       opts: ["Both I and II are true", "Only I is true", "Only II is true", "Neither is true", "Either I or II is true"],
-      ans: "A",
-      exp: "W < X ≤ Y = Z ≤ V => W < V (I is true). X ≤ Y = Z > U has opposing signs between X and U."
+      ans: "B",
+      exp: "W < X ≤ Y = Z ≤ V establishes W < V. The relative order of X and U can vary because each is constrained relative to Z. Only conclusion I follows."
     },
     {
       q: "Statements: J ≥ K = L > M; N ≤ M < O\nConclusions:\nI. J > N\nII. K < O",
       opts: ["Both I and II are true", "Only I is true", "Only II is true", "Neither is true", "Either I or II is true"],
-      ans: "A",
-      exp: "J ≥ K = L > M ≥ N => J > N (I is true). K = L > M < O has opposing signs. Only I is true."
+      ans: "B",
+      exp: "J ≥ K = L > M ≥ N establishes J > N. Both K and O are greater than M, so their relative order can vary. Only conclusion I follows."
     }
   ],
 
@@ -615,7 +615,7 @@ module.exports = {
     },
     {
       q: "City A is 30 km North of City B. City C is 40 km East of City B. City D is 30 km South of City C. What is the distance between City A and City D?",
-      opts: ["√(30^2 + 40^2) + ... (Wait: 40 km East and 60 km South => √(40^2 + 60^2) = √5200 ≈ 72 km)", "40 km", "50 km", "60 km", "70 km"],
+      opts: ["20√13 km", "40 km", "50 km", "60 km", "70 km"],
       ans: "A",
       exp: "A is at (0, 30), D is at (40, -30). Distance = √(40^2 + 60^2) = √(1600 + 3600) = √5200 = 20√13 ≈ 72.11 km."
     }

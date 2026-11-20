@@ -200,61 +200,61 @@ module.exports = {
 
   simplification: [
     {
-      q: "Find the approximate value of (?) in: 63.98% of 850.02 + 45.05% of 640.04 - 219.98 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: 63.98% of 850.02 + 45.05% of 640.04 - 219.98 = ?",
       opts: ["612", "605", "620", "598", "625"],
       ans: "A",
       exp: "64% of 850 = 544. 45% of 640 = 288. 544 + 288 - 220 = 832 - 220 = 612."
     },
     {
-      q: "Approximate value of: √(1295.95) + ∛(2196.98) - 14.98^2 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: √(1295.95) + ∛(2196.98) - 14.98^2 = ?",
       opts: ["-176", "-180", "-170", "-185", "-165"],
       ans: "A",
       exp: "√1296 = 36, ∛2197 = 13, 15^2 = 225. 36 + 13 - 225 = 49 - 225 = -176."
     },
     {
-      q: "Solve: (24.02 × 18.98) ÷ 11.95 + 7.98^3 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: (24.02 × 18.98) ÷ 11.95 + 7.98^3 = ?",
       opts: ["550", "540", "560", "535", "565"],
       ans: "A",
       exp: "(24 × 19) ÷ 12 = 38. 8^3 = 512. 38 + 512 = 550."
     },
     {
-      q: "Find ?: 79.98% of 450.05 - 35.04% of 320.02 + 89.95 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: 79.98% of 450.05 - 35.04% of 320.02 + 89.95 = ?",
       opts: ["338", "330", "345", "325", "350"],
       ans: "A",
       exp: "80% of 450 = 360. 35% of 320 = 112. 360 - 112 + 90 = 248 + 90 = 338."
     },
     {
-      q: "Approximate: (840.05 ÷ 14.02) + (650.02 ÷ 12.98) - 29.98 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: (840.05 ÷ 14.02) + (650.02 ÷ 12.98) - 29.98 = ?",
       opts: ["80", "75", "85", "70", "90"],
       ans: "A",
       exp: "60 + 50 - 30 = 80."
     },
     {
-      q: "Find ?: 28.02^2 - 16.04^2 + 11.98^2 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: 28.02^2 - 16.04^2 + 11.98^2 = ?",
       opts: ["672", "660", "680", "655", "685"],
       ans: "A",
       exp: "784 - 256 + 144 = 528 + 144 = 672."
     },
     {
-      q: "Approximate: 5/12 of 864.02 + 7/15 of 750.04 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: 5/12 of 864.02 + 7/15 of 750.04 = ?",
       opts: ["710", "700", "720", "695", "725"],
       ans: "A",
       exp: "(5/12 × 864) = 360. (7/15 × 750) = 350. 360 + 350 = 710."
     },
     {
-      q: "Solve: (35.02 × 16.04) ÷ 13.98 + 4^4 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: (35.02 × 16.04) ÷ 13.98 + 4^4 = ?",
       opts: ["296", "290", "300", "285", "305"],
       ans: "A",
       exp: "(35 × 16) ÷ 14 = 560 ÷ 14 = 40. 4^4 = 256. 40 + 256 = 296."
     },
     {
-      q: "Find ?: 950.02 - 49.98% of 680.05 + 140.04 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: 950.02 - 49.98% of 680.05 + 140.04 = ?",
       opts: ["750", "740", "760", "735", "765"],
       ans: "A",
       exp: "50% of 680 = 340. 950 - 340 + 140 = 610 + 140 = 750."
     },
     {
-      q: "Approximate: 3/7 of 560.05 + 5/9 of 720.02 - 180 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: 3/7 of 560.05 + 5/9 of 720.02 - 180 = ?",
       opts: ["460", "450", "470", "440", "480"],
       ans: "A",
       exp: "240 + 400 - 180 = 640 - 180 = 460."
@@ -296,34 +296,34 @@ module.exports = {
 
   quadratic: [
     {
-      q: "I. 2x^2 - 17x + 36 = 0\nII. 2y^2 - 19y + 44 = 0",
+      q: "Choose the most precise relation that holds for every pair of real roots.\nI. 2x^2 - 17x + 36 = 0\nII. 2y^2 - 19y + 44 = 0",
       opts: ["x < y", "x ≤ y", "x > y", "x ≥ y", "x = y or relationship cannot be determined"],
-      ans: "A",
-      exp: "Eq I: 2x^2 - 8x - 9x + 36 = 0 => x = 4, 4.5.\nEq II: 2y^2 - 8y - 11y + 44 = 0 => y = 4, 5.5.\nComparing: 4 = 4, 4 < 5.5; 4.5 > 4 (contradiction!). Thus relation cannot be determined (E)."
+      ans: "E",
+      exp: "The x roots are 4 and 4.5. The y roots are 4 and 5.5. Comparing x = 4.5 with y = 4 gives x > y. Comparing x = 4 with y = 5.5 gives x < y. The relation depends on the roots selected."
     },
     {
-      q: "I. x^2 - 15x + 56 = 0\nII. y^2 - 21y + 108 = 0",
+      q: "Choose the most precise relation that holds for every pair of real roots.\nI. x^2 - 15x + 56 = 0\nII. y^2 - 21y + 108 = 0",
       opts: ["x < y", "x ≤ y", "x > y", "x ≥ y", "x = y or relationship cannot be determined"],
       ans: "A",
       exp: "Eq I: x = 7, 8.\nEq II: y = 9, 12.\nAll values of x (7, 8) are strictly less than all values of y (9, 12). Hence x < y."
     },
     {
-      q: "I. 3x^2 + 10x + 8 = 0\nII. 3y^2 + 19y + 28 = 0",
+      q: "Choose the most precise relation that holds for every pair of real roots.\nI. 3x^2 + 10x + 8 = 0\nII. 3y^2 + 19y + 28 = 0",
       opts: ["x > y", "x ≥ y", "x < y", "x ≤ y", "x = y or relationship cannot be determined"],
       ans: "A",
       exp: "Eq I: 3x^2 + 6x + 4x + 8 = 0 => x = -2, -4/3 (-1.33).\nEq II: 3y^2 + 12y + 7y + 28 = 0 => y = -4, -7/3 (-2.33).\nBoth values of x (-1.33, -2) are strictly greater than both values of y (-2.33, -4). Thus x > y."
     },
     {
-      q: "I. x^2 = 196\nII. y^2 - 28y + 196 = 0",
+      q: "Choose the most precise relation that holds for every pair of real roots.\nI. x^2 = 196\nII. y^2 - 28y + 196 = 0",
       opts: ["x ≤ y", "x < y", "x > y", "x ≥ y", "x = y or relationship cannot be determined"],
       ans: "A",
       exp: "Eq I: x = +14, -14.\nEq II: y = 14.\nComparing: +14 = 14, -14 < 14. Thus x ≤ y."
     },
     {
-      q: "I. x^2 - 18x + 77 = 0\nII. y^2 - 22y + 117 = 0",
+      q: "Choose the most precise relation that holds for every pair of real roots.\nI. x^2 - 18x + 77 = 0\nII. y^2 - 22y + 117 = 0",
       opts: ["x < y", "x ≤ y", "x > y", "x ≥ y", "x = y or relationship cannot be determined"],
-      ans: "A",
-      exp: "Eq I: x = 7, 11.\nEq II: y = 9, 13.\nComparing: 7 < 9, 13; 11 > 9 and 11 < 13 => conflict. Cannot be determined."
+      ans: "E",
+      exp: "The x roots are 7 and 11. The y roots are 9 and 13. Comparing x = 11 with y = 9 gives x > y. Comparing x = 7 with y = 13 gives x < y. The relation depends on the roots selected."
     }
   ],
 
@@ -380,10 +380,10 @@ module.exports = {
       exp: "Pipe P works for full 18 mins => 18/24 = 3/4 filled. Remaining 1/4 filled by Q => Time for Q = (1/4) × 32 = 8 minutes."
     },
     {
-      q: "A boat covers 48 km upstream and 72 km downstream in 12 hours. If the speed of the boat in still water is 11 km/h, find the speed of the stream.",
+      q: "A boat covers 48 km upstream and 84 km downstream in 12 hours. If the speed of the boat in still water is 11 km/h, find the speed of the stream.",
       opts: ["3 km/h", "2 km/h", "4 km/h", "1.5 km/h", "2.5 km/h"],
       ans: "A",
-      exp: "48/(11-s) + 72/(11+s) = 12. Testing s = 3: 48/8 + 72/14? Wait: 48/(11-s) + 72/(11+s) => for s=1: 48/10 + 72/12 = 4.8 + 6 = 10.8. For s=3: 48/8 + 72/14 (no). If s=1, 48/10 + 72/12 (no). Let speed in still water be 11: s = 3 gives exact standard roots."
+      exp: "At a stream speed of 3 km/h the upstream speed is 8 km/h and the downstream speed is 14 km/h. The two times are 48/8 = 6 and 84/14 = 6 hours. The other algebraic solution is a negative stream speed, so 3 km/h is the feasible answer."
     },
     {
       q: "A bag contains 6 black balls and 4 white balls. Three balls are drawn at random. What is the probability that all three are black?",
@@ -398,10 +398,10 @@ module.exports = {
       exp: "When SP is same and profit/loss % is x%: Overall % = x^2 / 100 loss = 20^2 / 100 = 4% loss."
     },
     {
-      q: "A and B started a business. A invested ₹25,000 and after 4 months B joined with ₹30,000. At the end of the year, out of total profit of ₹11,000, what is A's share?",
+      q: "A and B started a business. A invested ₹25,000 and after 4 months B joined with ₹30,000. At the end of the year, out of total profit of ₹11,250, what is A's share?",
       opts: ["₹6,250", "₹6,000", "₹6,500", "₹5,800", "₹6,400"],
       ans: "A",
-      exp: "Ratio: A = 25000 × 12 = 300,000. B = 30000 × 8 = 240,000. Ratio = 30 : 24 = 5 : 4. A's share = (5/9)? Wait: (300/540) × 11000 ≈ ₹6,111 (or ratio 25×12=300, 30×8=240 => 5:4 => 5/9)."
+      exp: "Their capital-month weights are 25,000×12 and 30,000×8, a ratio of 5:4. A receives (5/9)×₹11,250 = ₹6,250."
     },
     {
       q: "The ratio of the area of a square to that of a circle is 14 : 11. If the perimeter of the square is 56 cm, find the radius of the circle. (Use π = 22/7)",
@@ -557,7 +557,7 @@ module.exports = {
 
   inequalities: [
     {
-      q: "Statements: P @ Q means P ≥ Q; P # Q means P > Q; P $ Q means P = Q; P % Q means P ≤ Q; P & Q means P < Q.\n\nStatements: A # B @ C $ D # E\nConclusions:\nI. A # D\nII. B # E",
+      q: "Directions (86-90): P @ Q means P ≥ Q; P # Q means P > Q; P $ Q means P = Q; P % Q means P ≤ Q; P & Q means P < Q.\n\n\nStatements: A # B @ C $ D # E\nConclusions:\nI. A # D\nII. B # E",
       opts: ["Both I and II are true", "Only I is true", "Only II is true", "Neither is true", "Either I or II is true"],
       ans: "A",
       exp: "A > B ≥ C = D > E => A > D (I is true). B ≥ C = D > E => B > E (II is true). Both are true."
@@ -642,9 +642,9 @@ module.exports = {
     },
     {
       q: "In a certain code, 'PROFIT' is written as 'QSPGJU'. How is 'LOSSES' written in that code?",
-      opts: ["MPTNFT", "MPTNFS", "MPTOFT", "NQTOFT", "MPSNFT"],
+      opts: ["MPTTFT", "MPTNFS", "MPTOFT", "NQTOFT", "MPSNFT"],
       ans: "A",
-      exp: "Pattern: +1 on each letter: L+1=M, O+1=P, S+1=T, S+1=T (Wait: S+1=T, E+1=F, S+1=T => MPTTFT). Correct shift = +1."
+      exp: "Shift each letter one place forward. L→M, O→P, S→T, S→T, E→F and S→T, yielding MPTTFT."
     },
     {
       q: "If it is possible to make only one meaningful four-letter word with the 2nd, 4th, 6th, and 8th letters of the word 'INVESTMENT' (N, E, T, E), which is the second letter of that word?",

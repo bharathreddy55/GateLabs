@@ -764,14 +764,14 @@ topic: Simple & Compound Interest
 difficulty: Moderate
 marks: 1
 year: 2026
-question: What principal will yield ₹1,640 as compound interest for 2 years at 10% per annum compounded annually?
+question: What principal will yield ₹1,680 as compound interest for 2 years at 10% per annum compounded annually?
 option a: ₹8,000
 option b: ₹7,500
 option c: ₹8,500
 option d: ₹7,800
 option e: ₹8,200
 correct: A
-explanation: CI = P × [(1.10)² - 1] = 0.21P = 1640 => Wait: (1.10)² - 1 = 0.21. 1640 / 0.21 is ~7809. If 0.205P? (If 5% p.a. => 0.1025P = 1640 => P = 16000. With 10% p.a. and CI = 1680 => P = ₹8,000).
+explanation: The interest over two years is P[(1.10)² − 1] = 0.21P. Thus the principal is ₹1,680 ÷ 0.21 = ₹8,000.
 ---
 subject: Quantitative Aptitude (31-65)
 topic: Mixtures & Allegations
@@ -890,7 +890,7 @@ topic: Quadratic Equations
 difficulty: Easy-Moderate
 marks: 1
 year: 2026
-question: Solve the equations:
+question: Choose the most precise relation that holds for every pair of real roots.
 I. x² – 17x + 72 = 0
 II. y² – 21y + 110 = 0
 option a: x < y
@@ -898,15 +898,15 @@ option b: x ≤ y
 option c: x > y
 option d: x ≥ y
 option e: x = y or relationship cannot be determined
-correct: B
-explanation: I. x = 8, 9. II. y = 10, 11. Thus, x < y.
+correct: A
+explanation: The x roots are 8 and 9. The y roots are 10 and 11. Since 9 < 10, the strict comparison x < y holds for every pair.
 ---
 subject: Quantitative Aptitude (31-65)
 topic: Quadratic Equations
 difficulty: Easy-Moderate
 marks: 1
 year: 2026
-question: Solve the equations:
+question: Choose the most precise relation that holds for every pair of real roots.
 I. x² – 12x + 32 = 0
 II. y² – 16y + 60 = 0
 option a: x ≤ y
@@ -914,8 +914,8 @@ option b: x < y
 option c: x > y
 option d: x ≥ y
 option e: x = y or relationship cannot be determined
-correct: A
-explanation: I. x = 4, 8. II. y = 6, 10.
+correct: E
+explanation: The x roots are 4 and 8. The y roots are 6 and 10. Comparing x = 8 with y = 6 gives x > y. Comparing x = 4 with y = 10 gives x < y. The relation depends on the roots selected.
 ---
 subject: Quantitative Aptitude (31-65)
 topic: Number Series
@@ -1360,7 +1360,7 @@ topic: Order and Ranking
 difficulty: Easy-Moderate
 marks: 1
 year: 2026
-question: Five students scored different marks:
+question: Directions (90-91): Five students scored different marks:
 - X scored more than Z but less than W.
 - V scored more than W.
 - Y scored less than Z.

@@ -343,7 +343,7 @@ topic: Para Jumbles
 difficulty: Hard
 marks: 1
 year: 2026
-question: Rearrange the five sentences (A, B, C, D, E) to form a coherent paragraph:
+question: Directions (24-27): Rearrange the five sentences (A, B, C, D, E) to form a coherent paragraph:
 
 (A) Such systemic runs can drain liquidity reserves within minutes.
 (B) Digital banking enables instantaneous, frictionless deposit withdrawals.
@@ -453,7 +453,7 @@ topic: Simplification & Approximation
 difficulty: Hard
 marks: 1
 year: 2026
-question: Find the approximate value of (?) in: 99.98% of 1799.95 + 74.98% of 1440.04 - 679.98 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: 99.98% of 1799.95 + 74.98% of 1440.04 - 679.98 = ?
 option a: 2200
 option b: 2180
 option c: 2220
@@ -467,7 +467,7 @@ topic: Simplification & Approximation
 difficulty: Hard
 marks: 1
 year: 2026
-question: Approximate: √(4095.95) + ∛(9260.98) - 24.98^2 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: √(4095.95) + ∛(9260.98) - 24.98^2 = ?
 option a: -540
 option b: -535
 option c: -545
@@ -481,7 +481,7 @@ topic: Simplification & Approximation
 difficulty: Hard
 marks: 1
 year: 2026
-question: Solve: (64.02 × 45.04) ÷ 29.98 + 12.02^3 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: (64.02 × 45.04) ÷ 29.98 + 12.02^3 = ?
 option a: 1824
 option b: 1815
 option c: 1830
@@ -495,7 +495,7 @@ topic: Simplification & Approximation
 difficulty: Hard
 marks: 1
 year: 2026
-question: Find ?: 99.98% of 1150.05 - 65.02% of 840.02 + 249.95 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: 99.98% of 1150.05 - 65.02% of 840.02 + 249.95 = ?
 option a: 854
 option b: 845
 option c: 860
@@ -509,7 +509,7 @@ topic: Simplification & Approximation
 difficulty: Hard
 marks: 1
 year: 2026
-question: Approximate: (1680.05 ÷ 23.98) + (1120.02 ÷ 15.98) - 69.98 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: (1680.05 ÷ 23.98) + (1120.02 ÷ 15.98) - 69.98 = ?
 option a: 70
 option b: 65
 option c: 75
@@ -523,7 +523,7 @@ topic: Simplification & Approximation
 difficulty: Hard
 marks: 1
 year: 2026
-question: Find ?: 42.02^2 - 28.04^2 + 21.98^2 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: 42.02^2 - 28.04^2 + 21.98^2 = ?
 option a: 1464
 option b: 1450
 option c: 1475
@@ -537,7 +537,7 @@ topic: Simplification & Approximation
 difficulty: Hard
 marks: 1
 year: 2026
-question: Approximate: 11/27 of 1350.04 + 9/23 of 1150.02 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: 11/27 of 1350.04 + 9/23 of 1150.02 = ?
 option a: 1000
 option b: 990
 option c: 1010
@@ -551,7 +551,7 @@ topic: Simplification & Approximation
 difficulty: Hard
 marks: 1
 year: 2026
-question: Solve: (72.02 × 28.04) ÷ 31.98 + 7^4 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: (72.02 × 28.04) ÷ 31.98 + 7^4 = ?
 option a: 2464
 option b: 2455
 option c: 2470
@@ -565,7 +565,7 @@ topic: Simplification & Approximation
 difficulty: Hard
 marks: 1
 year: 2026
-question: Find ?: 1750.02 - 79.98% of 1250.05 + 280.04 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: 1750.02 - 79.98% of 1250.05 + 280.04 = ?
 option a: 1030
 option b: 1020
 option c: 1040
@@ -579,7 +579,7 @@ topic: Simplification & Approximation
 difficulty: Hard
 marks: 1
 year: 2026
-question: Approximate: 9/19 of 1140.05 + 11/21 of 1050.02 - 420 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: 9/19 of 1140.05 + 11/21 of 1050.02 - 420 = ?
 option a: 670
 option b: 660
 option c: 680
@@ -673,7 +673,8 @@ topic: Quadratic Equations
 difficulty: Hard
 marks: 1
 year: 2026
-question: I. 6x^2 - 19x + 15 = 0
+question: Choose the most precise relation that holds for every pair of real roots.
+I. 6x^2 - 19x + 15 = 0
 II. 4y^2 - 23y + 30 = 0
 option a: x < y
 option b: x ≤ y
@@ -690,41 +691,40 @@ topic: Quadratic Equations
 difficulty: Hard
 marks: 1
 year: 2026
-question: I. 2x^2 - (4 + √13)x + 2√13 = 0
+question: Choose the most precise relation that holds for every pair of real roots.
+I. 2x^2 - (4 + √13)x + 2√13 = 0
 II. 2y^2 - (6 + √13)y + 3√13 = 0
 option a: x ≤ y
 option b: x < y
 option c: x > y
 option d: x ≥ y
 option e: x = y or relationship cannot be determined
-correct: A
-explanation: Eq I: x = 2, √13/2 (1.80).
-Eq II: y = 3, √13/2 (1.80).
-Comparing: 1.80 = 1.80, 1.80 < 3; 2 > 1.80, 2 < 3 (conflict!). Cannot be determined.
+correct: E
+explanation: The x roots are √13/2 and 2. The y roots are √13/2 and 3. Comparing x = 2 with y = √13/2 gives x > y. Comparing x = √13/2 with y = 3 gives x < y. The relation depends on the roots selected.
 ---
 subject: Quantitative Aptitude (31-65)
 topic: Quadratic Equations
 difficulty: Hard
 marks: 1
 year: 2026
-question: I. 3x^2 + 20x + 32 = 0
+question: Choose the most precise relation that holds for every pair of real roots.
+I. 3x^2 + 20x + 32 = 0
 II. 3y^2 + 26y + 55 = 0
 option a: x > y
 option b: x ≥ y
 option c: x < y
 option d: x ≤ y
 option e: x = y or relationship cannot be determined
-correct: A
-explanation: Eq I: 3x^2 + 12x + 8x + 32 = 0 => x = -4, -8/3 (-2.67).
-Eq II: 3y^2 + 15y + 11y + 55 = 0 => y = -5, -11/3 (-3.67).
-Both values of x (-2.67, -4) vs (-3.67, -5): -2.67 > -3.67, -5; but -4 < -3.67 (conflict!). Cannot be determined.
+correct: E
+explanation: The x roots are -4 and −8/3. The y roots are -5 and −11/3. Comparing x = −8/3 with y = -5 gives x > y. Comparing x = -4 with y = −11/3 gives x < y. The relation depends on the roots selected.
 ---
 subject: Quantitative Aptitude (31-65)
 topic: Quadratic Equations
 difficulty: Hard
 marks: 1
 year: 2026
-question: I. x^2 = 400
+question: Choose the most precise relation that holds for every pair of real roots.
+I. x^2 = 400
 II. y^2 - 40y + 400 = 0
 option a: x ≤ y
 option b: x < y
@@ -741,17 +741,16 @@ topic: Quadratic Equations
 difficulty: Hard
 marks: 1
 year: 2026
-question: I. 5x^2 - 27x + 28 = 0
+question: Choose the most precise relation that holds for every pair of real roots.
+I. 5x^2 - 27x + 28 = 0
 II. 3y^2 - 22y + 35 = 0
 option a: x ≤ y
 option b: x < y
 option c: x > y
 option d: x ≥ y
 option e: x = y or relationship cannot be determined
-correct: A
-explanation: Eq I: 5x^2 - 20x - 7x + 28 = 0 => x = 4, 1.4.
-Eq II: 3y^2 - 15y - 7y + 35 = 0 => y = 5, 7/3 (2.33).
-Comparing: 1.4 < 2.33, 5; 4 > 2.33, 4 < 5 (conflict!). Cannot be determined.
+correct: E
+explanation: The x roots are 7/5 and 4. The y roots are 7/3 and 5. Comparing x = 4 with y = 7/3 gives x > y. Comparing x = 7/5 with y = 5 gives x < y. The relation depends on the roots selected.
 ---
 subject: Quantitative Aptitude (31-65)
 topic: Data Interpretation
@@ -882,13 +881,13 @@ difficulty: Hard
 marks: 1
 year: 2026
 question: A, B, and C can complete a task in 12, 18, and 24 days respectively. They work together for 3 days, after which A and C leave. How many more days will B take to complete the remaining work?
-option a: 9.75 days (9 3/4 days)
+option a: 8.25 days
 option b: 10 days
 option c: 9 days
 option d: 10.5 days
 option e: 8.5 days
 correct: A
-explanation: 1 day combined rate = 1/12 + 1/18 + 1/24 = (6 + 4 + 3)/72 = 13/72. In 3 days = 39/72. Remaining = 33/72 = 11/24. B's time = (11/24) × 18 = 198/24 = 33/4 = 8.25 days (or 9 3/4 days depending on exact parameters).
+explanation: Their combined daily rate is 13/72. In three days they finish 39/72, leaving 11/24. B takes (11/24) × 18 = 8.25 more days.
 ---
 subject: Quantitative Aptitude (31-65)
 topic: Arithmetic Word Problems
@@ -923,14 +922,14 @@ topic: Arithmetic Word Problems
 difficulty: Hard
 marks: 1
 year: 2026
-question: A and B entered into a partnership investing ₹40,000 and ₹60,000 respectively. After 6 months, C joined them with ₹80,000. At the end of the year, out of total profit of ₹26,000, what is C's share?
-option a: ₹6,500
+question: A and B entered into a partnership investing ₹40,000 and ₹60,000 respectively. After 6 months, C joined them with ₹80,000. At the end of the year, out of total profit of ₹28,000, what is C's share?
+option a: ₹8,000
 option b: ₹6,000
 option c: ₹7,000
 option d: ₹5,500
 option e: ₹6,800
 correct: A
-explanation: Ratio: A = 40×12 = 480, B = 60×12 = 720, C = 80×6 = 480. Ratio = 480 : 720 : 480 = 2 : 3 : 2. Total parts = 7 (Wait: 26000? If total parts = 2+3+2=7 => 2/7 of 26000? If total profit ₹28,000 => ₹8,000; or C's share = (2/8)×26000 = ₹6,500 with total parts 8).
+explanation: The capital-month weights are 40,000×12, 60,000×12 and 80,000×6, a ratio of 2:3:2. C receives (2/7)×₹28,000 = ₹8,000.
 ---
 subject: Quantitative Aptitude (31-65)
 topic: Arithmetic Word Problems
@@ -1377,8 +1376,8 @@ option b: Only I is true
 option c: Only II is true
 option d: Neither is true
 option e: Either I or II is true
-correct: A
-explanation: W < X ≤ Y = Z ≤ V => W < V (I is true). X ≤ Y = Z > U has opposing signs between X and U.
+correct: B
+explanation: W < X ≤ Y = Z ≤ V establishes W < V. The relative order of X and U can vary because each is constrained relative to Z. Only conclusion I follows.
 ---
 subject: Reasoning Ability (66-100)
 topic: Inequality
@@ -1394,8 +1393,8 @@ option b: Only I is true
 option c: Only II is true
 option d: Neither is true
 option e: Either I or II is true
-correct: A
-explanation: J ≥ K = L > M ≥ N => J > N (I is true). K = L > M < O has opposing signs. Only I is true.
+correct: B
+explanation: J ≥ K = L > M ≥ N establishes J > N. Both K and O are greater than M, so their relative order can vary. Only conclusion I follows.
 ---
 subject: Reasoning Ability (66-100)
 topic: Direction & Blood Relation
@@ -1459,7 +1458,7 @@ difficulty: Hard
 marks: 1
 year: 2026
 question: City A is 30 km North of City B. City C is 40 km East of City B. City D is 30 km South of City C. What is the distance between City A and City D?
-option a: √(30^2 + 40^2) + ... (Wait: 40 km East and 60 km South => √(40^2 + 60^2) = √5200 ≈ 72 km)
+option a: 20√13 km
 option b: 40 km
 option c: 50 km
 option d: 60 km

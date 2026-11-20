@@ -296,31 +296,31 @@ module.exports = {
 
   quadratic: [
     {
-      q: "In each of the following questions, two equations (I) and (II) are given. Solve both equations and establish the relationship between x and y.\n\nI. x^2 - 7x + 12 = 0\nII. y^2 - 9y + 20 = 0",
+      q: "Choose the most precise relation that holds for every pair of real roots.\nI. x^2 - 7x + 12 = 0\nII. y^2 - 9y + 20 = 0",
       opts: ["x < y", "x ≤ y", "x > y", "x ≥ y", "x = y or relationship cannot be determined"],
       ans: "B",
       exp: "Eq I: (x-3)(x-4) = 0 => x = 3, 4.\nEq II: (y-4)(y-5) = 0 => y = 4, 5.\nComparing: 3 < 4, 3 < 5; 4 = 4, 4 < 5. Thus, x ≤ y."
     },
     {
-      q: "I. x^2 - 11x + 30 = 0\nII. y^2 - 15y + 56 = 0",
+      q: "Choose the most precise relation that holds for every pair of real roots.\nI. x^2 - 11x + 30 = 0\nII. y^2 - 15y + 56 = 0",
       opts: ["x < y", "x ≤ y", "x > y", "x ≥ y", "x = y or relationship cannot be determined"],
       ans: "A",
       exp: "Eq I: x = 5, 6.\nEq II: y = 7, 8.\nBoth values of x (5, 6) are strictly less than both values of y (7, 8). Hence x < y."
     },
     {
-      q: "I. x^2 + 8x + 15 = 0\nII. y^2 + 11y + 30 = 0",
+      q: "Choose the most precise relation that holds for every pair of real roots.\nI. x^2 + 8x + 15 = 0\nII. y^2 + 11y + 30 = 0",
       opts: ["x < y", "x ≤ y", "x > y", "x ≥ y", "x = y or relationship cannot be determined"],
       ans: "D",
       exp: "Eq I: x = -3, -5.\nEq II: y = -5, -6.\nComparing: -3 > -5, -3 > -6; -5 = -5, -5 > -6. Thus, x ≥ y."
     },
     {
-      q: "I. x^2 = 64\nII. y^2 - 16y + 64 = 0",
+      q: "Choose the most precise relation that holds for every pair of real roots.\nI. x^2 = 64\nII. y^2 - 16y + 64 = 0",
       opts: ["x < y", "x ≤ y", "x > y", "x ≥ y", "x = y or relationship cannot be determined"],
       ans: "B",
       exp: "Eq I: x = +8, -8.\nEq II: y = 8.\nComparing: +8 = 8, -8 < 8. Thus, x ≤ y."
     },
     {
-      q: "I. x^2 - 5x + 6 = 0\nII. y^2 - 7y + 12 = 0",
+      q: "Choose the most precise relation that holds for every pair of real roots.\nI. x^2 - 5x + 6 = 0\nII. y^2 - 7y + 12 = 0",
       opts: ["x < y", "x ≤ y", "x > y", "x ≥ y", "x = y or relationship cannot be determined"],
       ans: "B",
       exp: "Eq I: x = 2, 3.\nEq II: y = 3, 4.\nComparing: 2 < 3, 2 < 4; 3 = 3, 3 < 4. Hence x ≤ y."
@@ -577,8 +577,8 @@ module.exports = {
     {
       q: "Statements: K ≥ L = M > N ≥ O\nConclusions:\nI. K > N\nII. L ≥ O",
       opts: ["Only conclusion I is true", "Only II is true", "Both are true", "Neither is true", "Either I or II is true"],
-      ans: "A",
-      exp: "K ≥ L = M > N => K > N (I is true). L = M > N ≥ O => L > O, not necessarily L ≥ O with equality. Thus only I is true."
+      ans: "C",
+      exp: "K ≥ L = M > N gives K > N. L = M > N ≥ O gives L > O, which also guarantees L ≥ O. Both conclusions follow."
     },
     {
       q: "Statements: X > Y ≥ Z = W < V\nConclusions:\nI. X > W\nII. Y > V",
@@ -643,8 +643,8 @@ module.exports = {
     {
       q: "How many pairs of letters are there in the word 'REPORT' which have as many letters between them as in the English alphabet (both forward and backward)?",
       opts: ["Two", "One", "Three", "Four", "None"],
-      ans: "A",
-      exp: "Forward: P-Q-R (P and R have 1 letter between them: P(16), O(15), R(18)). Backward: P-Q-R. Total = 2 pairs."
+      ans: "D",
+      exp: "For letters in positions i and j, their alphabetical positions must differ by j−i. Four pairs qualify: R(1)–P(3), R(1)–O(4), P(3)–O(4), and P(3)–R(5)."
     },
     {
       q: "If all digits in the number '7394265' are arranged in ascending order from left to right, how many digits will remain in their original positions?",

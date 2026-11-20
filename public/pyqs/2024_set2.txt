@@ -63,7 +63,11 @@ Subtopic: Verbal Ability -> Sentence Ordering
 Difficulty: Medium
 Marks: 1
 Year: 2024
-Question: Sequence the following sentences in a coherent passage:\nP: This fortuitous geological event generated a colossal amount of energy...\nQ: Thus, the geophysicists tend to think of the Himalayas as an active geological event...\nR: The natural process of the cooling of this massive edifice absorbed large quantities of CO2...\nS: Many millennia ago, a breakaway chunk of bedrock from the Antarctic Plate collided with the Eurasian Plate.
+Question: Sequence the following sentences in a coherent passage:
+P: This fortuitous geological event generated a colossal amount of energy...
+Q: Thus, the geophysicists tend to think of the Himalayas as an active geological event...
+R: The natural process of the cooling of this massive edifice absorbed large quantities of CO2...
+S: Many millennia ago, a breakaway chunk of bedrock from the Antarctic Plate collided with the Eurasian Plate.
 Option A: QPSR
 Option B: QSPR
 Option C: SPRQ
@@ -121,9 +125,13 @@ Explanation: Three perpendicular planar cuts (along length, width, and height ax
 Subject: General Aptitude
 Subtopic: Logical Reasoning -> Grid Puzzles
 Difficulty: Medium
-Marks: 1
+Marks: 2
 Year: 2024
-Question: In a 4x4 array, each cell of the first three rows has either a cross (X) or a number denoting the count of immediate neighbors without a cross. Given the grid:\nRow 1: [1, X, 4, 3]\nRow 2: [X, 5, 5, 4]\nRow 3: [3, X, 6, X]\nIf the last row contains no crosses, the sum of the four numbers in the last row is:
+Question: In a 4x4 array, each cell of the first three rows has either a cross (X) or a number denoting the count of immediate neighbours without a cross, including diagonals. Given the grid:
+Row 1: [1, X, 4, 3]
+Row 2: [X, 5, 5, 4]
+Row 3: [3, X, 6, X]
+If the last row contains no crosses, the sum of the four numbers in the last row is:
 Option A: 11
 Option B: 10
 Option C: 12
@@ -168,7 +176,13 @@ Subtopic: C Programming / Function Evaluation
 Difficulty: Medium
 Marks: 1
 Year: 2024
-Question: What is the output of the C program assuming function arguments evaluate from right to left?\n\n#include <stdio.h>\nint g(int p) { printf("%d", p); return p; }\nint h(int q) { printf("%d", q); return q; }\nvoid f(int x, int y) { g(x); h(y); }\nint main() { f(g(10), h(20)); }
+Question: What is the output of the C program assuming function arguments evaluate from right to left?
+
+#include <stdio.h>
+int g(int p) { printf("%d", p); return p; }
+int h(int q) { printf("%d", q); return q; }
+void f(int x, int y) { g(x); h(y); }
+int main() { f(g(10), h(20)); }
 Option A: 20101020
 Option B: 10202010
 Option C: 20102010
@@ -273,7 +287,9 @@ Subtopic: Compiler Phases
 Difficulty: Easy
 Marks: 1
 Year: 2024
-Question: Match the compiler phase to its output:\nSet X: [P. Lexical Analyzer, Q. Syntax Analyzer, R. Intermediate Code Generator, S. Code Optimizer]\nSet Y: [1. Abstract Syntax Tree, 2. Token, 3. Parse Tree, 4. Constant Folding]
+Question: Match the compiler phase to its output:
+Set X: [P. Lexical Analyzer, Q. Syntax Analyzer, R. Intermediate Code Generator, S. Code Optimizer]
+Set Y: [1. Abstract Syntax Tree, 2. Token, 3. Parse Tree, 4. Constant Folding]
 Option A: P-4; Q-1; R-3; S-2
 Option B: P-2; Q-3; R-1; S-4
 Option C: P-2; Q-1; R-3; S-4
@@ -406,9 +422,15 @@ Explanation: x + 1 = 1 (annulment law) and x · x = x (idempotent law), so B and
 Subject: Computer Organization & Architecture (COA)
 Subtopic: Pipelining / Data Hazards
 Difficulty: Hard
-Marks: 2
+Marks: 1
+Type: MSQ
 Year: 2024
-Question: In a pipeline with instructions:\nI1: DIV R3, R1, R2\nI2: SUB R5, R3, R4\nI3: ADD R3, R5, R6\nI4: MUL R7, R3, R8\nWhich of the following statements is/are TRUE?
+Question: In a pipeline with instructions:
+I1: DIV R3, R1, R2
+I2: SUB R5, R3, R4
+I3: ADD R3, R5, R6
+I4: MUL R7, R3, R8
+Which of the following statements is/are TRUE?
 Option A: There is a RAW dependency on R3 between I1 and I2
 Option B: There is a WAR dependency on R3 between I1 and I3
 Option C: There is a RAW dependency on R3 between I2 and I3
@@ -437,13 +459,15 @@ Subject: Programming & Data Structures
 Subtopic: C Programming / Strings
 Difficulty: Medium
 Marks: 1
+Type: MSQ
 Year: 2024
-Question: Consider: int fX(char *a) { char *b = a; while (*b) b++; return b - a; }\nWhich of the following statements is/are TRUE?
+Question: Consider: int fX(char *a) { char *b = a; while (*b) b++; return b - a; }
+Which of the following statements is/are TRUE?
 Option A: The function call fX("abcd") will always return a value
 Option B: Assuming a character array c is declared as char c[] = "abcd" in main(), the function call fX(c) will always return a value
 Option C: The code of the function will not compile
 Option D: Assuming a character pointer c is declared as char *c = "abcd" in main(), the function call fX(c) will always return a value
-Correct: A
+Correct: A,B,D
 Explanation: The function compiles successfully and computes string length. Since "abcd" is a null-terminated string literal (both directly or as pointer/array), it returns 4 in all valid cases. Thus, A, B, and D are true.
 
 ---
@@ -483,7 +507,16 @@ Subtopic: C Programming / Pointers
 Difficulty: Easy
 Marks: 1
 Year: 2024
-Question: What is the output of the C program?\n\n#include <stdio.h>\nint main() {\n    double a[2] = {20.0, 25.0}, *p, *q;\n    p = a;\n    q = p + 1;\n    printf("%d,%d", (int)(q - p), (int)(*q - *p));\n    return 0;\n}
+Question: What is the output of the C program?
+
+#include <stdio.h>
+int main() {
+    double a[2] = {20.0, 25.0}, *p, *q;
+    p = a;
+    q = p + 1;
+    printf("%d,%d", (int)(q - p), (int)(*q - *p));
+    return 0;
+}
 Option A: 4,8
 Option B: 1,5
 Option C: 8,5

@@ -343,7 +343,7 @@ topic: Para Jumbles
 difficulty: Advanced
 marks: 1
 year: 2026
-question: Rearrange the five sentences (A, B, C, D, E) to form a meaningful paragraph:
+question: Directions (24-27): Rearrange the five sentences (A, B, C, D, E) to form a meaningful paragraph:
 
 (A) These smart contracts automate settlements without human intermediaries.
 (B) Decentralized Finance (DeFi) offers an alternative architecture for lending.
@@ -453,7 +453,7 @@ topic: Simplification & Approximation
 difficulty: Advanced
 marks: 1
 year: 2026
-question: Find the approximate value of (?) in: 74.98% of 1199.95 + 39.98% of 850.04 - 289.98 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: 74.98% of 1199.95 + 39.98% of 850.04 - 289.98 = ?
 option a: 950
 option b: 940
 option c: 960
@@ -467,7 +467,7 @@ topic: Simplification & Approximation
 difficulty: Advanced
 marks: 1
 year: 2026
-question: Approximate: √(2024.95) + ∛(4095.98) - 17.98^2 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: √(2024.95) + ∛(4095.98) - 17.98^2 = ?
 option a: -263
 option b: -260
 option c: -270
@@ -481,7 +481,7 @@ topic: Simplification & Approximation
 difficulty: Advanced
 marks: 1
 year: 2026
-question: Solve: (36.02 × 24.98) ÷ 14.98 + 9.02^3 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: (36.02 × 24.98) ÷ 14.98 + 9.02^3 = ?
 option a: 789
 option b: 780
 option c: 795
@@ -495,7 +495,7 @@ topic: Simplification & Approximation
 difficulty: Advanced
 marks: 1
 year: 2026
-question: Find ?: 85.02% of 640.05 - 45.02% of 480.02 + 125.95 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: 85.02% of 640.05 - 45.02% of 480.02 + 125.95 = ?
 option a: 454
 option b: 445
 option c: 460
@@ -509,7 +509,7 @@ topic: Simplification & Approximation
 difficulty: Advanced
 marks: 1
 year: 2026
-question: Approximate: (960.05 ÷ 15.98) + (780.02 ÷ 12.98) - 39.98 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: (960.05 ÷ 15.98) + (780.02 ÷ 12.98) - 39.98 = ?
 option a: 80
 option b: 75
 option c: 85
@@ -523,7 +523,7 @@ topic: Simplification & Approximation
 difficulty: Advanced
 marks: 1
 year: 2026
-question: Find ?: 32.02^2 - 18.04^2 + 14.98^2 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: 32.02^2 - 18.04^2 + 14.98^2 = ?
 option a: 925
 option b: 915
 option c: 935
@@ -537,7 +537,7 @@ topic: Simplification & Approximation
 difficulty: Advanced
 marks: 1
 year: 2026
-question: Approximate: 7/18 of 900.04 + 5/14 of 700.02 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: 7/18 of 900.04 + 5/14 of 700.02 = ?
 option a: 600
 option b: 590
 option c: 610
@@ -551,7 +551,7 @@ topic: Simplification & Approximation
 difficulty: Advanced
 marks: 1
 year: 2026
-question: Solve: (42.02 × 18.04) ÷ 20.98 + 5^4 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: (42.02 × 18.04) ÷ 20.98 + 5^4 = ?
 option a: 661
 option b: 655
 option c: 670
@@ -565,7 +565,7 @@ topic: Simplification & Approximation
 difficulty: Advanced
 marks: 1
 year: 2026
-question: Find ?: 1150.02 - 59.98% of 850.05 + 160.04 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: 1150.02 - 59.98% of 850.05 + 160.04 = ?
 option a: 800
 option b: 790
 option c: 810
@@ -579,7 +579,7 @@ topic: Simplification & Approximation
 difficulty: Advanced
 marks: 1
 year: 2026
-question: Approximate: 5/11 of 770.05 + 4/13 of 650.02 - 210 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: 5/11 of 770.05 + 4/13 of 650.02 - 210 = ?
 option a: 340
 option b: 330
 option c: 350
@@ -678,7 +678,8 @@ topic: Quadratic Equations
 difficulty: Advanced
 marks: 1
 year: 2026
-question: I. 6x^2 + 11x - 35 = 0
+question: Choose the most precise relation that holds for every pair of real roots.
+I. 6x^2 + 11x - 35 = 0
 II. 4y^2 - 19y + 21 = 0
 option a: x < y
 option b: x ≤ y
@@ -695,41 +696,40 @@ topic: Quadratic Equations
 difficulty: Advanced
 marks: 1
 year: 2026
-question: I. 3x^2 - 19x + 28 = 0
+question: Choose the most precise relation that holds for every pair of real roots.
+I. 3x^2 - 19x + 28 = 0
 II. 2y^2 - 15y + 28 = 0
 option a: x < y
 option b: x ≤ y
 option c: x > y
 option d: x ≥ y
 option e: x = y or relationship cannot be determined
-correct: A
-explanation: Eq I: 3x^2 - 12x - 7x + 28 = 0 => x = 4, 7/3 (2.33).
-Eq II: 2y^2 - 8y - 7y + 28 = 0 => y = 4, 7/2 (3.5).
-Comparing: 2.33 < 3.5, 4; 4 = 4, 4 > 3.5 (conflict!). Cannot be determined.
+correct: E
+explanation: The x roots are 7/3 and 4. The y roots are 7/2 and 4. Comparing x = 4 with y = 7/2 gives x > y. Comparing x = 7/3 with y = 4 gives x < y. The relation depends on the roots selected.
 ---
 subject: Quantitative Aptitude (31-65)
 topic: Quadratic Equations
 difficulty: Advanced
 marks: 1
 year: 2026
-question: I. 2x^2 + 15x + 28 = 0
+question: Choose the most precise relation that holds for every pair of real roots.
+I. 2x^2 + 15x + 28 = 0
 II. 2y^2 + 19y + 44 = 0
 option a: x > y
 option b: x ≥ y
 option c: x < y
 option d: x ≤ y
 option e: x = y or relationship cannot be determined
-correct: A
-explanation: Eq I: 2x^2 + 8x + 7x + 28 = 0 => x = -4, -3.5.
-Eq II: 2y^2 + 8y + 11y + 44 = 0 => y = -4, -5.5.
-Comparing: -3.5 > -4, -5.5; -4 = -4, -4 > -5.5. Thus x ≥ y.
+correct: B
+explanation: The x roots are −4 and −3.5. The y roots are −5.5 and −4. Every x is at least as large as every y, and the two can be equal at −4.
 ---
 subject: Quantitative Aptitude (31-65)
 topic: Quadratic Equations
 difficulty: Advanced
 marks: 1
 year: 2026
-question: I. x^2 = 256
+question: Choose the most precise relation that holds for every pair of real roots.
+I. x^2 = 256
 II. y^2 - 32y + 256 = 0
 option a: x ≤ y
 option b: x < y
@@ -746,17 +746,16 @@ topic: Quadratic Equations
 difficulty: Advanced
 marks: 1
 year: 2026
-question: I. 4x^2 - 17x + 18 = 0
+question: Choose the most precise relation that holds for every pair of real roots.
+I. 4x^2 - 17x + 18 = 0
 II. 3y^2 - 14y + 15 = 0
 option a: x ≤ y
 option b: x < y
 option c: x > y
 option d: x ≥ y
 option e: x = y or relationship cannot be determined
-correct: A
-explanation: Eq I: 4x^2 - 8x - 9x + 18 = 0 => x = 2, 2.25.
-Eq II: 3y^2 - 9y - 5y + 15 = 0 => y = 3, 5/3 (1.67).
-Comparing: 2 > 1.67 but 2 < 3 (conflict!). Indeterminate.
+correct: E
+explanation: The x roots are 2 and 9/4. The y roots are 5/3 and 3. Comparing x = 9/4 with y = 5/3 gives x > y. Comparing x = 2 with y = 3 gives x < y. The relation depends on the roots selected.
 ---
 subject: Quantitative Aptitude (31-65)
 topic: Data Interpretation
@@ -888,13 +887,13 @@ difficulty: Advanced
 marks: 1
 year: 2026
 question: A, B, and C can complete a work in 10 days, 12 days, and 15 days respectively. They began the work together, but B left 2 days before the completion of the work and A left 3 days before the completion. In how many days was the whole work completed?
-option a: 5.8 days
+option a: 88/15 days
 option b: 6 days
 option c: 6.5 days
 option d: 5.5 days
 option e: 7 days
 correct: A
-explanation: Let total days be x. Work done: A works for (x-3) days, B for (x-2) days, C for x days. (x-3)/10 + (x-2)/12 + x/15 = 1 => 6(x-3) + 5(x-2) + 4x = 60 => 6x - 18 + 5x - 10 + 4x = 60 => 15x - 28 = 60 => 15x = 88 => x = 88/15 = 5.86 days.
+explanation: Let x be the total number of days. The work equation is (x−3)/10 + (x−2)/12 + x/15 = 1. Multiplying by 60 gives 15x − 28 = 60, so x = 88/15 days.
 ---
 subject: Quantitative Aptitude (31-65)
 topic: Arithmetic Word Problems
@@ -929,14 +928,14 @@ topic: Arithmetic Word Problems
 difficulty: Advanced
 marks: 1
 year: 2026
-question: A and B invest in a business in the ratio 3 : 5. A is an active partner and receives 10% of the total profit as salary, and the remaining profit is divided in the ratio of their capitals. If A receives a total of ₹4,800, find the total profit.
+question: A and B invest in a business in the ratio 3 : 5. A is an active partner and receives 10% of the total profit as salary, and the remaining profit is divided in the ratio of their capitals. If A receives a total of ₹4,375, find the total profit.
 option a: ₹10,000
 option b: ₹12,000
 option c: ₹9,500
 option d: ₹11,000
 option e: ₹10,500
 correct: A
-explanation: Let total profit be P. A's salary = 0.10P. Remaining = 0.90P. A's profit share = (3/8) × 0.90P = 0.3375P. Total for A = 0.10P + 0.3375P = 0.4375P = 7/16 P. Given 7/16 P = 4800 (Wait: If 0.48P = 4800 => P = 10,000).
+explanation: A receives 10% of the total as salary, plus 3/8 of the remaining 90%. Together these are 7/16 of the total. The profit is ₹4,375×16/7 = ₹10,000.
 ---
 subject: Quantitative Aptitude (31-65)
 topic: Arithmetic Word Problems
@@ -1385,8 +1384,8 @@ option b: Only I is true
 option c: Only II is true
 option d: Neither is true
 option e: Either I or II is true
-correct: A
-explanation: W < X ≤ Y = Z ≤ V => W < V (I is true). X ≤ Y = Z > U => X > U is not guaranteed since X could be equal to or less than U? Wait: X ≤ Z and Z > U => opposing between X and U.
+correct: B
+explanation: W < X ≤ Y = Z ≤ V establishes W < V. The relative order of X and U can vary because each is constrained relative to Z. Only conclusion I follows.
 ---
 subject: Reasoning Ability (66-100)
 topic: Inequality
@@ -1402,8 +1401,8 @@ option b: Only I is true
 option c: Only II is true
 option d: Neither is true
 option e: Either I or II is true
-correct: A
-explanation: J ≥ K = L > M ≥ N => J > N (I is true). K = L > M < O has opposing signs, so K < O is indeterminate. Only I is true.
+correct: B
+explanation: J ≥ K = L > M ≥ N establishes J > N. Both K and O are greater than M, so their relative order can vary. Only conclusion I follows.
 ---
 subject: Reasoning Ability (66-100)
 topic: Direction & Blood Relation
@@ -1538,11 +1537,11 @@ difficulty: Advanced
 marks: 1
 year: 2026
 question: What is the 7th element to the left of the 18th element from the left end in: A 4 # B 7 % C 9 & D 2 $ E 8 @ F 5 * G 1 ?
-option a: C (11th)
+option a: 2
 option b: %
 option c: 9
 option d: &
 option e: D
 correct: A
-explanation: From left end: 18 - 7 = 11th element. 1:A, 2:4, 3:#, 4:B, 5:7, 6:%, 7:C, 8:9, 9:&, 10:D, 11:2 (Wait: 11th element is '2' or 'C').
+explanation: The position from the left is 18 − 7 = 11. Counting from A as the first element puts the digit 2 at position 11.
 ---

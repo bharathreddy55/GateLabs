@@ -343,7 +343,7 @@ topic: Para Jumbles
 difficulty: Easy
 marks: 1
 year: 2026
-question: Rearrange the following sentences (A, B, C, D) to form a coherent paragraph:
+question: Directions (24-27): Rearrange the following sentences (A, B, C, D) to form a coherent paragraph:
 
 (A) This remarkable growth is driven by increasing internet penetration.
 (B) India's digital economy has expanded rapidly over the past decade.
@@ -674,8 +674,7 @@ topic: Quadratic Equations
 difficulty: Easy
 marks: 1
 year: 2026
-question: In each of the following questions, two equations (I) and (II) are given. Solve both equations and establish the relationship between x and y.
-
+question: Choose the most precise relation that holds for every pair of real roots.
 I. x^2 - 7x + 12 = 0
 II. y^2 - 9y + 20 = 0
 option a: x < y
@@ -693,7 +692,8 @@ topic: Quadratic Equations
 difficulty: Easy
 marks: 1
 year: 2026
-question: I. x^2 - 11x + 30 = 0
+question: Choose the most precise relation that holds for every pair of real roots.
+I. x^2 - 11x + 30 = 0
 II. y^2 - 15y + 56 = 0
 option a: x < y
 option b: x ≤ y
@@ -710,7 +710,8 @@ topic: Quadratic Equations
 difficulty: Easy
 marks: 1
 year: 2026
-question: I. x^2 + 8x + 15 = 0
+question: Choose the most precise relation that holds for every pair of real roots.
+I. x^2 + 8x + 15 = 0
 II. y^2 + 11y + 30 = 0
 option a: x < y
 option b: x ≤ y
@@ -727,7 +728,8 @@ topic: Quadratic Equations
 difficulty: Easy
 marks: 1
 year: 2026
-question: I. x^2 = 64
+question: Choose the most precise relation that holds for every pair of real roots.
+I. x^2 = 64
 II. y^2 - 16y + 64 = 0
 option a: x < y
 option b: x ≤ y
@@ -744,7 +746,8 @@ topic: Quadratic Equations
 difficulty: Easy
 marks: 1
 year: 2026
-question: I. x^2 - 5x + 6 = 0
+question: Choose the most precise relation that holds for every pair of real roots.
+I. x^2 - 5x + 6 = 0
 II. y^2 - 7y + 12 = 0
 option a: x < y
 option b: x ≤ y
@@ -1370,8 +1373,8 @@ option b: Only II is true
 option c: Both are true
 option d: Neither is true
 option e: Either I or II is true
-correct: A
-explanation: K ≥ L = M > N => K > N (I is true). L = M > N ≥ O => L > O, not necessarily L ≥ O with equality. Thus only I is true.
+correct: C
+explanation: K ≥ L = M > N gives K > N. L = M > N ≥ O gives L > O, which also guarantees L ≥ O. Both conclusions follow.
 ---
 subject: Reasoning Ability (66-100)
 topic: Inequality
@@ -1513,8 +1516,8 @@ option b: One
 option c: Three
 option d: Four
 option e: None
-correct: A
-explanation: Forward: P-Q-R (P and R have 1 letter between them: P(16), O(15), R(18)). Backward: P-Q-R. Total = 2 pairs.
+correct: D
+explanation: For letters in positions i and j, their alphabetical positions must differ by j−i. Four pairs qualify: R(1)–P(3), R(1)–O(4), P(3)–O(4), and P(3)–R(5).
 ---
 subject: Reasoning Ability (66-100)
 topic: Alphanumeric Series & Coding

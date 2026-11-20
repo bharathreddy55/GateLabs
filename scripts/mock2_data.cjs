@@ -296,31 +296,31 @@ module.exports = {
 
   quadratic: [
     {
-      q: "I. 2x^2 + 5x + 3 = 0\nII. y^2 + 7y + 12 = 0",
+      q: "Choose the most precise relation that holds for every pair of real roots.\nI. 2x^2 + 5x + 3 = 0\nII. y^2 + 7y + 12 = 0",
       opts: ["x > y", "x ≥ y", "x < y", "x ≤ y", "x = y or relationship cannot be determined"],
       ans: "A",
       exp: "Eq I: 2x^2 + 2x + 3x + 3 = 0 => x = -1, -1.5.\nEq II: y = -3, -4.\nComparing: -1 > -3, -4 and -1.5 > -3, -4. Thus, x > y."
     },
     {
-      q: "I. x^2 - 13x + 40 = 0\nII. y^2 - 17y + 70 = 0",
+      q: "Choose the most precise relation that holds for every pair of real roots.\nI. x^2 - 13x + 40 = 0\nII. y^2 - 17y + 70 = 0",
       opts: ["x < y", "x ≤ y", "x > y", "x ≥ y", "x = y or relationship cannot be determined"],
-      ans: "B",
-      exp: "Eq I: x = 5, 8.\nEq II: y = 7, 10.\nWait, 5 < 7, 5 < 10, but 8 > 7 and 8 < 10 => signs flip. Let's verify: 8 > 7 but 8 < 10. Thus relation cannot be established."
+      ans: "E",
+      exp: "The x roots are 5 and 8. The y roots are 7 and 10. Comparing x = 8 with y = 7 gives x > y. Comparing x = 5 with y = 10 gives x < y. The relation depends on the roots selected."
     },
     {
-      q: "I. x^2 - 9x + 20 = 0\nII. y^2 - 13y + 42 = 0",
+      q: "Choose the most precise relation that holds for every pair of real roots.\nI. x^2 - 9x + 20 = 0\nII. y^2 - 13y + 42 = 0",
       opts: ["x < y", "x ≤ y", "x > y", "x ≥ y", "x = y or relationship cannot be determined"],
       ans: "A",
       exp: "Eq I: x = 4, 5.\nEq II: y = 6, 7.\nBoth x values (4, 5) are strictly less than both y values (6, 7). Hence x < y."
     },
     {
-      q: "I. 2x^2 - 7x + 6 = 0\nII. 2y^2 - 9y + 10 = 0",
+      q: "Choose the most precise relation that holds for every pair of real roots.\nI. 2x^2 - 7x + 6 = 0\nII. 2y^2 - 9y + 10 = 0",
       opts: ["x ≤ y", "x < y", "x > y", "x ≥ y", "x = y or relationship cannot be determined"],
       ans: "A",
       exp: "Eq I: 2x^2 - 4x - 3x + 6 = 0 => x = 1.5, 2.\nEq II: 2y^2 - 4y - 5y + 10 = 0 => y = 2, 2.5.\nComparing: 1.5 < 2, 2.5; 2 = 2, 2 < 2.5. Thus x ≤ y."
     },
     {
-      q: "I. x^2 = 81\nII. y = √81",
+      q: "Choose the most precise relation that holds for every pair of real roots.\nI. x^2 = 81\nII. y = √81",
       opts: ["x ≤ y", "x < y", "x > y", "x ≥ y", "x = y or relationship cannot be determined"],
       ans: "A",
       exp: "Eq I: x = +9, -9.\nEq II: y = +9 (principal square root).\nComparing: +9 = 9, -9 < 9. Thus x ≤ y."
@@ -493,8 +493,8 @@ module.exports = {
     {
       q: "Directions (76-80): Eight boxes — A, B, C, D, E, F, G, and H — are kept one above another.\n- Three boxes are kept between Box A and Box D.\n- Box B is kept immediately below Box D.\n- Only one box is kept between Box B and Box H.\n- Box F is kept immediately above Box G.\n- Box C is kept above Box E, which is kept at the bottom.\n- Box A is kept at the top (Position 8).\n\nWhich box is kept at Position 7 (just below A)?",
       opts: ["C", "F", "G", "H", "B"],
-      ans: "A",
-      exp: "A=8. 3 boxes between A and D => D=4. B immediately below D => B=3. 1 between B and H => H=5 or H=1 (since E=1 bottom, H=5). F immediately above G => F=7, G=6. C above E => C=2, E=1. So from top: A(8), F(7), G(6), H(5), D(4), B(3), C(2), E(1). F is at 7 (wait, option B is F)."
+      ans: "B",
+      exp: "From the top the boxes are A, F, G, H, D, B, C and E. F occupies position 7 directly below A."
     },
     {
       q: "Which box is kept at the bottom (Position 1)?",
@@ -583,8 +583,8 @@ module.exports = {
     {
       q: "Statements: J < K ≤ L; M ≥ L > N\nConclusions:\nI. J < M\nII. K > N",
       opts: ["Both I and II are true", "Only I is true", "Only II is true", "Neither is true", "Either I or II is true"],
-      ans: "A",
-      exp: "J < K ≤ L ≤ M => J < M (I is true). K ≤ L > N has opposing signs between K and N, so K > N is not necessarily true."
+      ans: "B",
+      exp: "J < K ≤ L ≤ M gives J < M. Both K and N are constrained relative to L, and their own order can vary. Only conclusion I follows."
     }
   ],
 
@@ -632,7 +632,7 @@ module.exports = {
       q: "Study the alphanumeric series: 5 # B 9 & K 2 % M $ 8 W @ 4 Q * 7. How many numbers are immediately preceded by a symbol and immediately followed by a letter?",
       opts: ["Two", "One", "Three", "Four", "None"],
       ans: "A",
-      exp: "Symbol - Number - Letter: '& 2 %' is followed by M (Wait: % is symbol). Look for Symbol -> Number -> Letter: '# B' (no), '$ 8 W' (Symbol $ -> Number 8 -> Letter W) and '& K 2' (no). Found 1-2 instances like '$ 8 W' and '* 7' (no)."
+      exp: "The two matching triples are $ 8 W and @ 4 Q. Each middle digit has a symbol immediately before it and a letter immediately after it."
     },
     {
       q: "In a class of 45 students, Meena is ranked 18th from the top. Suresh is 6 ranks below Meena. What is Suresh's rank from the bottom?",

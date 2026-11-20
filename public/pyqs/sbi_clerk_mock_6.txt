@@ -343,7 +343,7 @@ topic: Para Jumbles
 difficulty: Hard
 marks: 1
 year: 2026
-question: Rearrange the five sentences (A, B, C, D, E) to form a coherent paragraph:
+question: Directions (24-27): Rearrange the five sentences (A, B, C, D, E) to form a coherent paragraph:
 
 (A) Unregulated shadow banks engage in substantial maturity transformation.
 (B) Consequently, sudden liquidity freezes can cascade across the formal banking sector.
@@ -453,7 +453,7 @@ topic: Simplification & Approximation
 difficulty: Hard
 marks: 1
 year: 2026
-question: Find the approximate value of (?) in: 89.98% of 1499.95 + 64.98% of 1200.04 - 449.98 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: 89.98% of 1499.95 + 64.98% of 1200.04 - 449.98 = ?
 option a: 1680
 option b: 1650
 option c: 1700
@@ -467,7 +467,7 @@ topic: Simplification & Approximation
 difficulty: Hard
 marks: 1
 year: 2026
-question: Approximate: √(3135.95) + ∛(5831.98) - 21.98^2 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: √(3135.95) + ∛(5831.98) - 21.98^2 = ?
 option a: -410
 option b: -405
 option c: -415
@@ -481,7 +481,7 @@ topic: Simplification & Approximation
 difficulty: Hard
 marks: 1
 year: 2026
-question: Solve: (48.02 × 35.04) ÷ 23.98 + 11.02^3 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: (48.02 × 35.04) ÷ 23.98 + 11.02^3 = ?
 option a: 1401
 option b: 1395
 option c: 1410
@@ -495,7 +495,7 @@ topic: Simplification & Approximation
 difficulty: Hard
 marks: 1
 year: 2026
-question: Find ?: 95.02% of 840.05 - 55.02% of 620.02 + 189.95 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: 95.02% of 840.05 - 55.02% of 620.02 + 189.95 = ?
 option a: 647
 option b: 640
 option c: 655
@@ -509,7 +509,7 @@ topic: Simplification & Approximation
 difficulty: Hard
 marks: 1
 year: 2026
-question: Approximate: (1260.05 ÷ 17.98) + (910.02 ÷ 13.98) - 49.98 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: (1260.05 ÷ 17.98) + (910.02 ÷ 13.98) - 49.98 = ?
 option a: 85
 option b: 80
 option c: 90
@@ -523,7 +523,7 @@ topic: Simplification & Approximation
 difficulty: Hard
 marks: 1
 year: 2026
-question: Find ?: 36.02^2 - 24.04^2 + 18.98^2 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: 36.02^2 - 24.04^2 + 18.98^2 = ?
 option a: 1081
 option b: 1070
 option c: 1090
@@ -537,7 +537,7 @@ topic: Simplification & Approximation
 difficulty: Hard
 marks: 1
 year: 2026
-question: Approximate: 9/24 of 1200.04 + 7/19 of 950.02 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: 9/24 of 1200.04 + 7/19 of 950.02 = ?
 option a: 800
 option b: 790
 option c: 810
@@ -551,7 +551,7 @@ topic: Simplification & Approximation
 difficulty: Hard
 marks: 1
 year: 2026
-question: Solve: (56.02 × 24.04) ÷ 27.98 + 6^4 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: (56.02 × 24.04) ÷ 27.98 + 6^4 = ?
 option a: 1344
 option b: 1335
 option c: 1350
@@ -565,7 +565,7 @@ topic: Simplification & Approximation
 difficulty: Hard
 marks: 1
 year: 2026
-question: Find ?: 1450.02 - 69.98% of 950.05 + 210.04 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: 1450.02 - 69.98% of 950.05 + 210.04 = ?
 option a: 995
 option b: 985
 option c: 1005
@@ -579,7 +579,7 @@ topic: Simplification & Approximation
 difficulty: Hard
 marks: 1
 year: 2026
-question: Approximate: 7/13 of 910.05 + 8/17 of 850.02 - 320 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: 7/13 of 910.05 + 8/17 of 850.02 - 320 = ?
 option a: 570
 option b: 560
 option c: 580
@@ -595,18 +595,14 @@ marks: 1
 year: 2026
 question: Find the WRONG number in the series:
 
-18, 38, 80, 168, 348, 712
-option a: 712
+18, 38, 80, 168, 348, 736
+option a: 736
 option b: 38
 option c: 80
 option d: 168
 option e: 348
-correct: A
-explanation: Pattern: ×2+2, ×2+4, ×2+8, ×2+16, ×2+32.
-18×2+2=38
-38×2+4=80
-80×2+8=168
-168×2+16=352 (Wait: 168×2+12? 168×2+16 = 352, given 348 is wrong, or 348×2+32 = 728; thus 348 is wrong).
+correct: E
+explanation: Double each term and successively add 2, 4, 8, 16 and 32. This gives 18, 38, 80, 168, 352, 736. The wrong term is 348.
 ---
 subject: Quantitative Aptitude (31-65)
 topic: Missing Number Series
@@ -677,41 +673,40 @@ topic: Quadratic Equations
 difficulty: Hard
 marks: 1
 year: 2026
-question: I. 5x^2 - 18x + 9 = 0
+question: Choose the most precise relation that holds for every pair of real roots.
+I. 5x^2 - 18x + 9 = 0
 II. 3y^2 + 13y - 10 = 0
 option a: x > y
 option b: x ≥ y
 option c: x < y
 option d: x ≤ y
 option e: x = y or relationship cannot be determined
-correct: A
-explanation: Eq I: 5x^2 - 15x - 3x + 9 = 0 => x = 3, 0.6.
-Eq II: 3y^2 + 15y - 2y - 10 = 0 => y = 2/3 (0.67), -5.
-Comparing: 3 > 0.67, -5; but 0.6 < 0.67 and 0.6 > -5 (conflict!). Cannot be determined.
+correct: E
+explanation: The x roots are 3/5 and 3. The y roots are -5 and 2/3. Comparing x = 3 with y = -5 gives x > y. Comparing x = 3/5 with y = 2/3 gives x < y. The relation depends on the roots selected.
 ---
 subject: Quantitative Aptitude (31-65)
 topic: Quadratic Equations
 difficulty: Hard
 marks: 1
 year: 2026
-question: I. 4x^2 - 25x + 36 = 0
+question: Choose the most precise relation that holds for every pair of real roots.
+I. 4x^2 - 25x + 36 = 0
 II. 2y^2 - 17y + 36 = 0
 option a: x < y
 option b: x ≤ y
 option c: x > y
 option d: x ≥ y
 option e: x = y or relationship cannot be determined
-correct: A
-explanation: Eq I: 4x^2 - 16x - 9x + 36 = 0 => x = 4, 9/4 (2.25).
-Eq II: 2y^2 - 8y - 9y + 36 = 0 => y = 4, 9/2 (4.5).
-Comparing: 2.25 < 4, 4.5; 4 = 4, 4 < 4.5. Thus x ≤ y.
+correct: B
+explanation: The x roots are 9/4 and 4, and the y roots are 4 and 9/2. The largest x equals the smallest y, so x ≤ y for every pair.
 ---
 subject: Quantitative Aptitude (31-65)
 topic: Quadratic Equations
 difficulty: Hard
 marks: 1
 year: 2026
-question: I. 3x^2 + 17x + 24 = 0
+question: Choose the most precise relation that holds for every pair of real roots.
+I. 3x^2 + 17x + 24 = 0
 II. 3y^2 + 23y + 44 = 0
 option a: x > y
 option b: x ≥ y
@@ -728,7 +723,8 @@ topic: Quadratic Equations
 difficulty: Hard
 marks: 1
 year: 2026
-question: I. x^2 = 324
+question: Choose the most precise relation that holds for every pair of real roots.
+I. x^2 = 324
 II. y^2 - 36y + 324 = 0
 option a: x ≤ y
 option b: x < y
@@ -745,7 +741,8 @@ topic: Quadratic Equations
 difficulty: Hard
 marks: 1
 year: 2026
-question: I. 2x^2 - 19x + 45 = 0
+question: Choose the most precise relation that holds for every pair of real roots.
+I. 2x^2 - 19x + 45 = 0
 II. 2y^2 - 21y + 55 = 0
 option a: x ≤ y
 option b: x < y
@@ -1380,8 +1377,8 @@ option b: Only I is true
 option c: Only II is true
 option d: Neither is true
 option e: Either I or II is true
-correct: A
-explanation: W < X ≤ Y = Z ≤ V => W < V (I is true). X ≤ Y = Z > U has opposing signs between X and U.
+correct: B
+explanation: W < X ≤ Y = Z ≤ V establishes W < V. The relative order of X and U can vary because each is constrained relative to Z. Only conclusion I follows.
 ---
 subject: Reasoning Ability (66-100)
 topic: Inequality
@@ -1397,8 +1394,8 @@ option b: Only I is true
 option c: Only II is true
 option d: Neither is true
 option e: Either I or II is true
-correct: A
-explanation: J ≥ K = L > M ≥ N => J > N (I is true). K = L > M < O has opposing signs. Only I is true.
+correct: B
+explanation: J ≥ K = L > M ≥ N establishes J > N. Both K and O are greater than M, so their relative order can vary. Only conclusion I follows.
 ---
 subject: Reasoning Ability (66-100)
 topic: Direction & Blood Relation

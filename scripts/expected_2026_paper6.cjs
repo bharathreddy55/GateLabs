@@ -1026,7 +1026,7 @@ module.exports = [
     "difficulty": "Easy-Moderate",
     "marks": 1,
     "year": 2026,
-    "question": "Solve the equations:\nI. x² – 16x + 63 = 0\nII. y² – 20y + 99 = 0",
+    "question": "Choose the most precise relation that holds for every pair of real roots.\nI. x² – 16x + 63 = 0\nII. y² – 20y + 99 = 0",
     "options": [
       "x ≤ y",
       "x < y",
@@ -1043,7 +1043,7 @@ module.exports = [
     "difficulty": "Easy-Moderate",
     "marks": 1,
     "year": 2026,
-    "question": "Solve the equations:\nI. x² – 11x + 28 = 0\nII. y² – 15y + 54 = 0",
+    "question": "Choose the most precise relation that holds for every pair of real roots.\nI. x² – 11x + 28 = 0\nII. y² – 15y + 54 = 0",
     "options": [
       "x < y",
       "x ≤ y",
@@ -1051,8 +1051,8 @@ module.exports = [
       "x ≥ y",
       "x = y or relationship cannot be determined"
     ],
-    "correct": "A",
-    "explanation": "I. x = 4, 7. II. y = 6, 9 (Wait: x=7 > y=6. So cannot be determined or adjust to x²-11x+24: x=3,8; y²-15y+56: y=7,8 => x ≤ y)."
+    "correct": "E",
+    "explanation": "The x roots are 4 and 7. The y roots are 6 and 9. Comparing x = 7 with y = 6 gives x > y. Comparing x = 4 with y = 9 gives x < y. The relation depends on the roots selected."
   },
   {
     "subject": "Quantitative Aptitude (31-65)",
@@ -1519,7 +1519,7 @@ module.exports = [
     "difficulty": "Easy-Moderate",
     "marks": 1,
     "year": 2026,
-    "question": "Five boxes have different weights:\n- Box B is heavier than D but lighter than A.\n- Box C is heavier than A.\n- Box E is lighter than D.\n\nWhich box is the second heaviest?",
+    "question": "Directions (90-91): Five boxes have different weights:\n- Box B is heavier than D but lighter than A.\n- Box C is heavier than A.\n- Box E is lighter than D.\n\nWhich box is the second heaviest?",
     "options": [
       "A",
       "C",

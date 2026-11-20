@@ -396,8 +396,8 @@ Year: 2021
 Question: A Mealy machine replaces the first 1 of any subsequence of consecutive 1s with a 0. What are the Boolean expressions for next state t and output y in terms of current state s and input b?
 Option A: t = s + b, y = s b
 Option B: t = b, y = s b
-Option C: t = b, y = s b
-Option D: t = s + b, y = s b
+Option C: t = b, y = s OR b
+Option D: t = s AND b, y = b
 Correct: B
 Explanation: If input b=0, next state t=0 and output y=0. If input b=1, next state t=1. This gives t = b. Output y is 1 only when we are already in a block of 1s (s=1) and current input is 1 (b=1), giving y = s b.
 
@@ -423,7 +423,13 @@ Subtopic: Code Optimization / CSE
 Difficulty: Hard
 Marks: 2
 Year: 2021
-Question: Optimize C code with Common Sub-expression Elimination:\nz = x + 3 + y->f1 + y->f2;\nfor (i = 0; i < 200; i = i + 2) {\n    if (z > i) { p = p + x + 3; q = q + y->f1; }\n    else { p = p + y->f2; q = q + x + 3; }\n}\nThe additions and dereferences in the optimized code are:
+Question: Optimize C code with Common Sub-expression Elimination:
+z = x + 3 + y->f1 + y->f2;
+for (i = 0; i < 200; i = i + 2) {
+    if (z > i) { p = p + x + 3; q = q + y->f1; }
+    else { p = p + y->f2; q = q + x + 3; }
+}
+The additions and dereferences in the optimized code are:
 Option A: 403 and 102
 Option B: 203 and 2
 Option C: 303 and 102

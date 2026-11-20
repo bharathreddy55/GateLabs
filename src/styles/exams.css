@@ -14,6 +14,23 @@
 .cbt-room .cbt-question {
   overflow-wrap: anywhere;
 }
+#cbt-question-title,
+.exam-hub details.exam-card > summary {
+  white-space: pre-line;
+}
+.exam-question-image {
+  margin-block: 1rem;
+  padding: .75rem;
+  background: #fff;
+  border-radius: .5rem;
+  width: fit-content;
+  max-width: 100%;
+}
+.exam-question-image img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 .cbt-question-meta {
   color: var(--ws-muted);
   font-size: .875rem;

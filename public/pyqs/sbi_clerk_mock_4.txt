@@ -343,7 +343,7 @@ topic: Para Jumbles
 difficulty: Moderate-Hard
 marks: 1
 year: 2026
-question: Rearrange the five sentences (A, B, C, D, E) to form a coherent paragraph:
+question: Directions (24-27): Rearrange the five sentences (A, B, C, D, E) to form a coherent paragraph:
 
 (A) Consequently, agricultural yields have become increasingly unpredictable.
 (B) Climate volatility is posing unprecedented risks to global food security.
@@ -453,7 +453,7 @@ topic: Simplification & Approximation
 difficulty: Moderate-Hard
 marks: 1
 year: 2026
-question: Find the approximate value of (?) in: 63.98% of 850.02 + 45.05% of 640.04 - 219.98 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: 63.98% of 850.02 + 45.05% of 640.04 - 219.98 = ?
 option a: 612
 option b: 605
 option c: 620
@@ -467,7 +467,7 @@ topic: Simplification & Approximation
 difficulty: Moderate-Hard
 marks: 1
 year: 2026
-question: Approximate value of: √(1295.95) + ∛(2196.98) - 14.98^2 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: √(1295.95) + ∛(2196.98) - 14.98^2 = ?
 option a: -176
 option b: -180
 option c: -170
@@ -481,7 +481,7 @@ topic: Simplification & Approximation
 difficulty: Moderate-Hard
 marks: 1
 year: 2026
-question: Solve: (24.02 × 18.98) ÷ 11.95 + 7.98^3 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: (24.02 × 18.98) ÷ 11.95 + 7.98^3 = ?
 option a: 550
 option b: 540
 option c: 560
@@ -495,7 +495,7 @@ topic: Simplification & Approximation
 difficulty: Moderate-Hard
 marks: 1
 year: 2026
-question: Find ?: 79.98% of 450.05 - 35.04% of 320.02 + 89.95 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: 79.98% of 450.05 - 35.04% of 320.02 + 89.95 = ?
 option a: 338
 option b: 330
 option c: 345
@@ -509,7 +509,7 @@ topic: Simplification & Approximation
 difficulty: Moderate-Hard
 marks: 1
 year: 2026
-question: Approximate: (840.05 ÷ 14.02) + (650.02 ÷ 12.98) - 29.98 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: (840.05 ÷ 14.02) + (650.02 ÷ 12.98) - 29.98 = ?
 option a: 80
 option b: 75
 option c: 85
@@ -523,7 +523,7 @@ topic: Simplification & Approximation
 difficulty: Moderate-Hard
 marks: 1
 year: 2026
-question: Find ?: 28.02^2 - 16.04^2 + 11.98^2 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: 28.02^2 - 16.04^2 + 11.98^2 = ?
 option a: 672
 option b: 660
 option c: 680
@@ -537,7 +537,7 @@ topic: Simplification & Approximation
 difficulty: Moderate-Hard
 marks: 1
 year: 2026
-question: Approximate: 5/12 of 864.02 + 7/15 of 750.04 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: 5/12 of 864.02 + 7/15 of 750.04 = ?
 option a: 710
 option b: 700
 option c: 720
@@ -551,7 +551,7 @@ topic: Simplification & Approximation
 difficulty: Moderate-Hard
 marks: 1
 year: 2026
-question: Solve: (35.02 × 16.04) ÷ 13.98 + 4^4 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: (35.02 × 16.04) ÷ 13.98 + 4^4 = ?
 option a: 296
 option b: 290
 option c: 300
@@ -565,7 +565,7 @@ topic: Simplification & Approximation
 difficulty: Moderate-Hard
 marks: 1
 year: 2026
-question: Find ?: 950.02 - 49.98% of 680.05 + 140.04 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: 950.02 - 49.98% of 680.05 + 140.04 = ?
 option a: 750
 option b: 740
 option c: 760
@@ -579,7 +579,7 @@ topic: Simplification & Approximation
 difficulty: Moderate-Hard
 marks: 1
 year: 2026
-question: Approximate: 3/7 of 560.05 + 5/9 of 720.02 - 180 = ?
+question: Round each decimal in the expression to the nearest integer before calculating: 3/7 of 560.05 + 5/9 of 720.02 - 180 = ?
 option a: 460
 option b: 450
 option c: 470
@@ -673,24 +673,24 @@ topic: Quadratic Equations
 difficulty: Moderate-Hard
 marks: 1
 year: 2026
-question: I. 2x^2 - 17x + 36 = 0
+question: Choose the most precise relation that holds for every pair of real roots.
+I. 2x^2 - 17x + 36 = 0
 II. 2y^2 - 19y + 44 = 0
 option a: x < y
 option b: x ≤ y
 option c: x > y
 option d: x ≥ y
 option e: x = y or relationship cannot be determined
-correct: A
-explanation: Eq I: 2x^2 - 8x - 9x + 36 = 0 => x = 4, 4.5.
-Eq II: 2y^2 - 8y - 11y + 44 = 0 => y = 4, 5.5.
-Comparing: 4 = 4, 4 < 5.5; 4.5 > 4 (contradiction!). Thus relation cannot be determined (E).
+correct: E
+explanation: The x roots are 4 and 4.5. The y roots are 4 and 5.5. Comparing x = 4.5 with y = 4 gives x > y. Comparing x = 4 with y = 5.5 gives x < y. The relation depends on the roots selected.
 ---
 subject: Quantitative Aptitude (31-65)
 topic: Quadratic Equations
 difficulty: Moderate-Hard
 marks: 1
 year: 2026
-question: I. x^2 - 15x + 56 = 0
+question: Choose the most precise relation that holds for every pair of real roots.
+I. x^2 - 15x + 56 = 0
 II. y^2 - 21y + 108 = 0
 option a: x < y
 option b: x ≤ y
@@ -707,7 +707,8 @@ topic: Quadratic Equations
 difficulty: Moderate-Hard
 marks: 1
 year: 2026
-question: I. 3x^2 + 10x + 8 = 0
+question: Choose the most precise relation that holds for every pair of real roots.
+I. 3x^2 + 10x + 8 = 0
 II. 3y^2 + 19y + 28 = 0
 option a: x > y
 option b: x ≥ y
@@ -724,7 +725,8 @@ topic: Quadratic Equations
 difficulty: Moderate-Hard
 marks: 1
 year: 2026
-question: I. x^2 = 196
+question: Choose the most precise relation that holds for every pair of real roots.
+I. x^2 = 196
 II. y^2 - 28y + 196 = 0
 option a: x ≤ y
 option b: x < y
@@ -741,17 +743,16 @@ topic: Quadratic Equations
 difficulty: Moderate-Hard
 marks: 1
 year: 2026
-question: I. x^2 - 18x + 77 = 0
+question: Choose the most precise relation that holds for every pair of real roots.
+I. x^2 - 18x + 77 = 0
 II. y^2 - 22y + 117 = 0
 option a: x < y
 option b: x ≤ y
 option c: x > y
 option d: x ≥ y
 option e: x = y or relationship cannot be determined
-correct: A
-explanation: Eq I: x = 7, 11.
-Eq II: y = 9, 13.
-Comparing: 7 < 9, 13; 11 > 9 and 11 < 13 => conflict. Cannot be determined.
+correct: E
+explanation: The x roots are 7 and 11. The y roots are 9 and 13. Comparing x = 11 with y = 9 gives x > y. Comparing x = 7 with y = 13 gives x < y. The relation depends on the roots selected.
 ---
 subject: Quantitative Aptitude (31-65)
 topic: Data Interpretation
@@ -873,14 +874,14 @@ topic: Arithmetic Word Problems
 difficulty: Moderate-Hard
 marks: 1
 year: 2026
-question: A boat covers 48 km upstream and 72 km downstream in 12 hours. If the speed of the boat in still water is 11 km/h, find the speed of the stream.
+question: A boat covers 48 km upstream and 84 km downstream in 12 hours. If the speed of the boat in still water is 11 km/h, find the speed of the stream.
 option a: 3 km/h
 option b: 2 km/h
 option c: 4 km/h
 option d: 1.5 km/h
 option e: 2.5 km/h
 correct: A
-explanation: 48/(11-s) + 72/(11+s) = 12. Testing s = 3: 48/8 + 72/14? Wait: 48/(11-s) + 72/(11+s) => for s=1: 48/10 + 72/12 = 4.8 + 6 = 10.8. For s=3: 48/8 + 72/14 (no). If s=1, 48/10 + 72/12 (no). Let speed in still water be 11: s = 3 gives exact standard roots.
+explanation: At a stream speed of 3 km/h the upstream speed is 8 km/h and the downstream speed is 14 km/h. The two times are 48/8 = 6 and 84/14 = 6 hours. The other algebraic solution is a negative stream speed, so 3 km/h is the feasible answer.
 ---
 subject: Quantitative Aptitude (31-65)
 topic: Arithmetic Word Problems
@@ -915,14 +916,14 @@ topic: Arithmetic Word Problems
 difficulty: Moderate-Hard
 marks: 1
 year: 2026
-question: A and B started a business. A invested ₹25,000 and after 4 months B joined with ₹30,000. At the end of the year, out of total profit of ₹11,000, what is A's share?
+question: A and B started a business. A invested ₹25,000 and after 4 months B joined with ₹30,000. At the end of the year, out of total profit of ₹11,250, what is A's share?
 option a: ₹6,250
 option b: ₹6,000
 option c: ₹6,500
 option d: ₹5,800
 option e: ₹6,400
 correct: A
-explanation: Ratio: A = 25000 × 12 = 300,000. B = 30000 × 8 = 240,000. Ratio = 30 : 24 = 5 : 4. A's share = (5/9)? Wait: (300/540) × 11000 ≈ ₹6,111 (or ratio 25×12=300, 30×8=240 => 5:4 => 5/9).
+explanation: Their capital-month weights are 25,000×12 and 30,000×8, a ratio of 5:4. A receives (5/9)×₹11,250 = ₹6,250.
 ---
 subject: Quantitative Aptitude (31-65)
 topic: Arithmetic Word Problems
@@ -1311,7 +1312,8 @@ topic: Inequality
 difficulty: Moderate-Hard
 marks: 1
 year: 2026
-question: Statements: P @ Q means P ≥ Q; P # Q means P > Q; P $ Q means P = Q; P % Q means P ≤ Q; P & Q means P < Q.
+question: Directions (86-90): P @ Q means P ≥ Q; P # Q means P > Q; P $ Q means P = Q; P % Q means P ≤ Q; P & Q means P < Q.
+
 
 Statements: A # B @ C $ D # E
 Conclusions:
@@ -1511,13 +1513,13 @@ difficulty: Moderate-Hard
 marks: 1
 year: 2026
 question: In a certain code, 'PROFIT' is written as 'QSPGJU'. How is 'LOSSES' written in that code?
-option a: MPTNFT
+option a: MPTTFT
 option b: MPTNFS
 option c: MPTOFT
 option d: NQTOFT
 option e: MPSNFT
 correct: A
-explanation: Pattern: +1 on each letter: L+1=M, O+1=P, S+1=T, S+1=T (Wait: S+1=T, E+1=F, S+1=T => MPTTFT). Correct shift = +1.
+explanation: Shift each letter one place forward. L→M, O→P, S→T, S→T, E→F and S→T, yielding MPTTFT.
 ---
 subject: Reasoning Ability (66-100)
 topic: Alphanumeric Series & Coding

@@ -1026,7 +1026,7 @@ module.exports = [
     "difficulty": "Easy-Moderate",
     "marks": 1,
     "year": 2026,
-    "question": "In the following question, two equations (I) and (II) are given. Solve both equations and give answer:\nI. x² – 11x + 30 = 0\nII. y² – 15y + 56 = 0",
+    "question": "Choose the most precise relation that holds for every pair of real roots.\nI. x² – 11x + 30 = 0\nII. y² – 15y + 56 = 0",
     "options": [
       "x < y",
       "x ≤ y",
@@ -1034,8 +1034,8 @@ module.exports = [
       "x ≥ y",
       "x = y or relationship cannot be determined"
     ],
-    "correct": "B",
-    "explanation": "I. (x - 5)(x - 6) = 0 => x = 5, 6. II. (y - 7)(y - 8) = 0 => y = 7, 8. Clearly, x < y in all pairs."
+    "correct": "A",
+    "explanation": "The x roots are 5 and 6. The y roots are 7 and 8. Even the largest x is smaller than the smallest y, so x < y."
   },
   {
     "subject": "Quantitative Aptitude (31-65)",
@@ -1043,7 +1043,7 @@ module.exports = [
     "difficulty": "Easy-Moderate",
     "marks": 1,
     "year": 2026,
-    "question": "Solve the equations:\nI. 2x² – 7x + 6 = 0\nII. 2y² – 9y + 10 = 0",
+    "question": "Choose the most precise relation that holds for every pair of real roots.\nI. 2x² – 7x + 6 = 0\nII. 2y² – 9y + 10 = 0",
     "options": [
       "x ≤ y",
       "x < y",
@@ -1519,7 +1519,7 @@ module.exports = [
     "difficulty": "Easy-Moderate",
     "marks": 1,
     "year": 2026,
-    "question": "Six students A, B, C, D, E, F scored different marks in an exam.\n- B scored more than D but less than C.\n- A scored more than C.\n- E scored less than D but is not the lowest.\n- Second highest marks is 84 and lowest marks is 52.\n\nWho scored the highest marks?",
+    "question": "Directions (90-91): Six students A, B, C, D, E, F scored different marks in an exam.\n- B scored more than D but less than C.\n- A scored more than C.\n- E scored less than D but is not the lowest.\n- Second highest marks is 84 and lowest marks is 52.\n\nWho scored the highest marks?",
     "options": [
       "A",
       "C",

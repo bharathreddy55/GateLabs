@@ -265,8 +265,8 @@ module.exports = {
     {
       q: "Find the WRONG number in the following series:\n\n12, 14, 32, 102, 414, 2090",
       opts: ["102", "14", "32", "414", "2090"],
-      ans: "A",
-      exp: "Pattern: ×1+2, ×2+4, ×3+6, ×4+8, ×5+10.\n12×1+2=14\n14×2+4=32\n32×3+6=102 (Wait: 32×3=96+6=102, 102×4+8 = 408+8 = 416, given 414 is wrong or 102 is wrong). If 414 should be 416: 416×5+10 = 2080+10 = 2090. Thus 414 is wrong."
+      ans: "D",
+      exp: "Multiply by 1, 2, 3, 4 and 5 in turn, adding 2, 4, 6, 8 and 10. The intended series is 12, 14, 32, 102, 416, 2090, so 414 is the wrong term."
     },
     {
       q: "Find the missing number in the series:\n\n7, 8, 18, 57, ?, 1165",
@@ -296,31 +296,31 @@ module.exports = {
 
   quadratic: [
     {
-      q: "I. 3x^2 - 11x + 10 = 0\nII. 2y^2 - 13y + 21 = 0",
+      q: "Choose the most precise relation that holds for every pair of real roots.\nI. 3x^2 - 11x + 10 = 0\nII. 2y^2 - 13y + 21 = 0",
       opts: ["x < y", "x ≤ y", "x > y", "x ≥ y", "x = y or relationship cannot be determined"],
       ans: "A",
       exp: "Eq I: 3x^2 - 6x - 5x + 10 = 0 => x = 2, 5/3 (1.67).\nEq II: 2y^2 - 6y - 7y + 21 = 0 => y = 3, 7/2 (3.5).\nAll values of x (1.67, 2) are strictly less than all values of y (3, 3.5). Hence x < y."
     },
     {
-      q: "I. x^2 - 16x + 63 = 0\nII. y^2 - 19y + 88 = 0",
+      q: "Choose the most precise relation that holds for every pair of real roots.\nI. x^2 - 16x + 63 = 0\nII. y^2 - 19y + 88 = 0",
       opts: ["x < y", "x ≤ y", "x > y", "x ≥ y", "x = y or relationship cannot be determined"],
-      ans: "B",
-      exp: "Eq I: x = 7, 9.\nEq II: y = 8, 11.\nComparing: 7 < 8, 11; 9 > 8 but 9 < 11 (contradiction). Relationship cannot be determined."
+      ans: "E",
+      exp: "The x roots are 7 and 9. The y roots are 8 and 11. Comparing x = 9 with y = 8 gives x > y. Comparing x = 7 with y = 11 gives x < y. The relation depends on the roots selected."
     },
     {
-      q: "I. 2x^2 + 11x + 15 = 0\nII. 4y^2 + 16y + 15 = 0",
+      q: "Choose the most precise relation that holds for every pair of real roots.\nI. 2x^2 + 11x + 15 = 0\nII. 4y^2 + 16y + 15 = 0",
       opts: ["x ≤ y", "x < y", "x > y", "x ≥ y", "x = y or relationship cannot be determined"],
       ans: "A",
       exp: "Eq I: 2x^2 + 6x + 5x + 15 = 0 => x = -3, -2.5.\nEq II: 4y^2 + 10y + 6y + 15 = 0 => y = -1.5, -2.5.\nComparing: -3 < -1.5, -2.5; -2.5 < -1.5, -2.5 = -2.5. Thus x ≤ y."
     },
     {
-      q: "I. x^2 = 144\nII. y^2 - 24y + 144 = 0",
+      q: "Choose the most precise relation that holds for every pair of real roots.\nI. x^2 = 144\nII. y^2 - 24y + 144 = 0",
       opts: ["x ≤ y", "x < y", "x > y", "x ≥ y", "x = y or relationship cannot be determined"],
       ans: "A",
       exp: "Eq I: x = +12, -12.\nEq II: y = 12.\nComparing: +12 = 12, -12 < 12. Thus x ≤ y."
     },
     {
-      q: "I. x^2 - 14x + 48 = 0\nII. y^2 - 18y + 80 = 0",
+      q: "Choose the most precise relation that holds for every pair of real roots.\nI. x^2 - 14x + 48 = 0\nII. y^2 - 18y + 80 = 0",
       opts: ["x ≤ y", "x < y", "x > y", "x ≥ y", "x = y or relationship cannot be determined"],
       ans: "A",
       exp: "Eq I: x = 6, 8.\nEq II: y = 8, 10.\nComparing: 6 < 8, 10; 8 = 8, 8 < 10. Thus x ≤ y."
@@ -404,10 +404,10 @@ module.exports = {
       exp: "Let CP = 100x. MP = 140x. SP = 140x × 0.85 = 119x. Profit = 19x. Given 19x = 285 => x = 15. CP = 100 × 15 = ₹1,500."
     },
     {
-      q: "A, B, and C enter into partnership. A contributes 1/3 of the capital for 1/4 of the time, B contributes 1/5 of the capital for 1/2 of the time, and C contributes the remaining capital for the whole year (1 time). Out of a total profit of ₹11,400, find C's share.",
+      q: "A, B, and C enter into partnership. A contributes 1/3 of the capital for 1/4 of the time, B contributes 1/5 of the capital for 1/2 of the time, and C contributes the remaining capital for the whole year (1 time). Out of a total profit of ₹11,700, find C's share.",
       opts: ["₹8,400", "₹8,000", "₹8,600", "₹7,800", "₹9,000"],
       ans: "A",
-      exp: "Remaining capital for C = 1 - (1/3 + 1/5) = 1 - 8/15 = 7/15. Profit ratio: A = (1/3)(1/4) = 1/12; B = (1/5)(1/2) = 1/10; C = (7/15)(1) = 7/15. Common denominator 60: A = 5, B = 6, C = 28. Total parts = 39. C's share = (28/39) × 11400 = 28 × 292.3 (Wait: 11400/39? If total profit ₹11,700: 28 × 300 = ₹8,400)."
+      exp: "C contributes 7/15 of the capital for the full year. The capital-time weights 1/12, 1/10 and 7/15 simplify to 5:6:28. C receives (28/39)×₹11,700 = ₹8,400."
     },
     {
       q: "The curved surface area of a right circular cylinder of height 14 cm is 88 sq cm. Find the volume of the cylinder. (Use π = 22/7)",
@@ -637,8 +637,8 @@ module.exports = {
     {
       q: "How many such digits are there in the number '84362751' each of which remains in the same position when the digits are arranged in descending order from left to right?",
       opts: ["One", "Two", "Three", "Four", "None"],
-      ans: "A",
-      exp: "Original: 8 4 3 6 2 7 5 1\nSorted:   8 7 6 5 4 3 2 1\nOnly '8' (pos 1) and '1' (pos 8) remain in position (Wait: pos 1 is 8, pos 8 is 1). Two digits (8 and 1)."
+      ans: "B",
+      exp: "Descending order is 8 7 6 5 4 3 2 1. Only 8 and 1 keep their original positions."
     },
     {
       q: "If each vowel in the word 'COMMERCE' is changed to the next letter in English alphabetical series and each consonant is changed to the previous letter, how many letters appear more than once in the new word?",

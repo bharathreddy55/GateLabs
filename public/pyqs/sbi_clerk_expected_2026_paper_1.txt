@@ -895,7 +895,7 @@ topic: Quadratic Equations
 difficulty: Easy-Moderate
 marks: 1
 year: 2026
-question: In the following question, two equations (I) and (II) are given. Solve both equations and give answer:
+question: Choose the most precise relation that holds for every pair of real roots.
 I. x² – 11x + 30 = 0
 II. y² – 15y + 56 = 0
 option a: x < y
@@ -903,15 +903,15 @@ option b: x ≤ y
 option c: x > y
 option d: x ≥ y
 option e: x = y or relationship cannot be determined
-correct: B
-explanation: I. (x - 5)(x - 6) = 0 => x = 5, 6. II. (y - 7)(y - 8) = 0 => y = 7, 8. Clearly, x < y in all pairs.
+correct: A
+explanation: The x roots are 5 and 6. The y roots are 7 and 8. Even the largest x is smaller than the smallest y, so x < y.
 ---
 subject: Quantitative Aptitude (31-65)
 topic: Quadratic Equations
 difficulty: Easy-Moderate
 marks: 1
 year: 2026
-question: Solve the equations:
+question: Choose the most precise relation that holds for every pair of real roots.
 I. 2x² – 7x + 6 = 0
 II. 2y² – 9y + 10 = 0
 option a: x ≤ y
@@ -1372,7 +1372,7 @@ topic: Order and Ranking
 difficulty: Easy-Moderate
 marks: 1
 year: 2026
-question: Six students A, B, C, D, E, F scored different marks in an exam.
+question: Directions (90-91): Six students A, B, C, D, E, F scored different marks in an exam.
 - B scored more than D but less than C.
 - A scored more than C.
 - E scored less than D but is not the lowest.

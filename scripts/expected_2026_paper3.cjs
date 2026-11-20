@@ -1026,7 +1026,7 @@ module.exports = [
     "difficulty": "Easy-Moderate",
     "marks": 1,
     "year": 2026,
-    "question": "Solve the equations:\nI. x² – 14x + 48 = 0\nII. y² – 18y + 80 = 0",
+    "question": "Choose the most precise relation that holds for every pair of real roots.\nI. x² – 14x + 48 = 0\nII. y² – 18y + 80 = 0",
     "options": [
       "x ≤ y",
       "x < y",
@@ -1043,7 +1043,7 @@ module.exports = [
     "difficulty": "Easy-Moderate",
     "marks": 1,
     "year": 2026,
-    "question": "Solve the equations:\nI. x² – 7x + 12 = 0\nII. y² – 11y + 30 = 0",
+    "question": "Choose the most precise relation that holds for every pair of real roots.\nI. x² – 7x + 12 = 0\nII. y² – 11y + 30 = 0",
     "options": [
       "x ≤ y",
       "x < y",
@@ -1374,8 +1374,8 @@ module.exports = [
       "Neither is true",
       "Either I or II is true"
     ],
-    "correct": "A",
-    "explanation": "E ≥ F = G > H ≥ I => E > I (I is true). G > H < J has opposing signs between G and J (Wait: Only I is true)."
+    "correct": "B",
+    "explanation": "E ≥ F = G > H ≥ I gives E > I. The statements put both G and J above H and leave their relative order open. Only conclusion I follows."
   },
   {
     "subject": "Reasoning Ability (66-100)",
@@ -1519,7 +1519,7 @@ module.exports = [
     "difficulty": "Easy-Moderate",
     "marks": 1,
     "year": 2026,
-    "question": "Five boxes J, K, L, M, N have different weights.\n- K is heavier than M but lighter than J.\n- L is heavier than J.\n- N is lighter than M.\n\nWhich is the second lightest box?",
+    "question": "Directions (90-91): Five boxes J, K, L, M, N have different weights.\n- K is heavier than M but lighter than J.\n- L is heavier than J.\n- N is lighter than M.\n\nWhich is the second lightest box?",
     "options": [
       "M",
       "N",

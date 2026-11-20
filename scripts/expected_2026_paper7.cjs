@@ -873,7 +873,7 @@ module.exports = [
     "difficulty": "Moderate",
     "marks": 1,
     "year": 2026,
-    "question": "What principal will yield ₹1,640 as compound interest for 2 years at 10% per annum compounded annually?",
+    "question": "What principal will yield ₹1,680 as compound interest for 2 years at 10% per annum compounded annually?",
     "options": [
       "₹8,000",
       "₹7,500",
@@ -882,7 +882,7 @@ module.exports = [
       "₹8,200"
     ],
     "correct": "A",
-    "explanation": "CI = P × [(1.10)² - 1] = 0.21P = 1640 => Wait: (1.10)² - 1 = 0.21. 1640 / 0.21 is ~7809. If 0.205P? (If 5% p.a. => 0.1025P = 1640 => P = 16000. With 10% p.a. and CI = 1680 => P = ₹8,000)."
+    "explanation": "The interest over two years is P[(1.10)² − 1] = 0.21P. Thus the principal is ₹1,680 ÷ 0.21 = ₹8,000."
   },
   {
     "subject": "Quantitative Aptitude (31-65)",
@@ -1026,7 +1026,7 @@ module.exports = [
     "difficulty": "Easy-Moderate",
     "marks": 1,
     "year": 2026,
-    "question": "Solve the equations:\nI. x² – 17x + 72 = 0\nII. y² – 21y + 110 = 0",
+    "question": "Choose the most precise relation that holds for every pair of real roots.\nI. x² – 17x + 72 = 0\nII. y² – 21y + 110 = 0",
     "options": [
       "x < y",
       "x ≤ y",
@@ -1034,8 +1034,8 @@ module.exports = [
       "x ≥ y",
       "x = y or relationship cannot be determined"
     ],
-    "correct": "B",
-    "explanation": "I. x = 8, 9. II. y = 10, 11. Thus, x < y."
+    "correct": "A",
+    "explanation": "The x roots are 8 and 9. The y roots are 10 and 11. Since 9 < 10, the strict comparison x < y holds for every pair."
   },
   {
     "subject": "Quantitative Aptitude (31-65)",
@@ -1043,7 +1043,7 @@ module.exports = [
     "difficulty": "Easy-Moderate",
     "marks": 1,
     "year": 2026,
-    "question": "Solve the equations:\nI. x² – 12x + 32 = 0\nII. y² – 16y + 60 = 0",
+    "question": "Choose the most precise relation that holds for every pair of real roots.\nI. x² – 12x + 32 = 0\nII. y² – 16y + 60 = 0",
     "options": [
       "x ≤ y",
       "x < y",
@@ -1051,8 +1051,8 @@ module.exports = [
       "x ≥ y",
       "x = y or relationship cannot be determined"
     ],
-    "correct": "A",
-    "explanation": "I. x = 4, 8. II. y = 6, 10."
+    "correct": "E",
+    "explanation": "The x roots are 4 and 8. The y roots are 6 and 10. Comparing x = 8 with y = 6 gives x > y. Comparing x = 4 with y = 10 gives x < y. The relation depends on the roots selected."
   },
   {
     "subject": "Quantitative Aptitude (31-65)",
@@ -1519,7 +1519,7 @@ module.exports = [
     "difficulty": "Easy-Moderate",
     "marks": 1,
     "year": 2026,
-    "question": "Five students scored different marks:\n- X scored more than Z but less than W.\n- V scored more than W.\n- Y scored less than Z.\n\nWho scored the highest marks?",
+    "question": "Directions (90-91): Five students scored different marks:\n- X scored more than Z but less than W.\n- V scored more than W.\n- Y scored less than Z.\n\nWho scored the highest marks?",
     "options": [
       "V",
       "W",

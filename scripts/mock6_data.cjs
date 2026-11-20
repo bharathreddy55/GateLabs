@@ -200,61 +200,61 @@ module.exports = {
 
   simplification: [
     {
-      q: "Find the approximate value of (?) in: 89.98% of 1499.95 + 64.98% of 1200.04 - 449.98 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: 89.98% of 1499.95 + 64.98% of 1200.04 - 449.98 = ?",
       opts: ["1680", "1650", "1700", "1620", "1720"],
       ans: "A",
       exp: "90% of 1500 = 1350. 65% of 1200 = 780. 1350 + 780 - 450 = 2130 - 450 = 1680."
     },
     {
-      q: "Approximate: √(3135.95) + ∛(5831.98) - 21.98^2 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: √(3135.95) + ∛(5831.98) - 21.98^2 = ?",
       opts: ["-410", "-405", "-415", "-400", "-420"],
       ans: "A",
       exp: "√3136 = 56, ∛5832 = 18, 22^2 = 484. 56 + 18 - 484 = 74 - 484 = -410."
     },
     {
-      q: "Solve: (48.02 × 35.04) ÷ 23.98 + 11.02^3 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: (48.02 × 35.04) ÷ 23.98 + 11.02^3 = ?",
       opts: ["1401", "1395", "1410", "1385", "1420"],
       ans: "A",
       exp: "(48 × 35) ÷ 24 = 70. 11^3 = 1331. 70 + 1331 = 1401."
     },
     {
-      q: "Find ?: 95.02% of 840.05 - 55.02% of 620.02 + 189.95 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: 95.02% of 840.05 - 55.02% of 620.02 + 189.95 = ?",
       opts: ["647", "640", "655", "635", "660"],
       ans: "A",
       exp: "95% of 840 = 798. 55% of 620 = 341. 798 - 341 + 190 = 457 + 190 = 647."
     },
     {
-      q: "Approximate: (1260.05 ÷ 17.98) + (910.02 ÷ 13.98) - 49.98 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: (1260.05 ÷ 17.98) + (910.02 ÷ 13.98) - 49.98 = ?",
       opts: ["85", "80", "90", "75", "95"],
       ans: "A",
       exp: "70 + 65 - 50 = 85."
     },
     {
-      q: "Find ?: 36.02^2 - 24.04^2 + 18.98^2 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: 36.02^2 - 24.04^2 + 18.98^2 = ?",
       opts: ["1081", "1070", "1090", "1065", "1095"],
       ans: "A",
       exp: "1296 - 576 + 361 = 720 + 361 = 1081."
     },
     {
-      q: "Approximate: 9/24 of 1200.04 + 7/19 of 950.02 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: 9/24 of 1200.04 + 7/19 of 950.02 = ?",
       opts: ["800", "790", "810", "785", "815"],
       ans: "A",
       exp: "(9/24 × 1200) = 450. (7/19 × 950) = 350. 450 + 350 = 800."
     },
     {
-      q: "Solve: (56.02 × 24.04) ÷ 27.98 + 6^4 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: (56.02 × 24.04) ÷ 27.98 + 6^4 = ?",
       opts: ["1344", "1335", "1350", "1330", "1360"],
       ans: "A",
       exp: "(56 × 24) ÷ 28 = 48. 6^4 = 1296. 48 + 1296 = 1344."
     },
     {
-      q: "Find ?: 1450.02 - 69.98% of 950.05 + 210.04 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: 1450.02 - 69.98% of 950.05 + 210.04 = ?",
       opts: ["995", "985", "1005", "975", "1015"],
       ans: "A",
       exp: "70% of 950 = 665. 1450 - 665 + 210 = 785 + 210 = 995."
     },
     {
-      q: "Approximate: 7/13 of 910.05 + 8/17 of 850.02 - 320 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: 7/13 of 910.05 + 8/17 of 850.02 - 320 = ?",
       opts: ["570", "560", "580", "550", "590"],
       ans: "A",
       exp: "490 + 400 - 320 = 890 - 320 = 570."
@@ -263,10 +263,10 @@ module.exports = {
 
   numberSeries: [
     {
-      q: "Find the WRONG number in the series:\n\n18, 38, 80, 168, 348, 712",
-      opts: ["712", "38", "80", "168", "348"],
-      ans: "A",
-      exp: "Pattern: ×2+2, ×2+4, ×2+8, ×2+16, ×2+32.\n18×2+2=38\n38×2+4=80\n80×2+8=168\n168×2+16=352 (Wait: 168×2+12? 168×2+16 = 352, given 348 is wrong, or 348×2+32 = 728; thus 348 is wrong)."
+      q: "Find the WRONG number in the series:\n\n18, 38, 80, 168, 348, 736",
+      opts: ["736", "38", "80", "168", "348"],
+      ans: "E",
+      exp: "Double each term and successively add 2, 4, 8, 16 and 32. This gives 18, 38, 80, 168, 352, 736. The wrong term is 348."
     },
     {
       q: "Find the missing number:\n\n24, 30, 48, 84, 144, ?",
@@ -296,31 +296,31 @@ module.exports = {
 
   quadratic: [
     {
-      q: "I. 5x^2 - 18x + 9 = 0\nII. 3y^2 + 13y - 10 = 0",
+      q: "Choose the most precise relation that holds for every pair of real roots.\nI. 5x^2 - 18x + 9 = 0\nII. 3y^2 + 13y - 10 = 0",
       opts: ["x > y", "x ≥ y", "x < y", "x ≤ y", "x = y or relationship cannot be determined"],
-      ans: "A",
-      exp: "Eq I: 5x^2 - 15x - 3x + 9 = 0 => x = 3, 0.6.\nEq II: 3y^2 + 15y - 2y - 10 = 0 => y = 2/3 (0.67), -5.\nComparing: 3 > 0.67, -5; but 0.6 < 0.67 and 0.6 > -5 (conflict!). Cannot be determined."
+      ans: "E",
+      exp: "The x roots are 3/5 and 3. The y roots are -5 and 2/3. Comparing x = 3 with y = -5 gives x > y. Comparing x = 3/5 with y = 2/3 gives x < y. The relation depends on the roots selected."
     },
     {
-      q: "I. 4x^2 - 25x + 36 = 0\nII. 2y^2 - 17y + 36 = 0",
+      q: "Choose the most precise relation that holds for every pair of real roots.\nI. 4x^2 - 25x + 36 = 0\nII. 2y^2 - 17y + 36 = 0",
       opts: ["x < y", "x ≤ y", "x > y", "x ≥ y", "x = y or relationship cannot be determined"],
-      ans: "A",
-      exp: "Eq I: 4x^2 - 16x - 9x + 36 = 0 => x = 4, 9/4 (2.25).\nEq II: 2y^2 - 8y - 9y + 36 = 0 => y = 4, 9/2 (4.5).\nComparing: 2.25 < 4, 4.5; 4 = 4, 4 < 4.5. Thus x ≤ y."
+      ans: "B",
+      exp: "The x roots are 9/4 and 4, and the y roots are 4 and 9/2. The largest x equals the smallest y, so x ≤ y for every pair."
     },
     {
-      q: "I. 3x^2 + 17x + 24 = 0\nII. 3y^2 + 23y + 44 = 0",
+      q: "Choose the most precise relation that holds for every pair of real roots.\nI. 3x^2 + 17x + 24 = 0\nII. 3y^2 + 23y + 44 = 0",
       opts: ["x > y", "x ≥ y", "x < y", "x ≤ y", "x = y or relationship cannot be determined"],
       ans: "A",
       exp: "Eq I: 3x^2 + 9x + 8x + 24 = 0 => x = -3, -8/3 (-2.67).\nEq II: 3y^2 + 12y + 11y + 44 = 0 => y = -4, -11/3 (-3.67).\nBoth values of x (-2.67, -3) are strictly greater than both values of y (-3.67, -4). Thus x > y."
     },
     {
-      q: "I. x^2 = 324\nII. y^2 - 36y + 324 = 0",
+      q: "Choose the most precise relation that holds for every pair of real roots.\nI. x^2 = 324\nII. y^2 - 36y + 324 = 0",
       opts: ["x ≤ y", "x < y", "x > y", "x ≥ y", "x = y or relationship cannot be determined"],
       ans: "A",
       exp: "Eq I: x = +18, -18.\nEq II: y = 18.\nComparing: +18 = 18, -18 < 18. Thus x ≤ y."
     },
     {
-      q: "I. 2x^2 - 19x + 45 = 0\nII. 2y^2 - 21y + 55 = 0",
+      q: "Choose the most precise relation that holds for every pair of real roots.\nI. 2x^2 - 19x + 45 = 0\nII. 2y^2 - 21y + 55 = 0",
       opts: ["x ≤ y", "x < y", "x > y", "x ≥ y", "x = y or relationship cannot be determined"],
       ans: "A",
       exp: "Eq I: 2x^2 - 10x - 9x + 45 = 0 => x = 5, 4.5.\nEq II: 2y^2 - 10y - 11y + 55 = 0 => y = 5, 5.5.\nComparing: 4.5 < 5, 5.5; 5 = 5, 5 < 5.5. Thus x ≤ y."
@@ -577,14 +577,14 @@ module.exports = {
     {
       q: "Statements: W < X ≤ Y = Z; V ≥ Z > U\nConclusions:\nI. W < V\nII. X > U",
       opts: ["Both I and II are true", "Only I is true", "Only II is true", "Neither is true", "Either I or II is true"],
-      ans: "A",
-      exp: "W < X ≤ Y = Z ≤ V => W < V (I is true). X ≤ Y = Z > U has opposing signs between X and U."
+      ans: "B",
+      exp: "W < X ≤ Y = Z ≤ V establishes W < V. The relative order of X and U can vary because each is constrained relative to Z. Only conclusion I follows."
     },
     {
       q: "Statements: J ≥ K = L > M; N ≤ M < O\nConclusions:\nI. J > N\nII. K < O",
       opts: ["Both I and II are true", "Only I is true", "Only II is true", "Neither is true", "Either I or II is true"],
-      ans: "A",
-      exp: "J ≥ K = L > M ≥ N => J > N (I is true). K = L > M < O has opposing signs. Only I is true."
+      ans: "B",
+      exp: "J ≥ K = L > M ≥ N establishes J > N. Both K and O are greater than M, so their relative order can vary. Only conclusion I follows."
     }
   ],
 

@@ -18,13 +18,15 @@ Subtopic: Geometrical Shapes
 Difficulty: Easy
 Marks: 1
 Year: 2021
+QuestionImage: /questions/figures/gate-2021-cs1-q02.png
+ImageAlt: Four polygons. In each list the vertices are given clockwise and the final point connects to the first. A: (0,0), (4,0), (5,2), (4,4), (0,4), (1,2). B: (2,0), (4,4), (0,4). C: (0,0), (4,0), (4,4), (0,4). D: (1,0), (3,0), (4,4), (0,4).
 Question: A polygon is convex if, for every pair of points, P and Q belonging to the polygon, the line segment PQ lies completely inside or on the polygon. Which one of the following is NOT a convex polygon?
-Option A: [Image of a triangle]
-Option B: [Image of a square]
-Option C: [Image of a regular pentagon]
-Option D: [Image of a concave arrow-like shape]
-Correct: D
-Explanation: Options A, B, and C are examples of convex polygons (triangle, square, pentagon). Option D is a concave polygon because it has an inward indentation. A line segment connecting two points on the boundary can lie outside the polygon.
+Option A: Polygon A
+Option B: Polygon B
+Option C: Polygon C
+Option D: Polygon D
+Correct: A
+Explanation: Polygon A has an inward corner. Joining the two points at the ends of the indentation gives a segment that passes outside it. The other three polygons are convex.
 
 ---
 

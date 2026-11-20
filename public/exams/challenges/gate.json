@@ -190,7 +190,7 @@
           1,
           3
         ],
-        "explanation": "The cut and cycle exchange arguments yield the first two claims. A triangle with all edges tied refutes the third. All spanning trees contain the same number of edges, so their relative costs are preserved by the same per-edge shift.",
+        "explanation": "The cut and cycle exchange arguments establish A and B. A triangle with three equally light edges refutes C because any one edge can be omitted. D holds because every spanning tree contains the same number of edges.",
         "source": "https://gate2027.iitm.ac.in/question_paper_pattern"
       },
       {
@@ -368,13 +368,13 @@
           "{aⁱbʲcᵏ : i = j or j = k}",
           "{aⁿbⁿcⁿ : n ≥ 0}",
           "{aⁱbʲcᵏ : i = j and k is even}",
-          "{aⁱbʲcᵏ : i = j and j = k}"
+          "{ww : w ∈ {a,b}*}"
         ],
         "correctOptions": [
           0,
           2
         ],
-        "explanation": "A union of the two equality languages in the first option is context-free. The third follows by concatenating aⁿbⁿ with an even-length block of c’s. The second and fourth are the same non-context-free language.",
+        "explanation": "A is a union of two context-free languages, each comparing two adjacent blocks. C concatenates aⁿbⁿ with an even-length block of c’s. B requires three equal blocks, and D requires an exact copy of an arbitrary binary word. Both B and D are standard non-context-free languages.",
         "source": "https://gate2027.iitm.ac.in/question_paper_pattern"
       },
       {

@@ -343,7 +343,7 @@ topic: Para Jumbles
 difficulty: Easy-Moderate
 marks: 1
 year: 2026
-question: Rearrange the five sentences (A, B, C, D, E) to form a coherent paragraph:
+question: Directions (24-27): Rearrange the five sentences (A, B, C, D, E) to form a coherent paragraph:
 
 (A) Such initiatives empower citizens with immediate dispute resolution.
 (B) Digital Lok Adalats have emerged as a beacon of speedy justice in India.
@@ -673,7 +673,8 @@ topic: Quadratic Equations
 difficulty: Easy-Moderate
 marks: 1
 year: 2026
-question: I. 2x^2 + 5x + 3 = 0
+question: Choose the most precise relation that holds for every pair of real roots.
+I. 2x^2 + 5x + 3 = 0
 II. y^2 + 7y + 12 = 0
 option a: x > y
 option b: x ≥ y
@@ -690,24 +691,24 @@ topic: Quadratic Equations
 difficulty: Easy-Moderate
 marks: 1
 year: 2026
-question: I. x^2 - 13x + 40 = 0
+question: Choose the most precise relation that holds for every pair of real roots.
+I. x^2 - 13x + 40 = 0
 II. y^2 - 17y + 70 = 0
 option a: x < y
 option b: x ≤ y
 option c: x > y
 option d: x ≥ y
 option e: x = y or relationship cannot be determined
-correct: B
-explanation: Eq I: x = 5, 8.
-Eq II: y = 7, 10.
-Wait, 5 < 7, 5 < 10, but 8 > 7 and 8 < 10 => signs flip. Let's verify: 8 > 7 but 8 < 10. Thus relation cannot be established.
+correct: E
+explanation: The x roots are 5 and 8. The y roots are 7 and 10. Comparing x = 8 with y = 7 gives x > y. Comparing x = 5 with y = 10 gives x < y. The relation depends on the roots selected.
 ---
 subject: Quantitative Aptitude (31-65)
 topic: Quadratic Equations
 difficulty: Easy-Moderate
 marks: 1
 year: 2026
-question: I. x^2 - 9x + 20 = 0
+question: Choose the most precise relation that holds for every pair of real roots.
+I. x^2 - 9x + 20 = 0
 II. y^2 - 13y + 42 = 0
 option a: x < y
 option b: x ≤ y
@@ -724,7 +725,8 @@ topic: Quadratic Equations
 difficulty: Easy-Moderate
 marks: 1
 year: 2026
-question: I. 2x^2 - 7x + 6 = 0
+question: Choose the most precise relation that holds for every pair of real roots.
+I. 2x^2 - 7x + 6 = 0
 II. 2y^2 - 9y + 10 = 0
 option a: x ≤ y
 option b: x < y
@@ -741,7 +743,8 @@ topic: Quadratic Equations
 difficulty: Easy-Moderate
 marks: 1
 year: 2026
-question: I. x^2 = 81
+question: Choose the most precise relation that holds for every pair of real roots.
+I. x^2 = 81
 II. y = √81
 option a: x ≤ y
 option b: x < y
@@ -1152,8 +1155,8 @@ option b: F
 option c: G
 option d: H
 option e: B
-correct: A
-explanation: A=8. 3 boxes between A and D => D=4. B immediately below D => B=3. 1 between B and H => H=5 or H=1 (since E=1 bottom, H=5). F immediately above G => F=7, G=6. C above E => C=2, E=1. So from top: A(8), F(7), G(6), H(5), D(4), B(3), C(2), E(1). F is at 7 (wait, option B is F).
+correct: B
+explanation: From the top the boxes are A, F, G, H, D, B, C and E. F occupies position 7 directly below A.
 ---
 subject: Reasoning Ability (66-100)
 topic: Puzzles & Seating Arrangement
@@ -1395,8 +1398,8 @@ option b: Only I is true
 option c: Only II is true
 option d: Neither is true
 option e: Either I or II is true
-correct: A
-explanation: J < K ≤ L ≤ M => J < M (I is true). K ≤ L > N has opposing signs between K and N, so K > N is not necessarily true.
+correct: B
+explanation: J < K ≤ L ≤ M gives J < M. Both K and N are constrained relative to L, and their own order can vary. Only conclusion I follows.
 ---
 subject: Reasoning Ability (66-100)
 topic: Direction & Blood Relation
@@ -1494,7 +1497,7 @@ option c: Three
 option d: Four
 option e: None
 correct: A
-explanation: Symbol - Number - Letter: '& 2 %' is followed by M (Wait: % is symbol). Look for Symbol -> Number -> Letter: '# B' (no), '$ 8 W' (Symbol $ -> Number 8 -> Letter W) and '& K 2' (no). Found 1-2 instances like '$ 8 W' and '* 7' (no).
+explanation: The two matching triples are $ 8 W and @ 4 Q. Each middle digit has a symbol immediately before it and a letter immediately after it.
 ---
 subject: Reasoning Ability (66-100)
 topic: Alphanumeric Series & Coding

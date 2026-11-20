@@ -1,5 +1,9 @@
 import { EXAMS } from '../config/exams.js';
 export const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+export function validQuestionImage(q) {
+  return typeof q.questionImage==='string' && /^\/questions\/figures\/[a-z0-9-]+\.png$/.test(q.questionImage)
+    && typeof q.imageAlt==='string' && q.imageAlt.trim().length>0;
+}
 export function validatePaper(examId, questions, full = true) {
   const e = EXAMS[examId], errors = [];
   if (!e) return ['Unknown exam'];
@@ -22,6 +26,7 @@ export function validatePaper(examId, questions, full = true) {
     if (type === 'NAT' && !(Number.isFinite(q.natMin ?? q.correctNat) && Number.isFinite(q.natMax ?? q.correctNat) && (q.natMin??q.correctNat)<=(q.natMax??q.correctNat))) errors.push(`${label}: invalid numeric key`);
     if (examId !== 'gate' && q.marks !== 1) errors.push(`${label}: must carry one mark`);
     if (examId === 'gate' && ![1,2].includes(q.marks)) errors.push(`${label}: GATE marks must be 1 or 2`);
+    if (q.questionImage && !validQuestionImage(q)) errors.push(`${label}: invalid question image`);
     if(q.figure && (!['bar','line','pie','scatter','venn'].includes(q.figure.type)||!Array.isArray(q.figure.labels)||!Array.isArray(q.figure.values)||q.figure.labels.length!==q.figure.values.length||!q.figure.values.length||q.figure.values.length>12||q.figure.values.some(v=>!Number.isFinite(v)||v<0)||(q.figure.type==='venn'&&q.figure.values.length!==3))) errors.push(`${label}: invalid figure data`);
   });
   if (full && questions.every(q=>q&&typeof q==='object')) {

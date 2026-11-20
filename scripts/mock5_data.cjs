@@ -200,61 +200,61 @@ module.exports = {
 
   simplification: [
     {
-      q: "Find the approximate value of (?) in: 74.98% of 1199.95 + 39.98% of 850.04 - 289.98 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: 74.98% of 1199.95 + 39.98% of 850.04 - 289.98 = ?",
       opts: ["950", "940", "960", "930", "970"],
       ans: "A",
       exp: "75% of 1200 = 900. 40% of 850 = 340. 900 + 340 - 290 = 1240 - 290 = 950."
     },
     {
-      q: "Approximate: √(2024.95) + ∛(4095.98) - 17.98^2 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: √(2024.95) + ∛(4095.98) - 17.98^2 = ?",
       opts: ["-263", "-260", "-270", "-255", "-275"],
       ans: "A",
       exp: "√2025 = 45, ∛4096 = 16, 18^2 = 324. 45 + 16 - 324 = 61 - 324 = -263."
     },
     {
-      q: "Solve: (36.02 × 24.98) ÷ 14.98 + 9.02^3 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: (36.02 × 24.98) ÷ 14.98 + 9.02^3 = ?",
       opts: ["789", "780", "795", "775", "800"],
       ans: "A",
       exp: "(36 × 25) ÷ 15 = 900 ÷ 15 = 60. 9^3 = 729. 60 + 729 = 789."
     },
     {
-      q: "Find ?: 85.02% of 640.05 - 45.02% of 480.02 + 125.95 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: 85.02% of 640.05 - 45.02% of 480.02 + 125.95 = ?",
       opts: ["454", "445", "460", "440", "465"],
       ans: "A",
       exp: "85% of 640 = 544. 45% of 480 = 216. 544 - 216 + 126 = 328 + 126 = 454."
     },
     {
-      q: "Approximate: (960.05 ÷ 15.98) + (780.02 ÷ 12.98) - 39.98 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: (960.05 ÷ 15.98) + (780.02 ÷ 12.98) - 39.98 = ?",
       opts: ["80", "75", "85", "70", "90"],
       ans: "A",
       exp: "60 + 60 - 40 = 80."
     },
     {
-      q: "Find ?: 32.02^2 - 18.04^2 + 14.98^2 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: 32.02^2 - 18.04^2 + 14.98^2 = ?",
       opts: ["925", "915", "935", "905", "945"],
       ans: "A",
       exp: "1024 - 324 + 225 = 700 + 225 = 925."
     },
     {
-      q: "Approximate: 7/18 of 900.04 + 5/14 of 700.02 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: 7/18 of 900.04 + 5/14 of 700.02 = ?",
       opts: ["600", "590", "610", "585", "615"],
       ans: "A",
       exp: "(7/18 × 900) = 350. (5/14 × 700) = 250. 350 + 250 = 600."
     },
     {
-      q: "Solve: (42.02 × 18.04) ÷ 20.98 + 5^4 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: (42.02 × 18.04) ÷ 20.98 + 5^4 = ?",
       opts: ["661", "655", "670", "645", "675"],
       ans: "A",
       exp: "(42 × 18) ÷ 21 = 36. 5^4 = 625. 36 + 625 = 661."
     },
     {
-      q: "Find ?: 1150.02 - 59.98% of 850.05 + 160.04 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: 1150.02 - 59.98% of 850.05 + 160.04 = ?",
       opts: ["800", "790", "810", "785", "815"],
       ans: "A",
       exp: "60% of 850 = 510. 1150 - 510 + 160 = 640 + 160 = 800."
     },
     {
-      q: "Approximate: 5/11 of 770.05 + 4/13 of 650.02 - 210 = ?",
+      q: "Round each decimal in the expression to the nearest integer before calculating: 5/11 of 770.05 + 4/13 of 650.02 - 210 = ?",
       opts: ["340", "330", "350", "325", "355"],
       ans: "A",
       exp: "350 + 200 - 210 = 550 - 210 = 340."
@@ -296,34 +296,34 @@ module.exports = {
 
   quadratic: [
     {
-      q: "I. 6x^2 + 11x - 35 = 0\nII. 4y^2 - 19y + 21 = 0",
+      q: "Choose the most precise relation that holds for every pair of real roots.\nI. 6x^2 + 11x - 35 = 0\nII. 4y^2 - 19y + 21 = 0",
       opts: ["x < y", "x ≤ y", "x > y", "x ≥ y", "x = y or relationship cannot be determined"],
       ans: "A",
       exp: "Eq I: 6x^2 + 21x - 10x - 35 = 0 => 3x(2x+7) - 5(2x+7) = 0 => x = 5/3 (1.67), -3.5.\nEq II: 4y^2 - 12y - 7y + 21 = 0 => y = 3, 7/4 (1.75).\nComparing: -3.5 < 1.75, 3; 1.67 < 1.75, 3. All values of x are strictly less than all values of y. Hence x < y."
     },
     {
-      q: "I. 3x^2 - 19x + 28 = 0\nII. 2y^2 - 15y + 28 = 0",
+      q: "Choose the most precise relation that holds for every pair of real roots.\nI. 3x^2 - 19x + 28 = 0\nII. 2y^2 - 15y + 28 = 0",
       opts: ["x < y", "x ≤ y", "x > y", "x ≥ y", "x = y or relationship cannot be determined"],
-      ans: "A",
-      exp: "Eq I: 3x^2 - 12x - 7x + 28 = 0 => x = 4, 7/3 (2.33).\nEq II: 2y^2 - 8y - 7y + 28 = 0 => y = 4, 7/2 (3.5).\nComparing: 2.33 < 3.5, 4; 4 = 4, 4 > 3.5 (conflict!). Cannot be determined."
+      ans: "E",
+      exp: "The x roots are 7/3 and 4. The y roots are 7/2 and 4. Comparing x = 4 with y = 7/2 gives x > y. Comparing x = 7/3 with y = 4 gives x < y. The relation depends on the roots selected."
     },
     {
-      q: "I. 2x^2 + 15x + 28 = 0\nII. 2y^2 + 19y + 44 = 0",
+      q: "Choose the most precise relation that holds for every pair of real roots.\nI. 2x^2 + 15x + 28 = 0\nII. 2y^2 + 19y + 44 = 0",
       opts: ["x > y", "x ≥ y", "x < y", "x ≤ y", "x = y or relationship cannot be determined"],
-      ans: "A",
-      exp: "Eq I: 2x^2 + 8x + 7x + 28 = 0 => x = -4, -3.5.\nEq II: 2y^2 + 8y + 11y + 44 = 0 => y = -4, -5.5.\nComparing: -3.5 > -4, -5.5; -4 = -4, -4 > -5.5. Thus x ≥ y."
+      ans: "B",
+      exp: "The x roots are −4 and −3.5. The y roots are −5.5 and −4. Every x is at least as large as every y, and the two can be equal at −4."
     },
     {
-      q: "I. x^2 = 256\nII. y^2 - 32y + 256 = 0",
+      q: "Choose the most precise relation that holds for every pair of real roots.\nI. x^2 = 256\nII. y^2 - 32y + 256 = 0",
       opts: ["x ≤ y", "x < y", "x > y", "x ≥ y", "x = y or relationship cannot be determined"],
       ans: "A",
       exp: "Eq I: x = +16, -16.\nEq II: y = 16.\nComparing: +16 = 16, -16 < 16. Thus x ≤ y."
     },
     {
-      q: "I. 4x^2 - 17x + 18 = 0\nII. 3y^2 - 14y + 15 = 0",
+      q: "Choose the most precise relation that holds for every pair of real roots.\nI. 4x^2 - 17x + 18 = 0\nII. 3y^2 - 14y + 15 = 0",
       opts: ["x ≤ y", "x < y", "x > y", "x ≥ y", "x = y or relationship cannot be determined"],
-      ans: "A",
-      exp: "Eq I: 4x^2 - 8x - 9x + 18 = 0 => x = 2, 2.25.\nEq II: 3y^2 - 9y - 5y + 15 = 0 => y = 3, 5/3 (1.67).\nComparing: 2 > 1.67 but 2 < 3 (conflict!). Indeterminate."
+      ans: "E",
+      exp: "The x roots are 2 and 9/4. The y roots are 5/3 and 3. Comparing x = 9/4 with y = 5/3 gives x > y. Comparing x = 2 with y = 3 gives x < y. The relation depends on the roots selected."
     }
   ],
 
@@ -381,9 +381,9 @@ module.exports = {
     },
     {
       q: "A, B, and C can complete a work in 10 days, 12 days, and 15 days respectively. They began the work together, but B left 2 days before the completion of the work and A left 3 days before the completion. In how many days was the whole work completed?",
-      opts: ["5.8 days", "6 days", "6.5 days", "5.5 days", "7 days"],
+      opts: ["88/15 days", "6 days", "6.5 days", "5.5 days", "7 days"],
       ans: "A",
-      exp: "Let total days be x. Work done: A works for (x-3) days, B for (x-2) days, C for x days. (x-3)/10 + (x-2)/12 + x/15 = 1 => 6(x-3) + 5(x-2) + 4x = 60 => 6x - 18 + 5x - 10 + 4x = 60 => 15x - 28 = 60 => 15x = 88 => x = 88/15 = 5.86 days."
+      exp: "Let x be the total number of days. The work equation is (x−3)/10 + (x−2)/12 + x/15 = 1. Multiplying by 60 gives 15x − 28 = 60, so x = 88/15 days."
     },
     {
       q: "A committee of 5 members is to be formed out of 6 men and 4 women. What is the probability that the committee contains at least 3 women?",
@@ -398,10 +398,10 @@ module.exports = {
       exp: "Let CP = 100. MP = 130. SP = 130 × 0.85 = 110.5. Tax = 5% of 110.5 = 5.525. Net revenue = 110.5 - 5.525 = 104.975. Net profit% = 4.975%."
     },
     {
-      q: "A and B invest in a business in the ratio 3 : 5. A is an active partner and receives 10% of the total profit as salary, and the remaining profit is divided in the ratio of their capitals. If A receives a total of ₹4,800, find the total profit.",
+      q: "A and B invest in a business in the ratio 3 : 5. A is an active partner and receives 10% of the total profit as salary, and the remaining profit is divided in the ratio of their capitals. If A receives a total of ₹4,375, find the total profit.",
       opts: ["₹10,000", "₹12,000", "₹9,500", "₹11,000", "₹10,500"],
       ans: "A",
-      exp: "Let total profit be P. A's salary = 0.10P. Remaining = 0.90P. A's profit share = (3/8) × 0.90P = 0.3375P. Total for A = 0.10P + 0.3375P = 0.4375P = 7/16 P. Given 7/16 P = 4800 (Wait: If 0.48P = 4800 => P = 10,000)."
+      exp: "A receives 10% of the total as salary, plus 3/8 of the remaining 90%. Together these are 7/16 of the total. The profit is ₹4,375×16/7 = ₹10,000."
     },
     {
       q: "A solid metallic sphere of radius 6 cm is melted and recast into small spheres of radius 2 cm each. How many such small spheres can be made?",
@@ -577,14 +577,14 @@ module.exports = {
     {
       q: "Statements: W < X ≤ Y = Z; V ≥ Z > U\nConclusions:\nI. W < V\nII. X > U",
       opts: ["Both I and II are true", "Only I is true", "Only II is true", "Neither is true", "Either I or II is true"],
-      ans: "A",
-      exp: "W < X ≤ Y = Z ≤ V => W < V (I is true). X ≤ Y = Z > U => X > U is not guaranteed since X could be equal to or less than U? Wait: X ≤ Z and Z > U => opposing between X and U."
+      ans: "B",
+      exp: "W < X ≤ Y = Z ≤ V establishes W < V. The relative order of X and U can vary because each is constrained relative to Z. Only conclusion I follows."
     },
     {
       q: "Statements: J ≥ K = L > M; N ≤ M < O\nConclusions:\nI. J > N\nII. K < O",
       opts: ["Both I and II are true", "Only I is true", "Only II is true", "Neither is true", "Either I or II is true"],
-      ans: "A",
-      exp: "J ≥ K = L > M ≥ N => J > N (I is true). K = L > M < O has opposing signs, so K < O is indeterminate. Only I is true."
+      ans: "B",
+      exp: "J ≥ K = L > M ≥ N establishes J > N. Both K and O are greater than M, so their relative order can vary. Only conclusion I follows."
     }
   ],
 
@@ -648,9 +648,9 @@ module.exports = {
     },
     {
       q: "What is the 7th element to the left of the 18th element from the left end in: A 4 # B 7 % C 9 & D 2 $ E 8 @ F 5 * G 1 ?",
-      opts: ["C (11th)", "%", "9", "&", "D"],
+      opts: ["2", "%", "9", "&", "D"],
       ans: "A",
-      exp: "From left end: 18 - 7 = 11th element. 1:A, 2:4, 3:#, 4:B, 5:7, 6:%, 7:C, 8:9, 9:&, 10:D, 11:2 (Wait: 11th element is '2' or 'C')."
+      exp: "The position from the left is 18 − 7 = 11. Counting from A as the first element puts the digit 2 at position 11."
     }
   ]
 };

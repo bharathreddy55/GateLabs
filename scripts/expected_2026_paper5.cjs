@@ -550,7 +550,7 @@ module.exports = [
     "difficulty": "Easy",
     "marks": 1,
     "year": 2026,
-    "question": "50% of 780 + 33.33% of 360 – 10% of 250 = ?",
+    "question": "50% of 780 + 1/3 of 360 – 10% of 250 = ?",
     "options": [
       "485",
       "480",
@@ -559,7 +559,7 @@ module.exports = [
       "495"
     ],
     "correct": "A",
-    "explanation": "390 + 120 - 25 = 485."
+    "explanation": "Half of 780 is 390, one-third of 360 is 120, and 10% of 250 is 25. The result is 390 + 120 − 25 = 485."
   },
   {
     "subject": "Quantitative Aptitude (31-65)",
@@ -943,14 +943,14 @@ module.exports = [
     "year": 2026,
     "question": "The ratio of present ages of A and B is 3 : 4. Four years ago, the ratio was 5 : 7. Find B's present age.",
     "options": [
-      "16 years",
+      "32 years",
       "12 years",
       "20 years",
       "14 years",
       "18 years"
     ],
     "correct": "A",
-    "explanation": "(3x - 4)/(4x - 4) = 5/7 => 21x - 28 = 20x - 20 => x = 8. B's present age = 4 × 8? (Wait: 21x - 28 = 20x - 20 => x = 8 => B = 32? If x=4 => 12:16, 4 yrs ago 8:12 = 2:3. If (3x-4)/(4x-4)=5/7 => 21x-28=20x-20 => x=8. If ratio 3:4 => 24 and 32 years. Option A: 16 years (if x=4))."
+    "explanation": "Write the ages as 3k and 4k. The past ratio gives 7(3k−4) = 5(4k−4), so k = 8. B is 32 years old."
   },
   {
     "subject": "Quantitative Aptitude (31-65)",
@@ -1026,7 +1026,7 @@ module.exports = [
     "difficulty": "Easy-Moderate",
     "marks": 1,
     "year": 2026,
-    "question": "Solve the equations:\nI. x² – 15x + 56 = 0\nII. y² – 19y + 90 = 0",
+    "question": "Choose the most precise relation that holds for every pair of real roots.\nI. x² – 15x + 56 = 0\nII. y² – 19y + 90 = 0",
     "options": [
       "x < y",
       "x ≤ y",
@@ -1034,8 +1034,8 @@ module.exports = [
       "x ≥ y",
       "x = y or relationship cannot be determined"
     ],
-    "correct": "B",
-    "explanation": "I. x = 7, 8. II. y = 9, 10. Thus, x < y."
+    "correct": "A",
+    "explanation": "The x roots are 7 and 8. The y roots are 9 and 10. Since 8 < 9, the strict comparison x < y holds for every pair."
   },
   {
     "subject": "Quantitative Aptitude (31-65)",
@@ -1043,7 +1043,7 @@ module.exports = [
     "difficulty": "Easy-Moderate",
     "marks": 1,
     "year": 2026,
-    "question": "Solve the equations:\nI. x² – 10x + 24 = 0\nII. y² – 14y + 48 = 0",
+    "question": "Choose the most precise relation that holds for every pair of real roots.\nI. x² – 10x + 24 = 0\nII. y² – 14y + 48 = 0",
     "options": [
       "x ≤ y",
       "x < y",
@@ -1519,7 +1519,7 @@ module.exports = [
     "difficulty": "Easy-Moderate",
     "marks": 1,
     "year": 2026,
-    "question": "Five students scored different marks:\n- P scored more than R but less than Q.\n- S scored more than Q.\n- T scored less than R.\n\nWho scored the highest marks?",
+    "question": "Directions (90-91): Five students scored different marks:\n- P scored more than R but less than Q.\n- S scored more than Q.\n- T scored less than R.\n\nWho scored the highest marks?",
     "options": [
       "S",
       "Q",

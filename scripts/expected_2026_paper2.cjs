@@ -771,7 +771,7 @@ module.exports = [
     "difficulty": "Moderate",
     "marks": 1,
     "year": 2026,
-    "question": "Directions (46-50): In a food delivery platform operating in 3 zones (North, South, Central), total orders = 720. Ratio of orders in North : South : Central is 4 : 3 : 2.\nIn North, 60% of orders are Veg.\nIn South, Veg and Non-Veg orders are in the ratio 5 : 4.\nIn Central, 50% are Veg.\n\nFind the total number of Veg orders across all three zones.",
+    "question": "Directions (46-50): In a food delivery platform operating in 3 zones (North, South, Central), total orders = 720. Ratio of orders in North : South : Central is 4 : 3 : 2.\nIn North, 60% of orders are Veg.\nIn South, Veg and Non-Veg orders are in the ratio 1 : 1.\nIn Central, 50% are Veg.\n\nFind the total number of Veg orders across all three zones.",
     "options": [
       "392",
       "385",
@@ -780,7 +780,7 @@ module.exports = [
       "405"
     ],
     "correct": "A",
-    "explanation": "Total parts = 4+3+2 = 9 => 1 part = 80. North = 320, South = 240, Central = 160.\nNorth Veg = 60% of 320 = 192.\nSouth Veg = (5/9) × 240? (Wait: ratio 5:4 => 5/9 of 240? If 5:3 ratio => 150; or (5/9)*240 = 133.3. Let ratio be 5:3 in South => 5/8 × 240 = 150 Veg. Central Veg = 50% of 160 = 80. Total Veg = 192 + 120 + 80 = 392)."
+    "explanation": "The zone totals are 320, 240 and 160. Their veg counts are 192, 120 and 80, giving 392 veg orders."
   },
   {
     "subject": "Quantitative Aptitude (31-65)",
@@ -1026,7 +1026,7 @@ module.exports = [
     "difficulty": "Easy-Moderate",
     "marks": 1,
     "year": 2026,
-    "question": "Solve the equations:\nI. x² – 13x + 40 = 0\nII. y² – 17y + 72 = 0",
+    "question": "Choose the most precise relation that holds for every pair of real roots.\nI. x² – 13x + 40 = 0\nII. y² – 17y + 72 = 0",
     "options": [
       "x ≤ y",
       "x < y",
@@ -1043,7 +1043,7 @@ module.exports = [
     "difficulty": "Easy-Moderate",
     "marks": 1,
     "year": 2026,
-    "question": "Solve the equations:\nI. x² – 9x + 20 = 0\nII. y² – 13y + 42 = 0",
+    "question": "Choose the most precise relation that holds for every pair of real roots.\nI. x² – 9x + 20 = 0\nII. y² – 13y + 42 = 0",
     "options": [
       "x < y",
       "x ≤ y",
@@ -1519,7 +1519,7 @@ module.exports = [
     "difficulty": "Easy-Moderate",
     "marks": 1,
     "year": 2026,
-    "question": "Five poles P, Q, R, S, T are of different heights.\n- Q is taller than S but shorter than P.\n- R is taller than P.\n- T is shorter than S.\n\nWhich is the second tallest pole?",
+    "question": "Directions (90-91): Five poles P, Q, R, S, T are of different heights.\n- Q is taller than S but shorter than P.\n- R is taller than P.\n- T is shorter than S.\n\nWhich is the second tallest pole?",
     "options": [
       "P",
       "R",

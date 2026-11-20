@@ -958,7 +958,7 @@ module.exports = [
     "difficulty": "Moderate",
     "marks": 1,
     "year": 2026,
-    "question": "P, Q, and R started a business with investments in the ratio 3 : 4 : 5. After 4 months, P increased his capital by 50%. Out of total annual profit of ₹43,000, find P's share.",
+    "question": "P, Q, and R started a business with investments in the ratio 3 : 4 : 5. After 4 months, P increased his capital by 50%. Out of total annual profit of ₹45,500, find P's share.",
     "options": [
       "₹14,000",
       "₹12,000",
@@ -967,7 +967,7 @@ module.exports = [
       "₹16,000"
     ],
     "correct": "A",
-    "explanation": "P: (3×4) + (4.5×8) = 12 + 36 = 48. Q: 4×12 = 48. R: 5×12 = 60. Ratio = 48 : 48 : 60 = 4 : 4 : 5. Total parts = 13? (Wait: 48+48+60 = 156 => 4:4:5 parts total 13 parts? If profit 43000? If 4:4:5 => 4/13 of 43000 => If profit ₹39,000 => P = ₹12,000; or with total parts 13 => (4/13)×45500 = ₹14,000)."
+    "explanation": "The capital-month weights are 3×4 + 4.5×8 = 48 for P, 4×12 = 48 for Q and 5×12 = 60 for R. P earns 4/13 of ₹45,500, which is ₹14,000."
   },
   {
     "subject": "Quantitative Aptitude (31-65)",
@@ -1026,7 +1026,7 @@ module.exports = [
     "difficulty": "Easy-Moderate",
     "marks": 1,
     "year": 2026,
-    "question": "Solve the equations:\nI. x² – 12x + 35 = 0\nII. y² – 16y + 63 = 0",
+    "question": "Choose the most precise relation that holds for every pair of real roots.\nI. x² – 12x + 35 = 0\nII. y² – 16y + 63 = 0",
     "options": [
       "x ≤ y",
       "x < y",
@@ -1043,7 +1043,7 @@ module.exports = [
     "difficulty": "Easy-Moderate",
     "marks": 1,
     "year": 2026,
-    "question": "Solve the equations:\nI. x² – 8x + 15 = 0\nII. y² – 12y + 35 = 0",
+    "question": "Choose the most precise relation that holds for every pair of real roots.\nI. x² – 8x + 15 = 0\nII. y² – 12y + 35 = 0",
     "options": [
       "x ≤ y",
       "x < y",
@@ -1519,7 +1519,7 @@ module.exports = [
     "difficulty": "Easy-Moderate",
     "marks": 1,
     "year": 2026,
-    "question": "Six ropes A, B, C, D, E, F are of different lengths.\n- C is longer than E but shorter than A.\n- B is longer than A.\n- D is shorter than E but not the shortest.\n\nWhich rope is the second longest?",
+    "question": "Directions (90-91): Six ropes A, B, C, D, E, F are of different lengths.\n- C is longer than E but shorter than A.\n- B is longer than A.\n- D is shorter than E but not the shortest.\n\nWhich rope is the second longest?",
     "options": [
       "A",
       "B",

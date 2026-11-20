@@ -890,7 +890,7 @@ topic: Quadratic Equations
 difficulty: Easy-Moderate
 marks: 1
 year: 2026
-question: Solve the equations:
+question: Choose the most precise relation that holds for every pair of real roots.
 I. x² – 18x + 80 = 0
 II. y² – 22y + 120 = 0
 option a: x ≤ y
@@ -906,7 +906,7 @@ topic: Quadratic Equations
 difficulty: Easy-Moderate
 marks: 1
 year: 2026
-question: Solve the equations:
+question: Choose the most precise relation that holds for every pair of real roots.
 I. x² – 13x + 42 = 0
 II. y² – 17y + 70 = 0
 option a: x ≤ y
@@ -1360,7 +1360,7 @@ topic: Order and Ranking
 difficulty: Easy-Moderate
 marks: 1
 year: 2026
-question: Five students scored different marks:
+question: Directions (90-91): Five students scored different marks:
 - A scored more than C but less than B.
 - D scored more than B.
 - E scored less than C.

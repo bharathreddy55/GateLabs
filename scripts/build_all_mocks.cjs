@@ -87,14 +87,16 @@ function generateMock(mockNum, levelName, difficulty, specs) {
     });
   });
 
-  specs.paraJumbles.forEach((q) => {
+  const paraJumbleStart = questions.length + 1;
+  const paraJumbleEnd = questions.length + specs.paraJumbles.length;
+  specs.paraJumbles.forEach((q, index) => {
     questions.push({
       subject: 'English Language (1-30)',
       topic: 'Para Jumbles',
       difficulty,
       marks: 1,
       year: 2026,
-      question: q.q,
+      question: index === 0 ? 'Directions (' + paraJumbleStart + '-' + paraJumbleEnd + '): ' + q.q : q.q,
       options: q.opts,
       correct: q.ans,
       explanation: q.exp

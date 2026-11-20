@@ -318,13 +318,13 @@ Subtopic: Cache Memory
 Difficulty: Hard
 Marks: 2
 Year: 2027
-Question: A system has a two-level cache. L1: hit time = 1 cycle, hit rate = 90%. L2: hit time = 10 cycles, hit rate = 95% (of L1 misses). Main memory access = 100 cycles. What is the Average Memory Access Time (AMAT)?
+Question: A system has a two-level cache. L1: hit time = 1 cycle, hit rate = 90%. L2: hit time = 10 cycles, hit rate = 95% (of L1 misses). Main memory adds 100 cycles on an L2 miss. What is the Average Memory Access Time (AMAT)?
 Option A: 2.05
 Option B: 3.5
-Option C: 2.55
+Option C: 2.5
 Option D: 4.0
 Correct: C
-Explanation: AMAT = L1 hit time + L1 miss rate × (L2 hit time + L2 miss rate × Memory time) = 1 + 0.1 × (10 + 0.05 × 100) = 1 + 0.1 × (10 + 5) = 1 + 0.1 × 15 = 1 + 1.5 = 2.5. Wait — let me recalculate: 1 + 0.1 * (10 + 0.05 * 100) = 1 + 0.1 * 15 = 1 + 1.5 = 2.5. Closest option is 2.55 accounting for memory latency conventions. AMAT ≈ 2.55.
+Explanation: Add the conditional time for each level. AMAT = 1 + 0.10(10 + 0.05 × 100) = 2.5 cycles.
 
 ---
 
@@ -627,7 +627,7 @@ Year: 2027
 Question: What is the result of adding the binary numbers 10110011 and 01101101?
 Option A: 100100000
 Option B: 100011110
-Option C: 100100000
+Option C: 100000000
 Option D: 11000000
 Correct: A
 Explanation: 10110011 (179 decimal) + 01101101 (109 decimal) = 288 decimal = 100100000 binary. Binary addition: 10110011 + 01101101. Carry propagation gives 100100000. Verify: 179 + 109 = 288 = 256 + 32 = 2^8 + 2^5 = 100100000.
