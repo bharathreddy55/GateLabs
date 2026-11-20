@@ -7,7 +7,7 @@
 const STORAGE_KEY_FROM = 'gate_accent_from';
 const STORAGE_KEY_TO   = 'gate_accent_to';
 
-const DEFAULT = { from: '#4263d7', to: '#4263d7' };
+const DEFAULT = { from: '#246557', to: '#246557' };
 const validHex=value=>/^#[0-9a-f]{6}$/i.test(value);
 export function contrastRatio(a,b){const luminance=hex=>hexToRgb(hex).map(v=>{const n=v/255;return n<=0.04045?n/12.92:((n+0.055)/1.055)**2.4;}).reduce((sum,n,i)=>sum+n*[.2126,.7152,.0722][i],0);const x=luminance(a),y=luminance(b);return (Math.max(x,y)+.05)/(Math.min(x,y)+.05);}
 export function readableAccent(color,background){let result=color;for(let i=0;i<60&&contrastRatio(result,background)<4.5;i++){const dark=contrastRatio('#000000',background)>contrastRatio('#ffffff',background);result=rgbToHex(...hexToRgb(result).map(v=>v+(dark?-v:255-v)*.12));}return result;}

@@ -84,7 +84,7 @@ export function createExamPrep(examId){
     const totalTopics=sections.reduce((n,s)=>n+s.topics.length,0);
     const percent=totalTopics?Math.round(progress.length/totalTopics*100):0;
     return `<section id="prep-${examId}" class="workspace-page exam-workspace">
-      <header class="exam-page-heading"><div class="exam-heading-main"><a href="#/exams" class="back-link">← All exams</a><div class="exam-heading-title"><span class="exam-symbol" style="--exam-color:${meta.color}">${meta.symbol}</span><div><span class="eyebrow">${meta.category} · ${h(e.version)}</span><h1>${h(meta.name)}</h1></div></div><p>${h(meta.description)}</p></div><button class="ui-button primary" data-open-tab="mocks">Find a mock test ${icon('arrow')}</button></header>
+      <header class="exam-page-heading" style="--workspace-exam:${meta.color}"><div class="exam-heading-main"><a href="#/exams" class="back-link">← All exams</a><div class="exam-heading-title"><span class="exam-symbol" style="--exam-color:${meta.color}" aria-hidden="true">${meta.symbol}</span><div><span class="eyebrow">${meta.category} · ${h(e.version)}</span><h1>${h(meta.name)}</h1></div></div><p>${h(meta.description)}</p></div><button class="ui-button primary" data-open-tab="mocks">Find a mock test ${icon('arrow')}</button></header>
       ${group2StageNav(examId)}
       ${examId==='rrb'?rrbStageNav():''}
       ${countdownCard(mains?'group2-mains-1':examId)}

@@ -19,6 +19,8 @@ import { Layout } from './components/Layout';
 // Styles
 import './styles/index.css';
 import './styles/workspace.css';
+import './styles/design.css';
+import './styles/exam-room.css';
 
 // Initialize global theme & accent palette (apply saved colors before first paint)
 initFocusManagement();
@@ -72,23 +74,20 @@ async function router() {
   // Check if mock test is active and user wants to navigate away
   if (MockTest.isTesting && (hashPath !== '/mock-test'||new URLSearchParams(location.hash.split('?')[1]||'').has('attempt'))) {
     if (!confirm("An exam is currently in progress. Leaving now will forfeit all progress. Are you sure you want to exit?")) {
-      window.location.hash = '#/mock-test';
+      history.replaceState(null,'','#/mock-test');
       return;
     } else {
       MockTest.abandon();
-      if (MockTest.timer) clearInterval(MockTest.timer);
-      if (MockTest.unloadHandler) {
-        window.removeEventListener('beforeunload', MockTest.unloadHandler);
-        MockTest.unloadHandler = null;
-      }
-      document.body.classList.remove('fullscreen-exam');
-
     }
   }
 
-  // Remove fullscreen class if we navigate away from active test
-  if (hashPath !== '/mock-test') {
-    document.body.classList.remove('fullscreen-exam');
+  const cbat=loadedPages.get('RrbCbat');
+  if(cbat?.session){
+    if(hashPath==='/rrb-station-master/cbat'||!confirm('Exit this battery? Your current answers will be discarded.')){
+      history.replaceState(null,'','#/rrb-station-master/cbat');
+      return;
+    }
+    cbat.cleanup();
   }
 
   // Retrieve route config, fallback to home

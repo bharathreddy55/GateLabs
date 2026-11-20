@@ -6,6 +6,7 @@ import { mockLibraryBanner } from '../components/ExamMockLibrary.js';
 import { buildCbatSet, cbatResultKey, cbatSummary, validCbatResult } from '../utils/cbat.js';
 import { escapeHtml as h } from '../utils/examEngine.js';
 import { readStored } from '../utils/safeStorage.js';
+import { enterExamFullscreen, leaveExamFullscreen, fullscreenButton } from '../utils/examFullscreen.js';
 
 function shape(cells) {
   const positions = cells.map(cell => `${'ABCD'[Math.floor(cell/4)]}${1+cell%4}`).sort().join(', ');
@@ -77,7 +78,7 @@ function studyNotes(){
 export const RrbCbat = {
   render(){
     return `<section class="workspace-page exam-workspace" id="rrb-cbat">
-      <header class="exam-page-heading"><div class="exam-heading-main"><a class="back-link" href="#/exams">← All exams</a>
+      <header class="exam-page-heading" style="--workspace-exam:${stationMaster.color}"><div class="exam-heading-main"><a class="back-link" href="#/exams">← All exams</a>
       <span class="eyebrow">Railway recruitment · CEN 08/2026</span><h1>RRB Station Master</h1><p>Practise the aptitude batteries for the second stage.</p></div></header>
       ${rrbStageNav(true)}
       <div class="mock-test-library" style="--mock-accent:${stationMaster.color}">
@@ -115,6 +116,7 @@ export const RrbCbat = {
   },
   cleanup(){
     clearInterval(this.timer);
+    if(this.session)leaveExamFullscreen();
     this.session = null;
     this.panel = null;
     this.root = null;
@@ -158,6 +160,7 @@ export const RrbCbat = {
       deadline:battery.seconds ? Date.now()+battery.seconds*1000 : null };
     this.root.querySelector('[data-cbat-view="notes"]').disabled=true;
     this.showQuestion();
+    enterExamFullscreen();
     if (battery.seconds) this.timer = setInterval(() => this.tick(), 250);
   },
   tick(){
@@ -170,20 +173,27 @@ export const RrbCbat = {
   showQuestion(){
     const {battery,set,questions,answers,index,deadline} = this.session;
     const q = questions[index];
-    this.panel.innerHTML = `<section class="surface cbat-session" aria-labelledby="cbat-question">
-      <div class="section-heading"><h2>${battery.title} · Set ${set}</h2>
-      ${deadline?`<span class="subtle-tag" aria-label="Time remaining"><time data-cbat-clock>${timeLabel(Math.max(0,Math.ceil((deadline-Date.now())/1000)))}</time></span>`:''}</div>
-      <p class="muted">Question ${index+1} of ${questions.length} · ${answers.filter(Number.isInteger).length} answered</p>
+    this.panel.innerHTML = `<section class="cbat-session" aria-labelledby="cbat-question" data-exam-session>
+      <header class="test-room-header">
+        <div class="test-room-identity"><span class="test-room-mark" aria-hidden="true">${icon(batteryIcons[battery.id])}</span><div><p class="eyebrow">Station Master CBAT</p><h2>${battery.title} · Set ${set}</h2></div></div>
+        <div class="test-room-controls">
+          ${deadline?`<div class="test-room-clock" role="timer">Remaining <time data-cbat-clock>${timeLabel(Math.max(0,Math.ceil((deadline-Date.now())/1000)))}</time></div>`:''}
+          ${fullscreenButton()}
+          <button type="button" data-cbat-exit>Exit battery</button>
+          <button type="button" class="test-room-primary" data-cbat-finish>Submit battery</button>
+        </div>
+      </header>
+      <div class="test-question-body">
+      <p class="cbt-question-meta"><strong>Question ${index+1} of ${questions.length}</strong><span>${answers.filter(Number.isInteger).length} answered</span></p>
       <h3 id="cbat-question" tabindex="-1">${h(q.prompt)}</h3>
       ${q.digits?`<div class="cbat-digits">${q.digits.join(' ')}</div>`:''}
       ${q.map?`<p class="muted">Connected lines are streets. Each street segment has the same length.</p>${streetMap(q.map)}`:''}
       ${q.rules?`<ul class="cbat-rules">${q.rules.map(rule=>`<li>${h(rule)}</li>`).join('')}</ul>`:''}
       <div class="cbat-options ${Array.isArray(q.options[0])?'cbat-figures':''}" role="group" aria-labelledby="cbat-question">
         ${q.options.map((option,i)=>`<button type="button" class="ui-button ${answers[index]===i?'primary':''}" data-cbat-option="${i}" aria-pressed="${answers[index]===i}">${Array.isArray(option)?`<span>${optionLabel(option,i)}</span>${shape(option)}`:h(option)}</button>`).join('')}
-      </div><div class="button-row">
+      </div></div><div class="cbt-question-actions">
         <button type="button" class="ui-button" data-cbat-move="-1" ${index===0?'disabled':''}>Previous</button>
-        <button type="button" class="ui-button" data-cbat-move="1" ${index===questions.length-1?'disabled':''}>Next</button>
-        <button type="button" class="ui-button primary" data-cbat-finish>Submit battery</button>
+        <button type="button" class="test-room-primary" data-cbat-move="1" ${index===questions.length-1?'disabled':''}>Next</button>
       </div></section>`;
     this.panel.querySelector(answers[index]===null?'#cbat-question':`[data-cbat-option="${answers[index]}"]`).focus();
   },
@@ -199,6 +209,17 @@ export const RrbCbat = {
     if (battery) return this.start(battery,Number(button.dataset.cbatSet));
     if (!this.session) return;
     if (this.session.deadline && Date.now() >= this.session.deadline) return this.finish(true);
+    if(button.hasAttribute('data-exam-fullscreen'))return enterExamFullscreen();
+    if(button.hasAttribute('data-cbat-exit')){
+      if(!confirm('Exit this battery? Your current answers will be discarded.'))return;
+      clearInterval(this.timer);
+      this.session=null;
+      leaveExamFullscreen();
+      this.root.querySelector('[data-cbat-view="notes"]').disabled=false;
+      this.showLibrary();
+      this.panel.querySelector('button')?.focus();
+      return;
+    }
     if (button.hasAttribute('data-cbat-option')) {
       this.session.answers[this.session.index] = Number(button.dataset.cbatOption);
       this.showQuestion();
@@ -209,6 +230,7 @@ export const RrbCbat = {
   },
   finish(expired){
     clearInterval(this.timer);
+    leaveExamFullscreen();
     const {battery,set,questions,answers} = this.session;
     const result = cbatSummary(questions,answers);
     this.session = null;

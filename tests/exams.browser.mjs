@@ -36,6 +36,19 @@ export const db={saveAttempt:async a=>{const key='gate_attempts:exam-test-user';
 const page=await context.newPage();const errors=[];page.on('pageerror',err=>errors.push(err.message));
 page.on('dialog',dialog=>dialog.accept());
 fs.mkdirSync('artifacts/exams',{recursive:true});
+async function checkExamRoom(){
+ await page.locator('[data-exam-session]').waitFor();
+ assert.equal(await page.locator('#sidebar-container').isHidden(),true);
+ assert.equal(await page.locator('#layout-header').isHidden(),true);
+ assert.ok(await page.locator('[data-exam-session]').evaluate(room=>{
+  const bounds=room.getBoundingClientRect();
+  return Math.abs(bounds.left)<=1 && Math.abs(bounds.top)<=1 && bounds.width>=innerWidth-1 && bounds.height>=innerHeight-1;
+ }));
+}
+async function openPalette(){
+ const palette=page.locator('.cbt-room .exam-navigation');
+ if(await palette.getAttribute('open')===null) await palette.locator('summary').click();
+}
 try{
  await page.goto('http://127.0.0.1:3011/#/group2');
  await page.getByRole('heading',{name:'APPSC Group 2',exact:true}).waitFor();
@@ -50,6 +63,10 @@ try{
  await page.locator('[data-prep-tab=mocks]').click();
  await page.getByRole('button',{name:'Start full mock'}).first().click();
  await page.getByRole('button',{name:'Begin test',exact:true}).click();
+ await checkExamRoom();
+ if(await page.evaluate(()=>document.fullscreenEnabled)){
+  await page.waitForFunction(()=>document.fullscreenElement?.id==='app');
+ }
  assert.equal(await page.locator('[data-cbt-count="unanswered"]').textContent(),'1 unanswered');
  assert.equal(await page.locator('[data-cbt-count="unvisited"]').textContent(),'149 not visited');
  const [groupPaper]=JSON.parse(fs.readFileSync('public/exams/group2.json'));
@@ -57,15 +74,25 @@ try{
  assert.equal(await page.locator('[data-question="0"]').evaluate(el=>el.classList.contains('answered')),true);
  assert.match(await page.locator('[data-question="0"]').getAttribute('aria-label'),/answered/);
  await page.getByRole('button',{name:'Save & next',exact:true}).click();
+ await checkExamRoom();
+ if(await page.evaluate(()=>document.fullscreenEnabled)){
+  assert.equal(await page.evaluate(()=>document.fullscreenElement?.id),'app');
+  await page.evaluate(()=>document.exitFullscreen());
+  await checkExamRoom();
+  await page.getByRole('button',{name:'Full screen'}).click();
+  await page.waitForFunction(()=>document.fullscreenElement?.id==='app');
+ }
  await page.locator(`[data-answer="${(groupPaper.questions[1].correctAnswer+1)%4}"]`).check();
  await page.getByRole('button',{name:'Mark for review',exact:true}).click();
  assert.equal(await page.locator('[data-cbt-count="review"]').textContent(),'1 marked for review');
  const deadline=await page.evaluate(()=>JSON.parse(localStorage.getItem('exam-active:exam-test-user')).deadline);
  await page.reload();await page.locator('#exam-clock').waitFor();
+ await checkExamRoom();
  assert.equal(await page.locator('[data-cbt-count="review"]').textContent(),'1 marked for review');
  assert.equal(await page.evaluate(()=>JSON.parse(localStorage.getItem('exam-active:exam-test-user')).deadline),deadline);
  await page.getByRole('button',{name:'Submit test',exact:true}).click();
  await page.getByRole('heading',{name:'Exam complete',exact:true}).waitFor();
+ await page.waitForFunction(()=>!document.fullscreenElement && document.getElementById('layout-header').getClientRects().length>0);
  let result=await page.evaluate(()=>JSON.parse(localStorage.getItem('exam-results:exam-test-user'))[0]);
  assert.ok(Math.abs(result.score-2/3)<1e-10);assert.equal(result.skippedCount,148);assert.equal(result.wrongCount,1);
  assert.equal(await page.evaluate(()=>localStorage.getItem('exam-active:exam-test-user')),null);
@@ -94,8 +121,16 @@ try{
  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2),'Mobile page must not overflow horizontally');
  await page.locator('[data-prep-tab=mocks]').click();
  await page.getByRole('button',{name:'Start full mock'}).first().click();
+ await page.evaluate(()=>Object.defineProperty(document.getElementById('app'),'requestFullscreen',{
+  configurable:true,value:()=>Promise.reject(new Error('Fullscreen unavailable in this frame')),
+ }));
  await page.getByRole('button',{name:'Begin test',exact:true}).click();
+ await checkExamRoom();
+ assert.equal(await page.evaluate(()=>document.fullscreenElement),null);
+ await page.evaluate(()=>delete document.getElementById('app').requestFullscreen);
  assert.match(await page.locator('#exam-clock').innerText(),/120:00|119:5/);
+ assert.equal(await page.locator('.cbt-room .exam-navigation').getAttribute('open'),null);
+ await openPalette();
  await page.locator('[data-question="30"]').click();
  await page.locator('.exam-figure svg').waitFor();
  assert.ok(await page.locator('.cbt-layout').evaluate(el=>el.getBoundingClientRect().right<=innerWidth));
@@ -123,7 +158,7 @@ try{
    await page.getByRole('button',{name:'Submit test',exact:true}).click();
    await page.getByRole('heading',{name:'Exam complete',exact:true}).waitFor();
    assert.match(await page.locator('#exam-root').innerText(),/0 correct · 1 wrong · 99 unanswered/);
-   assert.match(await page.locator('#exam-root').innerText(),/Marks deducted: 0\.33/);
+   assert.match(await page.locator('#exam-root').innerText(),/Marks deducted\s+0\.33/);
    await page.goto('http://127.0.0.1:3011/#/rrb-station-master?tab=mocks');
    await stationTests.getByRole('heading',{name:'All tests',exact:true}).waitFor();
  }
@@ -133,12 +168,15 @@ try{
  await page.getByRole('button',{name:'Begin test',exact:true}).click();
  const wrongSbi=await page.evaluate(async()=>{const {MockTest}=await import('/src/pages/ExamRunner.js');return (MockTest.questions[0].correctAnswer+1)%4;});
  await page.locator(`[data-answer="${wrongSbi}"]`).check();
+ await openPalette();
  await page.locator('[data-question="23"]').click();
  assert.match(await page.locator('#cbt-question-title').innerText(),/PRUDENT[\s\S]+\(A\)[\s\S]+\(B\)[\s\S]+\(C\)/);
+ await openPalette();
  await page.locator('[data-question="24"]').click();
  assert.match(await page.locator('#cbt-question-title').innerText(),/FIRST sentence after rearrangement/);
  const sharedParagraph = await page.locator('.cbt-question blockquote').innerText();
  assert.match(sharedParagraph,/\(A\)[\s\S]+\(E\) Small neighborhood vendors/);
+ await openPalette();
  await page.locator('[data-question="25"]').click();
  assert.equal(await page.locator('.cbt-question blockquote').innerText(),sharedParagraph);
  assert.equal(await page.locator('[data-question="30"]').isDisabled(),true);
@@ -210,8 +248,10 @@ try{
    await page.getByRole('button',{name:'Begin test',exact:true}).click();
    await page.locator('[data-answer="0"]').check();
    if(exam==='gate'){
+     await openPalette();
      await page.locator('[data-question="5"]').click();
      await page.locator('[data-answer="0"]').check();
+     await openPalette();
      await page.locator('[data-question="6"]').click();
      await page.locator('#nat-answer').fill('2');
    }
@@ -219,7 +259,7 @@ try{
    await page.getByRole('heading',{name:'Exam complete',exact:true}).waitFor();
    if(exam==='gate'){
      assert.match(await page.locator('#exam-root').innerText(),/1 correct · 2 wrong/);
-     assert.match(await page.locator('#exam-root').innerText(),/Marks deducted: 0\.67/);
+     assert.match(await page.locator('#exam-root').innerText(),/Marks deducted\s+0\.67/);
    }
  }
  await page.setViewportSize({width:360,height:800});
@@ -243,7 +283,8 @@ try{
  assert.match(await dataDrills.locator('summary').innerText(),/20 tests/);
  await dataDrills.locator('summary').click();
  await dataDrills.getByRole('button',{name:'Start subject test'}).first().click();
- assert.match(await page.locator('#exam-root').innerText(),/30 questions · 36 minutes · 30 marks/);
+ assert.deepEqual(await page.locator('.exam-summary-metrics dt').allTextContents(),['Questions','Minutes','Marks']);
+ assert.deepEqual(await page.locator('.exam-summary-metrics dd').allTextContents(),['30','36','30']);
  await page.getByRole('button',{name:'Begin test',exact:true}).click();
  assert.equal(await page.locator('[data-question]').count(),30);
  await page.getByRole('button',{name:'Submit test',exact:true}).click();
@@ -271,15 +312,18 @@ try{
  await page.getByText(/Figure C\. Figure B is a quarter-turn/).waitFor();
  await page.getByRole('button',{name:'Practice sets',exact:true}).click();
  await page.getByRole('button',{name:'Start Intelligence Set 1'}).click();
+ await checkExamRoom();
  assert.equal(await page.locator('#cbat-practice svg.cbat-shape').count(),5);
  assert.ok((await page.locator('#cbat-practice svg.cbat-shape').first().boundingBox()).width>=48);
- assert.ok(await page.getByRole('button',{name:'Detailed notes & syllabus'}).isDisabled());
+ assert.ok(await page.locator('[data-cbat-view="notes"]').isHidden());
+ assert.ok(await page.locator('[data-cbat-view="notes"]').isDisabled());
  await page.getByRole('button',{name:'Figure 1'}).click();
  await page.getByRole('button',{name:'Next',exact:true}).click();
  await page.getByRole('button',{name:'Previous',exact:true}).click();
  assert.equal(await page.locator('[data-cbat-option="0"]').getAttribute('aria-pressed'),'true');
  await page.getByRole('button',{name:'Submit battery'}).click();
  await page.getByRole('heading',{name:'Intelligence results'}).waitFor();
+ await page.waitForFunction(()=>!document.fullscreenElement && document.getElementById('layout-header').getClientRects().length>0);
  assert.ok(await page.getByRole('button',{name:'Detailed notes & syllabus'}).isEnabled());
  await page.getByText('Review answers',{exact:true}).click();
  await page.getByText(/Correct answer: Figure/).first().waitFor();

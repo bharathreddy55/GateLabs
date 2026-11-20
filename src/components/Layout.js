@@ -20,14 +20,14 @@ export const Layout = {
         <a class="skip-link" href="#sub-page-container">Skip to content</a>
         <button class="sidebar-backdrop" id="sidebar-backdrop" aria-label="Close navigation" hidden></button>
         <aside id="sidebar-container" class="app-sidebar" aria-label="Main navigation">
-          <a class="app-brand" href="#/dashboard"><span class="brand-mark">g<span>.</span></span><div>GateLabs<small>A little progress, every day.</small></div></a>
+          <a class="app-brand" href="#/dashboard"><span class="brand-mark" aria-hidden="true">g</span><span>GateLabs</span></a>
           <nav class="sidebar-nav">${NAV_GROUPS.map(group=>`<div class="nav-group"><p>${group.label}</p>${group.items.map(([route,label,glyph])=>`<a href="#/${route}" class="sidebar-link ${activePage===route?'nav-active':''}" ${activePage===route?'aria-current="page"':''}>${icon(glyph)}<span>${label}</span></a>`).join('')}</div>`).join('')}</nav>
           <div class="sidebar-footer"><div class="profile-row"><span class="profile-avatar">${h(userInitial)}</span><div><strong>${h(userName)}</strong><small>${h(userEmail)}</small></div><button id="logout-btn" aria-label="Sign out" title="Sign out">${icon('logout')}</button></div><div class="sidebar-settings"><button id="theme-studio-btn">Appearance</button><button id="settings-btn">AI settings</button></div></div>
         </aside>
         <div class="app-main">
           <header id="layout-header" class="app-header"><div class="header-location"><button id="mobile-menu-toggle" aria-label="Open navigation" aria-controls="sidebar-container" aria-expanded="false">${icon('menu')}</button><span>Workspace <span class="breadcrumb-divider">/</span> <strong id="page-location">${PAGE_TITLES[activePage]||'GateLabs'}</strong></span></div><div class="header-actions"><a href="#/exams" class="header-exams-link">Explore exams</a><button id="layout-theme-toggle" aria-label="Toggle light and dark appearance" title="Toggle appearance">${icon('moon')}<i id="layout-theme-sun" class="hidden"></i><i id="layout-theme-moon" class="hidden"></i></button><span class="header-avatar" title="${h(userName)}">${h(userInitial)}</span></div></header>
           <main id="sub-page-container" tabindex="-1">${contentHtml}</main>
-          <footer class="workspace-footer"><span>GateLabs · Build your next chapter.</span><a href="#/about">About & help</a></footer>
+          <footer class="workspace-footer"><span>GateLabs</span><a href="#/about">About & help</a></footer>
         </div>
 
         <!-- ======= 🎨 THEME STUDIO MODAL ======= -->
@@ -208,7 +208,11 @@ export const Layout = {
     const close=()=>{shell?.classList.remove('navigation-open');if(backdrop)backdrop.hidden=true;toggle?.setAttribute('aria-expanded','false');};
     toggle?.addEventListener('click',()=>{const open=shell.classList.toggle('navigation-open');backdrop.hidden=!open;toggle.setAttribute('aria-expanded',String(open));if(open)document.querySelector('.sidebar-link')?.focus();});
     backdrop?.addEventListener('click',close);
-    shell?.addEventListener('keydown',event=>{if(event.key==='Escape'){close();toggle?.focus();}});
+    shell?.addEventListener('keydown',event=>{if(event.key==='Escape'&&shell.classList.contains('navigation-open')){close();toggle?.focus();}});
+    shell?.querySelector('.skip-link')?.addEventListener('click',event=>{
+      event.preventDefault();
+      document.getElementById('sub-page-container')?.focus();
+    });
     document.querySelectorAll('.sidebar-link').forEach(link=>link.addEventListener('click',close));
 
     // ---- THEME TOGGLE ----

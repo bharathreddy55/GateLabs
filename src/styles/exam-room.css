@@ -1,0 +1,286 @@
+/* The workspace gives the active session the whole viewport, including after reload. */
+body:has([data-exam-session]) { overflow: hidden; }
+#app:fullscreen { width: 100%; height: 100%; background: var(--ws-bg); }
+#app:fullscreen .test-room-expand { display: none; }
+.app-shell:has([data-exam-session]) > :is(.skip-link, .sidebar-backdrop, #sidebar-container),
+.app-shell:has([data-exam-session]) .app-main > :is(#layout-header, .workspace-footer),
+.app-shell:has([data-exam-session]) #sub-page-container > .notice,
+#rrb-cbat:has([data-exam-session]) > :not(.mock-test-library),
+#rrb-cbat:has([data-exam-session]) .mock-test-library > :not(#cbat-practice) { display: none; }
+.app-shell:has([data-exam-session]) .app-main { margin: 0; padding: 0; }
+.app-shell:has([data-exam-session]) .app-main #sub-page-container { padding: 0; }
+#rrb-cbat:has([data-exam-session]) { width: 100%; max-width: none; margin: 0; }
+
+.app-shell [data-exam-session] {
+  --room-gutter: clamp(16px, 3vw, 48px);
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 0;
+  width: 100%;
+  max-width: none;
+  height: 100vh;
+  height: 100dvh;
+  margin: 0;
+  background: var(--ws-bg);
+  color: var(--ws-text);
+}
+
+.app-shell [data-exam-session] > .test-room-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 22px;
+  padding: max(12px, env(safe-area-inset-top)) var(--room-gutter) 12px;
+  background: var(--ws-panel);
+  border-bottom: 1px solid var(--ws-border);
+  position: static;
+}
+.test-room-identity, .test-room-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+.test-room-identity { overflow-wrap: anywhere; }
+.test-room-controls { flex-wrap: wrap; justify-content: flex-end; }
+.test-room-expand { gap: 7px; }
+.test-room-expand svg { width: 16px; height: 16px; }
+.test-room-mark {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: var(--ws-soft);
+  color: var(--ws-primary);
+}
+.test-room-mark svg { width: 21px; height: 21px; }
+[data-exam-session] .test-room-header :is(h1, h2) {
+  margin: 0;
+  font-size: clamp(17px, 2vw, 25px);
+  line-height: 1.18;
+  font-weight: 750;
+  letter-spacing: -.5px;
+}
+[data-exam-session] .test-room-header .eyebrow {
+  margin-block-end: 4px;
+  font-size: 11px;
+}
+.app-shell [data-exam-session] .test-room-clock {
+  font-variant-numeric: tabular-nums;
+  font-weight: 720;
+  font-size: 14px;
+  padding: 9px 14px;
+  border-radius: 10px;
+  background: var(--ws-soft);
+  color: var(--ws-primary);
+  white-space: nowrap;
+}
+.app-shell [data-exam-session] :is(.test-room-controls, .cbt-question-actions) button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 8px 13px;
+  border: 1px solid var(--ws-border-strong);
+  border-radius: 10px;
+  background: var(--ws-panel);
+  color: var(--ws-text);
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1.25;
+  text-align: center;
+}
+.app-shell [data-exam-session] :is(.test-room-controls, .cbt-question-actions) button:hover:enabled {
+  background: var(--ws-bg);
+}
+.app-shell [data-exam-session] :is(.test-room-controls, .cbt-question-actions) .test-room-primary,
+.app-shell [data-exam-session] :is(.test-room-controls, .cbt-question-actions) .test-room-primary:hover:enabled,
+.app-shell [data-exam-session] :is(#next-question, #submit-exam) {
+  background: var(--accent-from);
+  border-color: var(--accent-from);
+  color: var(--accent-on);
+}
+.app-shell [data-exam-session] .cbt-question-actions [aria-pressed="true"] {
+  color: var(--ws-primary);
+  background: var(--ws-soft);
+}
+
+.cbt-room .cbt-layout {
+  grid-template-columns: minmax(0, 1fr) minmax(16rem, 22rem);
+  grid-template-areas: "question palette";
+  align-items: stretch;
+  gap: clamp(16px, 2vw, 28px);
+  padding: clamp(14px, 2vw, 28px) var(--room-gutter);
+  min-height: 0;
+}
+.app-shell .cbt-room .cbt-question {
+  grid-area: question;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: var(--ws-shadow);
+}
+.app-shell .cbt-room .cbt-question:focus { outline-offset: -3px; }
+.test-question-body {
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  padding: clamp(18px, 3vw, 44px);
+}
+.test-question-body > * { max-width: 76ch; }
+.app-shell [data-exam-session] .cbt-question-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 15px;
+  align-items: baseline;
+  margin-bottom: 18px;
+  font-size: 13px;
+}
+.cbt-question-meta strong { color: var(--ws-primary); }
+.app-shell #cbt-question-title, #rrb-cbat [data-exam-session] #cbat-question {
+  margin: 0 0 16px;
+  font-size: clamp(17px, 2vw, 24px);
+  font-weight: 700;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+.cbt-room .exam-option {
+  align-items: center;
+  margin-block: 8px;
+  min-height: 48px;
+  padding: 10px 14px;
+  border: 1px solid var(--ws-border-strong);
+  border-radius: 12px;
+}
+.app-shell .cbt-room .exam-option { font-size: 15px; }
+.cbt-room .exam-option:has(input:checked) {
+  background: var(--ws-soft);
+  border-color: var(--ws-primary);
+}
+.cbt-room .exam-option input { accent-color: var(--accent-from); }
+.test-question-body :is(blockquote, pre) { border-radius: 12px; }
+.cbt-question-actions {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 12px clamp(14px, 2.5vw, 32px);
+  border-top: 1px solid var(--ws-border);
+  background: var(--ws-panel);
+}
+.cbt-question-actions .test-room-primary { margin-inline-start: auto; }
+.cbt-sidebar {
+  grid-area: palette;
+  display: block;
+  overflow-y: auto;
+  min-height: 0;
+}
+.cbt-room .exam-navigation {
+  padding: 14px 16px;
+  border-radius: 16px;
+  box-shadow: var(--ws-shadow);
+}
+.cbt-room .exam-navigation summary { cursor: pointer; font-size: 14px; }
+.cbt-room .exam-palette {
+  grid-template-columns: repeat(auto-fit, minmax(38px, 1fr));
+  position: relative;
+  max-height: min(48dvh, 26rem);
+  padding: 5px;
+}
+.cbt-room .exam-palette button { min-height: 38px; padding: 5px; font-variant-numeric: tabular-nums; }
+.cbt-room .exam-palette .current { outline-color: var(--ws-primary); outline-offset: 2px; }
+.cbt-legend .review { background: #6b3294; color: white; }
+
+#rrb-cbat [data-exam-session] { grid-template-rows: auto minmax(0, 1fr) auto; }
+#rrb-cbat [data-exam-session] > .test-question-body {
+  width: min(100%, 74rem);
+  margin-inline: auto;
+  background: var(--ws-panel);
+}
+#rrb-cbat [data-exam-session] .test-question-body > .cbat-options { max-width: none; }
+
+.app-shell .exam-hub > .exam-summary-header {
+  position: static;
+  padding: clamp(22px, 4vw, 42px);
+  border-radius: 22px;
+  color: white;
+  background: var(--hero-grid) right top / 25px 25px,
+    linear-gradient(125deg, var(--hero-ink) 32%, #245449);
+  border: 0;
+}
+.exam-summary-header .eyebrow, .exam-summary-title { color: var(--hero-muted); }
+.app-shell .exam-summary-header h1 {
+  margin-block: 9px;
+  font-size: clamp(28px, 3vw, 46px);
+  line-height: 1.12;
+  letter-spacing: -.035em;
+  overflow-wrap: anywhere;
+}
+.exam-summary-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 20px;
+  gap: 8px;
+}
+.exam-summary-metrics div {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 12px;
+  border: 1px solid #c5e8dd44;
+  border-radius: 11px;
+  background: #132b26aa;
+}
+.exam-summary-metrics dt { color: var(--hero-muted); font-size: 12px; }
+.exam-summary-metrics dd { font-size: clamp(18px, 2.5vw, 29px); font-weight: 750; font-variant-numeric: tabular-nums; }
+.app-shell .exam-hub .exam-summary-metrics small { display: inline; color: var(--hero-muted); }
+.exam-instructions, .exam-result-actions { display: grid; gap: 12px; }
+.exam-hub .exam-review-controls { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+.exam-review-item summary { font-weight: 650; }
+.exam-review-item[open] > summary { margin-bottom: 12px; }
+.app-shell .exam-briefing #begin-exam { color: var(--accent-on); background: var(--accent-from); border-color: var(--accent-from); min-height: 44px; }
+
+@media (max-width: 860px) {
+  .app-shell [data-exam-session] { --room-gutter: 14px; }
+  .app-shell [data-exam-session] > .test-room-header { flex-wrap: wrap; gap: 9px; }
+  .test-room-controls { justify-content: flex-start; width: 100%; gap: 7px; }
+  .test-room-controls .test-room-clock { margin-inline-end: auto; }
+  .test-room-mark { width: 34px; height: 34px; }
+  .cbt-room .cbt-layout {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr);
+    grid-template-areas: "palette" "question";
+    padding-block: 9px;
+    gap: 8px;
+  }
+  .cbt-room .exam-navigation { padding: 8px 12px; }
+  .cbt-room .exam-navigation summary { min-height: 30px; display: list-item; align-content: center; }
+  .cbt-room .exam-palette { max-height: min(20dvh, 10rem); }
+  .app-shell .cbt-room .cbt-question { border-radius: 14px; }
+  .cbt-question-actions { padding-bottom: max(8px, env(safe-area-inset-bottom)); }
+}
+
+@media (max-width: 480px) {
+  .app-shell [data-exam-session] .test-room-controls button { min-height: 40px; padding-inline: 8px; font-size: 12px; }
+  .app-shell [data-exam-session] .test-room-clock { padding: 8px; font-size: 12px; }
+  .test-room-expand { order: 1; min-width: 40px; }
+  .test-room-expand span { display: none; }
+  .cbt-question-actions button { flex: 1 1 40%; }
+  .exam-summary-metrics div { padding: 8px; }
+}
+@media (max-width: 365px) {
+  .test-room-controls .test-room-clock { flex-basis: 100%; margin-inline-end: 0; }
+}
+
+@media (max-height: 315px) {
+  .app-shell [data-exam-session] { overflow-y: auto; grid-template-rows: auto auto; }
+  #rrb-cbat [data-exam-session] { grid-template-rows: auto auto auto; }
+  .app-shell .cbt-room .cbt-question { grid-template-rows: auto auto; }
+  .test-question-body { overflow-y: visible; }
+}

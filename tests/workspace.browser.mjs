@@ -150,7 +150,7 @@ try{
  assert.match(await guideLink.getAttribute('href'),/\/notes\/visuals\/sbi\/english-reading\.svg$/);
  // Signed-out render and existing auth form integration, using an isolated test user.
  await page.evaluate(async()=>{const {auth}=await import('/src/config/firebase.js');auth.currentUser=null;location.hash='#/';});
- await page.getByRole('heading',{name:/Less searching/}).waitFor();
+ await page.getByRole('heading',{name:'Prepare for your next exam.'}).waitFor();
  await page.evaluate(()=>document.documentElement.classList.remove('dark'));
  await page.screenshot({path:'artifacts/workspace/landing-mobile.png',fullPage:true});
  await page.getByRole('button',{name:'Sign in',exact:true}).click();

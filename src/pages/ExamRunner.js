@@ -5,9 +5,10 @@ import {renderAnswerInputs,readAnswer,answerLabel,renderQuestionContext} from '.
 import {evaluateAnswer} from '../utils/examEngine.js';
 import { auth, db } from '../config/firebase';
 import { EXAMS } from '../config/exams.js';
-import { EXAM_CATALOG } from '../config/navigation.js';
+import { EXAM_CATALOG, icon } from '../config/navigation.js';
 import { escapeHtml as h, validatePaper, scorePaper } from '../utils/examEngine.js';
 import { showToast } from '../utils/toast';
+import { enterExamFullscreen, leaveExamFullscreen, fullscreenButton } from '../utils/examFullscreen.js';
 
 export const MockTest = {
   isTesting:false, pending:null, result:null, timer:null,
@@ -28,21 +29,90 @@ export const MockTest = {
     const requested=this.reviewId();
     if(requested&&this.result?.id!==requested&&!this.resultError)return '<section id="exam-root" class="workspace-loading" role="status">Loading your result…</section>';
     if(this.resultError)return '<section id="exam-root" class="exam-hub"><h1>Result unavailable</h1><p>Your result may not be saved on this device or account. Check your connection and attempt history.</p><a href="#/analytics">Open attempt history</a></section>';
-    if(this.result) {
-      const r=this.result;
-      const bookmarks=readStored(`exam-bookmarks:${auth.currentUser?.uid}:${r.examId}`,[]);
-      const visible=r.responses.map((q,i)=>({q,i})).filter(({q})=>!this.reviewFilter||this.reviewFilter==='all'||(this.reviewFilter==='bookmarked'?bookmarks.includes(q.id):q.status===this.reviewFilter));
-      return `<section id="exam-root" class="exam-hub"><h1>Exam complete</h1><h2>${h(r.scope)}</h2><p>${r.mode==='full'?'Full mock':'Section practice'} · ${Math.floor((r.timeSpentSeconds||0)/60)} min ${(r.timeSpentSeconds||0)%60} sec</p><div class="exam-card"><strong>${r.score.toFixed(2)} / ${r.totalPossibleMarks}</strong><p>${r.correctCount} correct · ${r.wrongCount} wrong · ${r.skippedCount} unanswered</p><p>Marks deducted: ${r.negativeMarks.toFixed(2)} · Attempted-question accuracy: ${r.accuracy.toFixed(1)}%</p><p role="status">${h(this.saveMessage||'Saved on this device.')}</p><div class="button-row"><button id="retry-save">Retry cloud sync</button><button id="export-result">Export result</button></div></div><a href="#/${EXAMS[r.examId]?.route||EXAM_CATALOG.find(e=>e.id===r.examId)?.route||'exams'}">Return to preparation</a><h2>Answer review</h2><div class="button-row"><label>Show answers<select id="result-filter">${[['all','All answers'],['wrong','Wrong only'],['skipped','Unanswered'],['bookmarked','Bookmarked']].map(([value,label])=>`<option value="${value}" ${(this.reviewFilter||'all')===value?'selected':''}>${label}</option>`).join('')}</select></label><button id="practise-weak" ${r.responses.some(q=>q.status!=='correct')?'':'disabled'}>Practise weak topics</button><span role="status">${visible.length} answers shown</span></div>${visible.map(({q,i})=>`<details class="exam-card"><summary>${i+1}. ${h(q.question)} — ${q.status} (${q.earnedMarks.toFixed(2)})</summary>${renderQuestionContext(q)}<p>Your answer: ${h(this.answerLabel(q,q.userAnswer))}</p><p>Correct answer: ${h(this.answerLabel(q,q.type==='NAT'?(q.correctNat??`${q.natMin} to ${q.natMax}`):q.type==='MSQ'?q.correctOptions:q.correctAnswer))}</p><p>${h(q.explanation||'Explanation not supplied.')}</p>${q.source?.startsWith('https://')?`<p><a href="${h(q.source)}" target="_blank" rel="noopener">Question source</a>${q.asOf?' · checked '+h(q.asOf):''}</p>`:`<small>${h(q.source||'Source not supplied')}</small>`}<button data-bookmark="${h(q.id)}">Bookmark / remove bookmark</button></details>`).join('')}</section>`;
-    }
-    if(!this.isTesting) {
-      const p=this.pending, e=p&&EXAMS[p.examId];
-      return `<section id="exam-root" class="exam-hub"><h1>${h(p?.title||'Choose an exam')}</h1>${p?`<div class="exam-card"><h2>${h(e.name)} · ${p.full?'Full-length mock':'Practice drill'}</h2><p>${p.questions.length} questions · ${p.minutes} minutes · ${p.questions.reduce((n,q)=>n+q.marks,0)} marks</p><p>Wrong MCQ: −${e.penalty===0?'0':e.penalty===.25?'¼':'⅓'} of question marks. Unanswered: 0. ${p.examId==='gate'?'MSQ and NAT have no penalty.':''}</p><p>${h(e.note)}</p><p>Answered questions marked for review are scored. Timer starts only when you begin. Reloading does not pause the timer.</p><a href="${e.source}" target="_blank" rel="noopener">Verified rule source</a><p>Rule version: ${h(e.version)} · checked ${e.checked}</p><button id="begin-exam">Begin test</button></div>`:`<div class="exam-grid">${[['group2','APPSC Group 2'],['rrb-station-master','RRB Station Master'],['sbi-clerk','SBI Clerk'],['pyq-mocks','GATE question papers']].map(([route,label])=>`<a class="exam-card" href="#/${route}">${label}</a>`).join('')}</div>`}</section>`;
-    }
-    const q=this.questions[this.currentIdx], a=this.answers[q.id], type=q.type||'MCQ';
+    if(this.result) return this.renderResult();
+    if(!this.isTesting) return this.renderBriefing();
     return this.renderCbt();
+  },
+  renderBriefing() {
+    const pending = this.pending;
+    if(!pending) {
+      return `<section id="exam-root" class="exam-hub"><h1>Choose an exam</h1>
+        <div class="exam-grid">${EXAM_CATALOG.map(exam=>`<a class="exam-card" href="#/${exam.route}">${h(exam.name)}</a>`).join('')}</div></section>`;
+    }
+    const rule = EXAMS[pending.examId];
+    const marks = pending.questions.reduce((total, question)=>total+question.marks,0);
+    const penalty = rule.penalty===0?'0':rule.penalty===.25?'¼':'⅓';
+    return `<section id="exam-root" class="exam-hub exam-briefing">
+      <header class="exam-summary-header">
+        <p class="eyebrow">${h(rule.name)} · ${pending.full?'Full-length mock':'Practice drill'}</p>
+        <h1>${h(pending.title)}</h1>
+        <dl class="exam-summary-metrics">
+          <div><dt>Questions</dt><dd>${pending.questions.length}</dd></div>
+          <div><dt>Minutes</dt><dd>${pending.minutes}</dd></div>
+          <div><dt>Marks</dt><dd>${marks}</dd></div>
+        </dl>
+      </header>
+      <div class="exam-card exam-instructions">
+        <h2>Before you begin</h2>
+        <p>Wrong MCQ answers deduct ${penalty} of the question marks. Unanswered questions earn zero. ${pending.examId==='gate'?'MSQ and NAT have zero penalty.':''}</p>
+        <p>${h(rule.note)}</p>
+        <p>The timer starts when you begin and continues if you reload. Answers marked for review are included in your score.</p>
+        <div class="exam-toolbar">
+          <a href="${rule.source}" target="_blank" rel="noopener">Verified exam rules ↗</a>
+          <button id="begin-exam" type="button">Begin test</button>
+        </div>
+      </div>
+    </section>`;
+  },
+  renderResult() {
+    const result = this.result;
+    const bookmarks=readStored(`exam-bookmarks:${auth.currentUser?.uid}:${result.examId}`,[]);
+    const visible=result.responses.map((question,index)=>({question,index})).filter(({question})=>{
+      if(!this.reviewFilter||this.reviewFilter==='all')return true;
+      return this.reviewFilter==='bookmarked'?bookmarks.includes(question.id):question.status===this.reviewFilter;
+    });
+    const returnRoute=EXAMS[result.examId]?.route||EXAM_CATALOG.find(exam=>exam.id===result.examId)?.route||'exams';
+    return `<section id="exam-root" class="exam-hub exam-results">
+      <header class="exam-summary-header">
+        <p class="eyebrow">${result.mode==='full'?'Full mock':'Section practice'} · ${Math.floor((result.timeSpentSeconds||0)/60)} min ${(result.timeSpentSeconds||0)%60} sec</p>
+        <h1>Exam complete</h1>
+        <p class="exam-summary-title">${h(result.scope)}</p>
+        <dl class="exam-summary-metrics">
+          <div><dt>Score</dt><dd>${result.score.toFixed(2)} <small>/ ${result.totalPossibleMarks}</small></dd></div>
+          <div><dt>Attempted accuracy</dt><dd>${result.accuracy.toFixed(1)}%</dd></div>
+          <div><dt>Marks deducted</dt><dd>${result.negativeMarks.toFixed(2)}</dd></div>
+        </dl>
+      </header>
+      <div class="exam-card exam-result-actions">
+        <p>${result.correctCount} correct · ${result.wrongCount} wrong · ${result.skippedCount} unanswered</p>
+        <p role="status">${h(this.saveMessage||'Saved on this device.')}</p>
+        <div class="button-row">
+          <a href="#/${returnRoute}">Return to preparation</a>
+          <button id="retry-save">Retry cloud sync</button>
+          <button id="export-result">Export result</button>
+        </div>
+      </div>
+      <h2>Answer review</h2>
+      <div class="button-row exam-review-controls">
+        <label>Show answers <select id="result-filter">${[['all','All answers'],['wrong','Wrong only'],['skipped','Unanswered'],['bookmarked','Bookmarked']].map(([value,label])=>
+          `<option value="${value}" ${(this.reviewFilter||'all')===value?'selected':''}>${label}</option>`).join('')}</select></label>
+        <button id="practise-weak" ${result.responses.some(q=>q.status!=='correct')?'':'disabled'}>Practise weak topics</button>
+        <span role="status">${visible.length} answers shown</span>
+      </div>
+      ${visible.map(({question:q,index})=>`<details class="exam-card exam-review-item">
+        <summary>${index+1}. ${h(q.question)} — ${q.status} (${q.earnedMarks.toFixed(2)})</summary>
+        ${renderQuestionContext(q)}
+        <p>Your answer: ${h(this.answerLabel(q,q.userAnswer))}</p>
+        <p>Correct answer: ${h(this.answerLabel(q,q.type==='NAT'?(q.correctNat??(q.natMin+' to '+q.natMax)):q.type==='MSQ'?q.correctOptions:q.correctAnswer))}</p>
+        <p>${h(q.explanation||'Explanation not supplied.')}</p>
+        ${q.source?.startsWith('https://')?`<p><a href="${h(q.source)}" target="_blank" rel="noopener">Question source</a>${q.asOf?' · checked '+h(q.asOf):''}</p>`:`<small>${h(q.source||'Source not supplied')}</small>`}
+        <button data-bookmark="${h(q.id)}">Bookmark / remove bookmark</button>
+      </details>`).join('')}
+    </section>`;
   },
   renderCbt() {
     const q = this.questions[this.currentIdx];
+    const exam = EXAMS[this.pending.examId];
     const buttons = this.questions.map((item, index) => {
       const state = this.questionState(item);
       const current = index === this.currentIdx;
@@ -50,32 +120,39 @@ export const MockTest = {
         ${current?'aria-current="step"':''} ${this.allowed(index)?'':'disabled'}
         aria-label="Question ${index+1}, ${this.stateLabel(state)}">${index+1}</button>`;
     }).join('');
-    return `<section id="exam-root" class="exam-hub cbt-room">
-      <header class="exam-toolbar">
-        <div><p class="eyebrow">CBT practice</p><h1>${h(this.pending.title)}</h1></div>
-        <strong id="exam-clock" role="timer">${this.clockText()}</strong>
+    return `<section id="exam-root" class="exam-hub cbt-room" data-exam-session aria-label="Exam room">
+      <header class="test-room-header">
+        <div class="test-room-identity"><span class="test-room-mark" aria-hidden="true">${icon('file')}</span>
+        <div><p class="eyebrow">${this.pending.full?'Full mock':'Practice drill'}</p><h1>${h(this.pending.title)}</h1></div></div>
+        <div class="test-room-controls">
+          <strong id="exam-clock" class="test-room-clock" role="timer">${this.clockText()}</strong>
+          ${fullscreenButton()}
+          <button id="leave-exam" type="button">Exit test</button>
+          <button id="submit-exam" class="test-room-primary" type="button">Submit test</button>
+        </div>
       </header>
       <div class="cbt-layout">
         <article class="exam-card cbt-question" tabindex="-1" aria-labelledby="cbt-question-title">
-          <p class="cbt-question-meta">${h(q.section||q.subject||EXAMS[this.pending.examId].name)} · Question ${this.currentIdx+1} of ${this.questions.length} · ${q.marks} mark${q.marks===1?'':'s'}</p>
-          ${renderQuestionContext(q)}
-          <h2 id="cbt-question-title">${h(q.question)}</h2>
-          ${renderAnswerInputs(q,this.answers[q.id],{numericId:'nat-answer'})}
-          <div class="exam-toolbar cbt-question-actions">
+          <div class="test-question-body">
+            <p class="cbt-question-meta"><strong>Question ${this.currentIdx+1} of ${this.questions.length}</strong><span>${h(q.section||q.subject||exam.name)} · ${q.marks} mark${q.marks===1?'':'s'}</span></p>
+            ${renderQuestionContext(q)}
+            <h2 id="cbt-question-title">${h(q.question)}</h2>
+            ${renderAnswerInputs(q,this.answers[q.id],{numericId:'nat-answer'})}
+          </div>
+          <div class="cbt-question-actions">
             <button id="previous-question" ${this.nextIndex(-1)<0?'disabled':''}>Previous</button>
             <button id="clear-answer">Clear answer</button>
             <button id="mark-review" aria-pressed="${Boolean(this.review[q.id])}">${this.review[q.id]?'Unmark':'Mark'} for review</button>
-            <button id="next-question" ${this.nextIndex(1)<0?'disabled':''}>Save & next</button>
+            <button id="next-question" class="test-room-primary" ${this.nextIndex(1)<0?'disabled':''}>Save & next</button>
           </div>
         </article>
         <aside class="cbt-sidebar">
-          <details class="exam-navigation" open>
+          <details class="exam-navigation" ${this.paletteOpen?'open':''}>
             <summary>Question palette</summary>
             <div class="cbt-legend">${['answered','unanswered','review','unvisited'].map(state=>
               `<span data-cbt-count="${state}" class="${state}"></span>`).join('')}</div>
             <nav class="exam-palette" aria-label="Question navigation">${buttons}</nav>
           </details>
-          <button id="submit-exam">Submit test</button>
         </aside>
       </div>
     </section>`;
@@ -103,13 +180,37 @@ export const MockTest = {
       this.persist();this.updatePalette();
     }));
     document.getElementById('nat-answer')?.addEventListener('input',e=>{if(!this.canAnswer())return;const id=this.questions[this.currentIdx].id;if(e.target.value==='')delete this.answers[id];else this.answers[id]=e.target.value;this.persist();this.updatePalette();});
-    document.querySelectorAll('[data-question]').forEach(el=>el.onclick=()=>this.selectQuestion(Number(el.dataset.question)));
-    if (this.isTesting) this.updatePalette();
+    document.querySelectorAll('[data-question]').forEach(el=>el.onclick=()=>{
+      if(matchMedia('(max-width: 860px)').matches)this.paletteOpen=false;
+      this.selectQuestion(Number(el.dataset.question));
+    });
+    if (this.isTesting) {
+      this.updatePalette();
+      const palette=document.querySelector('.cbt-room .exam-navigation');
+      const current=palette.querySelector('[aria-current="step"]');
+      const showCurrent=()=>{
+        if(!palette.open||!current)return;
+        const nav=current.parentElement;
+        nav.scrollTop=Math.max(0,current.offsetTop+current.offsetHeight-nav.clientHeight+9);
+      };
+      palette.addEventListener('toggle',()=>{
+        if(!palette.isConnected)return;
+        this.paletteOpen=palette.open;
+        showCurrent();
+      });
+      showCurrent();
+    }
     const bind=(id,fn)=>document.getElementById(id)?.addEventListener('click',fn);
     bind('previous-question',()=>this.move(-1));bind('next-question',()=>this.move(1));
-    bind('clear-answer',()=>{if(!this.canAnswer())return;delete this.answers[this.questions[this.currentIdx].id];this.persist();this.refresh();});
-    bind('mark-review',()=>{if(!this.canAnswer())return;const id=this.questions[this.currentIdx].id;this.review[id]=!this.review[id];this.persist();this.refresh();});
+    bind('clear-answer',()=>{if(!this.canAnswer())return;delete this.answers[this.questions[this.currentIdx].id];this.persist();this.refresh('clear-answer');});
+    bind('mark-review',()=>{if(!this.canAnswer())return;const id=this.questions[this.currentIdx].id;this.review[id]=!this.review[id];this.persist();this.refresh('mark-review');});
     bind('submit-exam',()=>{if(confirm('Submit your answers? Unanswered questions receive zero marks.'))this.submitExam();});
+    bind('leave-exam',()=>{
+      const examId=this.pending.examId;
+      const route=EXAMS[examId].route||EXAM_CATALOG.find(exam=>exam.id===examId)?.route||'exams';
+      window.location.hash='#/'+route+'?tab=mocks';
+    });
+    document.querySelector('[data-exam-fullscreen]')?.addEventListener('click',enterExamFullscreen);
     document.querySelectorAll('[data-bookmark]').forEach(el=>el.onclick=()=>{
       const key=`exam-bookmarks:${auth.currentUser?.uid}:${this.result.examId}`;
       const list=readStored(key,[]);const id=el.dataset.bookmark;
@@ -126,7 +227,10 @@ export const MockTest = {
     this.startedAt=Date.now();this.deadline=this.startedAt+this.pending.minutes*60000;this.isTesting=true;
     if (!this.allowed(this.currentIdx)) this.currentIdx=this.nextIndex(1, -1);
     this.visited[this.questions[this.currentIdx].id]=true;
-    this.installTimer();this.persist();this.refresh();window.scrollTo(0,0);
+    this.paletteOpen=matchMedia('(min-width: 861px)').matches;
+    this.installTimer();this.persist();this.refresh();
+    enterExamFullscreen();
+    document.querySelector('.cbt-question')?.focus();
   },
   storageKey(){return `exam-active:${this.ownerId||auth.currentUser?.uid||'anonymous'}`;},
   persist(){try{localStorage.setItem(this.storageKey(),JSON.stringify({pending:this.pending,answers:this.answers,review:this.review,visited:this.visited,currentIdx:this.currentIdx,startedAt:this.startedAt,deadline:this.deadline}));}catch{showToast('Device storage is full; keep this page open.','warning');}},
@@ -139,6 +243,7 @@ export const MockTest = {
       Object.assign(this,saved);
       this.ownerId=saved.pending.ownerId;
       this.questions=saved.pending.questions;
+      this.paletteOpen=matchMedia('(min-width: 861px)').matches;
       this.visited=saved.visited||Object.fromEntries([...Object.keys(this.answers),...Object.keys(this.review)].map(id=>[id,true]));
       if (!this.allowed(this.currentIdx)) this.currentIdx=this.nextIndex(1,-1);
       this.visited[this.questions[this.currentIdx].id]=true;
@@ -190,8 +295,25 @@ export const MockTest = {
     document.querySelector('#exam-root .cbt-question')?.focus();
   },
   move(direction){this.selectQuestion(this.nextIndex(direction));},
-  refresh(){const root=document.getElementById('exam-root');if(root){root.outerHTML=this.render();this.init();}},
-  stop(){this.isTesting=false;clearInterval(this.timer);if(this.unloadHandler)window.removeEventListener('beforeunload',this.unloadHandler);this.unloadHandler=null;},
+  refresh(restoreFocus){
+    const root=document.getElementById('exam-root');
+    if(!root)return;
+    const scroll=restoreFocus?root.querySelector('.test-question-body')?.scrollTop:0;
+    root.outerHTML=this.render();
+    this.init();
+    if(restoreFocus){
+      const question=document.querySelector('.test-question-body');
+      if(question)question.scrollTop=scroll??0;
+      document.getElementById(restoreFocus)?.focus({preventScroll:true});
+    }
+  },
+  stop(){
+    if(this.isTesting)leaveExamFullscreen();
+    this.isTesting=false;
+    clearInterval(this.timer);
+    if(this.unloadHandler)window.removeEventListener('beforeunload',this.unloadHandler);
+    this.unloadHandler=null;
+  },
   abandon(){this.stop();localStorage.removeItem(this.storageKey());this.pending=null;},
   resetForUser(){if(this.ownerId&&this.ownerId!==auth.currentUser?.uid){this.stop();this.pending=null;this.result=null;this.ownerId=null;}},
   async submitExam(){
