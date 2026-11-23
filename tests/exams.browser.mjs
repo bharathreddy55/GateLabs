@@ -352,7 +352,7 @@ try{
  await page.getByRole('tab',{name:'Mock tests'}).click();
  await page.locator('.mock-tile[data-mock-jump="subjects"]').click();
  const dataDrills=page.locator('.mock-subject').filter({has:page.locator('summary').getByText('Data Analysis',{exact:true})});
- assert.match(await dataDrills.locator('summary').innerText(),/20 tests/);
+ assert.match(await dataDrills.locator('summary').innerText(),/40 tests/);
  await dataDrills.locator('summary').click();
  await dataDrills.getByRole('button',{name:'Start subject test'}).first().click();
  assert.deepEqual(await page.locator('.exam-summary-metrics dt').allTextContents(),['Questions','Minutes','Marks']);
