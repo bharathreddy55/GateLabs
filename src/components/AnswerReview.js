@@ -1,0 +1,170 @@
+import { icon } from '../config/navigation.js';
+import { escapeHtml as h } from '../utils/examEngine.js';
+import { explainAnswer } from '../utils/answerSolutions.js';
+import { renderQuestionContext } from './QuestionView.js';
+
+const statuses = {correct:'Correct', wrong:'Incorrect', skipped:'Unanswered'};
+const filters = [['all','All answers'],['wrong','Incorrect'],['skipped','Unanswered'],['correct','Correct']];
+const optionLetter = index => String.fromCharCode(65 + Number(index));
+const answerIndices = value => value == null || value === '' ? [] : [value].flat().map(Number);
+
+function renderAnswers(q, renderOption) {
+  const isNumeric = q.type === 'NAT';
+  const selected = answerIndices(q.userAnswer);
+  const correct = answerIndices(q.type === 'MSQ' ? q.correctOptions : q.correctAnswer);
+  const choice = index => renderOption ? renderOption(q.options?.[index],index,q) : h(q.options?.[index] ?? String(index));
+  const answer = indices => indices.length ? `<ul>${indices.map(index => `<li><b>${optionLetter(index)}</b><span>${choice(index)}</span></li>`).join('')}</ul>` : 'Unanswered';
+  const min = q.natMin ?? q.correctNat;
+  const max = q.natMax ?? q.correctNat;
+  const range = min == null || max == null ? 'Unavailable' : min === max ? min : `${min} to ${max}`;
+  return `<div class="review-answers">
+    <div class="review-answer" data-outcome="${h(q.status)}">
+      <h4>Your answer</h4>${isNumeric ? h(q.status==='skipped'?'Unanswered':q.userAnswer ?? 'Unanswered') : answer(selected)}
+    </div>
+    <div class="review-answer" data-outcome="correct">
+      <h4>${isNumeric && min !== max ? 'Accepted range' : 'Correct answer'}</h4>${isNumeric ? h(range) : correct.length ? answer(correct) : 'Unavailable'}
+    </div>
+  </div>
+  ${q.options?.length ? `<details class="review-choices">
+    <summary>View all choices</summary>
+    <ol>${q.options.map((_,index) => {
+      const keyed = correct.includes(index), picked = selected.includes(index);
+      return `<li data-outcome="${keyed?'correct':picked?'wrong':''}"><b>${optionLetter(index)}</b><span>${choice(index)}</span>
+        ${keyed || picked ? `<small>${keyed&&picked?'Correct · selected':keyed?'Correct':'Selected'}</small>` : ''}</li>`;
+    }).join('')}</ol>
+  </details>` : ''}`;
+}
+
+function renderSolution(q) {
+  const {approach,steps,reason,tip} = explainAnswer(q);
+  if (!approach && !steps.length && !reason) return '<p class="review-note">A worked explanation is unavailable for this question.</p>';
+  return `<section class="review-solution" aria-labelledby="review-solution-heading">
+    <h4 id="review-solution-heading">${icon('book')} ${steps.length ? 'Worked solution' : 'Why this answer is correct'}</h4>
+    ${approach ? `<div class="review-approach"><strong>Approach</strong><p>${h(approach)}</p></div>` : ''}
+    ${steps.length ? `<ol class="review-steps">${steps.map(step=>`<li><p>${h(step)}</p></li>`).join('')}</ol>` : ''}
+    ${reason ? `<p class="review-reason">${h(reason)}</p>` : ''}
+    ${tip ? `<aside class="review-tip">${icon('info')}<div><strong>Watch for</strong><p>${h(tip)}</p></div></aside>` : ''}
+  </section>`;
+}
+
+function sourceReference(q) {
+  if (typeof q.source !== 'string' || !q.source) return '';
+  const reference = q.source.match(/^(?:(.+); )?(https:\/\/\S+)$/);
+  const source = reference
+    ? `${reference[1]?`${h(reference[1])} · `:''}<a href="${h(reference[2])}" target="_blank" rel="noopener noreferrer">${reference[1]==='GateLabs original model question'?'Exam notice':'Question source'} ↗</a>`
+    : h(q.source);
+  return `<p class="review-source">${source}${q.asOf ? ` · checked ${h(q.asOf)}` : ''}</p>`;
+}
+
+export function mountAnswerReview(root, {
+  responses, state = {}, bookmarks = [], toggleBookmark, practise, renderContext = renderQuestionContext, renderOption
+}) {
+  if (!root) return;
+  const items = responses.map((question,index)=>({question,index}));
+  const groups = toggleBookmark ? [...filters,['bookmarked','Bookmarked']] : filters;
+  const matches = (item, filter) => filter==='all' ||
+    (filter==='bookmarked' ? bookmarks.includes(item.question.id) : item.question.status===filter);
+  const counts = Object.fromEntries(groups.map(([key])=>[key,items.filter(item=>matches(item,key)).length]));
+  const readFilter = () => groups.some(([key])=>key===state.filter) ? state.filter : 'all';
+  root.setAttribute('aria-labelledby','answer-review-heading');
+  root.innerHTML = `<header class="review-header">
+    <div class="review-title"><span aria-hidden="true">${icon('book')}</span><h2 id="answer-review-heading" tabindex="-1">Answer review</h2></div>
+    ${practise ? `<button type="button" class="ui-button" id="practise-weak" ${counts.wrong+counts.skipped===0?'disabled':''}>Practise weak topics</button>` : ''}
+  </header>
+  <div class="review-filters" role="group" aria-label="Filter questions">
+    ${groups.map(([key,label])=>`<button type="button" data-review-filter="${key}">${label} <span>${counts[key]}</span></button>`).join('')}
+  </div>
+  <div class="review-layout">
+    <nav class="review-navigator" aria-label="Questions">
+      <div class="review-nav-heading"><strong>Questions</strong><span data-review-count role="status"></span></div>
+      <div class="review-palette" data-review-palette></div>
+      <div class="review-legend">${Object.entries(statuses).map(([key,label])=>`<span data-outcome="${key}">${label}</span>`).join('')}</div>
+    </nav>
+    <div data-review-content></div>
+  </div>`;
+  const palette = root.querySelector('[data-review-palette]');
+  const content = root.querySelector('[data-review-content]');
+  let visible, cursor;
+
+  function select(index, focus) {
+    cursor = visible.findIndex(item=>item.index===index);
+    if (cursor < 0) cursor = 0;
+    const item = visible[cursor];
+    if (!item) {
+      content.innerHTML = '<div class="review-empty"><h3>No questions match this filter</h3><button type="button" class="ui-button" data-review-filter="all">Show all answers</button></div>';
+      return;
+    }
+    state.index = item.index;
+    const q = item.question;
+    const saved = bookmarks.includes(q.id);
+    palette.querySelector('[aria-current]')?.removeAttribute('aria-current');
+    const current = palette.querySelector(`[data-review-question="${item.index}"]`);
+    current.setAttribute('aria-current','step');
+    const bounds = current.getBoundingClientRect(), panel = palette.getBoundingClientRect();
+    if (bounds.top < panel.top) palette.scrollTop -= panel.top - bounds.top;
+    if (bounds.bottom > panel.bottom) palette.scrollTop += bounds.bottom - panel.bottom;
+    const earned = Number(q.earnedMarks);
+    const mark = Number.isFinite(earned) && q.marks != null ? `<span class="review-mark">${earned>0?'+':earned<0?'−':''}${Math.abs(Number(earned.toFixed(2)))} / ${h(q.marks)} ${q.marks===1?'mark':'marks'}</span>` : '';
+    content.innerHTML = `<article class="review-card">
+      <div class="review-question-meta">
+        <p>Question ${item.index+1} of ${items.length}${q.section ? ` <span>· ${h(q.section)}</span>` : ''}</p>
+        <span class="review-outcome" data-outcome="${h(q.status)}">${statuses[q.status] ?? 'Reviewed'}</span>${mark}
+      </div>
+      <div class="review-card-body">
+        <h3 class="review-question" tabindex="-1">${h(q.question)}</h3>
+        ${renderContext(q)}
+        ${renderAnswers(q,renderOption)}
+        ${renderSolution(q)}
+        ${sourceReference(q)}
+      </div>
+      <footer class="review-card-footer">
+        <button type="button" class="ui-button" data-review-move="-1" ${cursor===0?'disabled':''}>Previous</button>
+        ${toggleBookmark ? `<button type="button" class="ui-button review-bookmark" data-bookmark="${h(q.id)}" aria-pressed="${saved}">${saved?'Bookmarked':'Bookmark'}</button>` : ''}
+        <button type="button" class="ui-button primary" data-review-move="1" ${cursor===visible.length-1?'disabled':''}>Next <span aria-hidden="true">${icon('arrow')}</span></button>
+      </footer>
+    </article>`;
+    if (focus) content.querySelector('.review-question').focus();
+  }
+
+  function applyFilter(filter) {
+    state.filter = filter;
+    for (const button of root.querySelectorAll('.review-filters button')) {
+      button.setAttribute('aria-pressed',String(button.dataset.reviewFilter===filter));
+    }
+    root.querySelector('[data-review-count]').textContent = `${counts[filter]} shown`;
+    visible = items.filter(item=>matches(item,filter));
+    palette.innerHTML = visible.map(({question,index})=>`<button type="button" data-review-question="${index}" data-outcome="${h(question.status)}" aria-label="Question ${index+1}, ${statuses[question.status] ?? 'reviewed'}">${index+1}</button>`).join('');
+    select(state.index,false);
+  }
+
+  root.onclick = event => {
+    const button = event.target.closest('button');
+    if (!button || !root.contains(button)) return;
+    if (button.dataset.reviewFilter) {
+      applyFilter(button.dataset.reviewFilter);
+      root.querySelector('.review-filters [aria-pressed="true"]').focus({preventScroll:true});
+    } else if (button.hasAttribute('data-review-question')) {
+      select(Number(button.dataset.reviewQuestion),true);
+    } else if (button.hasAttribute('data-review-move')) {
+      const next = visible[cursor+Number(button.dataset.reviewMove)];
+      if (next) select(next.index,true);
+    } else if (button.hasAttribute('data-bookmark')) {
+      const id = visible[cursor]?.question.id;
+      const updated = toggleBookmark(id);
+      if (!updated) return;
+      bookmarks = updated;
+      counts.bookmarked = items.filter(item=>matches(item,'bookmarked')).length;
+      root.querySelector('[data-review-filter="bookmarked"] span').textContent = counts.bookmarked;
+      if (state.filter==='bookmarked') {
+        applyFilter('bookmarked');
+        root.querySelector('[data-review-filter="bookmarked"]').focus({preventScroll:true});
+      } else {
+        button.textContent = bookmarks.includes(id) ? 'Bookmarked' : 'Bookmark';
+        button.setAttribute('aria-pressed',String(bookmarks.includes(id)));
+      }
+    } else if (button.id==='practise-weak') {
+      practise();
+    }
+  };
+  applyFilter(readFilter());
+}

@@ -21,6 +21,7 @@ import './styles/index.css';
 import './styles/workspace.css';
 import './styles/design.css';
 import './styles/exam-room.css';
+import './styles/answer-review.css';
 
 // Initialize global theme & accent palette (apply saved colors before first paint)
 initFocusManagement();

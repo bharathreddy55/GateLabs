@@ -44,8 +44,17 @@ function intelligence(figure, random) {
     }
   }
   const intruder = shuffle(variants, random)[0];
-  return { prompt:'Which figure is the odd one out?', ...choices(intruder, rotations, random),
-    explanation:'The other four figures share the same arrangement after rotation.' };
+  const answer = choices(intruder, rotations, random);
+  const matching = answer.options.map((option,i)=>signatures.includes(signature(option)) ? String.fromCharCode(65+i) : null).filter(Boolean);
+  return { prompt:'Which figure is the odd one out?', ...answer, solution:{
+    approach:'Compare the pattern of filled cells after quarter-turns. Ignore where the pattern sits inside the grid.',
+    steps:[
+      `Use choice ${matching[0]} as a reference. Rotate it through 0°, 90°, 180° and 270°.`,
+      `Slide each rotated pattern up and left to its first occupied row and column. The resulting patterns match choices ${matching.join(', ')}.`,
+      `Choice ${String.fromCharCode(65+answer.correct)} cannot be made from any of those quarter-turns, so it is the odd figure.`
+    ],
+    tip:'Match both the filled cells and the gaps. The number of filled cells alone does not distinguish these figures.'
+  }};
 }
 
 function attention(random) {
@@ -54,8 +63,17 @@ function attention(random) {
     ...Array.from({length:18}, () => [1,3,5,7,9][Math.floor(random()*5)])
   ], random);
   const total = digits.reduce((sum, digit) => sum + (digit % 2 ? digit : 0), 0);
+  const chunks = Array.from({length:5},(_,i)=>digits.slice(i*10,i*10+10).filter(digit=>digit%2));
+  const sums = chunks.map(chunk=>chunk.reduce((sum,digit)=>sum+digit,0));
   return { prompt:'What is the sum of the odd digits?', digits, ...choices(total, [total-4,total-2,total+1,total+3], random),
-    explanation:`The 18 odd digits add to ${total}.` };
+    solution:{
+      approach:'Scan in five blocks of ten digits. Keep 1, 3, 5, 7 and 9 and add their values within each block.',
+      steps:[
+        ...chunks.map((chunk,i)=>`Digits ${i*10+1}–${i*10+10} contribute ${chunk.length ? chunk.join(' + ') : 'no odd digits'} = ${sums[i]}.`),
+        `Add the block totals: ${sums.join(' + ')} = ${total}.`
+      ],
+      tip:'Counting the odd digits would give 18. The question asks for their sum.'
+    }};
 }
 
 const size = 5;
@@ -95,8 +113,18 @@ function spatial(random) {
   const chosenHouse = shuffle(route.slice(1,-1), random)[0];
   const houseCells = shuffle([chosenHouse,...shuffle(cells.filter(node => !route.includes(node)), random).slice(0,4)],random);
   const correct = houseCells.indexOf(chosenHouse);
-  return { prompt:'Which house is on the shortest route from A to B?', map:{size,start,end,edges,houseCells}, options:[1,2,3,4,5], correct,
-    explanation:`The route takes ${route.length-1} streets and passes house ${correct+1}.` };
+  const directions = route.slice(1).map((cell,i)=>({[size]:'down',[-size]:'up',1:'right',[-1]:'left'})[cell-route[i]]);
+  const via = route.indexOf(chosenHouse);
+  return { prompt:'Which house is on the shortest route from A to B?', map:{size,start,end,edges,houseCells}, options:[1,2,3,4,5], correct, solutionRoute:route,
+    solution:{
+      approach:'Trace connected streets from A to B. A branch that ends before reaching B only adds a detour.',
+      steps:[
+        `From A follow: ${directions.slice(0,via).join(' → ')}. This reaches house ${correct+1} after ${via} street segments.`,
+        `Continue ${directions.slice(via).join(' → ')} to reach B.`,
+        `The map has one connected route between A and B. It uses ${route.length-1} segments and passes house ${correct+1}.`
+      ],
+      tip:'An adjacent cell is reachable only when a street connects it to your current cell.'
+    }};
 }
 
 function ordering(random, index) {
@@ -104,20 +132,23 @@ function ordering(random, index) {
   const sequence = [a,b,c,d,e,f];
   const variants = [
     { rules:[`${b} follows ${a} immediately.`,`${d} follows ${c} immediately.`,`${b} comes before ${c}.`,`${d} comes before ${e}.`,`${f} is last.`],
-      reason:`Keep ${a}–${b} and ${c}–${d} together in that order. Then put ${e} before the final ${f}.` },
+      steps:[`Join ${a} → ${b} and ${c} → ${d} into two blocks because both pairs are immediate.`,`${b} comes before ${c}, so the first block must lead the second.`,`${e} follows ${d}, and ${f} goes in the last slot.`] },
     { rules:[`${c} is third.`,`Exactly two tasks separate ${b} and ${e}, with ${e} later.`,`${d} follows ${c} immediately.`,`${a} comes before ${b}.`,`${f} is last.`],
-      reason:`${c} and ${d} occupy third and fourth. Only slots two and five leave two intervening tasks for ${b} and ${e}. The ends are ${a} and ${f}.` },
+      steps:[`Place ${c} third, ${d} fourth and ${f} sixth.`,`The available slots are 1, 2 and 5. A gap of exactly two intervening tasks needs a difference of three positions, so ${b} is second and ${e} fifth.`,`Place ${a} first to satisfy the remaining rule that it comes before ${b}.`] },
     { rules:[`${a} is first.`,`${e} comes immediately before ${f}.`,`${c} comes two places before ${e}.`,`${d} comes before ${e} and after ${c}.`,`${b} comes before ${c}.`],
-      reason:`${b} must fit after ${a} and before the four consecutive tasks ${c}, ${d}, ${e}, ${f}.` }
+      steps:[`Place ${a} first and join ${e} → ${f} into a block.`,`${c} is two places before ${e} and ${d} fits in between, so ${c} → ${d} → ${e} → ${f} is one continuous block.`,`${b} goes before ${c}. With ${a} first, that puts ${b} second and the four-task block in positions 3–6.`] }
   ];
-  const {rules,reason} = variants[index%variants.length];
+  const {rules,steps} = variants[index%variants.length];
   const distractors = shuffle([[0,1],[1,2],[2,3],[3,4],[4,5],[1,4],[0,5]],random).slice(0,4).map(([i,j])=>{
     const alternative = [...sequence];
     [alternative[i],alternative[j]] = [alternative[j],alternative[i]];
     return alternative.join(' → ');
   });
   return { prompt:'Which sequence satisfies all five rules?',
-    rules, ...choices(sequence.join(' → '),distractors,random), explanation:reason };
+    rules, ...choices(sequence.join(' → '),distractors,random), solution:{
+      approach:'Place fixed positions first, then combine adjacent tasks into blocks.',
+      steps:[...steps,`The resulting sequence is ${sequence.join(' → ')}.`]
+    } };
 }
 
 const preferences = [[

@@ -1,7 +1,8 @@
 import {writeAttemptArchive,compactAttemptCache} from '../utils/attemptArchive.js';
 import {getAttemptRecords} from '../utils/attemptRepository.js';
 import {readStored} from '../utils/safeStorage.js';
-import {renderAnswerInputs,readAnswer,answerLabel,renderQuestionContext} from '../components/QuestionView.js';
+import {renderAnswerInputs,readAnswer,renderQuestionContext} from '../components/QuestionView.js';
+import {mountAnswerReview} from '../components/AnswerReview.js';
 import {evaluateAnswer} from '../utils/examEngine.js';
 import { auth, db } from '../config/firebase';
 import { EXAMS } from '../config/exams.js';
@@ -15,7 +16,7 @@ export const MockTest = {
   startExam({examId, questions, title, full=true, minutes}) {
     const errors=validatePaper(examId,questions,full);
     if(errors.length) { showToast(errors.slice(0,3).join(' · '),'error'); return false; }
-    this.stop(); this.result=null;this.resultError=null;this.reviewFilter='all';
+    this.stop(); this.result=null;this.resultError=null;this.saveMessage=null;
     const duration=full?EXAMS[examId].minutes:(minutes??EXAMS[examId].minutes);
     if(!Number.isFinite(duration)||duration<=0){showToast('Invalid test duration','error');return false;}
     this.pending={examId,questions,title,full,minutes:duration,ruleVersion:EXAMS[examId].version,ownerId:auth.currentUser?.uid};
@@ -66,11 +67,6 @@ export const MockTest = {
   },
   renderResult() {
     const result = this.result;
-    const bookmarks=readStored(`exam-bookmarks:${auth.currentUser?.uid}:${result.examId}`,[]);
-    const visible=result.responses.map((question,index)=>({question,index})).filter(({question})=>{
-      if(!this.reviewFilter||this.reviewFilter==='all')return true;
-      return this.reviewFilter==='bookmarked'?bookmarks.includes(question.id):question.status===this.reviewFilter;
-    });
     const returnRoute=EXAMS[result.examId]?.route||EXAM_CATALOG.find(exam=>exam.id===result.examId)?.route||'exams';
     return `<section id="exam-root" class="exam-hub exam-results">
       <header class="exam-summary-header">
@@ -85,30 +81,45 @@ export const MockTest = {
       </header>
       <div class="exam-card exam-result-actions">
         <p>${result.correctCount} correct · ${result.wrongCount} wrong · ${result.skippedCount} unanswered</p>
-        <p role="status">${h(this.saveMessage||'Saved on this device.')}</p>
+        <p id="result-save-status" role="status">${h(this.saveMessage||'Saved on this device.')}</p>
         <div class="button-row">
+          <button id="open-answer-review" class="ui-button" type="button">Review answers</button>
           <a href="#/${returnRoute}">Return to preparation</a>
           <button id="retry-save">Retry cloud sync</button>
           <button id="export-result">Export result</button>
         </div>
       </div>
-      <h2>Answer review</h2>
-      <div class="button-row exam-review-controls">
-        <label>Show answers <select id="result-filter">${[['all','All answers'],['wrong','Wrong only'],['skipped','Unanswered'],['bookmarked','Bookmarked']].map(([value,label])=>
-          `<option value="${value}" ${(this.reviewFilter||'all')===value?'selected':''}>${label}</option>`).join('')}</select></label>
-        <button id="practise-weak" ${result.responses.some(q=>q.status!=='correct')?'':'disabled'}>Practise weak topics</button>
-        <span role="status">${visible.length} answers shown</span>
-      </div>
-      ${visible.map(({question:q,index})=>`<details class="exam-card exam-review-item">
-        <summary>${index+1}. ${h(q.question)} — ${q.status} (${q.earnedMarks.toFixed(2)})</summary>
-        ${renderQuestionContext(q)}
-        <p>Your answer: ${h(this.answerLabel(q,q.userAnswer))}</p>
-        <p>Correct answer: ${h(this.answerLabel(q,q.type==='NAT'?(q.correctNat??(q.natMin+' to '+q.natMax)):q.type==='MSQ'?q.correctOptions:q.correctAnswer))}</p>
-        <p>${h(q.explanation||'Explanation not supplied.')}</p>
-        ${q.source?.startsWith('https://')?`<p><a href="${h(q.source)}" target="_blank" rel="noopener">Question source</a>${q.asOf?' · checked '+h(q.asOf):''}</p>`:`<small>${h(q.source||'Source not supplied')}</small>`}
-        <button data-bookmark="${h(q.id)}">Bookmark / remove bookmark</button>
-      </details>`).join('')}
+      <section class="answer-review" id="exam-answer-review"></section>
     </section>`;
+  },
+  initAnswerReview(root) {
+    const result=this.result;
+    if(this.reviewAttemptId!==result.id || !this.reviewState){
+      this.reviewAttemptId=result.id;
+      this.reviewState={};
+    }
+    const key=`exam-bookmarks:${auth.currentUser?.uid}:${result.examId}`;
+    const readBookmarks=()=>{const list=readStored(key,[]);return Array.isArray(list)?list:[];};
+    mountAnswerReview(root,{
+      responses:result.responses,
+      state:this.reviewState,
+      bookmarks:readBookmarks(),
+      toggleBookmark(id) {
+        const list=readBookmarks();
+        const updated=list.includes(id)?list.filter(value=>value!==id):[...list,id];
+        try {
+          localStorage.setItem(key,JSON.stringify(updated));
+          return updated;
+        } catch {
+          showToast('This browser could not update the bookmark.','error');
+          return null;
+        }
+      },
+      practise:()=>{
+        const questions=result.responses.filter(q=>q.status!=='correct');
+        this.startExam({examId:result.examId,questions,title:'Weak topic revision',full:false,minutes:Math.max(1,Math.ceil(questions.length*1.5))});
+      }
+    });
   },
   renderCbt() {
     const q = this.questions[this.currentIdx];
@@ -169,6 +180,7 @@ export const MockTest = {
     const requested=this.reviewId();
     if(requested&&this.result?.id!==requested){
       if(this.restoringReview)return;this.restoringReview=true;
+      this.saveMessage=null;
       try{const {attempts}=await getAttemptRecords();this.result=attempts.find(a=>a.id===requested&&Array.isArray(a.responses));this.ownerId=auth.currentUser?.uid;this.pending=null;if(!this.result)this.resultError=true;}catch{this.resultError=true;}
       finally{this.restoringReview=false;this.refresh();}return;
     }
@@ -211,13 +223,12 @@ export const MockTest = {
       window.location.hash='#/'+route+'?tab=mocks';
     });
     document.querySelector('[data-exam-fullscreen]')?.addEventListener('click',enterExamFullscreen);
-    document.querySelectorAll('[data-bookmark]').forEach(el=>el.onclick=()=>{
-      const key=`exam-bookmarks:${auth.currentUser?.uid}:${this.result.examId}`;
-      const list=readStored(key,[]);const id=el.dataset.bookmark;
-      localStorage.setItem(key,JSON.stringify(list.includes(id)?list.filter(v=>v!==id):[...list,id]));showToast('Bookmark updated','success');if(this.reviewFilter==='bookmarked')this.refresh();
+    const reviewRoot=document.getElementById('exam-answer-review');
+    if(reviewRoot)this.initAnswerReview(reviewRoot);
+    bind('open-answer-review',()=>{
+      reviewRoot.querySelector('h2').focus({preventScroll:true});
+      reviewRoot.scrollIntoView({block:'start'});
     });
-    document.getElementById('result-filter')?.addEventListener('change',event=>{this.reviewFilter=event.target.value;this.refresh();document.getElementById('result-filter')?.focus();});
-    document.getElementById('practise-weak')?.addEventListener('click',()=>{const r=this.result;const questions=r.responses.filter(q=>q.status!=='correct');this.startExam({examId:r.examId,questions,title:'Weak topic revision',full:false,minutes:Math.max(1,Math.ceil(questions.length*1.5))});});
     document.getElementById('retry-save')?.addEventListener('click',()=>this.saveResult());
     document.getElementById('export-result')?.addEventListener('click',()=>{const url=URL.createObjectURL(new Blob([JSON.stringify(this.result,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='GateLabs-result.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
     if(!this.isTesting&&!this.pending&&!this.result)this.restore();
@@ -331,7 +342,10 @@ export const MockTest = {
     const result=this.result,uid=auth.currentUser?.uid;if(!result||result.userId!==uid||this.saving)return;this.saving=true;
     try{const saved=await db.saveAttempt(result);if(this.result!==result||auth.currentUser?.uid!==uid)return;this.result.id=saved.id;this.result.persistence=saved.persistence;const status=saved.persistence;this.saveMessage=status?.cloudSaved?'Synced to your account.':status?.localSaved?'Saved on this device. Cloud sync pending.':'Saved on this device.';}
     catch(error){if(this.result===result&&auth.currentUser?.uid===uid)this.saveMessage=error.message||'Save failed. Keep this page open; export your result or retry.';}
-    finally{this.saving=false;if(document.getElementById('exam-root'))this.refresh();}
-  },
-  answerLabel(q,a){return answerLabel(q,a);}
+    finally{
+      this.saving=false;
+      const status=document.getElementById('result-save-status');
+      if(status&&this.result===result&&auth.currentUser?.uid===uid)status.textContent=this.saveMessage||'Saved on this device.';
+    }
+  }
 };

@@ -3,6 +3,7 @@ import { CBAT_BATTERIES, CBAT_PRACTICE_SETS, RDSO_FAQ, RDSO_GUIDE, RRB_NOTICE, r
 import { CBAT_NOTES } from '../config/rrbCbatNotes.js';
 import { EXAM_CATALOG, icon } from '../config/navigation.js';
 import { mockLibraryBanner } from '../components/ExamMockLibrary.js';
+import { mountAnswerReview } from '../components/AnswerReview.js';
 import { buildCbatSet, cbatResultKey, cbatSummary, validCbatResult } from '../utils/cbat.js';
 import { escapeHtml as h } from '../utils/examEngine.js';
 import { readStored } from '../utils/safeStorage.js';
@@ -15,16 +16,17 @@ function shape(cells) {
   </svg>`;
 }
 
-function streetMap({size,start,end,edges,houseCells}) {
+function streetMap({size,start,end,edges,houseCells}, route) {
   const spacing = 34;
   const axis = cell => [16 + cell%size*spacing, 16 + Math.floor(cell/size)*spacing];
   const marks = [[start,'A'],[end,'B'],...houseCells.map((cell,i)=>[cell,i+1])];
   const limit = 32 + (size-1)*spacing;
-  return `<svg class="cbat-map" viewBox="0 0 ${limit} ${limit}" role="img" aria-label="Street map with A, B and houses 1 to 5">
+  return `<svg class="cbat-map" viewBox="0 0 ${limit} ${limit}" role="img" aria-label="${route?'Street map highlighting the shortest route from A to B':'Street map with A, B and houses 1 to 5'}">
     ${edges.map(([from,to]) => {
       const [x1,y1] = axis(from), [x2,y2] = axis(to);
       return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}"/>`;
     }).join('')}
+    ${route?`<polyline class="review-map-route" points="${route.map(cell=>axis(cell).join(',')).join(' ')}"/>`:''}
     ${marks.map(([cell,label]) => {
       const [x,y] = axis(cell);
       return `<g><rect x="${x-9}" y="${y-9}" width="18" height="18" rx="3"/><text x="${x}" y="${y}" dominant-baseline="central" text-anchor="middle">${label}</text></g>`;
@@ -243,15 +245,21 @@ export const RrbCbat = {
     } catch {
       saveWarning = '<p role="status">This browser could not save the result.</p>';
     }
-    this.panel.innerHTML = `<section class="surface cbat-session"><h2 tabindex="-1">${battery.title} results · Set ${set}</h2>
+    this.panel.innerHTML = `<section class="surface cbat-session cbat-result">
+      <div><h2 tabindex="-1">${battery.title} results · Set ${set}</h2>
       <p>${expired?'Time is up. ':''}${completedLabel(result)}${result.correct===null?'':` · ${result.attempted} attempted`}</p>${saveWarning}
-      ${result.correct===null?'<p class="muted">Your individual responses are discarded.</p>':`<details><summary>Review answers</summary><ol class="cbat-review">
-        ${questions.map((q,i)=>`<li><strong>${h(q.prompt)}</strong><p>Your answer: ${answers[i]===null?'Skipped':h(optionLabel(q.options[answers[i]],answers[i]))}. Correct answer: ${h(optionLabel(q.options[q.correct],q.correct))}.</p>
-        ${q.digits?`<p>${q.digits.join(' ')}</p>`:''}${q.map?streetMap(q.map):''}${q.rules?`<p>${h(q.rules.join(' '))}</p>`:''}
-        ${Array.isArray(q.options[0])?`<div class="cbat-options cbat-figures">${q.options.map((figure,j)=>`<div>${optionLabel(figure,j)}${shape(figure)}</div>`).join('')}</div>`:''}
-        <p class="muted">${h(q.explanation)}</p></li>`).join('')}
-      </ol></details>`}
-      <button type="button" class="ui-button primary" data-cbat-library>Back to batteries</button></section>`;
+      ${result.correct===null?'<p class="muted">Your individual responses are discarded.</p>':''}</div>
+      <button type="button" class="ui-button" data-cbat-library>Back to batteries</button>
+      </section>${result.correct===null?'':'<section class="answer-review" data-cbat-answer-review></section>'}`;
+    if (result.correct !== null) mountAnswerReview(this.panel.querySelector('[data-cbat-answer-review]'),{
+      responses:questions.map((q,i)=>({
+        ...q, question:q.prompt, correctAnswer:q.correct, userAnswer:answers[i],
+        status:answers[i]==null?'skipped':answers[i]===q.correct?'correct':'wrong'
+      })),
+      renderContext:q=>`${q.digits?`<div class="cbat-digits">${q.digits.join(' ')}</div>`:''}${q.map?streetMap(q.map,q.solutionRoute):''}
+        ${q.rules?`<ul class="cbat-rules">${q.rules.map(rule=>`<li>${h(rule)}</li>`).join('')}</ul>`:''}`,
+      renderOption:option=>Array.isArray(option)?shape(option):h(option)
+    });
     this.panel.querySelector('h2').focus();
   }
 };

@@ -168,5 +168,3 @@ body,.app-shell,.landing-workspace{font-family:Inter,-apple-system,BlinkMacSyste
 .cbat-map rect { fill:currentColor; }
 .cbat-map text { fill:var(--accent-on,#fff); font-weight:700; font-size:11px; }
 .cbat-rules { list-style:disc; padding-inline-start:1.5rem; }
-.cbat-review { list-style:decimal; padding-inline-start:1.5rem; }
-.cbat-review li { margin-block:.8rem; }

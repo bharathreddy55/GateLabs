@@ -27,7 +27,7 @@ await context.route('**/src/config/firebase*',route=>route.fulfill({contentType:
 export const auth={currentUser:{uid:'exam-test-user',displayName:'Exam Test',email:'test@example.invalid'},onAuthStateChanged(fn){queueMicrotask(()=>fn(this.currentUser));},signOut:async()=>{}};
 export const SUBJECT_SYLLABUS={};export const isMockMode=true;
 const gateQuestions=[
-  {id:'gate-nat',year:'2025',subject:'Algorithms',topic:'A',type:'NAT',question:'What is 3 plus 4?',correctNat:7,marks:1},
+  {id:'gate-nat',year:'2025',subject:'Algorithms',topic:'A',type:'NAT',question:'What is 3 plus 4?',natMin:6.9,natMax:7.1,marks:1},
   {id:'gate-msq',year:'2025',subject:'Algorithms',topic:'B',type:'MSQ',question:'Select the even numbers.',options:['2','3','4','5'],correctOptions:[0,2],marks:2,
     questionImage:'/questions/figures/gate-2022-q10.png',imageAlt:'Test question diagram'}
 ];
@@ -96,12 +96,31 @@ try{
  let result=await page.evaluate(()=>JSON.parse(localStorage.getItem('exam-results:exam-test-user'))[0]);
  assert.ok(Math.abs(result.score-2/3)<1e-10);assert.equal(result.skippedCount,148);assert.equal(result.wrongCount,1);
  assert.equal(await page.evaluate(()=>localStorage.getItem('exam-active:exam-test-user')),null);
- await page.locator('#exam-root details').first().locator('summary').click();
- await page.locator('[data-bookmark]').first().click();
- await page.locator('#result-filter').selectOption('wrong');assert.equal(await page.locator('#exam-root details').count(),1);
- await page.locator('#result-filter').selectOption('skipped');assert.equal(await page.locator('#exam-root details').count(),148);
- await page.locator('#result-filter').selectOption('bookmarked');assert.equal(await page.locator('#exam-root details').count(),1);
- await page.locator('#result-filter').selectOption('all');assert.equal(await page.locator('#exam-root details').count(),150);
+ const review=page.locator('.answer-review');
+ const filterReview=async (filter,count)=>{
+  await review.locator(`[data-review-filter="${filter}"]`).click();
+  assert.equal(await review.locator('[data-review-question]').count(),count);
+ };
+ await review.getByRole('heading',{name:'Answer review',exact:true}).waitFor();
+ await page.getByRole('button',{name:'Review answers',exact:true}).click();
+ assert.equal(await page.evaluate(()=>document.activeElement?.id),'answer-review-heading');
+ assert.equal(await review.locator('.review-card').count(),1);
+ assert.equal(await review.locator('.review-steps li').count(),3);
+ await review.locator('summary').click();
+ assert.match(await review.locator('.review-choices').innerText(),/Correct · selected/);
+ await review.locator('[data-bookmark]').click();
+ assert.equal(await review.locator('[data-bookmark]').getAttribute('aria-pressed'),'true');
+ await filterReview('wrong',1);
+ assert.match(await review.locator('.review-question-meta').innerText(),/Question 2 of 150[\s\S]+−0.33/);
+ await filterReview('skipped',148);
+ await review.getByRole('button',{name:'Next',exact:true}).click();
+ assert.match(await review.locator('.review-question-meta').innerText(),/Question 4 of 150/);
+ await filterReview('bookmarked',1);
+ await review.locator('[data-bookmark]').click();
+ await review.getByRole('heading',{name:'No questions match this filter'}).waitFor();
+ await review.getByRole('button',{name:'Show all answers',exact:true}).click();
+ assert.equal(await review.locator('[data-review-question]').count(),150);
+ if(process.env.GATELABS_REVIEW_SCREENSHOTS)await review.screenshot({path:path.join(process.env.GATELABS_REVIEW_SCREENSHOTS,'review-desktop.png')});
  assert.equal(await page.locator('#practise-weak').isEnabled(),true);
  await page.getByRole('link',{name:'Return to preparation'}).click();
  await page.locator('#prep-group2').waitFor();
@@ -111,6 +130,7 @@ try{
  await page.locator('[data-attempt]').first().click();await page.getByRole('heading',{name:'Exam complete',exact:true}).waitFor();
  assert.match(await page.evaluate(()=>location.hash),/attempt=/);
  await page.reload();await page.getByRole('heading',{name:'Exam complete',exact:true}).waitFor();
+ await review.getByRole('heading',{name:'Worked solution',exact:true}).waitFor();
  await page.goto('http://127.0.0.1:3011/#/rrb-station-master');await page.locator('#prep-rrb').waitFor();
  assert.match(await page.locator('[data-countdown="rrb"]').innerText(),/Awaiting official/);
  assert.equal(await page.locator('[data-target]').inputValue(),'');
@@ -201,6 +221,11 @@ try{
  result=await page.evaluate(()=>JSON.parse(localStorage.getItem('exam-results:exam-test-user')).find(a=>a.examId==='gate'));
  assert.equal(result.score,3);
  assert.equal(result.mode,'practice');
+ await review.getByRole('heading',{name:'Accepted range',exact:true}).waitFor();
+ assert.match(await review.locator('.review-answers').innerText(),/6\.9 to 7\.1/);
+ await review.getByRole('button',{name:'Next',exact:true}).click();
+ await review.getByRole('img',{name:'Test question diagram'}).waitFor();
+ assert.equal(await review.locator('.review-answer').last().locator('li').count(),2);
  await page.goto('http://127.0.0.1:3011/#/group2');
  await page.getByRole('navigation',{name:'Group 2 stage'}).getByRole('link',{name:'Mains'}).click();
  await page.locator('#prep-group2-mains-1').waitFor();
@@ -325,20 +350,29 @@ try{
  await page.getByRole('heading',{name:'Intelligence results'}).waitFor();
  await page.waitForFunction(()=>!document.fullscreenElement && document.getElementById('layout-header').getClientRects().length>0);
  assert.ok(await page.getByRole('button',{name:'Detailed notes & syllabus'}).isEnabled());
- await page.getByText('Review answers',{exact:true}).click();
- await page.getByText(/Correct answer: Figure/).first().waitFor();
+ await review.getByRole('heading',{name:'Correct answer',exact:true}).waitFor();
+ assert.equal(await review.locator('.review-answers .cbat-shape').count(),2);
+ assert.equal(await review.locator('.review-steps li').count(),3);
+ assert.equal(await review.locator('.review-steps').evaluate(el=>getComputedStyle(el).listStyleType),'none');
+ await filterReview('skipped',11);
+ assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth),false);
+ if(process.env.GATELABS_REVIEW_SCREENSHOTS){
+  await page.evaluate(()=>document.documentElement.classList.add('dark'));
+  await review.screenshot({path:path.join(process.env.GATELABS_REVIEW_SCREENSHOTS,'review-mobile.png')});
+ }
  await page.getByRole('button',{name:'Back to batteries'}).click();
  await page.clock.install();
  await page.getByRole('button',{name:'Start Spatial Scanning Set 2'}).click();
  await page.getByRole('img',{name:/Street map/}).waitFor();
  await page.clock.fastForward(245_000);
  await page.getByText(/Time is up/).waitFor();
+ await review.getByRole('img',{name:'Street map highlighting the shortest route from A to B'}).waitFor();
  await page.getByRole('button',{name:'Back to batteries'}).click();
  await page.getByRole('button',{name:'Start Personality Set 1'}).click();
  await page.locator('[data-cbat-option="0"]').click();
  await page.getByRole('button',{name:'Submit battery'}).click();
  await page.getByText(/1\/8 completed/).waitFor();
- assert.equal(await page.getByText('Review answers',{exact:true}).count(),0);
+ assert.equal(await review.count(),0);
  await page.reload();
  await page.getByText('Set 1 · 1/8 completed').waitFor();
  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth),false);

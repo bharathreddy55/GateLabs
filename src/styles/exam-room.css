@@ -241,9 +241,6 @@ body:has([data-exam-session]) { overflow: hidden; }
 .exam-summary-metrics dd { font-size: clamp(18px, 2.5vw, 29px); font-weight: 750; font-variant-numeric: tabular-nums; }
 .app-shell .exam-hub .exam-summary-metrics small { display: inline; color: var(--hero-muted); }
 .exam-instructions, .exam-result-actions { display: grid; gap: 12px; }
-.exam-hub .exam-review-controls { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
-.exam-review-item summary { font-weight: 650; }
-.exam-review-item[open] > summary { margin-bottom: 12px; }
 .app-shell .exam-briefing #begin-exam { color: var(--accent-on); background: var(--accent-from); border-color: var(--accent-from); min-height: 44px; }
 
 @media (max-width: 860px) {
