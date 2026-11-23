@@ -71,7 +71,7 @@ try{
    await page.locator('[data-prep-tab=notes]').click();
    const notesTab=page.locator('[data-panel=notes]');
    await notesTab.locator('[data-note-id]').first().click();
-   await notesTab.getByRole('heading',{name:'Worked example'}).waitFor();
+   await notesTab.getByRole('heading',{name:route==='rrb-station-master'?'Question models and worked examples':'Worked example',exact:true}).waitFor();
    assert.ok(await notesTab.getByRole('link',{name:'Open in Notion'}).isVisible());
    const visual=notesTab.getByRole('img',{name:/Visual study guide for/});
    await visual.waitFor();
@@ -138,6 +138,13 @@ try{
  await page.goto('http://127.0.0.1:3011/#/rrb-station-master');await page.locator('.prep-tabs').waitFor();
  await page.locator('[data-prep-tab=syllabus]').click();
  await page.screenshot({path:'artifacts/workspace/syllabus-mobile-dark.png',fullPage:false});
+ assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2));
+ await page.goto('http://127.0.0.1:3011/#/rrb-station-master?tab=notes&note=work-power-energy');
+ const handnote=page.locator('[data-note-content]');
+ await handnote.getByRole('heading',{name:'How to study it for Station Master',exact:true}).waitFor();
+ assert.equal(await handnote.locator('h5').count(),5);
+ assert.equal(await handnote.locator('ol').count(),5);
+ assert.match(await handnote.innerText(),/500 W input/);
  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2));
  await page.goto('http://127.0.0.1:3011/#/sbi-clerk?tab=notes&note=english-reading');
  const readingGuide=page.getByRole('img',{name:'Visual study guide for English Reading Comprehension'});

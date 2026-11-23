@@ -1,23 +1,53 @@
-Weekdays repeat modulo seven. An ordinary year advances the later year's same starting date by one weekday, while a leap year gives two days of shift across 29 February. A Gregorian leap year is divisible by four, except centuries unless divisible by 400.
+## What it means
 
-## Concepts in depth
+A weekday changes in a seven-day cycle. Calendar problems reduce elapsed days modulo seven, counting how many midnight-to-midnight steps separate dates. The same date in a different year can shift by one or two weekdays depending on whether a leap day falls between the two dates.
 
-Weekday changes depend on the remainder of elapsed days modulo seven. In Gregorian rules years divisible by four are leap years, except century years unless divisible by 400. Be clear whether the start day is counted inclusively.
+## Formulas and rules
 
-## How to apply it
+- **Gregorian leap year:** Divisible by 4 except century years, which must be divisible by 400.
+- **Odd days:** An ordinary year contributes one odd day because 365=52×7+1. A leap year contributes two. A 400-year Gregorian cycle has 146,097 days, divisible by seven.
+- **Month lengths:** February has 28 or 29 days. April, June, September and November have 30. Other months have 31.
+- **Day count:** Advance by elapsed days, excluding the starting date. To go back, subtract the remainder or move backwards that many weekdays.
 
-If 1 January of a leap year is Monday, 1 March comes 31+29=60 elapsed days later. The remainder is four, so it is Friday. Counting both endpoints as elapsed days would add a spurious day.
+## How to study it for Station Master
 
-## Worked example
+- Carry only the remainder modulo seven after counting dates. Mark whether Feb 29 actually occurs in the interval before adding a leap offset.
+- Practise across February, at a century boundary and backwards from a known weekday. A same month date difference uses subtraction, without adding one.
 
-If 1 January is Tuesday in an ordinary year, 1 January of the following year is Wednesday, since 365 leaves a remainder of one on division by seven.
+## Question models and worked examples
 
-## Common mistake
+### Forward within a month
 
-Check whether the interval actually crosses leap day. A leap year may be present without 29 February lying inside the interval.
+**Question.** If 3 August is Tuesday, what weekday is 25 August?
 
-## Practice
+1. Elapsed time is 25−3=22 days, without counting the starting day as a step.
+2. 22=21+1. Move one weekday forward.
 
-Is 2100 a Gregorian leap year?
+**Answer:** Wednesday.
 
-**Answer:** No. It is divisible by 100 and not by 400.
+### Leap-year transition
+
+**Question.** If 28 February 2024 was Wednesday, what day was 1 March?
+
+1. 2024 is divisible by 4 and is not a century year. February has 29 days.
+2. Advance two days: Feb 29 is Thursday, March 1 is Friday.
+
+**Answer:** Friday.
+
+### Century classification
+
+**Question.** Which of 1900, 2000 and 2100 are leap years in the Gregorian calendar?
+
+1. Each is divisible by 100, so apply the stricter ÷400 condition.
+2. Only 2000 is divisible by 400.
+
+**Answer:** 2000 only.
+
+### Same date following year
+
+**Question.** If 15 March 2023 was Wednesday, what day was 15 March 2024?
+
+1. The interval includes 29 February 2024, so there are 366 elapsed days.
+2. 366 leaves remainder 2 modulo 7. Advance two days.
+
+**Answer:** Friday.

@@ -1,23 +1,53 @@
-Arithmetic mean equals total divided by count. Convert a mean to a total whenever adding or removing items. Combine group means using group sizes as weights.
+## What it means
 
-## Concepts in depth
+The arithmetic mean is the common value all entries would have if their total were shared equally. When combining groups, the group with more observations contributes more to the resulting mean. If entries are corrected or replaced, update the total while keeping track of whether the count changed.
 
-The arithmetic mean is total divided by count. Combine group means with weights equal to group sizes. Adding or removing values changes both total and count. For equal distances at different speeds, the averaging weights are travel times.
+## Formulas and rules
 
-## How to apply it
+- **Mean:** x̄=Σx/n, where n is the count. Hence total=nx̄.
+- **Weighted mean:** Σ(wx)/Σw. To combine group averages, use each group size as its weight.
+- **Replacement:** New total=old total−removed value+added value. At fixed n, changing the mean by Δ changes the total by nΔ.
+- **Average speed:** Total distance ÷ total time; for two equal distances it is 2uv/(u+v).
 
-Thirty tickets average ₹20 and ten average ₹40. The overall average is (600+400)/40=₹25. If the ₹40 group were twice as large, the answer would shift towards its mean. Equal weighting is only justified for equal group sizes.
+## How to study it for Station Master
 
-## Worked example
+- Draw columns for count, mean and total and fill in the third quantity when two are known.
+- Practise finding the hidden weight in the question. For speed it may be time, for a class it is pupils, and for a corrected reading the count may stay fixed.
 
-A group of 12 has mean 20, and a group of 8 has mean 30. Total is 240 + 240 = 480, so the combined mean is 24.
+## Question models and worked examples
 
-## Common mistake
+### Two unequal groups
 
-A simple mean of group means works when the group sizes are equal.
+**Question.** 24 candidates average 63 and 36 average 73. Find the combined mean.
 
-## Practice
+1. Totals are 24×63=1512 and 36×73=2628.
+2. Divide 4140 by 60. The greater weight on 73 places the answer above 68.
 
-Five numbers average 18. Remove 10 and add 25. What is the new average?
+**Answer:** 69.
 
-**Answer:** 21. The total rises from 90 to 105 while the count remains five.
+### Correct a mean
+
+**Question.** The mean of 16 values is recorded as 42. One entry of 58 should be 38. Find the corrected mean.
+
+1. Recorded total is 16×42=672.
+2. Subtract 20 from 672 and divide the new total by the same 16 entries.
+
+**Answer:** 40.75.
+
+### Recover a group size
+
+**Question.** 18 members average 52, a second group averages 66, and the combined mean is 60. How many are in the second group?
+
+1. First group’s total shortfall from 60 is 18×8=144.
+2. Each member of the second group contributes 6 above 60. Balance the shortfall using 144/6.
+
+**Answer:** 24 members.
+
+### Equal-distance average speed
+
+**Question.** A van covers 60 km at 40 km/h and returns at 60 km/h. Find average speed.
+
+1. Times are 1.5 hours outbound and one hour back.
+2. Divide 120 km by 2.5 hours. The slower leg occupies more time.
+
+**Answer:** 48 km/h.

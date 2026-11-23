@@ -1,23 +1,53 @@
-Draw each person once and mark generations, sibling links and partner links. Start with the reference person named in the question. Resolve maternal and paternal branches and use stated gender information where relevant.
+## What it means
 
-## Concepts in depth
+Family-relation questions translate statements into a tree of people and known relationships. For a basic tree, vertical links show parent and child, horizontal links show siblings or spouses when specified, and a generation shift indicates how far apart people are. Always answer from the viewpoint requested by the question.
 
-Label generations before interpreting gender and relationship direction. Use distinct markers for siblings, spouses and parents. “A to B” asks how A is related to B. Some statements fix an aunt or uncle relation without specifying the side.
+## Formulas and rules
 
-## How to apply it
+- **Direction:** “A’s relation to B” asks how to name A from B’s perspective.
+- **Generation steps:** Parent moves up one generation and child moves down one. A parent’s sibling stays in the parent’s generation.
+- **Gender and side:** Use only terms that establish gender or specify maternal or paternal links. “Sibling” and “child” alone do not settle gender.
+- **Coded relations:** Decode each adjacent pair using the exact left-to-right rule, then trace between the requested people.
 
-A is B's sister, B is C's father and D is C's daughter. From D, C is a parent, B a grandparent and A the sister of that grandparent, so A is D's great-aunt. Avoid assuming a gender not established by the clues.
+## How to study it for Station Master
 
-## Worked example
+- Write the names and arrows from the innermost relation outwards for pointing puzzles. Mark each proven gender rather than guessing from a name.
+- Practise reciprocal relations and cases with unresolved information. For family trees with several names, reconstruct only relationships necessary for the question.
 
-Asha's mother's brother is one generation above Asha on her mother's branch. He is Asha's maternal uncle.
+## Question models and worked examples
 
-## Common mistake
+### Pointing with a unique child
 
-Which person is being described matters. Inverting a relationship can change nephew to uncle, or niece to aunt.
+**Question.** Dev says of a woman, “She is the only daughter of my mother’s only son.” Dev is male. How is she related to Dev?
 
-## Practice
+1. Dev is the only son of his mother, so that phrase identifies Dev.
+2. The woman is the daughter of that son.
 
-Ravi is the brother of Leela, who is Mira's mother. How is Mira related to Ravi if Mira is female?
+**Answer:** His daughter.
 
-**Answer:** Mira is his niece, the daughter of his sister.
+### Coded relation chain
+
+**Question.** A + B means A is B’s mother. A × B means A is B’s brother. What is P to R in P × Q + R?
+
+1. P × Q gives P as Q’s brother. Q + R makes Q the mother of R.
+2. Trace R up to mother Q, then across to Q’s brother P.
+
+**Answer:** P is R’s maternal uncle.
+
+### Unknown gender
+
+**Question.** A is B’s parent. C is A’s sibling. What can be said about C’s relation to B?
+
+1. C is in the same generation as B’s parent A.
+2. Nothing in “sibling” identifies C’s gender, so a specific aunt/uncle answer is unsupported.
+
+**Answer:** C is a sibling of B’s parent, either aunt or uncle.
+
+### Reverse perspective
+
+**Question.** S is the daughter of T. T is the brother of U. What is U’s relation to S?
+
+1. T is S’s father because T is described as a brother.
+2. U is a sibling of S’s father. The gender of U is unspecified.
+
+**Answer:** A paternal aunt or uncle.

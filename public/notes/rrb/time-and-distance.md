@@ -1,23 +1,53 @@
-Distance equals speed times time for uniform motion. Average speed is total distance over total elapsed time. Relative speeds add for objects moving directly toward each other and subtract for the faster object overtaking the slower one. Convert km/h to m/s by multiplying by 5/18.
+## What it means
 
-## Concepts in depth
+Speed is distance per unit time. Average speed measures total path length over total elapsed time. Closing speed measures how quickly separation decreases. For a long object to clear a line or another object, the back of the moving object must pass the relevant endpoint.
 
-Average speed is total distance over total time. If two bodies move along one line, closing speed adds for opposite directions and subtracts for the same direction. For a passing train, the distance includes whichever lengths must clear.
+## Formulas and rules
 
-## How to apply it
+- **Uniform motion:** d=vt. Convert km/h to m/s by multiplying by 5/18 and reverse with 18/5.
+- **Average speed:** Total distance ÷ total elapsed time. Include any stop within the elapsed interval.
+- **Closing:** Initial gap ÷ closing speed gives meeting time for constant velocities. Use the sum for opposite approaches and the difference for a same-direction catch-up.
+- **Complete crossing:** Find distance from front entering to rear exiting. It is the train length past a pole and the sum of lengths past a platform or another train.
 
-A 120 m train passing a 180 m platform at 54 km/h moves 15 m/s and needs (120+180)/15=20 s. Equal distances at speeds u and v give average 2uv/(u+v). Equal travel times instead give arithmetic mean.
+## How to study it for Station Master
 
-## Worked example
+- Sketch the initial and final positions of the front and rear. Decide what distance closes before using a speed.
+- Run a quick mixed set of platform, head-start and stop questions. Convert metres and seconds once, then check the result’s units.
 
-A train 150 m long moving at 54 km/h travels at 15 m/s. It passes a post in 150 ÷ 15 = 10 s. A platform would add its length to the distance.
+## Question models and worked examples
 
-## Common mistake
+### Train and platform
 
-For average speed, weigh speeds by time if using a weighted average. Equal distances do not generally imply equal travel times.
+**Question.** A 180 m train at 54 km/h clears a platform in 22 seconds. Find the platform length.
 
-## Practice
+1. 54 km/h=15 m/s, so the train moves 330 m while clearing.
+2. Subtract 180 m of train length from the total.
 
-A traveller covers 60 km at 30 km/h and returns at 60 km/h. Find average speed.
+**Answer:** 150 m.
 
-**Answer:** 40 km/h. Total distance is 120 km and total time is three hours.
+### Delayed catch-up
+
+**Question.** A truck leaves at 08:00 at 45 km/h. A van leaves at 08:40 at 65 km/h. When does it catch the truck?
+
+1. The truck’s initial lead is 45×40/60=30 km.
+2. Gap closes at 20 km/h, taking 1.5 hours from 08:40.
+
+**Answer:** 10:10.
+
+### Average speed with a stop
+
+**Question.** A bus covers 72 km at 48 km/h and stops for 15 minutes. Find trip average speed.
+
+1. Moving time is 72/48=1.5 hours. Total elapsed time is 1.75 hours.
+2. Divide 72 by 1.75 to get 288/7 km/h.
+
+**Answer:** About 41.14 km/h.
+
+### Passing trains
+
+**Question.** Trains of 150 m and 210 m approach at 72 and 36 km/h. How long from nose-to-nose to fully clear?
+
+1. Relative speed is 108 km/h=30 m/s.
+2. They must clear 150+210=360 m relative to each other.
+
+**Answer:** 12 seconds.

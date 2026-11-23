@@ -128,9 +128,24 @@ body,.app-shell,.landing-workspace{font-family:Inter,-apple-system,BlinkMacSyste
     color: var(--ws-text);
     font-weight: 700;
 }
+.exam-note [data-note-content] > h5 {
+    margin-block: 1.4rem .375rem;
+    padding-block-start: .8rem;
+    border-top: 1px solid var(--ws-border);
+    color: var(--ws-primary);
+    font-size: 1rem;
+    font-weight: 700;
+}
 .exam-note ul {
     list-style: disc;
     padding-inline-start: 1.5rem;
+}
+.exam-note ol {
+    list-style: decimal;
+    padding-inline-start: 1.5rem;
+}
+#panel-rrb-notes .exam-note li + li {
+    margin-block-start: .35rem;
 }
 .exam-note-revised,
 .syllabus-note-row {

@@ -1,23 +1,53 @@
-An expression combines constants, variables and operations. Collect like terms, expand with the distributive law and factor using common factors and identities. For instance, a² − b² = (a−b)(a+b). Check restrictions when using denominators.
+## What it means
 
-## Concepts in depth
+An expression combines variables, constants and operations. A coefficient multiplies a variable term. Like terms have matching powers of the same variables. An identity holds for every allowed variable value. Algebraic simplification preserves the value on the original domain, including any restrictions from denominators.
 
-Algebraic operations preserve equality only under their valid conditions. Expand products when simplifying mixed sums and factor when finding roots or cancelling factors. Like terms must have the same variable powers. Cancelling is valid for common factors, not separate summands.
+## Formulas and rules
 
-## How to apply it
+- **Distribution:** a(b+c)=ab+ac. A minus sign outside brackets reverses every sign inside.
+- **Square and difference:** (a±b)²=a²±2ab+b², and a²−b²=(a−b)(a+b).
+- **Powers:** xᵐxⁿ=xᵐ⁺ⁿ, and xᵐ/xⁿ=xᵐ⁻ⁿ for nonzero x in the quotient.
+- **Cancellation:** Cancel common factors that multiply an entire numerator and denominator. Record values making the original denominator zero first.
 
-(x²−9)/(x−3)=x+3 where x≠3. Multiplying both sides of an equation by an expression that might be zero can introduce candidates that fail the original problem. Substitute a small number to detect a mistaken identity.
+## How to study it for Station Master
 
-## Worked example
+- Learn the identities in both directions. Try factoring before expanding when the same product or sum appears twice.
+- Practise substitutions using bracketed negative values, reciprocal expressions and cancelled factors with excluded values.
 
-Simplify 3(x−2)+2(x+1): distribute to get 3x−6+2x+2, then combine to get 5x−4.
+## Question models and worked examples
 
-## Common mistake
+### Hidden middle term
 
-When a minus sign precedes parentheses, it changes the sign of every term inside.
+**Question.** Given x+y=13 and xy=36, find x²+y².
 
-## Practice
+1. Square the first equation: 169=x²+2xy+y².
+2. Subtract 2×36.
 
-Factor 4x²−9.
+**Answer:** 97.
 
-**Answer:** (2x−3)(2x+3), using difference of squares.
+### Simplify with restrictions
+
+**Question.** Simplify (x²−25)/(x²−x−20) and state exclusions.
+
+1. Factor numerator as (x−5)(x+5), and denominator as (x−5)(x+4).
+2. The denominator excludes 5 and −4. Cancel the common factor x−5 only for allowed values.
+
+**Answer:** (x+5)/(x+4), x≠5 and x≠−4.
+
+### Efficient product
+
+**Question.** Evaluate 103×97 using an identity.
+
+1. Rewrite as (100+3)(100−3).
+2. Use the difference of squares: 10000−9.
+
+**Answer:** 9991.
+
+### Reciprocal expression
+
+**Question.** Given x+1/x=5, find x²+1/x².
+
+1. Square both sides. The cross term 2x(1/x) equals 2.
+2. Subtract 2 from 25.
+
+**Answer:** 23.

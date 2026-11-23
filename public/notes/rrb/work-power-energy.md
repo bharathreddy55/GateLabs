@@ -1,23 +1,63 @@
-Mechanical work by a constant force is Fs cos θ, where θ is the angle between force and displacement. Power is work per unit time. Kinetic energy is ½mv². Near Earth's surface, gravitational potential energy change is mgΔh. The net work on a body equals its change in kinetic energy.
+## What it means
 
-## Concepts in depth
+A force does mechanical work when it has a component along the displacement of its point of application. Work transfers energy and may be positive, negative or zero. Energy is measured in joules. Power is the rate of energy transfer in watts. The same energy transfer can occur at different powers depending on the time taken.
 
-Work by a constant force is Fd cos θ, where θ is the angle between force and displacement. It is positive when the force has a component along the movement, negative when it opposes the movement, and zero when that component or the displacement is zero. Net work changes kinetic energy by Δ(½mv²). Near Earth's surface the gravitational potential energy change is mgΔh, and gravity does work −mgΔh. When gravity is the only force doing work, kinetic and gravitational potential energy trade off while their sum stays fixed.
+## Formulas and rules
 
-## How to apply it
+- **Work by a constant force:** W=Fs cos θ, where θ is between force and displacement. Same direction gives +Fs, opposite gives −Fs, perpendicular gives zero.
+- **Energy:** K=mv²/2 for kinetic energy and ΔU=mgΔh near Earth’s surface with constant g. Doubling speed quadruples K.
+- **Work–energy theorem:** Net work equals Kfinal−Kinitial. Individual forces can do work even when total work is zero.
+- **Power and efficiency:** Average P=W/t. Efficiency=useful output energy/input energy, or useful output power/input power for the same interval. Multiply by 100 to express a percentage.
+- **Energy units:** 1 W=1 J/s, 1 kW=1,000 W, and 1 kWh=3.6×10⁶ J. A kWh is energy.
 
-A hoist raises 30 kg by 4 m in 6 s, with g=10 m/s². At steady speed, the hoist does 1,200 J of useful work and gravity does −1,200 J, so the net work and the kinetic energy change are zero. Average useful power is 200 W. At 80% efficiency the input power is 200/0.8=250 W. In angled-force questions resolve the component along the displacement before multiplying. For energy usage, 1 kWh is 3.6 MJ since 1,000 W acts for 3,600 s.
+## How to study it for Station Master
 
-## Worked example
+- Draw the displacement and force arrows before choosing signs. Next label whether the question asks about one force, net work or energy input.
+- Build a formula chain for lifting: m, g and height give useful work, then divide by time for output power, then use efficiency for input. Drill a kinetic-energy change with nonzero starting speed.
 
-A constant 50 N force pushes a box 4 m along its direction. Work is 200 J. If it takes 5 s, average power is 40 W.
+## Question models and worked examples
 
-## Common mistake
+### Oblique pull against friction
 
-A person can exert force while holding a stationary object. Mechanical work on that object is zero when displacement is zero.
+**Question.** Pull an object 10 m horizontally with 50 N at 60° above horizontal. Friction is 8 N. Find the net work if the other forces are vertical.
 
-## Practice
+1. Pull component along motion=50cos 60°=25 N, doing 250 J.
+2. Friction work is −8×10=−80 J. Vertical forces do zero work for horizontal displacement.
 
-What happens to kinetic energy at fixed mass when speed doubles?
+**Answer:** 170 J.
 
-**Answer:** It quadruples because kinetic energy depends on speed squared.
+### Kinetic energy from net work
+
+**Question.** A 4 kg cart speeds up from 3 to 7 m/s. Find the net work.
+
+1. Initial kinetic energy=4×3²/2=18 J. Final kinetic energy=4×7²/2=98 J.
+2. Subtract initial from final. The result is positive because speed increased.
+
+**Answer:** 80 J.
+
+### Lift, power and efficiency
+
+**Question.** A motor raises 60 kg through 8 m in 12 s at constant speed. Use g=10 m/s² and efficiency 80%. Find input power.
+
+1. Useful energy gain is mgh=4800 J. Output power is 4800/12=400 W.
+2. 0.80=400/input, so divide 400 by 0.80.
+
+**Answer:** 500 W input.
+
+### Constant speed and signed work
+
+**Question.** A crate slides 6 m at steady speed with a 25 N horizontal push and 25 N friction. Find work by each force and net work.
+
+1. The push is parallel and friction antiparallel, giving +25×6 and −25×6.
+2. The other forces are perpendicular to motion. Constant speed gives ΔK=0 as a check.
+
+**Answer:** Push +150 J, friction −150 J, net 0 J.
+
+### Electrical energy use
+
+**Question.** A device drawing 1.2 kW runs for 30 minutes. Give the energy drawn in kWh and joules.
+
+1. Convert 30 minutes to 0.5 h. Energy=1.2×0.5=0.6 kWh.
+2. Use 3.6 million joules per kWh, so 0.6×3.6×10⁶=2.16×10⁶ J.
+
+**Answer:** 0.6 kWh or 2.16 MJ.

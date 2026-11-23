@@ -1,23 +1,53 @@
-For equally likely outcomes, probability is favourable outcomes divided by the total. A complement has probability 1−P(A). Independent events multiply. When sampling without replacement, probabilities for later draws can depend on earlier outcomes.
+## What it means
 
-## Concepts in depth
+Probability measures how likely an event is, from 0 to 1. A sample space lists possible outcomes; an event is a subset of those outcomes. Counting favourable outcomes gives a probability only when the listed outcomes are equally likely. Draws without replacement change the probabilities of later draws.
 
-For equally likely outcomes use favourable/total. In draws without replacement, the next denominator and possibly numerator change. Disjoint events cannot coincide. Independence means one event does not change the other's probability.
+## Formulas and rules
 
-## How to apply it
+- **Equally likely outcomes:** P(A)=favourable/total. Count ordered outcomes when the sequence of draws matters.
+- **Complement:** P(at least one)=1−P(none). It combines all nonzero cases in one subtraction.
+- **OR rule:** P(A or B)=P(A)+P(B)−P(A and B). Subtract the overlap once.
+- **AND rule:** P(A and B)=P(A)×P(B given A). For independent events the second factor is P(B).
 
-With 3 red and 2 blue balls, the probability of two reds without replacement is (3/5)(2/4)=3/10. The chance of at least one red is 1−(2/5)(1/4)=9/10. The complement is often simpler than listing many cases.
+## How to study it for Station Master
 
-## Worked example
+- Write whether the prompt says “both”, “either”, “exactly” or “at least”. Sketch branch probabilities for sequential draws.
+- Practise the same draw with and without replacement. Check whether outcomes that look like combinations are equally likely before counting them.
 
-A bag contains 3 red and 2 blue balls. Without replacement, P(two red)=(3/5)(2/4)=3/10.
+## Question models and worked examples
 
-## Common mistake
+### Two dice with a fixed sum
 
-Mutually exclusive events and independent events are different. Determine how occurrence of one changes the probability of the other.
+**Question.** Two fair six-sided dice are rolled. Find P(sum = 9).
 
-## Practice
+1. Use 36 ordered outcomes. The pairs are (3,6),(4,5),(5,4),(6,3).
+2. (3,6) and (6,3) are distinct. Divide four by 36.
 
-Two fair dice are rolled. What is the probability of a sum of 7?
+**Answer:** 1/9.
 
-**Answer:** 6/36=1/6, since six ordered pairs have sum 7.
+### At least one
+
+**Question.** Three independent fair coin tosses are made. Find the chance of at least one head.
+
+1. The complement is all tails. Its probability is (1/2)³=1/8.
+2. Subtract from 1.
+
+**Answer:** 7/8.
+
+### Two draws without replacement
+
+**Question.** A bag has 5 red and 3 blue balls. Find the chance of drawing two red without replacement.
+
+1. First-red probability is 5/8. On that branch, red balls drop to 4 and total to 7.
+2. Multiply 5/8 by 4/7.
+
+**Answer:** 5/14.
+
+### Overlapping events
+
+**Question.** A number from 1 through 30 is picked uniformly. Find the probability it is a multiple of 3 or 5.
+
+1. There are 10 multiples of 3 and 6 of 5. Two, 15 and 30, belong to both.
+2. Union size=10+6−2=14. Divide by 30.
+
+**Answer:** 7/15.

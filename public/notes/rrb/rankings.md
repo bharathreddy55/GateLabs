@@ -1,23 +1,53 @@
-In a list of N people with distinct ranks, a person at rank r from the top is N−r+1 from the bottom. Add the two ranks and subtract one to find the total. For positions strictly between two top ranks, subtract the smaller from the larger and then subtract one.
+## What it means
 
-## Concepts in depth
+Ranking problems describe positions from one or more ends of an ordered group. A rank counts the person or item as one of the positions. Changes in rank can come from changes to position, entrants and exits or swaps. The number of people between ranks excludes both endpoints.
 
-For n people, the same person's left and right ranks add to n+1. The number between two known positions is their rank difference less one. Recheck whose position is being reported after swaps or insertions.
+## Formulas and rules
 
-## How to apply it
+- **Same person, both ends:** N=left rank+right rank−1 because the person is counted twice.
+- **Convert a rank:** Rank from opposite end=N+1−known rank.
+- **Between ranks:** Once ranks refer to the same end, between count=absolute difference−1 for distinct people.
+- **Swaps and exits:** A person who swaps inherits the other person’s slot. If a person ahead leaves, the target moves one rank closer to the front.
 
-If R is 9th from the left and 14th from the right, n=22. If S is three places to R's right, S is 12th from the left and 11th from the right. Additional people to the left do not change R's right rank.
+## How to study it for Station Master
 
-## Worked example
+- Draw endpoints and label the direction of each rank before subtracting. Check whether two opposite end ranks describe the same person or different people.
+- Practise swap, overlap and removal variants. If total size is unknown for different people, test both relative orders when the clues allow them.
 
-Ria is 7th from the top and 12th from the bottom. The group has 7+12−1=18 people.
+## Question models and worked examples
 
-## Common mistake
+### Total from two ends
 
-The person is counted in both stated ranks, so subtract one when finding the total.
+**Question.** K is 18th from the left and 27th from the right. How many people are in the line?
 
-## Practice
+1. There are 17 before K and 26 after K.
+2. Add those groups and K: 17+1+26.
 
-How many people lie strictly between ranks 5 and 13?
+**Answer:** 44.
 
-**Answer:** Seven, because 13−5−1=7.
+### Distance between ranks
+
+**Question.** In a line of 48, A is 14th from the left and B is 12th from the right. How many are between them?
+
+1. B is 48+1−12=37th from the left.
+2. Positions strictly between 14 and 37 number 37−14−1.
+
+**Answer:** 22.
+
+### Total after a swap
+
+**Question.** A is 9th from left and B is 16th from right. After exchanging seats A is 21st from left. Find total size.
+
+1. A now occupies B’s original seat.
+2. That seat was 21st left and 16th right, so add these ranks and subtract one.
+
+**Answer:** 36.
+
+### Rank changes with exits
+
+**Question.** D ranks 17th out of 40. Three people ahead of D and two behind leave. What are D’s ranks from the top and bottom now?
+
+1. Three ahead leave, so top rank becomes 14. Total decreases to 35.
+2. Convert top rank using 35+1−14.
+
+**Answer:** 14th from top, 22nd from bottom.

@@ -1,23 +1,53 @@
-A Venn diagram shows membership and overlap. For two sets, |A∪B|=|A|+|B|−|A∩B|. For three sets add individual counts, subtract pairwise overlaps, then add the triple overlap. Fill the innermost region first when counts refer to whole intersections.
+## What it means
 
-## Concepts in depth
+A Venn diagram separates membership into regions. The whole of a set includes its overlaps. “Only A” excludes anything in other named sets, while “A or B” includes their overlap in ordinary inclusive language. The region outside all circles still belongs to the stated universe.
 
-For two sets, union equals both totals less the overlap once. For three sets add all singles, subtract all pair intersections, then add the triple intersection. Work from the innermost intersection out to exclusive regions.
+## Formulas and rules
 
-## How to apply it
+- **Two sets:** count(A∪B)=count(A)+count(B)−count(A∩B). Neither = universe−union.
+- **Three sets:** Union adds all three totals, subtracts all three pair overlaps, then adds back the triple overlap. Pair overlaps in this formula include the triple unless labelled “only”.
+- **Exclusive regions:** Start with the triple. Subtract it from each inclusive pair overlap, then subtract the occupied overlap regions from each single-set total.
+- **Exactly one versus at least one:** Sum only the three single-only regions for exactly one. Include every inside region for at least one.
 
-If reported pair counts total 67 and 18 people belong to all three, exactly two is 67−3×18=13. The phrase “A and B” often includes triple members unless C is explicitly excluded.
+## How to study it for Station Master
 
-## Worked example
+- Draw disjoint regions and put the most restricted number into the diagram first. Check all regions are nonnegative and sum to the universe.
+- Practise one reverse model using “neither”. Before arithmetic, translate “and”, “or”, “only” and “exactly two” into shaded areas.
 
-Of 60 people, 35 use A, 25 use B and 10 use both. At least one is 35+25−10=50. Exactly 40 use just one and 10 use neither.
+## Question models and worked examples
 
-## Common mistake
+### Two sets and neither
 
-Both includes the intersection. Read wording such as only A, at least one and exactly one precisely.
+**Question.** Of 120 applicants, 68 know Excel, 55 know SQL and 26 know both. How many know neither?
 
-## Practice
+1. Union=68+55−26=97. The intersection was counted twice before subtraction.
+2. Subtract 97 from the 120 applicants.
 
-If 48 use A and 20 use both A and B, how many use only A?
+**Answer:** 23.
 
-**Answer:** 28, subtracting the overlap from the total in A.
+### Three sets and exactly two
+
+**Question.** Pair intersections AB, AC, BC are 22, 17 and 15, each including 6 in all three. How many are in exactly two?
+
+1. Pair-only counts are 16, 11 and 9 after removing the triple from each.
+2. The pair-only regions are disjoint, so add them.
+
+**Answer:** 36.
+
+### Recover an overlap
+
+**Question.** Of 90 candidates, 54 cleared A, 47 cleared B and 12 cleared neither. How many cleared both?
+
+1. At least one =90−12=78.
+2. Intersection=54+47−78.
+
+**Answer:** 23.
+
+### Inside one set and nowhere else
+
+**Question.** Totals for A, B and C are 46, 32 and 35. Inclusive pair intersections AB=12, AC=14 and BC=10, triple=5. How many belong only to A?
+
+1. From A remove AB and AC. The triple was removed twice when it should be removed once.
+2. Add the triple back: 46−12−14+5.
+
+**Answer:** 25.

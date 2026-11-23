@@ -1,23 +1,53 @@
-Each slice represents part of a total, with a full circle of 360°. Slice share equals angle divided by 360. Comparing slices across different pies requires the totals, because identical percentages can represent different amounts.
+## What it means
 
-## Concepts in depth
+A pie chart represents a whole by a circle. Each sector’s central angle is proportional to its share of that whole. Sector sizes from two different charts compare shares directly, but counts depend on each chart’s total. Angle, fraction, percentage and count are equivalent descriptions only after the correct whole is known.
 
-A pie chart partitions one whole. An angle θ represents θ/360 of the total. When comparing two pies or years with different totals, convert sectors to actual quantities. A bigger share can still correspond to a smaller count.
+## Formulas and rules
 
-## How to apply it
+- **Conversions:** Fraction=angle/360°=percentage/100=count/total. 1% is 3.6°.
+- **Component count:** total×angle/360° or total×percentage/100. To recover the whole, divide a known count by its share.
+- **Ratios within one chart:** Count ratios equal angle ratios. When comparing different charts, recover counts before forming a count ratio.
+- **Remainder:** Subtract given sector shares from 100% or 360°. Rounded charts can yield approximate counts.
 
-A 90° sector in a total of 800 is 200. A 108° sector in a later total of 600 is 180. The share rose from 25% to 30%, but the absolute count declined.
+## How to study it for Station Master
 
-## Worked example
+- Name the whole for each chart on scratch paper. For a combined-chart question match sector and time period before converting to counts.
+- Practise angle to count, count to whole, missing sector, and two different totals with similar-looking sectors.
 
-A 72° sector represents 72/360 = 20%. If the overall budget is ₹4 crore, that sector represents ₹0.8 crore.
+## Question models and worked examples
 
-## Common mistake
+### Convert an angle to count
 
-Check whether the label is a percentage or an angle. A 90° slice represents 25%.
+**Question.** A 72° sector represents emergency calls out of 1,850 total calls. How many are emergencies?
 
-## Practice
+1. 72/360=1/5 of the circle.
+2. Multiply 1850 by one-fifth.
 
-Category A is 30% of 500 units in one year and 25% of 800 in the next. What happened to its quantity?
+**Answer:** 370.
 
-**Answer:** It rose from 150 to 200 units even as its percentage share fell.
+### Recover the whole
+
+**Question.** A 54° maintenance sector represents 150 tasks. Find the total.
+
+1. 54/360=0.15.
+2. If 150 is 15%, the total is 150/0.15.
+
+**Answer:** 1000 tasks.
+
+### Compare charts with unequal totals
+
+**Question.** A’s 90° sector of 800 tasks and B’s 72° sector of 1250 tasks represent inspections. Compare the counts.
+
+1. A gives 800×90/360=200 inspections.
+2. B gives 1250×72/360=250. A smaller sector can contain more tasks in a larger whole.
+
+**Answer:** B has 50 more.
+
+### Find the unlabelled sector
+
+**Question.** A pie chart’s labelled sectors are 35%, 30% and 72°. Find the remaining sector angle.
+
+1. 72° represents 20%. The total labelled share is 85%.
+2. The remainder is 15%×360°.
+
+**Answer:** 54°.

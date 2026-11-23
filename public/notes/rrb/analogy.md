@@ -1,23 +1,53 @@
-Describe the relationship in the first pair using a short sentence, then apply the same relationship in the same direction. Common relations include part and whole, tool and function, class and example, and cause and effect.
+## What it means
 
-## Concepts in depth
+An analogy asks for a second pair with the same relationship as the first. The relation may involve function, part to whole, cause to effect, degree or a transformation of letters and numbers. A pair with a shared theme is only a match if it preserves the exact relation and order.
 
-Translate the first pair into a relation such as producer→product, part→whole, tool→function or n→n(n+1). The second pair must preserve both relation and direction. Match at the same level of specificity.
+## Formulas and rules
 
-## How to apply it
+- **Relationship sentence:** Read A:B as a short sentence such as “A measures B” or “A is a part of B”. Apply the same sentence to C and the choice.
+- **Direction:** Instrument→quantity, material→product and cause→effect have distinct reversed forms.
+- **Symbol patterns:** For letters use A=1 through Z=26 and inspect each aligned position. For numbers test a concise rule that fits the examples and the choices.
+- **Elimination:** Reject relations that are merely possible in some contexts if a precise defining relation is available.
 
-Keyboard:typing relates a tool to its primary use. A reversed pair such as cutting:scissors fails the direction. When numerical options fit several operations, prefer one that applies consistently and naturally to the given pair.
+## How to study it for Station Master
 
-## Worked example
+- Before looking for similar words, name the relationship, including direction. Make an error log split into reversed, loosely associated and arithmetic-rule mistakes.
+- Practise mixed word, number and letter sets. If only one numeric pair is given, use the choices and any extra pairs to identify the simplest consistent intended rule.
 
-Wheel is part of a vehicle. Chapter is part of a book. The relation goes from the part to the whole in both pairs.
+## Question models and worked examples
 
-## Common mistake
+### Instrument and measured quantity
 
-Objects in both pairs need not look alike. The structure of their relationship is what must match.
+**Question.** Barometer : pressure :: odometer : humidity, distance, acceleration or temperature?
 
-## Practice
+1. A barometer measures pressure. This is instrument → quantity.
+2. An odometer records the distance a vehicle has travelled.
 
-Thermometer is to temperature as barometer is to what?
+**Answer:** Distance.
 
-**Answer:** Atmospheric pressure. Each instrument measures the paired quantity.
+### Part to whole direction
+
+**Question.** Spoke : wheel :: key : lock, keyboard, door or driver?
+
+1. A spoke is a component of a wheel. Preserve part → whole.
+2. A keyboard key is a component of a keyboard. A key can operate a lock but is not its component in this relation.
+
+**Answer:** Keyboard.
+
+### Number transformation
+
+**Question.** 4 : 19 and 6 : 39 follow the same simple rule. Apply it to 9.
+
+1. Both outputs are three above the square: 4²+3=19 and 6²+3=39.
+2. Use 9²+3.
+
+**Answer:** 84.
+
+### Letter-by-letter transformation
+
+**Question.** CFE : EHG :: HKN : ?
+
+1. Positions C→E, F→H and E→G each rise by two.
+2. Apply +2 to H, K and N to obtain J, M and P.
+
+**Answer:** JMP.

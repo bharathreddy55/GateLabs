@@ -43,7 +43,14 @@ function formatNote(markdown) {
   const inline = text => h(text).replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
   return markdown.trim().split(/\r?\n\s*\r?\n/).map(block => {
     if (block.startsWith('## ')) return `<h4>${inline(block.slice(3))}</h4>`;
-    if (block.startsWith('- ')) return `<ul>${block.split(/\r?\n/).map(line => `<li>${inline(line.slice(2))}</li>`).join('')}</ul>`;
+    if (block.startsWith('### ')) return `<h5>${inline(block.slice(4))}</h5>`;
+    const lines = block.split(/\r?\n/);
+    if (lines.every(line => line.startsWith('- '))) {
+      return `<ul>${lines.map(line => `<li>${inline(line.slice(2))}</li>`).join('')}</ul>`;
+    }
+    if (lines.every(line => /^\d+\. /.test(line))) {
+      return `<ol>${lines.map(line => `<li>${inline(line.replace(/^\d+\. /, ''))}</li>`).join('')}</ol>`;
+    }
     return `<p>${inline(block)}</p>`;
   }).join('');
 }

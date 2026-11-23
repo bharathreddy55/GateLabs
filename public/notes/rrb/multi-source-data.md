@@ -1,23 +1,53 @@
-Join sources by a shared key such as station code and date. Align units, definitions and time windows before calculating. Missing observations and zero observations require different interpretations. A percentage from one source may need an absolute total from another.
+## What it means
 
-## Concepts in depth
+Multi-source interpretation combines facts spread across passages, tables and charts. Each source can describe a different denominator, scope or time period. A correct result requires matching the same date or group before applying a rate or drawing a conclusion. A missing link can make a requested comparison impossible.
 
-Join records by a shared identifier and time period. Before multiplying a count by a rate, confirm the rate describes the same measurement base. Verify whether missing entries mean zero, unavailable, or outside the period.
+## Formulas and rules
 
-## How to apply it
+- **Join by key:** Match group, period and unit before using two values together. If one source is in thousands and the other in single units, normalise them.
+- **Nested rates:** If q% of a group is a subset and p% of that subset has a property, the joint share of the original group is (q/100)(p/100).
+- **Aggregation:** Sum subgroup counts over a shared scope before computing a total ratio. For per-capita figures, divide a total by the matching population.
+- **Inference:** A supported conclusion needs all its inputs. Correlation or a pre/post comparison alone does not establish cause.
 
-If one chart shows scheduled services and a table gives cancellations, on-time departures may use completed services as denominator while punctuality per scheduled service uses all scheduled services. State the denominator from the question before combining the numbers.
+## How to study it for Station Master
 
-## Worked example
+- Write the requested result as a fraction or sentence first. Label the source beside each piece of data and reject any row that applies to a different group.
+- Practise an item whose answer is “cannot be determined”. Identify the missing value precisely instead of filling it with a neighbouring total.
 
-One table lists 240 passengers, and a chart says 35% travelled before noon on the same date. Multiply 240 by 0.35 to get 84.
+## Question models and worked examples
 
-## Common mistake
+### Text rule plus volumes
 
-A shared station name alone does not establish that two values refer to the same day or platform.
+**Question.** A table gives 800 weekday and 500 weekend bookings. A notice gives cancellation rates of 5% and 12% respectively. How many bookings remain?
 
-## Practice
+1. Weekdays: 800×0.95=760. Weekends: 500×0.88=440.
+2. Add the two retained counts because the periods are separate.
 
-A daily footfall index is 110 with a 200-person base. How many passengers does that represent?
+**Answer:** 1200 bookings.
 
-**Answer:** 220, provided the index is on a base-100 scale and refers to that station.
+### Chart share and nested subgroup
+
+**Question.** A chart shows digital sales are 60% of 2,500 tickets. A note says 40% of digital sales used the mobile app. Find app bookings and their share of all sales.
+
+1. Digital sales total 2500×0.60=1500. The second percentage uses 1500 as base.
+2. App sales=1500×0.40=600. Divide by 2500 to recover the overall share.
+
+**Answer:** 600 tickets, 24% of all sales.
+
+### Compare rates using a second source
+
+**Question.** A table lists 45 faults at Depot A and 36 at B. A second table gives 900 machines at A and 600 at B. Which fault count per 100 machines is lower?
+
+1. Match each count to its own machine total. A=45/900×100=5.
+2. B=36/600×100=6. Smaller raw count does not settle the rate.
+
+**Answer:** A, with 5 faults per 100 machines.
+
+### Spot incompatible evidence
+
+**Question.** A chart gives travel for four stations combined. A table lists Station C’s capacity. Can you determine Station C’s utilisation from these alone?
+
+1. Utilisation requires C’s actual use divided by C’s capacity.
+2. Combined travel does not provide C’s actual use because many allocations produce the same combined total.
+
+**Answer:** No. Station C’s own usage is needed.

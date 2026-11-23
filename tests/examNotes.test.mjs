@@ -16,6 +16,26 @@ function checkRecallCard(svg, details, id) {
   for (const paragraph of details) assert.ok(!svg.includes(paragraph), id);
 }
 
+function checkHandnote(body, id) {
+  assert.deepEqual([...body.matchAll(/^## (.+)$/gm)].map(match => match[1]), [
+    'What it means',
+    'Formulas and rules',
+    'How to study it for Station Master',
+    'Question models and worked examples'
+  ], id);
+  const [concept, rules, study, exampleSection] = body.split(/^## .+\n\n/gm).slice(1);
+  const models = exampleSection.split(/^### .+\n\n/gm).slice(1);
+  assert.ok(concept.trim().split(/\s+/).length >= 35, id);
+  assert.ok((rules.match(/^- /gm) || []).length >= 3, id);
+  assert.ok((study.match(/^- /gm) || []).length >= 2, id);
+  assert.ok(models.length >= 4, id);
+  for (const model of models) {
+    assert.match(model, /^\*\*Question\.\*\* .+\n\n1\. .+\n2\. .+/m, id);
+    assert.match(model, /^\*\*Answer:\*\* .+/m, id);
+  }
+  return [concept.trim(), ...models.map(model => model.split('\n')[0])];
+}
+
 for (const file of readdirSync(catalogs).filter(name => name.endsWith('.json'))) {
   const exam = file.slice(0, -5);
   const notes = JSON.parse(readFileSync(new URL(file, catalogs), 'utf8'));
@@ -33,7 +53,12 @@ for (const file of readdirSync(catalogs).filter(name => name.endsWith('.json')))
       assert.equal(new URL(note.notion).hostname, 'app.notion.com');
       assert.ok(note.sources.length);
       for (const [, source] of note.sources) assert.equal(new URL(source).protocol, 'https:');
-      const body = readFileSync(new URL(note.id + '.md', folder), 'utf8');
+      const body = readFileSync(new URL(note.id + '.md', folder), 'utf8').replaceAll('\r\n', '\n');
+      const svg = readFileSync(new URL(note.id + '.svg', visuals), 'utf8');
+      if (exam === 'rrb') {
+        checkRecallCard(svg, checkHandnote(body, note.id), note.id);
+        continue;
+      }
       assert.match(body, /^## Worked example$/m);
       assert.match(body, /^## Practice$/m);
       assert.match(body, /\*\*Answer:\*\*/);
@@ -42,7 +67,6 @@ for (const file of readdirSync(catalogs).filter(name => name.endsWith('.json')))
       assert.ok(explanation?.split(/\s+/).length >= 28, note.id);
       assert.ok(application?.split(/\s+/).length >= 26, note.id);
       assert.ok(body.trim().split(/\s+/).length >= 150, note.id);
-      const svg = readFileSync(new URL(note.id + '.svg', visuals), 'utf8');
       checkRecallCard(svg, [explanation, application], note.id);
     }
   });
@@ -64,6 +88,13 @@ test('all CBAT batteries have detailed lessons and brief recall cards', () => {
   for (const { id } of CBAT_BATTERIES) {
     const note = CBAT_NOTES[id];
     assert.ok(note.details.every(paragraph => paragraph.split(/\s+/).length >= 45), id);
+    assert.ok(note.rules.length >= 3 && note.method.length >= 3, id);
+    assert.ok(note.exampleTitle && note.prompt && note.solution, id);
+    assert.ok(note.models.length >= 2, id);
+    for (const { title, prompt, steps, answer } of note.models) {
+      assert.ok(title && prompt && steps.length >= 2, id);
+      assert.equal(Boolean(answer), id !== 'personality', id);
+    }
     const svg = readFileSync(new URL(id + '.svg', visuals), 'utf8');
     checkRecallCard(svg, note.details, id);
   }

@@ -123,9 +123,12 @@ for (const file of readdirSync(catalogs).filter(name => name.endsWith('.json')))
     const lesson = content.get(id);
     if (!lesson) throw new Error('Missing note content: ' + exam + '/' + id);
     const noteFile = new URL(exam + '/' + id + '.md', notes);
-    const markdown = expandNote(readFileSync(noteFile, 'utf8'), lesson, id);
     const svg = buildVisual(title, lesson.cues);
-    writeFileSync(noteFile, markdown);
+    // Station Master handnotes are maintained directly as Markdown.
+    if (exam !== 'rrb') {
+      const markdown = expandNote(readFileSync(noteFile, 'utf8'), lesson, id);
+      writeFileSync(noteFile, markdown);
+    }
     writeFileSync(new URL(id + '.svg', directory), svg);
     used.add(id);
     count++;

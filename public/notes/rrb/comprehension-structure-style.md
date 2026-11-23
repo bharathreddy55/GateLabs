@@ -1,23 +1,53 @@
-Track connective words and sentence functions. In contrast introduces a difference, for example supplies an illustration, and therefore signals an inference. Distinguish description, explanation, persuasion and satire using the author's word choice and argumentative moves.
+## What it means
 
-## Concepts in depth
+Structure is the sequence of jobs done by sentences and paragraphs, such as introducing a claim, giving evidence, raising an objection or explaining a result. Style includes the writer’s tone, choice of language and level of certainty. Tone belongs to the author’s wording and purpose, even when the subject itself is dramatic.
 
-Common structures include claim–evidence, problem–response, contrast, causal sequence and concession. Tone describes the author's stance based on diction and degrees of confidence. Modals such as may and could can signal caution without implying rejection.
+## Formulas and rules
 
-## How to apply it
+- **Connectors:** “However” often signals contrast, “therefore” a consequence or conclusion, “for example” an illustration, and “although” a concession.
+- **Paragraph role:** Ask what would be lost if the paragraph were removed. Possibilities include a definition, caveat, comparison, counterargument or evidence.
+- **Tone evidence:** Tentative language such as “suggests” supports a cautious tone. Dismissive labels or excessive praise indicate stronger attitudes only if present.
+- **Purpose:** Distinguish explaining a process, persuading the reader, evaluating alternatives and narrating events. A comparison can be evidence for a recommendation or the whole purpose of a passage.
 
-A paragraph first describes an improvement, then notes a second change and proposes a comparison. Its structure is a preliminary finding followed by a competing explanation and a suggested test. It is cautiously analytical rather than certain.
+## How to study it for Station Master
 
-## Worked example
+- Write one function beside each paragraph, then join them with their relationship. For tone, identify two words or phrases that support your choice.
+- Practise one “role of the second paragraph” and one “why is this example used” question. Avoid choosing a tone just because you personally agree with the passage.
 
-A paragraph introduces water scarcity, gives two causes, compares policies and endorses one. The structure is problem, causes, alternatives and recommendation.
+## Question models and worked examples
 
-## Common mistake
+### Concession followed by judgment
 
-Distinguish tone from topic. A serious topic can be discussed in a neutral analytical tone.
+**Question.** “Automatic announcements are consistent. However, during disruptions they can lag behind decisions made on the platform. A manual update should remain available.” How is the argument organised?
 
-## Practice
+1. The first sentence concedes a benefit. “However” introduces a contrasting limitation.
+2. The final sentence recommends a backup because of the limitation.
 
-What does nevertheless often signal?
+**Answer:** Benefit, limitation, then recommendation.
 
-**Answer:** A qualification or contrast with what the preceding sentence leads the reader to expect.
+### Infer tone from qualifiers
+
+**Question.** “The data suggest the repair may have reduced noise, though readings from additional sites are needed.” What is the tone?
+
+1. “Suggest” and “may” limit certainty. The clause about more readings keeps the finding open to revision.
+2. This is measured evaluation of evidence.
+
+**Answer:** Cautious and analytical.
+
+### Function of a specific example
+
+**Question.** “Small inefficiencies accumulate over a timetable. A two-minute turnaround delay repeated across six departures costs twelve minutes.” Why is the second sentence included?
+
+1. The first sentence gives a general claim.
+2. The calculation supplies a concrete illustration of how the repeated effect accumulates.
+
+**Answer:** To illustrate the claim with a numerical example.
+
+### Role of a counterargument
+
+**Question.** A passage argues for reusing older station buildings. Its second paragraph notes that adapting them for accessibility can be costly, then describes phased upgrades and how these can spread the cost. What is that paragraph doing?
+
+1. The cost concern challenges the recommendation. The rest of the paragraph addresses it by explaining one response.
+2. The objection qualifies the proposal without replacing it.
+
+**Answer:** Acknowledging an objection and responding to it.

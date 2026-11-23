@@ -22,7 +22,7 @@ function streetMap({size,start,end,edges,houseCells}, route) {
   const axis = cell => [16 + cell%size*spacing, 16 + Math.floor(cell/size)*spacing];
   const marks = [[start,'A'],[end,'B'],...houseCells.map((cell,i)=>[cell,i+1])];
   const limit = 32 + (size-1)*spacing;
-  return `<svg class="cbat-map" viewBox="0 0 ${limit} ${limit}" role="img" aria-label="${route?'Street map highlighting the shortest route from A to B':'Street map with A, B and houses 1 to 5'}">
+  return `<svg class="cbat-map" viewBox="0 0 ${limit} ${limit}" role="img" aria-label="${route?'Street map highlighting the shortest route from A to B':'Street map with A, B and numbered houses'}">
     ${edges.map(([from,to]) => {
       const [x1,y1] = axis(from), [x2,y2] = axis(to);
       return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}"/>`;
@@ -62,17 +62,26 @@ function studyNotes(){
             <span>Open full-size recall card ↗</span>
           </a>
         </figure>
-        <h3>Concepts in depth</h3>
+        <h3>What it means</h3>
         ${note.details.map(paragraph=>`<p>${h(paragraph)}</p>`).join('')}
-        <h3>${id==='personality'?'How to approach the prompts':'How to solve it'}</h3>
+        <h3>Rules to remember</h3>
+        <ul>${note.rules.map(rule=>`<li>${h(rule)}</li>`).join('')}</ul>
+        <h3>How to study it for Station Master</h3>
         <ol>${note.method.map(step=>`<li>${h(step)}</li>`).join('')}</ol>
-        <h3>${id==='personality'?'Sample prompt':'Worked example'}</h3>
+        <p>${h(note.practice)}</p>
+        <p><strong>Common trap.</strong> ${h(note.mistake)}</p>
+        <h3>${id==='personality'?'Prompt models and examples':'Question models and worked examples'}</h3>
+        <h4>${h(note.exampleTitle)}</h4>
         <p>${h(note.prompt)}</p>
         ${note.map?streetMap(note.map):''}
         ${note.figures?`<div class="cbat-options cbat-figures">${note.figures.map((cells,index)=>`<div>Figure ${'ABC'[index]}${shape(cells)}</div>`).join('')}</div>`:''}
         <p>${h(note.solution)}</p>
-        <h3>Common mistake</h3><p>${h(note.mistake)}</p>
-        <h3>Practice focus</h3><p>${h(note.practice)}</p>
+        ${note.models.map(model=>`
+          <h4>${h(model.title)}</h4>
+          <p>${h(model.prompt)}</p>
+          <ol>${model.steps.map(step=>`<li>${h(step)}</li>`).join('')}</ol>
+          ${model.answer?`<p><strong>Answer:</strong> ${h(model.answer)}</p>`:''}
+        `).join('')}
       </details>`;
     }).join('')}
   </section>`;

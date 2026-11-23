@@ -1,23 +1,53 @@
-Friction opposes relative sliding or its tendency between contacting surfaces. Static friction adjusts up to a limiting value often modelled as μsN. Kinetic friction for sliding is commonly approximated as μkN. The normal force depends on the geometry and other applied forces.
+## What it means
 
-## Concepts in depth
+Friction is a contact force that opposes relative slipping or the tendency for surfaces to slip. Static friction adjusts up to its limiting value while surfaces remain at rest relative to each other. Kinetic friction describes sliding in the simple dry-friction model. The normal force is perpendicular to the surface.
 
-Static friction adjusts up to its maximum μₛN to prevent relative slipping. Once surfaces slide in the simple model, kinetic friction has magnitude μₖN and opposes relative motion. N is not always mg. Vertical forces or an incline can change it.
+## Formulas and rules
 
-## How to apply it
+- **Static friction:** 0 ≤ fₛ ≤ μₛN in magnitude. Only at impending slip does fₛ reach μₛN.
+- **Kinetic friction:** fₖ=μₖN in the simplified model. Its direction opposes relative sliding at the contact.
+- **Normal force:** For a level surface with no vertical acceleration and no other vertical forces, N=mg. On a simple incline, N=mg cos θ.
+- **Net force and work:** Along the motion, a push minus opposing friction gives the horizontal resultant, which equals ma. Sliding friction doing work on a crate on fixed ground contributes −fₖs.
 
-If a level floor can provide at most 30 N static friction and the horizontal pull is 21 N, static friction is 21 N in the opposite direction. Applying a coefficient to compute the maximum tells you whether slipping starts, not the actual static force in every case.
+## How to study it for Station Master
 
-## Worked example
+- Always ask if the object stays at rest, is about to move or is already sliding. Solve for the needed static friction before comparing it with the limit.
+- Sketch a force diagram with separate arrows for normal and weight. Practise a slanted pull so you remember N need not equal mg.
 
-A 5 kg crate on a horizontal floor has normal force 49 N. If μk=0.2, the idealized sliding friction magnitude is 9.8 N.
+## Question models and worked examples
 
-## Common mistake
+### Static friction below the limit
 
-Static friction is not always at its maximum. A small applied force may be balanced by a smaller static friction force.
+**Question.** A block has normal force 100 N and μₛ=0.4. A horizontal 24 N push fails to move it. Find friction.
 
-## Practice
+1. Maximum static friction is 0.4×100=40 N.
+2. The block is in equilibrium, so static friction balances all 24 N, below the maximum.
 
-Why does a rolling tyre grip the road at the contact patch?
+**Answer:** 24 N opposite the push.
 
-**Answer:** When it rolls without slipping, static friction can transmit force between the tyre and road.
+### Sliding acceleration
+
+**Question.** A 10 kg block slides on level ground, g=10 and μₖ=0.25. If pushed horizontally with 40 N in its direction of motion, what is the acceleration?
+
+1. Normal force=100 N and kinetic friction=25 N.
+2. Resultant along motion is 40−25=15 N. Divide by 10 kg.
+
+**Answer:** 1.5 m/s² in the direction of motion.
+
+### Angled pull and normal force
+
+**Question.** A 20 kg crate slides on level ground. An angled rope pulls upward with a 40 N vertical component. With g=10 and μₖ=0.3, find kinetic friction.
+
+1. With no vertical acceleration, N+40=200 N, so N=160 N.
+2. Multiply by μₖ=0.3.
+
+**Answer:** 48 N against sliding.
+
+### Incline threshold
+
+**Question.** A block sits on a 30° slope. What is the smallest μₛ that can hold it, with no other applied force?
+
+1. Down-slope weight is mg sin 30° and normal force is mg cos 30°.
+2. Require μₛmg cos 30° ≥ mg sin 30°. The threshold is tan 30°.
+
+**Answer:** 1/√3, about 0.577.

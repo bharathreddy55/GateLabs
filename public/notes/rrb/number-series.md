@@ -1,23 +1,62 @@
-Check first differences, second differences, ratios, alternating subsequences and familiar powers. Apply a proposed rule to every known term and prefer a simple consistent rule that matches the options.
+## What it means
 
-## Concepts in depth
+A number series tests the intended rule that generates successive terms. A simple consistent pattern is usually the goal, since a finite list can mathematically fit many formulas. Look for arithmetic differences, ratios, alternating subsequences or a recurrence that uses the previous terms. A missing interior term must fit both sides.
 
-Start with short differences and ratios, then check for second differences, alternating rules, powers, products and interleaved sequences. Explain every given term. A correct final number alone does not validate a putative rule.
+## Formulas and rules
 
-## How to apply it
+- **Differences:** Constant first difference gives an AP. Constant second difference gives a steady change in first differences.
+- **Ratios and operations:** If differences grow fast, test constant multiplication or multiplication plus a fixed adjustment.
+- **Alternation:** Separate odd and even positions if adjacent steps look irregular. Each subsequence can have its own rule.
+- **Families and recurrences:** Check squares, cubes, primes or combinations such as the sum of the preceding two terms. Verify your candidate on every known transition.
 
-For 3,20,6,17,12,14, the odd positions double and the even positions decline by three. The seventh term is 24. If a global pattern needs a special exception for every transition, test two simpler subsequences instead.
+## How to study it for Station Master
 
-## Worked example
+- Write either a difference row or two alternating rows before trying more complicated rules. Use the simplest rule consistent with all given terms and choices.
+- Practise missing terms and wrong-term detection. For a proposed error, verify that correcting it repairs both nearby transitions and leaves the rest intact.
 
-3, 7, 13, 21, 31 has differences 4, 6, 8, 10. The next difference is 12, giving 43.
+## Question models and worked examples
 
-## Common mistake
+### Second differences
 
-A rule that fits the last two terms may fail elsewhere. Check all adjacent transitions.
+**Question.** Find the next term: 5, 9, 15, 23, 33.
 
-## Practice
+1. First differences are 4,6,8,10.
+2. Continue the step increases by 2, so add 12 to 33.
 
-Find the next term of 2, 6, 12, 20, 30.
+**Answer:** 45.
 
-**Answer:** 42, since the terms are 1×2, 2×3, 3×4, 4×5, 5×6, then 6×7.
+### Alternating tracks
+
+**Question.** Find the next term: 4, 30, 7, 25, 10, 20, 13.
+
+1. Odd positions are 4,7,10,13, rising by 3.
+2. The next term is in even position. Even values are 30,25,20, falling by 5.
+
+**Answer:** 15.
+
+### Multiply and adjust
+
+**Question.** Find the next term: 3, 8, 18, 38, 78.
+
+1. Check the relation ×2+2, which produces 8,18,38 and 78 from their predecessors.
+2. Apply it once more: 2×78+2.
+
+**Answer:** 158.
+
+### Missing term across both neighbours
+
+**Question.** Complete 2, 5, 7, ?, 19, 31.
+
+1. 2+5=7 suggests that each subsequent term is the sum of the previous two. Then 5+7=12.
+2. Check 7+12=19 and 12+19=31.
+
+**Answer:** 12.
+
+### Identify the wrong term
+
+**Question.** One term is wrong: 4, 9, 16, 26, 36, 49. Correct it.
+
+1. Most values match successive squares 2² through 7².
+2. The fourth position should be 5²=25, which also restores the odd-number gaps 9 and 11 around it.
+
+**Answer:** Replace 26 with 25.

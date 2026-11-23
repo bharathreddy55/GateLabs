@@ -1,23 +1,53 @@
-Mass measures inertia and is expressed in kilograms. Weight is gravitational force mg, in newtons. Density is mass divided by volume. A sealed object floats at equilibrium if its average density is below that of the surrounding fluid, with submerged volume providing the buoyant force.
+## What it means
 
-## Concepts in depth
+Mass measures inertia and is measured in kilograms. Weight is the gravitational force on that mass, measured in newtons. Density describes mass per unit volume. A hollow object can have a low average density because its full displaced volume includes empty or air-filled space.
 
-Mass measures inertia and is independent of local gravitational acceleration. Weight is gravitational force and changes with g. Density is mass per volume, so density of a composite may require adding component masses and volumes before division.
+## Formulas and rules
 
-## How to apply it
+- **Weight:** W=mg, where g is gravitational acceleration. Use the value specified in the question. A change of location can change W while mass stays constant.
+- **Density:** ρ=m/V. For combined objects, average density uses total mass over total volume.
+- **Relative density:** ρobject/ρreference is dimensionless. For solids and liquids the usual comparison is with water when the question says so.
+- **Floatation:** For a freely floating object in equilibrium, displaced liquid mass equals object mass. Submerged fraction=ρobject/ρliquid under the simple uniform-fluid model.
 
-A 300 g sample occupying 100 cm³ has density 3 g/cm³, or 3,000 kg/m³. If combined with 100 cm³ of density 1 g/cm³ without volume change, density becomes (300+100)/200=2 g/cm³. Equal masses would require different weighting.
+## How to study it for Station Master
 
-## Worked example
+- Ask whether the question requires kg, N or kg/m³. Convert the volume first and use the stated value of g.
+- Practise weighing the same mass under different gravity, finding volume by displacement and comparing a floating fraction with relative density.
 
-A 2 kg body has weight about 19.6 N on Earth at g=9.8 m/s². A 200 cm³ object of mass 500 g has density 2.5 g/cm³.
+## Question models and worked examples
 
-## Common mistake
+### Two gravitational fields
 
-Mass remains the same when you move to a weaker gravitational field, while weight changes.
+**Question.** What does a 12 kg tool weigh where g=10 m/s² and where g=1.6 m/s²?
 
-## Practice
+1. Use W=mg at each location. The mass is 12 kg in both.
+2. Calculate 12×10 and 12×1.6.
 
-Find the density of a 900 g object occupying 300 cm³.
+**Answer:** 120 N and 19.2 N.
 
-**Answer:** 3 g/cm³, from mass divided by volume.
+### Density by displacement
+
+**Question.** A fully submerged 156 g stone raises water in a measuring cylinder from 90 to 150 mL. Find its density.
+
+1. Stone volume is the displacement, 60 mL=60 cm³.
+2. Divide 156 g by 60 cm³.
+
+**Answer:** 2.6 g/cm³.
+
+### Average density with a hollow centre
+
+**Question.** A sealed object of mass 360 g displaces 500 cm³ when fully immersed. Find its average density and whether it floats in water if released.
+
+1. Use the total displaced volume, so density=360/500=0.72 g/cm³.
+2. Water has density about 1 g/cm³. The object can displace its own mass before being fully submerged.
+
+**Answer:** 0.72 g/cm³, and it floats.
+
+### Floating fraction
+
+**Question.** A wooden block has density 650 kg/m³ and floats in water with density 1000 kg/m³. What fraction is submerged?
+
+1. At equilibrium ρwater×Vsubmerged×g equals ρblock×Vtotal×g.
+2. Cancel g and divide the densities: 650/1000.
+
+**Answer:** 65% of the volume.

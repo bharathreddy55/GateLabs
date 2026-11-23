@@ -1,23 +1,53 @@
-For inference, combine stated evidence with the smallest warranted assumption. For application, transfer the author's mechanism to a new case. Identify the relevant conditions and reject options that depend on facts the passage never supplies.
+## What it means
 
-## Concepts in depth
+An inference is a conclusion supported by clues in the passage even if it is unstated. An application uses a principle from the passage in a new situation with matching conditions. Questions may ask how new evidence would affect a claim. Judge the result with the passage’s logic and scope, using only outside facts that the stem explicitly supplies.
 
-Application transfers the passage's principle to a new example without discarding conditions. Inference needs supporting text even if it is not quoted directly. Options that extend one study to every setting overreach unless the passage establishes that generalisation.
+## Formulas and rules
 
-## How to apply it
+- **Inference test:** Find the exact words that constrain the answer. Prefer a conclusion supported by those clues over one that is merely imaginable.
+- **Application test:** Extract an if–then rule, including exceptions. Check that the new case satisfies every relevant condition.
+- **Strengthen or weaken:** Identify the evidence-to-claim link. New information changes support if it supplies a missing connection or offers a plausible alternative explanation.
+- **Quantifier control:** “Some” does not imply “most” and correlation does not establish cause. Preserve uncertainty such as “may”.
 
-If an author recommends checking whether a schedule change explains lower waiting times, a comparable application looks for other practices that changed alongside a new queue policy. Repeating a passage fact alone is not an application.
+## How to study it for Station Master
 
-## Worked example
+- Underline one or two evidence lines before selecting an answer. Separate direct statements from inferences and write the short bridge between them.
+- Practise applying a rule to a different subject and keep track of the condition that stayed the same. Test the most tempting answer for any claim unsupported by the text.
 
-Passage: Interleaving similar practice problems improves later discrimination by forcing learners to choose a method. Mix examples of percentage change and simple difference so learners must select the right operation.
+## Question models and worked examples
 
-## Common mistake
+### Inference from timing
 
-Generalize within the author's stated conditions. An option adding never or all can overstate the claim.
+**Question.** The gate log shows the last worker left at 6 pm. A light sensor recorded movement at 6:15. The sensor detects animals as well as people. What can be inferred?
 
-## Practice
+1. Movement was recorded after the logged departure because 6:15 is later than 6 pm.
+2. The sensor’s detection range prevents identifying the source from this observation alone.
 
-A passage says redundancy helps networks operate after one link fails. Which design fits?
+**Answer:** There was a movement reading after the worker left, and its source is undetermined.
 
-**Answer:** A system with a second independent communication route, because traffic can take it after the first route fails.
+### Apply a decision rule
+
+**Question.** A reading room permits group discussion if a group reserves a room and closes its door. Walk-ins can discuss in the courtyard. A group has reserved a room but leaves the door open. Does its discussion meet the indoor rule?
+
+1. The indoor rule has two jointly required conditions.
+2. Reservation meets the first, while the open door fails the second. The walk-in courtyard rule describes another location.
+
+**Answer:** No. The group must also close the room door.
+
+### Weaken a causal claim
+
+**Question.** A report says a bicycle-sharing campaign reduced car traffic because car counts fell immediately after launch. Which finding would weaken the claim: a simultaneous bridge closure diverted traffic, or rainy weeks reduced bicycle use in another year?
+
+1. The causal claim uses a before/after fall to credit the campaign.
+2. A bridge closure during the measurement offers another reason why counts fell. An event in another year does not address this comparison.
+
+**Answer:** The simultaneous bridge closure.
+
+### Scope of a conclusion
+
+**Question.** Two shaded bus stops were cooler at noon than adjacent unshaded stops on a clear day. Can you infer shaded stops are cooler under every condition?
+
+1. Identify the tested conditions: two sites, clear weather and noon.
+2. No measurements cover other times or weather. A universal statement goes beyond the comparison.
+
+**Answer:** Only the observed noon comparison is supported.

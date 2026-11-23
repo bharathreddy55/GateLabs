@@ -372,7 +372,10 @@ try{
  assert.equal(await page.locator('#cbat-practice').isHidden(),true);
  await page.getByRole('button',{name:'Spatial Scanning',exact:true}).click();
  await page.getByText(/House 2\. The upper route/).waitFor();
- await page.getByRole('heading',{name:'Concepts in depth'}).waitFor();
+ await page.getByRole('heading',{name:'Rules to remember'}).waitFor();
+ const spatialLesson=page.locator('[data-cbat-lesson="spatial"]');
+ assert.equal(await spatialLesson.getByRole('heading',{level:4}).count(),3);
+ assert.match(await spatialLesson.innerText(),/total length 10/);
  const recallCard=page.getByRole('img',{name:'Visual study guide for Spatial Scanning'});
  await recallCard.waitFor();
  await page.waitForFunction(()=>document.querySelector('[data-cbat-lesson="spatial"] img').naturalWidth>0);
