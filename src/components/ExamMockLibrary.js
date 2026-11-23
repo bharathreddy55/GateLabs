@@ -1,6 +1,7 @@
 import { icon } from '../config/navigation.js';
 import { CBAT_BATTERIES, CBAT_PRACTICE_SETS } from '../config/rrbCbat.js';
 import { escapeHtml as h } from '../utils/examEngine.js';
+import { paperAttemptLabel } from '../utils/paperProgress.js';
 import '../styles/mock-library.css';
 
 export const isPastPaper = paper => ['2025 memory-based','Practice reconstruction'].includes(paper.category);
@@ -34,19 +35,20 @@ function practiceTile({title, caption, glyph, attributes, href}) {
     : `<button type="button" class="mock-tile" ${attributes}>${content}</button>`;
 }
 
-function featuredCard({label,title,stats,action,glyph}) {
+function featuredCard({label,title,stats,action,glyph,attempts}) {
   return `<article class="surface mock-pick">
     <span class="mock-pick-icon">${icon(glyph)}</span>
-    <div><p class="mock-pick-label">${h(label)}</p><h4>${h(title)}</h4><p>${h(stats)}</p></div>
+    <div><p class="mock-pick-label">${h(label)}</p><h4>${h(title)}</h4><p>${h(stats)}</p>
+      ${attempts===undefined?'':`<span class="paper-attempt-label" data-completed="${attempts>0}">${paperAttemptLabel(attempts)}</span>`}</div>
     ${action}
   </article>`;
 }
 
-function featuredTest(entry, exam, label, glyph) {
+function featuredTest(entry, exam, label, glyph, attempts) {
   const { paper,index } = entry;
   const minutes = paper.full===false ? practiceMinutes(exam,paper.questions.length) : exam.minutes;
   return featuredCard({
-    label, title:paper.title, stats:testStats(paper.questions,minutes), glyph,
+    label, title:paper.title, stats:testStats(paper.questions,minutes), glyph, attempts,
     action:`<button type="button" class="ui-button primary" data-paper="${index}" aria-label="Open ${h(paper.title)}">Open test ${icon('arrow')}</button>`
   });
 }
@@ -63,16 +65,20 @@ function subjectTests(entries) {
   return subjects;
 }
 
-function renderSubjects(subjects,exam) {
+function renderSubjects(subjects,exam,attemptCount) {
   return [...subjects].map(([name,tests])=>`<details class="surface mock-subject">
     <summary><span>${h(name)}</span><small>${testCount(tests.length)}</small></summary>
-    <ul>${tests.map(({paper,index,questions})=>`<li>
-      <div><strong>${h(paper.title)}</strong><p>${testStats(questions,practiceMinutes(exam,questions.length))}</p></div>
-      <button type="button" class="ui-button" data-launch-section="${index}" data-exam-subject="${h(name)}">Start subject test ${icon('arrow')}</button>
-    </li>`).join('')}</ul></details>`);
+    <ul>${tests.map(({paper,index,questions})=>{
+      const attempts=attemptCount(paper,name);
+      return `<li>
+        <div><strong>${h(paper.title)}</strong><p>${testStats(questions,practiceMinutes(exam,questions.length))}</p>
+        <span class="paper-attempt-label" data-completed="${attempts>0}">${paperAttemptLabel(attempts)}</span></div>
+        <button type="button" class="ui-button" data-launch-section="${index}" data-exam-subject="${h(name)}">Start subject test ${icon('arrow')}</button>
+      </li>`;
+    }).join('')}</ul></details>`);
 }
 
-export function mockLibrary({exam,accent,symbol,papers,viewPaper,renderPaper,importPanel,loadError}) {
+export function mockLibrary({exam,accent,symbol,papers,viewPaper,renderPaper,attemptCount,importPanel,loadError}) {
   const entries = papers.map((paper,index)=>({paper,index,view:viewPaper(paper)})).filter(({paper})=>!isPastPaper(paper));
   const ready = entries.filter(({view})=>!view.errors.length);
   const full = ready.filter(({paper})=>paper.full!==false);
@@ -96,8 +102,8 @@ export function mockLibrary({exam,accent,symbol,papers,viewPaper,renderPaper,imp
     action:`<a class="ui-button" href="#/pyq-mocks">Browse years ${icon('arrow')}</a>`
   }) : '';
   const featured = [
-    primary && featuredTest(primary,exam,'Full paper','file'),
-    drill && featuredTest(drill,exam,drill.paper.category==='Challenge drill'?'Challenge drill':'Short practice','spark'),
+    primary && featuredTest(primary,exam,'Full paper','file',attemptCount(primary.paper)),
+    drill && featuredTest(drill,exam,drill.paper.category==='Challenge drill'?'Challenge drill':'Short practice','spark',attemptCount(drill.paper)),
     pastGate || shortPractice
   ].filter(Boolean).slice(0,2);
   const types = [...new Set(entries.map(({paper})=>paper.category||'Original model'))];
@@ -129,12 +135,13 @@ export function mockLibrary({exam,accent,symbol,papers,viewPaper,renderPaper,imp
         ${entries.length?`<details class="mock-filter"><summary>Filter tests</summary><div class="paper-filters">
           <label>Paper type<select data-paper-filter="type"><option value="">All types</option>${types.map(type=>`<option>${h(type)}</option>`).join('')}</select></label>
           <label>Status<select data-paper-filter="status"><option value="">All statuses</option><option value="ready">Ready</option><option value="unavailable">Needs correction</option></select></label>
+          <label>Attempts<select data-paper-filter="attempts"><option value="">All papers</option><option value="completed">Completed</option><option value="unattempted">Not attempted</option></select></label>
         </div></details>`:''}
         <p class="mock-results-count" data-paper-filter-count role="status">${testCount(entries.length)}</p>
         <div class="paper-grid mock-paper-grid">${entries.map(({paper})=>renderPaper(paper)).join('')}</div>
         <p class="surface mock-empty" data-mock-empty ${entries.length?'hidden':''}>No tests match this view.</p>
       </div>
-      <div class="mock-subjects" data-mock-subjects hidden>${renderSubjects(subjects,exam).join('')}</div>
+      <div class="mock-subjects" data-mock-subjects hidden>${renderSubjects(subjects,exam,attemptCount).join('')}</div>
     </section>
     ${importPanel}
   </div>`;
@@ -152,11 +159,12 @@ export function bindMockLibrary(root) {
   let current = 'all';
 
   function applyFilters(){
-    const [type,status] = filters.map(filter=>filter.value);
+    const [type,status,attempts] = filters.map(filter=>filter.value);
     let visible = 0;
     for(const card of cards){
       card.hidden = (current!=='all' && card.dataset.paperGroup!==current) ||
-        Boolean((type && card.dataset.paperType!==type) || (status && card.dataset.paperStatus!==status));
+        Boolean((type && card.dataset.paperType!==type) || (status && card.dataset.paperStatus!==status) ||
+          (attempts && (Number(card.dataset.paperAttempts)>0) !== (attempts==='completed')));
       if(!card.hidden) visible++;
     }
     papers.querySelector('[data-paper-filter-count]').textContent = testCount(visible);

@@ -161,6 +161,24 @@
 .exam-search { background: var(--ws-panel); }
 .activity-row { border-radius: 10px; }
 .activity-row:hover { background: var(--ws-bg); }
+.paper-attempt-label {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  padding: 3px 7px;
+  border: 1px solid var(--ws-border);
+  border-radius: 6px;
+  color: var(--ws-muted);
+  background: var(--ws-bg);
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.35;
+}
+.paper-attempt-label[data-completed="true"] {
+  background: var(--ws-soft);
+  color: var(--ws-primary);
+}
+.paper-card-top:has(.paper-attempt-label) { flex-wrap: wrap; gap: 6px; }
 
 .exam-page-heading {
   background: linear-gradient(116deg, var(--ws-panel) 48%,

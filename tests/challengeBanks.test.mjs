@@ -91,6 +91,8 @@ test('CBAT stores only raw summaries, with completion only for personality', () 
     const result = cbatSummary(questions,answers);
     assert.deepEqual(result,{total:count,attempted:1,correct:id==='personality'?null:1});
     assert.ok(validCbatResult(id,result));
+    assert.ok(validCbatResult(id,{...result,completions:2}));
+    assert.equal(validCbatResult(id,{...result,completions:0}),false);
     assert.equal(validCbatResult(id,{...result,answers}),false);
   }
 });

@@ -144,6 +144,7 @@
 .mock-subject .ui-button { min-height: 2.5rem; }
 .mock-cbat-rules summary { font-weight: 700; }
 .cbat-set-buttons { grid-column: 2; display: flex; flex-wrap: wrap; gap: .5rem; }
+.cbat-set-buttons > div { display: grid; align-content: start; gap: .3rem; }
 .cbat-notes-intro, .cbat-note[open] { display: grid; gap: .65rem; }
 .cbat-notes-intro ul { display: grid; gap: .45rem; }
 .cbat-notes-intro li { display: flex; flex-wrap: wrap; gap: 0 .6rem; font-size: .85rem; }

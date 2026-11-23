@@ -1,5 +1,6 @@
 import {readStored} from '../utils/safeStorage.js';
 import {getAttemptRecords} from '../utils/attemptRepository.js';
+import {indexPaperAttempts,libraryPaperKey,paperAttemptLabel,sectionPaperKey,sectionPaperTitle} from '../utils/paperProgress.js';
 import { auth } from '../config/firebase';
 import { EXAMS } from '../config/exams.js';
 import { GROUP2_MAINS, group2StageNav } from '../config/group2Mains.js';
@@ -77,8 +78,22 @@ export function createExamPrep(examId){
     if(tabs.some(([key])=>key===params.get('tab')))this.activeTab=params.get('tab');
     const historyPromise=getAttemptRecords();
     try{await this.load();this.loadError=null;}catch(error){this.loadError=error.message;}
-    this.available=[...this.papers,...read(this.key('papers'))].sort((a,b)=>Number(!!this.paperView(a).errors.length)-Number(!!this.paperView(b).errors.length));
+    const uploads=read(this.key('papers'));
+    this.paperKeys=new Map([
+      ...this.papers.map(paper=>[paper,libraryPaperKey(paper)]),
+      ...uploads.map(paper=>[paper,libraryPaperKey(paper,true)])
+    ]);
+    this.available=[...this.paperKeys.keys()].sort((a,b)=>Number(!!this.paperView(a).errors.length)-Number(!!this.paperView(b).errors.length));
     const history=await historyPromise;this.syncState=history.syncState;this.attempts=history.attempts.filter(a=>a.examId===examId);
+    this.paperAttempts=indexPaperAttempts(this.attempts,this.available.flatMap(paper=>{
+      const key=this.paperKeys.get(paper);
+      return [
+        {key,title:paper.title,mode:paper.full===false?'practice':'full'},
+        ...[...this.paperView(paper).sections.keys()].map(section=>({
+          key:sectionPaperKey(key,section),title:sectionPaperTitle(paper.title,section),mode:'practice'
+        }))
+      ];
+    }));
     const progress=read(this.key('progress')),bookmarks=read(this.key('bookmarks'));
     const sections=e.sections.map(([name,count,text])=>({name,count,topics:(text||fallbackTopics[name]||'See the official syllabus for this section.').split(';').map(t=>t.trim())}));
     const totalTopics=sections.reduce((n,s)=>n+s.topics.length,0);
@@ -93,7 +108,7 @@ export function createExamPrep(examId){
         <div class="exam-overview-grid ${examId==='rrb'?'':'countdown-overview-wide'}"><div><section class="surface"><div class="section-heading"><h2>Know your exam</h2><span class="subtle-tag">${examId==='group2'?'Screening test':'Exam pattern'}</span></div><div class="pattern-metrics"><div><strong>${e.count}</strong><span>Questions</span></div><div><strong>${e.marks}</strong><span>Marks</span></div><div><strong>${e.minutes}<small> min</small></strong><span>Duration</span></div><div><strong>${e.penalty===0?'None':e.penalty===.25?'−¼':'−⅓'}</strong><span>Wrong MCQ penalty${examId==='gate'?' × marks':''}</span></div></div><p class="muted">${h(e.note)}</p><details class="pattern-detail"><summary>Section breakdown & official rules</summary>${e.sections.length?`<table><thead><tr><th>Section</th><th>Questions</th></tr></thead><tbody>${e.sections.map(([name,n])=>`<tr><td>${h(name)}</td><td>${n}</td></tr>`).join('')}</tbody></table>`:''}<a href="${e.source}" target="_blank" rel="noopener">Read the official pattern ↗</a><small>Research checked ${e.checked}</small></details></section><section class="surface next-step"><span class="eyebrow">Your next step</span><h2>${this.attempts.length?'Build on your last attempt':'Start with a practice paper'}</h2><p>${this.attempts.length?'Review your answers, then practise the topics that need more attention.':'Read the instructions and try a mock test. You can also choose one section for a shorter session.'}</p><button class="ui-button primary" data-open-tab="${this.attempts.length?'progress':'mocks'}">${this.attempts.length?'Review my progress':'Browse mock tests'} ${icon('arrow')}</button></section></div><aside ${examId==='rrb'?'':'hidden'}>${examId==='rrb'?`<details class="surface selection-detail"><summary>What comes after the CBT?</summary><p>CBAT → document verification → A2 medical. Minimum CBT eligibility: UR/EWS 40%, OBC/SC 30%, ST 25%. Selection cutoffs vary.</p><p>CBAT requires T-score 42 in every battery, with no negative marking. Final merit weights: CBT 70%, CBAT 30%.</p></details>`:''}</aside></div>
       </div>
       <div class="prep-panel" ${this.activeTab==='mocks'?'':'hidden'} role="tabpanel" id="panel-${examId}-mocks" aria-labelledby="tab-${examId}-mocks" data-panel="mocks">
-        ${mockLibrary({exam:e,accent:meta.color,symbol:meta.symbol,papers:this.available,viewPaper:p=>this.paperView(p),renderPaper:p=>this.paperCard(p),importPanel:this.importPanel(),loadError:this.loadError})}
+        ${mockLibrary({exam:e,accent:meta.color,symbol:meta.symbol,papers:this.available,viewPaper:p=>this.paperView(p),renderPaper:p=>this.paperCard(p),attemptCount:(p,section)=>this.attemptCount(p,section),importPanel:this.importPanel(),loadError:this.loadError})}
       </div>
       <div class="prep-panel" ${this.activeTab==='syllabus'?'':'hidden'} role="tabpanel" id="panel-${examId}-syllabus" aria-labelledby="tab-${examId}-syllabus" data-panel="syllabus"><div class="section-heading"><div><h2>Your syllabus checklist</h2><p>Check off topics as you revise them. Saved on this device for your account.</p></div><span id="syllabus-percent" class="subtle-tag">${percent}% complete</span></div>${sections.length?`<div class="syllabus-progress"><div style="width:${Math.min(100,percent)}%"></div></div>${sections.map((s,i)=>`<details class="surface syllabus-section"><summary><span>${h(s.name)}</span><small>${s.count} questions · <span data-section-progress="${i}">${s.topics.filter((_,j)=>progress.includes(`${i}-${j}`)).length}/${s.topics.length} revised</span></small></summary><div class="syllabus-topics">${s.topics.map((topic,j)=>`<label><input type="checkbox" data-topic="${i}-${j}" ${progress.includes(`${i}-${j}`)?'checked':''}><span>${h(topic)}</span></label>`).join('')}</div></details>`).join('')}`:`<div class="surface"><h2>GATE CS syllabus & planner</h2><p>Review subjects, track topic completion and organise your study notes.</p><a class="ui-button primary" href="#/study-planner">Open study planner ${icon('arrow')}</a></div>`}<a class="text-link" href="${e.source}" target="_blank" rel="noopener">Check the full official syllabus ↗</a>${examId==='sbi'?'<p class="muted">This checklist groups the main study areas. Refer to the official notice for the full syllabus and applicable language requirements.</p>':''}</div>
       <div class="prep-panel" ${this.activeTab==='papers'?'':'hidden'} role="tabpanel" id="panel-${examId}-papers" aria-labelledby="tab-${examId}-papers" data-panel="papers"><div class="section-heading"><div><h2>Previous papers & resources</h2><p>Keep historical papers alongside your current exam pattern.</p></div></div>${examId==='rrb'?'<div class="notice">No previous sitting of the standalone CEN 08/2026 exam was established in our research. Older NTPC papers cover some overlapping topics.</div>':''}${examId==='sbi'?`<p class="muted">These existing 2025 files are labelled memory-based. They are not verified official booklets.</p><div class="paper-grid">${this.available.filter(isPastPaper).map(p=>this.paperCard(p)).join('')}</div>`:examId==='gate'?`<a class="resource-row surface" href="#/pyq-mocks"><div>${icon('file')}<strong>GATE year-wise paper library</strong></div><span>Open library →</span></a>`:''}${relatedPapers(e)}<div class="resource-list">${(e.papers||[]).map(([label,url])=>`<a class="resource-row surface" href="${url}" target="_blank" rel="noopener"><div>${icon('file')}<strong>${h(label)}</strong></div><span>Open PDF / source ↗</span></a>`).join('')}</div><a class="text-link" href="${e.source}" target="_blank" rel="noopener">Official notification & rules ↗</a></div>
@@ -121,10 +136,11 @@ export function createExamPrep(examId){
   paperCard(p){
     const i=this.available.indexOf(p),{errors,sections}=this.paperView(p),e=EXAMS[examId];
     const full=p.full!==false, duration=full?e.minutes:practiceMinutes(e,p.questions.length);
+    const attempts=this.attemptCount(p);
     const heading = isPastPaper(p)?'h3':'h4';
     return `<article class="surface paper-card" data-library-card data-paper-group="${full?'full':'drills'}"
-      data-paper-type="${h(p.category||'Original model')}" data-paper-status="${errors.length?'unavailable':'ready'}">
-      <div class="paper-card-top"><span class="subtle-tag">${h(p.category||'Original model')}</span></div>
+      data-paper-type="${h(p.category||'Original model')}" data-paper-status="${errors.length?'unavailable':'ready'}" data-paper-attempts="${attempts}">
+      <div class="paper-card-top"><span class="subtle-tag">${h(p.category||'Original model')}</span><span class="paper-attempt-label" data-completed="${attempts>0}">${paperAttemptLabel(attempts)}</span></div>
       <${heading}>${h(p.title)}</${heading}><p class="paper-count">${testStats(p.questions,duration)}</p>
       <details class="paper-provenance"><summary>Source & sections</summary>
         <p>${h(p.note||p.provenance||'Exam-pattern practice with answer review.')}</p>
@@ -136,10 +152,14 @@ export function createExamPrep(examId){
       <div class="paper-actions"><button type="button" class="ui-button primary" data-paper="${i}" ${errors.length?'disabled':''}>${full?'Start full mock':'Start CBT drill'} ${icon('arrow')}</button></div>
     </article>`;
   },
+  attemptCount(paper,section){
+    const key=this.paperKeys.get(paper);
+    return this.paperAttempts.get(section ? sectionPaperKey(key,section) : key);
+  },
   startSection(index,name){
     const paper=this.available[index], exam=EXAMS[examId];
     const questions=this.paperView(paper).sections.get(name);
-    MockTest.startExam({examId,questions,title:`${name} · ${paper.title}`,full:false,minutes:practiceMinutes(exam,questions.length)});
+    MockTest.startExam({examId,questions,title:sectionPaperTitle(paper.title,name),paperKey:sectionPaperKey(this.paperKeys.get(paper),name),full:false,minutes:practiceMinutes(exam,questions.length)});
   },
   importPanel(){return `<details class="surface import-panel"><summary>Add your own paper <span>Advanced</span></summary><p>Import a reviewed JSON paper using the <a href="/exams/group2.json" target="_blank" rel="noopener">example format</a>. Required: title, provenance, questions with stable IDs, section, topic, options, answer key, marks, explanation and source.</p><label>Choose JSON file<input type="file" accept="application/json,.json" id="import-${examId}"></label><p id="import-status" role="status"></p></details>`;},
   weakTopics(){const topics=Object.create(null);this.attempts.forEach(a=>(a.responses||[]).forEach(r=>{const t=r.topic||r.section||r.subject;topics[t]??={correct:0,total:0};topics[t].total++;if(r.status==='correct')topics[t].correct++;}));return Object.entries(topics).sort((a,b)=>a[1].correct/a[1].total-b[1].correct/b[1].total).slice(0,5).map(([topic,v])=>`<div class="topic-score"><span>${h(topic)}</span><strong>${v.correct}/${v.total}</strong></div>`).join('')||'<p class="muted">Topic results will appear after your first test.</p>';},
@@ -160,7 +180,7 @@ export function createExamPrep(examId){
     root.querySelector('[data-tabs-next]')?.addEventListener('click',()=>{const index=tabs.findIndex(([key])=>key===this.activeTab);this.selectTab(tabs[(index+1)%tabs.length][0]);});
     root.querySelectorAll('[data-open-tab]').forEach(el=>el.onclick=()=>{this.selectTab(el.dataset.openTab);root.querySelector('[data-prep-tab][aria-selected="true"]')?.focus({preventScroll:true});root.querySelector('.prep-tabs').scrollIntoView({block:'start'});});
     root.querySelectorAll('[data-topic]').forEach(el=>el.onchange=()=>{const items=[...root.querySelectorAll('[data-topic]:checked')].map(x=>x.dataset.topic);localStorage.setItem(this.key('progress'),JSON.stringify(items));const percent=Math.round(items.length/root.querySelectorAll('[data-topic]').length*100);root.querySelector('#syllabus-percent').textContent=percent+'% complete';root.querySelector('.syllabus-progress>div').style.width=percent+'%';root.querySelector('[data-progress-percent]').textContent=percent+'%';root.querySelectorAll('[data-section-progress]').forEach(counter=>{const section=counter.dataset.sectionProgress;const inputs=[...root.querySelectorAll('[data-topic]')].filter(input=>input.dataset.topic.startsWith(section+'-'));counter.textContent=inputs.filter(input=>input.checked).length+'/'+inputs.length+' revised';});});
-    root.querySelectorAll('[data-paper]').forEach(el=>el.onclick=()=>{const p=this.available[Number(el.dataset.paper)];MockTest.startExam({examId,questions:p.questions,title:p.title,full:p.full!==false,minutes:practiceMinutes(EXAMS[examId],p.questions.length)});});
+    root.querySelectorAll('[data-paper]').forEach(el=>el.onclick=()=>{const p=this.available[Number(el.dataset.paper)];MockTest.startExam({examId,questions:p.questions,title:p.title,paperKey:this.paperKeys.get(p),full:p.full!==false,minutes:practiceMinutes(EXAMS[examId],p.questions.length)});});
     root.querySelectorAll('[data-section]').forEach(el=>el.onchange=()=>{if(el.value)this.startSection(Number(el.dataset.section),el.value);});
     root.querySelectorAll('[data-launch-section]').forEach(el=>el.onclick=()=>this.startSection(Number(el.dataset.launchSection),el.dataset.examSubject));
     root.querySelectorAll('[data-attempt]').forEach(el=>el.onclick=()=>{MockTest.ownerId=auth.currentUser?.uid;MockTest.result=this.attempts[Number(el.dataset.attempt)];MockTest.pending=null;MockTest.saveMessage='Saved device attempt';window.location.hash='#/mock-test?attempt='+encodeURIComponent(this.attempts[Number(el.dataset.attempt)].id);});

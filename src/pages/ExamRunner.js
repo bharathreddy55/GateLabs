@@ -11,15 +11,23 @@ import { escapeHtml as h, validatePaper, scorePaper } from '../utils/examEngine.
 import { showToast } from '../utils/toast';
 import { enterExamFullscreen, leaveExamFullscreen, fullscreenButton } from '../utils/examFullscreen.js';
 
+const paletteLabels={
+  answered:'answered',
+  unanswered:'unanswered',
+  review:'marked for review',
+  unvisited:'not visited',
+  'answered-review':'answered & marked for review'
+};
+
 export const MockTest = {
   isTesting:false, pending:null, result:null, timer:null,
-  startExam({examId, questions, title, full=true, minutes}) {
+  startExam({examId, questions, title, full=true, minutes, paperKey}) {
     const errors=validatePaper(examId,questions,full);
     if(errors.length) { showToast(errors.slice(0,3).join(' · '),'error'); return false; }
     this.stop(); this.result=null;this.resultError=null;this.saveMessage=null;
     const duration=full?EXAMS[examId].minutes:(minutes??EXAMS[examId].minutes);
     if(!Number.isFinite(duration)||duration<=0){showToast('Invalid test duration','error');return false;}
-    this.pending={examId,questions,title,full,minutes:duration,ruleVersion:EXAMS[examId].version,ownerId:auth.currentUser?.uid};
+    this.pending={examId,questions,title,full,minutes:duration,ruleVersion:EXAMS[examId].version,ownerId:auth.currentUser?.uid,paperKey};
     this.ownerId=auth.currentUser?.uid;
     window.location.hash='#/mock-test';
     if(document.getElementById('exam-root')) this.refresh();
@@ -129,7 +137,7 @@ export const MockTest = {
       const current = index === this.currentIdx;
       return `<button type="button" data-question="${index}" class="${state} ${current?'current':''}"
         ${current?'aria-current="step"':''} ${this.allowed(index)?'':'disabled'}
-        aria-label="Question ${index+1}, ${this.stateLabel(state)}">${index+1}</button>`;
+        aria-label="Question ${index+1}, ${paletteLabels[state]}">${index+1}</button>`;
     }).join('');
     return `<section id="exam-root" class="exam-hub cbt-room" data-exam-session aria-label="Exam room">
       <header class="test-room-header">
@@ -146,7 +154,7 @@ export const MockTest = {
         <article class="exam-card cbt-question" tabindex="-1" aria-labelledby="cbt-question-title">
           <div class="test-question-body">
             <p class="cbt-question-meta"><strong>Question ${this.currentIdx+1} of ${this.questions.length}</strong><span>${h(q.section||q.subject||exam.name)} · ${q.marks} mark${q.marks===1?'':'s'}</span></p>
-            ${renderQuestionContext(q)}
+            ${renderQuestionContext(q,{examRoom:true})}
             <h2 id="cbt-question-title">${h(q.question)}</h2>
             ${renderAnswerInputs(q,this.answers[q.id],{numericId:'nat-answer'})}
           </div>
@@ -160,7 +168,7 @@ export const MockTest = {
         <aside class="cbt-sidebar">
           <details class="exam-navigation" ${this.paletteOpen?'open':''}>
             <summary>Question palette</summary>
-            <div class="cbt-legend">${['answered','unanswered','review','unvisited'].map(state=>
+            <div class="cbt-legend">${Object.keys(paletteLabels).map(state=>
               `<span data-cbt-count="${state}" class="${state}"></span>`).join('')}</div>
             <nav class="exam-palette" aria-label="Question navigation">${buttons}</nav>
           </details>
@@ -169,12 +177,10 @@ export const MockTest = {
     </section>`;
   },
   questionState(q) {
-    if (this.review[q.id]) return 'review';
-    if (!evaluateAnswer(q,this.answers[q.id]).blank) return 'answered';
+    const answered=!evaluateAnswer(q,this.answers[q.id]).blank;
+    if (this.review[q.id]) return answered?'answered-review':'review';
+    if (answered) return 'answered';
     return this.visited[q.id] ? 'unanswered' : 'unvisited';
-  },
-  stateLabel(state) {
-    return {answered:'answered',unanswered:'unanswered',review:'marked for review',unvisited:'not visited'}[state];
   },
   async init() {
     const requested=this.reviewId();
@@ -273,18 +279,18 @@ export const MockTest = {
   allowed(i){const section=this.activeSection();return Boolean(this.questions[i])&&(section===-1||this.questions[i].section===EXAMS[this.pending.examId].sections[section][0]);},
   clockText(){const section=this.activeSection();const end=section===-1?this.deadline:Math.min(this.deadline,this.startedAt+(section+1)*EXAMS[this.pending.examId].sectionalMinutes*60000);const seconds=Math.max(0,Math.ceil((end-Date.now())/1000));return `${section===-1?'Remaining':'Section remaining'} ${Math.floor(seconds/60)}:${String(seconds%60).padStart(2,'0')}`;},
   updatePalette(){
-    const counts={answered:0,unanswered:0,review:0,unvisited:0};
+    const states=Object.keys(paletteLabels);
+    const counts=Object.fromEntries(states.map(state=>[state,0]));
     document.querySelectorAll('[data-question]').forEach(button=>{
       const index=Number(button.dataset.question), q=this.questions[index];
       const state=this.questionState(q);
       counts[state]++;
-      for (const key of Object.keys(counts)) button.classList.toggle(key,key===state);
-      const answer=state==='review'?(!evaluateAnswer(q,this.answers[q.id]).blank?', answered':', unanswered'):'';
-      button.setAttribute('aria-label',`Question ${index+1}, ${this.stateLabel(state)}${answer}`);
+      for (const key of states) button.classList.toggle(key,key===state);
+      button.setAttribute('aria-label',`Question ${index+1}, ${paletteLabels[state]}`);
     });
     document.querySelectorAll('[data-cbt-count]').forEach(item=>{
       const state=item.dataset.cbtCount;
-      item.textContent=`${counts[state]} ${this.stateLabel(state)}`;
+      item.textContent=`${counts[state]} ${paletteLabels[state]}`;
     });
   },
   nextIndex(direction, from=this.currentIdx){
@@ -331,6 +337,7 @@ export const MockTest = {
     if(!this.isTesting)return;
     const examId=this.pending.examId,activeKey=this.storageKey();
     const result={...scorePaper(examId,this.questions,this.answers),examId,ruleVersion:EXAMS[examId].version,mode:this.pending.full?'full':'practice',scope:this.pending.title,timeSpentSeconds:Math.min(this.pending.minutes*60,Math.floor((Date.now()-this.startedAt)/1000)),timestamp:new Date().toISOString(),userId:auth.currentUser?.uid};
+    if (this.pending.paperKey) result.paperKey=this.pending.paperKey;
     this.stop();this.result=result;
     try{result.id=crypto.randomUUID();const archived=await writeAttemptArchive(result.userId,[result]);const key=`exam-results:${result.userId}`;const rows=readStored(key,[]);rows.push(result);localStorage.setItem(key,JSON.stringify(archived?compactAttemptCache(rows):rows));localStorage.removeItem(activeKey);this.saveMessage='Saved on this device; syncing attempt history.';}catch{this.saveMessage='Device storage failed. Keep this review open until sync completes.';}
     if(auth.currentUser?.uid!==result.userId)return;

@@ -7,6 +7,7 @@ import { mountAnswerReview } from '../components/AnswerReview.js';
 import { buildCbatSet, cbatResultKey, cbatSummary, validCbatResult } from '../utils/cbat.js';
 import { escapeHtml as h } from '../utils/examEngine.js';
 import { readStored } from '../utils/safeStorage.js';
+import { paperAttemptLabel } from '../utils/paperProgress.js';
 import { enterExamFullscreen, leaveExamFullscreen, fullscreenButton } from '../utils/examFullscreen.js';
 
 function shape(cells) {
@@ -151,8 +152,10 @@ export const RrbCbat = {
           ${validCbatResult(battery.id,results[battery.id])?`<p>Earlier practice · ${completedLabel(results[battery.id])}</p>`:''}</div>
           <div class="cbat-set-buttons">${CBAT_PRACTICE_SETS.map(set=>{
             const key=cbatResultKey(battery.id,set),last=results[key];
+            const count=validCbatResult(key,last)?last.completions??1:0;
             return `<div><button type="button" class="ui-button ${set===1?'primary':''}" data-cbat-start="${battery.id}" data-cbat-set="${set}" aria-label="Start ${battery.title} Set ${set}">Start Set ${set} ${icon('arrow')}</button>
-              ${validCbatResult(key,last)?`<p>Set ${set} · ${completedLabel(last)}</p>`:''}</div>`;
+              <span class="paper-attempt-label" data-completed="${count>0}">${paperAttemptLabel(count)}</span>
+              ${count?`<p>Set ${set} · ${completedLabel(last)}</p>`:''}</div>`;
           }).join('')}<button type="button" class="ui-button" data-cbat-note="${battery.id}" aria-label="Read ${battery.title} notes">Read notes</button></div></article>`).join('')}</div></section>`;
   },
   start(battery,set){
@@ -240,7 +243,9 @@ export const RrbCbat = {
     let saveWarning = '';
     try {
       const latest = Object.fromEntries(Object.entries(readStored(this.key,{})).filter(([id,summary])=>validCbatResult(id,summary)));
-      latest[cbatResultKey(battery.id,set)] = result;
+      const key=cbatResultKey(battery.id,set);
+      const previous=latest[key];
+      latest[key] = {...result,completions:(previous?previous.completions??1:0)+1};
       localStorage.setItem(this.key,JSON.stringify(latest));
     } catch {
       saveWarning = '<p role="status">This browser could not save the result.</p>';

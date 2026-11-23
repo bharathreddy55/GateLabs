@@ -1,6 +1,6 @@
 import { escapeHtml as h } from './examEngine.js';
 // Structured figure data only: imported papers never inject arbitrary SVG/HTML.
-export function renderFigure(figure) {
+export function renderFigure(figure,readable=false) {
   if(!figure)return '';
   const {type,labels,values,title}=figure;
   if(!['bar','line','pie','scatter','venn'].includes(type)||!Array.isArray(labels)||!Array.isArray(values)||labels.length!==values.length||!values.length||values.length>12||values.some(n=>!Number.isFinite(n)||n<0))return '';
@@ -18,5 +18,6 @@ export function renderFigure(figure) {
     if(type==='line')drawing+=`<polyline points="${pts.map(p=>p.join(',')).join(' ')}" fill="none" stroke="#6366f1" stroke-width="3"/>`;
     drawing+=pts.map(([x,y],i)=>`${type==='bar'?`<rect x="${x-12}" y="${y}" width="24" height="${190-y}" fill="#6366f1"/>`:`<circle cx="${x}" cy="${y}" r="5" fill="#6366f1"/>`}<text x="${x}" y="${y-10}" text-anchor="middle" fill="currentColor">${values[i]}</text><text x="${x}" y="215" text-anchor="middle" fill="currentColor">${h(labels[i])}</text>`).join('');
   }
-  return `<figure class="exam-figure"><figcaption>${h(title||'Question data')}</figcaption><svg viewBox="0 0 460 240" role="img" aria-label="${h(title||type+' chart')}">${drawing}</svg><details><summary>Accessible data table</summary><table><tbody>${labels.map((l,i)=>`<tr><th>${h(l)}</th><td>${values[i]}</td></tr>`).join('')}</tbody></table></details></figure>`;
+  const plot=`<svg viewBox="0 0 460 240" role="img" aria-label="${h(title||type+' chart')}">${drawing}</svg>`;
+  return `<figure class="exam-figure"><figcaption>${h(title||'Question data')}</figcaption>${readable?`<span class="exam-figure-hint">Scroll sideways to see the full chart</span><div class="exam-figure-scroll" tabindex="0" role="group" aria-label="Chart, scroll horizontally if needed">${plot}</div>`:plot}<details><summary>Accessible data table</summary><table><tbody>${labels.map((l,i)=>`<tr><th>${h(l)}</th><td>${values[i]}</td></tr>`).join('')}</tbody></table></details></figure>`;
 }

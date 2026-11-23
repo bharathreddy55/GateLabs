@@ -1,10 +1,10 @@
 import {escapeHtml as h, validQuestionImage} from '../utils/examEngine.js';
 import {renderFigure} from '../utils/examFigures.js';
-export function renderQuestionContext(q){
+export function renderQuestionContext(q,{examRoom=false}={}){
   const image=validQuestionImage(q)
     ? `<figure class="exam-question-image"><img src="${h(q.questionImage)}" alt="${h(q.imageAlt)}" decoding="async"></figure>`
     : '';
-  return `${q.passage?`<blockquote>${h(q.passage)}</blockquote>`:''}${q.table?`<pre>${h(q.table)}</pre>`:''}${renderFigure(q.figure)}${image}`;
+  return `${q.passage?`<blockquote>${h(q.passage)}</blockquote>`:''}${q.table?`<pre>${h(q.table)}</pre>`:''}${renderFigure(q.figure,examRoom)}${image}`;
 }
 export function renderAnswerInputs(q,answer,{name='exam-answer',numericId=''}={}){
   if(q.type==='NAT')return `<label class="numeric-answer">Numeric answer<input ${numericId?`id="${h(numericId)}"`:''} data-numeric type="number" step="any" inputmode="decimal" value="${h(answer??'')}" aria-label="Numeric answer"></label>`;

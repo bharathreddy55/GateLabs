@@ -206,7 +206,8 @@ export function cbatSummary(questions, answers) {
 export function validCbatResult(id, result) {
   const battery = CBAT_BATTERIES.find(item=>item.id===id||CBAT_PRACTICE_SETS.some(set=>cbatResultKey(item.id,set)===id));
   return !!battery && result?.total === battery.count &&
-    Object.keys(result).length===3 &&
+    Object.keys(result).every(key=>['attempted','correct','total','completions'].includes(key)) &&
+    (!Object.hasOwn(result,'completions') || (Number.isSafeInteger(result.completions) && result.completions>=1)) &&
     Number.isInteger(result.attempted) && result.attempted >= 0 && result.attempted <= result.total &&
     (battery.seconds
       ? Number.isInteger(result.correct) && result.correct >= 0 && result.correct <= result.attempted
