@@ -50,16 +50,20 @@ test('both original model papers have exact counts, valid keys and explanations'
  assert.equal(scorePaper(id,p.questions,allCorrect).score,p.questions.length);
  }
 });
-test('Station Master publishes ten full CBT papers and ten drills with distinct question contexts',()=>{
+test('Station Master publishes twenty full CBT papers and twenty drills with distinct question contexts',()=>{
  const papers=JSON.parse(fs.readFileSync('public/exams/rrb.json'));
- const [challenge]=JSON.parse(fs.readFileSync('public/exams/challenges/rrb.json'));
+ const challenges=JSON.parse(fs.readFileSync('public/exams/challenges/rrb.json'));
  const [foundation,...newModels]=papers;
  const fingerprint=q=>JSON.stringify([q.question.trim(),q.table||'',q.passage||'',q.figure||null]);
- const published=[...foundation.questions,...challenge.questions];
+ const published=[...foundation.questions,...challenges.flatMap(p=>p.questions)];
  const ids=new Set(published.map(q=>q.id));
  const stems=new Set(published.map(fingerprint));
- assert.equal(papers.filter(p=>p.full!==false).length,10);
- assert.equal(papers.filter(p=>p.full===false).length+1,10);
+ assert.equal(papers.filter(p=>p.full!==false).length,20);
+ assert.equal(papers.filter(p=>p.full===false).length+challenges.length,20);
+ for(const challenge of challenges) {
+   assert.deepEqual(validatePaper('rrb',challenge.questions,false),[]);
+   assert.deepEqual(EXAMS.rrb.sections.map(([section])=>challenge.questions.filter(q=>q.section===section).length),[6,6,4,4]);
+ }
  assert.deepEqual(newModels.slice(0,2).map(p=>p.title),[
    'RRB Station Master CBT · Practice model 2','RRB Station Master CBT · Practice model 3'
  ]);

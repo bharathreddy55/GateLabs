@@ -8,6 +8,7 @@ import { crossPaperRepeats, inspectPaper, numberTemplateKey, promptKey } from '.
 import fs from 'node:fs';
 import { EXAMS } from '../src/config/exams.js';
 import { logicalReasoning, reserveDeductions } from './rrb-logical.mjs';
+import { stationMasterExpansion } from './rrb-expansion/index.mjs';
 const banks={group2:[],rrb:[]};
 function modelQuestion(exam,model,index,section,topic,question,answer,others,explanation,extra={}) {
   const seed=model>3?`${model}:${question}`:question;
@@ -306,6 +307,7 @@ for(const [position,section,topic,stem,key,wrong,reason] of screeningRevisions){
  banks.group2[position-1]={...question,id:question.id+'-applied'};
 }
 const output=[];
+let challengeOutput;
 for(const [exam,questions] of Object.entries(banks)){
  const paper={title:EXAMS[exam].name+' · Foundation model 1',provenance:'GateLabs original practice material',note:exam==='group2'?'150-question foundation paper with a sourced 2025–2026 current-affairs snapshot checked 16 November 2026: AP, national and international topics. This is a practice selection, not a prediction or exhaustive coverage; update it as new events occur.':'100-question model with foundational Maths and Science, applied data analysis and multi-step reasoning. Uses the indicative 30/30/20/20 distribution.',questions};
  let papers=[paper];
@@ -320,7 +322,12 @@ for(const [exam,questions] of Object.entries(banks)){
    ];
    papers=uniqueRrbPapers([replaceRrbReasoning(paper,1),...prior.map((item,i)=>replaceRrbReasoning(item,i+2)),
      ...stationMasterSeries(modelQuestion,EXAMS.rrb.name)],reserve);
-   if(crossPaperRepeats(papers).length)throw Error('Repeated question prompts across Station Master papers');
+   const extension=stationMasterExpansion();
+   const challengeFile='public/exams/challenges/rrb.json';
+   const priorChallenges=JSON.parse(fs.readFileSync(challengeFile,'utf8')).filter(item=>item.title!==extension.challenge.title);
+   challengeOutput=[challengeFile,[...priorChallenges,extension.challenge]];
+   papers=[...papers.filter(item=>item.full!==false),...extension.papers,...papers.filter(item=>item.full===false),...extension.drills];
+   if(crossPaperRepeats([...papers,...challengeOutput[1]]).length)throw Error('Repeated question prompts across Station Master papers');
  }
  for(const candidate of papers) {
    const {errors}=inspectPaper({...candidate,examId:exam,full:candidate.full!==false,original:true});
@@ -333,3 +340,4 @@ for(const [exam,papers] of output){
  fs.writeFileSync(`public/exams/${exam}.json`,JSON.stringify(papers,null,2)+'\n');
  console.log(`${exam}: ${papers.length} papers and drills validated`);
 }
+if(challengeOutput)fs.writeFileSync(challengeOutput[0],JSON.stringify(challengeOutput[1],null,2)+'\n');

@@ -390,5 +390,554 @@
         "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments"
       }
     ]
+  },
+  {
+    "title": "RRB Station Master CBT · Challenge drill 2",
+    "category": "Challenge drill",
+    "full": false,
+    "provenance": "GateLabs original practice material",
+    "note": "Original questions modelled on overlapping skills in the 2025 NTPC Graduate CBT papers and the CEN 08/2026 Station Master syllabus. The 20-question drill uses a 6/6/4/4 mix with an answer and explanation for every question.",
+    "questions": [
+      {
+        "id": "rrb-exp-challenge-2-1-1",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Discounts, profit and loss",
+        "question": "A supply shop buys a tool for ₹1300. It marks the tool up by 50% and offers a 20% discount on the marked price. What cash profit does it make?",
+        "options": [
+          "260 rupees",
+          "130 rupees",
+          "390 rupees",
+          "325 rupees"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The marked price is 1.5 × ₹1300. The buyer pays 80% of that, giving 1.2 × cost. Subtract the purchase price to get 0.2 × ₹1300 = ₹260.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "solution": {
+          "steps": [
+            "The marked price is 1.5 × ₹1300. The buyer pays 80% of that, giving 1.2 × cost.",
+            "Subtract the purchase price to get 0.2 × ₹1300 = ₹260."
+          ]
+        }
+      },
+      {
+        "id": "rrb-exp-challenge-2-1-2",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Average with a corrected entry",
+        "question": "A tally of 52 freight weights averages 110 kg. One entry was understated by 104 kg and another overstated by 52 kg. What is the corrected average?",
+        "options": [
+          "109 kg",
+          "111 kg",
+          "112 kg",
+          "113 kg"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The correction to the combined total is +104 − 52 = 52 kg. There are still 52 readings, so the average rises by 1 kg.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "solution": {
+          "steps": [
+            "The correction to the combined total is +104 − 52 = 52 kg.",
+            "There are still 52 readings, so the average rises by 1 kg."
+          ]
+        }
+      },
+      {
+        "id": "rrb-exp-challenge-2-1-3",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Profit from two batches",
+        "question": "A dealer buys two equal-sized batches at the same cost per item. The first batch yields a profit of 92% and the second a loss of 46% on its cost. What is the profit percentage on the total cost?",
+        "options": [
+          "15.333333333333334%",
+          "46%",
+          "69%",
+          "23%"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Use equal cost bases. The gain on one cost unit minus the loss on the other is 46% of one unit. The denominator is two cost units. Divide 46% by two.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "solution": {
+          "steps": [
+            "Use equal cost bases. The gain on one cost unit minus the loss on the other is 46% of one unit.",
+            "The denominator is two cost units. Divide 46% by two."
+          ]
+        }
+      },
+      {
+        "id": "rrb-exp-challenge-2-1-4",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Mixture and density",
+        "question": "A vessel holds 500 cm³ of one liquid and twice that volume of another. Their densities are 1 and 1.3 g/cm³. The volumes add exactly. What is the mixture density?",
+        "options": [
+          "1.1 g/cm³",
+          "1.15 g/cm³",
+          "1.2 g/cm³",
+          "1.3 g/cm³"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Add masses using density × volume, then divide by the total volume of 1500 cm³. The volume-weighted mean is (1 + 2 × 1.3) ÷ 3 = 1.2.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "solution": {
+          "steps": [
+            "Add masses using density × volume, then divide by the total volume of 1500 cm³.",
+            "The volume-weighted mean is (1 + 2 × 1.3) ÷ 3 = 1.2."
+          ]
+        }
+      },
+      {
+        "id": "rrb-exp-challenge-2-1-5",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "Number systems",
+        "question": "A signal cycles through 46 settings numbered 0 through 45. It starts at setting 44 and advances 2351 times. What setting is displayed?",
+        "options": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "2346 advances form complete cycles. The remaining five advance from 44 through the wrap at zero. The display stops at setting 3.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "solution": {
+          "steps": [
+            "2346 advances form complete cycles. The remaining five advance from 44 through the wrap at zero.",
+            "The display stops at setting 3."
+          ]
+        }
+      },
+      {
+        "id": "rrb-exp-challenge-2-1-6",
+        "section": "Basic Science and Mathematics",
+        "subject": "Basic Science and Mathematics",
+        "topic": "HCF and equal packs",
+        "question": "A stores clerk must split 184 red and 322 blue tags into as many identical packs as possible, using every tag. How many tags go in each pack?",
+        "options": [
+          "11 tags",
+          "4 tags",
+          "7 tags",
+          "22 tags"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The pack count divides both 184 and 322. Since 4 and 7 are coprime, the greatest such count is 46. Each pack has four red and seven blue tags.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "solution": {
+          "steps": [
+            "The pack count divides both 184 and 322. Since 4 and 7 are coprime, the greatest such count is 46.",
+            "Each pack has four red and seven blue tags."
+          ]
+        }
+      },
+      {
+        "id": "rrb-exp-challenge-2-2-1",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Exactly two services",
+        "question": "How many respondents used two of the listed services and no third service?",
+        "options": [
+          "153 respondents",
+          "199 respondents",
+          "245 respondents",
+          "107 respondents"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Each of the three pair totals includes the same 46 triple users. Subtract those users from each pair. The exclusive pairs contain 54, 49 and 50 users. Add them.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Library service survey\nReported group | Count\nAll respondents | 497\nReserve a desk (A) | 226\nBorrow equipment (B) | 219\nAttend workshops (C) | 249\nA and B | 100\nA and C | 95\nB and C | 96\nAll three | 46\nPairwise figures include respondents who used all three. Survey totals count each individual once.",
+        "solution": {
+          "steps": [
+            "Each of the three pair totals includes the same 46 triple users. Subtract those users from each pair.",
+            "The exclusive pairs contain 54, 49 and 50 users. Add them."
+          ]
+        }
+      },
+      {
+        "id": "rrb-exp-challenge-2-2-2",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Corrected rate comparison",
+        "question": "Four units rejected in the Fir lot are reclassified as passing. What is the new Fir pass count?",
+        "options": [
+          "491 passes",
+          "495 passes",
+          "499 passes",
+          "546 passes"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Fir has 550 inspected pieces. The corrected rejection count is 55 − 4. Subtract corrected rejections from all checked components.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Component checks by lot\nLot | Components checked\nElm | 520\nFir | 550\nMaple | 560\nOak | 540\nPine | 570",
+        "figure": {
+          "type": "bar",
+          "title": "Components rejected in each lot",
+          "labels": [
+            "Elm",
+            "Fir",
+            "Maple",
+            "Oak",
+            "Pine"
+          ],
+          "values": [
+            49,
+            55,
+            52,
+            47,
+            51
+          ]
+        },
+        "solution": {
+          "steps": [
+            "Fir has 550 inspected pieces. The corrected rejection count is 55 − 4.",
+            "Subtract corrected rejections from all checked components."
+          ]
+        }
+      },
+      {
+        "id": "rrb-exp-challenge-2-2-3",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Reclassification between fare groups",
+        "question": "Exactly 47 recorded Market tickets were actually Mill tickets. How much additional revenue should the corrected records show?",
+        "options": [
+          "1128 rupees",
+          "1974 rupees",
+          "564 rupees",
+          "846 rupees"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Moving a ticket from Market to Mill changes its fare from ₹24 to ₹42. Multiply the ₹18 difference by 47 replacements.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Tickets issued before refunds\nRoute | Unit fare (₹) | Tickets issued\nHarbour | 18 | 90\nMarket | 24 | 145\nPark | 36 | 72\nMill | 42 | 149\nAll tickets were paid in full at issue. Any refund stated in a question is complete.",
+        "solution": {
+          "steps": [
+            "Moving a ticket from Market to Mill changes its fare from ₹24 to ₹42.",
+            "Multiply the ₹18 difference by 47 replacements."
+          ]
+        }
+      },
+      {
+        "id": "rrb-exp-challenge-2-2-4",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Conditional counts in a distribution",
+        "question": "If one service is drawn from those delayed more than seven minutes, what is the probability it was delayed exactly 15 minutes, as a percentage to one decimal place?",
+        "options": [
+          "19.6%",
+          "32.8%",
+          "24.3%",
+          "31.3%"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Restrict the denominator to delay groups 11, 15 and 19. That leaves 134 services. The favourable group has 44 services.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Dispatch delay distribution\nDelay (minutes) | Services\n3 | 44\n7 | 47\n11 | 48\n15 | 44\n19 | 42",
+        "solution": {
+          "steps": [
+            "Restrict the denominator to delay groups 11, 15 and 19. That leaves 134 services.",
+            "The favourable group has 44 services."
+          ]
+        }
+      },
+      {
+        "id": "rrb-exp-challenge-2-2-5",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Pie chart and refunds",
+        "question": "Repairs gets a refund equal to 10% of its original allocation. What cash amount is refunded?",
+        "options": [
+          "1152 rupees",
+          "576 rupees",
+          "1098 rupees",
+          "3240 rupees"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Repairs occupies 64° of the full circle, giving an original value of ₹5760. Take ten percent of that amount.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "passage": "The present annual cost is ₹32400. The chart labels each category’s share in degrees.",
+        "figure": {
+          "type": "pie",
+          "title": "Breakdown of annual costs",
+          "labels": [
+            "Tools",
+            "Repairs",
+            "Safety",
+            "Training",
+            "Stores"
+          ],
+          "values": [
+            122,
+            64,
+            68,
+            54,
+            52
+          ]
+        },
+        "solution": {
+          "steps": [
+            "Repairs occupies 64° of the full circle, giving an original value of ₹5760.",
+            "Take ten percent of that amount."
+          ]
+        }
+      },
+      {
+        "id": "rrb-exp-challenge-2-2-6",
+        "section": "Data Analysis",
+        "subject": "Data Analysis",
+        "topic": "Correcting a residual",
+        "question": "The time for the 10-unit journey was overstated by five minutes. What is its corrected residual?",
+        "options": [
+          "48 residual minutes",
+          "53 residual minutes",
+          "46 residual minutes",
+          "43 residual minutes"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The fit at 10 units is the starting time plus 20 minutes. The original residual loses five minutes because the endpoint-based fit did not change.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "table": "Trial journeys\nLoad units | Journey minutes\n0 | 58\n5 | 68\n10 | 126\n15 | 88\n20 | 98\n25 | 108\nUse the straight reference line through the first and last observations. A residual is observed time minus reference time.",
+        "figure": {
+          "type": "scatter",
+          "title": "Journey time by load",
+          "labels": [
+            "0",
+            "5",
+            "10",
+            "15",
+            "20",
+            "25"
+          ],
+          "values": [
+            58,
+            68,
+            126,
+            88,
+            98,
+            108
+          ]
+        },
+        "solution": {
+          "steps": [
+            "The fit at 10 units is the starting time plus 20 minutes.",
+            "The original residual loses five minutes because the endpoint-based fit did not change."
+          ]
+        }
+      },
+      {
+        "id": "rrb-exp-challenge-2-3-1",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Testing a full schedule",
+        "question": "If all four rules are kept, which appointment order is valid?",
+        "options": [
+          "O → T → Y → D → I → N",
+          "O → T → D → Y → I → N",
+          "O → D → T → Y → I → N",
+          "O → T → Y → I → D → N"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The ends and penultimate appointment are fixed. The three remaining slots must contain the pair T–Y followed by D. Read the complete order: O → T → Y → D → I → N.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "passage": "Six review appointments O, T, Y, D, I, N run in slots 1–6. Each slot has one appointment.\n1. O opens the schedule and N closes it.\n2. Y directly follows T.\n3. I is immediately before N.\n4. D is later than Y.",
+        "solution": {
+          "steps": [
+            "The ends and penultimate appointment are fixed. The three remaining slots must contain the pair T–Y followed by D.",
+            "Read the complete order: O → T → Y → D → I → N."
+          ]
+        }
+      },
+      {
+        "id": "rrb-exp-challenge-2-3-2",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Cross-checking a floor assignment",
+        "question": "The labels on rooms W and L are swapped after placement. Which statement is correct for the resulting layout?",
+        "options": [
+          "G is two floors above W.",
+          "L is above G.",
+          "Q is on the highest floor.",
+          "W is immediately below B."
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Swap only the two named labels. W now appears on floor 5 and L on floor 2. Q was unaffected and remains on floor 6. The statements involving the new W and L positions fail.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "passage": "Six archive rooms R, W, B, G, L, Q occupy a building’s six floors, one room per floor. Floor 1 is the lowest.\nG is two floors above W.\nB is immediately below G.\nQ is on the highest floor.\nR is below W and L is above G.",
+        "solution": {
+          "steps": [
+            "Swap only the two named labels. W now appears on floor 5 and L on floor 2.",
+            "Q was unaffected and remains on floor 6. The statements involving the new W and L positions fail."
+          ]
+        }
+      },
+      {
+        "id": "rrb-exp-challenge-2-3-3",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "Finding a forced statement",
+        "question": "Which conclusion is true for every allowed alarm combination?",
+        "options": [
+          "R is always active.",
+          "S is never active.",
+          "Both P and R are inactive.",
+          "P and S cannot both be active."
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Check the two cases for the exclusive pair. If P is active, S must be inactive. If R is active, P is inactive and S must be active. These cases force P and S to be incompatible.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "passage": "The three alarm flags W, B, G are called P, R and S in the statements. Exactly one of P and R is active. If R is active, S is active. If S is active, P is inactive. At least one alarm combination is allowed.",
+        "solution": {
+          "steps": [
+            "Check the two cases for the exclusive pair. If P is active, S must be inactive. If R is active, P is inactive and S must be active.",
+            "These cases force P and S to be incompatible."
+          ]
+        }
+      },
+      {
+        "id": "rrb-exp-challenge-2-3-4",
+        "section": "Logical Capability",
+        "subject": "Logical Capability",
+        "topic": "English reading comprehension",
+        "question": "Which comparison best separates those explanations?",
+        "options": [
+          "Compare only the final speeds of those who signed up.",
+          "Compare the number of sessions held in different months.",
+          "Compare gains after offering the session randomly among trainees with similar baseline speeds.",
+          "Compare the earliest signup times with the last finishing times."
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Matching baseline speeds and varying access reduces the role of self-selection in the observed gain.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "passage": "A coach reported that the quickest trainees all elected to take an extra practice session. The coach wanted to know whether the session improved speed or simply attracted people who were already quick."
+      },
+      {
+        "id": "rrb-exp-challenge-2-4-1",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Correcting a second-difference sequence",
+        "question": "A copied sequence reads 43, 47, 55, 68, 83, 103. Its first two terms are correct. In the intended sequence the gaps increase by 4 each time. Which position needs correction?",
+        "options": [
+          "3th position",
+          "5th position",
+          "7th position",
+          "4th position"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The successive gaps should be 4, 8, 12, 16, and 20. Regenerate from 43. The first mismatch is at position 4.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "solution": {
+          "steps": [
+            "The successive gaps should be 4, 8, 12, 16, and 20.",
+            "Regenerate from 43. The first mismatch is at position 4."
+          ]
+        }
+      },
+      {
+        "id": "rrb-exp-challenge-2-4-2",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Identify an incorrect letter cluster",
+        "question": "Read the three columns of OVA, QYE, SBI, UEN, WHQ, YKU as independent alphabet progressions with wraparound. The first two clusters are correct and exactly one of the remaining clusters is wrong. Which cluster violates the progression?",
+        "options": [
+          "SBI",
+          "UEN",
+          "WHQ",
+          "YKU"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The first two clusters establish forward shifts of 2, 3 and 4 in the three columns. At position 4, the last letter should be M, giving UEM.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "solution": {
+          "steps": [
+            "The first two clusters establish forward shifts of 2, 3 and 4 in the three columns.",
+            "At position 4, the last letter should be M, giving UEM."
+          ]
+        }
+      },
+      {
+        "id": "rrb-exp-challenge-2-4-3",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Ordering with a score tie",
+        "question": "Five results have scores 58, 54, 54, 51 and 50. Larger scores rank higher. Two tied entries use the same ranking position, and the next position skips one number. What rank does the entry scoring 51 receive?",
+        "options": [
+          "2 in the ranking",
+          "3 in the ranking",
+          "4 in the ranking",
+          "5 in the ranking"
+        ],
+        "correctAnswer": 2,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "There are three entries with larger scores, even though the middle two share position 2. The next entry therefore receives rank 4.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "solution": {
+          "steps": [
+            "There are three entries with larger scores, even though the middle two share position 2.",
+            "The next entry therefore receives rank 4."
+          ]
+        }
+      },
+      {
+        "id": "rrb-exp-challenge-2-4-4",
+        "section": "Mental Reasoning",
+        "subject": "Mental Reasoning",
+        "topic": "Piecewise number encoding",
+        "question": "To encode a number, first subtract 47 from 106. Then add either 8 or 11, choosing 8 when the result is even and 11 when it is odd. What final number is produced?",
+        "options": [
+          "70",
+          "67",
+          "59",
+          "78"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The initial result is 59. Test that intermediate result for parity. Then apply just the matching offset.",
+        "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
+        "solution": {
+          "steps": [
+            "The initial result is 59. Test that intermediate result for parity.",
+            "Then apply just the matching offset."
+          ]
+        }
+      }
+    ]
   }
 ]

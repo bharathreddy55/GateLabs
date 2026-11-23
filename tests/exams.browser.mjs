@@ -200,12 +200,12 @@ try{
  await page.goto('http://127.0.0.1:3011/#/rrb-station-master?tab=mocks');
  const stationTests=page.locator('[data-mock-list]');
  await stationTests.getByRole('heading',{name:'All tests',exact:true}).waitFor();
- assert.equal(await stationTests.locator('[data-paper-group="full"]:visible').count(),10);
- assert.equal(await stationTests.locator('[data-paper-group="drills"]:visible').count(),10);
- assert.match(await page.locator('[data-mock-jump="subjects"]').innerText(),/80 tests across 4 subjects/);
+ assert.equal(await stationTests.locator('[data-paper-group="full"]:visible').count(),20);
+ assert.equal(await stationTests.locator('[data-paper-group="drills"]:visible').count(),20);
+ assert.match(await page.locator('[data-mock-jump="subjects"]').innerText(),/160 tests across 4 subjects/);
  assert.equal(await page.locator('.mock-picks').getByText(/Practice model [23]/).count(),0);
- for(const model of [2,3,10]){
-   const card=stationTests.locator('[data-library-card]').filter({hasText:`Practice model ${model}`});
+ for(const model of [2,10,11,20]){
+   const card=stationTests.locator('[data-library-card]').filter({has:page.getByRole('heading',{name:`RRB Station Master CBT · Practice model ${model}`,exact:true})});
    assert.match(await card.innerText(),/100 questions · 100 marks · 120 min/);
    await card.getByRole('button',{name:'Start full mock'}).click();
    await page.getByRole('button',{name:'Begin test',exact:true}).click();
@@ -216,9 +216,16 @@ try{
    await page.getByRole('heading',{name:'Exam complete',exact:true}).waitFor();
    assert.match(await page.locator('#exam-root').innerText(),/0 correct · 1 wrong · 99 unanswered/);
    assert.match(await page.locator('#exam-root').innerText(),/Marks deducted\s+0\.33/);
+   if(model>=11) await review.getByRole('heading',{name:'Worked solution',exact:true}).waitFor();
    await page.goto('http://127.0.0.1:3011/#/rrb-station-master?tab=mocks');
    await stationTests.getByRole('heading',{name:'All tests',exact:true}).waitFor();
  }
+ const newDrill=stationTests.locator('[data-library-card]').filter({has:page.getByRole('heading',{name:/Challenge drill 2$/})});
+ await newDrill.getByRole('button',{name:'Start CBT drill'}).click();
+ await page.getByRole('button',{name:'Begin test',exact:true}).click();
+ assert.equal(await page.locator('[data-question]').count(),20);
+ await page.getByRole('button',{name:'Submit test',exact:true}).click();
+ await page.getByRole('heading',{name:'Exam complete',exact:true}).waitFor();
  // Exercise actual legacy text parser and separately timed SBI rule in the browser.
  await page.goto('http://127.0.0.1:3011/#/sbi-clerk?tab=mocks');
  await page.getByRole('button',{name:'Start full mock'}).first().click();
@@ -308,7 +315,7 @@ try{
    await page.locator('[data-mock-jump="drills"]').click();
    assert.equal(await page.getByRole('heading',{name:'Challenge & short drills',exact:true}).count(),1);
    assert.equal(await page.locator('.mock-paper-grid [data-paper-group="full"]:visible').count(),0);
-   const challenge=page.locator('[data-paper-type="Challenge drill"]');
+   const challenge=page.locator('[data-paper-type="Challenge drill"]').first();
    await challenge.getByRole('button',{name:'Start CBT drill'}).click();
    await page.getByRole('button',{name:'Begin test',exact:true}).click();
    await page.locator('[data-answer="0"]').check();
