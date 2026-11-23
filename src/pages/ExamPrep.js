@@ -11,6 +11,7 @@ import { examNotes, notesPanel, bindExamNotes } from '../components/ExamNotes.js
 import { bindMockLibrary, isPastPaper, mockLibrary, practiceMinutes, testStats } from '../components/ExamMockLibrary.js';
 import { escapeHtml as h, validatePaper } from '../utils/examEngine.js';
 import { parseExamText } from '../utils/parseExamText.js';
+import { reviewSbiPractice } from '../utils/sbiPractice.js';
 import { MockTest } from './ExamRunner.js';
 import { showToast } from '../utils/toast';
 
@@ -59,7 +60,15 @@ export function createExamPrep(examId){
       const corrections=response.ok?await response.json():[];
 
       this.papers=await Promise.all(sbiPapers.map(async p=>{
-        try{const corrected=corrections.find(c=>c.file===p.file+'.txt');if(corrected)return {...p,...corrected,category:['2025 memory-based','Practice reconstruction'].includes(p.category)?'Practice reconstruction':p.category};const res=await fetch(`/pyqs/${p.file}.txt`);if(!res.ok)throw Error('Paper could not be loaded');return {...p,provenance:p.category,questions:parseExamText(await res.text(),examId)};}
+        try {
+          const file=p.file+'.txt';
+          const corrected=corrections.find(c=>c.file===file);
+          if(corrected)return {...p,...corrected,category:['2025 memory-based','Practice reconstruction'].includes(p.category)?'Practice reconstruction':p.category,
+            questions:reviewSbiPractice(corrected.questions,file)};
+          const res=await fetch(`/pyqs/${file}`);
+          if(!res.ok)throw Error('Paper could not be loaded');
+          return {...p,provenance:p.category,questions:reviewSbiPractice(parseExamText(await res.text(),examId),file)};
+        }
         catch(error){return {...p,questions:[],error:error.message};}
       }));
     }else{

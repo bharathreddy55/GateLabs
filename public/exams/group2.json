@@ -113,21 +113,21 @@
         "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
       },
       {
-        "id": "group2-model1-7",
+        "id": "group2-model1-7-applied",
         "section": "Indian History",
         "subject": "Indian History",
-        "topic": "Indian history",
-        "question": "Which war is associated with Ashoka's remorse in his inscriptions?",
+        "topic": "Ashokan inscriptions",
+        "question": "A historian wants direct evidence that Ashoka publicly addressed the suffering caused by conquest. Which source and event give the strongest match?",
         "options": [
-          "Battle of Plassey",
-          "Battle of Talikota",
-          "Third battle of Panipat",
-          "Kalinga war"
+          "The Allahabad Pillar inscription and the Kalinga war",
+          "Major Rock Edict XIII and the Kalinga war",
+          "Major Rock Edict XIII and the Second Battle of Tarain",
+          "The Aihole inscription and the Kalinga war"
         ],
-        "correctAnswer": 3,
+        "correctAnswer": 1,
         "marks": 1,
         "type": "MCQ",
-        "explanation": "Ashoka's Major Rock Edict XIII describes the suffering caused by the Kalinga conquest.",
+        "explanation": "Major Rock Edict XIII records Ashoka’s response to the suffering associated with his conquest of Kalinga. The other inscriptions concern different rulers or events.",
         "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
       },
       {
@@ -275,21 +275,21 @@
         "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
       },
       {
-        "id": "group2-model1-16",
+        "id": "group2-model1-16-applied",
         "section": "Indian History",
         "subject": "Indian History",
-        "topic": "Indian history",
-        "question": "Market-control measures in the Delhi Sultanate are associated with whom?",
+        "topic": "Sultanate administration",
+        "question": "Two accounts describe maintaining a large standing army. One adds that the ruler intervened in Delhi’s prices for grain and other goods. Which ruler’s administration is most directly associated with these market controls?",
         "options": [
+          "Balban",
           "Iltutmish",
           "Alauddin Khalji",
-          "Ibrahim Lodi",
-          "Bahadur Shah Zafar"
+          "Firuz Shah Tughlaq"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "marks": 1,
         "type": "MCQ",
-        "explanation": "Alauddin used price regulation and market supervision.",
+        "explanation": "Alauddin Khalji’s system of market regulation is the clue. The description of an army alone would not single him out.",
         "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
       },
       {
@@ -1049,21 +1049,21 @@
         "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
       },
       {
-        "id": "group2-model1-59",
+        "id": "group2-model1-59-applied",
         "section": "Geography",
         "subject": "Geography",
-        "topic": "Physical, human and AP geography",
-        "question": "Contour lines on a map join points of equal what?",
+        "topic": "Topographic maps",
+        "question": "Two routes climb from 200 m to 400 m. Route A crosses the contour intervals in 1 km horizontally, and Route B in 2 km. Which comparison follows?",
         "options": [
-          "Rainfall",
-          "Elevation",
-          "Temperature",
-          "Population"
+          "Both gradients are equal because the endpoints have the same elevations.",
+          "B has twice the average gradient of A.",
+          "A gains twice as much height as B.",
+          "A has twice the average gradient of B."
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 3,
         "marks": 1,
         "type": "MCQ",
-        "explanation": "Contours connect equal heights above a datum.",
+        "explanation": "Both routes gain 200 m. Averaged over horizontal distance, the rise per kilometre is twice as large on the shorter route.",
         "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
       },
       {
@@ -1139,21 +1139,21 @@
         "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
       },
       {
-        "id": "group2-model1-64",
+        "id": "group2-model1-64-applied",
         "section": "Indian Society",
         "subject": "Indian Society",
-        "topic": "Society and inclusion",
-        "question": "Marriage outside a specified group is called what?",
+        "topic": "Marriage and kinship",
+        "question": "A community requires spouses to belong to the same broad community but forbids marriage within one’s own clan. Which combination describes these two rules?",
         "options": [
-          "Endogamy",
-          "Urbanisation",
-          "Exogamy",
-          "Industrialisation"
+          "Community exogamy with clan endogamy",
+          "Exogamy at both levels",
+          "Community endogamy with clan exogamy",
+          "Endogamy at both levels"
         ],
         "correctAnswer": 2,
         "marks": 1,
         "type": "MCQ",
-        "explanation": "Exogamy requires a partner outside the specified group.",
+        "explanation": "Endogamy draws the marriage partner from inside the reference group. Exogamy requires going outside it. The rules refer to two different levels.",
         "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
       },
       {
@@ -1499,21 +1499,21 @@
         "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
       },
       {
-        "id": "group2-model1-84",
+        "id": "group2-model1-84-applied",
         "section": "Indian Society",
         "subject": "Indian Society",
-        "topic": "Society and inclusion",
-        "question": "What is intersectionality concerned with?",
+        "topic": "Overlapping barriers",
+        "question": "A training scheme finds that distance reduces attendance and language barriers reduce successful enrolment. Participants facing both barriers are especially underrepresented. What analysis best examines the combined effect?",
         "options": [
-          "Only road intersections",
-          "Overlapping social disadvantages and identities",
-          "Only differences in climate",
-          "Only one category in isolation"
+          "Measure only average attendance across the entire scheme.",
+          "Compare language groups solely among participants living far away.",
+          "Pool all applicants with either barrier as one undifferentiated group.",
+          "Compare outcomes across all four combinations of distance and language access."
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 3,
         "marks": 1,
         "type": "MCQ",
-        "explanation": "Multiple identities can interact to produce distinct experiences of disadvantage.",
+        "explanation": "The four groups separate each single barrier from the group experiencing both. This makes their combined association visible.",
         "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
       },
       {
@@ -2591,76 +2591,76 @@
         "subject": "Mental Ability"
       },
       {
-        "topic": "Series, analogy and coding",
-        "question": "Find the next number: 3, 6, 12, 24, ...",
-        "options": [
-          "36",
-          "48",
-          "42",
-          "30"
-        ],
-        "correctAnswer": 1,
-        "marks": 1,
-        "type": "MCQ",
-        "explanation": "Each term is doubled.",
-        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
-        "id": "group2-model1-143",
+        "id": "group2-model1-143-applied",
         "section": "Mental Ability",
-        "subject": "Mental Ability"
-      },
-      {
-        "topic": "Series, analogy and coding",
-        "question": "Find the next number: 2, 5, 10, 17, ...",
+        "subject": "Mental Ability",
+        "topic": "Alternating series",
+        "question": "Odd and even positions follow separate arithmetic progressions. In 8, 41, 13, 36, 18, 31, ?, ?, what replaces the two blanks, in order?",
         "options": [
-          "24",
-          "26",
-          "25",
-          "28"
-        ],
-        "correctAnswer": 1,
-        "marks": 1,
-        "type": "MCQ",
-        "explanation": "Terms are n² + 1 for n = 1, 2, 3, 4, 5.",
-        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
-        "id": "group2-model1-144",
-        "section": "Mental Ability",
-        "subject": "Mental Ability"
-      },
-      {
-        "topic": "Series, analogy and coding",
-        "question": "Find the next number: 81, 27, 9, 3, ...",
-        "options": [
-          "0",
-          "1",
-          "2",
-          "6"
-        ],
-        "correctAnswer": 1,
-        "marks": 1,
-        "type": "MCQ",
-        "explanation": "Each term is divided by 3.",
-        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
-        "id": "group2-model1-145",
-        "section": "Mental Ability",
-        "subject": "Mental Ability"
-      },
-      {
-        "topic": "Series, analogy and coding",
-        "question": "Find the next number: 1, 4, 9, 16, ...",
-        "options": [
-          "20",
-          "24",
-          "25",
-          "36"
+          "23, 31",
+          "22, 26",
+          "23, 26",
+          "26, 23"
         ],
         "correctAnswer": 2,
         "marks": 1,
         "type": "MCQ",
-        "explanation": "These are consecutive positive integer squares.",
-        "source": "GateLabs original model question; https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
-        "id": "group2-model1-146",
+        "explanation": "The odd-position values increase by 5. The even-position values decrease by 5. Extend each independently.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-144-applied",
         "section": "Mental Ability",
-        "subject": "Mental Ability"
+        "subject": "Mental Ability",
+        "topic": "Schedule constraints",
+        "question": "Five sessions run in order from 1 to 5. Archiving follows indexing immediately. Scanning is first, checks are later than archiving, and dispatch is last. Which session is third?",
+        "options": [
+          "Archiving",
+          "Indexing",
+          "Checks",
+          "Scanning"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Slots 1 and 5 are fixed. The consecutive indexing–archiving pair must end before checks, so slots 2–4 are indexing, archiving and checks.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-145-applied",
+        "section": "Mental Ability",
+        "subject": "Mental Ability",
+        "topic": "Using relative ranks",
+        "question": "Asha is 9th from the front of a queue of 34 and Bala is 11th from the back. Four people between them leave. If nobody changes relative position, how many remain between them?",
+        "options": [
+          "11",
+          "10",
+          "13",
+          "14"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "Bala was 34 − 11 + 1 = 24th from the front. The original gap was 24 − 9 − 1 = 14. Four departures leave 10.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
+      },
+      {
+        "id": "group2-model1-146-applied",
+        "section": "Mental Ability",
+        "subject": "Mental Ability",
+        "topic": "Sound deduction",
+        "question": "Every verified form is signed. No unsigned form can be paid. Some signed forms are awaiting verification. What must be true?",
+        "options": [
+          "Some forms are signed without yet being verified.",
+          "Every signed form is already verified.",
+          "No signed form can be paid.",
+          "Every form awaiting verification is unsigned."
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "type": "MCQ",
+        "explanation": "The final premise supplies a signed form awaiting verification. Signing is required for verification, but signing alone does not establish completion.",
+        "source": "GateLabs original model question; https://psc.ap.gov.in/Documents/NotificationDocuments/Group_II_Detailed_Notification_37_2026.pdf"
       },
       {
         "topic": "Series, analogy and coding",

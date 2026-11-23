@@ -1,4 +1,7 @@
-import { rrbReading } from './rrb-reading.mjs';
+import { stationComprehension } from './rrb-comprehension.mjs';
+import { analyticalSets } from './rrb-data-analysis.mjs';
+import { logicalReasoning } from './rrb-logical.mjs';
+import { mentalReasoning } from './rrb-mental.mjs';
 
 const labels = ['Anantapur','Bapatla','Chittoor','Dharmavaram','Eluru','Guntakal','Hindupur','Jammalamadugu','Kadapa','Kurnool','Madanapalle','Nandyal','Ongole','Pakala','Renigunta','Srikalahasti'];
 const round = (n, digits=2) => n.toFixed(digits);
@@ -111,100 +114,48 @@ function dataAnalysis(k,label) {
   ];
 }
 
-const weekdays=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
-const day=n=>weekdays[n%7];
-const alpha=n=>String.fromCharCode(65+((n%26)+26)%26);
-const code=(word,shift)=>[...word].map((letter,i)=>alpha(letter.charCodeAt(0)-65+shift(i))).join('');
-const names=['Asha','Bina','Charu','Deepa','Esha','Farah','Gita','Hema','Indu','Jaya','Kiran','Lata','Mina','Nila','Omi','Pia'];
-
-function logic(k,label) {
-  const [x,y,z]=[0,3,7].map(i=>names[(k-1+i)%names.length]);
-  const hour=2+k%5, minute=5+k;
-  const angle=Math.abs(30*hour-5.5*minute);
-  const smaller=Math.min(angle,360-angle);
-  const dayChoices=offset=>[1,3,5].map(j=>day(offset+j));
-  const weekday=k%7;
-  return [
-    question('Syllogism',`At ${label}, all inspected consignments are tagged. No tagged consignment is in bay Z. Some priority consignments are inspected. Which conclusion is forced?`,'Some priority consignments are outside bay Z.',['Every priority consignment is inspected.','Some inspected consignments are in bay Z.','Every consignment outside bay Z is tagged.'],'An inspected priority consignment is tagged and therefore outside bay Z.'),
-    question('Statement and assumption',`An office in ${label} moves a help desk next to the numbered gates to cut requests for directions. Which assumption is needed?`,'Some people needing directions can find the relocated desk.',['All visitors prefer speaking to an official.','The desk handles refunds at every gate.','The number of gates will decrease.'],'For the relocation to affect direction requests, at least some intended users must be able to reach the desk.'),
-    question('Evidence and causation',`After a digital guide was installed at ${label}, missed connections fell. Which observation most weakens the argument that the guide caused the reduction?`,'The timetable simultaneously lengthened the connection windows.',['The guide uses larger text than the old notice.','The total number of express routes remained steady.','Users consulted the guide on both weekdays and weekends.'],'More time to connect is an alternative explanation that changed when the guide changed.'),
-    question('Binary logic',`At ${label}, two switches start open. An indicator turns on exactly when one switch is closed. The first switch is now closed and the indicator is off. What follows?`,'The second switch is closed.',['The second switch is open.','Exactly one switch is closed.','Both switches remain open.'],'With the first switch closed, an open second switch would turn the indicator on.'),
-    question('Contrapositive',`The rule at ${label} states that each accepted request has a reference number. Request ${30+k} has no reference number. What can be concluded?`,'The request was not accepted.',['The request was accepted with a special code.','The request has been deleted.','All requests without account IDs are accepted.'],'An accepted request necessarily has a reference number. Its absence rules out acceptance.'),
-    numeric('Clock angles',`What is the smaller angle between the hands of a clock at ${hour}:${String(minute).padStart(2,'0')}?`,smaller,[smaller+5,smaller+10,smaller+15],`The minute hand is at ${6*minute}°. The hour hand is at ${30*hour+.5*minute}°. Take the smaller angular separation.`,'°'),
-    question('Calendar',`A review at ${label} was held on ${day(weekday)}. What weekday is the next review if it is ${48+4*k} days later?`,day(weekday+48+4*k),dayChoices(weekday+48+4*k),`The day shift is the remainder when ${48+4*k} is divided by seven.`),
-    question('Family tree',`${x} is the sister of ${y}. ${y} is the mother of ${z}. How is ${x} related to ${z}?`,'Maternal aunt',['Paternal aunt','Maternal grandmother','Niece'],'The person described is the sister of the child’s mother.'),
-    question('Negation',`What negates the claim “Every consignment checked at ${label} was both tagged and sealed”?`,'At least one checked consignment was untagged or unsealed.',['Every checked consignment was untagged and unsealed.','Some checked consignments were both tagged and sealed.','No unchecked consignments were tagged.'],'To refute the universal claim, one checked consignment need only fail either requirement.'),
-    question('Logical constraints',`At ${label}, exactly two tasks are selected from A, B, C and D. Choosing A requires C. Tasks B and C cannot both be selected. Which pair is valid?`,'A and C',['A and B','A and D','B and C'],'The pair includes A’s prerequisite and avoids the prohibited combination.'),
-    question('Inference',`Some enquiries at ${label} are forwarded. Every forwarded enquiry receives a tracking number. Some enquiries are urgent. What is certain?`,'Some enquiries receive tracking numbers.',['All urgent enquiries are forwarded.','Every enquiry with a tracking number is urgent.','No enquiry with a tracking number is urgent.'],'At least one forwarded enquiry exists, and every forwarded enquiry receives a number. Urgency is unrelated in the premises.'),
-    question('Truth statements',`Only one of ${x}, ${y} and ${z} signed a receipt. ${x} says that ${y} signed it. ${y} says that ${z} signed it. ${z} says that ${y} did not sign it. Exactly two statements are true. Who signed it?`,z,[x,y,'Cannot be determined'],'The statements by the first and third people are complements. The middle statement must be true as well.'),
-    question('Rule application',`A box may leave shelf ${40+k} only when it has passed inspection and has a collection code. A box has passed inspection and lacks a collection code. What follows?`,'It may not leave under this rule.',['It may leave immediately.','It must have failed inspection.','It necessarily belongs to another shelf.'],'Passing inspection meets one requirement. A collection code is also required.'),
-    question('Sampling and conclusions',`Surveyors at ${label} interviewed only passengers who arrived before 08:00. Most interviewed passengers favoured a morning service. Which conclusion is defensible?`,'Most members of the interviewed group favoured the service.',['Most passengers at all hours favoured the service.','Evening passengers opposed the service.','The survey sampled all types of passengers equally.'],'The survey supports a statement about its sample. The time restriction limits broader inference.'),
-    question('Necessary and sufficient conditions',`At ${label}, a form is accepted whenever its two signatures are present. A particular form was not accepted. What must follow?`,'At least one signature was absent.',['Both signatures were absent.','Exactly one signature was absent.','The form was accepted without a signature.'],'If both signatures were present, the rule would guarantee acceptance. Nonacceptance rules out both being present.'),
-    question('Ordering from constraints',`During review ${10+k}, case P is earlier than Q. R is earlier than P and S is later than Q. Which case is third in time order?`,'Q',['P','R','S'],'The constraints force R, P, Q, S in that order.')
-  ];
-}
-
-function mental(k,label) {
-  const word=label.slice(0,5).toUpperCase();
-  const forward=code(word,i=>i%2?-2:1);
-  const back=code(word,()=>-1).split('').reverse().join('');
-  const step=2+k%4, start=3+k;
-  const progressing=[start];
-  for(let i=1;i<=5;i++)progressing.push(progressing.at(-1)+step*i);
-  const pair=[alpha(k+15),alpha(k+3)];
-  const series=[0,1,3,6,10].map(n=>alpha(k+15-n)+alpha(k+3+n));
-  const tens=Math.ceil(k/4), digitGap=1+(k-1)%4;
-  return [
-    numeric('Second differences',`Find the next term: ${progressing.slice(0,5).join(', ')}, …`,progressing[5],[progressing[4]+3*step,progressing[4]+4*step,progressing[4]+6*step],`Differences are successive multiples of ${step}. The next difference is ${5*step}.`),
-    numeric('Alternating operations',`Find the next term: ${start}, ${3*start}, ${3*start-2}, ${9*start-6}, ${9*start-8}, …`,27*start-24,[9*start-10,18*start-16,27*start-18],'Apply ×3 and −2 alternately. The next operation is ×3.'),
-    numeric('Interleaved progressions',`Complete ${k+2}, ${40+k}, ${k+6}, ${37+k}, ${k+10}, ${34+k}, …`,k+14,[k+13,k+15,k+16],'Odd positions increase by four, while even positions decrease by three. The next position is odd.'),
-    question('Letter series',`What pair follows ${series.slice(0,4).join(', ')}, …? The alphabet wraps around.`,series[4],[alpha(k+6)+alpha(k+12),alpha(k+5)+alpha(k+12),pair.join('')],'The first letter moves backwards and the second forwards by 1, 2, 3 and then 4 places.'),
-    question('Positional coding',`How is ${word} coded if letters in odd positions advance one place and letters in even positions move back two places, wrapping when necessary?`,forward,[code(word,i=>i%2?2:1),code(word,()=>1),code(word,i=>i%2?-1:1)],'Apply the alternating shifts independently to each letter. The transformed letters are '+forward.split('').join(', ')+'.'),
-    question('Reverse coding',`Encode ${word} by moving every letter back one place and then reversing the result. The letter before A is Z.`,back,[code(word,()=>-1),code(word,()=>1).split('').reverse().join(''),word.split('').reverse().join('')],'First substitute the preceding letter for each character, then read the substituted word backwards.'),
-    numeric('Ranks from opposite ends',`A person is ${10+k}th from the front of a ${36+2*k}-person queue. What is their rank from the back, counting the person?`,27+k,[26+k,28+k,29+k],'Subtract the front rank from the total and add one.'),
-    numeric('Rank after additions',`A runner was ${8+k}th from the end. After ${3+k} entrants finish behind the runner and two ahead, what is their new rank from the end?`,11+2*k,[10+2*k,12+2*k,13+2*k],'Only finishers behind the runner increase their rank from the end.'),
-    numeric('Number analogy',`The pair ${k+5} : ${(k+5)**2+2*(k+5)} follows a rule: square the first number and add twice the first number. What pairs with ${k+7}?`,(k+7)**2+2*(k+7),[(k+7)**2,(k+7)**2+(k+7),(k+7)**2+4*(k+7)],'Apply n²+2n to '+(k+7)+'.'),
-    numeric('Place-value coding',`A two-digit number is coded as three times its tens digit plus twice its units digit. What is the code for ${24+k}?`,3*Math.floor((24+k)/10)+2*((24+k)%10),[1,3,5].map(diff=>3*Math.floor((24+k)/10)+2*((24+k)%10)+diff),'Read the tens and units digits separately and apply the two stated weights.'),
-    numeric('Counting orders',`There are ${k+5} assignments. Two designated assignments must be consecutive, in either order. If just their leftmost starting slot and their internal order are counted, how many placements are possible?`,2*(k+4),[k+4,k+5,2*(k+5)],'The consecutive pair can start in any slot except the last and has two orientations.'),
-    numeric('Relative directions',`A person walks ${6*k} m west, then ${2*k} m east and ${3*k} m north. What is the distance from the start?`,5*k,[4*k,7*k,9*k],'The net legs are 4k west and 3k north, so the straight-line distance is the 5k hypotenuse.',' m'),
-    question('Arrangement',`In file batch ${50+k}, A sits left of B; D immediately follows B; C is first and E is last. What is third in the order?`,'B',['A','C','D'],'After fixing the ends, the three middle positions can only be A, B, D.'),
-    question('Relative ranks',`In team ${label}, P scored higher than Q and R. Q scored higher than S but lower than R. Who placed second?`,'R',['P','Q','S'],'The four place in descending order P, R, Q, S.'),
-    numeric('Missing term',`Fill the blank in ${k+3}, ${k+8}, …, ${k+18}, ${k+23}.`,k+13,[k+11,k+12,k+15],'The arithmetic progression increases by five.'),
-    numeric('Multiplicative pattern',`Apply the same rule as the sequence ${k}, ${2*k}, ${6*k}, ${12*k}, ${36*k} to find the next term.`,72*k,[54*k,90*k,108*k],'The multipliers alternate between 2 and 3. After ×3 comes ×2.'),
-    numeric('Ratio analogy',`The quantities ${k+4} and ${3*(k+4)} are paired. Applying the same ratio to ${k+9} gives what paired number?`,3*(k+9),[2*(k+9),3*(k+8),4*(k+9)],'The second quantity in the example is three times the first.'),
-    numeric('Queue arrangements',`At ${label}, five counters line up in a fixed list. Counter A must come first and counter E last. How many possible orders of the remaining counters meet the requirement that B is before C?`,3,[2,4,6],'Of the 3! orders of the middle counters, exactly half have B before C.'),
-    question('Classification',`Which of these proposed pairs for block ${k} fails the rule that the second letter is two alphabet positions after the first, with wraparound?`,alpha(k)+alpha(k+3),[1,4,7].map(offset=>alpha(k+offset)+alpha(k+offset+2)),'The failing pair moves by three positions. The other three move by two.'),
-    numeric('Reverse a number','A number has '+tens+' as its tens digit and '+(tens+digitGap)+' as its units digit. What is the difference between the reversed number and the original?',9*digitGap,[9*digitGap+9,9*digitGap+18,9*digitGap+1],'Swapping digits changes the number by nine times their difference, which is '+digitGap+'.')
-  ];
-}
-
 function rotate(rows,offset) {
   const start=offset%rows.length;
   return [...rows.slice(start),...rows.slice(0,start)];
 }
 
+export function reviewedReasoning(k) {
+  return [
+    [...rotate(logicalReasoning(k),k),...(stationComprehension[k-1]??[])],
+    rotate(mentalReasoning(k),k*3).slice(0,20)
+  ];
+}
+
 export function stationMasterSeries(modelQuestion, examName) {
   return Array.from({length:16},(_,index)=>{
-    const k=index+1,label=labels[index],full=index<7;
-    const reasoning=logic(k,label);
+    const k=index+1,label=labels[index],full=index<7,revision=index+4;
+    const [logical,mental]=reviewedReasoning(revision);
+    const existing=dataAnalysis(k,label);
+    const data=analyticalSets(k).map((rows,i)=>{
+      const count=2+(k+i)%3;
+      return [...rotate(rows,k+2*i).slice(0,count),...rotate(existing.slice(i*5,i*5+5),k+i).slice(0,5-count)];
+    });
     const groups=[
       rotate(scienceAndMath(k),3*k),
-      dataAnalysis(k,label),
-      full?[...rotate(reasoning,k),...rrbReading[index]]:rotate(reasoning,k),
-      rotate(mental(k,label),2*k)
+      full ? data.flat() : data.map((rows,i)=>rows[(k+i)%rows.length]),
+      logical,
+      mental
     ];
     const lengths=[6,6,4,4];
-    if(!full) groups[1]=Array.from({length:6},(_,group)=>groups[1][5*group+k%5]);
     const questions=groups.flatMap((rows,section)=>(full?rows:rows.slice(0,lengths[section]))
-      .map((payload,i)=>modelQuestion('rrb',index+4,section*100+i,section,...payload)));
+      .map((payload,i)=>{
+        const question=modelQuestion('rrb',revision,section*100+i,section,...payload);
+        if(section>0)question.id+='-v2';
+        return question;
+      }));
     return {
       title:`${examName} · ${full?`Practice model ${index+4}`:`Timed drill ${index-5}`}`,
       category:full?'Model paper':'Timed drill',
       full,
       provenance:'GateLabs original practice material',
       note:full
-        ? 'A full-length paper with newly parameterised calculations, charts, data sufficiency, comprehension and reasoning. It follows the indicative 30/30/20/20 breakdown.'
-        : 'An original 20-question timed drill covering the four CBT blocks. It uses a 6/6/4/4 mix with worked explanations.',
+        ? 'Full-length CBT practice with linked data sources, independently keyed constraint puzzles, English comprehension and multi-step mental reasoning. Uses the indicative 30/30/20/20 breakdown.'
+        : 'An original 20-question timed drill covering all four CBT blocks. The 6/6/4/4 mix includes worked explanations.',
       questions
     };
   });

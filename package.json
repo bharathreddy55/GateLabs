@@ -10,6 +10,7 @@
     "test": "node --experimental-vm-modules --test tests/*.test.mjs",
     "test:browser": "node tests/exams.browser.mjs",
     "build:exam-banks": "node scripts/build-exam-banks.mjs",
+    "audit:papers": "node scripts/audit-papers.mjs",
     "test:workspace": "node tests/workspace.browser.mjs",
     "test:rules": "node scripts/run-firestore-emulator.mjs",
     "test:auth": "node tests/authRestore.browser.mjs",

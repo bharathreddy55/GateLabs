@@ -1830,10 +1830,10 @@
         "type": "MCQ",
         "marks": 1,
         "source": "https://www.legislative.gov.in/documents",
-        "question": "Which statute lowered the voting age from twenty-one to eighteen by constitutional amendment?",
+        "question": "Which constitutional amendment lowered the voting age from twenty-one to eighteen?",
         "options": [
-          "44th Amendment",
-          "42nd Amendment",
+          "86th Amendment",
+          "73rd Amendment",
           "61st Amendment",
           "52nd Amendment"
         ],
@@ -2563,175 +2563,176 @@
     "full": false,
     "questions": [
       {
-        "id": "group2-mains-1-early-andhra",
+        "id": "group2-mains-1-early-andhra-applied",
         "section": "Social and Cultural History of Andhra Pradesh",
         "topic": "Early Andhra and the Vengi Dynasties",
         "type": "MCQ",
-        "question": "Which court is associated with Nannaya’s Telugu Mahabharata?",
+        "question": "An editor cites a Telugu literary work, a royal inscription and a modern textbook to argue that a ruler directly patronised a translation. Which additional finding would most directly support this narrow claim?",
         "options": [
-          "Eastern Chalukyas of Vengi",
-          "Ikshvakus of Vijayapuri",
-          "Vishnukundins",
-          "Renati Cholas"
+          "Evidence that the author and ruler lived a century apart",
+          "A later map showing the region in which the language was spoken",
+          "A contemporary colophon naming both the translator and the ruler as patron",
+          "A census of readers of a modern edition"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "marks": 1,
-        "explanation": "Nannaya worked under the patronage of Rajaraja Narendra of the Eastern Chalukya line.",
+        "explanation": "A near-contemporary colophon linking the named ruler to the named translator is direct evidence of patronage. A general record of language use cannot establish that link.",
         "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd"
       },
       {
-        "id": "group2-mains-1-medieval-andhradesa",
+        "id": "group2-mains-1-medieval-andhradesa-applied",
         "section": "Social and Cultural History of Andhra Pradesh",
         "topic": "Medieval Andhradesa, 11th–16th Centuries",
         "type": "MCQ",
-        "question": "Which ruler authored the Telugu work Amuktamalyada?",
+        "question": "A court poem praises a Vijayanagara ruler and prescribes how a king should govern. Which statement gives the best method for using it as evidence of actual administration?",
         "options": [
-          "Ganapati Deva",
-          "Krishnadevaraya",
-          "Rajaraja Narendra",
-          "Prataparudra"
-        ],
-        "correctAnswer": 1,
-        "marks": 1,
-        "explanation": "Amuktamalyada is associated with Krishnadevaraya of Vijayanagara.",
-        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd"
-      },
-      {
-        "id": "group2-mains-1-colonial-nationalist-andhra",
-        "section": "Social and Cultural History of Andhra Pradesh",
-        "topic": "Colonial Rule, Reform and Nationalism in Andhra",
-        "type": "MCQ",
-        "question": "Which reformer is closely associated with widow remarriage advocacy in Andhra?",
-        "options": [
-          "Tikkana",
-          "Rajaraja Narendra",
-          "Kandukuri Veeresalingam",
-          "Potti Sriramulu"
-        ],
-        "correctAnswer": 2,
-        "marks": 1,
-        "explanation": "Veeresalingam campaigned for widow remarriage and women's education in the Telugu-speaking region.",
-        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd"
-      },
-      {
-        "id": "group2-mains-1-andhra-state-movement",
-        "section": "Social and Cultural History of Andhra Pradesh",
-        "topic": "Andhra Movement and the Formation of Andhra State",
-        "type": "MCQ",
-        "question": "Which city was the capital of Andhra State at its formation in 1953?",
-        "options": [
-          "Hyderabad",
-          "Visakhapatnam",
-          "Madras",
-          "Kurnool"
-        ],
-        "correctAnswer": 3,
-        "marks": 1,
-        "explanation": "Kurnool was the capital of the Andhra State inaugurated in October 1953.",
-        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd"
-      },
-      {
-        "id": "group2-mains-1-andhra-pradesh-reorganisation",
-        "section": "Social and Cultural History of Andhra Pradesh",
-        "topic": "Andhra Pradesh Formation and Reorganisation",
-        "type": "MCQ",
-        "question": "On what date did Andhra Pradesh come into being in the 1956 reorganisation?",
-        "options": [
-          "1 October 1953",
-          "1 November 1956",
-          "26 January 1950",
-          "2 June 2014"
-        ],
-        "correctAnswer": 1,
-        "marks": 1,
-        "explanation": "The merger of Andhra State and Telangana took effect on 1 November 1956.",
-        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd"
-      },
-      {
-        "id": "group2-mains-1-constitution-foundations",
-        "section": "Indian Constitution",
-        "topic": "Constitutional Development, Rights and Basic Structure",
-        "type": "MCQ",
-        "question": "Which part contains the Directive Principles of State Policy?",
-        "options": [
-          "Part II",
-          "Part III",
-          "Part IV",
-          "Part IVA"
-        ],
-        "correctAnswer": 2,
-        "marks": 1,
-        "explanation": "Directive Principles appear in Part IV.",
-        "source": "https://www.legislative.gov.in/documents"
-      },
-      {
-        "id": "group2-mains-1-government-branches",
-        "section": "Indian Constitution",
-        "topic": "Legislature, Executive and Judiciary",
-        "type": "MCQ",
-        "question": "The Union Council of Ministers is collectively responsible to which body?",
-        "options": [
-          "Rajya Sabha",
-          "Lok Sabha",
-          "Supreme Court",
-          "Election Commission"
-        ],
-        "correctAnswer": 1,
-        "marks": 1,
-        "explanation": "Article 75(3) makes the Council of Ministers collectively responsible to the House of the People.",
-        "source": "https://www.legislative.gov.in/documents"
-      },
-      {
-        "id": "group2-mains-1-union-state-institutions",
-        "section": "Indian Constitution",
-        "topic": "Union–State Powers and Accountability Institutions",
-        "type": "MCQ",
-        "question": "Which constitutional article provides for the Finance Commission?",
-        "options": [
-          "Article 148",
-          "Article 324",
-          "Article 356",
-          "Article 280"
-        ],
-        "correctAnswer": 3,
-        "marks": 1,
-        "explanation": "Article 280 deals with the Finance Commission.",
-        "source": "https://www.legislative.gov.in/documents"
-      },
-      {
-        "id": "group2-mains-1-federalism-elections-defection",
-        "section": "Indian Constitution",
-        "topic": "Federalism, Political Parties, Elections and Defection",
-        "type": "MCQ",
-        "question": "Which schedule contains the Constitution's anti-defection provisions?",
-        "options": [
-          "Tenth",
-          "Eighth",
-          "Ninth",
-          "Eleventh"
+          "Compare its prescriptions with inscriptions or administrative records of how officials acted.",
+          "Treat every ideal described by the court poet as an account of implemented policy.",
+          "Date every policy from the latest copy of the poem available.",
+          "Infer policy from the geographical extent of the poem’s circulation."
         ],
         "correctAnswer": 0,
         "marks": 1,
-        "explanation": "The Tenth Schedule contains the disqualification rules for defection.",
-        "source": "https://www.legislative.gov.in/documents"
+        "explanation": "Prescriptive literature can reveal political ideals. Evidence of actual practice needs material that records decisions or administrative actions.",
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd"
       },
       {
-        "id": "group2-mains-1-local-government",
-        "section": "Indian Constitution",
-        "topic": "Decentralisation and Local Self-Government",
+        "id": "group2-mains-1-colonial-nationalist-andhra-applied",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Colonial Rule, Reform and Nationalism in Andhra",
         "type": "MCQ",
-        "question": "Which schedule lists subjects associated with Panchayats?",
+        "question": "A 19th-century Andhra reform association prints arguments for widow remarriage and also arranges a marriage. What can these two records establish together that the printed argument alone cannot?",
         "options": [
-          "Seventh",
-          "Tenth",
-          "Eleventh",
-          "Twelfth"
+          "The reform became compulsory in every district.",
+          "Earlier widow remarriages were legally unknown.",
+          "All readers of the printed argument accepted the reform.",
+          "The association attempted to put the reform into practice in at least one case."
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "explanation": "Pamphlets show advocacy. A record of an arranged marriage supports implementation in a specific case. Neither establishes province-wide acceptance.",
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd"
+      },
+      {
+        "id": "group2-mains-1-andhra-state-movement-applied",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Andhra Movement and the Formation of Andhra State",
+        "type": "MCQ",
+        "question": "An archive labels a 1954 letter “Andhra Pradesh government, Hyderabad”. Which correction best fits the administrative stage in 1954?",
+        "options": [
+          "Andhra Pradesh was already formed with Hyderabad as capital in 1953.",
+          "Andhra State already existed, with Kurnool as its capital. The 1956 Andhra Pradesh merger had not yet taken place.",
+          "The 1954 authority still governed the entire former Madras State from Hyderabad.",
+          "It was the post-2014 state and Kurnool was chosen as a temporary capital."
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "explanation": "Distinguish the creation of Andhra State in 1953 from the 1956 formation of Andhra Pradesh. The 1954 record belongs between those dates.",
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd"
+      },
+      {
+        "id": "group2-mains-1-andhra-pradesh-reorganisation-applied",
+        "section": "Social and Cultural History of Andhra Pradesh",
+        "topic": "Andhra Pradesh Formation and Reorganisation",
+        "type": "MCQ",
+        "question": "A timeline lists three events: (I) creation of Andhra State, (II) formation of Andhra Pradesh by merging with Telangana, and (III) formation of Telangana as a separate state. Which sequence and interval are both correct?",
+        "options": [
+          "II → I → III; three calendar years between I and II",
+          "I → II → III; three calendar years between I and II",
+          "I → III → II; eight calendar years between II and III",
+          "I → II → III; ten calendar years between I and II"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "explanation": "The events are dated 1953, 1956 and 2014 respectively. The first interval is 1956 − 1953 = 3 calendar years.",
+        "source": "https://www.museumsofindia.gov.in/repository/museum/nkm_hyd"
+      },
+      {
+        "id": "group2-mains-1-constitution-foundations-applied",
+        "section": "Indian Constitution",
+        "topic": "Constitutional Development, Rights and Basic Structure",
+        "type": "MCQ",
+        "question": "A petitioner relies only on a Directive Principle to demand that a court enforce a specific social policy. Which statement best reflects Article 37?",
+        "options": [
+          "The principle has the same direct enforceability as a Fundamental Right.",
+          "The principle is a recommendation to courts only and does not concern lawmaking.",
+          "Direct enforceability depends solely on whether both Houses passed a resolution.",
+          "The principle guides the State in making laws, while the principle itself cannot be directly enforced by a court."
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "explanation": "Article 37 combines a duty to apply the principles in governance with their non-enforceability by courts.",
+        "source": "https://www.legislative.gov.in/static/uploads/2025/08/b9a933fb88c0a5afba254256bc55a3f0.pdf"
+      },
+      {
+        "id": "group2-mains-1-government-branches-applied",
+        "section": "Indian Constitution",
+        "topic": "Legislature, Executive and Judiciary",
+        "type": "MCQ",
+        "question": "The Rajya Sabha criticises a Union ministry, while the Lok Sabha continues to support it. Which statement about collective responsibility is most accurate?",
+        "options": [
+          "The Council of Ministers is collectively responsible to the Lok Sabha. A Rajya Sabha criticism alone does not establish loss of its confidence.",
+          "The ministry is collectively responsible to whichever House acts first.",
+          "Collective responsibility requires separate confidence votes from both Houses.",
+          "The criticism transfers collective responsibility from the Lok Sabha to the Rajya Sabha."
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "explanation": "Article 75(3) places collective responsibility on the Council of Ministers in relation to the House of the People.",
+        "source": "https://www.legislative.gov.in/static/uploads/2025/08/b9a933fb88c0a5afba254256bc55a3f0.pdf"
+      },
+      {
+        "id": "group2-mains-1-union-state-institutions-applied",
+        "section": "Indian Constitution",
+        "topic": "Union–State Powers and Accountability Institutions",
+        "type": "MCQ",
+        "question": "A report is to recommend both the division of divisible tax proceeds between the Union and States and how the States’ share should be allocated among States. Which institution and distinction are correct?",
+        "options": [
+          "The GST Council; both questions concern the same interstate allocation.",
+          "The Comptroller and Auditor General; both decisions follow automatically from auditing state accounts.",
+          "The Finance Commission; the first is a Union–State division and the second is an interstate allocation.",
+          "A State Finance Commission; it divides Union taxes among all States."
         ],
         "correctAnswer": 2,
         "marks": 1,
-        "explanation": "The Eleventh Schedule is associated with rural Panchayats under Part IX.",
-        "source": "https://www.legislative.gov.in/documents"
+        "explanation": "Article 280 covers both vertical sharing between Union and States and horizontal allocation among States.",
+        "source": "https://www.legislative.gov.in/static/uploads/2025/08/b9a933fb88c0a5afba254256bc55a3f0.pdf"
+      },
+      {
+        "id": "group2-mains-1-federalism-elections-defection-applied",
+        "section": "Indian Constitution",
+        "topic": "Federalism, Political Parties, Elections and Defection",
+        "type": "MCQ",
+        "question": "A state MLA is accused of voluntarily giving up party membership. There is a separate dispute over campaign expenditure. Which pairing correctly identifies the framework for the membership issue?",
+        "options": [
+          "The Eleventh Schedule governs disqualification whenever a state election is contested.",
+          "The provisions governing money bills determine whether a member defected.",
+          "The campaigning dispute must automatically be decided before any defection question can arise.",
+          "The Tenth Schedule governs disqualification on defection grounds, distinct from the campaign expenditure issue."
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "explanation": "The Tenth Schedule addresses defection, including voluntarily giving up party membership. Campaign expenditure raises a separate question.",
+        "source": "https://www.legislative.gov.in/static/uploads/2025/08/b9a933fb88c0a5afba254256bc55a3f0.pdf"
+      },
+      {
+        "id": "group2-mains-1-local-government-applied",
+        "section": "Indian Constitution",
+        "topic": "Decentralisation and Local Self-Government",
+        "type": "MCQ",
+        "question": "A village project proposes a meeting consisting of all people on the relevant village electoral rolls, followed by work implemented by the elected village body. Which distinction is correct?",
+        "options": [
+          "The meeting is the Gram Sabha and the elected body is the Panchayat.",
+          "The meeting is the Panchayat and the elected body is the Gram Sabha.",
+          "Both labels denote only the elected members of the village body.",
+          "The meeting is the State Finance Commission and the elected body is the Gram Sabha."
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "explanation": "The constitutional definition of Gram Sabha uses electoral registration in the relevant village. The Panchayat is the rural self-government institution.",
+        "source": "https://www.legislative.gov.in/static/uploads/2025/08/b9a933fb88c0a5afba254256bc55a3f0.pdf"
       }
-    ]
+    ],
+    "note": "Ten original applied questions across the syllabus, with distinct scenarios and worked reasoning."
   }
 ]

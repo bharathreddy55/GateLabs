@@ -1,11 +1,13 @@
 import { currentAffairs2026 } from './current-affairs-2026.mjs';
 import { rrbModel2 } from './rrb-model-2.mjs';
 import { rrbModel3 } from './rrb-model-3.mjs';
-import { stationMasterSeries } from './rrb-practice-series.mjs';
+import { reviewedReasoning, stationMasterSeries } from './rrb-practice-series.mjs';
+import { analyticalSets } from './rrb-data-analysis.mjs';
+import { crossPaperRepeats, inspectPaper, numberTemplateKey, promptKey } from './paper-quality.mjs';
 // Original model questions. Deterministic construction; no scraped or AI-labelled PYQs.
 import fs from 'node:fs';
 import { EXAMS } from '../src/config/exams.js';
-import { validatePaper } from '../src/utils/examEngine.js';
+import { logicalReasoning, reserveDeductions } from './rrb-logical.mjs';
 const banks={group2:[],rrb:[]};
 function modelQuestion(exam,model,index,section,topic,question,answer,others,explanation,extra={}) {
   const seed=model>3?`${model}:${question}`:question;
@@ -34,6 +36,43 @@ function rrbPracticePaper(model,groups) {
     note:'Full-length CBT practice with multi-step maths and science, shared data sets, English comprehension and reasoning. Uses the indicative 30/30/20/20 breakdown of CEN 08/2026.',
     questions
   };
+}
+function replaceRrbReasoning(paper,model) {
+  const reasoning=reviewedReasoning(model).flatMap((rows,i)=>rows.map((row,index)=>{
+    const question=modelQuestion('rrb',model,60+i*20+index,2+i,...row);
+    return {...question,id:question.id+'-v2'};
+  }));
+  const analytical=model===1?[
+    ...paper.questions.slice(30,31),
+    ...analyticalSets(20).flat().map((row,i)=>{
+      const question=modelQuestion('rrb',1,31+i,1,...row);
+      return {...question,id:question.id+'-v2'};
+    }),
+    ...paper.questions.slice(55,60)
+  ]:paper.questions.slice(30,60);
+  return {...paper,questions:[...paper.questions.slice(0,30),...analytical,...reasoning]};
+}
+
+function uniqueRrbPapers(papers, reserve) {
+  const seen=new Set();
+  return papers.map(paper=>{
+    const optionsKey=q=>q.options.toSorted().join('\n');
+    const choiceSets=new Set(paper.questions.map(optionsKey));
+    const reserved=new Set(paper.questions.map(promptKey));
+    const templates=new Set(paper.questions.map(numberTemplateKey));
+    const questions=paper.questions.map(q=>{
+      const key=promptKey(q);
+      if(!seen.has(key)){seen.add(key);return q;}
+      const unique=reserve.find(candidate=>candidate.section===q.section&&!seen.has(promptKey(candidate))&&
+        !reserved.has(promptKey(candidate))&&!choiceSets.has(optionsKey(candidate))&&!templates.has(numberTemplateKey(candidate)));
+      if(!unique)throw Error(`No distinct replacement for ${q.id} in ${paper.title}`);
+      choiceSets.add(optionsKey(unique));
+      templates.add(numberTemplateKey(unique));
+      seen.add(promptKey(unique));
+      return {...unique,id:q.id};
+    });
+    return {...paper,questions};
+  });
 }
 function rows(exam,section,topic,text) {
   for(const line of text.trim().split('\n')) {
@@ -95,7 +134,7 @@ for(const [q,a,o,why] of [
 const distribution={table:'Ticket counters observed in one hour:\nTickets sold per counter: 10 | 20 | 30 | 40\nNumber of counters:        2 |  3 |  4 |  1',figure:{type:'bar',labels:['10','20','30','40'],values:[2,3,4,1],title:'Frequency distribution: counters by tickets sold'}};
 for(const [q,a,o,why] of [
  ['How many counters were observed in the ticket distribution?',10,[4,9,100],'Total frequency = 2 + 3 + 4 + 1.'],
- ['What is the modal number of tickets sold per counter?',30,[10,20,40],'30 has the highest frequency, four counters.'],
+ ['What fraction of all tickets was sold by counters that sold at least the modal number?', '2/3',['1/2','1/3','3/4'],'The modal count is 30. The four counters at 30 and one at 40 sold 160 of the 240 tickets.'],
  ['How many tickets did all observed counters sell in total?',240,[100,200,260],'Weighted total = 10×2 + 20×3 + 30×4 + 40×1.'],
  ['What is the mean tickets sold per observed counter?',24,[25,20,30],'Divide the weighted total of 240 by 10 counters.'],
  ['Can the observed counters’ total revenue be determined from ticket counts alone?','No, ticket prices are required',['Yes, it is ₹240','Yes, it is ₹24','Yes, it is ₹100'],'Counts alone do not specify the prices paid and therefore do not determine revenue.']
@@ -251,14 +290,46 @@ for(const original of [...banks.rrb.slice(0,22),...banks.rrb.slice(80,88)]) {
  const {id,section,subject,...q}=original;
  banks.group2.push({...q,id:`group2-model1-${banks.group2.length+1}`,section:'Mental Ability',subject:'Mental Ability'});
 }
-fs.mkdirSync('public/exams',{recursive:true});
+const screeningRevisions=[
+  [7,0,'Ashokan inscriptions','A historian wants direct evidence that Ashoka publicly addressed the suffering caused by conquest. Which source and event give the strongest match?','Major Rock Edict XIII and the Kalinga war',['The Allahabad Pillar inscription and the Kalinga war','Major Rock Edict XIII and the Second Battle of Tarain','The Aihole inscription and the Kalinga war'],'Major Rock Edict XIII records Ashoka’s response to the suffering associated with his conquest of Kalinga. The other inscriptions concern different rulers or events.'],
+  [16,0,'Sultanate administration','Two accounts describe maintaining a large standing army. One adds that the ruler intervened in Delhi’s prices for grain and other goods. Which ruler’s administration is most directly associated with these market controls?','Alauddin Khalji',['Balban','Iltutmish','Firuz Shah Tughlaq'],'Alauddin Khalji’s system of market regulation is the clue. The description of an army alone would not single him out.'],
+  [59,1,'Topographic maps','Two routes climb from 200 m to 400 m. Route A crosses the contour intervals in 1 km horizontally, and Route B in 2 km. Which comparison follows?','A has twice the average gradient of B.',['Both gradients are equal because the endpoints have the same elevations.','B has twice the average gradient of A.','A gains twice as much height as B.'],'Both routes gain 200 m. Averaged over horizontal distance, the rise per kilometre is twice as large on the shorter route.'],
+  [64,2,'Marriage and kinship','A community requires spouses to belong to the same broad community but forbids marriage within one’s own clan. Which combination describes these two rules?','Community endogamy with clan exogamy',['Community exogamy with clan endogamy','Exogamy at both levels','Endogamy at both levels'],'Endogamy draws the marriage partner from inside the reference group. Exogamy requires going outside it. The rules refer to two different levels.'],
+  [84,2,'Overlapping barriers','A training scheme finds that distance reduces attendance and language barriers reduce successful enrolment. Participants facing both barriers are especially underrepresented. What analysis best examines the combined effect?','Compare outcomes across all four combinations of distance and language access.',['Measure only average attendance across the entire scheme.','Compare language groups solely among participants living far away.','Pool all applicants with either barrier as one undifferentiated group.'],'The four groups separate each single barrier from the group experiencing both. This makes their combined association visible.'],
+  [143,4,'Alternating series','Odd and even positions follow separate arithmetic progressions. In 8, 41, 13, 36, 18, 31, ?, ?, what replaces the two blanks, in order?','23, 26',['23, 31','22, 26','26, 23'],'The odd-position values increase by 5. The even-position values decrease by 5. Extend each independently.'],
+  [144,4,'Schedule constraints','Five sessions run in order from 1 to 5. Archiving follows indexing immediately. Scanning is first, checks are later than archiving, and dispatch is last. Which session is third?','Archiving',['Indexing','Checks','Scanning'],'Slots 1 and 5 are fixed. The consecutive indexing–archiving pair must end before checks, so slots 2–4 are indexing, archiving and checks.'],
+  [145,4,'Using relative ranks','Asha is 9th from the front of a queue of 34 and Bala is 11th from the back. Four people between them leave. If nobody changes relative position, how many remain between them?','10',['11','13','14'],'Bala was 34 − 11 + 1 = 24th from the front. The original gap was 24 − 9 − 1 = 14. Four departures leave 10.'],
+  [146,4,'Sound deduction','Every verified form is signed. No unsigned form can be paid. Some signed forms are awaiting verification. What must be true?','Some forms are signed without yet being verified.',['Every signed form is already verified.','No signed form can be paid.','Every form awaiting verification is unsigned.'],'The final premise supplies a signed form awaiting verification. Signing is required for verification, but signing alone does not establish completion.']
+];
+for(const [position,section,topic,stem,key,wrong,reason] of screeningRevisions){
+ const question=modelQuestion('group2',1,position-1,section,topic,stem,key,wrong,reason);
+ banks.group2[position-1]={...question,id:question.id+'-applied'};
+}
+const output=[];
 for(const [exam,questions] of Object.entries(banks)){
- const paper={title:EXAMS[exam].name+' · Foundation model 1',provenance:'GateLabs original practice material',note:exam==='group2'?'150-question foundation paper with a sourced 2025–2026 current-affairs snapshot checked 16 November 2026: AP, national and international topics. This is a practice selection, not a prediction or exhaustive coverage; update it as new events occur.':'100-question foundation paper using the indicative 30/30/20/20 distribution. Difficulty is introductory; this is not an official paper or a calibrated prediction.',questions};
- const papers=exam==='rrb'?[paper,rrbPracticePaper(2,rrbModel2),rrbPracticePaper(3,rrbModel3),...stationMasterSeries(modelQuestion,EXAMS.rrb.name)]:[paper];
+ const paper={title:EXAMS[exam].name+' · Foundation model 1',provenance:'GateLabs original practice material',note:exam==='group2'?'150-question foundation paper with a sourced 2025–2026 current-affairs snapshot checked 16 November 2026: AP, national and international topics. This is a practice selection, not a prediction or exhaustive coverage; update it as new events occur.':'100-question model with foundational Maths and Science, applied data analysis and multi-step reasoning. Uses the indicative 30/30/20/20 distribution.',questions};
+ let papers=[paper];
+ if(exam==='rrb'){
+   const prior=[rrbPracticePaper(2,rrbModel2),rrbPracticePaper(3,rrbModel3)];
+   const variations=Array.from({length:7},(_,i)=>logicalReasoning(21+i)
+     .filter(row=>['Nested conditions','Binary logic and parity','Truth-count deduction','Possibility versus certainty','Constrained data arrangement'].includes(row[0]))
+     .map((row,j)=>modelQuestion('rrb',21+i,j,2,...row)));
+   const reserve=[
+     ...prior.flatMap(item=>item.questions.slice(60).filter(q=>!q.passage)),
+     ...reserveDeductions.map((row,i)=>modelQuestion('rrb',30,i,2,...row)),...variations.flat()
+   ];
+   papers=uniqueRrbPapers([replaceRrbReasoning(paper,1),...prior.map((item,i)=>replaceRrbReasoning(item,i+2)),
+     ...stationMasterSeries(modelQuestion,EXAMS.rrb.name)],reserve);
+   if(crossPaperRepeats(papers).length)throw Error('Repeated question prompts across Station Master papers');
+ }
  for(const candidate of papers) {
-   const errors=validatePaper(exam,candidate.questions,candidate.full!==false);
+   const {errors}=inspectPaper({...candidate,examId:exam,full:candidate.full!==false,original:true});
    if(errors.length) throw Error(candidate.title+': '+errors.join(' · '));
  }
+ output.push([exam,papers]);
+}
+fs.mkdirSync('public/exams',{recursive:true});
+for(const [exam,papers] of output){
  fs.writeFileSync(`public/exams/${exam}.json`,JSON.stringify(papers,null,2)+'\n');
  console.log(`${exam}: ${papers.length} papers and drills validated`);
 }

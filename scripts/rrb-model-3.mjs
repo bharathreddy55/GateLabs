@@ -36,7 +36,7 @@ Lever equilibrium|A 120 N load is 0.30 m to the left of a frictionless pivot. A 
 Actual versus target|Which unit recorded the largest absolute gain in actual output from period 1 to period 2?|A|B|C|D|Actual output changes by +45, −12, +20 and +40 for A, B, C and D respectively.
 Percentage growth|By what percentage did total actual output grow from period 1 to period 2?|23.25%|20.00%|21.50%|24.50%|The actual totals are 400 and 493 units, so the growth is 93/400 = 23.25%.
 Weighted attainment|What percentage of the combined target did all units attain in period 2, to two decimal places?|71.45%|72.50%|73.00%|74.70%|Total output is 493 and the combined target is 690. The required percentage is 100×493/690.
-Reconciling indicators|Which unit increased its actual output even though its target fell?|D|A|B|C|D’s target fell from 160 to 150 while its actual output rose from 80 to 120.
+Reconciling indicators|Among the units whose targets fell, what was the net change in their combined actual output?|It increased by 28.|It increased by 40.|It decreased by 12.|It decreased by 50.|The falling-target units are B and D. B falls from 140 to 128, while D rises from 80 to 120. The combined change is −12 + 40 = +28.
 Relative contribution|What fraction of actual period 2 output came from A and D together?|255/493|240/493|248/493|275/493|Add 135 for A and 120 for D, then divide by the overall actual total of 493.
 `,{table:'Unit | Period 1 target | % attained | Period 2 target | % attained\nA | 150 | 60 | 180 | 75\nB | 200 | 70 | 160 | 80\nC | 120 | 75 | 200 | 55\nD | 160 | 50 | 150 | 80'}],
   [1,`

@@ -2563,175 +2563,176 @@
     "full": false,
     "questions": [
       {
-        "id": "group2-mains-2-national-income-planning",
+        "id": "group2-mains-2-national-income-planning-applied",
         "section": "Indian and Andhra Pradesh Economy",
         "topic": "National Income, Planning and Economic Reform",
         "type": "MCQ",
-        "question": "Which adjustment converts a gross aggregate to a net aggregate?",
+        "question": "Gross domestic product is ₹6,400 crore, consumption of fixed capital is ₹760 crore and net primary income from abroad is +₹120 crore. What is net national income at the same valuation on this simplified basis?",
         "options": [
-          "Subtract consumption of fixed capital",
-          "Add net exports",
-          "Subtract all taxes",
-          "Add government transfers"
+          "₹5,640 crore",
+          "₹6,520 crore",
+          "₹5,760 crore",
+          "₹7,160 crore"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "marks": 1,
-        "explanation": "Net national-account aggregates deduct consumption of fixed capital.",
+        "explanation": "Convert domestic to national by adding ₹120 crore. Convert gross to net by deducting ₹760 crore. The result is 6,400 + 120 − 760 = ₹5,760 crore.",
         "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48"
       },
       {
-        "id": "group2-mains-2-money-banking-fiscal-trade",
+        "id": "group2-mains-2-money-banking-fiscal-trade-applied",
         "section": "Indian and Andhra Pradesh Economy",
         "topic": "Money, Banking, Public Finance and External Accounts",
         "type": "MCQ",
-        "question": "Where do foreign direct investment flows ordinarily appear in balance of payments accounting?",
+        "question": "A foreign investor buys newly issued equity in a resident firm. In a subsequent period the firm pays that investor dividends. How are the two cross-border flows classified?",
         "options": [
-          "Goods trade",
-          "Financial account",
-          "Primary income only",
-          "Revenue budget"
-        ],
-        "correctAnswer": 1,
-        "marks": 1,
-        "explanation": "FDI is recorded under direct investment in the financial account.",
-        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48"
-      },
-      {
-        "id": "group2-mains-2-indian-sectors",
-        "section": "Indian and Andhra Pradesh Economy",
-        "topic": "Indian Agriculture, Industry and Services",
-        "type": "MCQ",
-        "question": "Output rises with area unchanged. Which measure must have risen?",
-        "options": [
-          "Farm area",
-          "All input prices",
-          "Yield per hectare",
-          "Number of procurement centres"
-        ],
-        "correctAnswer": 2,
-        "marks": 1,
-        "explanation": "With a fixed area the change in output comes from higher output per unit of area.",
-        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48"
-      },
-      {
-        "id": "group2-mains-2-ap-economy-budget",
-        "section": "Indian and Andhra Pradesh Economy",
-        "topic": "Andhra Pradesh GSDP and State Finances",
-        "type": "MCQ",
-        "question": "Which comparison best measures the difference between a year's original allocation and final recorded spending?",
-        "options": [
-          "Two revised estimates from future years",
-          "Debt stock and GST rate",
-          "GSDP and population only",
-          "Budget estimate and audited actual"
-        ],
-        "correctAnswer": 3,
-        "marks": 1,
-        "explanation": "Budget estimates are plans. Actuals show recorded spending for the year.",
-        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48"
-      },
-      {
-        "id": "group2-mains-2-ap-productive-sectors",
-        "section": "Indian and Andhra Pradesh Economy",
-        "topic": "Andhra Pradesh Agriculture, Industry and Services",
-        "type": "MCQ",
-        "question": "Which facility most directly slows post-harvest deterioration in perishable produce?",
-        "options": [
-          "A tax tribunal",
-          "Cold storage",
-          "A dry mineral stockyard",
-          "A voting station"
-        ],
-        "correctAnswer": 1,
-        "marks": 1,
-        "explanation": "Temperature-controlled storage extends the usable distribution time of many perishable foods.",
-        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48"
-      },
-      {
-        "id": "group2-mains-2-technology-missions",
-        "section": "Science and Technology",
-        "topic": "Indian Science, Technology and Public Missions",
-        "type": "MCQ",
-        "question": "What is Aditya-L1 primarily designed to study?",
-        "options": [
-          "Mars's moons",
-          "Earth's ocean floor",
-          "The Sun",
-          "Lunar soil"
-        ],
-        "correctAnswer": 2,
-        "marks": 1,
-        "explanation": "Aditya-L1 is India's observatory mission for studying the Sun.",
-        "source": "https://www.isro.gov.in/SpacecraftMissions.html"
-      },
-      {
-        "id": "group2-mains-2-energy-management",
-        "section": "Science and Technology",
-        "topic": "Energy Management, Renewables and Bharat Stage Rules",
-        "type": "MCQ",
-        "question": "What does an installed capacity of 100 MW describe?",
-        "options": [
-          "Annual electricity production",
-          "Rated power output capacity",
-          "Staple-crop yield",
-          "Total fuel reserves"
-        ],
-        "correctAnswer": 1,
-        "marks": 1,
-        "explanation": "MW is a rate of energy production, while generation over time is measured in MWh.",
-        "source": "https://www.isro.gov.in/SpacecraftMissions.html"
-      },
-      {
-        "id": "group2-mains-2-ecosystems-biodiversity",
-        "section": "Science and Technology",
-        "topic": "Ecosystems, Biodiversity and Conservation",
-        "type": "MCQ",
-        "question": "Which agreement regulates international trade in listed wildlife specimens?",
-        "options": [
-          "Paris Agreement",
-          "Montreal Protocol",
-          "Ramsar only",
-          "CITES"
-        ],
-        "correctAnswer": 3,
-        "marks": 1,
-        "explanation": "CITES regulates international trade in specimens of listed wild fauna and flora.",
-        "source": "https://www.isro.gov.in/SpacecraftMissions.html"
-      },
-      {
-        "id": "group2-mains-2-waste-pollution-remediation",
-        "section": "Science and Technology",
-        "topic": "Waste, Pollution and Environmental Remediation",
-        "type": "MCQ",
-        "question": "Which method specifically uses biological activity to manage contaminants?",
-        "options": [
-          "Bioremediation",
-          "Precision levelling",
-          "Fractional distillation only",
-          "Noise insulation"
+          "Equity acquisition in the financial account and dividends in current-account primary income",
+          "Both flows in merchandise trade",
+          "Equity acquisition in primary income and dividends in the financial account",
+          "Equity acquisition in services and dividends in secondary income"
         ],
         "correctAnswer": 0,
         "marks": 1,
-        "explanation": "Bioremediation relies on suitable organisms or biological processes to transform, remove or immobilise pollutants.",
+        "explanation": "The equity acquisition changes a financial asset or liability. The dividend is investment income, which belongs to the current account.",
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48"
+      },
+      {
+        "id": "group2-mains-2-indian-sectors-applied",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Indian Agriculture, Industry and Services",
+        "type": "MCQ",
+        "question": "Crop A’s cultivated area falls from 1,000 to 800 hectares, while output rises from 2,000 to 2,160 tonnes. By what percentage does average yield rise?",
+        "options": [
+          "8%",
+          "20%",
+          "25%",
+          "35%"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "explanation": "Yield rises from 2 to 2.7 tonnes per hectare. Use the original yield as the base: (2.7 − 2)/2 = 35%.",
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48"
+      },
+      {
+        "id": "group2-mains-2-ap-economy-budget-applied",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Andhra Pradesh GSDP and State Finances",
+        "type": "MCQ",
+        "question": "A state scheme’s budget estimate is ₹250 crore, revised estimate ₹220 crore and audited expenditure ₹198 crore. Which comparison measures the shortfall against the original allocation, and by how much?",
+        "options": [
+          "Revised estimate versus audited actual; ₹22 crore",
+          "Budget estimate versus audited actual; ₹52 crore",
+          "Budget estimate versus revised estimate; ₹30 crore",
+          "Audited actual versus budget estimate; ₹48 crore"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "explanation": "The question asks about actual spending compared with the original budget. The relevant difference is 250 − 198 = ₹52 crore.",
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48"
+      },
+      {
+        "id": "group2-mains-2-ap-productive-sectors-applied",
+        "section": "Indian and Andhra Pradesh Economy",
+        "topic": "Andhra Pradesh Agriculture, Industry and Services",
+        "type": "MCQ",
+        "question": "A producer cooperative already has a cold room. Produce warms up for six hours in transport before reaching it, and most new spoilage occurs during this interval. Which intervention targets the identified bottleneck most directly?",
+        "options": [
+          "Increasing cold-room capacity while keeping the same warm journey",
+          "Refrigerated transport or precooling that maintains suitable temperatures through the journey",
+          "Publishing wholesale price alerts with the same handling schedule",
+          "Adding faster packing equipment after the produce reaches the cold room"
+        ],
+        "correctAnswer": 1,
+        "marks": 1,
+        "explanation": "The identified losses arise before storage. Interventions that protect produce during the warm transit stage target the cause.",
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304949&lang=1&reg=48"
+      },
+      {
+        "id": "group2-mains-2-technology-missions-applied",
+        "section": "Science and Technology",
+        "topic": "Indian Science, Technology and Public Missions",
+        "type": "MCQ",
+        "question": "Two missions are proposed: one to monitor changes in the solar corona and one to survey crop conditions in Andhra Pradesh. Which pairing of observational objectives is sound?",
+        "options": [
+          "Repeated thermal surveys of cultivated land for the corona, and solar emission records for crops",
+          "A single broad solar measurement is sufficient for both objectives",
+          "Both objectives are met by mapping only Earth’s magnetic field at the surface",
+          "Continuous solar monitoring for the corona, and repeated spatial observations of Earth’s surface for crops"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "explanation": "The first objective targets solar atmospheric activity. The second requires spatial observations of terrestrial vegetation at multiple times.",
         "source": "https://www.isro.gov.in/SpacecraftMissions.html"
       },
       {
-        "id": "group2-mains-2-environment-sustainability-health",
+        "id": "group2-mains-2-energy-management-applied",
         "section": "Science and Technology",
-        "topic": "Climate, Sustainable Development and Public Health",
+        "topic": "Energy Management, Renewables and Bharat Stage Rules",
         "type": "MCQ",
-        "question": "Which agreement focuses specifically on the phase-out of ozone-depleting substances?",
+        "question": "A 100 MW renewable plant produces 1,200 MWh over a 24-hour day. What is its capacity factor over this interval?",
         "options": [
-          "Paris Agreement",
-          "CITES",
-          "Montreal Protocol",
-          "Convention on Biological Diversity"
+          "50%",
+          "12%",
+          "83.3%",
+          "120%"
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "explanation": "The maximum at rated output is 100 × 24 = 2,400 MWh. Actual energy divided by the interval maximum is 1,200/2,400 = 50%.",
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html"
+      },
+      {
+        "id": "group2-mains-2-ecosystems-biodiversity-applied",
+        "section": "Science and Technology",
+        "topic": "Ecosystems, Biodiversity and Conservation",
+        "type": "MCQ",
+        "question": "A wildlife specimen is sought for international commercial sale. The species appears in an appendix of a wildlife-trade treaty. Which statement best captures the first regulatory question?",
+        "options": [
+          "Treat all international sales as automatically allowed if the source country issues a domestic receipt.",
+          "Assume the listing sets a uniform market price for the specimen.",
+          "Check the relevant listing and the shipment’s purpose to determine applicable permits or restrictions.",
+          "Apply the same conditions as for an unlisted species because the shipment is commercial."
         ],
         "correctAnswer": 2,
         "marks": 1,
-        "explanation": "The Montreal Protocol established controls on ozone-depleting substances.",
+        "explanation": "CITES trade controls depend on the listed species, its appendix and the nature of the proposed movement.",
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html"
+      },
+      {
+        "id": "group2-mains-2-waste-pollution-remediation-applied",
+        "section": "Science and Technology",
+        "topic": "Waste, Pollution and Environmental Remediation",
+        "type": "MCQ",
+        "question": "A contaminated site has biodegradable organic pollutants. Pilot plots receiving oxygen and nutrients show faster decreases than equally sampled untreated plots. Which mechanism is the intervention primarily testing?",
+        "options": [
+          "Physical removal of contaminants by excavation",
+          "Separation of pollutants by sieving the soil",
+          "Isolation of contaminants beneath an impermeable barrier",
+          "Stimulation of microbes that break down the pollutant"
+        ],
+        "correctAnswer": 3,
+        "marks": 1,
+        "explanation": "The supplied oxygen and nutrients can support microbial metabolism of the biodegradable contaminant. Excavation, sieving and capping rely on other mechanisms.",
+        "source": "https://www.isro.gov.in/SpacecraftMissions.html"
+      },
+      {
+        "id": "group2-mains-2-environment-sustainability-health-applied",
+        "section": "Science and Technology",
+        "topic": "Climate, Sustainable Development and Public Health",
+        "type": "MCQ",
+        "question": "A refrigerant change nearly eliminates ozone depletion potential but the replacement has a high global warming potential. Which conclusion follows?",
+        "options": [
+          "It addresses ozone depletion, while its climate impact needs a separate assessment.",
+          "Low ozone depletion potential guarantees negligible warming.",
+          "Ozone depletion potential measures carbon emissions during manufacture.",
+          "A high global warming potential proves the replacement has high ozone depletion potential."
+        ],
+        "correctAnswer": 0,
+        "marks": 1,
+        "explanation": "ODP estimates effect on stratospheric ozone. GWP describes climate forcing over a chosen time horizon. A lower value of one does not determine the other.",
         "source": "https://www.isro.gov.in/SpacecraftMissions.html"
       }
-    ]
+    ],
+    "note": "Ten original applied questions across the syllabus, with distinct scenarios and worked reasoning."
   }
 ]
