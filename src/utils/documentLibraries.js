@@ -5,7 +5,7 @@ export async function renderMath(root=document){
   const katex=await mathLoader;
   root.querySelectorAll('.katex-render').forEach(element=>{const source=element.dataset.latex;if(source)katex.render(source,element,{throwOnError:false,trust:false,strict:'warn',maxExpand:1000});});
  }catch{
-  root.querySelectorAll('.katex-render').forEach(element=>{element.textContent='Formula (text): '+element.dataset.latex;element.title='Math renderer unavailable. Reopen this page to retry.';});
+  root.querySelectorAll('.katex-render:not([data-math-fallback])').forEach(element=>{element.textContent='Formula (text): '+element.dataset.latex;element.title='Math renderer unavailable. Reopen this page to retry.';});
  }
 }
 let pdfLoader;

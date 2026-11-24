@@ -1,4 +1,5 @@
 import { arithmeticSolution } from './reviewArithmetic.js';
+import { stationMasterSolution } from './stationMasterSolutions.js';
 
 const topicMethods = [
   [/reading comprehension/i,'Find the lines that directly answer the question. For an inference, choose the conclusion those lines support without adding a new assumption.'],
@@ -100,7 +101,11 @@ function explanationSteps(explanation) {
   }).map(line=>line.trim()).filter(Boolean);
 }
 
-export function explainAnswer(q) {
+export function explainAnswer(q, {examId} = {}) {
+  if (examId === 'rrb') {
+    const solution = stationMasterSolution(q);
+    if (solution) return solution;
+  }
   if (Array.isArray(q.solution?.steps) && q.solution.steps.length) return {approach:'',reason:'',tip:'',...q.solution};
   const entry = Object.hasOwn(authored,q.question) ? authored[q.question] : null;
   if (entry && q.options?.[q.correctAnswer]===entry.answer) return {reason:'',...entry};

@@ -1,6 +1,7 @@
 import { icon } from '../config/navigation.js';
 import { escapeHtml as h } from '../utils/examEngine.js';
 import { explainAnswer } from '../utils/answerSolutions.js';
+import { renderMath } from '../utils/documentLibraries.js';
 import { renderQuestionContext } from './QuestionView.js';
 
 const statuses = {correct:'Correct', wrong:'Incorrect', skipped:'Unanswered'};
@@ -35,14 +36,63 @@ function renderAnswers(q, renderOption) {
   </details>` : ''}`;
 }
 
-function renderSolution(q) {
-  const {approach,steps,reason,tip} = explainAnswer(q);
+function renderFormula({formula, latex}) {
+  if (!formula) return '';
+  return `<div class="review-formula">${latex
+    ? `<span class="katex-render" data-latex="${h(latex)}" data-math-fallback>${h(formula)}</span>`
+    : h(formula)}</div>`;
+}
+
+function renderStepContent(step) {
+  if (!step || typeof step !== 'object') return `<p>${h(step)}</p>`;
+  return `<strong>${h(step.title)}</strong>
+    ${step.quote ? `<blockquote>${h(step.quote)}</blockquote>` : ''}
+    <p>${h(step.text)}</p>${renderFormula(step)}`;
+}
+
+function solutionLayout(q, examId) {
+  if (examId !== 'rrb') return 'default';
+  if (q.passage && /reading comprehension/i.test(q.topic ?? '')) return 'passage';
+  if (q.section === 'Data Analysis') return 'data';
+  if (q.section === 'Logical Capability' || q.section === 'Mental Reasoning') return 'logic';
+  return 'math';
+}
+
+const solutionHeadings = {
+  passage:'Evidence and inference',
+  data:'Data walkthrough',
+  logic:'Reasoning and deductions',
+  math:'Step-by-step solution',
+  default:'Worked solution'
+};
+
+function renderSteps(steps, layout) {
+  if (!steps.length) return '';
+  if (layout === 'passage') {
+    return `<div class="review-evidence">${steps.map(step => `<div>${renderStepContent(step)}</div>`).join('')}</div>`;
+  }
+  const className = layout === 'data' ? 'review-data-steps' : 'review-steps';
+  return `<ol class="${className}">${steps.map(step => `<li>${renderStepContent(step)}</li>`).join('')}</ol>`;
+}
+
+function renderSolution(q, examId) {
+  const {approach,steps,reason,tip,finalAnswer,shortcut} = explainAnswer(q, {examId});
   if (!approach && !steps.length && !reason) return '<p class="review-note">A worked explanation is unavailable for this question.</p>';
-  return `<section class="review-solution" aria-labelledby="review-solution-heading">
-    <h4 id="review-solution-heading">${icon('book')} ${steps.length ? 'Worked solution' : 'Why this answer is correct'}</h4>
+  const isStationMaster = examId === 'rrb';
+  const layout = solutionLayout(q, examId);
+  const heading = steps.length || (isStationMaster && layout !== 'math')
+    ? solutionHeadings[layout]
+    : 'Why this answer is correct';
+  const answer = finalAnswer ?? {text:q.options?.[q.correctAnswer]};
+  return `<section class="review-solution" data-solution-layout="${layout}" aria-labelledby="review-solution-heading">
+    <h4 id="review-solution-heading">${icon('book')} ${heading}</h4>
     ${approach ? `<div class="review-approach"><strong>Approach</strong><p>${h(approach)}</p></div>` : ''}
-    ${steps.length ? `<ol class="review-steps">${steps.map(step=>`<li><p>${h(step)}</p></li>`).join('')}</ol>` : ''}
+    ${renderSteps(steps, layout)}
     ${reason ? `<p class="review-reason">${h(reason)}</p>` : ''}
+    ${isStationMaster && (answer.text || answer.formula) ? `<div class="review-final-answer">
+      <strong>Final answer</strong>${renderFormula(answer)}${answer.text ? `<p>${h(answer.text)}</p>` : ''}
+    </div>` : ''}
+    ${shortcut ? `<aside class="review-shortcut"><strong>Exam shortcut</strong><p>${h(shortcut.text)}</p>${renderFormula(shortcut)}</aside>` : ''}
     ${tip ? `<aside class="review-tip">${icon('info')}<div><strong>Watch for</strong><p>${h(tip)}</p></div></aside>` : ''}
   </section>`;
 }
@@ -57,7 +107,7 @@ function sourceReference(q) {
 }
 
 export function mountAnswerReview(root, {
-  responses, state = {}, bookmarks = [], toggleBookmark, practise, renderContext = renderQuestionContext, renderOption
+  responses, state = {}, bookmarks = [], toggleBookmark, practise, renderContext = renderQuestionContext, renderOption, examId
 }) {
   if (!root) return;
   const items = responses.map((question,index)=>({question,index}));
@@ -114,7 +164,7 @@ export function mountAnswerReview(root, {
         <h3 class="review-question" tabindex="-1">${h(q.question)}</h3>
         ${renderContext(q)}
         ${renderAnswers(q,renderOption)}
-        ${renderSolution(q)}
+        ${renderSolution(q, examId)}
         ${sourceReference(q)}
       </div>
       <footer class="review-card-footer">
@@ -123,6 +173,7 @@ export function mountAnswerReview(root, {
         <button type="button" class="ui-button primary" data-review-move="1" ${cursor===visible.length-1?'disabled':''}>Next <span aria-hidden="true">${icon('arrow')}</span></button>
       </footer>
     </article>`;
+    if (content.querySelector('.katex-render')) renderMath(content);
     if (focus) content.querySelector('.review-question').focus();
   }
 

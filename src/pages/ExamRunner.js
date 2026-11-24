@@ -110,6 +110,7 @@ export const MockTest = {
     const readBookmarks=()=>{const list=readStored(key,[]);return Array.isArray(list)?list:[];};
     mountAnswerReview(root,{
       responses:result.responses,
+      examId:result.examId,
       state:this.reviewState,
       renderContext:q=>renderQuestionContext(q,{examId:result.examId}),
       bookmarks:readBookmarks(),

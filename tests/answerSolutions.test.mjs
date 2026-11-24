@@ -5,6 +5,45 @@ import {explainAnswer} from '../src/utils/answerSolutions.js';
 import {parseExamText} from '../src/utils/parseExamText.js';
 import {buildCbatSet} from '../src/utils/cbat.js';
 
+const rrbReview = {examId:'rrb'};
+
+test('Station Master model 2 has question-specific steps and authentic passage excerpts',()=>{
+  const model=JSON.parse(readFileSync('public/exams/rrb.json','utf8')).find(paper=>paper.title.endsWith('Practice model 2'));
+  assert.equal(model.questions.length,100);
+  for (const q of model.questions) {
+    const solution=explainAnswer(q,rrbReview);
+    assert.ok(solution.steps.length >= 3 && solution.steps.every(step=>step.title && step.text),q.id);
+    for (const {quote} of solution.steps) if (quote) assert.ok(q.passage.includes(quote),q.id);
+    const wrongKey=explainAnswer({...q,correctAnswer:(q.correctAnswer+1)%q.options.length},rrbReview);
+    assert.ok(wrongKey.steps.every(step=>typeof step==='string'),q.id);
+  }
+});
+
+test('the Station Master probability solution counts distinct pairs and displays the verified fraction',()=>{
+  const paper=JSON.parse(readFileSync('public/exams/rrb.json','utf8'))[1];
+  const q=paper.questions.find(question=>question.id==='rrb-model2-11');
+  const tokens=[...'RRRRRBBBBGGG'];
+  const pairs=tokens.flatMap((first,i)=>tokens.slice(i+1).map(second=>first+second));
+  const eligible=pairs.filter(pair=>[...pair].filter(color=>color==='R').length===1);
+  const solution=explainAnswer(q,rrbReview);
+  assert.equal(solution.steps.length,4);
+  assert.equal(solution.finalAnswer.formula,`${eligible.length}/${pairs.length}`);
+  assert.equal(solution.finalAnswer.latex,String.raw`\frac{35}{66}`);
+  assert.equal(solution.finalAnswer.text,'About 53.03%');
+  assert.match(solution.shortcut.formula,/5 × 7/);
+  assert.match(solution.tip,/second denominator is 11/);
+});
+
+test('recognised Station Master maths and reasoning tasks use the values from the current paper',()=>{
+  const papers=JSON.parse(readFileSync('public/exams/rrb.json','utf8'));
+  const tasks=papers.flatMap(paper=>paper.questions);
+  for (const topic of ['Annular area','Moments','Clock angles','Calendar with two shifts','Interleaved number series']) {
+    const solved=tasks.filter(q=>q.topic===topic && /^rrb-model[4-9]-/.test(q.id))
+      .map(q=>explainAnswer(q,rrbReview));
+    assert.ok(solved.filter(s=>s.steps.every(step=>step.title) && s.steps.length===3).length >= 3,topic);
+  }
+});
+
 test('worked calculations use the paper values and defer to the source when the key differs',()=>{
   const papers=JSON.parse(readFileSync('public/exams/rrb.json','utf8'));
   const averages=papers.flatMap(paper=>paper.questions).filter(q=>q.topic==='Weighted average'&&q.question.startsWith('The mean mass of'));

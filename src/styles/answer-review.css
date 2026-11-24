@@ -211,6 +211,62 @@
   font-weight: 750;
 }
 .answer-review .review-solution p { white-space: pre-wrap; line-height: 1.65; font-size: 14px; }
+.review-evidence,
+.review-data-steps {
+  display: grid;
+  gap: .65rem;
+  margin: 14px 0;
+}
+.review-evidence > div {
+  padding: 0 0 .65rem;
+  border-bottom: 1px solid var(--ws-border);
+}
+.review-evidence > div:last-child { border-bottom: 0; padding-bottom: 0; }
+.review-evidence blockquote {
+  margin: .45rem 0;
+  padding: .55rem .8rem;
+  border-inline-start: 3px solid var(--review-accent);
+  background: var(--ws-bg);
+  overflow-wrap: anywhere;
+}
+.review-evidence p,
+.review-data-steps p { margin: .3rem 0 0; }
+.review-data-steps { list-style: decimal; padding-inline-start: 1.75rem; }
+.review-data-steps li {
+  padding: .65rem .8rem;
+  border: 1px solid var(--ws-border);
+  border-radius: 8px;
+}
+.review-data-steps li::marker { color: var(--review-accent); font-weight: 700; }
+[data-solution-layout="logic"] .review-formula,
+.review-evidence .review-formula {
+  border-inline-start: 3px solid var(--review-accent);
+  background: var(--ws-soft);
+}
+.review-formula {
+  max-width: 100%;
+  overflow-x: auto;
+  margin-block: 6px;
+  padding: .65rem .75rem;
+  border-radius: 8px;
+  background: var(--ws-bg);
+  white-space: pre-wrap;
+  font-variant-numeric: tabular-nums;
+}
+.review-final-answer,
+.review-shortcut {
+  margin-block: 12px;
+  padding: 12px 14px;
+  border-radius: 9px;
+}
+.review-final-answer {
+  border-inline-start: 3px solid var(--review-good);
+  background: color-mix(in srgb, var(--review-good) 12%, var(--ws-panel));
+}
+.answer-review .review-final-answer p { margin: 4px 0 0; font-weight: 700; font-size: 1rem; }
+.review-final-answer .review-formula { width: fit-content; background: transparent; padding: .3rem 0; }
+.review-shortcut { background: var(--ws-soft); }
+.answer-review .review-shortcut p { margin: 4px 0 0; }
 .review-tip { display: flex; align-items: flex-start; gap: 9px; background: var(--ws-bg); }
 .review-tip svg { margin-top: 2px; }
 .answer-review .review-reason { color: var(--ws-text); margin: 12px 0 0; }

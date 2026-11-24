@@ -233,8 +233,26 @@ try{
      const row=review.getByRole('table',{name:'Question data'}).getByRole('row').nth(4);
      assert.equal(await row.getByRole('rowheader').textContent(),'D');
      assert.deepEqual(await row.getByRole('cell').allTextContents(),['140','112']);
+     await review.getByRole('heading',{name:'Data walkthrough',exact:true}).waitFor();
+     assert.match(await review.locator('.review-data-steps').innerText(),/420 ÷ 500/);
+     await review.locator('[data-review-question="10"]').click();
+     const math=review.locator('[data-solution-layout="math"]');
+     await math.getByRole('heading',{name:'Step-by-step solution',exact:true}).waitFor();
+     assert.equal(await math.locator('.review-steps li').count(),4);
+     await math.locator('.review-final-answer .katex').waitFor();
+     assert.match(await math.locator('.review-final-answer').innerText(),/53\.03%/);
+     assert.ok(await math.getByText('Exam shortcut',{exact:true}).isVisible());
+     await review.locator('[data-review-question="74"]').click();
+     const logic=review.locator('[data-solution-layout="logic"]');
+     await logic.getByRole('heading',{name:'Reasoning and deductions',exact:true}).waitFor();
+     assert.match(await logic.locator('.review-steps').innerText(),/Desk\(Bina\) = 3 → Desk\(Asha\) = 5/);
+     await review.locator('[data-review-question="76"]').click();
+     const passage=review.locator('[data-solution-layout="passage"]');
+     await passage.getByRole('heading',{name:'Evidence and inference',exact:true}).waitFor();
+     assert.match(await passage.locator('.review-evidence blockquote').first().innerText(),/work the ledgers had ignored/);
+     assert.match(await passage.locator('.review-evidence').innerText(),/⇏ individual earnings/);
    }
-   if(model>=11) await review.getByRole('heading',{name:'Worked solution',exact:true}).waitFor();
+   if(model>=11) await review.getByRole('heading',{name:'Step-by-step solution',exact:true}).waitFor();
    await page.goto('http://127.0.0.1:3011/#/rrb-station-master?tab=mocks');
    await stationTests.getByRole('heading',{name:'All tests',exact:true}).waitFor();
  }
