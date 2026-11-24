@@ -212,10 +212,28 @@ try{
    assert.equal(await page.locator('[data-question]').count(),100);
    const wrongAnswer=await page.evaluate(async()=>{const {MockTest}=await import('/src/pages/ExamRunner.js');return (MockTest.questions[0].correctAnswer+1)%4;});
    await page.locator(`[data-answer="${wrongAnswer}"]`).check();
+   if(model===2){
+     await openPalette();
+     await page.locator('[data-question="30"]').click();
+     const table=page.locator('.test-question-body').getByRole('table',{name:'Question data'});
+     assert.deepEqual(await table.getByRole('columnheader').allTextContents(),['Station','Scheduled','On time']);
+     assert.deepEqual(await table.getByRole('row').nth(3).getByRole('cell').allTextContents(),['140','126']);
+     assert.ok(await table.evaluate(el=>{
+       const head=el.tHead.rows[0].cells[1].getBoundingClientRect();
+       const cell=el.tBodies[0].rows[0].cells[1].getBoundingClientRect();
+       return head.left===cell.left&&head.right===cell.right&&el.parentElement.getBoundingClientRect().right<=innerWidth;
+     }));
+   }
    await page.getByRole('button',{name:'Submit test',exact:true}).click();
    await page.getByRole('heading',{name:'Exam complete',exact:true}).waitFor();
    assert.match(await page.locator('#exam-root').innerText(),/0 correct · 1 wrong · 99 unanswered/);
    assert.match(await page.locator('#exam-root').innerText(),/Marks deducted\s+0\.33/);
+   if(model===2){
+     await review.locator('[data-review-question="30"]').click();
+     const row=review.getByRole('table',{name:'Question data'}).getByRole('row').nth(4);
+     assert.equal(await row.getByRole('rowheader').textContent(),'D');
+     assert.deepEqual(await row.getByRole('cell').allTextContents(),['140','112']);
+   }
    if(model>=11) await review.getByRole('heading',{name:'Worked solution',exact:true}).waitFor();
    await page.goto('http://127.0.0.1:3011/#/rrb-station-master?tab=mocks');
    await stationTests.getByRole('heading',{name:'All tests',exact:true}).waitFor();

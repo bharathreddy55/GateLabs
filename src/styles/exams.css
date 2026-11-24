@@ -90,3 +90,56 @@
     grid-template-columns: minmax(0, 1fr);
   }
 }
+.exam-question-table {
+  width: min(100%, 48rem);
+  overflow-x: auto;
+  margin-block: 0 1rem;
+  border: 1px solid var(--ws-border-strong);
+  border-radius: 12px;
+  background: var(--ws-panel);
+  color: var(--ws-text);
+}
+.exam-question-table table {
+  font-size: clamp(16px, 1.4vw, 18px);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.4;
+}
+.exam-question-table caption {
+  padding: .65rem .8rem;
+  background: var(--ws-bg);
+  font-weight: 650;
+  text-align: start;
+  white-space: pre-line;
+}
+.exam-question-table thead {
+  background: var(--ws-soft);
+}
+.exam-question-table :is(th, td) {
+  padding: .55rem clamp(.5rem, 1.15vw, .9rem);
+  border-bottom: 1px solid var(--ws-border);
+  text-align: start;
+}
+.exam-question-table tbody th {
+  font-weight: 650;
+}
+.exam-question-table tbody tr:nth-child(even) {
+  background: var(--ws-bg);
+}
+.exam-question-table tbody tr:last-child > * {
+  border-bottom: 0;
+}
+.exam-question-table .exam-table-number {
+  text-align: end;
+}
+.exam-question-table td.exam-table-number {
+  white-space: nowrap;
+}
+.exam-question-table:has(+ .exam-table-note) {
+  margin-bottom: .45rem;
+}
+.exam-table-note {
+  margin: 0 0 1rem;
+  color: var(--ws-muted);
+  font-size: 1rem;
+  white-space: pre-line;
+}

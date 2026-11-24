@@ -111,6 +111,7 @@ export const MockTest = {
     mountAnswerReview(root,{
       responses:result.responses,
       state:this.reviewState,
+      renderContext:q=>renderQuestionContext(q,{examId:result.examId}),
       bookmarks:readBookmarks(),
       toggleBookmark(id) {
         const list=readBookmarks();
@@ -154,7 +155,7 @@ export const MockTest = {
         <article class="exam-card cbt-question" tabindex="-1" aria-labelledby="cbt-question-title">
           <div class="test-question-body">
             <p class="cbt-question-meta"><strong>Question ${this.currentIdx+1} of ${this.questions.length}</strong><span>${h(q.section||q.subject||exam.name)} · ${q.marks} mark${q.marks===1?'':'s'}</span></p>
-            ${renderQuestionContext(q,{examRoom:true})}
+            ${renderQuestionContext(q,{examRoom:true,examId:this.pending.examId})}
             <h2 id="cbt-question-title">${h(q.question)}</h2>
             ${renderAnswerInputs(q,this.answers[q.id],{numericId:'nat-answer'})}
           </div>
