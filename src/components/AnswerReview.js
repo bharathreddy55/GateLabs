@@ -111,6 +111,7 @@ export function mountAnswerReview(root, {
 }) {
   if (!root) return;
   const items = responses.map((question,index)=>({question,index}));
+  const hasMarked = responses.some(question=>question.markedForReview===true);
   const groups = toggleBookmark ? [...filters,['bookmarked','Bookmarked']] : filters;
   const matches = (item, filter) => filter==='all' ||
     (filter==='bookmarked' ? bookmarks.includes(item.question.id) : item.question.status===filter);
@@ -128,7 +129,9 @@ export function mountAnswerReview(root, {
     <nav class="review-navigator" aria-label="Questions">
       <div class="review-nav-heading"><strong>Questions</strong><span data-review-count role="status"></span></div>
       <div class="review-palette" data-review-palette></div>
-      <div class="review-legend">${Object.entries(statuses).map(([key,label])=>`<span data-outcome="${key}">${label}</span>`).join('')}</div>
+      <div class="review-legend">${Object.entries(statuses).map(([key,label])=>`<span data-outcome="${key}">${label}</span>`).join('')}
+        ${hasMarked?'<span data-review-marked>Marked for review</span>':''}
+      </div>
     </nav>
     <div data-review-content></div>
   </div>`;
@@ -184,7 +187,11 @@ export function mountAnswerReview(root, {
     }
     root.querySelector('[data-review-count]').textContent = `${counts[filter]} shown`;
     visible = items.filter(item=>matches(item,filter));
-    palette.innerHTML = visible.map(({question,index})=>`<button type="button" data-review-question="${index}" data-outcome="${h(question.status)}" aria-label="Question ${index+1}, ${statuses[question.status] ?? 'reviewed'}">${index+1}</button>`).join('');
+    palette.innerHTML = visible.map(({question,index})=>{
+      const marked = question.markedForReview === true;
+      return `<button type="button" data-review-question="${index}" data-outcome="${h(question.status)}"${marked?' data-review-marked':''}
+        aria-label="Question ${index+1}, ${statuses[question.status] ?? 'reviewed'}${marked?', marked for review':''}">${index+1}</button>`;
+    }).join('');
     select(state.index,false);
   }
 

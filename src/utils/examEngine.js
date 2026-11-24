@@ -46,7 +46,7 @@ export function evaluateAnswer(q,a){
   const correct=!blank&&(type==='NAT'?String(a).trim()!==''&&Number.isFinite(Number(a))&&Number(a)>=(q.natMin??q.correctNat)&&Number(a)<=(q.natMax??q.correctNat):type==='MSQ'?Array.isArray(a)&&Array.isArray(q.correctOptions)&&[...new Set(a.map(Number))].sort().join(',')===[...q.correctOptions].sort().join(','):Number.isInteger(q.correctAnswer)&&Number(a)===q.correctAnswer);
   return {blank,correct,status:blank?'skipped':correct?'correct':'wrong'};
 }
-export function scorePaper(examId, questions, answers) {
+export function scorePaper(examId, questions, answers, review = {}) {
   const e = EXAMS[examId];
   let score=0, negativeMarks=0, correctCount=0, wrongCount=0, skippedCount=0;
   const responses=questions.map(q=>{
@@ -55,7 +55,7 @@ export function scorePaper(examId, questions, answers) {
     const penalty=type==='MCQ' ? q.marks*e.penalty : 0;
     const status=blank?'skipped':correct?'correct':'wrong';
     if(blank) skippedCount++; else if(correct){correctCount++;score+=q.marks;} else {wrongCount++;score-=penalty;negativeMarks+=penalty;}
-    return {...q,type,userAnswer:a??null,status,earnedMarks:blank?0:correct?q.marks:-penalty};
+    return {...q,type,userAnswer:a??null,status,markedForReview:review[q.id]===true,earnedMarks:blank?0:correct?q.marks:-penalty};
   });
   return {score,negativeMarks,correctCount,wrongCount,skippedCount,totalQuestions:questions.length,totalPossibleMarks:questions.reduce((n,q)=>n+q.marks,0),accuracy:correctCount+wrongCount?100*correctCount/(correctCount+wrongCount):0,responses,mistakes:responses.filter(r=>r.status==='wrong')};
 }

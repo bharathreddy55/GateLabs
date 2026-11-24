@@ -96,11 +96,17 @@ try{
  await checkExamRoom();
  assert.equal(await page.locator('[data-cbt-count="answered-review"]').textContent(),'1 answered & marked for review');
  assert.equal(await page.evaluate(()=>JSON.parse(localStorage.getItem('exam-active:exam-test-user')).deadline),deadline);
+ await page.getByRole('button',{name:'Save & next',exact:true}).click();
+ await page.getByRole('button',{name:'Mark for review',exact:true}).click();
+ await page.getByRole('button',{name:'Save & next',exact:true}).click();
+ await page.getByRole('button',{name:'Mark for review',exact:true}).click();
+ await page.getByRole('button',{name:'Unmark for review',exact:true}).click();
  await page.getByRole('button',{name:'Submit test',exact:true}).click();
  await page.getByRole('heading',{name:'Exam complete',exact:true}).waitFor();
  await page.waitForFunction(()=>!document.fullscreenElement && document.getElementById('layout-header').getClientRects().length>0);
  let result=await page.evaluate(()=>JSON.parse(localStorage.getItem('exam-results:exam-test-user'))[0]);
  assert.ok(Math.abs(result.score-2/3)<1e-10);assert.equal(result.skippedCount,148);assert.equal(result.wrongCount,1);
+ assert.deepEqual(result.responses.slice(0,4).map(q=>q.markedForReview),[false,true,true,false]);
  assert.equal(result.paperKey,'model:'+groupPaper.title);
  assert.equal(await page.evaluate(()=>localStorage.getItem('exam-active:exam-test-user')),null);
  const review=page.locator('.answer-review');
@@ -109,6 +115,16 @@ try{
   assert.equal(await review.locator('[data-review-question]').count(),count);
  };
  await review.getByRole('heading',{name:'Answer review',exact:true}).waitFor();
+ assert.equal(await review.locator('.review-legend [data-review-marked]').innerText(),'Marked for review');
+ const markedIncorrect=review.getByRole('button',{name:'Question 2, Incorrect, marked for review',exact:true});
+ const markedSkipped=review.getByRole('button',{name:'Question 3, Unanswered, marked for review',exact:true});
+ assert.equal(await markedIncorrect.getAttribute('data-outcome'),'wrong');
+ assert.equal(await markedSkipped.getAttribute('data-outcome'),'skipped');
+ assert.equal(await review.locator('.review-palette [data-review-marked]').count(),2);
+ assert.deepEqual(await markedIncorrect.evaluate(el=>{
+   const dot=getComputedStyle(el,'::after');
+   return [dot.borderRadius,dot.backgroundColor];
+ }),['50%','rgb(109, 40, 217)']);
  await page.getByRole('button',{name:'Review answers',exact:true}).click();
  assert.equal(await page.evaluate(()=>document.activeElement?.id),'answer-review-heading');
  assert.equal(await review.locator('.review-card').count(),1);
@@ -144,10 +160,13 @@ try{
  assert.match(await page.evaluate(()=>location.hash),/attempt=/);
  await page.reload();await page.getByRole('heading',{name:'Exam complete',exact:true}).waitFor();
  await review.getByRole('heading',{name:'Worked solution',exact:true}).waitFor();
+ assert.equal(await review.locator('.review-palette [data-review-marked]').count(),2);
  await page.goto('http://127.0.0.1:3011/#/group2?tab=mocks');
  await groupCard.getByRole('button',{name:'Start full mock'}).click();
  await page.getByRole('button',{name:'Begin test',exact:true}).click();
  await page.getByRole('button',{name:'Submit test',exact:true}).click();
+ await review.getByRole('heading',{name:'Answer review',exact:true}).waitFor();
+ assert.equal(await review.locator('.review-legend [data-review-marked]').count(),0);
  await page.getByRole('link',{name:'Return to preparation'}).click();
  await page.locator('[data-prep-tab=mocks]').click();
  await groupCard.getByText('Completed 2 times',{exact:true}).waitFor();
