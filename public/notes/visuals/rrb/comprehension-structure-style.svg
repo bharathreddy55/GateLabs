@@ -1,13 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="760" height="333" viewBox="0 0 760 333" role="img" aria-labelledby="title description">
-<title id="title">Reading Comprehension — Logical Structure and Style</title>
-<desc id="description">Label each paragraph's job. Track shifts. Identify stance</desc>
-<rect width="100%" height="100%" rx="24" fill="#fcf8ef"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="679" viewBox="0 0 480 679" role="img" aria-labelledby="title description">
+<title id="title">Reading Comprehension — Logical Structure and Style — Quick revision</title>
+<desc id="description">Map what each sentence does: claim, contrast, evidence or result. Benefit, updates are consistent However, they can lag Therefore, keep a manual backup Watch for: Support a tone choice with the writer’s words.</desc>
+<rect x="0" y="0" width="480" height="679" rx="20" fill="#faf7ee"/>
 <g font-family="Segoe UI, Arial, sans-serif" font-weight="700">
-<text x="28" y="43" font-size="22" fill="#5a4784">QUICK RECALL</text>
-<text x="28" y="95" font-size="42" fill="#182342">Reading Comprehension —</text>
-<text x="28" y="144" font-size="42" fill="#182342">Logical Structure and Style</text>
-<rect x="28" y="165" width="225.33333333333334" height="140" rx="18" fill="#dce5ff"/><text x="140.66666666666669" y="210.66666666666666" font-size="29" fill="#344e93" text-anchor="middle">Label each</text><text x="140.66666666666669" y="244.66666666666666" font-size="29" fill="#344e93" text-anchor="middle">paragraph's</text><text x="140.66666666666669" y="278.66666666666663" font-size="29" fill="#344e93" text-anchor="middle">job</text>
-<rect x="267.33333333333337" y="165" width="225.33333333333334" height="140" rx="18" fill="#d4efe6"/><text x="380.00000000000006" y="227.66666666666666" font-size="29" fill="#20594e" text-anchor="middle">Track</text><text x="380.00000000000006" y="261.66666666666663" font-size="29" fill="#20594e" text-anchor="middle">shifts</text>
-<rect x="506.6666666666667" y="165" width="225.33333333333334" height="140" rx="18" fill="#fde5c5"/><text x="619.3333333333334" y="227.66666666666666" font-size="29" fill="#794718" text-anchor="middle">Identify</text><text x="619.3333333333334" y="261.66666666666663" font-size="29" fill="#794718" text-anchor="middle">stance</text>
+<text x="18" y="33" font-size="17" fill="#126558">STATION MASTER  ·  CBT</text>
+<text x="18" y="78" font-size="33" fill="#172540">Reading Comprehension —</text>
+<text x="18" y="121" font-size="33" fill="#172540">Logical Structure and</text>
+<text x="18" y="164" font-size="33" fill="#172540">Style</text>
+<rect x="18" y="197" width="444" height="145" rx="12" fill="#dcefe8"/>
+<text x="32" y="222" font-size="17" fill="#126558">KEY RULE</text>
+<text x="32" y="252" font-size="24" fill="#172540">Map what each sentence does:</text>
+<text x="32" y="285" font-size="24" fill="#172540">claim, contrast, evidence or</text>
+<text x="32" y="318" font-size="24" fill="#172540">result.</text>
+<text x="18" y="378" font-size="17" fill="#435579">QUICK EXAMPLE</text>
+
+<rect x="18" y="389" width="444" height="50" rx="9" fill="#e9edf6"/>
+<text x="32" y="418" font-size="17" fill="#435579">Benefit</text>
+<text x="186" y="419" font-size="21" fill="#172540">updates are consistent</text>
+<rect x="18" y="444" width="444" height="50" rx="9" fill="#e9edf6"/>
+<text x="32" y="473" font-size="17" fill="#435579">However</text>
+<text x="186" y="474" font-size="21" fill="#172540">they can lag</text>
+<rect x="18" y="499" width="444" height="50" rx="9" fill="#dcefe8"/>
+<text x="32" y="528" font-size="17" fill="#435579">Therefore</text>
+<text x="186" y="529" font-size="21" fill="#172540">keep a manual backup</text>
+<rect x="18" y="564" width="444" height="97" rx="12" fill="#f9e9c9"/>
+<text x="32" y="588" font-size="17" fill="#83530e">WATCH FOR</text>
+<text x="32" y="614" font-size="19" fill="#172540">Support a tone choice with the writer’s</text>
+<text x="32" y="641" font-size="19" fill="#172540">words.</text>
 </g>
 </svg>

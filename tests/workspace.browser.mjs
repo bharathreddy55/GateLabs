@@ -142,6 +142,9 @@ try{
  await page.goto('http://127.0.0.1:3011/#/rrb-station-master?tab=notes&note=work-power-energy');
  const handnote=page.locator('[data-note-content]');
  await handnote.getByRole('heading',{name:'How to study it for Station Master',exact:true}).waitFor();
+ const workCard=page.getByRole('img',{name:'Visual study guide for Work, Power and Energy'});
+ await workCard.waitFor();
+ assert.ok(await workCard.evaluate(img=>img.naturalWidth===480&&img.getBoundingClientRect().right<=innerWidth));
  assert.equal(await handnote.locator('h5').count(),5);
  assert.equal(await handnote.locator('ol').count(),5);
  assert.match(await handnote.innerText(),/500 W input/);

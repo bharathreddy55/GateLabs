@@ -1,7 +1,6 @@
 export const CBAT_NOTES = {
   intelligence:{
     skill:'Figure comparison, rotation, and spotting the odd shape.',
-    recall:['Find an anchor','Turn the figure','Check handedness'],
     details:[
       'Think of the shaded squares as a single rigid shape. Moving that shape across the grid changes its position, and turning it changes its orientation, but neither changes the side on which a branch sits once the long arm is aligned. A reflection reverses that relationship. Count consecutive squares, find an endpoint or an elbow, and compare its surroundings after aligning the main arms.',
       'On a square grid a quarter-turn swaps the horizontal and vertical directions. If a figure has two branches of different lengths, anchor the longer branch first so both turns are interpreted from the same end. If the branches match in length, use a third feature or try all four orientations. The square count and bounding box alone cannot identify a mirror.'
@@ -39,7 +38,6 @@ export const CBAT_NOTES = {
   },
   attention:{
     skill:'Filtering distractors and adding only the digits the prompt specifies.',
-    recall:['Pick target digits','Add in chunks','Verify the sum'],
     details:[
       'First identify the target digits, then add their values. In an odd-digit item, the targets are 1, 3, 5, 7 and 9. Zero and the other even digits contribute nothing. Treat each printed digit as a separate entry unless the instructions say otherwise. Every repeated target contributes again.',
       'Use small, contiguous chunks when a line is long. For 9 2 7 7 8 1, divide after the fourth digit. The first subtotal is 23 and the second is 1, giving 24. Chunk boundaries keep your place while you add. On review, classify each error as an omitted target, a distractor included, or incorrect addition, and practise the stage that failed.'
@@ -76,7 +74,6 @@ export const CBAT_NOTES = {
   },
   spatial:{
     skill:'Following connected routes, respecting barriers, and finding the marked building on the shortest route.',
-    recall:['Locate A and B','Follow open streets','Report the house'],
     details:[
       'Treat junctions as points and open road segments as connections. Trace only connections printed on the map. In the equal-length practice maps, fewer segments give a shorter route. A diagonal shortcut or a visually adjacent junction does not create a connection. If a question gives unequal distances, compare their totals instead.',
       'At a fork, keep track of the number of segments already used and compare the remaining alternatives. Count from the start, never from a bend halfway through a route. A parallel side street can make the route with fewer turns longer. After comparing the complete paths, scan along the winning path again for the numbered building.'
@@ -114,7 +111,6 @@ export const CBAT_NOTES = {
   },
   ordering:{
     skill:'Applying a set of instructions about sequence, fixed positions, and adjacency.',
-    recall:['Place fixed slots','Group neighbours','Check every rule'],
     details:[
       'Draw one slot per task and translate each rule into a positional constraint. “X immediately before Y” means the pair XY moves as one block. “X before Y” permits a gap. “Two tasks between X and Y” means that the positions differ by three. Keep the direction of each rule intact as you place items.',
       'Work forward and backward from fixed positions. If five tasks include R in slot 4 and Q immediately before R, Q has to occupy slot 3. Two tasks between Q and S would put S in slot 0 or 6, so that combination is impossible. The same check lets you reject choices quickly before testing weaker precedence rules.'
@@ -151,7 +147,6 @@ export const CBAT_NOTES = {
   },
   personality:{
     skill:'Becoming familiar with self-report prompts and their response options.',
-    recall:['Read the response scale','Think of typical behaviour','Choose honestly'],
     details:[
       'Personality familiarisation helps you become comfortable with how a prompt is presented and how responses are selected. A question may ask for an agreement rating or ask you to choose between stated preferences. Read the scale each time and check whether the prompt is asking about your usual behaviour, a preference, or your reaction in a stated situation.',
       'Use a typical example from your own experience when a statement feels broad. Notice qualifiers such as “usually”, “under pressure”, and “when learning something new”. Consider the wording independently instead of choosing what you imagine a recruiter would favour. GateLabs records completion for these self-report items.'

@@ -1,12 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="760" height="250" viewBox="0 0 760 250" role="img" aria-labelledby="title description">
-<title id="title">Data Analysis from Bar Charts</title>
-<desc id="description">Read axis. Match series. Compare with a base</desc>
-<rect width="100%" height="100%" rx="24" fill="#fcf8ef"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="727" viewBox="0 0 480 727" role="img" aria-labelledby="title description">
+<title id="title">Data Analysis from Bar Charts — Quick revision</title>
+<desc id="description">A stacked segment is top boundary minus bottom boundary. Bottom edge, 30 Top edge, 70 Segment size, 70 − 30 = 40 Watch for: Read the legend and axis scale first.</desc>
+<rect x="0" y="0" width="480" height="727" rx="20" fill="#faf7ee"/>
 <g font-family="Segoe UI, Arial, sans-serif" font-weight="700">
-<text x="28" y="43" font-size="22" fill="#5a4784">QUICK RECALL</text>
-<text x="28" y="95" font-size="42" fill="#182342">Data Analysis from Bar Charts</text>
-<rect x="28" y="116" width="225.33333333333334" height="106" rx="18" fill="#dce5ff"/><text x="140.66666666666669" y="178.66666666666666" font-size="29" fill="#344e93" text-anchor="middle">Read axis</text>
-<rect x="267.33333333333337" y="116" width="225.33333333333334" height="106" rx="18" fill="#d4efe6"/><text x="380.00000000000006" y="161.66666666666666" font-size="29" fill="#20594e" text-anchor="middle">Match</text><text x="380.00000000000006" y="195.66666666666666" font-size="29" fill="#20594e" text-anchor="middle">series</text>
-<rect x="506.6666666666667" y="116" width="225.33333333333334" height="106" rx="18" fill="#fde5c5"/><text x="619.3333333333334" y="161.66666666666666" font-size="29" fill="#794718" text-anchor="middle">Compare</text><text x="619.3333333333334" y="195.66666666666666" font-size="29" fill="#794718" text-anchor="middle">with a base</text>
+<text x="18" y="33" font-size="17" fill="#126558">STATION MASTER  ·  CBT</text>
+<text x="18" y="78" font-size="33" fill="#172540">Data Analysis from Bar</text>
+<text x="18" y="121" font-size="33" fill="#172540">Charts</text>
+<rect x="18" y="154" width="444" height="145" rx="12" fill="#dcefe8"/>
+<text x="32" y="179" font-size="17" fill="#126558">KEY RULE</text>
+<text x="32" y="209" font-size="24" fill="#172540">A stacked segment is top</text>
+<text x="32" y="242" font-size="24" fill="#172540">boundary minus bottom</text>
+<text x="32" y="275" font-size="24" fill="#172540">boundary.</text>
+<text x="18" y="335" font-size="17" fill="#435579">QUICK EXAMPLE</text>
+<g transform="translate(18 341)" aria-hidden="true"><rect x="162" y="61" width="70" height="35" rx="0" fill="#d5dcee"/><rect x="162" y="17" width="70" height="44" rx="0" fill="#8fd4bc"/><path d="M116 17H160 M116 61H160 M116 96H242" fill="none" stroke="#435579" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="87" y="23" font-size="18" fill="#435579">70</text><text x="87" y="67" font-size="18" fill="#435579">30</text><text x="96" y="102" font-size="18" fill="#435579">0</text><path d="M241 17h8v44h-8" fill="none" stroke="#126558" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="261" y="46" font-size="19" fill="#126558">40 in band</text></g>
+<rect x="18" y="464" width="444" height="50" rx="9" fill="#e9edf6"/>
+<text x="32" y="493" font-size="17" fill="#435579">Bottom edge</text>
+<text x="186" y="494" font-size="21" fill="#172540">30</text>
+<rect x="18" y="519" width="444" height="50" rx="9" fill="#e9edf6"/>
+<text x="32" y="548" font-size="17" fill="#435579">Top edge</text>
+<text x="186" y="549" font-size="21" fill="#172540">70</text>
+<rect x="18" y="574" width="444" height="50" rx="9" fill="#dcefe8"/>
+<text x="32" y="603" font-size="17" fill="#435579">Segment size</text>
+<text x="186" y="604" font-size="21" fill="#172540">70 − 30 = 40</text>
+<rect x="18" y="639" width="444" height="70" rx="12" fill="#f9e9c9"/>
+<text x="32" y="663" font-size="17" fill="#83530e">WATCH FOR</text>
+<text x="32" y="689" font-size="19" fill="#172540">Read the legend and axis scale first.</text>
 </g>
 </svg>

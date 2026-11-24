@@ -1,6 +1,5 @@
 import { mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { CBAT_BATTERIES } from '../src/config/rrbCbat.js';
-import { CBAT_NOTES } from '../src/config/rrbCbatNotes.js';
 import { appscMains } from './note-content/appsc-mains.mjs';
 import { appscPrelims } from './note-content/appsc-prelims.mjs';
 import { appscSociety } from './note-content/appsc-society.mjs';
@@ -8,6 +7,8 @@ import { aptitude } from './note-content/aptitude.mjs';
 import { gateFoundations } from './note-content/gate-foundations.mjs';
 import { gateSystems } from './note-content/gate-systems.mjs';
 import { railway } from './note-content/railway.mjs';
+import { stationMasterRevision } from './note-content/station-master-revision.mjs';
+import { buildStationMasterRevision } from './render-revision-card.mjs';
 
 const catalogs = new URL('../src/config/notes/', import.meta.url);
 const notes = new URL('../public/notes/', import.meta.url);
@@ -112,6 +113,14 @@ function expandNote(markdown, { explanation, application }, id) {
 }
 
 const used = new Set();
+const revisionIds = new Set();
+function stationCard(id, title, stage) {
+  const note = stationMasterRevision.get(id);
+  if (!note) throw new Error('Missing Station Master revision card: ' + id);
+  revisionIds.add(id);
+  return buildStationMasterRevision(title, id, note, stage);
+}
+
 let count = 0;
 for (const file of readdirSync(catalogs).filter(name => name.endsWith('.json'))) {
   const exam = file.slice(0, -5);
@@ -123,7 +132,7 @@ for (const file of readdirSync(catalogs).filter(name => name.endsWith('.json')))
     const lesson = content.get(id);
     if (!lesson) throw new Error('Missing note content: ' + exam + '/' + id);
     const noteFile = new URL(exam + '/' + id + '.md', notes);
-    const svg = buildVisual(title, lesson.cues);
+    const svg = exam === 'rrb' ? stationCard(id, title, 'CBT') : buildVisual(title, lesson.cues);
     // Station Master handnotes are maintained directly as Markdown.
     if (exam !== 'rrb') {
       const markdown = expandNote(readFileSync(noteFile, 'utf8'), lesson, id);
@@ -141,7 +150,9 @@ if (unused.length) throw new Error('Unlinked note content: ' + unused.join(', ')
 const cbat = new URL('rrb-cbat/', visuals);
 mkdirSync(cbat, { recursive: true });
 for (const { id, title } of CBAT_BATTERIES) {
-  writeFileSync(new URL(id + '.svg', cbat), buildVisual(title, CBAT_NOTES[id].recall));
+  writeFileSync(new URL(id + '.svg', cbat), stationCard(id, title, 'CBAT'));
 }
+const unusedRevision = [...stationMasterRevision.keys()].filter(id => !revisionIds.has(id));
+if (unusedRevision.length) throw new Error('Unlinked Station Master revision cards: ' + unusedRevision.join(', '));
 
-console.log('Expanded ' + count + ' notes and generated ' + (count + CBAT_BATTERIES.length) + ' recall cards.');
+console.log('Generated ' + (count + CBAT_BATTERIES.length) + ' note visuals.');

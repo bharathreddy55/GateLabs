@@ -1,13 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="760" height="333" viewBox="0 0 760 333" role="img" aria-labelledby="title description">
-<title id="title">Data Analysis from Line Graphs</title>
-<desc id="description">Check intervals. Separate level from change. Compare slopes</desc>
-<rect width="100%" height="100%" rx="24" fill="#fcf8ef"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="721" viewBox="0 0 480 721" role="img" aria-labelledby="title description">
+<title id="title">Data Analysis from Line Graphs — Quick revision</title>
+<desc id="description">Slope = change in value ÷ change in time. Read points, (1, 10), (4, 25) Rise and run, 15 over 3 Rate, 5 per day Watch for: Highest value and fastest rise are different comparisons.</desc>
+<rect x="0" y="0" width="480" height="721" rx="20" fill="#faf7ee"/>
 <g font-family="Segoe UI, Arial, sans-serif" font-weight="700">
-<text x="28" y="43" font-size="22" fill="#5a4784">QUICK RECALL</text>
-<text x="28" y="95" font-size="42" fill="#182342">Data Analysis from Line</text>
-<text x="28" y="144" font-size="42" fill="#182342">Graphs</text>
-<rect x="28" y="165" width="225.33333333333334" height="140" rx="18" fill="#dce5ff"/><text x="140.66666666666669" y="227.66666666666666" font-size="29" fill="#344e93" text-anchor="middle">Check</text><text x="140.66666666666669" y="261.66666666666663" font-size="29" fill="#344e93" text-anchor="middle">intervals</text>
-<rect x="267.33333333333337" y="165" width="225.33333333333334" height="140" rx="18" fill="#d4efe6"/><text x="380.00000000000006" y="210.66666666666666" font-size="29" fill="#20594e" text-anchor="middle">Separate</text><text x="380.00000000000006" y="244.66666666666666" font-size="29" fill="#20594e" text-anchor="middle">level from</text><text x="380.00000000000006" y="278.66666666666663" font-size="29" fill="#20594e" text-anchor="middle">change</text>
-<rect x="506.6666666666667" y="165" width="225.33333333333334" height="140" rx="18" fill="#fde5c5"/><text x="619.3333333333334" y="227.66666666666666" font-size="29" fill="#794718" text-anchor="middle">Compare</text><text x="619.3333333333334" y="261.66666666666663" font-size="29" fill="#794718" text-anchor="middle">slopes</text>
+<text x="18" y="33" font-size="17" fill="#126558">STATION MASTER  ·  CBT</text>
+<text x="18" y="78" font-size="33" fill="#172540">Data Analysis from Line</text>
+<text x="18" y="121" font-size="33" fill="#172540">Graphs</text>
+<rect x="18" y="154" width="444" height="112" rx="12" fill="#dcefe8"/>
+<text x="32" y="179" font-size="17" fill="#126558">KEY RULE</text>
+<text x="32" y="209" font-size="24" fill="#172540">Slope = change in value ÷ change</text>
+<text x="32" y="242" font-size="24" fill="#172540">in time.</text>
+<text x="18" y="302" font-size="17" fill="#435579">QUICK EXAMPLE</text>
+<g transform="translate(18 308)" aria-hidden="true"><path d="M92 17V95H362 M145 79h153V24" fill="none" stroke="#435579" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M145 79L298 24" fill="none" stroke="#126558" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="145" cy="79" r="5" fill="#126558"/><circle cx="298" cy="24" r="5" fill="#126558"/><text x="104" y="64" font-size="18" fill="#435579">(1, 10)</text><text x="313" y="33" font-size="18" fill="#435579">(4, 25)</text><text x="217" y="103" font-size="18" fill="#126558" text-anchor="middle">3 days</text><text x="309" y="66" font-size="18" fill="#126558">+15</text></g>
+<rect x="18" y="431" width="444" height="50" rx="9" fill="#e9edf6"/>
+<text x="32" y="460" font-size="17" fill="#435579">Read points</text>
+<text x="186" y="461" font-size="21" fill="#172540">(1, 10), (4, 25)</text>
+<rect x="18" y="486" width="444" height="50" rx="9" fill="#e9edf6"/>
+<text x="32" y="515" font-size="17" fill="#435579">Rise and run</text>
+<text x="186" y="516" font-size="21" fill="#172540">15 over 3</text>
+<rect x="18" y="541" width="444" height="50" rx="9" fill="#dcefe8"/>
+<text x="32" y="570" font-size="17" fill="#435579">Rate</text>
+<text x="186" y="571" font-size="21" fill="#172540">5 per day</text>
+<rect x="18" y="606" width="444" height="97" rx="12" fill="#f9e9c9"/>
+<text x="32" y="630" font-size="17" fill="#83530e">WATCH FOR</text>
+<text x="32" y="656" font-size="19" fill="#172540">Highest value and fastest rise are</text>
+<text x="32" y="683" font-size="19" fill="#172540">different comparisons.</text>
 </g>
 </svg>

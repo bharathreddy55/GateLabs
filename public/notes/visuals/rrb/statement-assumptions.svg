@@ -1,12 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="760" height="250" viewBox="0 0 760 250" role="img" aria-labelledby="title description">
-<title id="title">Statements and Assumptions</title>
-<desc id="description">Find conclusion. Bridge gap. Negate it</desc>
-<rect width="100%" height="100%" rx="24" fill="#fcf8ef"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="665" viewBox="0 0 480 665" role="img" aria-labelledby="title description">
+<title id="title">Statements and Assumptions — Quick revision</title>
+<desc id="description">Negate the proposed assumption. Does the reasoning still work? Plan, add a counter Needed, it can serve the queue Negate, cannot serve → plan fails Watch for: A plausible benefit can be irrelevant to the argument.</desc>
+<rect x="0" y="0" width="480" height="665" rx="20" fill="#faf7ee"/>
 <g font-family="Segoe UI, Arial, sans-serif" font-weight="700">
-<text x="28" y="43" font-size="22" fill="#5a4784">QUICK RECALL</text>
-<text x="28" y="95" font-size="42" fill="#182342">Statements and Assumptions</text>
-<rect x="28" y="116" width="225.33333333333334" height="106" rx="18" fill="#dce5ff"/><text x="140.66666666666669" y="161.66666666666666" font-size="29" fill="#344e93" text-anchor="middle">Find</text><text x="140.66666666666669" y="195.66666666666666" font-size="29" fill="#344e93" text-anchor="middle">conclusion</text>
-<rect x="267.33333333333337" y="116" width="225.33333333333334" height="106" rx="18" fill="#d4efe6"/><text x="380.00000000000006" y="178.66666666666666" font-size="29" fill="#20594e" text-anchor="middle">Bridge gap</text>
-<rect x="506.6666666666667" y="116" width="225.33333333333334" height="106" rx="18" fill="#fde5c5"/><text x="619.3333333333334" y="178.66666666666666" font-size="29" fill="#794718" text-anchor="middle">Negate it</text>
+<text x="18" y="33" font-size="17" fill="#126558">STATION MASTER  ·  CBT</text>
+<text x="18" y="78" font-size="33" fill="#172540">Statements and</text>
+<text x="18" y="121" font-size="33" fill="#172540">Assumptions</text>
+<rect x="18" y="154" width="444" height="145" rx="12" fill="#dcefe8"/>
+<text x="32" y="179" font-size="17" fill="#126558">KEY RULE</text>
+<text x="32" y="209" font-size="24" fill="#172540">Negate the proposed</text>
+<text x="32" y="242" font-size="24" fill="#172540">assumption. Does the reasoning</text>
+<text x="32" y="275" font-size="24" fill="#172540">still work?</text>
+<text x="18" y="335" font-size="17" fill="#435579">QUICK EXAMPLE</text>
+
+<rect x="18" y="346" width="444" height="50" rx="9" fill="#e9edf6"/>
+<text x="32" y="375" font-size="17" fill="#435579">Plan</text>
+<text x="186" y="376" font-size="21" fill="#172540">add a counter</text>
+<rect x="18" y="401" width="444" height="50" rx="9" fill="#e9edf6"/>
+<text x="32" y="430" font-size="17" fill="#435579">Needed</text>
+<text x="186" y="431" font-size="21" fill="#172540">it can serve the queue</text>
+<rect x="18" y="456" width="444" height="79" rx="9" fill="#dcefe8"/>
+<text x="32" y="485" font-size="17" fill="#435579">Negate</text>
+<text x="186" y="486" font-size="21" fill="#172540">cannot serve → plan</text>
+<text x="186" y="515" font-size="21" fill="#172540">fails</text>
+<rect x="18" y="550" width="444" height="97" rx="12" fill="#f9e9c9"/>
+<text x="32" y="574" font-size="17" fill="#83530e">WATCH FOR</text>
+<text x="32" y="600" font-size="19" fill="#172540">A plausible benefit can be irrelevant to</text>
+<text x="32" y="627" font-size="19" fill="#172540">the argument.</text>
 </g>
 </svg>

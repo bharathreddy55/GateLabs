@@ -378,7 +378,7 @@ try{
  assert.match(await spatialLesson.innerText(),/total length 10/);
  const recallCard=page.getByRole('img',{name:'Visual study guide for Spatial Scanning'});
  await recallCard.waitFor();
- await page.waitForFunction(()=>document.querySelector('[data-cbat-lesson="spatial"] img').naturalWidth>0);
+ await page.waitForFunction(()=>document.querySelector('[data-cbat-lesson="spatial"] img').naturalWidth===480);
  assert.equal(await page.locator('[data-cbat-lesson="spatial"]').getAttribute('open'),'');
  await page.reload();
  await page.getByRole('heading',{name:'CBAT Detailed notes'}).waitFor();

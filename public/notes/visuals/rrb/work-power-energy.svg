@@ -1,12 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="760" height="250" viewBox="0 0 760 250" role="img" aria-labelledby="title description">
-<title id="title">Work, Power and Energy</title>
-<desc id="description">F ∥ motion → work. Wₙₑₜ = ΔKE. P = W ÷ t</desc>
-<rect width="100%" height="100%" rx="24" fill="#fcf8ef"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="651" viewBox="0 0 480 651" role="img" aria-labelledby="title description">
+<title id="title">Work, Power and Energy — Quick revision</title>
+<desc id="description">Work W = Fs cos θ. Average P = W ÷ t. Kinetic energy = ½mv². Push and move, 40 N × 5 m Work, 200 J Over 4 seconds, 50 W Watch for: A perpendicular force does zero work.</desc>
+<rect x="0" y="0" width="480" height="651" rx="20" fill="#faf7ee"/>
 <g font-family="Segoe UI, Arial, sans-serif" font-weight="700">
-<text x="28" y="43" font-size="22" fill="#5a4784">QUICK RECALL</text>
-<text x="28" y="95" font-size="42" fill="#182342">Work, Power and Energy</text>
-<rect x="28" y="116" width="225.33333333333334" height="106" rx="18" fill="#dce5ff"/><text x="140.66666666666669" y="161.66666666666666" font-size="29" fill="#344e93" text-anchor="middle">F ∥ motion →</text><text x="140.66666666666669" y="195.66666666666666" font-size="29" fill="#344e93" text-anchor="middle">work</text>
-<rect x="267.33333333333337" y="116" width="225.33333333333334" height="106" rx="18" fill="#d4efe6"/><text x="380.00000000000006" y="178.66666666666666" font-size="29" fill="#20594e" text-anchor="middle">Wₙₑₜ = ΔKE</text>
-<rect x="506.6666666666667" y="116" width="225.33333333333334" height="106" rx="18" fill="#fde5c5"/><text x="619.3333333333334" y="178.66666666666666" font-size="29" fill="#794718" text-anchor="middle">P = W ÷ t</text>
+<text x="18" y="33" font-size="17" fill="#126558">STATION MASTER  ·  CBT</text>
+<text x="18" y="78" font-size="33" fill="#172540">Work, Power and Energy</text>
+<rect x="18" y="111" width="444" height="112" rx="12" fill="#dcefe8"/>
+<text x="32" y="136" font-size="17" fill="#126558">KEY RULE</text>
+<text x="32" y="166" font-size="24" fill="#172540">Work W = Fs cos θ. Average P =</text>
+<text x="32" y="199" font-size="24" fill="#172540">W ÷ t. Kinetic energy = ½mv².</text>
+<text x="18" y="259" font-size="17" fill="#435579">QUICK EXAMPLE</text>
+<g transform="translate(18 265)" aria-hidden="true"><rect x="95" y="13" width="57" height="43" rx="7" fill="#f7c576"/><path d="M67 63H372 M150 34H320 M310 25l10 9-10 9" fill="none" stroke="#126558" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="240" y="26" font-size="18" fill="#126558" text-anchor="middle">40 N</text><path d="M96 81H351 M105 74l-9 7 9 7 M342 74l9 7-9 7" fill="none" stroke="#435579" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="223" y="108" font-size="19" fill="#435579" text-anchor="middle">5 m displacement</text></g>
+<rect x="18" y="388" width="444" height="50" rx="9" fill="#e9edf6"/>
+<text x="32" y="417" font-size="17" fill="#435579">Push and move</text>
+<text x="186" y="418" font-size="21" fill="#172540">40 N × 5 m</text>
+<rect x="18" y="443" width="444" height="50" rx="9" fill="#e9edf6"/>
+<text x="32" y="472" font-size="17" fill="#435579">Work</text>
+<text x="186" y="473" font-size="21" fill="#172540">200 J</text>
+<rect x="18" y="498" width="444" height="50" rx="9" fill="#dcefe8"/>
+<text x="32" y="527" font-size="17" fill="#435579">Over 4 seconds</text>
+<text x="186" y="528" font-size="21" fill="#172540">50 W</text>
+<rect x="18" y="563" width="444" height="70" rx="12" fill="#f9e9c9"/>
+<text x="32" y="587" font-size="17" fill="#83530e">WATCH FOR</text>
+<text x="32" y="613" font-size="19" fill="#172540">A perpendicular force does zero work.</text>
 </g>
 </svg>

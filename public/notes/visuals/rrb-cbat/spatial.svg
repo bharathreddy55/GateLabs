@@ -1,12 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="760" height="250" viewBox="0 0 760 250" role="img" aria-labelledby="title description">
-<title id="title">Spatial Scanning</title>
-<desc id="description">Locate A and B. Follow open streets. Report the house</desc>
-<rect width="100%" height="100%" rx="24" fill="#fcf8ef"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="678" viewBox="0 0 480 678" role="img" aria-labelledby="title description">
+<title id="title">Spatial Scanning — Quick revision</title>
+<desc id="description">Shortest route = least total distance along open streets. Upper route, 3 equal segments Lower route, 5 equal segments Use upper, house 2 Watch for: A visually adjacent street can be disconnected.</desc>
+<rect x="0" y="0" width="480" height="678" rx="20" fill="#faf7ee"/>
 <g font-family="Segoe UI, Arial, sans-serif" font-weight="700">
-<text x="28" y="43" font-size="22" fill="#5a4784">QUICK RECALL</text>
-<text x="28" y="95" font-size="42" fill="#182342">Spatial Scanning</text>
-<rect x="28" y="116" width="225.33333333333334" height="106" rx="18" fill="#dce5ff"/><text x="140.66666666666669" y="161.66666666666666" font-size="29" fill="#344e93" text-anchor="middle">Locate A</text><text x="140.66666666666669" y="195.66666666666666" font-size="29" fill="#344e93" text-anchor="middle">and B</text>
-<rect x="267.33333333333337" y="116" width="225.33333333333334" height="106" rx="18" fill="#d4efe6"/><text x="380.00000000000006" y="161.66666666666666" font-size="29" fill="#20594e" text-anchor="middle">Follow open</text><text x="380.00000000000006" y="195.66666666666666" font-size="29" fill="#20594e" text-anchor="middle">streets</text>
-<rect x="506.6666666666667" y="116" width="225.33333333333334" height="106" rx="18" fill="#fde5c5"/><text x="619.3333333333334" y="161.66666666666666" font-size="29" fill="#794718" text-anchor="middle">Report the</text><text x="619.3333333333334" y="195.66666666666666" font-size="29" fill="#794718" text-anchor="middle">house</text>
+<text x="18" y="33" font-size="17" fill="#126558">STATION MASTER  ·  CBAT</text>
+<text x="18" y="78" font-size="33" fill="#172540">Spatial Scanning</text>
+<rect x="18" y="111" width="444" height="112" rx="12" fill="#dcefe8"/>
+<text x="32" y="136" font-size="17" fill="#126558">KEY RULE</text>
+<text x="32" y="166" font-size="24" fill="#172540">Shortest route = least total</text>
+<text x="32" y="199" font-size="24" fill="#172540">distance along open streets.</text>
+<text x="18" y="259" font-size="17" fill="#435579">QUICK EXAMPLE</text>
+<g transform="translate(18 265)" aria-hidden="true"><path d="M54 55H179H286H390" fill="none" stroke="#126558" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M54 55V90H151H281H390V55" fill="none" stroke="#435579" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="54" cy="55" r="5" fill="#126558"/><circle cx="179" cy="55" r="5" fill="#126558"/><circle cx="286" cy="55" r="5" fill="#126558"/><circle cx="390" cy="55" r="5" fill="#126558"/><circle cx="151" cy="90" r="4" fill="#435579"/><circle cx="281" cy="90" r="4" fill="#435579"/><text x="34" y="61" font-size="18" fill="#126558">A</text><text x="399" y="61" font-size="18" fill="#126558">B</text><text x="286" y="39" font-size="18" fill="#126558" text-anchor="middle">House 2</text><text x="151" y="113" font-size="18" fill="#435579" text-anchor="middle">House 1</text></g>
+<rect x="18" y="388" width="444" height="50" rx="9" fill="#e9edf6"/>
+<text x="32" y="417" font-size="17" fill="#435579">Upper route</text>
+<text x="186" y="418" font-size="21" fill="#172540">3 equal segments</text>
+<rect x="18" y="443" width="444" height="50" rx="9" fill="#e9edf6"/>
+<text x="32" y="472" font-size="17" fill="#435579">Lower route</text>
+<text x="186" y="473" font-size="21" fill="#172540">5 equal segments</text>
+<rect x="18" y="498" width="444" height="50" rx="9" fill="#dcefe8"/>
+<text x="32" y="527" font-size="17" fill="#435579">Use upper</text>
+<text x="186" y="528" font-size="21" fill="#172540">house 2</text>
+<rect x="18" y="563" width="444" height="97" rx="12" fill="#f9e9c9"/>
+<text x="32" y="587" font-size="17" fill="#83530e">WATCH FOR</text>
+<text x="32" y="613" font-size="19" fill="#172540">A visually adjacent street can be</text>
+<text x="32" y="640" font-size="19" fill="#172540">disconnected.</text>
 </g>
 </svg>

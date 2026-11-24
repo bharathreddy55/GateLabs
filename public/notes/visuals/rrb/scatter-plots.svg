@@ -1,12 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="760" height="284" viewBox="0 0 760 284" role="img" aria-labelledby="title description">
-<title id="title">Scatter Plots</title>
-<desc id="description">Read the pair. Look for overall trend. Inspect outliers</desc>
-<rect width="100%" height="100%" rx="24" fill="#fcf8ef"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="678" viewBox="0 0 480 678" role="img" aria-labelledby="title description">
+<title id="title">Scatter Plots — Quick revision</title>
+<desc id="description">Residual = observed y − fitted y at the same x. At x = 3, observed 9 Fitted line, predicts 6 Residual, +3 Watch for: Association alone cannot establish cause.</desc>
+<rect x="0" y="0" width="480" height="678" rx="20" fill="#faf7ee"/>
 <g font-family="Segoe UI, Arial, sans-serif" font-weight="700">
-<text x="28" y="43" font-size="22" fill="#5a4784">QUICK RECALL</text>
-<text x="28" y="95" font-size="42" fill="#182342">Scatter Plots</text>
-<rect x="28" y="116" width="225.33333333333334" height="140" rx="18" fill="#dce5ff"/><text x="140.66666666666669" y="178.66666666666666" font-size="29" fill="#344e93" text-anchor="middle">Read the</text><text x="140.66666666666669" y="212.66666666666666" font-size="29" fill="#344e93" text-anchor="middle">pair</text>
-<rect x="267.33333333333337" y="116" width="225.33333333333334" height="140" rx="18" fill="#d4efe6"/><text x="380.00000000000006" y="161.66666666666666" font-size="29" fill="#20594e" text-anchor="middle">Look for</text><text x="380.00000000000006" y="195.66666666666666" font-size="29" fill="#20594e" text-anchor="middle">overall</text><text x="380.00000000000006" y="229.66666666666666" font-size="29" fill="#20594e" text-anchor="middle">trend</text>
-<rect x="506.6666666666667" y="116" width="225.33333333333334" height="140" rx="18" fill="#fde5c5"/><text x="619.3333333333334" y="178.66666666666666" font-size="29" fill="#794718" text-anchor="middle">Inspect</text><text x="619.3333333333334" y="212.66666666666666" font-size="29" fill="#794718" text-anchor="middle">outliers</text>
+<text x="18" y="33" font-size="17" fill="#126558">STATION MASTER  ·  CBT</text>
+<text x="18" y="78" font-size="33" fill="#172540">Scatter Plots</text>
+<rect x="18" y="111" width="444" height="112" rx="12" fill="#dcefe8"/>
+<text x="32" y="136" font-size="17" fill="#126558">KEY RULE</text>
+<text x="32" y="166" font-size="24" fill="#172540">Residual = observed y − fitted y</text>
+<text x="32" y="199" font-size="24" fill="#172540">at the same x.</text>
+<text x="18" y="259" font-size="17" fill="#435579">QUICK EXAMPLE</text>
+<g transform="translate(18 265)" aria-hidden="true"><path d="M100 17V96H364 M124 83l198-47" fill="none" stroke="#435579" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="134" cy="74" r="4" fill="#435579"/><circle cx="158" cy="76" r="4" fill="#435579"/><circle cx="288" cy="44" r="4" fill="#435579"/><circle cx="312" cy="29" r="4" fill="#435579"/><path d="M221 30V60" fill="none" stroke="#126558" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="221" cy="30" r="6" fill="#126558"/><circle cx="221" cy="60" r="5" fill="#435579"/><text x="235" y="35" font-size="18" fill="#126558">9</text><text x="235" y="66" font-size="18" fill="#435579">6</text><text x="221" y="115" font-size="18" fill="#435579" text-anchor="middle">x = 3</text></g>
+<rect x="18" y="388" width="444" height="50" rx="9" fill="#e9edf6"/>
+<text x="32" y="417" font-size="17" fill="#435579">At x = 3</text>
+<text x="186" y="418" font-size="21" fill="#172540">observed 9</text>
+<rect x="18" y="443" width="444" height="50" rx="9" fill="#e9edf6"/>
+<text x="32" y="472" font-size="17" fill="#435579">Fitted line</text>
+<text x="186" y="473" font-size="21" fill="#172540">predicts 6</text>
+<rect x="18" y="498" width="444" height="50" rx="9" fill="#dcefe8"/>
+<text x="32" y="527" font-size="17" fill="#435579">Residual</text>
+<text x="186" y="528" font-size="21" fill="#172540">+3</text>
+<rect x="18" y="563" width="444" height="97" rx="12" fill="#f9e9c9"/>
+<text x="32" y="587" font-size="17" fill="#83530e">WATCH FOR</text>
+<text x="32" y="613" font-size="19" fill="#172540">Association alone cannot establish</text>
+<text x="32" y="640" font-size="19" fill="#172540">cause.</text>
 </g>
 </svg>

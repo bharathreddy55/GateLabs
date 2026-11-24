@@ -106,6 +106,10 @@ body,.app-shell,.landing-workspace{font-family:Inter,-apple-system,BlinkMacSyste
     max-width: 48rem;
     margin-block: 1rem;
 }
+#panel-rrb-notes .exam-note-visual,
+.cbat-note .exam-note-visual {
+    max-width: 30rem;
+}
 .exam-note-visual img {
     display: block;
     width: 100%;

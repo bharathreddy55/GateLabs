@@ -1,12 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="760" height="250" viewBox="0 0 760 250" role="img" aria-labelledby="title description">
-<title id="title">Basic Trigonometry</title>
-<desc id="description">Name the sides. Choose ratio. Keep angle fixed</desc>
-<rect width="100%" height="100%" rx="24" fill="#fcf8ef"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="678" viewBox="0 0 480 678" role="img" aria-labelledby="title description">
+<title id="title">Basic Trigonometry — Quick revision</title>
+<desc id="description">From angle θ, tan θ = opposite ÷ adjacent. Opposite, 6 m Adjacent, 8 m Tangent, 6 ÷ 8 = ¾ Watch for: The reference angle determines which leg is opposite.</desc>
+<rect x="0" y="0" width="480" height="678" rx="20" fill="#faf7ee"/>
 <g font-family="Segoe UI, Arial, sans-serif" font-weight="700">
-<text x="28" y="43" font-size="22" fill="#5a4784">QUICK RECALL</text>
-<text x="28" y="95" font-size="42" fill="#182342">Basic Trigonometry</text>
-<rect x="28" y="116" width="225.33333333333334" height="106" rx="18" fill="#dce5ff"/><text x="140.66666666666669" y="161.66666666666666" font-size="29" fill="#344e93" text-anchor="middle">Name the</text><text x="140.66666666666669" y="195.66666666666666" font-size="29" fill="#344e93" text-anchor="middle">sides</text>
-<rect x="267.33333333333337" y="116" width="225.33333333333334" height="106" rx="18" fill="#d4efe6"/><text x="380.00000000000006" y="161.66666666666666" font-size="29" fill="#20594e" text-anchor="middle">Choose</text><text x="380.00000000000006" y="195.66666666666666" font-size="29" fill="#20594e" text-anchor="middle">ratio</text>
-<rect x="506.6666666666667" y="116" width="225.33333333333334" height="106" rx="18" fill="#fde5c5"/><text x="619.3333333333334" y="161.66666666666666" font-size="29" fill="#794718" text-anchor="middle">Keep angle</text><text x="619.3333333333334" y="195.66666666666666" font-size="29" fill="#794718" text-anchor="middle">fixed</text>
+<text x="18" y="33" font-size="17" fill="#126558">STATION MASTER  ·  CBT</text>
+<text x="18" y="78" font-size="33" fill="#172540">Basic Trigonometry</text>
+<rect x="18" y="111" width="444" height="112" rx="12" fill="#dcefe8"/>
+<text x="32" y="136" font-size="17" fill="#126558">KEY RULE</text>
+<text x="32" y="166" font-size="24" fill="#172540">From angle θ, tan θ = opposite ÷</text>
+<text x="32" y="199" font-size="24" fill="#172540">adjacent.</text>
+<text x="18" y="259" font-size="17" fill="#435579">QUICK EXAMPLE</text>
+<g transform="translate(18 265)" aria-hidden="true"><path d="M150 84H250V9Z M235 84V69H250 M172 84Q171 77 167 71" fill="none" stroke="#126558" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="183" y="78" font-size="19" fill="#126558">θ</text><text x="200" y="106" font-size="18" fill="#435579" text-anchor="middle">8 m adjacent</text><text x="264" y="50" font-size="18" fill="#435579">6 m opposite</text></g>
+<rect x="18" y="388" width="444" height="50" rx="9" fill="#e9edf6"/>
+<text x="32" y="417" font-size="17" fill="#435579">Opposite</text>
+<text x="186" y="418" font-size="21" fill="#172540">6 m</text>
+<rect x="18" y="443" width="444" height="50" rx="9" fill="#e9edf6"/>
+<text x="32" y="472" font-size="17" fill="#435579">Adjacent</text>
+<text x="186" y="473" font-size="21" fill="#172540">8 m</text>
+<rect x="18" y="498" width="444" height="50" rx="9" fill="#dcefe8"/>
+<text x="32" y="527" font-size="17" fill="#435579">Tangent</text>
+<text x="186" y="528" font-size="21" fill="#172540">6 ÷ 8 = ¾</text>
+<rect x="18" y="563" width="444" height="97" rx="12" fill="#f9e9c9"/>
+<text x="32" y="587" font-size="17" fill="#83530e">WATCH FOR</text>
+<text x="32" y="613" font-size="19" fill="#172540">The reference angle determines which leg</text>
+<text x="32" y="640" font-size="19" fill="#172540">is opposite.</text>
 </g>
 </svg>

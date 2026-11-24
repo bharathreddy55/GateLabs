@@ -1,12 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="760" height="250" viewBox="0 0 760 250" role="img" aria-labelledby="title description">
-<title id="title">Intelligence</title>
-<desc id="description">Find an anchor. Turn the figure. Check handedness</desc>
-<rect width="100%" height="100%" rx="24" fill="#fcf8ef"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="711" viewBox="0 0 480 711" role="img" aria-labelledby="title description">
+<title id="title">Intelligence — Quick revision</title>
+<desc id="description">Rotate and align the long arm. Check which side the short arm turns. Anchor, long arm Compare, turn direction Reject mirror, branch changes sides Watch for: Equal cell counts do not establish a match.</desc>
+<rect x="0" y="0" width="480" height="711" rx="20" fill="#faf7ee"/>
 <g font-family="Segoe UI, Arial, sans-serif" font-weight="700">
-<text x="28" y="43" font-size="22" fill="#5a4784">QUICK RECALL</text>
-<text x="28" y="95" font-size="42" fill="#182342">Intelligence</text>
-<rect x="28" y="116" width="225.33333333333334" height="106" rx="18" fill="#dce5ff"/><text x="140.66666666666669" y="161.66666666666666" font-size="29" fill="#344e93" text-anchor="middle">Find an</text><text x="140.66666666666669" y="195.66666666666666" font-size="29" fill="#344e93" text-anchor="middle">anchor</text>
-<rect x="267.33333333333337" y="116" width="225.33333333333334" height="106" rx="18" fill="#d4efe6"/><text x="380.00000000000006" y="161.66666666666666" font-size="29" fill="#20594e" text-anchor="middle">Turn the</text><text x="380.00000000000006" y="195.66666666666666" font-size="29" fill="#20594e" text-anchor="middle">figure</text>
-<rect x="506.6666666666667" y="116" width="225.33333333333334" height="106" rx="18" fill="#fde5c5"/><text x="619.3333333333334" y="161.66666666666666" font-size="29" fill="#794718" text-anchor="middle">Check</text><text x="619.3333333333334" y="195.66666666666666" font-size="29" fill="#794718" text-anchor="middle">handedness</text>
+<text x="18" y="33" font-size="17" fill="#126558">STATION MASTER  ·  CBAT</text>
+<text x="18" y="78" font-size="33" fill="#172540">Intelligence</text>
+<rect x="18" y="111" width="444" height="145" rx="12" fill="#dcefe8"/>
+<text x="32" y="136" font-size="17" fill="#126558">KEY RULE</text>
+<text x="32" y="166" font-size="24" fill="#172540">Rotate and align the long arm.</text>
+<text x="32" y="199" font-size="24" fill="#172540">Check which side the short arm</text>
+<text x="32" y="232" font-size="24" fill="#172540">turns.</text>
+<text x="18" y="292" font-size="17" fill="#435579">QUICK EXAMPLE</text>
+<g transform="translate(18 298)" aria-hidden="true"><rect x="61" y="10" width="17" height="17" rx="3" fill="#126558"/><rect x="80" y="10" width="17" height="17" rx="3" fill="#dde8e7"/><rect x="99" y="10" width="17" height="17" rx="3" fill="#dde8e7"/><rect x="61" y="29" width="17" height="17" rx="3" fill="#126558"/><rect x="80" y="29" width="17" height="17" rx="3" fill="#dde8e7"/><rect x="99" y="29" width="17" height="17" rx="3" fill="#dde8e7"/><rect x="61" y="48" width="17" height="17" rx="3" fill="#126558"/><rect x="80" y="48" width="17" height="17" rx="3" fill="#126558"/><rect x="99" y="48" width="17" height="17" rx="3" fill="#dde8e7"/><text x="88" y="93" font-size="18" fill="#435579" text-anchor="middle">Original</text><rect x="198" y="10" width="17" height="17" rx="3" fill="#126558"/><rect x="217" y="10" width="17" height="17" rx="3" fill="#126558"/><rect x="236" y="10" width="17" height="17" rx="3" fill="#126558"/><rect x="198" y="29" width="17" height="17" rx="3" fill="#126558"/><rect x="217" y="29" width="17" height="17" rx="3" fill="#dde8e7"/><rect x="236" y="29" width="17" height="17" rx="3" fill="#dde8e7"/><rect x="198" y="48" width="17" height="17" rx="3" fill="#dde8e7"/><rect x="217" y="48" width="17" height="17" rx="3" fill="#dde8e7"/><rect x="236" y="48" width="17" height="17" rx="3" fill="#dde8e7"/><text x="225" y="93" font-size="18" fill="#435579" text-anchor="middle">Rotated</text><rect x="335" y="10" width="17" height="17" rx="3" fill="#dde8e7"/><rect x="354" y="10" width="17" height="17" rx="3" fill="#dde8e7"/><rect x="373" y="10" width="17" height="17" rx="3" fill="#126558"/><rect x="335" y="29" width="17" height="17" rx="3" fill="#dde8e7"/><rect x="354" y="29" width="17" height="17" rx="3" fill="#dde8e7"/><rect x="373" y="29" width="17" height="17" rx="3" fill="#126558"/><rect x="335" y="48" width="17" height="17" rx="3" fill="#dde8e7"/><rect x="354" y="48" width="17" height="17" rx="3" fill="#126558"/><rect x="373" y="48" width="17" height="17" rx="3" fill="#126558"/><text x="362" y="93" font-size="18" fill="#435579" text-anchor="middle">Mirrored</text></g>
+<rect x="18" y="421" width="444" height="50" rx="9" fill="#e9edf6"/>
+<text x="32" y="450" font-size="17" fill="#435579">Anchor</text>
+<text x="186" y="451" font-size="21" fill="#172540">long arm</text>
+<rect x="18" y="476" width="444" height="50" rx="9" fill="#e9edf6"/>
+<text x="32" y="505" font-size="17" fill="#435579">Compare</text>
+<text x="186" y="506" font-size="21" fill="#172540">turn direction</text>
+<rect x="18" y="531" width="444" height="50" rx="9" fill="#dcefe8"/>
+<text x="32" y="560" font-size="17" fill="#435579">Reject mirror</text>
+<text x="186" y="561" font-size="21" fill="#172540">branch changes sides</text>
+<rect x="18" y="596" width="444" height="97" rx="12" fill="#f9e9c9"/>
+<text x="32" y="620" font-size="17" fill="#83530e">WATCH FOR</text>
+<text x="32" y="646" font-size="19" fill="#172540">Equal cell counts do not establish a</text>
+<text x="32" y="673" font-size="19" fill="#172540">match.</text>
 </g>
 </svg>

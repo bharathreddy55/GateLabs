@@ -1,12 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="760" height="284" viewBox="0 0 760 284" role="img" aria-labelledby="title description">
-<title id="title">Personality</title>
-<desc id="description">Read the response scale. Think of typical behaviour. Choose honestly</desc>
-<rect width="100%" height="100%" rx="24" fill="#fcf8ef"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="622" viewBox="0 0 480 622" role="img" aria-labelledby="title description">
+<title id="title">Personality — Quick revision</title>
+<desc id="description">Read the response scale and answer for your usual behaviour. Prompt, “I ask for clarification” Consider, typical situations Respond, match your experience Watch for: Agreement and frequency scales ask different things.</desc>
+<rect x="0" y="0" width="480" height="622" rx="20" fill="#faf7ee"/>
 <g font-family="Segoe UI, Arial, sans-serif" font-weight="700">
-<text x="28" y="43" font-size="22" fill="#5a4784">QUICK RECALL</text>
-<text x="28" y="95" font-size="42" fill="#182342">Personality</text>
-<rect x="28" y="116" width="225.33333333333334" height="140" rx="18" fill="#dce5ff"/><text x="140.66666666666669" y="161.66666666666666" font-size="29" fill="#344e93" text-anchor="middle">Read the</text><text x="140.66666666666669" y="195.66666666666666" font-size="29" fill="#344e93" text-anchor="middle">response</text><text x="140.66666666666669" y="229.66666666666666" font-size="29" fill="#344e93" text-anchor="middle">scale</text>
-<rect x="267.33333333333337" y="116" width="225.33333333333334" height="140" rx="18" fill="#d4efe6"/><text x="380.00000000000006" y="161.66666666666666" font-size="29" fill="#20594e" text-anchor="middle">Think of</text><text x="380.00000000000006" y="195.66666666666666" font-size="29" fill="#20594e" text-anchor="middle">typical</text><text x="380.00000000000006" y="229.66666666666666" font-size="29" fill="#20594e" text-anchor="middle">behaviour</text>
-<rect x="506.6666666666667" y="116" width="225.33333333333334" height="140" rx="18" fill="#fde5c5"/><text x="619.3333333333334" y="178.66666666666666" font-size="29" fill="#794718" text-anchor="middle">Choose</text><text x="619.3333333333334" y="212.66666666666666" font-size="29" fill="#794718" text-anchor="middle">honestly</text>
+<text x="18" y="33" font-size="17" fill="#126558">STATION MASTER  ·  CBAT</text>
+<text x="18" y="78" font-size="33" fill="#172540">Personality</text>
+<rect x="18" y="111" width="444" height="145" rx="12" fill="#dcefe8"/>
+<text x="32" y="136" font-size="17" fill="#126558">KEY RULE</text>
+<text x="32" y="166" font-size="24" fill="#172540">Read the response scale and</text>
+<text x="32" y="199" font-size="24" fill="#172540">answer for your usual</text>
+<text x="32" y="232" font-size="24" fill="#172540">behaviour.</text>
+<text x="18" y="292" font-size="17" fill="#435579">QUICK EXAMPLE</text>
+
+<rect x="18" y="303" width="444" height="79" rx="9" fill="#e9edf6"/>
+<text x="32" y="332" font-size="17" fill="#435579">Prompt</text>
+<text x="186" y="333" font-size="21" fill="#172540">“I ask for</text>
+<text x="186" y="362" font-size="21" fill="#172540">clarification”</text>
+<rect x="18" y="387" width="444" height="50" rx="9" fill="#e9edf6"/>
+<text x="32" y="416" font-size="17" fill="#435579">Consider</text>
+<text x="186" y="417" font-size="21" fill="#172540">typical situations</text>
+<rect x="18" y="442" width="444" height="50" rx="9" fill="#dcefe8"/>
+<text x="32" y="471" font-size="17" fill="#435579">Respond</text>
+<text x="186" y="472" font-size="21" fill="#172540">match your experience</text>
+<rect x="18" y="507" width="444" height="97" rx="12" fill="#f9e9c9"/>
+<text x="32" y="531" font-size="17" fill="#83530e">WATCH FOR</text>
+<text x="32" y="557" font-size="19" fill="#172540">Agreement and frequency scales ask</text>
+<text x="32" y="584" font-size="19" fill="#172540">different things.</text>
 </g>
 </svg>

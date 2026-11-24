@@ -1,12 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="760" height="250" viewBox="0 0 760 250" role="img" aria-labelledby="title description">
-<title id="title">Heat and Temperature</title>
-<desc id="description">Heat transfer. Temperature response. Balance energy</desc>
-<rect width="100%" height="100%" rx="24" fill="#fcf8ef"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="651" viewBox="0 0 480 651" role="img" aria-labelledby="title description">
+<title id="title">Heat and Temperature — Quick revision</title>
+<desc id="description">Heating: Q = mcΔT. A phase change: Q = mL. Before melting, temperature rises During melting, T stays flat After melting, temperature rises Watch for: Use the latent heat on the plateau.</desc>
+<rect x="0" y="0" width="480" height="651" rx="20" fill="#faf7ee"/>
 <g font-family="Segoe UI, Arial, sans-serif" font-weight="700">
-<text x="28" y="43" font-size="22" fill="#5a4784">QUICK RECALL</text>
-<text x="28" y="95" font-size="42" fill="#182342">Heat and Temperature</text>
-<rect x="28" y="116" width="225.33333333333334" height="106" rx="18" fill="#dce5ff"/><text x="140.66666666666669" y="161.66666666666666" font-size="29" fill="#344e93" text-anchor="middle">Heat</text><text x="140.66666666666669" y="195.66666666666666" font-size="29" fill="#344e93" text-anchor="middle">transfer</text>
-<rect x="267.33333333333337" y="116" width="225.33333333333334" height="106" rx="18" fill="#d4efe6"/><text x="380.00000000000006" y="161.66666666666666" font-size="29" fill="#20594e" text-anchor="middle">Temperature</text><text x="380.00000000000006" y="195.66666666666666" font-size="29" fill="#20594e" text-anchor="middle">response</text>
-<rect x="506.6666666666667" y="116" width="225.33333333333334" height="106" rx="18" fill="#fde5c5"/><text x="619.3333333333334" y="161.66666666666666" font-size="29" fill="#794718" text-anchor="middle">Balance</text><text x="619.3333333333334" y="195.66666666666666" font-size="29" fill="#794718" text-anchor="middle">energy</text>
+<text x="18" y="33" font-size="17" fill="#126558">STATION MASTER  ·  CBT</text>
+<text x="18" y="78" font-size="33" fill="#172540">Heat and Temperature</text>
+<rect x="18" y="111" width="444" height="112" rx="12" fill="#dcefe8"/>
+<text x="32" y="136" font-size="17" fill="#126558">KEY RULE</text>
+<text x="32" y="166" font-size="24" fill="#172540">Heating: Q = mcΔT. A phase</text>
+<text x="32" y="199" font-size="24" fill="#172540">change: Q = mL.</text>
+<text x="18" y="259" font-size="17" fill="#435579">QUICK EXAMPLE</text>
+<g transform="translate(18 265)" aria-hidden="true"><path d="M82 92V16 M82 92H366" fill="none" stroke="#435579" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M99 78l60-35h121l64-27" fill="none" stroke="#126558" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="159" cy="43" r="4" fill="#126558"/><circle cx="280" cy="43" r="4" fill="#126558"/><text x="98" y="22" font-size="18" fill="#435579">Temperature</text><text x="219" y="67" font-size="18" fill="#126558" text-anchor="middle">Melting</text><text x="293" y="111" font-size="18" fill="#435579">Heat added</text></g>
+<rect x="18" y="388" width="444" height="50" rx="9" fill="#e9edf6"/>
+<text x="32" y="417" font-size="17" fill="#435579">Before melting</text>
+<text x="186" y="418" font-size="21" fill="#172540">temperature rises</text>
+<rect x="18" y="443" width="444" height="50" rx="9" fill="#e9edf6"/>
+<text x="32" y="472" font-size="17" fill="#435579">During melting</text>
+<text x="186" y="473" font-size="21" fill="#172540">T stays flat</text>
+<rect x="18" y="498" width="444" height="50" rx="9" fill="#dcefe8"/>
+<text x="32" y="527" font-size="17" fill="#435579">After melting</text>
+<text x="186" y="528" font-size="21" fill="#172540">temperature rises</text>
+<rect x="18" y="563" width="444" height="70" rx="12" fill="#f9e9c9"/>
+<text x="32" y="587" font-size="17" fill="#83530e">WATCH FOR</text>
+<text x="32" y="613" font-size="19" fill="#172540">Use the latent heat on the plateau.</text>
 </g>
 </svg>
