@@ -107,14 +107,17 @@ function sourceReference(q) {
 }
 
 export function mountAnswerReview(root, {
-  responses, state = {}, bookmarks = [], toggleBookmark, practise, renderContext = renderQuestionContext, renderOption, examId
+  responses, state = {}, bookmarks = [], toggleBookmark, toggleReviewMark, practise, renderContext = renderQuestionContext, renderOption, examId
 }) {
   if (!root) return;
   const items = responses.map((question,index)=>({question,index}));
-  const hasMarked = responses.some(question=>question.markedForReview===true);
-  const groups = toggleBookmark ? [...filters,['bookmarked','Bookmarked']] : filters;
+  const supportsMarks = Boolean(toggleReviewMark) || responses.some(question=>question.markedForReview===true);
+  const groups = [...filters];
+  if (supportsMarks) groups.push(['marked','Marked for review']);
+  if (toggleBookmark) groups.push(['bookmarked','Bookmarked']);
   const matches = (item, filter) => filter==='all' ||
-    (filter==='bookmarked' ? bookmarks.includes(item.question.id) : item.question.status===filter);
+    (filter==='bookmarked' ? bookmarks.includes(item.question.id) :
+      filter==='marked' ? item.question.markedForReview===true : item.question.status===filter);
   const filterCounts = list => Object.fromEntries(groups.map(([key])=>[key,list.filter(item=>matches(item,key)).length]));
   let scopedItems = items;
   let counts = filterCounts(scopedItems);
@@ -135,21 +138,26 @@ export function mountAnswerReview(root, {
       <div class="review-nav-heading"><strong>Questions</strong><span data-review-count role="status"></span></div>
       <div class="review-palette" data-review-palette></div>
       <div class="review-legend">${Object.entries(statuses).map(([key,label])=>`<span data-outcome="${key}">${label}</span>`).join('')}
-        ${hasMarked?'<span data-review-marked>Marked for review</span>':''}
+        ${supportsMarks?'<span data-review-marked>Marked for review</span>':''}
       </div>
     </nav>
     <div data-review-content></div>
   </div>`;
   const palette = root.querySelector('[data-review-palette]');
   const content = root.querySelector('[data-review-content]');
-  let visible, cursor;
+  let visible, cursor, savingMark = false;
 
   function select(index, focus) {
     cursor = visible.findIndex(item=>item.index===index);
     if (cursor < 0) cursor = 0;
     const item = visible[cursor];
     if (!item) {
-      content.innerHTML = '<div class="review-empty"><h3>No questions match this filter</h3><button type="button" class="ui-button" data-review-filter="all">Show all answers</button></div>';
+      const markedFilter = state.filter === 'marked';
+      content.innerHTML = `<div class="review-empty">
+        <h3>${markedFilter?'No questions marked for review':'No questions match this filter'}</h3>
+        ${markedFilter&&toggleReviewMark?'<p>Use Mark for review on an answer card to add a violet dot.</p>':''}
+        <button type="button" class="ui-button" data-review-filter="all">Show all answers</button>
+      </div>`;
       return;
     }
     state.index = item.index;
@@ -167,6 +175,7 @@ export function mountAnswerReview(root, {
       <div class="review-question-meta">
         <p>Question ${item.index+1} of ${items.length}${q.section ? ` <span>· ${h(q.section)}</span>` : ''}</p>
         <span class="review-outcome" data-outcome="${h(q.status)}">${statuses[q.status] ?? 'Reviewed'}</span>${mark}
+        ${toggleReviewMark ? `<button type="button" class="ui-button review-mark-toggle" data-toggle-review-mark aria-pressed="${q.markedForReview===true}" ${savingMark?'disabled':''}>${q.markedForReview===true?'Unmark for review':'Mark for review'}</button>` : ''}
       </div>
       <div class="review-card-body">
         <h3 class="review-question" tabindex="-1">${h(q.question)}</h3>
@@ -206,13 +215,17 @@ export function mountAnswerReview(root, {
     scope.querySelector('[data-review-scope-name]').textContent=label || '';
     const allowed=indices ? new Set(indices) : null;
     scopedItems=allowed ? items.filter(item=>allowed.has(item.index)) : items;
+    updateCounts();
+  }
+
+  function updateCounts() {
     counts=filterCounts(scopedItems);
     for(const button of root.querySelectorAll('.review-filters button')) {
       button.querySelector('span').textContent=counts[button.dataset.reviewFilter];
     }
   }
 
-  root.onclick = event => {
+  root.onclick = async event => {
     const button = event.target.closest('button');
     if (!button || !root.contains(button)) return;
     if (button.hasAttribute('data-review-clear-scope')) {
@@ -227,6 +240,27 @@ export function mountAnswerReview(root, {
     } else if (button.hasAttribute('data-review-move')) {
       const next = visible[cursor+Number(button.dataset.reviewMove)];
       if (next) select(next.index,true);
+    } else if (button.hasAttribute('data-toggle-review-mark')) {
+      const item = visible[cursor];
+      if (!item || savingMark) return;
+      savingMark = true;
+      button.disabled = true;
+      const marked = item.question.markedForReview !== true;
+      const saved = await toggleReviewMark(item.index, marked);
+      savingMark = false;
+      if (!root.isConnected) return;
+      if (saved) {
+        const wasSelected=state.index===item.index;
+        updateCounts();
+        applyFilter(state.filter);
+        if (wasSelected) {
+          const markButton=state.index===item.index && content.querySelector('[data-toggle-review-mark]');
+          (markButton || root.querySelector('.review-filters [aria-pressed="true"]'))?.focus({preventScroll:true});
+        }
+      } else {
+        const current = content.querySelector('[data-toggle-review-mark]');
+        if (current) current.disabled = false;
+      }
     } else if (button.hasAttribute('data-bookmark')) {
       const id = visible[cursor]?.question.id;
       const updated = toggleBookmark(id);

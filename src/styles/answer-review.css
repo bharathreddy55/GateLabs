@@ -119,12 +119,13 @@
 .review-palette button[data-review-marked]::after {
   content: '';
   position: absolute;
-  inset-block-start: 4px;
-  inset-inline-end: 4px;
-  width: 7px;
-  height: 7px;
+  inset-block-start: 3px;
+  inset-inline-end: 3px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   background: var(--review-marked);
+  box-shadow: 0 0 0 2px var(--ws-panel);
 }
 .review-legend { display: flex; flex-wrap: wrap; gap: 6px 9px; margin-top: 12px; }
 .review-legend span { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; color: var(--ws-muted); }
@@ -285,6 +286,14 @@
 .answer-review .review-reason { color: var(--ws-text); margin: 12px 0 0; }
 .answer-review .review-source, .answer-review .review-note { font-size: 13px; color: var(--ws-muted); margin: 16px 0 0; }
 .review-card-footer { border-top: 1px solid var(--ws-border); padding: 12px clamp(12px, 3vw, 26px); flex-wrap: wrap; gap: 6px; }
+.answer-review .review-mark-toggle {
+  padding: .3rem .5rem;
+  font-size: .75rem;
+}
+.answer-review .review-mark-toggle[aria-pressed="true"] {
+  color: var(--review-marked);
+  border-color: var(--review-marked);
+}
 .review-card-footer .ui-button span { display: inline-flex; }
 .app-shell .answer-review .review-card-footer .ui-button.primary {
   color: var(--ws-panel);
@@ -294,6 +303,7 @@
 .review-card-footer .ui-button[aria-pressed="true"] { border-color: var(--review-accent); color: var(--review-accent); }
 .review-empty { padding: 24px; }
 .review-empty h3 { margin: 0 0 12px; }
+.review-empty p { margin: 0 0 10px; color: var(--ws-muted); }
 .cbat-result { flex-wrap: wrap; }
 .cbat-result h2 { margin: 0 0 6px; }
 

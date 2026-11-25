@@ -31,7 +31,7 @@ const gateQuestions=[
   {id:'gate-msq',year:'2025',subject:'Algorithms',topic:'B',type:'MSQ',question:'Select the even numbers.',options:['2','3','4','5'],correctOptions:[0,2],marks:2,
     questionImage:'/questions/figures/gate-2022-q10.png',imageAlt:'Test question diagram'}
 ];
-export const db={saveAttempt:async a=>{const key='gate_attempts:exam-test-user';const rows=JSON.parse(localStorage.getItem(key)||'[]');rows.push(a);localStorage.setItem(key,JSON.stringify(rows));return a;},getAttempts:async()=>JSON.parse(localStorage.getItem('gate_attempts:exam-test-user')||'[]'),getBookmarks:async()=>[],getSyllabusProgress:async()=>({}),getQuestions:async()=>gateQuestions};
+export const db={saveAttempt:async a=>{const key='gate_attempts:exam-test-user';const rows=JSON.parse(localStorage.getItem(key)||'[]').filter(row=>row.id!==a.id);rows.push(a);localStorage.setItem(key,JSON.stringify(rows));return a;},getAttempts:async()=>JSON.parse(localStorage.getItem('gate_attempts:exam-test-user')||'[]'),getBookmarks:async()=>[],getSyllabusProgress:async()=>({}),getQuestions:async()=>gateQuestions};
 `}));
 const page=await context.newPage();const errors=[];page.on('pageerror',err=>errors.push(err.message));
 page.on('dialog',dialog=>dialog.accept());
@@ -146,10 +146,13 @@ try{
  assert.equal(await markedIncorrect.getAttribute('data-outcome'),'wrong');
  assert.equal(await markedSkipped.getAttribute('data-outcome'),'skipped');
  assert.equal(await review.locator('.review-palette [data-review-marked]').count(),2);
+ await filterReview('marked',2);
+ await filterReview('all',150);
+ await review.locator('[data-review-question="0"]').click();
  assert.deepEqual(await markedIncorrect.evaluate(el=>{
    const dot=getComputedStyle(el,'::after');
-   return [dot.borderRadius,dot.backgroundColor];
- }),['50%','rgb(109, 40, 217)']);
+   return [dot.width,dot.borderRadius,dot.backgroundColor];
+ }),['9px','50%','rgb(109, 40, 217)']);
  await page.getByRole('button',{name:'Review answers',exact:true}).click();
  assert.equal(await page.evaluate(()=>document.activeElement?.id),'answer-review-heading');
  assert.equal(await review.locator('.review-card').count(),1);
@@ -192,7 +195,9 @@ try{
  await page.getByRole('button',{name:'Begin test',exact:true}).click();
  await page.getByRole('button',{name:'Submit test',exact:true}).click();
  await review.getByRole('heading',{name:'Answer review',exact:true}).waitFor();
- assert.equal(await review.locator('.review-legend [data-review-marked]').count(),0);
+ assert.equal(await review.locator('.review-legend [data-review-marked]').count(),1);
+ await filterReview('marked',0);
+ await review.getByRole('heading',{name:'No questions marked for review'}).waitFor();
  await page.getByRole('link',{name:'Return to preparation'}).click();
  await page.locator('[data-prep-tab=mocks]').click();
  await groupCard.getByText('Completed 2 times',{exact:true}).waitFor();
@@ -524,6 +529,28 @@ try{
  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth),false);
  await page.getByRole('link',{name:'Stage 1 · CBT'}).click();
  await page.locator('#prep-rrb').waitFor();
+ await page.evaluate(()=>{
+   const key='gate_attempts:exam-test-user';
+   const rows=JSON.parse(localStorage.getItem(key));
+   const prior=rows.find(row=>row.examId==='rrb'&&row.responses.length===100);
+   const responses=prior.responses.map(({markedForReview,...question})=>question);
+   rows.push({...prior,id:'older-rrb-result',responses});
+   localStorage.setItem(key,JSON.stringify(rows));
+ });
+ await page.goto('http://127.0.0.1:3011/#/mock-test?attempt=older-rrb-result');
+ await review.getByRole('heading',{name:'Answer review',exact:true}).waitFor();
+ assert.equal(await review.locator('.review-palette [data-review-marked]').count(),0);
+ await page.locator('[data-review-question="30"]').click();
+ await review.getByRole('button',{name:'Mark for review',exact:true}).click();
+ await review.getByRole('button',{name:'Question 31, Unanswered, marked for review',exact:true}).waitFor();
+ await page.reload();
+ await review.getByRole('button',{name:'Question 31, Unanswered, marked for review',exact:true}).waitFor();
+ await filterReview('marked',1);
+ await review.getByRole('button',{name:'Unmark for review',exact:true}).click();
+ await review.getByRole('heading',{name:'No questions marked for review'}).waitFor();
+ await page.reload();
+ await review.getByRole('heading',{name:'Answer review',exact:true}).waitFor();
+ assert.equal(await review.locator('.review-palette [data-review-marked]').count(),0);
  assert.deepEqual(errors,[]);
  console.log('PASS: CBT across all four exams, challenge drills and GATE marking, Station Master CBAT timing and results, Group 2 Mains routes, mobile layout and SBI locks. Firebase is stubbed.');
 }finally{await browser.close();await vite.close();}

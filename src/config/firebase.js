@@ -208,18 +208,14 @@ const mockFirestore = {
   async getQuestions(filters={}){return publishedStudyQuestions(filters);},
 
   async saveAttempt(attempt) {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        const cleanAttempt = JSON.parse(JSON.stringify(attempt));
-        const attempts = readStored(attemptStorageKey(),[]);
-        cleanAttempt.id = cleanAttempt.id || 'att_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4);
-        cleanAttempt.timestamp = cleanAttempt.timestamp || new Date().toISOString();
-    cleanAttempt.userId = auth.currentUser?.uid || 'anonymous';
-        if (!attempts.some(a => a.id === cleanAttempt.id)) attempts.push(cleanAttempt);
-        localStorage.setItem(attemptStorageKey(), JSON.stringify(attempts));
-        resolve(cleanAttempt);
-      }, 400);
-    });
+    const key=attemptStorageKey();
+    const cleanAttempt=JSON.parse(JSON.stringify(attempt));
+    cleanAttempt.id ||= 'att_' + Date.now() + '_' + Math.random().toString(36).slice(2, 6);
+    cleanAttempt.timestamp ||= new Date().toISOString();
+    cleanAttempt.userId=auth.currentUser?.uid || 'anonymous';
+    const attempts=readStored(key,[]).filter(row=>row.id!==cleanAttempt.id);
+    localStorage.setItem(key,JSON.stringify([...attempts,cleanAttempt]));
+    return cleanAttempt;
   },
   
   async getAttempts() {

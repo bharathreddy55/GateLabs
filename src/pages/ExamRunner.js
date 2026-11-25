@@ -102,7 +102,7 @@ export const MockTest = {
       <section class="answer-review" id="exam-answer-review"></section>
     </section>`;
   },
-  initAnswerReview(root) {
+  initAnswerReview(root, refreshInsights) {
     const result=this.result;
     if(this.reviewAttemptId!==result.id || !this.reviewState){
       this.reviewAttemptId=result.id;
@@ -115,6 +115,32 @@ export const MockTest = {
       examId:result.examId,
       state:this.reviewState,
       renderContext:q=>renderQuestionContext(q,{examId:result.examId}),
+      toggleReviewMark:async (index, marked)=>{
+        const uid=auth.currentUser?.uid;
+        if (!uid || this.result!==result || (result.userId && result.userId!==uid)) return false;
+        if (this.saving) {
+          showToast('Your result is still saving. Try the mark again in a moment.','warning');
+          return false;
+        }
+        this.saving=true;
+        try {
+          const responses=result.responses.map((question,i)=>i===index?{...question,markedForReview:marked}:question);
+          const mistakes=responses.filter(question=>question.status==='wrong');
+          const reviewMarksUpdatedAt=Date.now();
+          await db.saveAttempt({...result,responses,mistakes,reviewMarksUpdatedAt});
+          if (this.result!==result || auth.currentUser?.uid!==uid) return false;
+          result.responses[index].markedForReview=marked;
+          result.mistakes=mistakes;
+          result.reviewMarksUpdatedAt=reviewMarksUpdatedAt;
+          refreshInsights();
+          return true;
+        } catch {
+          showToast('This browser could not save the review mark.','error');
+          return false;
+        } finally {
+          this.saving=false;
+        }
+      },
       bookmarks:readBookmarks(),
       toggleBookmark(id) {
         const list=readBookmarks();
@@ -235,8 +261,10 @@ export const MockTest = {
     document.querySelector('[data-exam-fullscreen]')?.addEventListener('click',enterExamFullscreen);
     const reviewRoot=document.getElementById('exam-answer-review');
     if(reviewRoot){
-      const openReview=this.initAnswerReview(reviewRoot);
-      mountAttemptInsights(document.getElementById('exam-attempt-insights'),this.result,openReview);
+      const insightsRoot=document.getElementById('exam-attempt-insights');
+      const refreshInsights=()=>mountAttemptInsights(insightsRoot,this.result,openReview);
+      const openReview=this.initAnswerReview(reviewRoot,refreshInsights);
+      refreshInsights();
     }
     bind('open-answer-review',()=>{
       reviewRoot.querySelector('h2').focus({preventScroll:true});
