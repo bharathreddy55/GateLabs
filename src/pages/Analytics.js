@@ -230,6 +230,7 @@ export const Analytics = {
     const minutes = Math.floor(att.timeSpentSeconds / 60);
     const seconds = att.timeSpentSeconds % 60;
     const accuracy = att.accuracy || 0;
+    const hasResultCharts = Object.hasOwn(EXAMS, found.examId) && Array.isArray(found.responses) && found.responses.length > 0;
 
     // Subject breakdown from mistakes
     const subjectBreakdown = {};
@@ -252,9 +253,12 @@ export const Analytics = {
               <p class="text-xs text-slate-400 mt-0.5">${dateStr} · ${timeStr}</p>
             </div>
           </div>
-          <button id="btn-delete-this-attempt" class="flex items-center gap-2 px-4 py-2 text-xs font-bold text-rose-500 border border-rose-200 dark:border-rose-900/50 hover:bg-rose-50 dark:hover:bg-rose-950/20 rounded-xl transition-all" data-attempt-id="${att.id}">
-            <i class="fa-solid fa-trash-can"></i> Delete Attempt
-          </button>
+          <div class="flex flex-wrap items-center gap-2">
+            ${hasResultCharts ? `<a class="ui-button" href="#/mock-test?attempt=${encodeURIComponent(attemptId)}">Open result charts</a>` : ''}
+            <button id="btn-delete-this-attempt" class="flex items-center gap-2 px-4 py-2 text-xs font-bold text-rose-500 border border-rose-200 dark:border-rose-900/50 hover:bg-rose-50 dark:hover:bg-rose-950/20 rounded-xl transition-all" data-attempt-id="${att.id}">
+              <i class="fa-solid fa-trash-can"></i> Delete Attempt
+            </button>
+          </div>
         </div>
 
         <!-- Performance Metrics -->

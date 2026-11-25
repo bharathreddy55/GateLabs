@@ -4,6 +4,7 @@ import { CBAT_NOTES } from '../config/rrbCbatNotes.js';
 import { EXAM_CATALOG, icon } from '../config/navigation.js';
 import { mockLibraryBanner } from '../components/ExamMockLibrary.js';
 import { mountAnswerReview } from '../components/AnswerReview.js';
+import { mountAttemptInsights } from '../components/AttemptInsights.js';
 import { buildCbatSet, cbatResultKey, cbatSummary, validCbatResult } from '../utils/cbat.js';
 import { escapeHtml as h } from '../utils/examEngine.js';
 import { readStored } from '../utils/safeStorage.js';
@@ -245,7 +246,7 @@ export const RrbCbat = {
   finish(expired){
     clearInterval(this.timer);
     leaveExamFullscreen();
-    const {battery,set,questions,answers} = this.session;
+    const {battery,set,questions,answers,deadline} = this.session;
     const result = cbatSummary(questions,answers);
     this.session = null;
     this.root.querySelector('[data-cbat-view="notes"]').disabled=false;
@@ -264,16 +265,22 @@ export const RrbCbat = {
       <p>${expired?'Time is up. ':''}${completedLabel(result)}${result.correct===null?'':` · ${result.attempted} attempted`}</p>${saveWarning}
       ${result.correct===null?'<p class="muted">Your individual responses are discarded.</p>':''}</div>
       <button type="button" class="ui-button" data-cbat-library>Back to batteries</button>
-      </section>${result.correct===null?'':'<section class="answer-review" data-cbat-answer-review></section>'}`;
-    if (result.correct !== null) mountAnswerReview(this.panel.querySelector('[data-cbat-answer-review]'),{
-      responses:questions.map((q,i)=>({
+      </section>${result.correct===null?'':'<section class="attempt-insights" data-cbat-insights></section><section class="answer-review" data-cbat-answer-review></section>'}`;
+    if (result.correct !== null) {
+      const responses=questions.map((q,i)=>({
         ...q, question:q.prompt, correctAnswer:q.correct, userAnswer:answers[i],
         status:answers[i]==null?'skipped':answers[i]===q.correct?'correct':'wrong'
-      })),
-      renderContext:q=>`${q.digits?`<div class="cbat-digits">${q.digits.join(' ')}</div>`:''}${q.map?streetMap(q.map,q.solutionRoute):''}
-        ${q.rules?`<ul class="cbat-rules">${q.rules.map(rule=>`<li>${h(rule)}</li>`).join('')}</ul>`:''}`,
-      renderOption:option=>Array.isArray(option)?shape(option):h(option)
-    });
+      }));
+      const openReview=mountAnswerReview(this.panel.querySelector('[data-cbat-answer-review]'),{
+        responses,
+        renderContext:q=>`${q.digits?`<div class="cbat-digits">${q.digits.join(' ')}</div>`:''}${q.map?streetMap(q.map,q.solutionRoute):''}
+          ${q.rules?`<ul class="cbat-rules">${q.rules.map(rule=>`<li>${h(rule)}</li>`).join('')}</ul>`:''}`,
+        renderOption:option=>Array.isArray(option)?shape(option):h(option)
+      });
+      const durationSeconds=battery.seconds;
+      const timeSpentSeconds=deadline ? Math.max(0,durationSeconds-Math.max(0,Math.ceil((deadline-Date.now())/1000))) : null;
+      mountAttemptInsights(this.panel.querySelector('[data-cbat-insights]'),{responses,durationSeconds,timeSpentSeconds},openReview,{grouped:false});
+    }
     this.panel.querySelector('h2').focus();
   }
 };

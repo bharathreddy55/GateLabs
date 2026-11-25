@@ -3,6 +3,7 @@ import {getAttemptRecords} from '../utils/attemptRepository.js';
 import {readStored} from '../utils/safeStorage.js';
 import {renderAnswerInputs,readAnswer,renderQuestionContext} from '../components/QuestionView.js';
 import {mountAnswerReview} from '../components/AnswerReview.js';
+import {mountAttemptInsights} from '../components/AttemptInsights.js';
 import {evaluateAnswer} from '../utils/examEngine.js';
 import { auth, db } from '../config/firebase';
 import { EXAMS } from '../config/exams.js';
@@ -97,6 +98,7 @@ export const MockTest = {
           <button id="export-result">Export result</button>
         </div>
       </div>
+      <section class="attempt-insights" id="exam-attempt-insights"></section>
       <section class="answer-review" id="exam-answer-review"></section>
     </section>`;
   },
@@ -108,7 +110,7 @@ export const MockTest = {
     }
     const key=`exam-bookmarks:${auth.currentUser?.uid}:${result.examId}`;
     const readBookmarks=()=>{const list=readStored(key,[]);return Array.isArray(list)?list:[];};
-    mountAnswerReview(root,{
+    return mountAnswerReview(root,{
       responses:result.responses,
       examId:result.examId,
       state:this.reviewState,
@@ -232,7 +234,10 @@ export const MockTest = {
     });
     document.querySelector('[data-exam-fullscreen]')?.addEventListener('click',enterExamFullscreen);
     const reviewRoot=document.getElementById('exam-answer-review');
-    if(reviewRoot)this.initAnswerReview(reviewRoot);
+    if(reviewRoot){
+      const openReview=this.initAnswerReview(reviewRoot);
+      mountAttemptInsights(document.getElementById('exam-attempt-insights'),this.result,openReview);
+    }
     bind('open-answer-review',()=>{
       reviewRoot.querySelector('h2').focus({preventScroll:true});
       reviewRoot.scrollIntoView({block:'start'});
@@ -338,7 +343,10 @@ export const MockTest = {
   async submitExam(){
     if(!this.isTesting)return;
     const examId=this.pending.examId,activeKey=this.storageKey();
-    const result={...scorePaper(examId,this.questions,this.answers,this.review),examId,ruleVersion:EXAMS[examId].version,mode:this.pending.full?'full':'practice',scope:this.pending.title,timeSpentSeconds:Math.min(this.pending.minutes*60,Math.floor((Date.now()-this.startedAt)/1000)),timestamp:new Date().toISOString(),userId:auth.currentUser?.uid};
+    const durationSeconds=Math.round(this.pending.minutes*60);
+    const now=Date.now();
+    const timeSpentSeconds=Math.max(0,Math.min(durationSeconds,Math.floor((now-this.startedAt)/1000)));
+    const result={...scorePaper(examId,this.questions,this.answers,this.review),examId,ruleVersion:EXAMS[examId].version,mode:this.pending.full?'full':'practice',scope:this.pending.title,timeSpentSeconds,durationSeconds,timestamp:new Date(now).toISOString(),userId:auth.currentUser?.uid};
     if (this.pending.paperKey) result.paperKey=this.pending.paperKey;
     this.stop();this.result=result;
     try{result.id=crypto.randomUUID();const archived=await writeAttemptArchive(result.userId,[result]);const key=`exam-results:${result.userId}`;const rows=readStored(key,[]);rows.push(result);localStorage.setItem(key,JSON.stringify(archived?compactAttemptCache(rows):rows));localStorage.removeItem(activeKey);this.saveMessage='Saved on this device; syncing attempt history.';}catch{this.saveMessage='Device storage failed. Keep this review open until sync completes.';}

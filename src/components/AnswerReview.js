@@ -2,9 +2,9 @@ import { icon } from '../config/navigation.js';
 import { escapeHtml as h } from '../utils/examEngine.js';
 import { explainAnswer } from '../utils/answerSolutions.js';
 import { renderMath } from '../utils/documentLibraries.js';
+import { outcomeLabels as statuses } from '../utils/attemptInsights.js';
 import { renderQuestionContext } from './QuestionView.js';
 
-const statuses = {correct:'Correct', wrong:'Incorrect', skipped:'Unanswered'};
 const filters = [['all','All answers'],['wrong','Incorrect'],['skipped','Unanswered'],['correct','Correct']];
 const optionLetter = index => String.fromCharCode(65 + Number(index));
 const answerIndices = value => value == null || value === '' ? [] : [value].flat().map(Number);
@@ -115,7 +115,9 @@ export function mountAnswerReview(root, {
   const groups = toggleBookmark ? [...filters,['bookmarked','Bookmarked']] : filters;
   const matches = (item, filter) => filter==='all' ||
     (filter==='bookmarked' ? bookmarks.includes(item.question.id) : item.question.status===filter);
-  const counts = Object.fromEntries(groups.map(([key])=>[key,items.filter(item=>matches(item,key)).length]));
+  const filterCounts = list => Object.fromEntries(groups.map(([key])=>[key,list.filter(item=>matches(item,key)).length]));
+  let scopedItems = items;
+  let counts = filterCounts(scopedItems);
   const readFilter = () => groups.some(([key])=>key===state.filter) ? state.filter : 'all';
   root.setAttribute('aria-labelledby','answer-review-heading');
   root.innerHTML = `<header class="review-header">
@@ -124,6 +126,9 @@ export function mountAnswerReview(root, {
   </header>
   <div class="review-filters" role="group" aria-label="Filter questions">
     ${groups.map(([key,label])=>`<button type="button" data-review-filter="${key}">${label} <span>${counts[key]}</span></button>`).join('')}
+  </div>
+  <div class="review-scope" data-review-scope hidden>
+    <span data-review-scope-name></span><button type="button" class="ui-button" data-review-clear-scope>Show all questions</button>
   </div>
   <div class="review-layout">
     <nav class="review-navigator" aria-label="Questions">
@@ -186,7 +191,7 @@ export function mountAnswerReview(root, {
       button.setAttribute('aria-pressed',String(button.dataset.reviewFilter===filter));
     }
     root.querySelector('[data-review-count]').textContent = `${counts[filter]} shown`;
-    visible = items.filter(item=>matches(item,filter));
+    visible = scopedItems.filter(item=>matches(item,filter));
     palette.innerHTML = visible.map(({question,index})=>{
       const marked = question.markedForReview === true;
       return `<button type="button" data-review-question="${index}" data-outcome="${h(question.status)}"${marked?' data-review-marked':''}
@@ -195,10 +200,26 @@ export function mountAnswerReview(root, {
     select(state.index,false);
   }
 
+  function setScope(indices,label) {
+    const scope=root.querySelector('[data-review-scope]');
+    scope.hidden=!indices;
+    scope.querySelector('[data-review-scope-name]').textContent=label || '';
+    const allowed=indices ? new Set(indices) : null;
+    scopedItems=allowed ? items.filter(item=>allowed.has(item.index)) : items;
+    counts=filterCounts(scopedItems);
+    for(const button of root.querySelectorAll('.review-filters button')) {
+      button.querySelector('span').textContent=counts[button.dataset.reviewFilter];
+    }
+  }
+
   root.onclick = event => {
     const button = event.target.closest('button');
     if (!button || !root.contains(button)) return;
-    if (button.dataset.reviewFilter) {
+    if (button.hasAttribute('data-review-clear-scope')) {
+      setScope();
+      applyFilter('all');
+      root.querySelector('.review-filters [aria-pressed="true"]').focus({preventScroll:true});
+    } else if (button.dataset.reviewFilter) {
       applyFilter(button.dataset.reviewFilter);
       root.querySelector('.review-filters [aria-pressed="true"]').focus({preventScroll:true});
     } else if (button.hasAttribute('data-review-question')) {
@@ -211,7 +232,7 @@ export function mountAnswerReview(root, {
       const updated = toggleBookmark(id);
       if (!updated) return;
       bookmarks = updated;
-      counts.bookmarked = items.filter(item=>matches(item,'bookmarked')).length;
+      counts.bookmarked = scopedItems.filter(item=>matches(item,'bookmarked')).length;
       root.querySelector('[data-review-filter="bookmarked"] span').textContent = counts.bookmarked;
       if (state.filter==='bookmarked') {
         applyFilter('bookmarked');
@@ -225,4 +246,10 @@ export function mountAnswerReview(root, {
     }
   };
   applyFilter(readFilter());
+  return ({filter='all',indices,label}={})=>{
+    setScope(indices,label);
+    applyFilter(filter);
+    root.querySelector('#answer-review-heading').focus({preventScroll:true});
+    root.scrollIntoView({block:'start'});
+  };
 }

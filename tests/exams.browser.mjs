@@ -115,6 +115,31 @@ try{
   assert.equal(await review.locator('[data-review-question]').count(),count);
  };
  await review.getByRole('heading',{name:'Answer review',exact:true}).waitFor();
+ const insights=page.locator('#exam-attempt-insights');
+ await insights.getByRole('heading',{name:'Result breakdown',exact:true}).waitFor();
+ assert.match(await insights.locator('[data-insight-ring]').evaluate(el=>getComputedStyle(el).backgroundImage),/conic-gradient/);
+ assert.equal(await insights.locator('.insight-overview').evaluate(el=>getComputedStyle(el).gridTemplateColumns.split(' ').length),2);
+ if(process.env.GATELABS_REVIEW_SCREENSHOTS)await insights.screenshot({path:path.join(process.env.GATELABS_REVIEW_SCREENSHOTS,'result-charts.png')});
+ assert.equal(result.durationSeconds,9000);
+ await insights.locator('[data-insight-outcome="wrong"]').click();
+ assert.match(await insights.locator('[data-insight-outcome-detail]').innerText(),/1 of 150/);
+ await insights.getByRole('button',{name:'Review incorrect questions',exact:true}).click();
+ assert.equal(await review.locator('[data-review-question]').count(),1);
+ await insights.locator('[data-mark-metric="1"]').click();
+ assert.match(await insights.locator('[data-insight-mark-detail]').innerText(),/0\.33 marks/);
+ await insights.getByRole('button',{name:'Per question',exact:true}).click();
+ assert.match(await insights.locator('[data-insight-clock-label]').innerText(),/all 150 questions/);
+ await insights.getByRole('button',{name:'Topics',exact:true}).click();
+ const topic=groupPaper.questions[0].topic;
+ const group=groupPaper.questions.filter(q=>q.topic===topic&&q.section===groupPaper.questions[0].section);
+ await insights.getByRole('searchbox',{name:'Find a topic'}).fill(topic);
+ await insights.locator('[data-insight-group]').first().click();
+ await insights.getByRole('button',{name:'Review these questions',exact:true}).click();
+ assert.equal(await review.locator('[data-review-scope-name]').innerText(),topic);
+ assert.equal(await review.locator('[data-review-question]').count(),group.length);
+ await review.getByRole('button',{name:'Show all questions',exact:true}).click();
+ assert.equal(await review.locator('[data-review-question]').count(),150);
+ await review.locator('[data-review-question="0"]').click();
  assert.equal(await review.locator('.review-legend [data-review-marked]').innerText(),'Marked for review');
  const markedIncorrect=review.getByRole('button',{name:'Question 2, Incorrect, marked for review',exact:true});
  const markedSkipped=review.getByRole('button',{name:'Question 3, Unanswered, marked for review',exact:true});
@@ -159,6 +184,7 @@ try{
  await page.locator('[data-attempt]').first().click();await page.getByRole('heading',{name:'Exam complete',exact:true}).waitFor();
  assert.match(await page.evaluate(()=>location.hash),/attempt=/);
  await page.reload();await page.getByRole('heading',{name:'Exam complete',exact:true}).waitFor();
+ await insights.getByRole('heading',{name:'Result breakdown',exact:true}).waitFor();
  await review.getByRole('heading',{name:'Worked solution',exact:true}).waitFor();
  assert.equal(await review.locator('.review-palette [data-review-marked]').count(),2);
  await page.goto('http://127.0.0.1:3011/#/group2?tab=mocks');
@@ -248,6 +274,7 @@ try{
    assert.match(await page.locator('#exam-root').innerText(),/0 correct · 1 wrong · 99 unanswered/);
    assert.match(await page.locator('#exam-root').innerText(),/Marks deducted\s+0\.33/);
    if(model===2){
+     assert.equal(await insights.locator('.insight-overview').evaluate(el=>getComputedStyle(el).gridTemplateColumns.split(' ').length),1);
      await review.locator('[data-review-question="30"]').click();
      const row=review.getByRole('table',{name:'Question data'}).getByRole('row').nth(4);
      assert.equal(await row.getByRole('rowheader').textContent(),'D');
@@ -365,6 +392,9 @@ try{
  await page.locator('#analytics-exam-filter').selectOption('group2');
  await page.locator('#analytics-exam-filter').waitFor();
  assert.equal(await page.locator('#analytics-exam-filter').inputValue(),'group2');
+ await page.goto('http://127.0.0.1:3011/#/analytics?id='+encodeURIComponent(result.id));
+ await page.getByRole('link',{name:'Open result charts',exact:true}).click();
+ await insights.getByRole('heading',{name:'Result breakdown',exact:true}).waitFor();
  for(const exam of ['rrb-station-master','group2','group2/mains','group2/mains/paper-2','gate']){
    await page.goto(`http://127.0.0.1:3011/#/${exam}?tab=mocks`);
    await page.locator('[data-mock-jump="drills"]').click();
@@ -410,6 +440,7 @@ try{
  assert.match(await dataDrills.locator('summary').innerText(),/40 tests/);
  await dataDrills.locator('summary').click();
  await dataDrills.getByRole('button',{name:'Start subject test'}).first().click();
+ await page.getByRole('button',{name:'Begin test',exact:true}).waitFor();
  assert.deepEqual(await page.locator('.exam-summary-metrics dt').allTextContents(),['Questions','Minutes','Marks']);
  assert.deepEqual(await page.locator('.exam-summary-metrics dd').allTextContents(),['30','36','30']);
  await page.getByRole('button',{name:'Begin test',exact:true}).click();
@@ -453,6 +484,10 @@ try{
  assert.equal(await page.locator('[data-cbat-option="0"]').getAttribute('aria-pressed'),'true');
  await page.getByRole('button',{name:'Submit battery'}).click();
  await page.getByRole('heading',{name:'Intelligence results'}).waitFor();
+ const batteryInsights=page.locator('[data-cbat-insights]');
+ await batteryInsights.getByRole('heading',{name:'Question outcomes',exact:true}).waitFor();
+ assert.equal(await batteryInsights.getByRole('heading',{name:'Marks breakdown',exact:true}).count(),0);
+ assert.equal(await batteryInsights.locator('[data-insight-outcome="skipped"] strong').innerText(),'11');
  await page.waitForFunction(()=>!document.fullscreenElement && document.getElementById('layout-header').getClientRects().length>0);
  assert.ok(await page.getByRole('button',{name:'Detailed notes & syllabus'}).isEnabled());
  await review.getByRole('heading',{name:'Correct answer',exact:true}).waitFor();
