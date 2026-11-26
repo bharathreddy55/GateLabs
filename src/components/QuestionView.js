@@ -1,35 +1,24 @@
 import {escapeHtml as h, validQuestionImage} from '../utils/examEngine.js';
 import {renderFigure} from '../utils/examFigures.js';
+import {parseQuestionTable} from '../utils/questionTable.js';
 
-function renderQuestionTable(raw) {
-  // Some older drills store literal backslash-n sequences.
-  const lines = raw.replaceAll('\\n', '\n').trim().split(/\r?\n/);
-  const first = lines.findIndex(line => line.includes('|'));
-  const last = lines.findLastIndex(line => line.includes('|'));
-  const rows = first < 0 ? [] : lines.slice(first, last + 1).map(line => line.split('|').map(cell => cell.trim()));
-  if (rows.length < 2 || rows[0].length < 2 || rows.some(row => row.length !== rows[0].length)) {
-    return `<pre>${h(lines.join('\n'))}</pre>`;
-  }
-
-  // Frequency data can use a label at the start of each row, followed by values.
-  const labelled = rows.map(([cell]) => cell.match(/^(.+?):\s+(.+)$/));
-  const [headers, ...data] = labelled.every(Boolean)
-    ? [labelled.map(([, label]) => label), ...rows[0].map((_, i) =>
-        rows.map((row, j) => i === 0 ? labelled[j][2] : row[i]))]
-    : rows;
-  const numeric = headers.map((_, i) => i > 0 && data.every(row => /^[+−-]?[₹$€]?\s*\d[\d,]*(?:\.\d+)?%?$/.test(row[i])));
+export function renderExamTable({headers, rows, caption, note, highlight=[]}, label='Question data') {
+  const numeric = headers.map((_, i) => i > 0 && rows.every(row => /^[+−-]?[₹$€]?\s*\d[\d,]*(?:\.\d+)?(?:%|°)?$/.test(row[i])));
   const cellClass = i => numeric[i] ? ' class="exam-table-number"' : '';
-  const caption = lines.slice(0, first).join('\n').trim();
-  const note = lines.slice(last + 1).join('\n').trim();
 
-  return `<div class="exam-question-table" role="region" aria-label="Question table" tabindex="0">
-    <table${caption ? '' : ' aria-label="Question data"'}>
+  return `<div class="exam-question-table" role="region" aria-label="${label==='Question data'?'Question table':h(label)}" tabindex="0">
+    <table${caption ? '' : ` aria-label="${h(label)}"`}>
       ${caption ? `<caption>${h(caption)}</caption>` : ''}
       <thead><tr>${headers.map((header, i) => `<th scope="col"${cellClass(i)}>${h(header)}</th>`).join('')}</tr></thead>
-      <tbody>${data.map(([label, ...values]) => `<tr><th scope="row">${h(label)}</th>
+      <tbody>${rows.map(([label, ...values], index) => `<tr${highlight.includes(index)?' data-review-row':''}><th scope="row">${h(label)}</th>
         ${values.map((value, i) => `<td${cellClass(i + 1)}>${h(value)}</td>`).join('')}</tr>`).join('')}</tbody>
     </table>
   </div>${note ? `<p class="exam-table-note">${h(note)}</p>` : ''}`;
+}
+
+function renderQuestionTable(raw) {
+  const data = parseQuestionTable(raw);
+  return data ? renderExamTable(data) : `<pre>${h(raw.replaceAll('\\n', '\n').trim())}</pre>`;
 }
 
 export function renderQuestionContext(q,{examRoom=false,examId}={}){

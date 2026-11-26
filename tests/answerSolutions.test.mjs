@@ -63,6 +63,37 @@ test('all published Station Master CBT items have a beginner introduction and a 
   }
 });
 
+test('actual output walkthrough calculates every row from the targets and marks only the biggest gain',()=>{
+  const papers=JSON.parse(readFileSync('public/exams/rrb.json','utf8'));
+  const question=papers.flatMap(paper=>paper.questions).find(q=>q.id==='rrb-model3-31');
+  const solution=explainAnswer(question,rrbReview);
+  assert.match(solution.rule.formula,/target × percent attained ÷ 100/);
+  assert.deepEqual(solution.working.headers,['Unit','Period 1 actual','Period 2 actual','Gain']);
+  assert.deepEqual(solution.working.rows,[['A','90','135','+45'],['B','140','128','−12'],['C','90','110','+20'],['D','80','120','+40']]);
+  assert.deepEqual(solution.working.highlight,[0]);
+  assert.equal(solution.answer,'A');
+  const changed=explainAnswer({...question,table:question.table.replace('180 | 75','176 | 75')},rrbReview);
+  assert.deepEqual(changed.working.rows[0],['A','90','132','+42']);
+  const stale=explainAnswer({...question,table:question.table.replace('180 | 75','160 | 75')},rrbReview);
+  assert.equal(stale.working,undefined);
+});
+
+test('logical walkthroughs calculate candidate rows and preserve what a clue actually says',()=>{
+  const papers=JSON.parse(readFileSync('public/exams/rrb.json','utf8'));
+  const questions=papers.flatMap(paper=>paper.questions);
+  const alarm=questions.find(q=>q.id==='rrb-exp-mock-11-3-3');
+  const evaluated=explainAnswer(alarm,rrbReview);
+  assert.deepEqual(evaluated.working.rows.filter((_,i)=>evaluated.working.highlight.includes(i)),[
+    ['On','Off','Off','Yes'], ['Off','On','On','Yes']
+  ]);
+  assert.equal(evaluated.answer,2);
+  const floor=explainAnswer(questions.find(q=>q.id==='rrb-exp-mock-11-3-1'),rrbReview);
+  assert.deepEqual(floor.working.rows,[[1,'Y','Y'],[2,'D','S'],[3,'I','I'],[4,'N','N'],[5,'S','D'],[6,'X','X']]);
+  const reading=questions.find(q=>q.section==='Logical Capability'&&q.question==='What role does the last sentence play?');
+  const quote=explainAnswer(reading,rrbReview).steps.find(step=>step.quote)?.quote;
+  assert.ok(quote && reading.passage.endsWith(quote));
+});
+
 test('recognised Station Master maths and reasoning tasks use the values from the current paper',()=>{
   const papers=JSON.parse(readFileSync('public/exams/rrb.json','utf8'));
   const tasks=papers.flatMap(paper=>paper.questions);

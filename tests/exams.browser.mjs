@@ -310,8 +310,26 @@ try{
      assert.equal(await tank.locator('.review-steps li').count(),4);
      assert.match(await tank.locator('.review-steps li').nth(1).innerText(),/12 L − 3 L = 9 L/);
      assert.match(await tank.locator('.review-final-answer').innerText(),/35%/);
+     await review.locator('[data-review-question="30"]').click();
+     const data=review.locator('[data-solution-layout=data]');
+     const worked=data.getByRole('table',{name:'Actual output and gain by unit'});
+     await worked.waitFor();
+     await data.locator('.review-rule .katex').waitFor();
+     assert.deepEqual(await worked.getByRole('row').nth(1).getByRole('cell').allTextContents(),['90','135','+45']);
+     assert.deepEqual(await worked.getByRole('row').nth(2).getByRole('cell').allTextContents(),['140','128','−12']);
+     assert.equal(await worked.locator('[data-review-row] th').textContent(),'A');
+     assert.match(await data.locator('.review-final-answer').innerText(),/\bA\b/);
+     assert.ok(await worked.evaluate(el=>el.parentElement.getBoundingClientRect().right<=innerWidth));
+     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
    }
    if(model>=11) await review.getByRole('heading',{name:'Step-by-step solution',exact:true}).waitFor();
+   if(model===11){
+     await review.locator('[data-review-question="62"]').click();
+     const states=review.getByRole('table',{name:'Check the switches one case at a time'});
+     await states.waitFor();
+     assert.equal(await states.locator('[data-review-row]').count(),2);
+     assert.match(await review.locator('.review-final-answer').innerText(),/2 combinations/);
+   }
    await page.goto('http://127.0.0.1:3011/#/rrb-station-master?tab=mocks');
    await stationTests.getByRole('heading',{name:'All tests',exact:true}).waitFor();
  }

@@ -1,6 +1,8 @@
 import { model2Solutions } from '../config/rrbWorkedSolutions.js';
 import { beginnerMathSolutions } from '../config/rrbBeginnerMath.js';
 import { rrbReviewCalculation } from './rrbReviewCalculations.js';
+import { rrbDataWalkthrough } from './rrbDataWalkthroughs.js';
+import { rrbLogicWalkthrough } from './rrbLogicWalkthroughs.js';
 
 const tankQuestion = 'A 40 L tank contains a well-mixed 30% solution. Ten litres are removed and replaced by 10 L of a 50% solution. What is the final concentration?';
 
@@ -62,11 +64,13 @@ function exactlyOneRed(q, choice) {
 export function stationMasterSolution(q) {
   const choice = q.options?.[q.correctAnswer];
   if (q.question === tankQuestion && choice === '35%') return tankSolution;
+  const data = rrbDataWalkthrough(q, choice);
+  if (data) return data;
   const counted = exactlyOneRed(q, choice);
   if (counted) return counted;
   const beginnerMath = beginnerMathSolutions.get(q.question);
   if (beginnerMath && beginnerMath.answer === choice) return beginnerMath;
   const model = model2Solutions.get(q.id);
   if (model && model.answer === choice) return model;
-  return rrbReviewCalculation(q.question, choice);
+  return rrbLogicWalkthrough(q, choice) ?? rrbReviewCalculation(q.question, choice);
 }

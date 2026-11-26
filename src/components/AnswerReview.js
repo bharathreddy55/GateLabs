@@ -3,7 +3,7 @@ import { escapeHtml as h } from '../utils/examEngine.js';
 import { explainAnswer } from '../utils/answerSolutions.js';
 import { renderMath } from '../utils/documentLibraries.js';
 import { outcomeLabels as statuses } from '../utils/attemptInsights.js';
-import { renderQuestionContext } from './QuestionView.js';
+import { renderExamTable, renderQuestionContext } from './QuestionView.js';
 
 const filters = [['all','All answers'],['wrong','Incorrect'],['skipped','Unanswered'],['correct','Correct']];
 const optionLetter = index => String.fromCharCode(65 + Number(index));
@@ -77,7 +77,7 @@ function renderSteps(steps, layout) {
 }
 
 function renderSolution(q, examId, battery, renderOption) {
-  const {approach,steps,reason,tip,finalAnswer,shortcut,picture} = explainAnswer(q, {examId,battery});
+  const {approach,steps,reason,tip,finalAnswer,shortcut,picture,rule,working} = explainAnswer(q, {examId,battery});
   if (!approach && !steps.length && !reason) return '<p class="review-note">A worked explanation is unavailable for this question.</p>';
   const isStationMaster = examId === 'rrb' || Boolean(battery);
   const layout = solutionLayout(q, examId);
@@ -93,6 +93,8 @@ function renderSolution(q, examId, battery, renderOption) {
     ${picture
       ? `<div class="review-approach"><strong>${h(picture.title)}</strong><p>${h(picture.text)}</p></div>`
       : approach ? `<div class="review-approach"><strong>Approach</strong><p>${h(approach)}</p></div>` : ''}
+    ${rule ? `<div class="review-rule"><h5>Formula</h5>${renderFormula(rule)}</div>` : ''}
+    ${working ? `<div class="review-working">${renderExamTable(working, 'Worked table')}</div>` : ''}
     ${renderSteps(steps, layout)}
     ${reason ? `<p class="review-reason">${h(reason)}</p>` : ''}
     ${isStationMaster && (answerContent || answer.formula) ? `<div class="review-final-answer">

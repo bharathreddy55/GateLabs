@@ -64,6 +64,17 @@ const plainWords = [
   [/\bdisjoint groups\b/gi, 'groups with nothing shared'],
   [/\binclusive pair counts\b/gi, 'pair counts that also include items in all three groups'],
   [/\bconfounder\b/gi, 'other possible cause'],
+  [/\bweighted average\b/gi, 'average that gives each person or item one share'],
+  [/\bweighted mean\b/gi, 'average that gives each person or item one share'],
+  [/\bcumulative count\b/gi, 'running total'],
+  [/\btriple intersection\b/gi, 'group that belongs to all three'],
+  [/\bpair intersections\b/gi, 'people counted in each pair of groups'],
+  [/\bexclusive pairs\b/gi, 'people in just two groups'],
+  [/\bdistinct permutations\b/gi, 'different orders'],
+  [/\bfixed capacity\b/gi, 'a limit that stays the same'],
+  [/\battainable\b/gi, 'possible'],
+  [/\bpaternal grandmother\b/gi, 'father’s mother'],
+  [/\bmaternal grandmother\b/gi, 'mother’s mother'],
   [/\bresidual\b/gi, 'gap between the actual and predicted values'],
   [/\bcontrapositive\b/gi, 'rule read backwards with both statements turned into their opposites']
 ];
@@ -97,19 +108,78 @@ function passagePicture(question) {
   return picture('Look for the clue in the passage', 'Find the part that talks about what the question asks. Read a line before and after it. Say what these lines support, using just the clues the passage gives you.');
 }
 
+function plainReadingClue(question) {
+  const passage=question.passage;
+  if (typeof passage !== 'string') return null;
+  const sentences=passage.match(/[^.!?\n]+(?:[.!?](?=\s|$)|$)/g)?.map(line=>line.trim())??[];
+  if (/\b(?:last|final) sentence\b/i.test(question.question)) {
+    const quote=sentences.at(-1);
+    return quote ? {title:'Start with the last line',quote,
+      text:'Read this line beside the thought just before it. Ask whether it adds a reason, shows an example or changes what the reader can conclude.'} : null;
+  }
+  const phrase=question.question.match(/[“"]([^”"]+)[”"]/);
+  if (!phrase) return null;
+  const quote=sentences.find(line=>line.includes(phrase[1]));
+  return quote ? {title:'Find the words in the story',quote,
+    text:'Read the words in this line as part of the whole thought. Use how the passage talks about them to work out what they mean here.'} : null;
+}
+
+const dataPictures = [
+  [/sufficiency|missing data|inference from aggregate/i, 'Try each clue by itself', 'Cover the second clue and try the first. Then swap. If two different answers still fit the clues you can see, those clues are not enough.'],
+  [/conditional|subset|different denominators/i, 'First make the smaller pile', 'Put aside everything outside the group named after “among” or “of those”. Count the part you want inside that smaller pile. Use the smaller pile as your whole.'],
+  [/recomputed|corrected|reclassifi|changing the upper tail/i, 'Change only what the question changes', 'Keep a before pile and an after pile. If a record is corrected, take away its old value before adding its new value. Count the number of records again only if a record was added or removed.'],
+  [/transfer|reallocat|counterfactual allocation/i, 'Move the same pieces between two piles', 'Take the moved pieces from the first pile and add those same pieces to the second pile. Work out which numbers change and which totals stay the same.'],
+  [/percentage point/i, 'Compare two scores out of 100', 'First write both rates as percentages. Then subtract the old percentage from the new one. That gap is measured in percentage points.'],
+  [/union|overlap|exclusive|three.set|exactly .*sets?|inclusion|membership|complementary counts/i, 'Sort people into parts of two or three hoops', 'Write the people in the shared middle first. When two group counts include the same people, take out the extra copy before counting everyone.'],
+  [/pie|sector|slice|angles|refund.*allocation/i, 'Treat the circle as one whole pie', 'All the pieces make 360°. For a share of the full budget, use 360° as the whole. If the question compares just two pieces, use those two pieces together as the whole.'],
+  [/target|threshold/i, 'Draw a line where the goal sits', 'Work out the number you have now and the number you need. The difference tells you how much must change to reach the goal.']
+];
+
+const logicPictures = [
+  [/assumption|necessary versus sufficient/i, 'Find the missing piece the plan needs', 'Imagine the missing idea is false. If the plan could still work the same way, that idea is not needed. Look for the smallest idea the plan really depends on.'],
+  [/counterexample|negation|negating/i, 'Find one case that breaks the promise', 'When a rule says “every”, one case can prove it wrong. Choose a case that starts the way the rule says and then fails to do what it promises.'],
+  [/selection|possibility|constraints?|excluded/i, 'Try one choice at a time', 'Put the names or items in the places shown in a choice. Run every clue over that choice. If just one clue breaks, cross that choice out.'],
+  [/evaluat|evidence|inference|comparing claims|causal|alternative explanation/i, 'Find the clue that tells the two stories apart', 'Say what changed and what someone thinks caused it. Ask whether something else could have made the same change. Look for a fair comparison that keeps those other things the same.'],
+  [/nested conditions|applying a stated policy|exception|contrapositive/i, 'Turn the rule into a little checklist', 'Write what starts the rule and what has to happen next. Check whether the question says the required result happened, or whether it rules that result out.']
+];
+
+function guidedSteps(steps, focused) {
+  if (!focused) return steps.map(plainStep);
+  return steps.flatMap(raw=>{
+    if (typeof raw !== 'string') return [plainStep(raw)];
+    // The original author sometimes put two deductions on one line.
+    // Keep decimals, quote text and symbolic chains intact.
+    const parts=raw.split(/;\s+(?=[A-Za-z])|(?<![\dA-Z])\.\s+(?=[A-Z][a-z]{2,}\b)/);
+    return parts.map((part,index)=>{
+      const text=part.trim();
+      if (!text) return null;
+      const first=index?text[0].toUpperCase()+text.slice(1):text;
+      return plainStep(/[.!?]$/.test(first)?first:first+'.');
+    }).filter(Boolean);
+  });
+}
+
 export function stationMasterBeginner(question, solution, battery) {
   if (!solution.steps.length && !solution.reason && !solution.approach) return solution;
   const topic = question.topic === 'Arithmetic and basic science' ? question.question : question.topic;
-  const cue = pictures.find(([pattern]) => pattern.test(topic ?? ''));
+  const data = question.section === 'Data Analysis';
+  const logic = question.section === 'Logical Capability';
+  const sectionCues = data ? dataPictures : logic ? logicPictures : [];
+  const cue = sectionCues.find(([pattern]) => pattern.test(topic ?? '')) ?? pictures.find(([pattern]) => pattern.test(topic ?? ''));
   const introduction = solution.picture ?? cbatPictures[battery] ??
     (question.passage && /reading/i.test(question.topic ?? '') ? passagePicture(question) :
       cue && picture(cue[1], cue[2])) ??
     sectionPictures[question.section];
   const steps = solution.steps.length ? solution.steps : solution.reason ? [solution.reason] : [];
+  const workedSteps=guidedSteps(steps, data||logic);
+  if (logic && question.passage && /reading/i.test(question.topic ?? '') && !workedSteps.some(step=>step.quote)) {
+    const clue=plainReadingClue(question);
+    if (clue) workedSteps.unshift(clue);
+  }
   return {
     ...solution,
     picture:introduction,
-    steps:steps.map(plainStep),
+    steps:workedSteps,
     reason:solution.steps.length ? plainText(solution.reason) : '',
     tip:plainText(solution.tip)
   };

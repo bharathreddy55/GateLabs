@@ -267,6 +267,15 @@
   white-space: pre-wrap;
   font-variant-numeric: tabular-nums;
 }
+.review-rule, .review-working { margin-block: 1rem; }
+.review-rule h5 { font-size: .9rem; font-weight: 700; }
+.review-rule .review-formula { text-align: center; }
+.review-working [data-review-row] td,
+.review-working [data-review-row] th {
+  background: color-mix(in srgb, var(--review-good) 12%, var(--ws-panel));
+  font-weight: 700;
+}
+.review-working .exam-question-table { margin-block: 0; }
 .review-final-answer,
 .review-shortcut {
   margin-block: 12px;
