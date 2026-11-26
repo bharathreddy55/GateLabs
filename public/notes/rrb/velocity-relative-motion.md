@@ -25,6 +25,8 @@ A graph’s signed area gives displacement. Sum magnitudes for distance when the
 
 **Question.** Run 80 m east then 50 m west in 26 s. Find the average speed and velocity.
 
+**Picture it.** You walk along both parts of the road, but the walk back undoes some of the first change in position. Distance counts both and displacement counts how far from the start you end up.
+
 1. **Add the path lengths.** Distance counts all travel. It is 80 + 50 = 130 m, so average speed is 130/26 = 5 m/s.\
    `distance = 80 + 50 = 130 m`\
    `130/26 = 5 m/s`
@@ -39,6 +41,8 @@ A graph’s signed area gives displacement. Sum magnitudes for distance when the
 
 **Question.** A travels east at 18 m/s and B west at 12 m/s. What is B’s velocity relative to A?
 
+**Picture it.** Imagine watching B while riding with A. Pretend your own ride is standing still by taking A's motion away from both riders. Work out which way B seems to move.
+
 1. **Pick a sign convention.** Let east be positive. A’s velocity is +18 m/s and B’s is −12 m/s.\
    `vA = +18 m/s, vB = −12 m/s`
 2. **Use the observer first.** B relative to A means subtract the observer A’s velocity from B’s velocity. The calculation is vB − vA = −12 − 18 = −30 m/s.\
@@ -52,6 +56,8 @@ A graph’s signed area gives displacement. Sum magnitudes for distance when the
 
 **Question.** A vehicle slows uniformly from 20 m/s to rest in 5 s. Find acceleration and distance.
 
+**Picture it.** Picture a speed display falling evenly from 20 to zero. It spends the same amount of time above and below its middle speed, so the average gives you the distance.
+
 1. **Find the signed acceleration.** Choose the original direction as positive. Acceleration is (final velocity − initial velocity) ÷ time = (0 − 20)/5 = −4 m/s².\
    `a = (0 − 20)/5 = −4 m/s²`
 2. **Find the mean velocity during the interval.** Uniform braking makes velocity decline linearly, so its mean is (20 + 0) ÷ 2 = 10 m/s.\
@@ -64,6 +70,8 @@ A graph’s signed area gives displacement. Sum magnitudes for distance when the
 ### Signed area of a velocity graph
 
 **Question.** An object moves at +4 m/s for 3 s and then −2 m/s for 5 s. Find displacement and distance.
+
+**Picture it.** Draw one arrow forward for the first part and another backward for the second. The distance counts both arrow lengths while displacement subtracts the backward part.
 
 1. **Find the signed area of the first segment.** Velocity is +4 m/s for 3 s, giving an area of +4 × 3 = +12 m on the velocity–time graph.\
    `(+4) × 3 = +12 m`

@@ -37,6 +37,8 @@ Write N = dq + r, with 0 ≤ r < d. If the dividend N is known, subtract r befor
 
 **Question.** Cut ropes of 84, 126 and 210 m into the longest identical whole-metre lengths. Find length and count.
 
+**Picture it.** Imagine cutting all three ropes with one ruler. A good ruler length fits every rope with no piece left over. We want the longest ruler that works.
+
 1. **Translate the cutting condition.** The piece length must divide all three rope lengths exactly. Choosing the longest such piece means taking their HCF.
 2. **Find the HCF.** 84 = 2 × 42 and 126 = 3 × 42. Since 2 and 3 are coprime, their HCF is 42. The third rope is 210 = 5 × 42 and does not reduce it.\
    `84 = 2 × 42, 126 = 3 × 42, 210 = 5 × 42`
@@ -48,6 +50,8 @@ Write N = dq + r, with 0 ≤ r < d. If the dividend N is known, subtract r befor
 ### Repeating signals
 
 **Question.** Lights flash together at 10:00, then every 18, 24 and 40 seconds. When are they next together?
+
+**Picture it.** Imagine three blinking toys starting at the same moment. Put their blink times on three lines and find the first time all the lines share.
 
 1. **Translate the repeat condition.** After the common flash, each light returns at multiples of its own interval. The first shared positive time is the LCM.
 2. **Take the largest prime powers.** 18 = 2 × 3², 24 = 2³ × 3 and 40 = 2³ × 5. A common multiple needs 2³, 3² and 5, so the least one is 360 seconds.\
@@ -62,6 +66,8 @@ Write N = dq + r, with 0 ≤ r < d. If the dividend N is known, subtract r befor
 
 **Question.** Find the greatest divisor giving remainder 5 for each of 149, 197 and 245.
 
+**Picture it.** Imagine putting the same five spare counters aside from each pile. The counters still on the table must split evenly into groups of the unknown size.
+
 1. **Remove the required remainder.** If division leaves 5, subtracting 5 gives an exact multiple of the divisor. The adjusted numbers are 144, 192 and 240.\
    `149 − 5 = 144, 197 − 5 = 192, 245 − 5 = 240`
 2. **Find their greatest common divisor.** 192 − 144 = 48 and 240 − 192 = 48, so every common divisor divides 48. All three adjusted numbers are divisible by 48.\
@@ -74,6 +80,8 @@ Write N = dq + r, with 0 ≤ r < d. If the dividend N is known, subtract r befor
 ### Recover a number
 
 **Question.** HCF=12, LCM=240 and one number is 48. Find the other.
+
+**Picture it.** Think of two whole numbers as sharing the same bundle size. Their product also matches the product of their biggest shared factor and smallest shared multiple.
 
 1. **Use the two-number identity.** For positive integers, HCF × LCM equals their product. Here the product is 12 × 240 = 2,880.\
    `12 × 240 = 2,880`
@@ -89,6 +97,8 @@ Write N = dq + r, with 0 ≤ r < d. If the dividend N is known, subtract r befor
 
 **Question.** Find the HCF of 48 and 18 without listing all their factors.
 
+**Picture it.** Start with a big pile and make groups from it. Anything left over can also be split by every size that split the bigger two piles. Keep making smaller groups until nothing is left.
+
 1. **Start with the larger dividend.** Two groups of 18 leave 12.\
    `48 = 2 × 18 + 12`
 2. **Carry the remainder into the next division.** The new pair is 18 and 12.\
@@ -101,6 +111,8 @@ Write N = dq + r, with 0 ≤ r < d. If the dividend N is known, subtract r befor
 ### LCM by ladder
 
 **Question.** Find LCM(12, 15, 20).
+
+**Picture it.** Imagine three piles of building blocks. Each time a prime can come out of some piles, take it out of all the piles it fits. Keep a list of the primes used.
 
 1. **Divide by 2.** Apply 2 to 12 and 20 and carry the 15.\
    `(12, 15, 20) → (6, 15, 10)`
@@ -117,6 +129,8 @@ Write N = dq + r, with 0 ≤ r < d. If the dividend N is known, subtract r befor
 
 **Question.** Find the HCF and LCM of 2/3, 4/9 and 5/6.
 
+**Picture it.** Imagine three slices measured in differently cut pieces. Redraw them all in eighteenth pieces, and then compare the counts just as you would compare whole numbers.
+
 1. **Use a common denominator.** 18 is the first common denominator of 3, 9 and 6.\
    `(2/3, 4/9, 5/6) = (12/18, 8/18, 15/18)`
 2. **Find the HCF of the counts.** 12, 8 and 15 share only 1. Each count represents eighteenth parts.\
@@ -131,6 +145,8 @@ Write N = dq + r, with 0 ≤ r < d. If the dividend N is known, subtract r befor
 
 **Question.** Find the greatest positive size that fits exactly into 0.60, 0.90 and 1.20.
 
+**Picture it.** Think of every decimal amount as a number of little hundredth squares. Find the biggest shared bundle of those squares, then translate its size back.
+
 1. **Convert to hundredths.** Use the same scale for all values.\
    `(0.60, 0.90, 1.20) × 100 = (60, 90, 120)`
 2. **Find the HCF of the counts.** All three are multiples of 30. The first two have co-prime quotients 2 and 3.\
@@ -143,6 +159,8 @@ Write N = dq + r, with 0 ≤ r < d. If the dividend N is known, subtract r befor
 ### Common remainder with a lower bound
 
 **Question.** Find the smallest number greater than 12 leaving remainder 5 on division by 6, 8 and 12.
+
+**Picture it.** Put five extra counters aside. What stays on the table has to split cleanly into groups of six, eight and twelve. Check the rule that the total is above 12.
 
 1. **Remove the required remainder.** N − 5 must be a multiple of every divisor.\
    `LCM(6, 8, 12) = 2³ × 3 = 24`
@@ -157,6 +175,8 @@ Write N = dq + r, with 0 ≤ r < d. If the dividend N is known, subtract r befor
 
 **Question.** Find the least positive integer leaving remainders 3, 4, 5 on division by 4, 5, 6 respectively.
 
+**Picture it.** Picture three piles that are each one tiny piece away from being full. Add that one piece, find the first shared full size, then take the piece back out.
+
 1. **Compare each divisor with its remainder.** Each division is one short of the next full group.\
    `4 − 3 = 5 − 4 = 6 − 5 = 1`
 2. **Add one to make an exact multiple.** N + 1 must be a positive common multiple.\
@@ -170,6 +190,8 @@ Write N = dq + r, with 0 ≤ r < d. If the dividend N is known, subtract r befor
 
 **Question.** Does a positive integer divide 62, 132 and 237 with respective remainders 6, 6 and 5?
 
+**Picture it.** If someone promises six counters will be left, a full bundle has to hold more than six. Find the biggest possible bundle first and see if it is big enough.
+
 1. **Remove the specified remainders.** The proposed divisor must divide the adjusted numbers.\
    `62 − 6 = 56, 132 − 6 = 126, 237 − 5 = 232`
 2. **Bound all candidates.** First combine 56 and 126, then include 232.\
@@ -182,6 +204,8 @@ Write N = dq + r, with 0 ≤ r < d. If the dividend N is known, subtract r befor
 ### Known valid remainders
 
 **Question.** Find the greatest positive divisor that leaves remainders 4, 6 and 5 when dividing 60, 90 and 117, respectively.
+
+**Picture it.** Imagine the three piles have different leftovers. Take away each pile's own leftovers. Then find the biggest bundle that fits the three cleaned-up piles.
 
 1. **Strip off each required remainder.** The adjusted values must be divisible by the same number.\
    `60 − 4 = 56, 90 − 6 = 84, 117 − 5 = 112`
@@ -198,6 +222,8 @@ Write N = dq + r, with 0 ≤ r < d. If the dividend N is known, subtract r befor
 
 **Question.** Find the largest divisor that leaves the same remainder when dividing 43, 91 and 183. The remainder is unknown.
 
+**Picture it.** Each pile leaves the same extra bits, but we do not know how many. Comparing the difference between two piles makes those identical extra bits disappear.
+
 1. **Subtract the dividends to cancel the shared remainder.** The differences are exact multiples of the divisor because the unknown remainder appears once in each dividend.\
    `91 − 43 = 48`\
    `183 − 91 = 92`
@@ -212,6 +238,8 @@ Write N = dq + r, with 0 ≤ r < d. If the dividend N is known, subtract r befor
 
 **Question.** Find the largest four-digit number divisible by 12, 15 and 20.
 
+**Picture it.** Picture stepping along the multiples of 60 toward a ceiling of 9,999. If the ceiling falls between steps, walk back to the last step below it.
+
 1. **Find the common step.** A valid number must be a multiple of the LCM.\
    `LCM(12, 15, 20) = 60`
 2. **Divide the endpoint.** The remainder is how far 9,999 lies above the previous multiple.\
@@ -225,6 +253,8 @@ Write N = dq + r, with 0 ≤ r < d. If the dividend N is known, subtract r befor
 ### Return to a marked point
 
 **Question.** Three runners start together and take 10, 15 and 20 minutes per lap. When are all three next at the starting line?
+
+**Picture it.** Each runner can only appear back at the line after a whole number of their own laps. Look for the first time all three have finished whole laps.
 
 1. **Count whole laps.** Each runner is at the line after any positive multiple of their own lap time.
 2. **Find the first shared time.** The necessary prime powers are 2², 3 and 5.\

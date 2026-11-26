@@ -25,6 +25,8 @@ Keep each disclosed figure fixed and vary the missing value. If two plausible va
 
 **Question.** A table gives 800 weekday and 500 weekend bookings. A notice gives cancellation rates of 5% and 12% respectively. How many bookings remain?
 
+**Picture it.** Put weekday and weekend bookings in separate piles. Take the correct cancelled share from each pile, then bring the remaining bookings together.
+
 1. **Match the weekday numbers.** The table’s 800 weekday bookings use the notice’s 5% cancellation rate. The retained count is 800 × 0.95 = 760.\
    `800 × (1 − 0.05) = 760`
 2. **Match the weekend numbers.** For 500 weekend bookings use the separate 12% cancellation rate. The retained count is 500 × 0.88 = 440.\
@@ -37,6 +39,8 @@ Keep each disclosed figure fixed and vary the missing value. If two plausible va
 ### Chart share and nested subgroup
 
 **Question.** A chart shows digital sales are 60% of 2,500 tickets. A note says 40% of digital sales used the mobile app. Find app bookings and their share of all sales.
+
+**Picture it.** Picture a big box of all tickets with a smaller box of digital tickets inside. App tickets are a smaller box within that one.
 
 1. **Find the first subgroup.** Digital sales make up 60% of all 2,500 tickets. Thus the digital subgroup contains 2,500 × 0.60 = 1,500 tickets.\
    `2,500 × 0.60 = 1,500 digital`
@@ -51,6 +55,8 @@ Keep each disclosed figure fixed and vary the missing value. If two plausible va
 
 **Question.** A table lists 45 faults at Depot A and 36 at B. A second table gives 900 machines at A and 600 at B. Which fault count per 100 machines is lower?
 
+**Picture it.** Imagine two depots with very different numbers of machines. Ask how many faults each would have per 100 machines at its own rate so you can compare fairly.
+
 1. **Join fault counts with depot sizes.** Pair A’s 45 faults with its 900 machines and B’s 36 faults with its 600 machines. The equipment totals supply the denominators.\
    `A: 45 faults over 900 machines. B: 36 over 600.`
 2. **Put both rates on the same scale.** A has 45/900 × 100 = 5 faults per 100 machines. B has 36/600 × 100 = 6 per 100.\
@@ -63,6 +69,8 @@ Keep each disclosed figure fixed and vary the missing value. If two plausible va
 ### Spot incompatible evidence
 
 **Question.** A chart gives travel for four stations combined. A table lists Station C’s capacity. Can you determine Station C’s utilisation from these alone?
+
+**Picture it.** You know how many people used all four stations and how much Station C can hold. Two very different amounts at C can still give the same four-station total.
 
 1. **State the calculation needed.** Station C’s utilisation requires its actual usage divided by its own capacity, measured for the same period.\
    `utilisation of C = usage of C ÷ capacity of C`

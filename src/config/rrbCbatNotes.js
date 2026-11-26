@@ -21,6 +21,7 @@ export const CBAT_NOTES = {
       'Match a distinctive feature, such as a long arm and its short side branch. Rotate the figure mentally until the arms line up.',
       'Check which way the branch turns. A reflected figure can have the same outline size and cell count.'
     ],
+    examplePicture:"Picture cutting Shape A out of paper. You can slide it around and turn it on the table. Keep the same side facing up. Which other shape would make you flip the paper over?",
     exampleTitle:'Rotation versus mirror image',
     prompt:'Which figure cannot be made by rotating Figure A?',
     figures:[[0,4,8,9],[3,2,1,5],[1,5,8,9]],
@@ -32,6 +33,7 @@ export const CBAT_NOTES = {
     solution:"Figure C.",
     models:[
       {
+        picture:"Cut the first pattern out of paper and slide it down and right. If each corner lands on the second pattern, the shapes are a match.",
         title:'Same shape at a different grid position',
         prompt:'Figure X shades A1, A2 and B2. Figure Y shades B2, B3 and C3. Compare them with rows A to D and columns 1 to 4.',
         steps:[
@@ -42,6 +44,7 @@ export const CBAT_NOTES = {
         answer:'They match by translation.'
       },
       {
+        picture:"Think of each filled square as a house, with a door on every side it shares with another filled square. Turning the picture keeps those doors attached.",
         title:'Eliminate a shape by its junction',
         prompt:'A figure shades B1, B2, B3 and C2. Could it rotate into one shading A1, B1, C1 and C2?',
         steps:[
@@ -84,6 +87,7 @@ export const CBAT_NOTES = {
       'Scan left to right in small groups. Ignore even digits and keep a running total instead of counting matches.',
       'Use groups that add to ten when they stand out. Check the sum once against the options.'
     ],
+    examplePicture:"Pretend every odd digit is a number card you collect. Add the value written on a card every time you pick it up. Skip the even cards.",
     exampleTitle:'Filter and sum the target digits',
     prompt:'Add only the odd digits in 8 7 2 3 6 9 4 5 2 1.',
     exampleSteps:[
@@ -94,6 +98,7 @@ export const CBAT_NOTES = {
     solution:"25.",
     models:[
       {
+        picture:"Fold the long row into three short rows in your mind. Work through one row at a time. A second 7 gives you seven more, even if you just added another 7.",
         title:'Repeated targets across chunks',
         prompt:'Add the odd digits in 7 8 7 6 7 4 1 8 9 2 9 6.',
         steps:[
@@ -104,6 +109,7 @@ export const CBAT_NOTES = {
         answer:'14+8+18=40.'
       },
       {
+        picture:"Imagine a zero card in your even pile. It is one card when you count the pile, and it adds nothing when you add the numbers on the cards.",
         title:'Practise switching from sum to count',
         prompt:'In 0 5 2 0 7 4 8 1, give both the count and sum of even digits.',
         steps:[
@@ -146,6 +152,7 @@ export const CBAT_NOTES = {
       'Follow plausible routes from both ends. Count street segments when all segments have equal length.',
       'After finding the shortest valid route, read the requested house number along that route.'
     ],
+    examplePicture:"Imagine walking to B on a map where all street blocks are the same length. Count the blocks on each route. Then reread the house number on the shorter walk.",
     exampleTitle:'Shortest equal-length route and its house',
     prompt:'Every segment is equally long. Which numbered house lies on the shortest route from A to B?',
     map:{size:4,start:0,end:11,edges:[[0,1],[1,2],[2,6],[6,7],[7,11],[0,4],[4,8],[8,9],[9,10],[10,14],[14,15],[15,11]],houseCells:[9,6]},
@@ -157,6 +164,7 @@ export const CBAT_NOTES = {
     solution:"House 2.",
     models:[
       {
+        picture:"Picture an open road to C with a fence across the next street. Reaching C does not finish the walk, so look for a road that takes you all the way to B.",
         title:'Eliminate a branch blocked by a gap',
         prompt:'A, C and B appear along the top of a map, but C–B is closed. The open roads are A–C, A–D, D–E and E–B. House 3 is at C and House 5 is at E. Which house is on the shortest open route?',
         steps:[
@@ -167,6 +175,7 @@ export const CBAT_NOTES = {
         answer:'House 5.'
       },
       {
+        picture:"Think of two walks. One has fewer streets, but its streets can be longer. Write the distance beside each street and use the total to pick the shorter walk.",
         title:'Variation with unequal lengths',
         prompt:'Two open routes are A–P–B with lengths 4 and 7, and A–Q–R–B with lengths 3, 3 and 4. Which is shorter by distance?',
         steps:[
@@ -209,6 +218,7 @@ export const CBAT_NOTES = {
       'Use before and after rules to order the blocks, and count carefully when a rule specifies a gap.',
       'Test every rule against the final order. One failed rule rules out that option.'
     ],
+    examplePicture:"Draw five empty boxes. Put T in the last one. Keep M and P touching like two taped cards. Use the other clues to slide that pair to the only place that fits.",
     exampleTitle:'Fixed slot, linked pair and gap',
     prompt:'Arrange K, M, P, R and T. T is last. P immediately follows M. K comes before R, and R comes before P. Exactly one task lies between K and M.',
     exampleSteps:[
@@ -219,6 +229,7 @@ export const CBAT_NOTES = {
     solution:"K → R → M → P → T.",
     models:[
       {
+        picture:"Tape F, G and J together in that order. There have to be three boxes next to each other for the group, with room for H before all of them.",
         title:'Place a chain backward from the last slot',
         prompt:'F, G, H and J take slots 1–4. G immediately follows F. J immediately follows G. H is before F. Give the order.',
         steps:[
@@ -229,6 +240,7 @@ export const CBAT_NOTES = {
         answer:'H → F → G → J.'
       },
       {
+        picture:"Put C at the finish. Try D in each place it is allowed. In each row, give A the earlier of the two spaces that are left.",
         title:'Check what is forced when two orders fit',
         prompt:'A, B, C and D take slots 1–4. C is last, B follows A somewhere later, and D is in slot 1 or 2. Must B be third?',
         steps:[
@@ -271,6 +283,7 @@ export const CBAT_NOTES = {
       'Think about your usual preference or behaviour in comparable situations.',
       'Follow the instructions on the day. GateLabs records completion for this practice type.'
     ],
+    examplePicture:"Remember learning a game or a new class activity. Did you like reading the rules first or seeing someone show you? Use an experience like that to choose.",
     exampleTitle:'Choose between two preferences',
     prompt:'When learning a new task, do you usually prefer written instructions or a live demonstration?',
     exampleSteps:[
@@ -281,6 +294,7 @@ export const CBAT_NOTES = {
     solution:"This practice prompt records your own preference.",
     models:[
       {
+        picture:"Imagine being given an instruction you did not understand. Think about what you did on a few occasions like that. Pick how well the statement describes you.",
         title:'Agreement scale',
         prompt:'“I usually ask for clarification when instructions are ambiguous.” Select the level of agreement that best describes your usual behaviour.',
         steps:[
@@ -290,6 +304,7 @@ export const CBAT_NOTES = {
         ]
       },
       {
+        picture:"Remember a time when an activity changed after you had already made a plan. Think about whether you stopped to read the new order before starting again.",
         title:'Frequency scale',
         prompt:'“When a plan changes, how often do you review the new sequence before continuing?”',
         steps:[

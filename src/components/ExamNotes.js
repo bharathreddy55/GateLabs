@@ -45,6 +45,7 @@ function formatNote(markdown) {
     .replace(/\x60([^\x60\n]+)\x60/g, '<code>$1</code>')
     .replace(/\\\r?\n[ \t]*/g, '<br>');
   return markdown.trim().split(/\r?\n\s*\r?\n/).map(block => {
+    if (block.startsWith('**Picture it.** ')) return `<p class="exam-note-picture">${inline(block)}</p>`;
     if (block.startsWith('## ')) return `<h4>${inline(block.slice(3))}</h4>`;
     if (block.startsWith('### ')) return `<h5>${inline(block.slice(4))}</h5>`;
     const lines = block.split(/\r?\n/);

@@ -25,6 +25,8 @@ Resolution is the smallest change shown. Zero error is a systematic shift that c
 
 **Question.** Convert 0.036 m³ to litres and cm³.
 
+**Picture it.** Imagine one large cube built from tiny cubic centimetres. The little cubes line up along its width, length and height, so a length conversion happens three times.
+
 1. **Convert cubic metres to litres.** 1 m³ = 1,000 L, so 0.036 m³ equals 0.036 × 1,000 = 36 L.\
    `0.036 × 1,000 = 36 L`
 2. **Convert litres to cubic centimetres.** 1 L = 1,000 cm³. Therefore 36 L equals 36 × 1,000 = 36,000 cm³.\
@@ -37,6 +39,8 @@ Resolution is the smallest change shown. Zero error is a systematic shift that c
 ### Convert a compound unit
 
 **Question.** Convert 2.7 g/cm³ to kg/m³.
+
+**Picture it.** The mass sits on top of a fraction and the volume sits underneath. Put both in the new units before dividing, including all three dimensions of the volume.
 
 1. **Convert the numerator.** 2.7 g = 2.7 ÷ 1,000 = 0.0027 kg.\
    `2.7 g = 0.0027 kg`
@@ -51,6 +55,8 @@ Resolution is the smallest change shown. Zero error is a systematic shift that c
 
 **Question.** Express one joule in SI base units.
 
+**Picture it.** Build a joule from a push and a move. A push can be written using mass and how fast speed changes. Then multiply by one more length for the move.
+
 1. **Start from mechanical work.** Work = force × displacement along the force. One joule therefore equals 1 N·m.\
    `1 J = 1 N·m`
 2. **Express the force in base units.** From F = ma, a newton is a kilogram times metres per second squared, or kg·m/s².\
@@ -63,6 +69,8 @@ Resolution is the smallest change shown. Zero error is a systematic shift that c
 ### Correct zero error
 
 **Question.** A caliper reads +0.03 cm when closed and 1.82 cm on a rod. What is the corrected diameter?
+
+**Picture it.** Picture a ruler that already shows a tiny number before anything is measured. The displayed value is too large by that zero reading.
 
 1. **Read the zero offset.** With the jaws closed the true reading is zero. A displayed +0.03 cm means readings are too high by 0.03 cm.\
    `zero reading = +0.03 cm`

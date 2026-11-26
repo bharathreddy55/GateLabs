@@ -25,6 +25,8 @@ To test whether “some A are B” and “some B are C” force A∩C, try two d
 
 **Question.** All signal fitters are technicians. All technicians are trained staff. Does it follow that all signal fitters are trained staff?
 
+**Picture it.** Imagine a small box inside a bigger box inside the biggest box. Anything already in the small box must be inside both of the bigger boxes.
+
 1. **Draw the first containment.** Place the signal fitter set inside the technician set. Any fitter selected is therefore a technician.
 2. **Draw the second containment.** The technician set lies inside the trained staff set. The same selected fitter, being a technician, must be trained staff.
 3. **Read the forced conclusion.** The chain is fitter ⇒ technician ⇒ trained staff. It works for any member of the fitter set.
@@ -34,6 +36,8 @@ To test whether “some A are B” and “some B are C” force A∩C, try two d
 ### Existence propagated through separation
 
 **Question.** Some readers are editors. No editor is a trainee. What must follow about readers and trainees?
+
+**Picture it.** Pick a reader who is also an editor and put a dot on that person. No one from the editor box can cross into the trainee box, so follow that dot.
 
 1. **Use the existing witness.** “Some readers are editors” guarantees at least one person in both groups. Pick such a person.
 2. **Apply the exclusion.** No editor is a trainee, so this reader–editor is outside the trainee group.
@@ -45,6 +49,8 @@ To test whether “some A are B” and “some B are C” force A∩C, try two d
 
 **Question.** Some A are B and some B are C. Must some A be C?
 
+**Picture it.** Use two different dots in B. One can sit inside A and the other inside C. Both clues can be true even if A and C never touch.
+
 1. **Separate the two existence claims.** The first “some” may refer to x, a member of A and B. The second may refer to a different person y, in B and C.
 2. **Build a counterexample.** Take A = {x}, B = {x,y} and C = {y}. Both stated overlaps exist, but A and C are disjoint.
 3. **Test necessity.** One valid arrangement where the conclusion fails is enough to show it does not follow.
@@ -54,6 +60,8 @@ To test whether “some A are B” and “some B are C” force A∩C, try two d
 ### Reverse containment
 
 **Question.** All freight engines are engines. Must all engines be freight engines?
+
+**Picture it.** Imagine a bin for all toy engines. One corner holds the freight engines. An engine found in another corner still belongs to the engine bin.
 
 1. **Translate the given direction.** Every freight engine lies in the broader engine set, so Freight ⇒ Engine.
 2. **Test the reverse direction.** A passenger engine can belong to the engine set without belonging to the freight-engine set. Adding it leaves the original statement true.

@@ -25,6 +25,8 @@ Discard choices that name a single example or expand beyond the evidence. The be
 
 **Question.** A park installed brighter lights to help visitors after sunset. Insects clustered near the new lamps, and walkers reported glare. The council switched to shielded lighting along paths and left the wetland dark. What is the main idea?
 
+**Picture it.** Think of telling a friend why the park changed the lights in one sentence. Include the first goal and what made the park change its plan.
+
 1. **Identify the initial aim.** The lights were installed so visitors could see better after sunset. That gives the council’s reason for making a change.
 2. **Find the problem that changes the plan.** The brighter lamps attracted insects and caused glare. The response was to shield path lighting and leave the wetland dark.
 3. **Combine the goal and the adjustment.** A main idea must account for why the park lit the paths and why it changed the lighting. Mention visibility, glare and the effect on wildlife.
@@ -34,6 +36,8 @@ Discard choices that name a single example or expand beyond the evidence. The be
 ### Supporting detail with a qualifier
 
 **Question.** A museum opens at 9 am on weekdays. On Wednesdays the public galleries open at 11 to allow school groups early access. The cafe still opens at 9. When can a member of the public enter the galleries on Wednesday?
+
+**Picture it.** Picture two doors with two clocks, one for the cafe and one for the galleries. Wednesday changes only one of those times.
 
 1. **Identify the requested place and day.** The question asks about public access to the galleries on Wednesday. The cafe and its opening time refer to a different place.
 2. **Apply the Wednesday exception.** The general weekday time is 9 am, but the passage explicitly shifts public gallery access to 11 on Wednesdays for the school visits.
@@ -45,6 +49,8 @@ Discard choices that name a single example or expand beyond the evidence. The be
 
 **Question.** A study compared three ways of restoring a stream. Concrete barriers redirected water briefly. Rooted native plants held soil through the monsoon, and their benefits grew as they established. Choose a title: “Monsoon Rainfall”, “Using Native Plants to Stabilise Stream Banks”, or “How Concrete Is Made”.
 
+**Picture it.** Imagine writing a label for the whole reading. The right label tells you what helped the stream banks. A word mentioned in one detail may be too small for the label.
+
 1. **Find the subject of the comparison.** The study tests ways to restore a stream. For the two techniques described, the important outcome is whether the banks stayed stable.
 2. **Find the result the passage develops.** Concrete redirects water briefly. The native plants hold soil through the monsoon and become more effective as their roots establish.
 3. **Test the title against both idea and scope.** The title about using native plants to stabilise stream banks captures that result. Rainfall is background and concrete manufacture is outside the passage.
@@ -54,6 +60,8 @@ Discard choices that name a single example or expand beyond the evidence. The be
 ### Preserve a qualification in a summary
 
 **Question.** Bread baked in an insulated oven cooled more slowly than bread from an uninsulated one. The difference was detectable indoors, but outdoors strong wind reduced it. Summarise the finding.
+
+**Picture it.** Imagine explaining the result to someone planning to cool bread in the garden. Include the outdoor wind, because it changes how much difference the insulation makes.
 
 1. **State the result indoors.** Bread from the insulated oven cooled more slowly, so the trial shows a difference between the two ovens.
 2. **Keep the outdoor qualifier.** Strong wind reduced the gap in cooling rates outside. The passage gives neither an exact reduction nor evidence that the gap vanished.

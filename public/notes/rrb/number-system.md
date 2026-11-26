@@ -25,6 +25,8 @@ For the units digit of a power, multiply by the base repeatedly and keep the fin
 
 **Question.** Find the missing digit x in 74x2 so the number is divisible by both 4 and 9.
 
+**Picture it.** Picture a number with a blank tile. We will use one rule to choose the tile and another rule to make sure it fits.
+
 1. **Apply the rule for 9.** A number is divisible by 9 when its digits add to a multiple of 9. Here the sum is 7 + 4 + x + 2 = 13 + x.\
    `7 + 4 + x + 2 = 13 + x`
 2. **Find the only possible digit.** Since x is between 0 and 9, the digit sum is between 13 and 22. The only multiple of 9 in that range is 18. Solve 13 + x = 18 to get x = 5.\
@@ -37,6 +39,8 @@ For the units digit of a power, multiply by the base repeatedly and keep the fin
 ### Remainder of powers
 
 **Question.** Find the remainder of 7⁸³+3⁴² divided by 10.
+
+**Picture it.** Imagine the last digit is the only part of a number you can see. As you keep multiplying, that window shows the same few digits over and over.
 
 1. **Work with the last digits.** The remainder on division by 10 is the units digit. Starting at 7 and multiplying by 7 repeatedly, keep only the units digit at each step. The cycle is 7 → 9 → 3 → 1, then it starts again at 7.\
    `7 → 9 → 3 → 1 → 7`
@@ -53,6 +57,8 @@ For the units digit of a power, multiply by the base repeatedly and keep the fin
 
 **Question.** How many positive even divisors does 360 have?
 
+**Picture it.** Think of 360 as a box of prime building blocks. A divisor is a smaller pile made from those blocks. Any pile with a block of 2 is even.
+
 1. **Prime-factor the number.** Write 360 = 8 × 45 = 2³ × 3² × 5. Every positive divisor has the form 2ᵃ × 3ᵇ × 5ᶜ, with each exponent at most the corresponding exponent in 360.\
    `360 = 2³ × 3² × 5`
 2. **Require at least one factor of 2.** An even divisor needs a = 1, 2 or 3. That gives three choices. Choosing a = 0 would leave only odd prime factors.\
@@ -65,6 +71,8 @@ For the units digit of a power, multiply by the base repeatedly and keep the fin
 ### Classifying a fraction
 
 **Question.** Does 42/168 terminate?
+
+**Picture it.** Imagine cutting the same pizza into smaller pieces. First describe the slice in the fewest pieces you can. Then see whether you can count it in tenths or hundredths.
 
 1. **Reduce the fraction first.** Since 168 = 4 × 42, dividing the numerator and denominator by 42 gives 42/168 = 1/4.\
    `42/168 = 1/4`

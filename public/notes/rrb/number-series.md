@@ -25,6 +25,8 @@ For a missing or wrong term, find a simple rule that fits the known terms. Inser
 
 **Question.** Find the next term: 5, 9, 15, 23, 33.
 
+**Picture it.** Draw an arrow between every two numbers. Put how much you added above it. The arrows can have their own easy pattern even when the numbers do not.
+
 1. **Calculate the first differences.** Subtract each term from its successor to get 9−5=4, 15−9=6, 23−15=8 and 33−23=10.\
    `first differences: 4, 6, 8, 10`
 2. **Find the change in those differences.** Each jump is 2 larger than the previous one. Extending that pattern gives the next jump as 10+2=12.\
@@ -37,6 +39,8 @@ For a missing or wrong term, find a simple rule that fits the known terms. Inser
 ### Alternating tracks
 
 **Question.** Find the next term: 4, 30, 7, 25, 10, 20, 13.
+
+**Picture it.** Use two colours. Colour positions 1, 3, 5 and 7 one colour and positions 2, 4 and 6 another. Read each colour on its own.
 
 1. **Split the positions by parity.** Positions 1, 3, 5 and 7 give 4, 7, 10, 13. Positions 2, 4 and 6 give 30, 25, 20.\
    `odd positions: 4, 7, 10, 13`\
@@ -52,6 +56,8 @@ For a missing or wrong term, find a simple rule that fits the known terms. Inser
 
 **Question.** Find the next term: 3, 8, 18, 38, 78.
 
+**Picture it.** Try doubling one number. Look at how much more you still need to reach the next. See whether that extra amount stays the same.
+
 1. **Compare the terms after doubling.** Doubling 3 gives 6, which is 2 short of 8. Doubling 8 gives 16, which is 2 short of 18.\
    `8 − 2 × 3 = 2 and 18 − 2 × 8 = 2`
 2. **Check the rule near the end.** 18×2+2=38 and 38×2+2=78, so the same adjustment works across the given terms.\
@@ -65,6 +71,8 @@ For a missing or wrong term, find a simple rule that fits the known terms. Inser
 
 **Question.** Complete 2, 5, 7, ?, 19, 31.
 
+**Picture it.** Imagine keeping the last two tiles in your hands. Add them to make the next tile. Test the new tile against the numbers already printed after it.
+
 1. **Find a rule in the known terms.** The first two terms add to the third: 2+5=7. Try the rule that every term is the sum of the two terms before it.\
    `2 + 5 = 7`
 2. **Compute the missing term.** Using 5 and 7 as the preceding terms gives 5+7=12.\
@@ -77,6 +85,8 @@ For a missing or wrong term, find a simple rule that fits the known terms. Inser
 ### Identify the wrong term
 
 **Question.** One term is wrong: 4, 9, 16, 26, 36, 49. Correct it.
+
+**Picture it.** Picture squares of 2 by 2, 3 by 3 and 4 by 4 tiles. The next square must have five tiles on each side.
 
 1. **Recognise the perfect squares.** The early terms are 2²=4, 3²=9 and 4²=16. The later terms are 6²=36 and 7²=49.\
    `2², 3², 4², ?, 6², 7²`

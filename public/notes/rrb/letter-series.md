@@ -25,6 +25,8 @@ Divide the requested position by the block length. Full blocks use quotient × l
 
 **Question.** Find the next letter: M, P, T, Y, ?
 
+**Picture it.** Give each letter an alphabet seat number and count how far the letters move. When a move passes Z, circle back to A.
+
 1. **Convert letters into positions.** With A=1 through Z=26, the sequence M, P, T, Y has positions 13, 16, 20 and 25.\
    `M=13, P=16, T=20, Y=25`
 2. **Find the growing shifts.** The shifts are +3, +4 and +5, so the next shift is +6. From Y that gives 25+6=31.\
@@ -39,6 +41,8 @@ Divide the requested position by the block length. Full blocks use quotient × l
 
 **Question.** Complete BC, EF, HI, KL, ?
 
+**Picture it.** Write pairs in two columns. Check the left letters as their own row and the right letters as another. Put the next two together.
+
 1. **Read the two columns separately.** The left letters B, E, H, K have positions 2, 5, 8, 11. The right letters C, F, I, L have positions 3, 6, 9, 12.\
    `left: 2, 5, 8, 11. Right: 3, 6, 9, 12.`
 2. **Advance each by three.** The next left letter is at position 14, N. The next right letter is at position 15, O.\
@@ -52,6 +56,8 @@ Divide the requested position by the block length. Full blocks use quotient × l
 
 **Question.** Complete A, Z, C, X, E, V, ?
 
+**Picture it.** Read the first, third and fifth letters as one row and the second, fourth and sixth as a different row. The missing spot belongs to just one of them.
+
 1. **Extract the alternating tracks.** Odd positions show A, C, E. Even positions show Z, X, V.\
    `odd: A,C,E. Even: Z,X,V.`
 2. **Identify the directions.** The odd track advances two letters at a time, while the even track moves two letters backward.\
@@ -64,6 +70,8 @@ Divide the requested position by the block length. Full blocks use quotient × l
 ### Index a repeated block
 
 **Question.** The block AABC repeats. What is the 38th letter?
+
+**Picture it.** Imagine stamps that print AABC four letters at a time. Count the complete stamps before the 38th spot and then count inside the next stamp.
 
 1. **Count complete blocks.** AABC has four letters. Divide 38 by 4 to get nine complete blocks and a remainder of two.\
    `38 = 4 × 9 + 2`

@@ -25,6 +25,8 @@ For P × Q + R, write one sentence for P × Q and a second for Q + R. Join the t
 
 **Question.** Dev says of a woman, “She is the only daughter of my mother’s only son.” Dev is male. How is she related to Dev?
 
+**Picture it.** Start at the speaker and draw a line up to his mother. Her only son has to be him. Now follow the line down to his child.
+
 1. **Start with the speaker’s mother.** “My mother” is Dev’s mother. The question identifies Dev as male, so he is one of her sons.
 2. **Resolve the unique son.** She has only one son, so “my mother’s only son” must mean Dev himself.
 3. **Trace the final link.** The woman is that son’s daughter. From Dev’s point of view, she is his daughter.
@@ -34,6 +36,8 @@ For P × Q + R, write one sentence for P × Q and a second for Q + R. Join the t
 ### Coded relation chain
 
 **Question.** A + B means A is B’s mother. A × B means A is B’s brother. What is P to R in P × Q + R?
+
+**Picture it.** Draw Q one level above R because Q is the mother. Put P beside Q because they are siblings. Then read P's role from R's place.
 
 1. **Decode the right-hand relation.** Q + R says Q is R’s mother. Start the family tree at R and move up to Q.
 2. **Decode the left-hand relation.** P × Q says P is Q’s brother. P is therefore male and in Q’s generation.
@@ -45,6 +49,8 @@ For P × Q + R, write one sentence for P × Q and a second for Q + R. Join the t
 
 **Question.** A is B’s parent. C is A’s sibling. What can be said about C’s relation to B?
 
+**Picture it.** A is one step above B on the family tree. C stands beside A as a sibling. This tells you the family link while leaving the exact label open.
+
 1. **Locate A first.** A is a parent of B, placing A one generation above B.
 2. **Move sideways to C.** C and A are siblings, so C is the sibling of B’s parent.
 3. **State exactly what is known.** The words “sibling” and “parent” leave gender unspecified. C can be B’s aunt or uncle.
@@ -54,6 +60,8 @@ For P × Q + R, write one sentence for P × Q and a second for Q + R. Join the t
 ### Reverse perspective
 
 **Question.** S is the daughter of T. T is the brother of U. What is U’s relation to S?
+
+**Picture it.** Go from the daughter up to T, her father. Then move sideways to his sibling U. That tells you which side of the family U is on.
 
 1. **Locate S’s parent.** S is T’s daughter. T is described as U’s brother, establishing that T is male and therefore S’s father.
 2. **Move from the father to his sibling.** U and T share a sibling relationship. So U is on S’s paternal side.

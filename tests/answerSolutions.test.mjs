@@ -15,7 +15,7 @@ test('Station Master model 2 has question-specific steps and authentic passage e
     assert.ok(solution.steps.length >= 3 && solution.steps.every(step=>step.title && step.text),q.id);
     for (const {quote} of solution.steps) if (quote) assert.ok(q.passage.includes(quote),q.id);
     const wrongKey=explainAnswer({...q,correctAnswer:(q.correctAnswer+1)%q.options.length},rrbReview);
-    assert.ok(wrongKey.steps.every(step=>typeof step==='string'),q.id);
+    assert.ok(wrongKey.steps.every(step=>!step.title && !step.quote),q.id);
   }
 });
 
@@ -31,7 +31,36 @@ test('the Station Master probability solution counts distinct pairs and displays
   assert.equal(solution.finalAnswer.latex,String.raw`\frac{35}{66}`);
   assert.equal(solution.finalAnswer.text,'About 53.03%');
   assert.match(solution.shortcut.formula,/5 × 7/);
-  assert.match(solution.tip,/second denominator is 11/);
+  assert.match(solution.tip,/second bottom number is 11/);
+});
+
+test('the well-mixed tank review tracks the drink and strong juice separately',()=>{
+  const papers=JSON.parse(readFileSync('public/exams/rrb.json','utf8'));
+  const q=papers.flatMap(paper=>paper.questions).find(question=>question.id==='rrb-model3-1');
+  const solution=explainAnswer(q,rrbReview);
+  assert.equal(solution.picture.title,'Imagine a big juice tank');
+  assert.equal(solution.steps.length,4);
+  assert.deepEqual(solution.steps[1].calculations.map(line=>line.formula),[
+    '30/100 × 10 L = 3 L','12 L − 3 L = 9 L of strong juice','40 L − 10 L = 30 L of drink'
+  ]);
+  assert.equal(solution.steps[2].calculations[1].formula,'9 L + 5 L = 14 L of strong juice');
+  assert.match(solution.steps[3].formula,/14\/40.*35%/);
+  assert.equal(solution.finalAnswer.text,'The final concentration is 35%.');
+  assert.notEqual(explainAnswer({...q,correctAnswer:1},rrbReview).picture.title,solution.picture.title);
+});
+
+test('all published Station Master CBT items have a beginner introduction and a worked explanation',()=>{
+  const papers=['rrb.json','challenges/rrb.json'].flatMap(file=>
+    JSON.parse(readFileSync('public/exams/'+file,'utf8')));
+  for (const q of papers.flatMap(paper=>paper.questions)) {
+    const solution=explainAnswer(q,rrbReview);
+    assert.ok(solution.picture?.title && solution.picture?.text,q.id);
+    assert.ok(solution.steps.length > 0,q.id);
+    for (const step of solution.steps) {
+      assert.ok(typeof step === 'string' ? step.trim() : step.text || step.formula,q.id);
+      if (step.quote) assert.ok(q.passage?.includes(step.quote),q.id);
+    }
+  }
 });
 
 test('recognised Station Master maths and reasoning tasks use the values from the current paper',()=>{
@@ -83,7 +112,12 @@ test('CBAT explanations identify the correct figure, total, route and sequence',
     ['spatial',q=>q.solution.steps.at(-1).endsWith('house '+q.options[q.correct]+'.')],
     ['ordering',q=>q.solution.steps.at(-1).endsWith(q.options[q.correct]+'.')]
   ]) {
-    assert.ok(buildCbatSet(battery,1).every(check),battery);
-    assert.ok(buildCbatSet(battery,2).every(check),battery);
+    for (const set of [1,2]) {
+      for (const question of buildCbatSet(battery,set)) {
+        assert.ok(check(question),battery);
+        const solution=explainAnswer({...question,question:question.prompt},{battery});
+        assert.ok(solution.picture?.title && solution.steps.length>=3,battery);
+      }
+    }
   }
 });

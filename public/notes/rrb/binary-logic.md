@@ -25,6 +25,8 @@ From P and P⇒Q, deduce Q. From ¬Q and P⇒Q, deduce ¬P. If Q is given, look 
 
 **Question.** A says “B is a liar.” B says “Both of us are liars.” Each always tells the truth or always lies. Determine their types.
 
+**Picture it.** Imagine giving each person a truth or lie card. Read what they say and see whether the card fits. A person's own words can rule out one of their cards.
+
 1. **Test B as truthful.** B claims that both people are liars. If B told the truth, that claim would make B a liar, a contradiction.
 2. **Reclassify B.** The contradiction rules out a truthful B. Thus B is a liar and the claim that both lie must be false.
 3. **Check A’s statement and the pair.** A correctly says B is a liar. With A truthful and B lying, “both are liars” is indeed false.
@@ -34,6 +36,8 @@ From P and P⇒Q, deduce Q. From ¬Q and P⇒Q, deduce ¬P. If Q is given, look 
 ### Exactly one true claim
 
 **Question.** Exactly one of A’s “the token is in X” and B’s “the token is not in Y” is true. One token is in X, Y or Z. Where is it?
+
+**Picture it.** Pretend the token is in X, then Y, then Z. For each place, tick the claims that become true. We want just one tick.
 
 1. **Try X.** A says the token is in X and B says it is outside Y. With the token in X, both statements are true.
 2. **Try Y.** The token is outside X and inside Y, so A’s and B’s statements are both false.
@@ -45,6 +49,8 @@ From P and P⇒Q, deduce Q. From ¬Q and P⇒Q, deduce ¬P. If Q is given, look 
 
 **Question.** If a signal is active, its indicator is lit. The indicator is unlit. What follows under this rule?
 
+**Picture it.** The rule says the active signal always lights the lamp. If the lamp is dark, the signal cannot be in a state that forces it to light.
+
 1. **Write the implication.** The rule is Active ⇒ Lit. Every active signal must have a lit indicator.
 2. **Test the fact given.** The indicator is unlit. An active signal in this situation would violate the rule.
 3. **Use the contrapositive.** Unlit ⇒ Inactive. Therefore the signal is inactive.
@@ -54,6 +60,8 @@ From P and P⇒Q, deduce Q. From ¬Q and P⇒Q, deduce ¬P. If Q is given, look 
 ### Negate a compound instruction
 
 **Question.** What does it mean to say “It is false that both the alarm and its backup are off”?
+
+**Picture it.** Draw both switches. Cross out the one drawing with both switches off. Look at what all the pictures left behind have in common.
 
 1. **Identify the prohibited state.** “Both off” describes the single case in which neither alarm is on. The sentence denies that whole case.
 2. **List the remaining possibilities.** The alarm only can be on, the backup only can be on, or both can be on.

@@ -25,6 +25,8 @@ To weaken a causal argument, a competing cause should be comparable in time and 
 
 **Question.** The gate log shows the last worker left at 6 pm. A light sensor recorded movement at 6:15. The sensor detects animals as well as people. What can be inferred?
 
+**Picture it.** Draw a short timeline with 6:00 and 6:15. The sensor proves something triggered it. Ask what a sensor that can see animals and people can tell apart.
+
 1. **Put the events on a timeline.** The last worker left at 6 pm and the sensor registered movement at 6:15 pm. The record therefore shows a reading 15 minutes after the worker left.
 2. **Check what the instrument can distinguish.** The sensor responds to animals and to people. No added clue such as a camera or a second entry log identifies the source.
 3. **Limit the inference to what follows.** The log supports the timing and existence of the reading. A returning worker or an animal is possible, so the source remains undetermined.
@@ -34,6 +36,8 @@ To weaken a causal argument, a competing cause should be comparable in time and 
 ### Apply a decision rule
 
 **Question.** To discuss indoors, a group must reserve a room and close its door. Walk-ins can discuss in the courtyard. A group has reserved a room but leaves the door open. Does its discussion meet the indoor rule?
+
+**Picture it.** Give the group two indoor checkboxes, one for booking and one for closing the door. The courtyard rule belongs on a different card.
 
 1. **Write the conditions for indoor discussion.** The rule requires a reservation and a closed door. The word “and” means both conditions must hold for the same group.
 2. **Test the conditions separately.** The group meets the reservation requirement. The door is open, so it fails the second requirement.
@@ -45,6 +49,8 @@ To weaken a causal argument, a competing cause should be comparable in time and 
 
 **Question.** A report says a bicycle-sharing campaign reduced car traffic because car counts fell immediately after launch. Which finding would weaken the claim: a simultaneous bridge closure diverted traffic, or rainy weeks reduced bicycle use in another year?
 
+**Picture it.** Two things happened at once. If a bridge closure could have put the cars on a different road, fewer cars on the counted road need not have come from the bicycle campaign.
+
 1. **Identify the claim and its evidence.** The report credits the campaign for a fall in car counts because that fall followed the launch.
 2. **Look for another cause at the same time.** A bridge closure can divert cars out of the counted area and also occurred when the counts fell. With those facts, the timing alone cannot isolate the campaign’s effect.
 3. **Compare the two proposed facts.** Rain affecting bicycle use in a different year does not account for the car counts during this campaign. The simultaneous diversion weakens the claim directly.
@@ -54,6 +60,8 @@ To weaken a causal argument, a competing cause should be comparable in time and 
 ### Scope of a conclusion
 
 **Question.** Two shaded bus stops were cooler at noon than adjacent unshaded stops on a clear day. Can you infer shaded stops are cooler under every condition?
+
+**Picture it.** Imagine checking the two pairs of stops on this one clear day. A different day or a different stop would need its own check.
 
 1. **Mark the observations the passage gives.** Only two shaded stops were compared with nearby unshaded ones, at noon on a clear day.
 2. **Check how far the claim goes.** “Every condition” includes other stops, times, seasons and weather. The passage supplies no comparisons under those conditions.

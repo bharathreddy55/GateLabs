@@ -45,9 +45,10 @@ function renderFormula({formula, latex}) {
 
 function renderStepContent(step) {
   if (!step || typeof step !== 'object') return `<p>${h(step)}</p>`;
-  return `<strong>${h(step.title)}</strong>
+  return `${step.title ? `<strong>${h(step.title)}</strong>` : ''}
     ${step.quote ? `<blockquote>${h(step.quote)}</blockquote>` : ''}
-    <p>${h(step.text)}</p>${renderFormula(step)}`;
+    ${step.text ? `<p>${h(step.text)}</p>` : ''}${renderFormula(step)}
+    ${(step.calculations ?? []).map(renderFormula).join('')}`;
 }
 
 function solutionLayout(q, examId) {
@@ -75,22 +76,27 @@ function renderSteps(steps, layout) {
   return `<ol class="${className}">${steps.map(step => `<li>${renderStepContent(step)}</li>`).join('')}</ol>`;
 }
 
-function renderSolution(q, examId) {
-  const {approach,steps,reason,tip,finalAnswer,shortcut} = explainAnswer(q, {examId});
+function renderSolution(q, examId, battery, renderOption) {
+  const {approach,steps,reason,tip,finalAnswer,shortcut,picture} = explainAnswer(q, {examId,battery});
   if (!approach && !steps.length && !reason) return '<p class="review-note">A worked explanation is unavailable for this question.</p>';
-  const isStationMaster = examId === 'rrb';
+  const isStationMaster = examId === 'rrb' || Boolean(battery);
   const layout = solutionLayout(q, examId);
   const heading = steps.length || (isStationMaster && layout !== 'math')
     ? solutionHeadings[layout]
     : 'Why this answer is correct';
   const answer = finalAnswer ?? {text:q.options?.[q.correctAnswer]};
+  const answerContent = answer.text != null
+    ? renderOption && !finalAnswer ? renderOption(answer.text,q.correctAnswer,q) : h(answer.text)
+    : '';
   return `<section class="review-solution" data-solution-layout="${layout}" aria-labelledby="review-solution-heading">
     <h4 id="review-solution-heading">${icon('book')} ${heading}</h4>
-    ${approach ? `<div class="review-approach"><strong>Approach</strong><p>${h(approach)}</p></div>` : ''}
+    ${picture
+      ? `<div class="review-approach"><strong>${h(picture.title)}</strong><p>${h(picture.text)}</p></div>`
+      : approach ? `<div class="review-approach"><strong>Approach</strong><p>${h(approach)}</p></div>` : ''}
     ${renderSteps(steps, layout)}
     ${reason ? `<p class="review-reason">${h(reason)}</p>` : ''}
-    ${isStationMaster && (answer.text || answer.formula) ? `<div class="review-final-answer">
-      <strong>Final answer</strong>${renderFormula(answer)}${answer.text ? `<p>${h(answer.text)}</p>` : ''}
+    ${isStationMaster && (answerContent || answer.formula) ? `<div class="review-final-answer">
+      <strong>Final answer</strong>${renderFormula(answer)}${answerContent ? `<div class="review-answer-value">${answerContent}</div>` : ''}
     </div>` : ''}
     ${shortcut ? `<aside class="review-shortcut"><strong>Exam shortcut</strong><p>${h(shortcut.text)}</p>${renderFormula(shortcut)}</aside>` : ''}
     ${tip ? `<aside class="review-tip">${icon('info')}<div><strong>Watch for</strong><p>${h(tip)}</p></div></aside>` : ''}
@@ -107,7 +113,7 @@ function sourceReference(q) {
 }
 
 export function mountAnswerReview(root, {
-  responses, state = {}, bookmarks = [], toggleBookmark, toggleReviewMark, practise, renderContext = renderQuestionContext, renderOption, examId
+  responses, state = {}, bookmarks = [], toggleBookmark, toggleReviewMark, practise, renderContext = renderQuestionContext, renderOption, examId, battery
 }) {
   if (!root) return;
   const items = responses.map((question,index)=>({question,index}));
@@ -181,7 +187,7 @@ export function mountAnswerReview(root, {
         <h3 class="review-question" tabindex="-1">${h(q.question)}</h3>
         ${renderContext(q)}
         ${renderAnswers(q,renderOption)}
-        ${renderSolution(q, examId)}
+        ${renderSolution(q, examId, battery, renderOption)}
         ${sourceReference(q)}
       </div>
       <footer class="review-card-footer">

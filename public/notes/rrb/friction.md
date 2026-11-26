@@ -25,6 +25,8 @@ Use perpendicular weight component mg cos θ and downhill component mg sin θ. A
 
 **Question.** A block has normal force 100 N and μₛ=0.4. A horizontal 24 N push fails to move it. Find friction.
 
+**Picture it.** Imagine pushing a heavy box that stays put. The floor pushes back just enough to hold it. Its biggest possible push only matters if you try to move the box.
+
 1. **Find the static-friction limit.** The maximum available static friction is μₛN = 0.4 × 100 = 40 N.\
    `0.4 × 100 = 40 N maximum`
 2. **Find the force needed for equilibrium.** The block stays at rest, so friction balances the horizontal push. It needs to supply 24 N in the opposite direction.\
@@ -37,6 +39,8 @@ Use perpendicular weight component mg cos θ and downhill component mg sin θ. A
 ### Sliding acceleration
 
 **Question.** A 10 kg block slides on level ground, g=10 and μₖ=0.25. If pushed horizontally with 40 N in its direction of motion, what is the acceleration?
+
+**Picture it.** The box is already sliding. The floor pushes against the slide. Take away that opposing push from the forward push to see what is left to speed it up.
 
 1. **Find the normal force.** On level ground with a horizontal push, weight is balanced vertically by the normal force. N = mg = 10 × 10 = 100 N.\
    `N = 10 × 10 = 100 N`
@@ -51,6 +55,8 @@ Use perpendicular weight component mg cos θ and downhill component mg sin θ. A
 
 **Question.** A 20 kg crate slides on level ground. An angled rope pulls upward with a 40 N vertical component. With g=10 and μₖ=0.3, find kinetic friction.
 
+**Picture it.** If you pull a crate a little upward, its floor carries less of the weight. A lighter push down on the floor means a smaller sliding friction force.
+
 1. **Write the vertical balance.** Weight is 20 × 10 = 200 N downward. The rope already supplies 40 N upward, and the crate remains on level ground without vertical acceleration.\
    `N + 40 = 20 × 10`
 2. **Find the remaining support.** The normal force supplies the rest, so N + 40 = 200 and N = 160 N.\
@@ -63,6 +69,8 @@ Use perpendicular weight component mg cos θ and downhill component mg sin θ. A
 ### Incline threshold
 
 **Question.** A block sits on a 30° slope. What is the smallest μₛ that can hold it, with no other applied force?
+
+**Picture it.** Imagine a box on a tilted board. Part of gravity tugs it down the slope. The floor's friction has to match that tug to keep it still.
 
 1. **Resolve the weight.** On a 30° incline, the weight component down the slope is mg sin 30°, while the component pressing against it is mg cos 30°.\
    `downhill = mg sin 30°, normal = mg cos 30°`

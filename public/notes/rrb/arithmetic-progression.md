@@ -25,6 +25,8 @@ For the first term strictly below a threshold, write a+(n−1)d < threshold. Div
 
 **Question.** The 5th term is 23 and the 11th term is 47. Find the first and 20th.
 
+**Picture it.** Draw numbered stops, equally far apart. To find the length of a single jump, divide the change in values by the number of gaps between the two known stops.
+
 1. **Count the equal gaps.** From the 5th to the 11th term there are 11 − 5 = 6 steps. The value rises by 47 − 23 = 24, so the common difference is 24 ÷ 6 = 4.\
    `d = (47 − 23) ÷ (11 − 5) = 4`
 2. **Work back to the first term.** There are four steps from term 1 to term 5. Subtract 4 × 4 from 23 to get a = 7.\
@@ -37,6 +39,8 @@ For the first term strictly below a threshold, write a+(n−1)d < threshold. Div
 ### Sum of bounded multiples
 
 **Question.** Sum all multiples of 7 between 30 and 100 inclusive.
+
+**Picture it.** List only the multiples inside the fence from 30 to 100. The list is evenly spaced. Pair the low and high ends so every pair has the same sum.
 
 1. **Find the endpoints that qualify.** 35 = 7 × 5 is the first multiple at or above 30. 98 = 7 × 14 is the last at or below 100.\
    `First = 5 × 7 = 35, last = 14 × 7 = 98`
@@ -51,6 +55,8 @@ For the first term strictly below a threshold, write a+(n−1)d < threshold. Div
 
 **Question.** Rows have 12, 15, 18, … seats, totalling 255. How many rows?
 
+**Picture it.** Imagine seat rows that grow by three each time. Adding more rows adds more seats. Check the row count by finding what the last row holds.
+
 1. **Write the sum of n rows.** The first term is 12 and the common difference is 3, so Sₙ = n[2 × 12 + (n−1) × 3]/2 = 3n(n+7)/2.\
    `Sₙ = n[24 + 3(n−1)]/2`
 2. **Set the sum to the capacity.** Equating this to 255 yields n(n+7) = 170. The positive factors 10 and 17 differ by 7.\
@@ -63,6 +69,8 @@ For the first term strictly below a threshold, write a+(n−1)d < threshold. Div
 ### First value below a cutoff
 
 **Question.** Readings by check are 92, 85, 78, … cm. When is the level first below 40 cm?
+
+**Picture it.** Picture the water line falling seven centimetres at each check. The first reading below 40 may come one check after the closest reading above it.
 
 1. **Express the nth reading.** Each check reduces the level by 7 cm. At check n the reading is 92 − 7(n−1).\
    `aₙ = 92 − 7(n − 1)`

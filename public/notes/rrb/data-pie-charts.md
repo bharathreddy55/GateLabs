@@ -25,6 +25,8 @@ Convert every sector to its own count if asked “how many more.” If only prop
 
 **Question.** A 72° sector represents emergency calls out of 1,850 total calls. How many are emergencies?
 
+**Picture it.** Imagine 1,850 calls sharing the whole circle. A slice taking one fifth of the circle gets one fifth of the calls.
+
 1. **Convert the angle into a share.** The whole circle spans 360°. Emergency calls take 72/360 = 1/5 of it.\
    `72/360 = 1/5`
 2. **Match the share to the count.** The one-fifth share applies to all 1,850 calls, so multiply 1,850 by 1/5.\
@@ -37,6 +39,8 @@ Convert every sector to its own count if asked “how many more.” If only prop
 ### Recover the whole
 
 **Question.** A 54° maintenance sector represents 150 tasks. Find the total.
+
+**Picture it.** The small maintenance slice holds 150 tasks. Count how many slices that size would fit into the whole before recovering the total.
 
 1. **Find what proportion 150 represents.** A 54° sector is 54/360 = 0.15 of the full pie.\
    `54/360 = 0.15`
@@ -51,6 +55,8 @@ Convert every sector to its own count if asked “how many more.” If only prop
 
 **Question.** A’s 90° sector of 800 tasks and B’s 72° sector of 1250 tasks represent inspections. Compare the counts.
 
+**Picture it.** The angles show how the tasks are split in each circle. The two circles stand for different numbers of tasks, so convert the slices to real counts first.
+
 1. **Convert A’s sector to a count.** 90° is a quarter of the pie, so A has 800 × 1/4 = 200 inspections.\
    `800 × 90/360 = 200`
 2. **Convert B’s sector using B’s own total.** 72° is one-fifth of the pie, so B has 1,250 × 1/5 = 250 inspections.\
@@ -63,6 +69,8 @@ Convert every sector to its own count if asked “how many more.” If only prop
 ### Find the unlabelled sector
 
 **Question.** A pie chart’s labelled sectors are 35%, 30% and 72°. Find the remaining sector angle.
+
+**Picture it.** Some pieces are marked as percentages and one in degrees. Give them all the same kind of label before checking how much circle is left.
 
 1. **Use one unit for all sectors.** Convert the 72° sector to 72/360 × 100% = 20%. The other labels already use percent.\
    `72/360 = 20%`

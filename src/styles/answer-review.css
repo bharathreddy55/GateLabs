@@ -277,8 +277,9 @@
   border-inline-start: 3px solid var(--review-good);
   background: color-mix(in srgb, var(--review-good) 12%, var(--ws-panel));
 }
-.answer-review .review-final-answer p { margin: 4px 0 0; font-weight: 700; font-size: 1rem; }
 .review-final-answer .review-formula { width: fit-content; background: transparent; padding: .3rem 0; }
+.review-answer-value { margin-top: .3rem; font-size: 1rem; font-weight: 700; overflow-wrap: anywhere; }
+.review-answer-value svg { display: block; margin-top: .35rem; }
 .review-shortcut { background: var(--ws-soft); }
 .answer-review .review-shortcut p { margin: 4px 0 0; }
 .review-tip { display: flex; align-items: flex-start; gap: 9px; background: var(--ws-bg); }

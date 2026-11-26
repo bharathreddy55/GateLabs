@@ -25,6 +25,8 @@ When the final amount is given, divide by the multiplier to recover the base. Su
 
 **Question.** After an 18% increase daily output is 354 units. What was it before?
 
+**Picture it.** Picture the new amount as the old amount with an extra piece attached. The 18% belongs to the old size. Undo the multiplication to find it.
+
 1. **Write the increase as a multiplier.** An 18% increase means the new figure is 118% of the old one, or 1.18 times it.\
    `1 + 18/100 = 1.18`
 2. **Undo the multiplication.** Let O be the old output. The equation is 1.18O = 354. Dividing by 1.18 gives O = 300.\
@@ -37,6 +39,8 @@ When the final amount is given, divide by the multiplier to recover the base. Su
 ### Successive changes
 
 **Question.** Usage rises 25% then falls 20%. Find the net change.
+
+**Picture it.** Start with 100 counters. The first change leaves 125 counters. When you remove 20%, take that share out of the new pile.
 
 1. **Start with a base of 100.** Only the relative change matters. After rising 25%, the quantity becomes 100 × 1.25 = 125.\
    `100 × 1.25 = 125`
@@ -51,6 +55,8 @@ When the final amount is given, divide by the multiplier to recover the base. Su
 
 **Question.** A rejection rate goes from 4% to 5%. Give both changes.
 
+**Picture it.** Draw 4 marks and then 5 marks out of 100. Only one mark was added, but one extra mark is a quarter of the original four.
+
 1. **Find the point change.** Subtract the two stated rates. The increase from 4% to 5% is one percentage point.\
    `5% − 4% = 1 percentage point`
 2. **Find the relative change.** Compare that one-point increase with the old four-point rate. The ratio is 1 ÷ 4 = 0.25.\
@@ -63,6 +69,8 @@ When the final amount is given, divide by the multiplier to recover the base. Su
 ### Fixed budget
 
 **Question.** Price rises 12.5%. Find the percent reduction in quantity affordable under the same budget, allowing fractional quantities.
+
+**Picture it.** Think of spending the same pocket money at a shop. When each item costs more, the old money buys fewer items. We want to know how many fewer.
 
 1. **Find the new price multiplier.** The increase is 12.5% = 1/8, so one item costs 9/8 of its old price.\
    `12.5% = 1/8 ⇒ price factor 9/8`

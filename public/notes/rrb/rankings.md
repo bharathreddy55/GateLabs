@@ -25,6 +25,8 @@ Start with counts ahead and behind. Remove the numbers from those two counts. Ad
 
 **Question.** K is 18th from the left and 27th from the right. How many people are in the line?
 
+**Picture it.** Stand beside K. Count the people on the left and the right separately. Then count K once to join the two sides.
+
 1. **Count who stands to the left.** 18th from the left means there are 17 people before K on that side.\
    `18 − 1 = 17 left of K`
 2. **Count who stands to the right.** 27th from the right means there are 26 people on the other side.\
@@ -37,6 +39,8 @@ Start with counts ahead and behind. Remove the numbers from those two counts. Ad
 ### Distance between ranks
 
 **Question.** In a line of 48, A is 14th from the left and B is 12th from the right. How many are between them?
+
+**Picture it.** Write the left-side seat number for both people. Count only the seats strictly between them, leaving out their own two seats.
 
 1. **Put both ranks on the same scale.** A is at left position 14. B is 12th from the right, so B’s left position is 48−12+1=37.\
    `B from left = 48 + 1 − 12 = 37`
@@ -51,6 +55,8 @@ Start with counts ahead and behind. Remove the numbers from those two counts. Ad
 
 **Question.** A is 9th from left and B is 16th from right. After exchanging seats A is 21st from left. Find total size.
 
+**Picture it.** Imagine A walks into B's old place. Keep your finger on that same place and put both known ranks beside it. They point to one seat.
+
 1. **Locate B’s original seat from the left.** A moves into B’s seat after the swap. A’s new rank of 21st from the left therefore describes B’s original seat.\
    `B’s original left rank = A’s new left rank = 21`
 2. **Use B’s right rank at that same seat.** B was originally 16th from the right. That seat has 20 people on the left and 15 on the right.\
@@ -63,6 +69,8 @@ Start with counts ahead and behind. Remove the numbers from those two counts. Ad
 ### Rank changes with exits
 
 **Question.** D ranks 17th out of 40. Three people ahead of D and two behind leave. What are D’s ranks from the top and bottom now?
+
+**Picture it.** Draw a line with D in the middle of an ahead group and a behind group. When people leave, cross them out on their own side before recounting.
 
 1. **Count the people above and below first.** Originally 16 people were ahead of D and 40−17=23 were behind D.\
    `ahead = 17 − 1 = 16 and behind = 40 − 17 = 23`

@@ -25,6 +25,8 @@ Compute slope m = ∆y/∆x. Multiply by how far the requested x is from the nea
 
 **Question.** Figures are 90 on day 0, 110 on day 2 and 134 on day 6. Which interval has faster daily growth?
 
+**Picture it.** Imagine two climbers going up different heights in different times. To see who climbs faster, find how much height each gains in one day.
+
 1. **Find the first segment’s slope.** The value rises from 90 to 110 over two days. Its average increase is 20 ÷ 2 = 10 per day.\
    `(110 − 90)/2 = 10 per day`
 2. **Find the second segment’s slope.** The value rises from 110 to 134 over four days. Its rate is 24 ÷ 4 = 6 per day.\
@@ -37,6 +39,8 @@ Compute slope m = ∆y/∆x. Multiply by how far the requested x is from the nea
 ### Net change versus interval change
 
 **Question.** A series reads 80 in April, 100 in May and 90 in June. Find net percent change April to June.
+
+**Picture it.** Cover the May point with your finger. You can still compare where the graph starts in April and where it ends in June.
 
 1. **Choose the requested endpoints.** Net change from April to June compares April’s 80 with June’s 90. May’s intermediate peak is outside that endpoint calculation.\
    `April = 80, June = 90`
@@ -51,6 +55,8 @@ Compute slope m = ∆y/∆x. Multiply by how far the requested x is from the nea
 
 **Question.** Cumulative calls rise from 50 at 9:00 to 170 at 11:00 and 245 at 12:00. Which interval had more calls per hour?
 
+**Picture it.** Treat the graph like a running tally. Take the tally away at the start of each interval, then share the new calls across the hours in that interval.
+
 1. **Extract calls from 9 to 11.** Cumulative counts increase from 50 to 170. The 120 additional calls over two hours give 60 per hour.\
    `(170 − 50)/2 = 60 calls/h`
 2. **Extract calls from 11 to 12.** The count increases from 170 to 245. That is 75 additional calls in one hour, or 75 per hour.\
@@ -63,6 +69,8 @@ Compute slope m = ∆y/∆x. Multiply by how far the requested x is from the nea
 ### Interpolation
 
 **Question.** A straight segment connects (10 min, 40 L) and (18 min, 72 L). Estimate volume at 15 min.
+
+**Picture it.** Imagine the line as a straight ramp. Find how much it rises per minute, then walk five minute-steps from the point you know.
 
 1. **Find the constant slope.** The straight segment rises from 40 to 72 L between 10 and 18 min, giving (72−40)/(18−10) = 4 L/min.\
    `(72 − 40)/(18 − 10) = 4 L/min`

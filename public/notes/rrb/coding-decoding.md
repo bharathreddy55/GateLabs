@@ -25,6 +25,8 @@ Find the shared word between two phrases, then the shared token. A unique overla
 
 **Question.** Each letter is shifted forward by two, wrapping after Z. Decode TCKN.
 
+**Picture it.** Pretend the code walks each letter two steps forward. To read it, make each letter take two steps back and keep the same order.
+
 1. **Reverse the encoding shift.** Each original letter moved two places forward to make the code. To decode, move each coded letter two places backward, wrapping before A if needed.\
    `encode +2 ⇒ decode −2`
 2. **Decode each letter in sequence.** T→R, C→A, K→I and N→L. Keep the four letters in the same order.\
@@ -37,6 +39,8 @@ Find the shared word between two phrases, then the shared token. A unique overla
 ### Reverse then alternate
 
 **Question.** Reverse RAIL, then shift odd positions forward one and even positions back one. Give the code.
+
+**Picture it.** Turn the whole word around before counting positions. Then move every odd spot's letter forward and every even spot's letter backward.
 
 1. **Follow the operations in order.** Reverse RAIL first, giving LIAR. Number the positions from 1 at the left of the reversed word.\
    `RAIL → LIAR`
@@ -52,6 +56,8 @@ Find the shared word between two phrases, then the shared token. A unique overla
 
 **Question.** “blue signal ready” becomes “pa ku ne” and “signal open” becomes “za ku”; order is unspecified and each word has a distinct token. Find the code for signal.
 
+**Picture it.** Imagine each word always wears one secret name tag. One word appears in both sentences. Look for the one tag that appears in both codes.
+
 1. **Find the repeated word.** The two phrases share just one word, “signal.” Because the code may rearrange the tokens, compare which tokens repeat across the phrases.
 2. **Intersect the token sets.** The first code contains pa, ku and ne. The second contains za and ku. Only ku appears in both.
 3. **Match the shared word to the shared token.** Each word has a distinct token, so the only possible code for “signal” is ku.
@@ -61,6 +67,8 @@ Find the shared word between two phrases, then the shared token. A unique overla
 ### Conditional word code
 
 **Question.** Shift vowels one letter forward and consonants one letter back, with wrap. Encode TRAIN.
+
+**Picture it.** Mark each vowel on the original word. Move the marked letters one way and the other letters the other way, without switching their spots.
 
 1. **Classify before shifting.** In TRAIN, A and I are vowels. T, R and N are consonants. Apply the rule to each original letter.\
    `vowels A, I. Consonants T, R, N.`

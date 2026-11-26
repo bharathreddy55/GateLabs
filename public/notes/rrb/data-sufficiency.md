@@ -25,6 +25,8 @@ If neither statement works alone, test their intersection. Watch for contradicti
 
 **Question.** Find x. I: x+y=11. II: y=4. Are they sufficient?
 
+**Picture it.** Treat each statement like a separate clue card. See whether you can pick two different values for x while using just that card. Then try both cards together.
+
 1. **Test statement I on its own.** x + y = 11 leaves several pairs, such as (7,4) and (8,3). They give different answers for x.\
    `(x,y) = (6,5) or (7,4)`
 2. **Test statement II on its own.** y = 4 leaves x free. It gives no equation involving x without I.\
@@ -37,6 +39,8 @@ If neither statement works alone, test their intersection. Watch for contradicti
 ### Domain makes a statement enough
 
 **Question.** For positive x, find x. I: x²=49. II: x<10.
+
+**Picture it.** The question itself allows only positive x. Keep that rule even when you pick up just one statement. It can cross out one answer that would otherwise fit.
 
 1. **Use the domain in the stem.** We are asked for a positive x. This condition applies in both separate statement tests.\
    `domain: x > 0`
@@ -51,6 +55,8 @@ If neither statement works alone, test their intersection. Watch for contradicti
 
 **Question.** Is n even? I: n is an odd integer. II: n is a multiple of 3.
 
+**Picture it.** A definite no answers a yes-or-no question. Look for a clue that always tells you yes or always tells you no.
+
 1. **Identify the kind of answer.** A sufficient statement must settle the yes/no question. It may settle it by proving “no”.
 2. **Test statement I.** Every odd integer is non-even, so I fixes the answer as no in all allowed cases.
 3. **Test statement II.** Multiples of 3 include both 3 and 6. They give different answers to the evenness question, so II alone is insufficient.\
@@ -61,6 +67,8 @@ If neither statement works alone, test their intersection. Watch for contradicti
 ### Target expression despite free variables
 
 **Question.** Find 2x+2y. I: x+y=9. II: x−y=3.
+
+**Picture it.** You need the total of two doubled numbers. You might know their sum well enough to find the answer even while their separate values are hidden.
 
 1. **Factor the requested expression.** The target is 2x + 2y = 2(x+y), so it depends on the sum of the variables.\
    `2x + 2y = 2(x + y)`

@@ -25,6 +25,8 @@ For a motor lifting steadily, useful work is mgh. Divide by time for useful outp
 
 **Question.** Pull an object 10 m horizontally with 50 N at 60° above horizontal. Friction is 8 N. Find the net work if the other forces are vertical.
 
+**Picture it.** Draw an arrow in the direction the box moves. Only the part of the angled pull along that arrow does positive work. Friction works against it.
+
 1. **Project the pull along the motion.** Only the component parallel to the 10 m displacement contributes. It is 50 × cos 60° = 25 N, giving work +25 × 10 = +250 J.\
    `50 × cos 60° = 25 N along motion`
 2. **Include the opposing force.** Friction points against the displacement, so it contributes −8 × 10 = −80 J. Forces perpendicular to the displacement contribute 0 J.\
@@ -37,6 +39,8 @@ For a motor lifting steadily, useful work is mgh. Divide by time for useful outp
 ### Kinetic energy from net work
 
 **Question.** A 4 kg cart speeds up from 3 to 7 m/s. Find the net work.
+
+**Picture it.** Imagine the cart carrying an amount of moving energy. Find that amount before and after the speed changes. The extra energy is the net work done on it.
 
 1. **Find the initial energy.** Use K = ½mv². At 3 m/s, the 4 kg cart has ½ × 4 × 3² = 18 J.\
    `½ × 4 × 3² = 18 J`
@@ -51,6 +55,8 @@ For a motor lifting steadily, useful work is mgh. Divide by time for useful outp
 
 **Question.** A motor raises 60 kg through 8 m in 12 s at constant speed. Use g=10 m/s² and efficiency 80%. Find input power.
 
+**Picture it.** The motor uses some power to lift the load and loses some along the way. Work out what reaches the load first, then recover the larger amount it took in.
+
 1. **Find the useful work.** The load rises at constant speed, so useful work is the increase in potential energy. mgh = 60 × 10 × 8 = 4,800 J.\
    `60 × 10 × 8 = 4,800 J`
 2. **Find the output power.** Power is work ÷ time. In 12 s, the motor delivers 4,800 ÷ 12 = 400 W of useful power.\
@@ -64,6 +70,8 @@ For a motor lifting steadily, useful work is mgh. Divide by time for useful outp
 
 **Question.** A crate slides 6 m at steady speed with a 25 N horizontal push and 25 N friction. Find work by each force and net work.
 
+**Picture it.** One push helps the crate travel and the other force pushes back. They move through the same distance in opposite senses, so one amount of work cancels the other.
+
 1. **Calculate the push work.** The push and displacement point the same way, giving +25 × 6 = +150 J.\
    `+25 × 6 = +150 J`
 2. **Calculate the friction work.** Friction points opposite the motion, giving −25 × 6 = −150 J. Vertical forces, if included, do zero work on the horizontal trip.\
@@ -76,6 +84,8 @@ For a motor lifting steadily, useful work is mgh. Divide by time for useful outp
 ### Electrical energy use
 
 **Question.** A device drawing 1.2 kW runs for 30 minutes. Give the energy drawn in kWh and joules.
+
+**Picture it.** A power rating tells how quickly a device uses energy. Half an hour of running uses half as much energy as a whole hour at that rating.
 
 1. **Convert the running time.** Power is stated in kW, so use hours to obtain kWh. Thirty minutes is 0.5 hour.\
    `30 min = 0.5 h`

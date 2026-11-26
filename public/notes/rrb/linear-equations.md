@@ -25,6 +25,8 @@ Multiply the entire equation by the smallest common denominator. Distribute befo
 
 **Question.** A is 8 years older than B. Four years ago A was twice B’s age. Find their present ages.
 
+**Picture it.** Give each person an age card. To go back four years, remove four from both cards before using the clue about twice the age.
+
 1. **Name the current ages.** Let B be x years old, so A is x + 8. Four years ago, B was x − 4 and A was x + 4.\
    `B = x and A = x + 8`
 2. **Translate “twice” into an equation.** The age condition gives x + 4 = 2(x − 4). Expanding yields x + 4 = 2x − 8, so x = 12.\
@@ -38,6 +40,8 @@ Multiply the entire equation by the smallest common denominator. Distribute befo
 ### Ticket count and price
 
 **Question.** 54 tickets at ₹30 or ₹50 bring in ₹2,060. How many of each?
+
+**Picture it.** Pretend every ticket starts as a cheap ticket. Each time you turn one into an expensive ticket, the cash goes up by the same amount.
 
 1. **Choose one unknown.** Let y be the number of ₹50 tickets. That leaves 54 − y tickets at ₹30.\
    `₹50 tickets: x. ₹30 tickets: 54 − x.`
@@ -53,6 +57,8 @@ Multiply the entire equation by the smallest common denominator. Distribute befo
 
 **Question.** Solve (x−2)/3+(x+1)/4=7.
 
+**Picture it.** The two fractions cut the unknown into thirds and quarters. Multiplying every term by 12 lets you work with whole pieces.
+
 1. **Clear the two denominators.** The least common multiple of 3 and 4 is 12. Multiply every term by 12 to obtain 4(x−2) + 3(x+1) = 84.\
    `4(x − 2) + 3(x + 1) = 84`
 2. **Expand and collect.** The left side is 4x − 8 + 3x + 3 = 7x − 5. Therefore 7x = 89.\
@@ -65,6 +71,8 @@ Multiply the entire equation by the smallest common denominator. Distribute befo
 ### Dependent equations
 
 **Question.** Do x+y=12 and 3x+3y=36 determine x and y uniquely?
+
+**Picture it.** Imagine writing the same instruction twice, once in single pieces and once in groups of three. There are still many pairs that add to 12.
 
 1. **Compare the two equations.** Dividing every term of 3x + 3y = 36 by 3 gives x + y = 12, the first equation again.\
    `(3x + 3y = 36) ÷ 3 yields x + y = 12`

@@ -25,6 +25,8 @@ If Q is two seats from P, test P−2 and P+2 where they exist. Apply all other c
 
 **Question.** Five people A, B, C, D, E sit facing north in a row. C is in the middle, E is at the far right, A is immediately left of C, and D is between C and E. Find the order.
 
+**Picture it.** Draw five chairs. Mark the middle and far-right chairs first. Those anchors make the other clues easier to follow.
+
 1. **Fix the seats named outright.** Number the seats 1–5 from left to right. C takes seat 3 and E takes seat 5.\
    `C = 3, E = 5`
 2. **Apply the position clues.** The people face north, so A immediately to C’s left goes in seat 2. The only seat between C and E is seat 4, so D goes there.\
@@ -37,6 +39,8 @@ If Q is two seats from P, test P−2 and P+2 where they exist. Apply all other c
 ### Circular opposition
 
 **Question.** Six people sit in evenly spaced seats. B is opposite A, and C is one seat clockwise from B. How far clockwise from A is C?
+
+**Picture it.** Picture a round table with six chairs. Walk halfway around to the opposite chair, then take one more step clockwise.
 
 1. **Measure opposition in seat moves.** There are six equally spaced seats, so the opposite seat is half a circle away, or three moves clockwise from A.\
    `6 ÷ 2 = 3 moves to B`
@@ -51,6 +55,8 @@ If Q is two seats from P, test P−2 and P+2 where they exist. Apply all other c
 
 **Question.** Four people face the centre of a circle. B is to the immediate right of A, and C is opposite A. Who is immediately left of C?
 
+**Picture it.** Put a little arrow at each person's chair to show where they face. At opposite seats, their own left and right can point different ways on your paper.
+
 1. **Choose a fixed view of the circle.** Put A in the top seat, facing down towards the centre. From that position A’s right points towards the left-hand seat on the page, so B sits there.
 2. **Place the opposite person.** C is at the bottom, facing up towards the centre. C’s own left now points towards the left-hand seat on the page.
 3. **Read the neighbour from C’s perspective.** C’s immediate left is the seat already occupied by B. Rotate the diagram mentally if A starts in a different position and the relative answer stays the same.
@@ -60,6 +66,8 @@ If Q is two seats from P, test P−2 and P+2 where they exist. Apply all other c
 ### Gap and both cases
 
 **Question.** In a row of six seats, P sits in seat 3. Exactly one person sits between P and Q. R is immediately to Q’s right, as seen from the front of the diagram. Seats are numbered left to right in that view. If R cannot be in seat 6, where is Q?
+
+**Picture it.** Start at P in seat 3. Try putting Q two seats to the left and two to the right. Use R's blocked seat to cross out one of those drawings.
 
 1. **Translate the gap into a seat difference.** Exactly one person between P and Q means their seat numbers differ by two. With P in seat 3, Q could be in seat 1 or 5.\
    `Q = 3 ± (1 + 1) ⇒ Q = 1 or 5`

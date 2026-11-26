@@ -25,6 +25,8 @@ When different items have equal SPs, recover each CP by division. Add receipts a
 
 **Question.** An item costs ₹960, is marked up 35% and is discounted 20%. Find profit percent.
 
+**Picture it.** Imagine three price tags on the same item. One tells what the shop paid, one is printed on the shelf and one tells what the customer paid after the offer.
+
 1. **Mark up from the cost.** The marked price is 135% of ₹960, so it is 960 × 1.35 = ₹1,296.\
    `960 × 1.35 = ₹1,296`
 2. **Discount the marked price.** The buyer pays 80% of ₹1,296. The selling price is ₹1,036.80.\
@@ -37,6 +39,8 @@ When different items have equal SPs, recover each CP by division. Add receipts a
 ### Marking for a target profit
 
 **Question.** Cost is ₹850. What marked price gives a 20% profit after a 15% discount?
+
+**Picture it.** Work backward from the money the shop wants to collect. The shelf tag needs to be higher because the customer pays only 85% of it.
 
 1. **Find the required selling price.** A 20% gain means the seller needs 120% of the ₹850 cost, or 850 × 1.20 = ₹1,020.\
    `850 × 1.20 = ₹1,020`
@@ -51,6 +55,8 @@ When different items have equal SPs, recover each CP by division. Add receipts a
 
 **Question.** Two goods sell for ₹600 each, one at 20% gain and one at 20% loss. Find the overall result.
 
+**Picture it.** Both items bring the same cash to the till, but they cost the shop different amounts. Start with those two different costs before judging the result.
+
 1. **Recover each cost from its own multiplier.** The profit item sells for 1.2 times its cost, so its cost was 600 ÷ 1.2 = ₹500. The loss item sells at 0.8 times its cost, so its cost was ₹750.\
    `600 ÷ 1.20 = ₹500`
 2. **Add receipts and costs.** The seller receives ₹1,200 against costs of ₹500 + ₹750 = ₹1,250. That makes a ₹50 loss.\
@@ -63,6 +69,8 @@ When different items have equal SPs, recover each CP by division. Add receipts a
 ### Successive versus single discount
 
 **Question.** Which price is lower: 20% and then 10% off, or a single 29% off?
+
+**Picture it.** Picture 100 rupees on each tag. For two offers, take the second cut from the smaller tag. Compare how much money stays on each tag.
 
 1. **Find the retained fraction for two discounts.** A 20% discount leaves 0.8 of the marked price. The next discount leaves 0.9 of that reduced amount, so the buyer pays 0.8 × 0.9 = 0.72.\
    `0.80 × 0.90 = 0.72`

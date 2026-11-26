@@ -25,6 +25,8 @@ For shares, divide each subgroup by its own whole. For counts shown as shares, m
 
 **Question.** Dispatch bars for Monday are 28 express and 42 local. Tuesday shows 33 express and 35 local. Which day has the higher express share?
 
+**Picture it.** Imagine sorting each day's trains into an express basket and a local basket. Compare the express basket with that day's two baskets together.
+
 1. **Find Monday’s total.** Monday combines 28 express and 42 local dispatches, so express is 28/(28+42) = 40% of its total.\
    `28 + 42 = 70`\
    `28/70 = 40%`
@@ -40,6 +42,8 @@ For shares, divide each subgroup by its own whole. For counts shown as shares, m
 
 **Question.** In a count stack, the first band ends at 180, the second ends at 315 and the top ends at 420. Find the second band’s share.
 
+**Picture it.** Picture blocks stacked to make one tall tower. The middle band's size is its top mark minus the height already underneath it.
+
 1. **Locate the band boundaries.** The second band starts where the first ends, at 180, and finishes at 315. The value 315 includes the bands below it.\
    `lower = 180, upper = 315`
 2. **Find the band’s own count.** Subtract its bottom boundary from its top, 315 − 180 = 135.\
@@ -53,6 +57,8 @@ For shares, divide each subgroup by its own whole. For counts shown as shares, m
 
 **Question.** Digital shares are 40% at A and 35% at B. Totals are 300 and 480. Which has more digital transactions?
 
+**Picture it.** A larger slice of a small cake can be smaller than a slightly thinner slice of a big cake. Turn both percentages into actual counts first.
+
 1. **Recover A’s count.** Apply the 40% band to A’s 300 transactions, giving 120 digital transactions.\
    `0.40 × 300 = 120`
 2. **Recover B’s count.** Apply B’s 35% band to its larger base of 480, giving 168 digital transactions.\
@@ -65,6 +71,8 @@ For shares, divide each subgroup by its own whole. For counts shown as shares, m
 ### Axis starting above zero
 
 **Question.** One bar ends at 110 and the other at 130 on an axis beginning at 100. What is the actual percent increase from first to second?
+
+**Picture it.** The bottom of the drawing hides the first 100 units. Add those back in your mind by reading the numbers printed at the top of the bars.
 
 1. **Read the true bar endpoints.** The axis begins at 100, but the actual values are 110 and 130. The visible heights above 100 are only 10 and 30.\
    `old value = 110, new value = 130`

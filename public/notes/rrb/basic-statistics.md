@@ -25,6 +25,8 @@ Adding a constant c to each value adds c to its mean and median. Because both en
 
 **Question.** Values 2, 5 and 8 occur 3, 4 and 1 times. Find the mean.
 
+**Picture it.** Imagine laying out a card for every reading. Instead of writing 5 four times, count four copies of 5 with multiplication.
+
 1. **Recover the weighted sum.** Each frequency tells how many copies of its value contribute. The sum is 2 × 3 + 5 × 4 + 8 × 1 = 34.\
    `2 × 3 + 5 × 4 + 8 × 1 = 34`
 2. **Count all observations.** The frequencies add to 3 + 4 + 1 = 8. This includes repeated values.\
@@ -37,6 +39,8 @@ Adding a constant c to each value adds c to its mean and median. Because both en
 ### Median and mode from a table
 
 **Question.** Values 4, 7, 9 and 12 occur 3, 2, 3 and 2 times. Find median and modes.
+
+**Picture it.** Draw all ten spots in a line. Repeated numbers still get their own spots. The middle is between spots five and six, while the mode depends on which number has the most spots.
 
 1. **Locate the middle positions.** The frequencies add to 10, so the median is the average of the 5th and 6th observations in sorted order.\
    `n = 3 + 2 + 3 + 2 = 10 ⇒ ranks 5 and 6`
@@ -52,6 +56,8 @@ Adding a constant c to each value adds c to its mean and median. Because both en
 
 **Question.** For 2,3,4,5,6 replace 6 by 36. Compare mean and median.
 
+**Picture it.** One high number gets much bigger, so it lifts the total. Ask whether it also moves the number that stands in the middle of the line.
+
 1. **Find the original centre.** The values total 20, so their mean is 4. The third value is also 4, giving median 4.\
    `(2 + 3 + 4 + 5 + 6) ÷ 5 = 4`
 2. **Update the mean.** Replacing 6 with 36 adds 30 to the sum. The new sum is 50 with the same five observations, so the mean becomes 10.\
@@ -64,6 +70,8 @@ Adding a constant c to each value adds c to its mean and median. Because both en
 ### Translate readings
 
 **Question.** Readings have mean 18 and range 7. Add 12 to every reading. Find mean and range.
+
+**Picture it.** Think of picking up the whole line of numbers and sliding it to the right by 12. The middle moves with the line. The space between its ends stays the same.
 
 1. **Track the change to the sum.** If there are n readings, adding 12 to each raises their total by 12n.\
    `new sum = old sum + 12n`

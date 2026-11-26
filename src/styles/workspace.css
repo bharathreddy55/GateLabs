@@ -127,6 +127,12 @@ body,.app-shell,.landing-workspace{font-family:Inter,-apple-system,BlinkMacSyste
 .exam-note [data-note-content] > * {
     margin-block: .75rem;
 }
+.exam-note-picture {
+    padding: .65rem .85rem;
+    border-inline-start: 3px solid var(--ws-primary);
+    border-radius: .4rem;
+    background: var(--ws-soft);
+}
 .exam-note [data-note-content] > h4 {
     margin-block: 1.25rem .375rem;
     color: var(--ws-text);

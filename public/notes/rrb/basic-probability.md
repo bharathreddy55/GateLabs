@@ -25,6 +25,8 @@ For OR with overlap, add both event probabilities then subtract the shared cases
 
 **Question.** Two fair six-sided dice are rolled. Find P(sum = 9).
 
+**Picture it.** Imagine one red die and one blue die. A 3 on red and 6 on blue is different from a 6 on red and 3 on blue.
+
 1. **Count all equally likely outcomes.** For each of six first-die values there are six second-die values. This gives 36 ordered results.\
    `6 × 6 = 36 outcomes`
 2. **List the pairs with sum 9.** They are (3,6), (4,5), (5,4) and (6,3). For example, (3,6) counts separately from (6,3) because the dice are distinguished.\
@@ -37,6 +39,8 @@ For OR with overlap, add both event probabilities then subtract the shared cases
 ### At least one
 
 **Question.** Three independent fair coin tosses are made. Find the chance of at least one head.
+
+**Picture it.** It is easier to picture the one way you never see a head. All three coins must land tails. Every other result counts towards the answer.
 
 1. **Identify the complement.** At least one head includes one, two or three heads. The single excluded outcome is three tails.\
    `P(at least one head) = 1 − P(all tails)`
@@ -51,6 +55,8 @@ For OR with overlap, add both event probabilities then subtract the shared cases
 
 **Question.** A bag has 5 red and 3 blue balls. Find the chance of drawing two red without replacement.
 
+**Picture it.** The first red ball stays in your hand. When you reach into the bag again, there is one less red ball and one less ball altogether.
+
 1. **Find the first-draw chance.** There are five red balls among eight total, so the first draw is red with probability 5/8.\
    `P(first red) = 5/8`
 2. **Update after a red is removed.** Because the first ball stays out, four red balls remain among seven total. The chance of another red on this branch is 4/7.\
@@ -63,6 +69,8 @@ For OR with overlap, add both event probabilities then subtract the shared cases
 ### Overlapping events
 
 **Question.** A number from 1 through 30 is picked uniformly. Find the probability it is a multiple of 3 or 5.
+
+**Picture it.** Picture circling multiples of 3 in blue and multiples of 5 in red. Numbers circled in both colours should still be counted only once.
 
 1. **Count each group separately.** There are 30 ÷ 3 = 10 multiples of 3 and 30 ÷ 5 = 6 multiples of 5.\
    `multiples of 3: 10. Multiples of 5: 6.`
@@ -77,6 +85,8 @@ For OR with overlap, add both event probabilities then subtract the shared cases
 ### Exactly one red without replacement
 
 **Question.** A box has 5 red, 4 blue and 3 green tokens. Two are drawn without replacement. What is the probability that exactly one is red?
+
+**Picture it.** Put blue and green in one pile called not red. A pair that works has one token from the red pile and one from the other pile.
 
 1. **Count the pool.** Group the blue and green tokens together because either colour counts as non-red.\
    `5 + 4 + 3 = 12 tokens`\

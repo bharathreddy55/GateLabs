@@ -25,6 +25,8 @@ The longest side lies opposite the right angle. At a tangent that side is the di
 
 **Question.** A triangle’s exterior angle is 132°. Its remote interior angles are in ratio 5:6. Find the three interior angles.
 
+**Picture it.** Imagine a triangle corner sitting on a straight line. Its inside and outside angles fill that line. The outside angle also tells us what the other two corners add to.
+
 1. **Use the exterior angle theorem.** The exterior angle equals the sum of the two interior angles away from its vertex. Those two angles therefore total 132°.\
    `A + B = 132°`
 2. **Split the sum in ratio 5:6.** The 11 total parts give 132 ÷ 11 = 12° per part. The angles are 5 × 12° = 60° and 6 × 12° = 72°.\
@@ -39,6 +41,8 @@ The longest side lies opposite the right angle. At a tangent that side is the di
 
 **Question.** In ABC, D is on AB and E on AC with DE parallel to BC. AD:DB=2:3. Area of ABC is 125 cm². Find area of ADE.
 
+**Picture it.** Picture the small triangle as a resized photo of the big triangle. Find how much shorter one matching edge is. The picture shrinks in both width and height.
+
 1. **Establish similarity.** DE is parallel to BC. The matching angles at D and B, together with the angle at A, make ADE similar to ABC.\
    `∠ADE = ∠ABC and ∠DAE = ∠BAC`
 2. **Find the matching side ratio.** AB includes both AD and DB. From AD:DB = 2:3, AD/AB = 2/(2+3) = 2/5.\
@@ -52,6 +56,8 @@ The longest side lies opposite the right angle. At a tangent that side is the di
 
 **Question.** A regular polygon has an interior angle of 156°. Find its sides.
 
+**Picture it.** Walk around the edge of a regular shape. You make the same turn at every corner. Counting those little outside turns tells you how many sides a full turn takes.
+
 1. **Find the outside turn.** Each regular-polygon vertex has interior angle 156°. Its exterior turn is 180° − 156° = 24°.\
    `180° − 156° = 24°`
 2. **Use one full circuit.** Walking around the polygon in one direction makes a complete turn of 360°. Each vertex contributes the same 24°.\
@@ -64,6 +70,8 @@ The longest side lies opposite the right angle. At a tangent that side is the di
 ### Tangent length
 
 **Question.** Distance from external point P to circle centre O is 13 cm, with radius 5 cm. Find the length to a touchpoint T.
+
+**Picture it.** Draw a radius to the place where the straight line only touches the circle. It meets that line at a square corner, giving you a right triangle.
 
 1. **Mark the right angle.** The radius OT is perpendicular to the tangent PT at T, so triangle OTP has its right angle at T.\
    `∠OTP = 90°`

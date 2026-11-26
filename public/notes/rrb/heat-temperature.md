@@ -25,6 +25,8 @@ K = °C + 273.15 and °F = (9/5)°C + 32. For a temperature difference the offse
 
 **Question.** Express 40 °C in kelvin and Fahrenheit.
 
+**Picture it.** Imagine three thermometers showing the same cup. The cup does not change because the marks change. Each scale has its own number at the starting line.
+
 1. **Convert Celsius to kelvin.** Kelvin uses the same size step as Celsius but starts at a different zero. Add 273.15 to 40 to get 313.15 K.\
    `40 + 273.15 = 313.15 K`
 2. **Convert Celsius to Fahrenheit.** Multiply the Celsius reading by 9/5 to change the scale size. This gives 40 × 9/5 = 72.\
@@ -37,6 +39,8 @@ K = °C + 273.15 and °F = (9/5)°C + 32. For a temperature difference the offse
 ### Warm and then melt ice
 
 **Question.** How much heat raises 0.2 kg of ice from −10 °C to 0 °C and melts it? Use c=2100 J/(kg·K), L=334 kJ/kg.
+
+**Picture it.** Ice first warms up enough to begin melting. Then it needs more energy to become water while staying at its melting point. Add the energy for both jobs.
 
 1. **Heat the solid to its melting point.** A 10 K rise for 0.2 kg of ice takes mcΔT = 0.2 × 2,100 × 10 = 4,200 J, or 4.2 kJ.\
    `Qwarm = 0.2 × 2100 × 10 = 4,200 J = 4.2 kJ`
@@ -51,6 +55,8 @@ K = °C + 273.15 and °F = (9/5)°C + 32. For a temperature difference the offse
 
 **Question.** Mix 300 g water at 60 °C and 200 g at 20 °C. Ignore the container and heat loss. Find final temperature.
 
+**Picture it.** When you mix the two cups, the warm water gives energy to the cold water. There is more warm water, so the meeting point is closer to its starting temperature.
+
 1. **Set up the heat balance.** In the insulated mixture, heat lost by the warm water equals heat gained by the cool water. Their common specific heat cancels.\
    `300(60 − T) = 200(T − 20)`
 2. **Solve for the shared temperature.** Using T for the final temperature gives 300(60 − T) = 200(T − 20). Rearranging gives 500T = 22,000.\
@@ -63,6 +69,8 @@ K = °C + 273.15 and °F = (9/5)°C + 32. For a temperature difference the offse
 ### Heat transfer mechanism
 
 **Question.** Why can sunlight warm a station roof when the Sun and Earth are separated by vacuum?
+
+**Picture it.** You can feel warmth from sunlight without touching the Sun. Energy reaches the roof across space as light and other radiation, and the roof absorbs some of it.
 
 1. **Identify what crosses the gap.** The space between the Sun and Earth is largely vacuum. Heat mechanisms requiring matter cannot account for transfer across that gap.
 2. **Name the mechanism.** Thermal radiation carries energy as electromagnetic waves, which can travel through vacuum.

@@ -25,6 +25,8 @@ Keep solutions in the requested interval, usually 0 ≤ m < 60. Use the question
 
 **Question.** What is the smaller angle at 8:20?
 
+**Picture it.** Picture the hour hand walking slowly towards 9 while the long hand moves to the 20-minute mark. Find where both are before counting how far apart they are.
+
 1. **Locate the hour hand.** At 8:00 it is 8 × 30° = 240° clockwise from 12. In 20 minutes it moves another 20 × 0.5° = 10°, reaching 250°.\
    `8 × 30° + 20 × 0.5° = 250°`
 2. **Locate the minute hand.** It moves 6° per minute, so at 8:20 it is 20 × 6° = 120° from 12.\
@@ -37,6 +39,8 @@ Keep solutions in the requested interval, usually 0 ≤ m < 60. Use the question
 ### Coincidence
 
 **Question.** When between 2:00 and 3:00 do the hands overlap?
+
+**Picture it.** At 2:00 the short hand gets a head start. The long hand catches up a little each minute. Divide the gap by how much closes each minute to find when they meet.
 
 1. **Find the starting gap.** At 2:00 the minute hand is at 12 and the hour hand is at the 2 mark, 2 × 30° = 60° ahead.\
    `gap at 2:00 = 2 × 30° = 60°`
@@ -51,6 +55,8 @@ Keep solutions in the requested interval, usually 0 ≤ m < 60. Use the question
 ### Right angle with two solutions
 
 **Question.** When between 4:00 and 5:00 do the hands make right angles?
+
+**Picture it.** Imagine the hands making a square corner on the way together and again after they pass. Find both times within the given hour.
 
 1. **Write the signed gap.** At 4:00 the hour hand is 120° ahead. After m minutes the gap (hour position minus minute position) is 120 − 5.5m degrees.\
    `signed gap = 120° − 5.5m`
@@ -67,6 +73,8 @@ Keep solutions in the requested interval, usually 0 ≤ m < 60. Use the question
 ### Smaller and larger arc
 
 **Question.** Find both angles at 11:10.
+
+**Picture it.** You can travel between the two clock hands around either side of the face. The two routes always add up to one full circle.
 
 1. **Locate the hour and minute hands.** The hour hand is at 11 × 30° + 10 × 0.5° = 335°. The minute hand is at 10 × 6° = 60°.\
    `hour = 11 × 30° + 10 × 0.5° = 335°`\

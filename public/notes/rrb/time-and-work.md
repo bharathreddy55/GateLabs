@@ -25,6 +25,8 @@ Turn together-time and solo-time into rates first. Subtract the known contributo
 
 **Question.** A needs 12 days alone and B needs 18. They work together four days before A leaves. When is the job done?
 
+**Picture it.** Picture a wall made of little tiles. Both workers place tiles at first. When one goes home, check how many tiles still need the second worker.
+
 1. **Choose a convenient job size.** Use 36 work units, the least common multiple of 12 and 18. A produces 36 ÷ 12 = 3 units/day, and B produces 2.\
    `36 ÷ 12 = 3, 36 ÷ 18 = 2 units/day`
 2. **Find the joint progress.** Together their rate is 3 + 2 = 5 units/day. In four days they complete 20 units, leaving 16.\
@@ -39,6 +41,8 @@ Turn together-time and solo-time into rates first. Subtract the known contributo
 
 **Question.** A tap fills a tank in eight hours and a leak empties it in 24 hours. How long from empty with both open?
 
+**Picture it.** One tap puts water in and one hole lets it out. Only the water added after the leak is taken away can raise the level.
+
 1. **Express both rates in the same units.** Treat the tank as 24 units. The tap fills 24 ÷ 8 = 3 units/hour. The leak removes 24 ÷ 24 = 1 unit/hour.\
    `24 ÷ 8 = 3, 24 ÷ 24 = 1 unit/hour`
 2. **Find the net fill rate.** Both act during the same hour, so net gain is 3 − 1 = 2 units/hour.\
@@ -52,6 +56,8 @@ Turn together-time and solo-time into rates first. Subtract the known contributo
 
 **Question.** A and B can complete a job in six and eight days respectively. They alternate days starting with A. Find finish time.
 
+**Picture it.** Imagine A and B taking turns filling a sticker sheet. Use full turns while there is room. On the last turn, stop when the last space fills.
+
 1. **Find output per turn.** Use a 24-unit job. A produces 24 ÷ 6 = 4 units on each turn, and B produces 24 ÷ 8 = 3.\
    `24 ÷ 6 = 4, 24 ÷ 8 = 3 units/day`
 2. **Count complete cycles.** Each A–B pair takes two calendar days and finishes 7 units. Three pairs take six days and finish 21 units.\
@@ -64,6 +70,8 @@ Turn together-time and solo-time into rates first. Subtract the known contributo
 ### Recover a worker’s rate
 
 **Question.** Together A and B take 10 days. A alone takes 15. How long for B alone?
+
+**Picture it.** Imagine two children cleaning together. If you know how much they clean in one day and how much A does, the difference is B's part.
 
 1. **Convert the given times to rates.** Together they finish 1/10 of the job each day. A alone finishes 1/15 per day.\
    `Together = 1/10, A = 1/15 job/day`

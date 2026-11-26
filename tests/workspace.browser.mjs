@@ -84,6 +84,7 @@ try{
      const reader=notesTab.locator('[data-note-reader]');
      await reader.getByRole('heading',{name:'Basics first',exact:true}).waitFor();
      await reader.getByRole('columnheader',{name:'Use this rule',exact:true}).waitFor();
+     await reader.locator('.exam-note-picture',{hasText:'cutting all three ropes with one ruler'}).waitFor();
      const calculation=reader.locator('li > br + code',{hasText:'9,999 − 39 = 9,960'});
      await calculation.waitFor();
      assert.match(await calculation.locator('..').innerText(),/Subtract that excess/);

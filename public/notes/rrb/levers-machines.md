@@ -25,6 +25,8 @@ When n rope segments supporting the moving block each shorten by the rise h, the
 
 **Question.** A 300 N load acts 0.2 m from the pivot. How much perpendicular effort at 0.75 m on the opposite side balances it?
 
+**Picture it.** Imagine a seesaw. A lighter push can balance a heavier load if you push farther from the middle. Compare both force and distance on each side.
+
 1. **Find the load’s turning moment.** Moment = force × perpendicular distance from the pivot. The load produces 300 × 0.2 = 60 N·m.\
    `300 × 0.2 = 60 N·m`
 2. **Write the balance condition.** The effort acts on the opposite side, so its moment must match 60 N·m. With effort E, the equation is E × 0.75 = 60.\
@@ -38,6 +40,8 @@ When n rope segments supporting the moving block each shorten by the rise h, the
 
 **Question.** In a wheelbarrow the wheel axle is the fulcrum, load sits between axle and hands, and hands lift the handles. Classify it.
 
+**Picture it.** Draw the wheel, the load and your hands in one line. The wheel holds the pivot. The named lever class depends on which of the three is in the middle.
+
 1. **Locate the three parts.** The wheel axle is the fulcrum, the load sits in the tray, and the hands supply effort at the handles.
 2. **Read their order along the lever.** From the axle to the handles, the order is fulcrum → load → effort. The load is in the middle.
 3. **Apply the classification.** A lever with its load between the fulcrum and effort is Class II.
@@ -47,6 +51,8 @@ When n rope segments supporting the moving block each shorten by the rise h, the
 ### Inclined plane efficiency
 
 **Question.** A 240 N load rises 1 m along a 5 m ramp using 60 N along the ramp. Find MA and efficiency.
+
+**Picture it.** A ramp lets you push with less force over a longer distance. Compare the useful lift to the total work of pushing all the way up the ramp.
 
 1. **Find the mechanical advantage.** Divide useful load by effort, MA = 240/60 = 4.\
    `MA = 240/60 = 4`
@@ -60,6 +66,8 @@ When n rope segments supporting the moving block each shorten by the rise h, the
 ### Pulley with loss
 
 **Question.** A moving block is supported by four rope segments. The 320 N load needs 100 N effort and rises 2 m. Find rope pulled and efficiency.
+
+**Picture it.** Imagine four strings helping hold the moving block up. When the block moves a little, each piece needs to shorten. You pull all four of those lengths through the free end.
 
 1. **Find the free-end movement.** Each of the four supporting segments shortens by 2 m when the moving block rises by 2 m. The free end must supply 4 × 2 = 8 m of movement.\
    `rope pulled = 4 × 2 = 8 m`

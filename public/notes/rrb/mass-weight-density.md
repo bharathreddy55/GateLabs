@@ -25,6 +25,8 @@ Set ρfluid × g × Vsub equal to ρobject × g × Vtotal. Cancelling g gives a 
 
 **Question.** What does a 12 kg tool weigh where g=10 m/s² and where g=1.6 m/s²?
 
+**Picture it.** Imagine taking the same toolbox to a place where gravity feels weaker. You bring the same amount of stuff with you, but the pull on that stuff changes.
+
 1. **Separate mass from weight.** The tool remains 12 kg at both locations. Its weight is the local gravitational force, given by W = mg.\
    `m = 12 kg in both places`
 2. **Use the first field strength.** At g = 10 m/s², W = 12 × 10 = 120 N.\
@@ -37,6 +39,8 @@ Set ρfluid × g × Vsub equal to ρobject × g × Vtotal. Cancelling g gives a 
 ### Density by displacement
 
 **Question.** A fully submerged 156 g stone raises water in a measuring cylinder from 90 to 150 mL. Find its density.
+
+**Picture it.** When the stone goes underwater, it takes up room. The water rises to make space. The increase in the reading tells you how much space the stone took.
 
 1. **Read the displaced amount.** Subtract the initial cylinder reading from the final reading. The stone has displaced 150 − 90 = 60 mL.\
    `150 − 90 = 60 mL`
@@ -51,6 +55,8 @@ Set ρfluid × g × Vsub equal to ρobject × g × Vtotal. Cancelling g gives a 
 
 **Question.** A sealed object of mass 360 g displaces 500 cm³ when fully immersed. Find its average density and whether it floats in water if released.
 
+**Picture it.** Imagine two sealed lunch boxes of the same size, one filled and one partly empty. Compare the mass for the whole outside size, then compare that number with water.
+
 1. **Use the object’s external volume.** Full immersion displaces 500 cm³. Include the hollow region when using the volume of the sealed object as a whole.\
    `external volume = 500 cm³`
 2. **Find the average density.** Divide total mass by the displaced volume, 360 ÷ 500 = 0.72 g/cm³.\
@@ -63,6 +69,8 @@ Set ρfluid × g × Vsub equal to ρobject × g × Vtotal. Cancelling g gives a 
 ### Floating fraction
 
 **Question.** A wooden block has density 650 kg/m³ and floats in water with density 1000 kg/m³. What fraction is submerged?
+
+**Picture it.** Picture a floating block held up by the water it pushes away. A lighter block only has to push away enough water to match its own weight.
 
 1. **Set up the floating balance.** The object’s weight equals the buoyant force. The weight of displaced water therefore equals the weight of the block.\
    `ρwater g Vsub = ρblock g Vtotal`

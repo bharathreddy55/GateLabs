@@ -25,6 +25,8 @@ When a container has a uniform cross-section, height of a layer is volume divide
 
 **Question.** A 20 m by 14 m garden has a 1 m wide path outside all four edges. Find path area.
 
+**Picture it.** Draw the garden with a frame around it. Both its left and right edges gain a metre, and so do its top and bottom edges. Take away the inside rectangle.
+
 1. **Find the outer rectangle.** The 1 m path adds 1 m at each end of both dimensions. The outer length is 22 m and the outer width is 16 m.\
    `outer dimensions = 22 m × 16 m`
 2. **Find both areas.** The outer rectangle covers 22 × 16 = 352 m². The garden covers 20 × 14 = 280 m².\
@@ -37,6 +39,8 @@ When a container has a uniform cross-section, height of a layer is volume divide
 ### Annular sector
 
 **Question.** A 90° sector has outer radius 10 cm and inner radius 6 cm removed. Find remaining area.
+
+**Picture it.** Picture a quarter of a thick ring. Find the area of the whole ring by removing its hole, then keep only the quarter shown.
 
 1. **Find the full ring area.** The removed inner circle has radius 6 cm and the outside radius is 10 cm. The difference in their areas is π(10² − 6²) = 64π cm².\
    `π(10² − 6²) = 64π cm²`
@@ -51,6 +55,8 @@ When a container has a uniform cross-section, height of a layer is volume divide
 
 **Question.** An open-top cylinder has radius 7 cm and height 10 cm. How much sheet area is needed, ignoring overlaps?
 
+**Picture it.** Imagine making a round bin from a flat sheet. You need one round bottom and a strip that wraps around the side. The open top needs no piece.
+
 1. **Identify the sheet pieces.** The container needs the cylindrical wall and one circular base. The opening at the top requires no sheet.\
    `total = wall + one base`
 2. **Find the curved wall area.** Unrolling the wall gives a rectangle of width 2πr and height h. Its area is 2π × 7 × 10 = 140π cm².\
@@ -64,6 +70,8 @@ When a container has a uniform cross-section, height of a layer is volume divide
 
 **Question.** A tank base is 80 by 50 cm. Pour in 24 L. How far does the water level rise?
 
+**Picture it.** Picture the new water as a flat layer over the whole tank floor. The same water would make a thinner layer over a bigger floor.
+
 1. **Match the volume units.** One litre is 1,000 cm³. The added water therefore occupies 24 × 1,000 = 24,000 cm³.\
    `24 L = 24,000 cm³`
 2. **Calculate the horizontal base area.** The rectangular base covers 80 × 50 = 4,000 cm². This is also the area of each horizontal layer of water.\
@@ -76,6 +84,8 @@ When a container has a uniform cross-section, height of a layer is volume divide
 ### Comparing solids in the same space
 
 **Question.** A cone and a cylinder have radius 3 cm and height 8 cm. What volume is unfilled if the cone’s contents are poured into the cylinder?
+
+**Picture it.** Imagine a cone and a straight cup with the same round floor and height. The cone holds one out of three parts of what the straight cup holds.
 
 1. **Find the common base area.** Both solids have radius 3 cm, giving base area π × 3² = 9π cm².\
    `π × 3² = 9π cm²`

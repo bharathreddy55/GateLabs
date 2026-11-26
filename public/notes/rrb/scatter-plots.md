@@ -25,6 +25,8 @@ When asked whether a pattern establishes causation, think of a plausible variabl
 
 **Question.** Points are near (1,9), (2,7), (3,6), (4,4), (5,3). Describe the pattern.
 
+**Picture it.** Trace the points from left to right. See which way they go and imagine drawing a straight strip through the middle of them.
+
 1. **Compare x with y.** As x advances from 1 to 5, the listed y-values fall from about 9 to about 3. This points to a negative association.
 2. **Inspect the size of each fall.** Over equal x steps, the changes are roughly −2, −1, −2 and −1. The rates differ a little but stay close.\
    `successive y changes: −2, −1, −2, −1`
@@ -35,6 +37,8 @@ When asked whether a pattern establishes causation, think of a plausible variabl
 ### Residual and outlier
 
 **Question.** A trend line predicts 22 faults at x=8. The plotted value is 35. Find the residual and interpret its sign.
+
+**Picture it.** Put your finger on x = 8. Find the dot and the line straight above it. The signed gap is how much higher or lower the dot sits.
 
 1. **Match observed and fitted values.** At x = 8, the actual point is at y = 35 and the fitted line is at y = 22. The residual compares them at that same x.\
    `observed = 35, predicted = 22`
@@ -48,6 +52,8 @@ When asked whether a pattern establishes causation, think of a plausible variabl
 
 **Question.** A fitted straight line passes through (2,15) and (6,27). Estimate y at x=4.
 
+**Picture it.** The line gives you two known spots. Find how much it goes up in one step to the right, then take two steps from the left spot.
+
 1. **Calculate the fitted slope.** From x = 2 to x = 6, y rises by 27 − 15 = 12. The slope is 12 ÷ 4 = 3 per x unit.\
    `(27 − 15)/(6 − 2) = 3`
 2. **Move from a known point.** x = 4 is two units beyond x = 2. The predicted response therefore rises by 2 × 3 = 6.\
@@ -60,6 +66,8 @@ When asked whether a pattern establishes causation, think of a plausible variabl
 ### Correlation and causal claim
 
 **Question.** Stores with more staff have higher daily sales. Does the scatter plot alone show that adding staff raises sales?
+
+**Picture it.** A bigger store may have more workers and more customers. Two things moving together can still come from another cause.
 
 1. **State the observed pattern.** The graph shows higher sales at stores with more staff, an association between the two variables.
 2. **Find a plausible alternative explanation.** Store size could increase staffing and sales at the same time. The graph gives no comparison that keeps store size and similar factors fixed.

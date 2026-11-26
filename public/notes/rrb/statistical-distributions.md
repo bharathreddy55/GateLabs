@@ -25,6 +25,8 @@ Find the crowded region and look for the longer sparse tail. With a symmetric co
 
 **Question.** A band of width 5 has frequency density 4. Another of width 10 has density 3. Which has more readings?
 
+**Picture it.** Treat each band as a rectangle made of reading tiles. A broad short rectangle may cover more tiles than a tall narrow one.
+
 1. **Use area for a density histogram.** The vertical scale is frequency density. A bar’s frequency is width × density.\
    `frequency = width × density`
 2. **Find both bar areas.** The first band represents 5 × 4 = 20 readings. The second represents 10 × 3 = 30 readings.\
@@ -37,6 +39,8 @@ Find the crowded region and look for the longer sparse tail. With a symmetric co
 ### Recover a class and median band
 
 **Question.** Cumulative counts below 10, 20, 30 and 40 are 8, 21, 37 and 48. Find the count from 20 inclusive to 30 exclusive and the median band.
+
+**Picture it.** The numbers tell how many readings have passed each line. Subtract the count at 20 from the count at 30. Then use the running counts to find where the middle readings sit.
 
 1. **Subtract cumulative boundaries.** Below 30 there are 37 readings, and below 20 there are 21. The class 20 ≤ x < 30 therefore contains 37 − 21 = 16.\
    `37 − 21 = 16`
@@ -51,6 +55,8 @@ Find the crowded region and look for the longer sparse tail. With a symmetric co
 
 **Question.** Most times lie around 10–15 minutes, but increasingly sparse values stretch as far as 60 minutes on the high side. What shape is indicated?
 
+**Picture it.** Most dots are crowded near the smaller times. A thin line of occasional big times reaches to the right, like a tail.
+
 1. **Locate the bulk of the readings.** Most times cluster near 10–15 minutes, so that is where the distribution is concentrated.
 2. **Identify where the tail extends.** A few progressively sparser observations continue to 60 minutes, well above the main cluster.
 3. **Name the skew by its tail.** Larger values sit to the right on an increasing axis, giving a long right tail and right skew.
@@ -60,6 +66,8 @@ Find the crowded region and look for the longer sparse tail. With a symmetric co
 ### Symmetric curve area
 
 **Question.** A continuous symmetric distribution centred at 50 has 18% of its area between 50 and 60. What share lies between 40 and 60?
+
+**Picture it.** Imagine folding the curve at 50. The area from 40 to 50 fits exactly over the area from 50 to 60.
 
 1. **Find the mirror interval.** Reflection around 50 sends the endpoints 50 and 60 to 50 and 40. Thus 40–50 mirrors 50–60.\
    `50 − (60 − 50) = 40`

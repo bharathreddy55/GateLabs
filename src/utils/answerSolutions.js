@@ -1,5 +1,6 @@
 import { arithmeticSolution } from './reviewArithmetic.js';
 import { stationMasterSolution } from './stationMasterSolutions.js';
+import { stationMasterBeginner } from './stationMasterBeginner.js';
 
 const topicMethods = [
   [/reading comprehension/i,'Find the lines that directly answer the question. For an inference, choose the conclusion those lines support without adding a new assumption.'],
@@ -101,7 +102,7 @@ function explanationSteps(explanation) {
   }).map(line=>line.trim()).filter(Boolean);
 }
 
-export function explainAnswer(q, {examId} = {}) {
+function resolveSolution(q, examId) {
   if (examId === 'rrb') {
     const solution = stationMasterSolution(q);
     if (solution) return solution;
@@ -116,4 +117,9 @@ export function explainAnswer(q, {examId} = {}) {
   const approach = topicMethods.find(([pattern])=>pattern.test(q.topic ?? ''))?.[1] ?? '';
   const parts = explanationSteps(reason);
   return {approach, steps:parts.length>1?parts:[], reason:parts.length>1?'':reason, tip:''};
+}
+
+export function explainAnswer(q, {examId, battery} = {}) {
+  const solution = resolveSolution(q, examId);
+  return examId === 'rrb' || battery ? stationMasterBeginner(q, solution, battery) : solution;
 }

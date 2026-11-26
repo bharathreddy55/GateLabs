@@ -78,11 +78,13 @@ function studyNotes(){
         <p>${h(note.prompt)}</p>
         ${note.map?streetMap(note.map):''}
         ${note.figures?`<div class="cbat-options cbat-figures">${note.figures.map((cells,index)=>`<div>Figure ${'ABC'[index]}${shape(cells)}</div>`).join('')}</div>`:''}
+        <p class="exam-note-picture"><strong>Picture it.</strong> ${h(note.examplePicture)}</p>
         ${workedSteps(note.exampleSteps)}
         <p>${id==='personality'?'':'<strong>Answer:</strong> '}${h(note.solution)}</p>
         ${note.models.map(model=>`
           <h4>${h(model.title)}</h4>
           <p>${h(model.prompt)}</p>
+          <p class="exam-note-picture"><strong>Picture it.</strong> ${h(model.picture)}</p>
           ${workedSteps(model.steps)}
           ${model.answer?`<p><strong>Answer:</strong> ${h(model.answer)}</p>`:''}
         `).join('')}
@@ -286,7 +288,7 @@ export const RrbCbat = {
         status:answers[i]==null?'skipped':answers[i]===q.correct?'correct':'wrong'
       }));
       const openReview=mountAnswerReview(this.panel.querySelector('[data-cbat-answer-review]'),{
-        responses,
+        responses,battery:battery.id,
         renderContext:q=>`${q.digits?`<div class="cbat-digits">${q.digits.join(' ')}</div>`:''}${q.map?streetMap(q.map,q.solutionRoute):''}
           ${q.rules?`<ul class="cbat-rules">${q.rules.map(rule=>`<li>${h(rule)}</li>`).join('')}</ul>`:''}`,
         renderOption:option=>Array.isArray(option)?shape(option):h(option)

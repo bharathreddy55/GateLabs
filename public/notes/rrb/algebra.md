@@ -25,6 +25,8 @@ For factors equally far from a round value a, write them as a+b and a−b. Their
 
 **Question.** Given x+y=13 and xy=36, find x²+y².
 
+**Picture it.** Think of a square with sides made of an x piece and a y piece. It has two smaller squares and two rectangles. Take away the rectangles to leave the squares.
+
 1. **Expand the known square.** Use (x + y)² = x² + 2xy + y². The left side is 13² = 169.\
    `13² = x² + 2xy + y²`
 2. **Substitute the known product.** The cross term is 2xy = 2 × 36 = 72. Therefore 169 = x² + y² + 72.\
@@ -37,6 +39,8 @@ For factors equally far from a round value a, write them as a+b and a−b. Their
 ### Simplify with restrictions
 
 **Question.** Simplify (x²−25)/(x²−x−20) and state exclusions.
+
+**Picture it.** Picture two expressions made of smaller blocks multiplied together. A shared block can cancel after you check it was never zero in the original fraction.
 
 1. **Factor both polynomials.** Use the difference of squares in the numerator. For the denominator, −5 and 4 multiply to −20 and add to −1. Thus the factors are (x−5)(x+5) and (x−5)(x+4).\
    `x² − 25 = (x−5)(x+5)`\
@@ -52,6 +56,8 @@ For factors equally far from a round value a, write them as a+b and a−b. Their
 
 **Question.** Evaluate 103×97 using an identity.
 
+**Picture it.** Both numbers stand the same distance from 100. When you multiply them, one extra strip and one missing strip cancel, leaving the big square minus a small square.
+
 1. **Write the factors around 100.** 103 is 100 + 3 and 97 is 100 − 3. Their offsets are equal in magnitude.\
    `103 × 97 = (100+3)(100−3)`
 2. **Apply the difference of squares.** The cross terms cancel when multiplying (a + b)(a − b), giving a² − b².\
@@ -64,6 +70,8 @@ For factors equally far from a round value a, write them as a+b and a−b. Their
 ### Reciprocal expression
 
 **Question.** Given x+1/x=5, find x²+1/x².
+
+**Picture it.** When you square two pieces added together, each piece gets its own square and there are two cross-products. Here x times its reciprocal is exactly one.
 
 1. **Square the given sum.** (x + 1/x)² is x² + 2x(1/x) + 1/x². The left side equals 5² = 25.\
    `(x + 1/x)² = 25`

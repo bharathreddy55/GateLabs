@@ -254,7 +254,7 @@ try{
  assert.equal(await stationTests.locator('[data-paper-group="drills"]:visible').count(),20);
  assert.match(await page.locator('[data-mock-jump="subjects"]').innerText(),/160 tests across 4 subjects/);
  assert.equal(await page.locator('.mock-picks').getByText(/Practice model [23]/).count(),0);
- for(const model of [2,10,11,20]){
+ for(const model of [2,3,10,11,20]){
    const card=stationTests.locator('[data-library-card]').filter({has:page.getByRole('heading',{name:`RRB Station Master CBT · Practice model ${model}`,exact:true})});
    assert.match(await card.innerText(),/100 questions · 100 marks · 120 min/);
    await card.getByRole('button',{name:'Start full mock'}).click();
@@ -302,6 +302,14 @@ try{
      await passage.getByRole('heading',{name:'Evidence and inference',exact:true}).waitFor();
      assert.match(await passage.locator('.review-evidence blockquote').first().innerText(),/work the ledgers had ignored/);
      assert.match(await passage.locator('.review-evidence').innerText(),/⇏ individual earnings/);
+   }
+   if(model===3){
+     await review.locator('[data-review-question="0"]').click();
+     const tank=review.locator('.review-solution');
+     await tank.getByText('Imagine a big juice tank',{exact:true}).waitFor();
+     assert.equal(await tank.locator('.review-steps li').count(),4);
+     assert.match(await tank.locator('.review-steps li').nth(1).innerText(),/12 L − 3 L = 9 L/);
+     assert.match(await tank.locator('.review-final-answer').innerText(),/35%/);
    }
    if(model>=11) await review.getByRole('heading',{name:'Step-by-step solution',exact:true}).waitFor();
    await page.goto('http://127.0.0.1:3011/#/rrb-station-master?tab=mocks');
@@ -502,6 +510,8 @@ try{
  await review.getByRole('heading',{name:'Correct answer',exact:true}).waitFor();
  assert.equal(await review.locator('.review-answers .cbat-shape').count(),2);
  assert.equal(await review.locator('.review-steps li').count(),3);
+ await review.getByText('Picture turning a piece of cardboard',{exact:true}).waitFor();
+ await review.locator('.review-final-answer .cbat-shape').waitFor();
  assert.equal(await review.locator('.review-steps').evaluate(el=>getComputedStyle(el).listStyleType),'none');
  await filterReview('skipped',11);
  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth),false);

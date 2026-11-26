@@ -25,6 +25,8 @@ Convert watts to kW and multiply by all operating hours. If tariff is given, mul
 
 **Question.** A 6 Ω and a 3 Ω resistor are in series across 18 V. Find the drop across 6 Ω.
 
+**Picture it.** Imagine charges travelling around one loop. They pass both resistors, so the same current goes through each. The bigger resistance uses up a bigger share of the voltage drop.
+
 1. **Find total series resistance.** The same current flows in both components, and the resistances add. Rtotal = 6 + 3 = 9 Ω.\
    `6 + 3 = 9 Ω`
 2. **Find that common current.** Ohm’s law gives I = V/Rtotal = 18/9 = 2 A.\
@@ -37,6 +39,8 @@ Convert watts to kW and multiply by all operating hours. If tariff is given, mul
 ### Parallel branches
 
 **Question.** A 6 Ω and a 3 Ω resistor are in parallel across 12 V. Find total current and resistance.
+
+**Picture it.** Draw two paths from the same starting point to the same finish. Both have the same voltage from start to finish. Count how much current travels down each path.
 
 1. **Apply the same voltage to both branches.** In parallel, each resistor connects across the 12 V supply. Their currents are 12/6 = 2 A and 12/3 = 4 A.\
    `I₆ = 12/6 = 2 A and I₃ = 12/3 = 4 A`
@@ -51,6 +55,8 @@ Convert watts to kW and multiply by all operating hours. If tariff is given, mul
 
 **Question.** A 4 Ω resistor is in series with two parallel 6 Ω resistors across 14 V. Find current in one 6 Ω branch.
 
+**Picture it.** Imagine one road splitting into two matching paths. Work out what voltage reaches the split, then find what flows down just one path.
+
 1. **Reduce the parallel pair.** Two equal 6 Ω resistors in parallel have equivalent resistance 3 Ω. With the series 4 Ω resistor, the total is 7 Ω.\
    `Rparallel = 1/(1/6 + 1/6) = 3 Ω`
 2. **Find voltage across the pair.** The total current is 14/7 = 2 A. The equivalent parallel block has drop 2 × 3 = 6 V.\
@@ -64,6 +70,8 @@ Convert watts to kW and multiply by all operating hours. If tariff is given, mul
 ### Power and billing units
 
 **Question.** A 500 W fan runs 4 hours daily for 6 days. How many units of electrical energy does it use if one unit is 1 kWh?
+
+**Picture it.** Think of the fan taking small packets of energy while it runs. Add up how many hours it runs over six days, then use its energy rate per hour.
 
 1. **Convert power to kilowatts.** Divide 500 W by 1,000 to get 0.5 kW. Kilowatts pair with hours for billing.\
    `500 W = 0.5 kW`

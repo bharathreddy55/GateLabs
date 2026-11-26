@@ -25,6 +25,8 @@ With equal distances at positive speeds u and v, use 2uv/(u+v). With equal times
 
 **Question.** 24 candidates average 63 and 36 average 73. Find the combined mean.
 
+**Picture it.** Imagine pooling the scores from both groups and sharing them evenly. A larger group puts more scores into the pile than a smaller group.
+
 1. **Recover each group’s total.** Mean × count gives the sum of the scores. The two groups contribute 24 × 63 = 1,512 and 36 × 73 = 2,628.\
    `24 × 63 = 1,512 and 36 × 73 = 2,628`
 2. **Combine totals and counts.** The score sum is 1,512 + 2,628 = 4,140, and the combined count is 24 + 36 = 60.\
@@ -37,6 +39,8 @@ With equal distances at positive speeds u and v, use 2uv/(u+v). With equal times
 ### Correct a mean
 
 **Question.** The mean of 16 values is recorded as 42. One entry of 58 should be 38. Find the corrected mean.
+
+**Picture it.** A single number was written 20 too high. Fix that number in the total first. Everybody still gets the same number of spots when you spread the total evenly.
 
 1. **Find the recorded total.** The 16 reported entries add to 16 × 42 = 672.\
    `16 × 42 = 672`
@@ -51,6 +55,8 @@ With equal distances at positive speeds u and v, use 2uv/(u+v). With equal times
 
 **Question.** 18 members average 52, a second group averages 66, and the combined mean is 60. How many are in the second group?
 
+**Picture it.** Imagine one group putting too little on a balance and the other putting too much. The missing headcount must balance the shortfall on the first side.
+
 1. **Measure the first group’s deficit.** Use 60 as a reference. The first group is 8 points below it per member on average, so the total shortfall is 18 × 8 = 144.\
    `18 × (60 − 52) = 144`
 2. **Measure the second group’s surplus.** The second group averages 66, or 6 points above the reference per member. The two deviations must cancel for the combined mean to equal 60.\
@@ -63,6 +69,8 @@ With equal distances at positive speeds u and v, use 2uv/(u+v). With equal times
 ### Equal-distance average speed
 
 **Question.** A van covers 60 km at 40 km/h and returns at 60 km/h. Find average speed.
+
+**Picture it.** The van travels the same distance in both directions, but spends longer on the slow leg. Use the trip's whole clock and all the kilometres.
 
 1. **Find the time for each leg.** Time equals distance ÷ speed. The outward leg takes 60 ÷ 40 = 1.5 hours, and the return takes 60 ÷ 60 = 1 hour.\
    `60 ÷ 40 = 1.5 h`

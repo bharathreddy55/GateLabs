@@ -25,6 +25,8 @@ For a change use (new − old)/old. For an interval share from a running log, su
 
 **Question.** Passenger counts in April and May were 3200 and 3680 at A, and 2800 and 3110 at B. Which station grew faster by percentage?
 
+**Picture it.** Imagine each station has its own pile of tickets in April. Compare its extra May tickets with the size of its own April pile.
+
 1. **Calculate A’s percentage growth.** A gained 3,680 − 3,200 = 480 passengers. Divide by its April count, 480/3,200 × 100% = 15%.\
    `(3,680 − 3,200)/3,200 × 100% = 15%`
 2. **Calculate B’s growth on its own base.** B gained 3,110 − 2,800 = 310. Relative to its April count, that is 310/2,800 × 100% ≈ 11.07%.\
@@ -37,6 +39,8 @@ For a change use (new − old)/old. For an interval share from a running log, su
 ### Overall rate from rows
 
 **Question.** Morning: 240 trains, 90% on time. Evening: 160 trains, 75% on time. Find overall punctuality.
+
+**Picture it.** For every 100 morning trains, 90 are on time. Do the same for the evening group and count real trains before finding the overall share.
 
 1. **Recover the morning on-time count.** Use the morning train count as the base, 240 × 90% = 216 on time.\
    `240 × 0.90 = 216`
@@ -51,6 +55,8 @@ For a change use (new − old)/old. For an interval share from a running log, su
 
 **Question.** A table lists 120 service requests on Monday, 140 on Tuesday and a three-day average of 135. Find Wednesday’s count.
 
+**Picture it.** Picture three days sharing the same average. Multiply by three to recover the whole week's three-day pile, then remove the two piles already labelled.
+
 1. **Recover the required total.** Average = total ÷ number of days. A three-day average of 135 requires 3 × 135 = 405 requests.\
    `3 × 135 = 405`
 2. **Add the known days.** Monday and Tuesday jointly account for 120 + 140 = 260 requests.\
@@ -63,6 +69,8 @@ For a change use (new − old)/old. For an interval share from a running log, su
 ### Cumulative figures
 
 **Question.** A running log shows 780 tickets by noon, 1120 by 2 pm, and 1620 by 5 pm. What share of tickets sold from noon to 5 pm came after 2 pm?
+
+**Picture it.** A running ticket number only goes up. Take a picture of it at noon, 2 pm and 5 pm. Subtract two pictures to see how many new tickets appeared between them.
 
 1. **Extract the after-2 sales.** Running totals include all tickets sold before the reading time. Subtract the 2 pm reading from the 5 pm reading, 1,620 − 1,120 = 500.\
    `1,620 − 1,120 = 500`

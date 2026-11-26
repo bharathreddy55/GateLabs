@@ -25,6 +25,8 @@ When nearer and farther observations are on the same line from the base, call th
 
 **Question.** Given sin θ=5/13 for acute θ, find cos θ and tan θ.
 
+**Picture it.** Picture climbing a ramp. The sloping path is the longest side. The rise is the side across from the angle by your feet. Draw those two first.
+
 1. **Build a right triangle.** Sine is opposite/hypotenuse. Take those side lengths as 5 and 13, which preserve the ratio 5/13.\
    `opposite = 5 and hypotenuse = 13`
 2. **Find the remaining leg.** Using Pythagoras gives adjacent² = 13² − 5² = 144. Take the positive length 12.\
@@ -37,6 +39,8 @@ When nearer and farther observations are on the same line from the base, call th
 ### Observer height
 
 **Question.** A person’s eye level is 1.6 m above the ground. From 18 m away the pole top has elevation 45°. Find the pole height.
+
+**Picture it.** Imagine a horizontal line from your eyes to the pole. The angle tells you how much higher the top is than that line. The pole starts below your eyes.
 
 1. **Draw the line at eye level.** The angle of elevation is measured from the observer’s horizontal sight line. The 18 m ground distance is also the adjacent horizontal distance.\
    `horizontal distance = 18 m, eye height = 1.6 m`
@@ -51,6 +55,8 @@ When nearer and farther observations are on the same line from the base, call th
 
 **Question.** Two observation points at ground level lie on the same straight line from the base of a tower and on the same side of it. The points are 20 m apart, and their angles of elevation to the top are 60° and 30°. Find the height.
 
+**Picture it.** Imagine looking at the same tower from two marks on the ground. The top looks steeper at the closer mark. Both triangles must have the same tower height.
+
 1. **Name the two distances.** Let the nearer point be x metres from the base. Its angle is 60°, while the farther point at x + 20 metres sees 30°.\
    `near = x, far = x + 20`
 2. **Write the same height twice.** Using tangent, h = x tan 60° = x√3. The farther point gives h = (x + 20) tan 30° = (x + 20)/√3.\
@@ -64,6 +70,8 @@ When nearer and farther observations are on the same line from the base, call th
 ### Exact value and identity
 
 **Question.** Evaluate 1−sin²30°+tan²45°.
+
+**Picture it.** Think of sin and tan as short names for certain side ratios. Look up the triangle ratio for each given angle, then square each value before adding or subtracting.
 
 1. **Recall the exact ratios.** sin 30° = 1/2 and tan 45° = 1.\
    `sin 30° = 1/2, tan 45° = 1`

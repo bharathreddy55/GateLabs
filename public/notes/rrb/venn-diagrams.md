@@ -25,6 +25,8 @@ Neither is the complement of the union. Recover union as total minus neither, th
 
 **Question.** Of 120 applicants, 68 know Excel, 55 know SQL and 26 know both. How many know neither?
 
+**Picture it.** Draw two overlapping hoops. Some learners stand in both. Count them once when adding the hoops, then see how many are outside.
+
 1. **Count everyone in at least one set.** Adding 68 Excel users and 55 SQL users counts the 26 who know both twice.\
    `68 + 55 = 123`
 2. **Correct the double-counting.** The union is 68 + 55 − 26 = 97 applicants who know at least one.\
@@ -37,6 +39,8 @@ Neither is the complement of the union. Recover union as total minus neither, th
 ### Three sets and exactly two
 
 **Question.** Pair intersections AB, AC, BC are 22, 17 and 15, each including 6 in all three. How many are in exactly two?
+
+**Picture it.** Start with the six people in the middle of all three hoops. Each pair total includes those same six people. Remove them before counting the pair-only regions.
 
 1. **Identify what each pair total includes.** The six people in all three appear in each reported pair intersection. They do not belong to exactly two.\
    `triple count = 6`
@@ -51,6 +55,8 @@ Neither is the complement of the union. Recover union as total minus neither, th
 
 **Question.** Of 90 candidates, 54 cleared A, 47 cleared B and 12 cleared neither. How many cleared both?
 
+**Picture it.** Start with every candidate and set aside anyone who cleared neither. The group left is everyone in at least one hoop. Adding both hoop counts counts the middle people twice.
+
 1. **Use neither to recover the union.** Of 90 candidates, 12 cleared neither, leaving 90 − 12 = 78 who cleared at least one.\
    `union = 90 − 12 = 78`
 2. **Add the individual totals.** The two reported totals add to 54 + 47 = 101. This counts people who cleared both twice.\
@@ -63,6 +69,8 @@ Neither is the complement of the union. Recover union as total minus neither, th
 ### Inside one set and nowhere else
 
 **Question.** Totals for A, B and C are 46, 32 and 35. Inclusive pair intersections AB=12, AC=14 and BC=10, triple=5. How many belong only to A?
+
+**Picture it.** Start with everyone in A. Take away people who also belong to B or C. Think about how many times you took away the people in all three.
 
 1. **Start inside A.** A contains 46 people, including those who are also in B or C.\
    `A total = 46`
