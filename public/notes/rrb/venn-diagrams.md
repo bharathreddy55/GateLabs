@@ -1,18 +1,23 @@
-## What it means
+## Basics first
 
-A Venn diagram separates membership into regions. The whole of a set includes its overlaps. “Only A” excludes anything in other named sets, while “A or B” includes their overlap in ordinary inclusive language. The region outside all circles still belongs to the stated universe.
+- **Set and universe.** A set contains the objects that meet one condition. The universe is every object considered in the question. The region outside all circles still belongs to the universe.
+- **Intersection and union.** Intersection requires both conditions. Union includes either condition and the overlap. “Exactly one” excludes the overlap.
+- **Inclusive pair counts.** A pair intersection such as A∩B normally includes the objects also in C. A pair-only region excludes those triple members.
+- **Disjoint regions.** Each object occupies one atomic region, such as A only, A and B only or all three. Sum disjoint region counts to avoid counting anything twice.
 
-## Formulas and rules
+## Methods and when to use them
 
-- **Two sets:** count(A∪B)=count(A)+count(B)−count(A∩B). Neither = universe−union.
-- **Three sets:** Union adds all three totals, subtracts all three pair overlaps, then adds back the triple overlap. Pair overlaps in this formula include the triple unless labelled “only”.
-- **Exclusive regions:** Start with the triple. Subtract it from each inclusive pair overlap, then subtract the occupied overlap regions from each single-set total.
-- **Exactly one versus at least one:** Sum only the three single-only regions for exactly one. Include every inside region for at least one.
+### Method A · Fill from the middle outward
 
-## How to study it for Station Master
+In a three-set diagram put the triple count in the centre first. Subtract it from every inclusive pair. Then find each single-only number by removing the pair-only regions and the centre from that set total.
 
-- Draw disjoint regions and put the most restricted number into the diagram first. Check all regions are nonnegative and sum to the universe.
-- Practise one reverse model using “neither”. Before arithmetic, translate “and”, “or”, “only” and “exactly two” into shaded areas.
+### Method B · Use inclusion–exclusion when only totals are given
+
+For two sets add their counts and subtract their intersection. For three sets subtract all three inclusive pair intersections and add the triple once. The triple had been counted three times and then removed three times.
+
+### Method C · Solve backward from neither or exactly
+
+Neither is the complement of the union. Recover union as total minus neither, then use the other totals to find overlap. For exactly two, sum just the three pair-only regions.
 
 ## Question models and worked examples
 
@@ -20,9 +25,12 @@ A Venn diagram separates membership into regions. The whole of a set includes it
 
 **Question.** Of 120 applicants, 68 know Excel, 55 know SQL and 26 know both. How many know neither?
 
-1. **Count everyone in at least one set.** Adding 68 Excel users and 55 SQL users counts the 26 who know both twice.
-2. **Correct the double-counting.** The union is 68 + 55 − 26 = 97 applicants who know at least one.
-3. **Use the outside region.** There are 120 applicants overall. Knowing neither means sitting outside the union, giving 120 − 97 = 23.
+1. **Count everyone in at least one set.** Adding 68 Excel users and 55 SQL users counts the 26 who know both twice.\
+   `68 + 55 = 123`
+2. **Correct the double-counting.** The union is 68 + 55 − 26 = 97 applicants who know at least one.\
+   `123 − 26 = 97`
+3. **Use the outside region.** There are 120 applicants overall. Knowing neither means sitting outside the union, giving 120 − 97 = 23.\
+   `120 − 97 = 23`
 
 **Answer:** 23.
 
@@ -30,9 +38,12 @@ A Venn diagram separates membership into regions. The whole of a set includes it
 
 **Question.** Pair intersections AB, AC, BC are 22, 17 and 15, each including 6 in all three. How many are in exactly two?
 
-1. **Identify what each pair total includes.** The six people in all three appear in each reported pair intersection. They do not belong to exactly two.
-2. **Subtract the triple from each pair.** AB only = 22 − 6 = 16, AC only = 17 − 6 = 11, and BC only = 15 − 6 = 9.
-3. **Add the separate regions.** A person in exactly two sets fits just one of those pair-only regions. Add 16 + 11 + 9 = 36.
+1. **Identify what each pair total includes.** The six people in all three appear in each reported pair intersection. They do not belong to exactly two.\
+   `triple count = 6`
+2. **Subtract the triple from each pair.** AB only = 22 − 6 = 16, AC only = 17 − 6 = 11, and BC only = 15 − 6 = 9.\
+   `22 − 6 = 16, 17 − 6 = 11, 15 − 6 = 9`
+3. **Add the separate regions.** A person in exactly two sets fits just one of those pair-only regions. Add 16 + 11 + 9 = 36.\
+   `16 + 11 + 9 = 36`
 
 **Answer:** 36.
 
@@ -40,9 +51,12 @@ A Venn diagram separates membership into regions. The whole of a set includes it
 
 **Question.** Of 90 candidates, 54 cleared A, 47 cleared B and 12 cleared neither. How many cleared both?
 
-1. **Use neither to recover the union.** Of 90 candidates, 12 cleared neither, leaving 90 − 12 = 78 who cleared at least one.
-2. **Add the individual totals.** The two reported totals add to 54 + 47 = 101. This counts people who cleared both twice.
-3. **Find the double-counted group.** The excess over the union is 101 − 78 = 23, the number who cleared both.
+1. **Use neither to recover the union.** Of 90 candidates, 12 cleared neither, leaving 90 − 12 = 78 who cleared at least one.\
+   `union = 90 − 12 = 78`
+2. **Add the individual totals.** The two reported totals add to 54 + 47 = 101. This counts people who cleared both twice.\
+   `54 + 47 = 101`
+3. **Find the double-counted group.** The excess over the union is 101 − 78 = 23, the number who cleared both.\
+   `101 − 78 = 23`
 
 **Answer:** 23.
 
@@ -50,8 +64,26 @@ A Venn diagram separates membership into regions. The whole of a set includes it
 
 **Question.** Totals for A, B and C are 46, 32 and 35. Inclusive pair intersections AB=12, AC=14 and BC=10, triple=5. How many belong only to A?
 
-1. **Start inside A.** A contains 46 people, including those who are also in B or C.
-2. **Remove both overlaps.** Subtract the 12 in A∩B and the 14 in A∩C. Each subtraction includes the five people in all three, so those five were taken out twice.
-3. **Restore one copy of the triple.** Now every overlap is removed exactly once. A only has 46 − 12 − 14 + 5 = 25 people.
+1. **Start inside A.** A contains 46 people, including those who are also in B or C.\
+   `A total = 46`
+2. **Remove both overlaps.** Subtract the 12 in A∩B and the 14 in A∩C. Each subtraction includes the five people in all three, so those five were taken out twice.\
+   `46 − 12 − 14 = 20`
+3. **Restore one copy of the triple.** Now every overlap is removed exactly once. A only has 46 − 12 − 14 + 5 = 25 people.\
+   `20 + 5 = 25`
 
 **Answer:** 25.
+
+## Quick revision sheet
+
+| When you see | Use this rule |
+| --- | --- |
+| At least one of A or B | n(A) + n(B) − n(A∩B). |
+| Neither of two sets | Universe total − size of the union. |
+| Exactly two of three | Sum inclusive pair counts − 3 × triple count. |
+| A only | n(A) − n(A∩B) − n(A∩C) + n(A∩B∩C). |
+
+## Exam tips
+
+- **Look for the word only.** A count for A and B only excludes the centre.
+- **Check that every region is nonnegative.** A negative count flags inconsistent data or a double subtraction.
+- **Include the outside if asked about everyone.** The union by itself does not necessarily cover the universe.

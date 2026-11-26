@@ -1,18 +1,23 @@
-## What it means
+## Basics first
 
-Binary logic considers statements as true or false under given rules. In a truth-teller puzzle, a truth-teller’s complete statement is true and a liar’s complete statement is false. If behaviour can vary, such as alternating truth and lies, use the rule for that particular turn. Test assignments against every statement.
+- **Proposition.** A proposition is a claim that can be true or false. Label its truth value with T or F rather than treating a speaker’s type as the claim itself.
+- **AND, OR and exclusive OR.** AND is true only if both claims are true. Inclusive OR allows either or both. “Exactly one” is exclusive OR and rejects both-true and both-false.
+- **Conditional.** If P then Q means every case with P also has Q. A case with Q alone leaves P undetermined. Contrapositive ¬Q ⇒ ¬P has the same meaning.
+- **Negation.** Negating “both off” leaves all cases with at least one on. To negate “at least one on,” all must be off.
 
-## Formulas and rules
+## Methods and when to use them
 
-- **AND and OR:** A and B is true only when both are true. Inclusive A or B is true when at least one is true. Exclusive or requires exactly one true part.
-- **Implication:** If P then Q is false only when P is true and Q false. The valid contrapositive is if not Q then not P.
-- **Negation:** Not(A and B) means at least one is false. Not(A or B) means both are false.
-- **Exactly one true:** Count complete statements whose truth values hold under an assumed case, not separate phrases inside those statements.
+### Method A · Test a finite set of worlds
 
-## How to study it for Station Master
+If a token can be in only X, Y or Z, make a row for each place and a column for each claim. For “exactly one,” retain rows with one T. This automatically handles claims containing a negation.
 
-- Make a two-column case table and begin with a fixed count or self-restricting remark. In each case check that a speaker’s assigned type matches the whole statement.
-- Practise rejecting false converses and using compound claims. Distinguish “an answer can be true” from “the answer is forced”.
+### Method B · Link a speaker to their statement
+
+A truth-teller’s statement must evaluate true and a liar’s statement false. Start by testing a claim that refers to its own speaker or to everyone. If the assigned speaker type disagrees with the statement’s truth value, discard that world.
+
+### Method C · Transform conditionals in the valid direction
+
+From P and P⇒Q, deduce Q. From ¬Q and P⇒Q, deduce ¬P. If Q is given, look for a counterexample with P false before claiming P.
 
 ## Question models and worked examples
 
@@ -55,3 +60,18 @@ Binary logic considers statements as true or false under given rules. In a truth
 3. **Express the shared condition.** All three possibilities have at least one device on. The wording permits both devices to be on.
 
 **Answer:** At least one of them is on.
+
+## Quick revision sheet
+
+| When you see | Use this rule |
+| --- | --- |
+| Both true | P AND Q requires T,T. |
+| Exactly one true | Retain only T,F and F,T. |
+| Guaranteed inference from ¬Q and P⇒Q | Deduce ¬P. |
+| Negation of P AND Q | At least one of P or Q is false. |
+
+## Exam tips
+
+- **Mark the scope of “not”.** Negating an entire statement changes which combinations remain.
+- **Check every surviving assignment.** A one-speaker fit may conflict with the other person’s claim.
+- **Allow both in ordinary OR.** Look for explicit wording such as “exactly one” before excluding T,T.

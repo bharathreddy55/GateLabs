@@ -1,18 +1,23 @@
-## What it means
+## Basics first
 
-Data arrangement represents constraints on which item belongs in which slot, category or time. Start with the required assignment, then turn statements about positions, counts and exclusions into constraints. A puzzle can have several valid layouts and still have one fact common to all layouts.
+- **Position grid.** Use numbered boxes for a row or a table with one column per group. Each item goes in one slot unless the question says otherwise.
+- **Fixed, relative and adjacent clues.** “C in slot 4” fixes a position. “A before B” permits a gap. “A immediately before B” creates a neighbouring block AB in that order.
+- **Capacity.** If Morning holds two, a fixed member leaves at most one other slot. Linked people who must stay together can fit only in a group with enough open slots.
+- **Possibility and necessity.** One valid arrangement can establish that something is possible. Two different valid placements disprove that a particular position is forced.
 
-## Formulas and rules
+## Methods and when to use them
 
-- **Slots and uniqueness:** One item per slot means placing an item rules it out elsewhere. Use a grid for assignment across categories.
-- **Gaps:** “Immediately before” means next slot. Exactly k items between positions i and j means their index difference is k+1.
-- **Capacity:** If remaining items equal the remaining available places, those places must all be used. Tally group quotas separately.
-- **Possibility and necessity:** “Could” needs one complete witness. “Must” must hold across every viable layout, so actively look for counterexamples.
+### Method A · Start with hard anchors
 
-## How to study it for Station Master
+Write the fixed slots first and mark full groups. Turn an immediate pair into a two-slot block. Test only starts where the full block fits.
 
-- Place exact values and tight blocks first. Use compact substitute names and stop adding details once the asked property is forced.
-- For “could be true” test each surviving option by completing a full layout. For “must” cross out any option that fails in a valid branch.
+### Method B · Use a capacity table for grouping
+
+Write total positions and used positions beside each group. A group with one free position cannot take a linked pair. Place the pair where it fits, then allocate leftover members.
+
+### Method C · Branch on a requested placement
+
+Assume the proposed slot and run each clue. If every continuation violates a rule it is impossible. For “must be true,” look for a second valid layout where the claimed position changes.
 
 ## Question models and worked examples
 
@@ -55,3 +60,18 @@ Data arrangement represents constraints on which item belongs in which slot, cat
 3. **Make a second witness.** S–P–R–Q also meets both clues and puts P in position 2. Different valid outcomes show the position is unfixed.
 
 **Answer:** No. Only some facts such as Q being fourth are fixed.
+
+## Quick revision sheet
+
+| When you see | Use this rule |
+| --- | --- |
+| Immediately after | A and B occupy consecutive slots with B later. |
+| Order only | Earlier and later slots may have other items between them. |
+| Pair larger than free capacity | Place it in a group with at least two vacancies. |
+| Possible or forced | One witness proves possibility. A valid counterexample defeats necessity. |
+
+## Exam tips
+
+- **Write slot numbers above the scratch row.** The last free position can be easy to miss.
+- **Keep capacity restrictions visible.** Recalculate free slots after each placement.
+- **Verify the final layout against every clue.** A valid block alone can still violate precedence.

@@ -1,18 +1,23 @@
-## What it means
+## Basics first
 
-A main idea is the central point that connects a passage’s important parts. The topic identifies what the passage is about, while the main idea says what the author wants you to understand about it. Supporting ideas provide reasons, examples, qualifications or evidence. A good title covers the passage’s scope without merely naming one striking detail.
+- **Topic and main idea.** A topic names the subject. The main idea states the overall point made about it. “Station lighting” is a topic, while “the park adjusted lighting to balance visibility and glare” is a claim.
+- **Supporting details.** Facts, examples, causes and contrasting cases help explain or verify the main point. An accurate detail can still be too narrow as a main-idea answer.
+- **Scope and qualifications.** Words such as some, on weekdays, in the trial and except limit when a fact holds. A faithful summary preserves limits that change the conclusion.
+- **Title and summary.** A title names the passage’s focus at the right breadth. A summary states the main finding and the qualification needed to understand it.
 
-## Formulas and rules
+## Methods and when to use them
 
-- **Main-idea rule:** Form a short topic-plus-claim sentence and check whether it explains why each main paragraph is present.
-- **Detail rule:** For a factual question, find the supporting line and check any time, quantity or exception in its wording.
-- **Scope check:** Reject answers that are narrower than most of the passage or broader than its evidence.
-- **Paraphrase check:** Keep the original strength. “May”, “often” and “under these conditions” should survive a paraphrase.
+### Method A · Compress each paragraph to a job
 
-## How to study it for Station Master
+Write a few words naming what changed or why the paragraph is there. Combine those jobs into one sentence that fits the beginning and end. For a problem–response passage, include both the problem and what addressed it.
 
-- Read an English passage once for its overall direction and mark each paragraph in two or three words. Answer line-based details by returning to the relevant sentence.
-- For review, write why your strongest distractor was tempting, such as a memorable example or a repeated word. Check it against the passage as a whole.
+### Method B · Target the requested detail
+
+Circle the named entity and condition before scanning. Find the exact sentence, then check adjacent lines for an exception. If a museum’s cafe and galleries have different hours, keep their facts in separate rows.
+
+### Method C · Compare titles and summaries against the full passage
+
+Discard choices that name a single example or expand beyond the evidence. The best option should account for the central result, including any contrast that matters to it.
 
 ## Question models and worked examples
 
@@ -55,3 +60,18 @@ A main idea is the central point that connects a passage’s important parts. Th
 3. **Join the two findings.** Say what insulation changed and what wind did to that change. Both details are needed for a faithful summary.
 
 **Answer:** Insulation slowed cooling in the trial, and strong outdoor wind reduced the difference.
+
+## Quick revision sheet
+
+| When you see | Use this rule |
+| --- | --- |
+| Main idea | State what the passage as a whole says about its subject. |
+| Specific detail | Match entity, time and exception before choosing. |
+| Best title | Cover the central focus within the passage’s scope. |
+| Qualified summary | Keep a limit if removing it changes what the passage claims. |
+
+## Exam tips
+
+- **Read the final sentence carefully.** It may state the response or limit after the earlier context.
+- **Recognise true distractors.** An option can quote the passage accurately and answer a different question.
+- **Use text evidence for your choice.** The passage decides the scope even if outside facts make another answer plausible.

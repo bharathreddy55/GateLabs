@@ -1,18 +1,23 @@
-## What it means
+## Basics first
 
-Structure is the sequence of jobs done by sentences and paragraphs, such as introducing a claim, giving evidence, raising an objection or explaining a result. Style includes the writer’s tone, choice of language and level of certainty. Tone belongs to the author’s wording and purpose, even when the subject itself is dramatic.
+- **Logical structure.** Structure is the order of the argument’s jobs. A passage may state a claim, support it, handle an objection and recommend an action.
+- **Signal phrases.** “However” often introduces a contrast. “For example” points to an illustration. “Therefore” signals a conclusion, and “should” may introduce a recommendation.
+- **Tone.** Tone is how the author handles the subject. Hedging words like “may” and “suggest” indicate limited confidence, especially when paired with requests for more evidence.
+- **Example and counterargument.** An example makes a general point concrete. A counterargument presents an objection that the author may accept in part, answer or use to revise the claim.
 
-## Formulas and rules
+## Methods and when to use them
 
-- **Connectors:** “However” often signals contrast, “therefore” a consequence or conclusion, “for example” an illustration, and “although” a concession.
-- **Paragraph role:** Ask what would be lost if the paragraph were removed. Possibilities include a definition, caveat, comparison, counterargument or evidence.
-- **Tone evidence:** Tentative language such as “suggests” supports a cautious tone. Dismissive labels or excessive praise indicate stronger attitudes only if present.
-- **Purpose:** Distinguish explaining a process, persuading the reader, evaluating alternatives and narrating events. A comparison can be evidence for a recommendation or the whole purpose of a passage.
+### Method A · Give each sentence a role
 
-## How to study it for Station Master
+Read it in sequence and label its job with one phrase, such as benefit, limitation or action. If an option swaps the order or invents missing evidence, compare it to your labels.
 
-- Write one function beside each paragraph, then join them with their relationship. For tone, identify two words or phrases that support your choice.
-- Practise one “role of the second paragraph” and one “why is this example used” question. Avoid choosing a tone just because you personally agree with the passage.
+### Method B · Cite two clues for tone
+
+Pick one word about confidence and one about the author’s approach. “May” signals caution. Comparing readings and requesting more data shows an analytical approach.
+
+### Method C · Ask what changes if the sentence is removed
+
+If only the concrete case disappears while the main claim survives, the sentence illustrates. If an objection and reply disappear together, the paragraph was addressing resistance to a claim.
 
 ## Question models and worked examples
 
@@ -41,7 +46,8 @@ Structure is the sequence of jobs done by sentences and paragraphs, such as intr
 **Question.** “Small inefficiencies accumulate over a timetable. A two-minute turnaround delay repeated across six departures costs twelve minutes.” Why is the second sentence included?
 
 1. **Find the general statement.** The first sentence says that small inefficiencies can add up across a timetable.
-2. **Trace the arithmetic in the example.** A two-minute delay happens six times. Multiplying 2 by 6 gives 12 minutes of accumulated delay in the example.
+2. **Trace the arithmetic in the example.** A two-minute delay happens six times. Multiplying 2 by 6 gives 12 minutes of accumulated delay in the example.\
+   `2 min × 6 departures = 12 min`
 3. **Name the sentence’s role.** The calculation turns the general idea into a concrete case the reader can check. It illustrates the claim.
 
 **Answer:** To illustrate the claim with a numerical example.
@@ -55,3 +61,18 @@ Structure is the sequence of jobs done by sentences and paragraphs, such as intr
 3. **Read the paragraph as one argument.** The cost concern is acknowledged, then addressed with a practical response. The paragraph supports the larger case by showing how to handle an objection.
 
 **Answer:** Acknowledging an objection and responding to it.
+
+## Quick revision sheet
+
+| When you see | Use this rule |
+| --- | --- |
+| Benefit then “however” then “should” | Acknowledgement, limitation, recommendation. |
+| “Data suggest” and “more readings are needed” | A tentative, analytical judgment. |
+| Generalisation followed by a calculation | Usually an illustration if the calculation shows the general pattern. |
+| Objection followed by a mitigation | Concession followed by a response. |
+
+## Exam tips
+
+- **Distinguish topic from sentence function.** A sentence about cost can present an objection rather than state the passage’s main subject.
+- **Anchor tone in the author’s words.** The issue may be emotional even when the wording is neutral.
+- **Preserve the order in structure answers.** A recommendation at the end is different from one introduced then defended.

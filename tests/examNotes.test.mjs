@@ -32,21 +32,24 @@ function checkRevisionCard(svg, details, {id, title}, stage) {
 
 function checkHandnote(body, id) {
   assert.deepEqual([...body.matchAll(/^## (.+)$/gm)].map(match => match[1]), [
-    'What it means',
-    'Formulas and rules',
-    'How to study it for Station Master',
-    'Question models and worked examples'
+    'Basics first',
+    'Methods and when to use them',
+    'Question models and worked examples',
+    'Quick revision sheet',
+    'Exam tips'
   ], id);
-  const [concept, rules, study, exampleSection] = body.split(/^## .+\n\n/gm).slice(1);
+  const [concept, methods, exampleSection, recap, tips] = body.split(/^## .+\n\n/gm).slice(1);
   const models = exampleSection.split(/^### .+\n\n/gm).slice(1);
-  assert.ok(concept.trim().split(/\s+/).length >= 35, id);
-  assert.ok((rules.match(/^- /gm) || []).length >= 3, id);
-  assert.ok((study.match(/^- /gm) || []).length >= 2, id);
+  assert.ok((concept.match(/^- /gm) || []).length >= 4, id);
+  assert.ok((methods.match(/^### /gm) || []).length >= 3, id);
+  assert.ok(recap.trim().split('\n').length >= 6, id);
+  assert.match(recap, /^\| When you see \| Use this rule \|\n\| --- \| --- \|$/m, id);
+  assert.ok((tips.match(/^- /gm) || []).length >= 3, id);
   assert.ok(models.length >= 4, id);
   for (const model of models) {
     const [question, steps, answer] = model.trim().split('\n\n');
     assert.match(question, /^\*\*Question\.\*\* .+$/, id);
-    const lines = steps.split('\n');
+    const lines = steps.replace(/\\\n {3}\x60[^\x60\n]+\x60/g, '').split('\n');
     assert.ok(lines.length >= 3, id);
     for (const [index, line] of lines.entries()) {
       assert.match(line, /^\d+\. \*\*[^*]+\.\*\* .+$/, id);
@@ -54,7 +57,7 @@ function checkHandnote(body, id) {
     }
     assert.match(answer, /^\*\*Answer:\*\* .+$/, id);
   }
-  return [concept.trim(), ...models.map(model => model.split('\n')[0])];
+  return [...concept.trim().split('\n'), ...models.map(model => model.split('\n')[0])];
 }
 
 for (const file of readdirSync(catalogs).filter(name => name.endsWith('.json'))) {
@@ -78,6 +81,9 @@ for (const file of readdirSync(catalogs).filter(name => name.endsWith('.json')))
       const svg = readFileSync(new URL(note.id + '.svg', visuals), 'utf8');
       if (exam === 'rrb') {
         checkRevisionCard(svg, checkHandnote(body, note.id), note, 'CBT');
+        if (note.section === 'Basic Science and Mathematics' || (note.section === 'Data Analysis' && note.id !== 'data-arrangement')) {
+          assert.match(body, /\\\n {3}\x60[^\x60\n]+\x60/, note.id);
+        }
         continue;
       }
       assert.match(body, /^## Worked example$/m);
@@ -108,13 +114,17 @@ test('all CBAT batteries have detailed lessons and brief recall cards', () => {
   assert.deepEqual(readdirSync(visuals).sort(), CBAT_BATTERIES.map(({ id }) => id + '.svg').sort());
   for (const { id, title } of CBAT_BATTERIES) {
     const note = CBAT_NOTES[id];
+    assert.ok(note.basics.length >= 4 && note.review.length >= 4 && note.drill, id);
     assert.ok(note.details.every(paragraph => paragraph.split(/\s+/).length >= 45), id);
     assert.ok(note.rules.length >= 3 && note.method.length >= 3, id);
     assert.ok(note.exampleTitle && note.prompt && note.solution, id);
     assert.ok(note.models.length >= 2, id);
     for (const steps of [note.exampleSteps, ...note.models.map(model => model.steps)]) {
       assert.ok(steps.length >= 3, id);
-      for (const [label, explanation] of steps) assert.ok(label && explanation, id);
+      for (const [label, explanation, calculation] of steps) {
+        assert.ok(label && explanation, id);
+        if (id !== 'personality') assert.ok(calculation, id);
+      }
     }
     for (const { title, prompt, answer } of note.models) {
       assert.ok(title && prompt, id);

@@ -43,7 +43,7 @@ const stationMaster = EXAM_CATALOG.find(exam=>exam.id==='rrb');
 const batteryIcons = {intelligence:'grid',attention:'edit',spatial:'chart',ordering:'file',personality:'users'};
 
 const workedSteps = steps =>
-  `<ol>${steps.map(([label, explanation])=>`<li><strong>${h(label)}.</strong> ${h(explanation)}</li>`).join('')}</ol>`;
+  `<ol>${steps.map(([label, explanation, calculation])=>`<li><strong>${h(label)}.</strong> ${h(explanation)}${calculation?`<br><code>${h(calculation)}</code>`:''}</li>`).join('')}</ol>`;
 
 function studyNotes(){
   return `<section class="mock-library-section cbat-notes" id="cbat-study-notes" aria-labelledby="cbat-notes-heading" hidden>
@@ -66,14 +66,13 @@ function studyNotes(){
             <span>Open full-size recall card ↗</span>
           </a>
         </figure>
-        <h3>What it means</h3>
+        <h3>Basics first</h3>
+        <ul>${note.basics.map(([label, definition])=>`<li><strong>${h(label)}.</strong> ${h(definition)}</li>`).join('')}</ul>
         ${note.details.map(paragraph=>`<p>${h(paragraph)}</p>`).join('')}
         <h3>Rules to remember</h3>
         <ul>${note.rules.map(rule=>`<li>${h(rule)}</li>`).join('')}</ul>
-        <h3>How to study it for Station Master</h3>
+        <h3>Methods and when to use them</h3>
         <ol>${note.method.map(step=>`<li>${h(step)}</li>`).join('')}</ol>
-        <p>${h(note.practice)}</p>
-        <p><strong>Common trap.</strong> ${h(note.mistake)}</p>
         <h3>${id==='personality'?'Prompt models and examples':'Question models and worked examples'}</h3>
         <h4>${h(note.exampleTitle)}</h4>
         <p>${h(note.prompt)}</p>
@@ -87,6 +86,17 @@ function studyNotes(){
           ${workedSteps(model.steps)}
           ${model.answer?`<p><strong>Answer:</strong> ${h(model.answer)}</p>`:''}
         `).join('')}
+        <h3>Quick revision sheet</h3>
+        <div class="exam-note-table"><table>
+          <thead><tr><th scope="col">When you see</th><th scope="col">Use this rule</th></tr></thead>
+          <tbody>${note.review.map(([cue, rule])=>`<tr><td>${h(cue)}</td><td>${h(rule)}</td></tr>`).join('')}</tbody>
+        </table></div>
+        <h3>Exam tips</h3>
+        <ul>
+          <li><strong>Practice routine.</strong> ${h(note.drill)}</li>
+          <li><strong>Review your attempts.</strong> ${h(note.practice)}</li>
+          <li><strong>Common trap.</strong> ${h(note.mistake)}</li>
+        </ul>
       </details>`;
     }).join('')}
   </section>`;

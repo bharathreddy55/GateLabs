@@ -1,18 +1,23 @@
-## What it means
+## Basics first
 
-A seating problem places people using order, relative directions and gaps. Straight rows have ends. Circular arrangements wrap from the last seat to the first. “Left” or “right” can be read from a person’s facing direction, while clockwise and anticlockwise are fixed around a circle. Make a small diagram to prevent a silent orientation switch.
+- **Linear seating.** Use numbered slots from a declared viewing direction. A fixed end or middle position is an anchor. The person’s facing direction determines their left and right unless the question specifies the viewer’s perspective.
+- **Circular seating.** Number seats clockwise and wrap after the last seat. In an even-sized circle, a person opposite someone is half the total seat count away.
+- **Relative direction.** Freeze a simple reference view. A person at the top facing the centre looks down the page, so their right points to page left. At the bottom, someone facing the centre looks up and their right points to page right.
+- **Gaps and adjacency.** Immediate neighbours have zero people between them. A clue saying k people between two positions requires k+1 seat moves along the specified row or arc.
 
-## Formulas and rules
+## Methods and when to use them
 
-- **Linear gaps:** An immediate neighbour is one seat away. With k people between two seats, their indices differ by k+1.
-- **Circle orientation:** For people facing the centre, a person’s right is anticlockwise and left is clockwise when viewed from above. Facing outward reverses those links. Draw one person at the top to check.
-- **Opposite seat:** In an evenly spaced even-sized circle, move N/2 seats. Positions wrap around the ends of the index list.
-- **Blocks and cases:** Move adjacent people as a block if orientation is fixed. Try mirror versions when a clue gives adjacency without left/right order.
+### Method A · Start with an anchor and a block
 
-## How to study it for Station Master
+Fill a fixed end, middle or named position first. Treat immediate pairs as ordered blocks and test only where both seats fit. Use the remaining exact gap to place other people.
 
-- Fix one reference seat in a circle when rotation is irrelevant. Put facing arrows on the drawing and anchor tight pairs before weaker relationships.
-- Practise rows and both centre-facing and outward-facing circles. For an ambiguous stem, distinguish “clockwise” from “to a person’s right” explicitly.
+### Method B · Fix rotation in a circle
+
+If no absolute seat is fixed, put the reference person at the top since rotating everyone together preserves relative clues. Mark the person’s facing direction before translating a handed direction into a clockwise or anticlockwise step.
+
+### Method C · Check both sides of an unsigned gap
+
+If Q is two seats from P, test P−2 and P+2 where they exist. Apply all other clues to each and cross out any incompatible candidate. Verify a surviving arrangement rather than guessing from the more natural view.
 
 ## Question models and worked examples
 
@@ -20,9 +25,12 @@ A seating problem places people using order, relative directions and gaps. Strai
 
 **Question.** Five people A, B, C, D, E sit facing north in a row. C is in the middle, E is at the far right, A is immediately left of C, and D is between C and E. Find the order.
 
-1. **Fix the seats named outright.** Number the seats 1–5 from left to right. C takes seat 3 and E takes seat 5.
-2. **Apply the position clues.** The people face north, so A immediately to C’s left goes in seat 2. The only seat between C and E is seat 4, so D goes there.
-3. **Fill the remaining seat and verify.** B takes seat 1. Reading the row gives B–A–C–D–E, with A directly left of C and D between C and E.
+1. **Fix the seats named outright.** Number the seats 1–5 from left to right. C takes seat 3 and E takes seat 5.\
+   `C = 3, E = 5`
+2. **Apply the position clues.** The people face north, so A immediately to C’s left goes in seat 2. The only seat between C and E is seat 4, so D goes there.\
+   `A = 3 − 1 = 2 and D = 4`
+3. **Fill the remaining seat and verify.** B takes seat 1. Reading the row gives B–A–C–D–E, with A directly left of C and D between C and E.\
+   `positions 1–5: B, A, C, D, E`
 
 **Answer:** B–A–C–D–E from left to right.
 
@@ -30,9 +38,12 @@ A seating problem places people using order, relative directions and gaps. Strai
 
 **Question.** Six people sit in evenly spaced seats. B is opposite A, and C is one seat clockwise from B. How far clockwise from A is C?
 
-1. **Measure opposition in seat moves.** There are six equally spaced seats, so the opposite seat is half a circle away, or three moves clockwise from A.
-2. **Add the move from B to C.** C is one further clockwise move beyond B. This places C 3+1=4 moves clockwise from A.
-3. **Check the alternative direction.** A full circuit is six moves. The remaining arc is 6−4=2 moves anticlockwise.
+1. **Measure opposition in seat moves.** There are six equally spaced seats, so the opposite seat is half a circle away, or three moves clockwise from A.\
+   `6 ÷ 2 = 3 moves to B`
+2. **Add the move from B to C.** C is one further clockwise move beyond B. This places C 3+1=4 moves clockwise from A.\
+   `3 + 1 = 4 moves clockwise to C`
+3. **Check the alternative direction.** A full circuit is six moves. The remaining arc is 6−4=2 moves anticlockwise.\
+   `6 − 4 = 2 moves anticlockwise`
 
 **Answer:** Four seats clockwise, equivalent to two anticlockwise.
 
@@ -50,8 +61,26 @@ A seating problem places people using order, relative directions and gaps. Strai
 
 **Question.** In a row of six seats, P sits in seat 3. Exactly one person sits between P and Q. R is immediately to Q’s right, as seen from the front of the diagram. Seats are numbered left to right in that view. If R cannot be in seat 6, where is Q?
 
-1. **Translate the gap into a seat difference.** Exactly one person between P and Q means their seat numbers differ by two. With P in seat 3, Q could be in seat 1 or 5.
-2. **Check the right-neighbour clue in each case.** If Q is in seat 1, R is in seat 2. If Q is in seat 5, R is in seat 6, following the left-to-right numbering in the diagram.
-3. **Eliminate the forbidden case.** R cannot be in seat 6, so discard Q in seat 5. The remaining arrangement has Q in seat 1 and R in seat 2.
+1. **Translate the gap into a seat difference.** Exactly one person between P and Q means their seat numbers differ by two. With P in seat 3, Q could be in seat 1 or 5.\
+   `Q = 3 ± (1 + 1) ⇒ Q = 1 or 5`
+2. **Check the right-neighbour clue in each case.** If Q is in seat 1, R is in seat 2. If Q is in seat 5, R is in seat 6, following the left-to-right numbering in the diagram.\
+   `Q = 1 ⇒ R = 2. Q = 5 ⇒ R = 6.`
+3. **Eliminate the forbidden case.** R cannot be in seat 6, so discard Q in seat 5. The remaining arrangement has Q in seat 1 and R in seat 2.\
+   `R ≠ 6 ⇒ Q = 1`
 
 **Answer:** Q is in seat 1.
+
+## Quick revision sheet
+
+| When you see | Use this rule |
+| --- | --- |
+| Middle in an odd row of n | Position (n+1)/2. |
+| Opposite in an even circle of n | n/2 seat moves. |
+| k people between row positions | Absolute seat difference = k + 1. |
+| Immediate left or right | One adjacent seat using the stated facing or viewing direction. |
+
+## Exam tips
+
+- **Mark viewpoint before placing people.** A top-down diagram’s left is not always another person’s left.
+- **Do not count the starting seat as a move.** The neighbour is one seat away.
+- **Check whether rotation matters.** Relative clues alone usually identify a circular order only up to rotation.

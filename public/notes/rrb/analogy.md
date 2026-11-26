@@ -1,18 +1,23 @@
-## What it means
+## Basics first
 
-An analogy asks for a second pair with the same relationship as the first. The relation may involve function, part to whole, cause to effect, degree or a transformation of letters and numbers. A pair with a shared theme is only a match if it preserves the exact relation and order.
+- **Pair relation.** An analogy asks you to carry a relationship from A to B over to C and its partner. Name the relation in a sentence.
+- **Direction.** “Spoke is part of a wheel” runs from smaller component to enclosing object. Reversing the order would ask for a part of the third term.
+- **Relation families.** Pairs can represent instrument and measurement, part and whole, class and member, cause and result, or a numerical or alphabetic transformation.
+- **Fit across examples.** For a transformation, the rule needs to match each available pair or position. A rule that fits just one input is weak support.
 
-## Formulas and rules
+## Methods and when to use them
 
-- **Relationship sentence:** Read A:B as a short sentence such as “A measures B” or “A is a part of B”. Apply the same sentence to C and the choice.
-- **Direction:** Instrument→quantity, material→product and cause→effect have distinct reversed forms.
-- **Symbol patterns:** For letters use A=1 through Z=26 and inspect each aligned position. For numbers test a concise rule that fits the examples and the choices.
-- **Elimination:** Reject relations that are merely possible in some contexts if a precise defining relation is available.
+### Method A · Use the same verb and direction
 
-## How to study it for Station Master
+Say “a barometer measures pressure,” then substitute “an odometer measures ….” This filters closely related words that have different roles.
 
-- Before looking for similar words, name the relationship, including direction. Make an error log split into reversed, loosely associated and arithmetic-rule mistakes.
-- Practise mixed word, number and letter sets. If only one numeric pair is given, use the choices and any extra pairs to identify the simplest consistent intended rule.
+### Method B · Test a short numeric rule
+
+Try a difference, factor or familiar square or cube. Verify the candidate against every shown pair using the same operations and constants. Then substitute the new input.
+
+### Method C · Align letters by position
+
+Write the two words one above the other. Count shifts with A=1 to Z=26, including wrap if specified. Check whether all positions follow one pattern before applying it to the target.
 
 ## Question models and worked examples
 
@@ -40,9 +45,12 @@ An analogy asks for a second pair with the same relationship as the first. The r
 
 **Question.** 4 : 19 and 6 : 39 follow the same simple rule. Apply it to 9.
 
-1. **Test a simple operation on the inputs.** The squares of 4 and 6 are 16 and 36. Their differences from the stated outputs are 19−16=3 and 39−36=3.
-2. **Verify one rule against both pairs.** The rule n²+3 gives 4²+3=19 and 6²+3=39. Use the same operation and constant in both cases.
-3. **Substitute the new input.** 9²=81, then add 3 to obtain 84.
+1. **Test a simple operation on the inputs.** The squares of 4 and 6 are 16 and 36. Their differences from the stated outputs are 19−16=3 and 39−36=3.\
+   `19 − 4² = 3 and 39 − 6² = 3`
+2. **Verify one rule against both pairs.** The rule n²+3 gives 4²+3=19 and 6²+3=39. Use the same operation and constant in both cases.\
+   `f(n) = n² + 3`
+3. **Substitute the new input.** 9²=81, then add 3 to obtain 84.\
+   `f(9) = 81 + 3 = 84`
 
 **Answer:** 84.
 
@@ -50,8 +58,26 @@ An analogy asks for a second pair with the same relationship as the first. The r
 
 **Question.** CFE : EHG :: HKN : ?
 
-1. **Compare letters in matching positions.** C becomes E, F becomes H, and E becomes G. Each moves two places forward in the alphabet.
-2. **Apply the same shift to each new letter.** H becomes J, K becomes M, and N becomes P. Each shift is done independently without exchanging positions.
-3. **Join in the original order.** The mapped letters in order are J, M and P, giving JMP.
+1. **Compare letters in matching positions.** C becomes E, F becomes H, and E becomes G. Each moves two places forward in the alphabet.\
+   `C→E, F→H, E→G: each +2`
+2. **Apply the same shift to each new letter.** H becomes J, K becomes M, and N becomes P. Each shift is done independently without exchanging positions.\
+   `H→J, K→M, N→P`
+3. **Join in the original order.** The mapped letters in order are J, M and P, giving JMP.\
+   `J + M + P in order gives JMP`
 
 **Answer:** JMP.
+
+## Quick revision sheet
+
+| When you see | Use this rule |
+| --- | --- |
+| Instrument → quantity | Complete with what the instrument measures. |
+| Part → whole | Name what includes the component, preserving the order. |
+| Input number → output number | Check the same rule against all supplied inputs. |
+| Letter string → letter string | Align positions and test both shift and order. |
+
+## Exam tips
+
+- **Watch for multiple meanings.** The word “key” can refer to a lock tool or part of a keyboard.
+- **Avoid choosing associated words by feel.** Mentally plug the option into the original relation sentence.
+- **Verify every letter or pair.** One matching shift or input can be a coincidence.

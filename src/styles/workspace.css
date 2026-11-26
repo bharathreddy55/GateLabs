@@ -151,6 +151,38 @@ body,.app-shell,.landing-workspace{font-family:Inter,-apple-system,BlinkMacSyste
 #panel-rrb-notes .exam-note li + li {
     margin-block-start: .35rem;
 }
+.exam-note-table {
+    overflow-x: auto;
+    border: 1px solid var(--ws-border);
+    border-radius: .65rem;
+}
+.exam-note-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.exam-note-table :is(th, td) {
+    padding: .55rem .75rem;
+    text-align: start;
+    vertical-align: top;
+}
+.exam-note-table th,
+.exam-note-table tr:nth-child(even) {
+    background: var(--ws-bg);
+}
+.exam-note-table tbody tr {
+    border-top: 1px solid var(--ws-border);
+}
+:is(.exam-note, .cbat-note) li > code {
+    display: inline-block;
+    max-width: 100%;
+    margin-block-start: .15rem;
+    padding: .05rem .35rem;
+    border-radius: .25rem;
+    background: var(--ws-bg);
+    color: var(--ws-text);
+    font-size: .95em;
+    white-space: normal;
+}
 .exam-note-revised,
 .syllabus-note-row {
     display: flex;

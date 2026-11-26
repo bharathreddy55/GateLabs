@@ -1,18 +1,23 @@
-## What it means
+## Basics first
 
-Temperature describes thermal state and determines the direction of spontaneous heat transfer. Heat is energy transferred because of a temperature difference. Equal-temperature objects can contain different amounts of internal energy. At a phase change of a pure substance at fixed pressure, energy can be absorbed while temperature stays constant.
+- **Temperature and heat.** Temperature describes thermal state. Heat is energy transferred because of a temperature difference, measured in joules.
+- **Temperature scales.** Kelvin and Celsius have the same step size and different zeros. Fahrenheit uses a different scale factor as well as an offset.
+- **Specific and latent heat.** Specific heat tells how much energy raises one kilogram by one degree. Latent heat per kilogram changes phase at the transition temperature without raising the temperature during that step.
+- **Transfer mechanisms.** Conduction through matter transfers energy locally. Convection transports energy with bulk fluid movement. Radiation can transfer energy through a vacuum.
 
-## Formulas and rules
+## Methods and when to use them
 
-- **Temperature scales:** T(K)=T(°C)+273.15. T(°F)=9T(°C)/5+32. A difference of 1 °C equals a difference of 1 K.
-- **Sensible heat:** Q=mcΔT, with mass m, specific heat c and change ΔT. Use kg with c in J/(kg·K).
-- **Phase change:** Q=mL, where L is specific latent heat. Calculate warming and melting separately when both occur.
-- **Heat balance:** In an insulated exchange without phase change, heat lost equals heat gained in magnitude. Conduction transfers energy through matter, convection involves fluid motion, and radiation needs no medium.
+### Method A · Split heating at phase changes
 
-## How to study it for Station Master
+Break the process into temperature changes and phase changes. Use mcΔT for each warming or cooling segment and mL for a phase transition. Convert every energy term to the same unit before adding.
 
-- Identify the start and finish phase before selecting mcΔT or mL. Use the heat balance as a single equation if warmer and cooler bodies exchange energy.
-- Mix unit conversions, a phase-change plateau and a real heat-transfer example. Check an insulated mixture’s final temperature falls between the starting temperatures.
+### Method B · Balance an insulated mixture
+
+Set heat lost by warm material equal to heat gained by cooler material, with a single final temperature. For the same material with no phase change, its specific heat cancels and mass determines the weights.
+
+### Method C · Convert temperatures by scale and offset
+
+K = °C + 273.15 and °F = (9/5)°C + 32. For a temperature difference the offset cancels, so a Celsius change equals the Kelvin change and multiplies by 9/5 for Fahrenheit.
 
 ## Question models and worked examples
 
@@ -20,9 +25,12 @@ Temperature describes thermal state and determines the direction of spontaneous 
 
 **Question.** Express 40 °C in kelvin and Fahrenheit.
 
-1. **Convert Celsius to kelvin.** Kelvin uses the same size step as Celsius but starts at a different zero. Add 273.15 to 40 to get 313.15 K.
-2. **Convert Celsius to Fahrenheit.** Multiply the Celsius reading by 9/5 to change the scale size. This gives 40 × 9/5 = 72.
-3. **Account for Fahrenheit’s zero offset.** Add 32 to 72 to get 104 °F.
+1. **Convert Celsius to kelvin.** Kelvin uses the same size step as Celsius but starts at a different zero. Add 273.15 to 40 to get 313.15 K.\
+   `40 + 273.15 = 313.15 K`
+2. **Convert Celsius to Fahrenheit.** Multiply the Celsius reading by 9/5 to change the scale size. This gives 40 × 9/5 = 72.\
+   `40 × 9/5 = 72`
+3. **Account for Fahrenheit’s zero offset.** Add 32 to 72 to get 104 °F.\
+   `72 + 32 = 104 °F`
 
 **Answer:** 313.15 K and 104 °F.
 
@@ -30,9 +38,12 @@ Temperature describes thermal state and determines the direction of spontaneous 
 
 **Question.** How much heat raises 0.2 kg of ice from −10 °C to 0 °C and melts it? Use c=2100 J/(kg·K), L=334 kJ/kg.
 
-1. **Heat the solid to its melting point.** A 10 K rise for 0.2 kg of ice takes mcΔT = 0.2 × 2,100 × 10 = 4,200 J, or 4.2 kJ.
-2. **Melt it at 0 °C.** During melting, use latent heat mL because temperature stays constant. The heat needed is 0.2 × 334 = 66.8 kJ.
-3. **Add both stages in one unit.** The supplied heat totals 4.2 + 66.8 = 71 kJ.
+1. **Heat the solid to its melting point.** A 10 K rise for 0.2 kg of ice takes mcΔT = 0.2 × 2,100 × 10 = 4,200 J, or 4.2 kJ.\
+   `Qwarm = 0.2 × 2100 × 10 = 4,200 J = 4.2 kJ`
+2. **Melt it at 0 °C.** During melting, use latent heat mL because temperature stays constant. The heat needed is 0.2 × 334 = 66.8 kJ.\
+   `Qmelt = 0.2 × 334 = 66.8 kJ`
+3. **Add both stages in one unit.** The supplied heat totals 4.2 + 66.8 = 71 kJ.\
+   `4.2 + 66.8 = 71 kJ`
 
 **Answer:** 71 kJ.
 
@@ -40,9 +51,12 @@ Temperature describes thermal state and determines the direction of spontaneous 
 
 **Question.** Mix 300 g water at 60 °C and 200 g at 20 °C. Ignore the container and heat loss. Find final temperature.
 
-1. **Set up the heat balance.** In the insulated mixture, heat lost by the warm water equals heat gained by the cool water. Their common specific heat cancels.
-2. **Solve for the shared temperature.** Using T for the final temperature gives 300(60 − T) = 200(T − 20). Rearranging gives 500T = 22,000.
-3. **Check the result.** T = 44 °C falls between 20 °C and 60 °C. It is closer to 60 °C because there is more warm water.
+1. **Set up the heat balance.** In the insulated mixture, heat lost by the warm water equals heat gained by the cool water. Their common specific heat cancels.\
+   `300(60 − T) = 200(T − 20)`
+2. **Solve for the shared temperature.** Using T for the final temperature gives 300(60 − T) = 200(T − 20). Rearranging gives 500T = 22,000.\
+   `22,000 = 500T ⇒ T = 44 °C`
+3. **Check the result.** T = 44 °C falls between 20 °C and 60 °C. It is closer to 60 °C because there is more warm water.\
+   `20 °C < 44 °C < 60 °C`
 
 **Answer:** 44 °C.
 
@@ -55,3 +69,18 @@ Temperature describes thermal state and determines the direction of spontaneous 
 3. **Explain the warming.** The roof absorbs some incident radiation, increasing its internal energy and raising its temperature.
 
 **Answer:** Thermal radiation is the relevant mechanism across the gap.
+
+## Quick revision sheet
+
+| When you see | Use this rule |
+| --- | --- |
+| Warm or cool a substance | Q = mcΔT. Include the sign when tracking gains and losses together. |
+| Change phase | Q = mL for the transition. |
+| Same substance and insulated mixing | Final T = Σ(mT) ÷ Σm if there is no phase change and container heat is negligible. |
+| Energy crosses a vacuum | Radiation. |
+
+## Exam tips
+
+- **Do not apply the offset to an interval.** A 10 °C rise is 10 K, not 283.15 K.
+- **Check the mixture range.** With no added energy or phase change, the final temperature lies between the starting ones.
+- **Use the correct specific heat.** Solid and liquid values may differ, so check the state during each stage.

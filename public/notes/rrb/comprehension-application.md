@@ -1,18 +1,23 @@
-## What it means
+## Basics first
 
-An inference is a conclusion supported by clues in the passage even if it is unstated. An application uses a principle from the passage in a new situation with matching conditions. Questions may ask how new evidence would affect a claim. Judge the result with the passage’s logic and scope, using only outside facts that the stem explicitly supplies.
+- **Stated fact.** A fact appears directly in the passage, such as an entry time. Quote or paraphrase the relevant words before inferring from it.
+- **Warranted inference.** An inference uses stated facts and their logical consequences. A plausible explanation is only one possibility if the evidence also allows alternatives.
+- **Rule application.** A stated rule specifies conditions and an outcome. For an AND rule, check every requirement for the same person and situation before applying the outcome.
+- **Causal and scope limits.** Events happening together can have multiple explanations. A result observed in two places at one time may not hold everywhere or on every day.
 
-## Formulas and rules
+## Methods and when to use them
 
-- **Inference test:** Find the exact words that constrain the answer. Prefer a conclusion supported by those clues over one that is merely imaginable.
-- **Application test:** Extract an if–then rule, including exceptions. Check that the new case satisfies every relevant condition.
-- **Strengthen or weaken:** Identify the evidence-to-claim link. New information changes support if it supplies a missing connection or offers a plausible alternative explanation.
-- **Quantifier control:** “Some” does not imply “most” and correlation does not establish cause. Preserve uncertainty such as “may”.
+### Method A · Separate observations from explanations
 
-## How to study it for Station Master
+Write what the passage recorded and what it left unknown. For a sensor, ask what types of event can trigger it before attributing an observed reading to someone.
 
-- Underline one or two evidence lines before selecting an answer. Separate direct statements from inferences and write the short bridge between them.
-- Practise applying a rule to a different subject and keep track of the condition that stayed the same. Test the most tempting answer for any claim unsupported by the text.
+### Method B · Create a condition checklist
+
+Write each requirement in its own slot. Mark which the given case satisfies, fails or leaves unknown. Apply only the rule for the setting asked about.
+
+### Method C · Match alternatives to the claim they would challenge
+
+To weaken a causal argument, a competing cause should be comparable in time and affect the same outcome. To reject an overbroad inference, point to a meaningful place, time or population outside the evidence.
 
 ## Question models and worked examples
 
@@ -55,3 +60,18 @@ An inference is a conclusion supported by clues in the passage even if it is uns
 3. **State the narrower inference.** The shaded stops were cooler in the observed noon comparison. Other conditions would need their own observations.
 
 **Answer:** Only the observed noon comparison is supported.
+
+## Quick revision sheet
+
+| When you see | Use this rule |
+| --- | --- |
+| “Can be inferred” | Choose a claim forced or best supported by the supplied facts. |
+| Requires A and B | Verify both A and B before applying the rule. |
+| Weakens claimed causation | Find another plausible cause of the same outcome during the same interval. |
+| Claim says “under every condition” | Check whether the observations cover those conditions. |
+
+## Exam tips
+
+- **Do not treat “if” as “only if”.** Use the direction actually stated. “Must” explicitly sets a requirement.
+- **Keep uncertainty when it matters.** A reading can be certain while its source remains unknown.
+- **Match the scope of evidence.** An event in another year usually cannot explain counts from the period under study.

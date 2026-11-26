@@ -40,16 +40,27 @@ export function notesPanel(examId, active, notes) {
 }
 
 function formatNote(markdown) {
-  const inline = text => h(text).replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+  const inline = text => h(text)
+    .replace(/\*\*([^*\n]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/\x60([^\x60\n]+)\x60/g, '<code>$1</code>')
+    .replace(/\\\r?\n[ \t]*/g, '<br>');
   return markdown.trim().split(/\r?\n\s*\r?\n/).map(block => {
     if (block.startsWith('## ')) return `<h4>${inline(block.slice(3))}</h4>`;
     if (block.startsWith('### ')) return `<h5>${inline(block.slice(4))}</h5>`;
     const lines = block.split(/\r?\n/);
+    if (lines.length > 2 && lines.every(line => line.startsWith('| ') && line.endsWith(' |'))
+      && /^\|(?: *:?-+:? *\|)+$/.test(lines[1])) {
+      const cells = line => line.slice(1, -1).split('|').map(cell => inline(cell.trim()));
+      const head = cells(lines[0]).map(cell => `<th scope="col">${cell}</th>`).join('');
+      const rows = lines.slice(2).map(line => `<tr>${cells(line).map(cell => `<td>${cell}</td>`).join('')}</tr>`).join('');
+      return `<div class="exam-note-table"><table><thead><tr>${head}</tr></thead><tbody>${rows}</tbody></table></div>`;
+    }
     if (lines.every(line => line.startsWith('- '))) {
       return `<ul>${lines.map(line => `<li>${inline(line.slice(2))}</li>`).join('')}</ul>`;
     }
-    if (lines.every(line => /^\d+\. /.test(line))) {
-      return `<ol>${lines.map(line => `<li>${inline(line.replace(/^\d+\. /, ''))}</li>`).join('')}</ol>`;
+    if (/^\d+\. /.test(block) && lines.every(line => /^(?:\d+\. | {3})/.test(line))) {
+      const steps = block.split(/(?:^|\r?\n)\d+\. /).slice(1);
+      return `<ol>${steps.map(step => `<li>${inline(step)}</li>`).join('')}</ol>`;
     }
     return `<p>${inline(block)}</p>`;
   }).join('');

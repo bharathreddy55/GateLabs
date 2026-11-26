@@ -1,18 +1,23 @@
-## What it means
+## Basics first
 
-A weekday changes in a seven-day cycle. Calendar problems reduce elapsed days modulo seven, counting how many midnight-to-midnight steps separate dates. The same date in a different year can shift by one or two weekdays depending on whether a leap day falls between the two dates.
+- **Day shifts.** A week has seven days. Only the remainder after division by 7 changes the weekday. Zero elapsed days leaves the weekday unchanged.
+- **Ordinary and leap years.** An ordinary year has 365 days and shifts a same-date comparison by one day. An interval of 366 days shifts it by two.
+- **Gregorian leap rule.** A year divisible by 4 is leap unless it is divisible by 100. Years divisible by 400 remain leap. February has 29 days in a leap year.
+- **Elapsed dates.** Count transitions from the known weekday. From August 3 to August 4 is one step. For same-date comparisons, check whether the actual interval crosses the extra February day.
 
-## Formulas and rules
+## Methods and when to use them
 
-- **Gregorian leap year:** Divisible by 4 except century years, which must be divisible by 400.
-- **Odd days:** An ordinary year contributes one odd day because 365=52×7+1. A leap year contributes two. A 400-year Gregorian cycle has 146,097 days, divisible by seven.
-- **Month lengths:** February has 28 or 29 days. April, June, September and November have 30. Other months have 31.
-- **Day count:** Advance by elapsed days, excluding the starting date. To go back, subtract the remainder or move backwards that many weekdays.
+### Method A · Subtract dates within a month
 
-## How to study it for Station Master
+Find end date minus start date and reduce modulo 7. Move forward by the remaining number of weekdays. For a date before the anchor, move backward by the elapsed difference.
 
-- Carry only the remainder modulo seven after counting dates. Mark whether Feb 29 actually occurs in the interval before adding a leap offset.
-- Practise across February, at a century boundary and backwards from a known weekday. A same month date difference uses subtraction, without adding one.
+### Method B · Walk over month boundaries
+
+Use actual month lengths or name the boundary dates when the interval is short. February 28 → February 29 → March 1 is two shifts in a leap year.
+
+### Method C · Handle century years before longer spans
+
+Apply the 400-year exception to a century. For longer date intervals, break the span into full years plus remaining days and count the leap days actually crossed.
 
 ## Question models and worked examples
 
@@ -20,9 +25,12 @@ A weekday changes in a seven-day cycle. Calendar problems reduce elapsed days mo
 
 **Question.** If 3 August is Tuesday, what weekday is 25 August?
 
-1. **Count the elapsed days.** From 3 August to 25 August there are 25 − 3 = 22 day changes. The starting date is the reference.
-2. **Remove full weeks.** 22 = 3 × 7 + 1, so only one day remains after complete weeks return to Tuesday.
-3. **Move forward one weekday.** One day after Tuesday is Wednesday.
+1. **Count the elapsed days.** From 3 August to 25 August there are 25 − 3 = 22 day changes. The starting date is the reference.\
+   `25 − 3 = 22 elapsed days`
+2. **Remove full weeks.** 22 = 3 × 7 + 1, so only one day remains after complete weeks return to Tuesday.\
+   `22 = 3 × 7 + 1`
+3. **Move forward one weekday.** One day after Tuesday is Wednesday.\
+   `Tuesday + 1 day = Wednesday`
 
 **Answer:** Wednesday.
 
@@ -30,9 +38,12 @@ A weekday changes in a seven-day cycle. Calendar problems reduce elapsed days mo
 
 **Question.** If 28 February 2024 was Wednesday, what day was 1 March?
 
-1. **Check whether February has 29 days.** 2024 is divisible by 4 and is not a century year, so it is a Gregorian leap year.
-2. **List the dates in order.** The day after 28 February is 29 February, and the day after that is 1 March.
-3. **Advance the weekday twice.** Wednesday → Thursday → Friday, so 1 March is Friday.
+1. **Check whether February has 29 days.** 2024 is divisible by 4 and is not a century year, so it is a Gregorian leap year.\
+   `2024 ÷ 4 = 506`
+2. **List the dates in order.** The day after 28 February is 29 February, and the day after that is 1 March.\
+   `28 Feb → 29 Feb → 1 Mar: 2 days`
+3. **Advance the weekday twice.** Wednesday → Thursday → Friday, so 1 March is Friday.\
+   `Wednesday + 2 days = Friday`
 
 **Answer:** Friday.
 
@@ -40,8 +51,12 @@ A weekday changes in a seven-day cycle. Calendar problems reduce elapsed days mo
 
 **Question.** Which of 1900, 2000 and 2100 are leap years in the Gregorian calendar?
 
-1. **Apply the century exception.** All three years end in 00, so each must be divisible by 400 to be a leap year.
-2. **Test each division.** 1,900 ÷ 400 leaves remainder 300. 2,000 ÷ 400 = 5 exactly. 2,100 ÷ 400 leaves remainder 100.
+1. **Apply the century exception.** All three years end in 00, so each must be divisible by 400 to be a leap year.\
+   `century rule: divisibility by 400`
+2. **Test each division.** 1,900 ÷ 400 leaves remainder 300. 2,000 ÷ 400 = 5 exactly. 2,100 ÷ 400 leaves remainder 100.\
+   `1900 = 4 × 400 + 300`\
+   `2000 = 5 × 400`\
+   `2100 = 5 × 400 + 100`
 3. **Classify the years.** Only 2000 passes the 400-year condition.
 
 **Answer:** 2000 only.
@@ -50,8 +65,26 @@ A weekday changes in a seven-day cycle. Calendar problems reduce elapsed days mo
 
 **Question.** If 15 March 2023 was Wednesday, what day was 15 March 2024?
 
-1. **Locate the leap day within the interval.** From 15 March 2023 to 15 March 2024, the interval includes 29 February 2024.
-2. **Find the weekday shift.** The extra leap day makes the interval 366 days. Since 366 = 52 × 7 + 2, shift forward two days.
-3. **Apply it to the given weekday.** Wednesday advances through Thursday to Friday.
+1. **Locate the leap day within the interval.** From 15 March 2023 to 15 March 2024, the interval includes 29 February 2024.\
+   `interval includes 29 February 2024`
+2. **Find the weekday shift.** The extra leap day makes the interval 366 days. Since 366 = 52 × 7 + 2, shift forward two days.\
+   `366 = 52 × 7 + 2`
+3. **Apply it to the given weekday.** Wednesday advances through Thursday to Friday.\
+   `Wednesday + 2 days = Friday`
 
 **Answer:** Friday.
+
+## Quick revision sheet
+
+| When you see | Use this rule |
+| --- | --- |
+| Full week | 7 days gives weekday shift 0. |
+| Common year | 365 mod 7 = 1. |
+| Leap-year length | 366 mod 7 = 2. |
+| Century year | Leap exactly when divisible by 400. |
+
+## Exam tips
+
+- **Count steps rather than labels.** Counting both endpoints adds an extra day.
+- **Check the February boundary.** Two dates after February can include or exclude a leap day depending on which year lies between them.
+- **Confirm weekday direction.** Move backward for a date earlier than the anchor.

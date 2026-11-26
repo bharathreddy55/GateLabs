@@ -1,18 +1,23 @@
-## What it means
+## Basics first
 
-Family-relation questions translate statements into a tree of people and known relationships. For a basic tree, vertical links show parent and child, horizontal links show siblings or spouses when specified, and a generation shift indicates how far apart people are. Always answer from the viewpoint requested by the question.
+- **Generations.** Put a parent one level above a child and siblings on the same level. A generation diagram makes long descriptions easier to verify.
+- **Viewpoint.** “How is P related to R?” asks for P’s role from R’s perspective. Reversing the names changes parent to child and uncle to nephew or niece.
+- **Maternal and paternal.** Maternal relatives are reached through the mother. Paternal relatives are reached through the father. A parent’s sibling is an aunt or uncle if their gender is indicated.
+- **Symbols and uniqueness.** A coded operator has the definition given in the question. An “only son” clue identifies one male child, while allowing other children.
 
-## Formulas and rules
+## Methods and when to use them
 
-- **Direction:** “A’s relation to B” asks how to name A from B’s perspective.
-- **Generation steps:** Parent moves up one generation and child moves down one. A parent’s sibling stays in the parent’s generation.
-- **Gender and side:** Use only terms that establish gender or specify maternal or paternal links. “Sibling” and “child” alone do not settle gender.
-- **Coded relations:** Decode each adjacent pair using the exact left-to-right rule, then trace between the requested people.
+### Method A · Resolve pointing questions from the speaker outward
 
-## How to study it for Station Master
+Replace “my” with the speaker’s name. Follow the chain one relationship at a time. If the speaker is male and his mother has only one son, that son is the speaker.
 
-- Write the names and arrows from the innermost relation outwards for pointing puzzles. Mark each proven gender rather than guessing from a name.
-- Practise reciprocal relations and cases with unresolved information. For family trees with several names, reconstruct only relationships necessary for the question.
+### Method B · Decode relation pairs separately
+
+For P × Q + R, write one sentence for P × Q and a second for Q + R. Join the two facts at Q, then read from the viewpoint requested. These operators encode relationships, not arithmetic.
+
+### Method C · Track gender and branch separately
+
+“A brother of U” tells you the named brother’s gender. U remains unspecified. If the parent branch is known but the sibling’s gender is unknown, give both aunt and uncle options when appropriate.
 
 ## Question models and worked examples
 
@@ -55,3 +60,18 @@ Family-relation questions translate statements into a tree of people and known r
 3. **Keep U’s gender open.** T being a brother establishes T’s gender alone. U could be S’s paternal aunt or uncle.
 
 **Answer:** A paternal aunt or uncle.
+
+## Quick revision sheet
+
+| When you see | Use this rule |
+| --- | --- |
+| Parent’s brother | Uncle. Maternal or paternal depends on the parent branch. |
+| Parent’s sister | Aunt. Maternal or paternal depends on the parent branch. |
+| Child’s gender given | Daughter or son, viewed from the parent. |
+| “X is the brother of Y” | X is male and X and Y are siblings. Y’s gender is open. |
+
+## Exam tips
+
+- **Put arrows or levels on the scratch diagram.** Do not let two names in the same clause force the wrong generation.
+- **Translate “only” with its exact scope.** An only daughter can have brothers.
+- **Read the requested viewpoint twice.** Ask who is the reference person before choosing the label.

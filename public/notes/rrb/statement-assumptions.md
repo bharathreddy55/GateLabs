@@ -1,18 +1,23 @@
-## What it means
+## Basics first
 
-An assumption is an unstated premise an argument or action relies on. A conclusion is what the speaker wants accepted, and evidence is what is stated in support. A possible reason or extra fact may sound helpful without being required. Read the argument in its exact strength and scope.
+- **Evidence.** Evidence is a stated fact or observation. Identify which information the author actually supplied.
+- **Conclusion.** The conclusion is what the evidence is meant to support. It may be a recommendation, explanation or prediction.
+- **Necessary assumption.** An assumption supplies a bridge from evidence to conclusion. If it is necessary, denying it disrupts the stated reasoning.
+- **Alternatives.** A rival cause or an unrepresentative sample may produce the same observation. This raises a distinct issue from whether the plan sounds appealing.
 
-## Formulas and rules
+## Methods and when to use them
 
-- **Negation test:** Negate the proposed premise. If the reason given can still justify the conclusion in the same way, the premise is unlikely to be necessary.
-- **Cause and effect:** A plan assumes a workable route from action to intended result. A causal interpretation of evidence may require ruling out credible alternatives.
-- **Sampling:** A claim about a wider population requires an assumption that the evidence can represent that population in the relevant respect.
-- **Quantifiers:** One cause, some users and all users are different strengths. Reject wording stronger than the argument needs.
+### Method A · Reduce the argument to evidence and goal
 
-## How to study it for Station Master
+Write “because … therefore …” in your own words. Ask which condition must connect those two statements. For a new counter to affect a queue, it must serve at least part of that queue.
 
-- Underline evidence and box the conclusion. Write the missing bridge in your own words before reading options.
-- Train by comparing a necessary weak assumption with a stronger sufficient claim. Negate the full statement carefully, especially if it contains “all” or “at least one”.
+### Method B · Negate the proposed assumption
+
+Negate “some can be helped” to “none can be helped.” If the plan no longer has a mechanism, the assumption is necessary. Negating “every worker prefers evenings” permits some who prefer evenings, so the plan can still work.
+
+### Method C · Match the missing link to the argument type
+
+A survey needs a justified link from respondents to the stated population. A causal claim based on timing needs a reason to rule out an alternative that fully explains the effect. A plan needs a mechanism tying action to outcome.
 
 ## Question models and worked examples
 
@@ -55,3 +60,18 @@ An assumption is an unstated premise an argument or action relies on. A conclusi
 3. **Identify the necessary bridge.** The inference requires that an unrelated change does not fully account for the fall. Evidence of other factors would be needed to test the claim.
 
 **Answer:** No unrelated change fully accounts for the observed fall.
+
+## Quick revision sheet
+
+| When you see | Use this rule |
+| --- | --- |
+| Plan to reduce a problem | Look for minimum feasibility of the proposed mechanism. |
+| Sample to whole population | Check whether the sample represents the target on the measured issue. |
+| Change follows an intervention | Ask whether a concurrent cause can explain the same change. |
+| Candidate assumption is an absolute | Try a weaker condition that still lets the argument work. |
+
+## Exam tips
+
+- **Distinguish support and necessity.** Something helpful may still be optional to the argument.
+- **Keep the strength of the claim.** “Some” and “all” require different justification.
+- **Test relevance to the conclusion.** A true statement about the station may have no bearing on the inference.

@@ -1,18 +1,23 @@
-## What it means
+## Basics first
 
-Logic puzzles use several statements to restrict an arrangement. Different dimensions, such as person, floor and colour, can appear in one puzzle. Use a grid or slots to make the restrictions explicit. A clue with two branches can become decisive when one branch conflicts with an exclusion.
+- **Assignment.** Each person or item gets a slot, group or category. A one-to-one rule means placing one item removes that slot and item from the others.
+- **Fixed order and adjacency.** “Above” or “later” is an inequality. “Immediately above” requires a one-position difference.
+- **Conditional clue.** If P then Q rules out exactly the case P true and Q false. Its contrapositive can eliminate P when Q is known false.
+- **Witness.** A complete assignment that meets every clue proves that a proposed state could occur. Necessity requires checking all remaining assignments or contradicting their alternatives.
 
-## Formulas and rules
+## Methods and when to use them
 
-- **Grid rule:** Where each item is used once, a confirmed assignment excludes that item from every other slot in the same category.
-- **Boundaries:** “Above” means greater floor number, and “immediately above” means one greater. An adjacent block cannot fit past an end.
-- **Conditions:** If P then Q excludes P with not Q. To test a possibility, construct an entire valid assignment.
-- **Clue order:** Start with fixed slots and linked blocks, then apply precedence, exclusions and conditional clues.
+### Method A · Combine the constraints into a chain
 
-## How to study it for Station Master
+For floors, write below to above in one direction. If four ordered items fill four distinct floors, the chain fixes their positions. Verify the strict adjacency after placement.
 
-- Practise a four-item problem without timing, record the clue that forces the first placement, and repeat with a different anchor.
-- Use branches only after propagating forced facts. Before claiming a unique answer, check whether another complete branch is valid.
+### Method B · Use an elimination grid for categories
+
+Make a row per person and mark impossible colours or topics. Place the fixed values. Carry exclusivity both ways so each fixed cell crosses out its row and column alternatives.
+
+### Method C · Branch only on clues with few options
+
+Try the requested slot or the tightest condition first. Propagate its consequences until you find a completion or conflict. For a schedule with dates and topics, keep both columns attached to each date.
 
 ## Question models and worked examples
 
@@ -55,3 +60,18 @@ Logic puzzles use several statements to restrict an arrangement. Different dimen
 3. **Check the final constraint.** D in 1 is not adjacent to C in 4. One arrangement satisfying all the clues proves C can occupy slot 4.
 
 **Answer:** Yes, D–A–B–C is valid.
+
+## Quick revision sheet
+
+| When you see | Use this rule |
+| --- | --- |
+| Immediately above in numbered floors | upper floor = lower floor + 1. |
+| “If A has blue then C has green” with C not green | A cannot have blue. |
+| Each person has one distinct topic | A fixed topic excludes it from every other person. |
+| Could be true | Find one complete valid assignment. |
+
+## Exam tips
+
+- **Read direction once and label it.** An inverted floor drawing can reverse every clue.
+- **Cross out invalid cases deliberately.** Name the exact clue that fails so you do not discard a valid branch.
+- **Verify linked details together.** A name can be on the right day with the wrong topic.

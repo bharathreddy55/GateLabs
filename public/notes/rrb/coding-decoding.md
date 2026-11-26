@@ -1,18 +1,23 @@
-## What it means
+## Basics first
 
-Coding and decoding uses a stated or inferred mapping between an input and an output. A rule can shift individual letters, reverse order, substitute symbols, depend on positions, or give the same token to a word across phrases. Separate the method that changes order from the method that changes values.
+- **Encode and decode.** Encoding applies the given transformation. Decoding reverses it. If the encoder moves +2, a decoder moves −2.
+- **Order and shift.** Reordering positions and shifting letters can be separate operations. Reverse steps in reverse order to undo a multi-step code.
+- **Conditional codes.** The rule can depend on a letter type or a position. Check whether it says “original letter,” “odd position after reversal” or another precise condition.
+- **Word tokens.** In phrase coding, a distinct token represents a word. If word order is unspecified, compare the sets of words and tokens for overlaps.
 
-## Formulas and rules
+## Methods and when to use them
 
-- **Shift direction:** Encode by adding the specified shift and decode by subtracting it on a wrapped alphabet.
-- **Position-dependent rules:** Mark odd/even or vowel/consonant conditions on the original positions before applying transformations.
-- **Order of operations:** “Reverse then shift” and “shift then reverse” can differ when the shift depends on position. Apply the exact sequence.
-- **Common-token method:** If each word has its own token and code order is unspecified, the intersection of two phrases with one common word reveals that word’s token.
+### Method A · Draw a before-and-after row
 
-## How to study it for Station Master
+Write the plain letters above the code. Test standard shifts and wrapping before trying a complex rule. If the prompt asks to decode, re-encode the candidate to check it.
 
-- Align examples one character at a time. Test any inferred rule on all given pairs before decoding the asked word.
-- Practise conditional codes and unordered token phrases. Track whether a “second position” is counted before or after a reversing step.
+### Method B · Carry out composite instructions in order
+
+For “reverse then shift,” write the reversed word first. Number those positions before applying odd/even shifts. Classify vowels and consonants using the letters to which the stated rule applies.
+
+### Method C · Use phrase intersections
+
+Find the shared word between two phrases, then the shared token. A unique overlap and a one-to-one coding rule lock the match. If several words overlap, a third phrase is needed to distinguish them.
 
 ## Question models and worked examples
 
@@ -20,9 +25,12 @@ Coding and decoding uses a stated or inferred mapping between an input and an ou
 
 **Question.** Each letter is shifted forward by two, wrapping after Z. Decode TCKN.
 
-1. **Reverse the encoding shift.** Each original letter moved two places forward to make the code. To decode, move each coded letter two places backward, wrapping before A if needed.
-2. **Decode each letter in sequence.** T→R, C→A, K→I and N→L. Keep the four letters in the same order.
-3. **Verify by re-encoding.** R→T, A→C, I→K and L→N takes RAIL back to TCKN.
+1. **Reverse the encoding shift.** Each original letter moved two places forward to make the code. To decode, move each coded letter two places backward, wrapping before A if needed.\
+   `encode +2 ⇒ decode −2`
+2. **Decode each letter in sequence.** T→R, C→A, K→I and N→L. Keep the four letters in the same order.\
+   `T→R, C→A, K→I, N→L`
+3. **Verify by re-encoding.** R→T, A→C, I→K and L→N takes RAIL back to TCKN.\
+   `RAIL +2 letter by letter ⇒ TCKN`
 
 **Answer:** RAIL.
 
@@ -30,9 +38,13 @@ Coding and decoding uses a stated or inferred mapping between an input and an ou
 
 **Question.** Reverse RAIL, then shift odd positions forward one and even positions back one. Give the code.
 
-1. **Follow the operations in order.** Reverse RAIL first, giving LIAR. Number the positions from 1 at the left of the reversed word.
-2. **Shift the odd positions forward.** Position 1 changes from L to M, and position 3 changes from A to B.
-3. **Shift the even positions backward and assemble.** Position 2 changes from I to H, and position 4 changes from R to Q. Reading positions 1 through 4 gives MHBQ.
+1. **Follow the operations in order.** Reverse RAIL first, giving LIAR. Number the positions from 1 at the left of the reversed word.\
+   `RAIL → LIAR`
+2. **Shift the odd positions forward.** Position 1 changes from L to M, and position 3 changes from A to B.\
+   `positions 1 and 3: L→M, A→B`
+3. **Shift the even positions backward and assemble.** Position 2 changes from I to H, and position 4 changes from R to Q. Reading positions 1 through 4 gives MHBQ.\
+   `positions 2 and 4: I→H, R→Q`\
+   `M H B Q ⇒ MHBQ`
 
 **Answer:** MHBQ.
 
@@ -50,8 +62,26 @@ Coding and decoding uses a stated or inferred mapping between an input and an ou
 
 **Question.** Shift vowels one letter forward and consonants one letter back, with wrap. Encode TRAIN.
 
-1. **Classify before shifting.** In TRAIN, A and I are vowels. T, R and N are consonants. Apply the rule to each original letter.
-2. **Apply the two directions.** Move A→B and I→J forward. Move T→S, R→Q and N→M backward.
-3. **Read in word order.** Keeping the positions of TRAIN gives S, Q, B, J and M. The final code is SQBJM.
+1. **Classify before shifting.** In TRAIN, A and I are vowels. T, R and N are consonants. Apply the rule to each original letter.\
+   `vowels A, I. Consonants T, R, N.`
+2. **Apply the two directions.** Move A→B and I→J forward. Move T→S, R→Q and N→M backward.\
+   `A→B, I→J and T→S, R→Q, N→M`
+3. **Read in word order.** Keeping the positions of TRAIN gives S, Q, B, J and M. The final code is SQBJM.\
+   `S Q B J M ⇒ SQBJM`
 
 **Answer:** SQBJM.
+
+## Quick revision sheet
+
+| When you see | Use this rule |
+| --- | --- |
+| Encode by a forward shift | Move each letter forward and wrap if required. |
+| Decode a uniform shift | Use the opposite shift and verify by encoding. |
+| Reverse then shift | Place the letters in the new order before numbering positions. |
+| Unique repeated word and token | One shared word matches the one shared token under a one-to-one code. |
+
+## Exam tips
+
+- **Keep token boundaries.** A token such as ku is one code symbol here.
+- **Apply letter rules once.** An A changed to B by the vowel rule does not get a second consonant shift.
+- **Read ordering clues precisely.** Unspecified token order means position matching offers no proof.

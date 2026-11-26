@@ -1,18 +1,23 @@
-## What it means
+## Basics first
 
-A syllogism tests whether a conclusion is forced by statements about sets. Represent categories as circles and use a mark for existence. “All” describes containment, “no” describes separation, and “some” asserts at least one member. Follow the stated groups even when the labels suggest different real-world facts.
+- **Universal assertion.** “All A are B” places A inside B. By itself it neither asserts that A has a member nor that B is inside A.
+- **Exclusion.** “No A is B” makes the sets disjoint. This exclusion works in either direction.
+- **Particular assertion.** “Some A are B” means at least one witness lies in both A and B. “Some A are not B” puts a witness in A outside B.
+- **Necessity.** A conclusion follows when it holds in every diagram consistent with the premises. A compatible diagram that makes it false defeats the conclusion.
 
-## Formulas and rules
+## Methods and when to use them
 
-- **All A are B:** A is a subset of B. It does not reverse to “all B are A”, and a universal statement alone need not prove an A exists in standard logic.
-- **No A are B:** A∩B is empty. This separation is symmetric.
-- **Some A are B:** Mark at least one point in A∩B. “Some A are not B” places one in A outside B and does not reverse.
-- **Validity check:** If any arrangement satisfies the premises and makes a conclusion false, the conclusion does not follow. Apply any explicit existence convention stated in the question.
+### Method A · Draw containment and exclusion before adding witnesses
 
-## How to study it for Station Master
+Sketch the universal constraints first. Place a dot for each stated existence only where the rules allow. The same dot may serve more than one premise when allowed, but two separate premises can require different dots.
 
-- Draw containment first, then separation, then place the existence marks. If a mark may sit on either side of a third circle, keep both alternatives open.
-- Practise keeping separate “some” witnesses separate, and distinguish necessary conclusions from possible overlap. Verify on two diagrams if uncertain.
+### Method B · Carry a given witness through the chain
+
+If a dot is in A and A sits inside B, it is in B too. If B is disjoint from C, the same dot is outside C. State the result about that witness without upgrading it to all A.
+
+### Method C · Build a minimal counterexample
+
+To test whether “some A are B” and “some B are C” force A∩C, try two distinct B members. Put one in A and the other in C, leaving A and C disjoint.
 
 ## Question models and worked examples
 
@@ -55,3 +60,18 @@ A syllogism tests whether a conclusion is forced by statements about sets. Repre
 3. **Judge the conclusion.** That counterexample rules out Engine ⇒ Freight as a guaranteed deduction.
 
 **Answer:** No, the direction cannot be reversed.
+
+## Quick revision sheet
+
+| When you see | Use this rule |
+| --- | --- |
+| All A inside B, all B inside C | All A are C. |
+| Some A in B and no B in C | Some A are outside C. |
+| Some A in B, some B in C | Try separate witnesses before concluding overlap of A and C. |
+| All A in B | Check the direction. This alone gives no claim that all B are A. |
+
+## Exam tips
+
+- **Separate all from some.** Do not add a member where a universal premise never asserted one.
+- **Treat “some” as at least one.** It can include every member unless “some but not all” is stated.
+- **Try a counterexample before choosing cannot-follow options.** One small diagram can settle the question.

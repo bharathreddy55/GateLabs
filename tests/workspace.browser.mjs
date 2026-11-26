@@ -79,6 +79,15 @@ try{
    const noteId=new URLSearchParams(new URL(page.url()).hash.split('?')[1]).get('note');
    const examId={'rrb-station-master':'rrb','sbi-clerk':'sbi'}[route]||route;
    assert.equal(await visual.getAttribute('src'),`http://127.0.0.1:3011/notes/visuals/${examId}/${noteId}.svg`);
+   if(route==='rrb-station-master'){
+     await notesTab.locator('[data-note-id="lcm-hcf"]').click();
+     const reader=notesTab.locator('[data-note-reader]');
+     await reader.getByRole('heading',{name:'Basics first',exact:true}).waitFor();
+     await reader.getByRole('columnheader',{name:'Use this rule',exact:true}).waitFor();
+     const calculation=reader.locator('li > br + code',{hasText:'9,999 − 39 = 9,960'});
+     await calculation.waitFor();
+     assert.match(await calculation.locator('..').innerText(),/Subtract that excess/);
+   }
    if(route==='gate'){assert.match(await page.locator('.countdown-date').innerText(),/2027-02-06/);assert.equal(await page.locator('.countdown-badge').textContent(),'Official exam window');assert.notEqual(await page.locator('.countdown-number').innerText(),'—');assert.match(await page.locator('.countdown-hint').innerText(),/CS-specific/);}
    assert.ok(await page.locator('.countdown-spotlight').evaluate(el=>el.getBoundingClientRect().top<document.querySelector('.prep-tab-strip').getBoundingClientRect().top),'Countdown must precede the tabs');
    for(const tab of ['mocks','syllabus','notes','papers','progress','overview']){
@@ -141,12 +150,13 @@ try{
  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2));
  await page.goto('http://127.0.0.1:3011/#/rrb-station-master?tab=notes&note=work-power-energy');
  const handnote=page.locator('[data-note-content]');
- await handnote.getByRole('heading',{name:'How to study it for Station Master',exact:true}).waitFor();
+ await handnote.getByRole('heading',{name:'Methods and when to use them',exact:true}).waitFor();
  const workCard=page.getByRole('img',{name:'Visual study guide for Work, Power and Energy'});
  await workCard.waitFor();
  assert.ok(await workCard.evaluate(img=>img.naturalWidth===480&&img.getBoundingClientRect().right<=innerWidth));
- assert.equal(await handnote.locator('h5').count(),5);
  assert.equal(await handnote.locator('ol').count(),5);
+ await handnote.locator('li > br + code',{hasText:'400 ÷ 0.80 = 500 W'}).waitFor();
+ await handnote.getByRole('columnheader',{name:'Use this rule'}).waitFor();
  assert.match(await handnote.innerText(),/500 W input/);
  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2));
  await page.goto('http://127.0.0.1:3011/#/sbi-clerk?tab=notes&note=english-reading');
