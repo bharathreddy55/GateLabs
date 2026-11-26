@@ -20,8 +20,9 @@ An analogy asks for a second pair with the same relationship as the first. The r
 
 **Question.** Barometer : pressure :: odometer : humidity, distance, acceleration or temperature?
 
-1. A barometer measures pressure. This is instrument → quantity.
-2. An odometer records the distance a vehicle has travelled.
+1. **State what the first instrument does.** A barometer measures atmospheric pressure. The relation runs from a measuring instrument to the quantity it reports.
+2. **Carry the relationship over.** An odometer records the accumulated distance a vehicle has travelled. Think of the total shown next to the trip reading.
+3. **Check the alternatives using the same relation.** A hygrometer measures humidity, an accelerometer measures acceleration and a thermometer measures temperature. The odometer’s quantity is distance.
 
 **Answer:** Distance.
 
@@ -29,8 +30,9 @@ An analogy asks for a second pair with the same relationship as the first. The r
 
 **Question.** Spoke : wheel :: key : lock, keyboard, door or driver?
 
-1. A spoke is a component of a wheel. Preserve part → whole.
-2. A keyboard key is a component of a keyboard. A key can operate a lock but is not its component in this relation.
+1. **Read the relationship in order.** A spoke is one component of a wheel. The first term is a part and the second is the whole it belongs to.
+2. **Apply the same part-to-whole test.** A keyboard contains individual keys. Under this meaning of “key,” it is a built-in part of the named whole.
+3. **Distinguish the tempting association.** A key can operate a lock, but that is a tool-to-object relation. The keyboard keeps the same structural relationship as spoke to wheel.
 
 **Answer:** Keyboard.
 
@@ -38,8 +40,9 @@ An analogy asks for a second pair with the same relationship as the first. The r
 
 **Question.** 4 : 19 and 6 : 39 follow the same simple rule. Apply it to 9.
 
-1. Both outputs are three above the square: 4²+3=19 and 6²+3=39.
-2. Use 9²+3.
+1. **Test a simple operation on the inputs.** The squares of 4 and 6 are 16 and 36. Their differences from the stated outputs are 19−16=3 and 39−36=3.
+2. **Verify one rule against both pairs.** The rule n²+3 gives 4²+3=19 and 6²+3=39. Use the same operation and constant in both cases.
+3. **Substitute the new input.** 9²=81, then add 3 to obtain 84.
 
 **Answer:** 84.
 
@@ -47,7 +50,8 @@ An analogy asks for a second pair with the same relationship as the first. The r
 
 **Question.** CFE : EHG :: HKN : ?
 
-1. Positions C→E, F→H and E→G each rise by two.
-2. Apply +2 to H, K and N to obtain J, M and P.
+1. **Compare letters in matching positions.** C becomes E, F becomes H, and E becomes G. Each moves two places forward in the alphabet.
+2. **Apply the same shift to each new letter.** H becomes J, K becomes M, and N becomes P. Each shift is done independently without exchanging positions.
+3. **Join in the original order.** The mapped letters in order are J, M and P, giving JMP.
 
 **Answer:** JMP.

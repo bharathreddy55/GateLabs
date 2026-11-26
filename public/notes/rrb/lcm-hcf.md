@@ -20,8 +20,9 @@ The highest common factor is the greatest positive integer that divides all the 
 
 **Question.** Cut ropes of 84, 126 and 210 m into the longest identical whole-metre lengths. Find length and count.
 
-1. HCF(84,126)=42, which also divides 210.
-2. The ropes yield 84/42=2, 126/42=3 and 210/42=5 pieces.
+1. **Translate the cutting condition.** The piece length must divide all three rope lengths exactly. Choosing the longest such piece means taking their HCF.
+2. **Find the HCF.** 84 = 2 × 42 and 126 = 3 × 42. Since 2 and 3 are coprime, their HCF is 42. The third rope is 210 = 5 × 42 and does not reduce it.
+3. **Count the pieces.** The ropes give 84/42 = 2, 126/42 = 3 and 210/42 = 5 pieces. Add them to get 10.
 
 **Answer:** 42 m per piece, 10 pieces.
 
@@ -29,8 +30,9 @@ The highest common factor is the greatest positive integer that divides all the 
 
 **Question.** Lights flash together at 10:00, then every 18, 24 and 40 seconds. When are they next together?
 
-1. Factor 18=2×3², 24=2³×3 and 40=2³×5.
-2. Maximum exponents give 2³×3²×5=360 seconds, or six minutes.
+1. **Translate the repeat condition.** After the common flash, each light returns at multiples of its own interval. The first shared positive time is the LCM.
+2. **Take the largest prime powers.** 18 = 2 × 3², 24 = 2³ × 3 and 40 = 2³ × 5. A common multiple needs 2³, 3² and 5, so the least one is 360 seconds.
+3. **Convert and add the interval.** 360 seconds is six minutes. Add six minutes to 10:00 to get 10:06.
 
 **Answer:** 10:06.
 
@@ -38,8 +40,9 @@ The highest common factor is the greatest positive integer that divides all the 
 
 **Question.** Find the greatest divisor giving remainder 5 for each of 149, 197 and 245.
 
-1. Subtract 5 to get 144, 192 and 240.
-2. Their HCF is 48, which exceeds the required remainder.
+1. **Remove the required remainder.** If division leaves 5, subtracting 5 gives an exact multiple of the divisor. The adjusted numbers are 144, 192 and 240.
+2. **Find their greatest common divisor.** 192 − 144 = 48 and 240 − 192 = 48, so every common divisor divides 48. All three adjusted numbers are divisible by 48.
+3. **Check the original remainders.** 149 = 3 × 48 + 5, 197 = 4 × 48 + 5 and 245 = 5 × 48 + 5. Since 5 < 48, these are valid remainders.
 
 **Answer:** 48.
 
@@ -47,7 +50,8 @@ The highest common factor is the greatest positive integer that divides all the 
 
 **Question.** HCF=12, LCM=240 and one number is 48. Find the other.
 
-1. Use the two-number product relation: other=12×240/48=60.
-2. The numbers are 12×4 and 12×5, with coprime cofactors. This confirms the HCF and LCM.
+1. **Use the two-number identity.** For positive integers, HCF × LCM equals their product. Here the product is 12 × 240 = 2,880.
+2. **Isolate the missing number.** Divide the product by the known number 48, obtaining 2,880 ÷ 48 = 60.
+3. **Verify both conditions.** 48 = 12 × 4 and 60 = 12 × 5. The co-factors 4 and 5 are coprime, giving HCF 12 and LCM 12 × 4 × 5 = 240.
 
 **Answer:** 60.

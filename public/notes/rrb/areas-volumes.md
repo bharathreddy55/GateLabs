@@ -20,8 +20,9 @@ Area measures flat coverage in square units. Surface area measures the exposed f
 
 **Question.** A 20 m by 14 m garden has a 1 m wide path outside all four edges. Find path area.
 
-1. Outer dimensions are 22 by 16 because the path adds 1 on both sides of each dimension.
-2. Subtract the garden: 22×16−20×14=352−280.
+1. **Find the outer rectangle.** The 1 m path adds 1 m at each end of both dimensions. The outer length is 22 m and the outer width is 16 m.
+2. **Find both areas.** The outer rectangle covers 22 × 16 = 352 m². The garden covers 20 × 14 = 280 m².
+3. **Isolate the path.** The larger rectangle includes the garden and the path, so the path area is 352 − 280 = 72 m².
 
 **Answer:** 72 m².
 
@@ -29,8 +30,9 @@ Area measures flat coverage in square units. Surface area measures the exposed f
 
 **Question.** A 90° sector has outer radius 10 cm and inner radius 6 cm removed. Find remaining area.
 
-1. Full annulus area is π(100−36)=64π cm².
-2. A right angle is one-quarter of a full turn, so take a quarter of the ring.
+1. **Find the full ring area.** The removed inner circle has radius 6 cm and the outside radius is 10 cm. The difference in their areas is π(10² − 6²) = 64π cm².
+2. **Find the sector share.** A 90° sector takes 90/360 = 1/4 of the ring. Both boundary circles use the same angle.
+3. **Apply the fraction.** The remaining annular sector has area 64π × 1/4 = 16π cm².
 
 **Answer:** 16π cm².
 
@@ -38,8 +40,9 @@ Area measures flat coverage in square units. Surface area measures the exposed f
 
 **Question.** An open-top cylinder has radius 7 cm and height 10 cm. How much sheet area is needed, ignoring overlaps?
 
-1. Curved area is 2π×7×10=140π cm².
-2. Add one base of area 49π, leaving the top open.
+1. **Identify the sheet pieces.** The container needs the cylindrical wall and one circular base. The opening at the top requires no sheet.
+2. **Find the curved wall area.** Unrolling the wall gives a rectangle of width 2πr and height h. Its area is 2π × 7 × 10 = 140π cm².
+3. **Add the base.** One circular base adds π × 7² = 49π cm². Total sheet area is 189π cm².
 
 **Answer:** 189π cm².
 
@@ -47,8 +50,9 @@ Area measures flat coverage in square units. Surface area measures the exposed f
 
 **Question.** A tank base is 80 by 50 cm. Pour in 24 L. How far does the water level rise?
 
-1. 24 L=24,000 cm³. Base area=4,000 cm².
-2. Divide added volume by base area.
+1. **Match the volume units.** One litre is 1,000 cm³. The added water therefore occupies 24 × 1,000 = 24,000 cm³.
+2. **Calculate the horizontal base area.** The rectangular base covers 80 × 50 = 4,000 cm². This is also the area of each horizontal layer of water.
+3. **Find the layer’s height.** Volume gained is base area × rise. Divide 24,000 cm³ by 4,000 cm² to get a rise of 6 cm.
 
 **Answer:** 6 cm.
 
@@ -56,7 +60,8 @@ Area measures flat coverage in square units. Surface area measures the exposed f
 
 **Question.** A cone and a cylinder have radius 3 cm and height 8 cm. What volume is unfilled if the cone’s contents are poured into the cylinder?
 
-1. Cylinder capacity=π×9×8=72π cm³.
-2. Equal-base, equal-height cone contains one-third, 24π cm³. Subtract from 72π.
+1. **Find the common base area.** Both solids have radius 3 cm, giving base area π × 3² = 9π cm².
+2. **Compare their volumes.** The cylinder holds base area × height = 9π × 8 = 72π cm³. The matching cone holds one-third of that, or 24π cm³.
+3. **Subtract what is poured in.** The space left in the cylinder is 72π − 24π = 48π cm³.
 
 **Answer:** 48π cm³.

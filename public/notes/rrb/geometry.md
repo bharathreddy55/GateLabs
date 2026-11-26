@@ -20,8 +20,9 @@ Plane geometry studies flat figures. Diagrams help track incidences, but equal-l
 
 **Question.** A triangle’s exterior angle is 132°. Its remote interior angles are in ratio 5:6. Find the three interior angles.
 
-1. The two remote angles total 132°, so each ratio part is 12°. The two are 60° and 72°.
-2. The remaining interior angle is supplementary to 132°, so it is 48°.
+1. **Use the exterior angle theorem.** The exterior angle equals the sum of the two interior angles away from its vertex. Those two angles therefore total 132°.
+2. **Split the sum in ratio 5:6.** The 11 total parts give 132 ÷ 11 = 12° per part. The angles are 5 × 12° = 60° and 6 × 12° = 72°.
+3. **Find the angle at the exterior vertex.** That angle and 132° form a straight line, so the interior angle is 180° − 132° = 48°. All three add to 180°.
 
 **Answer:** 60°, 72°, 48°.
 
@@ -29,8 +30,9 @@ Plane geometry studies flat figures. Diagrams help track incidences, but equal-l
 
 **Question.** In ABC, D is on AB and E on AC with DE parallel to BC. AD:DB=2:3. Area of ABC is 125 cm². Find area of ADE.
 
-1. Parallelism gives two matching angles, hence similarity.
-2. Length scale is AD/AB=2/5. Multiply 125 by (2/5)².
+1. **Establish similarity.** DE is parallel to BC. The matching angles at D and B, together with the angle at A, make ADE similar to ABC.
+2. **Find the matching side ratio.** AB includes both AD and DB. From AD:DB = 2:3, AD/AB = 2/(2+3) = 2/5.
+3. **Square the side scale for area.** Both dimensions scale by 2/5, so the area scale is 4/25. The smaller area is 125 × 4/25 = 20 cm².
 
 **Answer:** 20 cm².
 
@@ -38,8 +40,9 @@ Plane geometry studies flat figures. Diagrams help track incidences, but equal-l
 
 **Question.** A regular polygon has an interior angle of 156°. Find its sides.
 
-1. Exterior turn=180°−156°=24°.
-2. A full circuit turns 360°, so count=360/24.
+1. **Find the outside turn.** Each regular-polygon vertex has interior angle 156°. Its exterior turn is 180° − 156° = 24°.
+2. **Use one full circuit.** Walking around the polygon in one direction makes a complete turn of 360°. Each vertex contributes the same 24°.
+3. **Count the vertices.** There are 360 ÷ 24 = 15 turns, giving 15 sides.
 
 **Answer:** 15.
 
@@ -47,7 +50,8 @@ Plane geometry studies flat figures. Diagrams help track incidences, but equal-l
 
 **Question.** Distance from external point P to circle centre O is 13 cm, with radius 5 cm. Find the length to a touchpoint T.
 
-1. OT meets PT at 90°. OP is the hypotenuse.
-2. PT²=13²−5²=144. Take the positive root.
+1. **Mark the right angle.** The radius OT is perpendicular to the tangent PT at T, so triangle OTP has its right angle at T.
+2. **Apply Pythagoras.** OP is opposite the right angle, so it is the 13 cm hypotenuse. OT is the 5 cm radius. Thus PT² = 13² − 5² = 144.
+3. **Take the length.** The positive square root of 144 gives PT = 12 cm.
 
 **Answer:** 12 cm.

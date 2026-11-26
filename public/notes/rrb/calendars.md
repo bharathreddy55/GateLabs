@@ -20,8 +20,9 @@ A weekday changes in a seven-day cycle. Calendar problems reduce elapsed days mo
 
 **Question.** If 3 August is Tuesday, what weekday is 25 August?
 
-1. Elapsed time is 25−3=22 days, without counting the starting day as a step.
-2. 22=21+1. Move one weekday forward.
+1. **Count the elapsed days.** From 3 August to 25 August there are 25 − 3 = 22 day changes. The starting date is the reference.
+2. **Remove full weeks.** 22 = 3 × 7 + 1, so only one day remains after complete weeks return to Tuesday.
+3. **Move forward one weekday.** One day after Tuesday is Wednesday.
 
 **Answer:** Wednesday.
 
@@ -29,8 +30,9 @@ A weekday changes in a seven-day cycle. Calendar problems reduce elapsed days mo
 
 **Question.** If 28 February 2024 was Wednesday, what day was 1 March?
 
-1. 2024 is divisible by 4 and is not a century year. February has 29 days.
-2. Advance two days: Feb 29 is Thursday, March 1 is Friday.
+1. **Check whether February has 29 days.** 2024 is divisible by 4 and is not a century year, so it is a Gregorian leap year.
+2. **List the dates in order.** The day after 28 February is 29 February, and the day after that is 1 March.
+3. **Advance the weekday twice.** Wednesday → Thursday → Friday, so 1 March is Friday.
 
 **Answer:** Friday.
 
@@ -38,8 +40,9 @@ A weekday changes in a seven-day cycle. Calendar problems reduce elapsed days mo
 
 **Question.** Which of 1900, 2000 and 2100 are leap years in the Gregorian calendar?
 
-1. Each is divisible by 100, so apply the stricter ÷400 condition.
-2. Only 2000 is divisible by 400.
+1. **Apply the century exception.** All three years end in 00, so each must be divisible by 400 to be a leap year.
+2. **Test each division.** 1,900 ÷ 400 leaves remainder 300. 2,000 ÷ 400 = 5 exactly. 2,100 ÷ 400 leaves remainder 100.
+3. **Classify the years.** Only 2000 passes the 400-year condition.
 
 **Answer:** 2000 only.
 
@@ -47,7 +50,8 @@ A weekday changes in a seven-day cycle. Calendar problems reduce elapsed days mo
 
 **Question.** If 15 March 2023 was Wednesday, what day was 15 March 2024?
 
-1. The interval includes 29 February 2024, so there are 366 elapsed days.
-2. 366 leaves remainder 2 modulo 7. Advance two days.
+1. **Locate the leap day within the interval.** From 15 March 2023 to 15 March 2024, the interval includes 29 February 2024.
+2. **Find the weekday shift.** The extra leap day makes the interval 366 days. Since 366 = 52 × 7 + 2, shift forward two days.
+3. **Apply it to the given weekday.** Wednesday advances through Thursday to Friday.
 
 **Answer:** Friday.

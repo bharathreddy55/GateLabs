@@ -20,8 +20,9 @@ A percentage is a fraction of a named base expressed out of 100. A change in a r
 
 **Question.** After an 18% increase daily output is 354 units. What was it before?
 
-1. The final value is 1.18 times the old value.
-2. 354/1.18=300. Check that 18% of 300 is 54.
+1. **Write the increase as a multiplier.** An 18% increase means the new figure is 118% of the old one, or 1.18 times it.
+2. **Undo the multiplication.** Let O be the old output. The equation is 1.18O = 354. Dividing by 1.18 gives O = 300.
+3. **Check against the new figure.** 18% of 300 is 54, so the increased output is 300 + 54 = 354.
 
 **Answer:** 300 units.
 
@@ -29,8 +30,9 @@ A percentage is a fraction of a named base expressed out of 100. A change in a r
 
 **Question.** Usage rises 25% then falls 20%. Find the net change.
 
-1. Start at 100. The increase gives 125.
-2. Apply 20% to 125, so usage falls by 25 and returns to 100.
+1. **Start with a base of 100.** Only the relative change matters. After rising 25%, the quantity becomes 100 × 1.25 = 125.
+2. **Use the new base for the fall.** 20% of 125 is 25. Subtract it to get 125 − 25 = 100.
+3. **Compare to the original.** The final amount equals the original. Equivalently, the combined multiplier is 1.25 × 0.80 = 1.
 
 **Answer:** 0%.
 
@@ -38,8 +40,9 @@ A percentage is a fraction of a named base expressed out of 100. A change in a r
 
 **Question.** A rejection rate goes from 4% to 5%. Give both changes.
 
-1. Subtract percentages for a difference of one percentage point.
-2. Relative change is (5−4)/4×100%=25%.
+1. **Find the point change.** Subtract the two stated rates. The increase from 4% to 5% is one percentage point.
+2. **Find the relative change.** Compare that one-point increase with the old four-point rate. The ratio is 1 ÷ 4 = 0.25.
+3. **Report both units.** Say one percentage point for the direct difference and 25% for the change relative to the old rate.
 
 **Answer:** Up 1 percentage point, or 25% relative to the old rate.
 
@@ -47,7 +50,8 @@ A percentage is a fraction of a named base expressed out of 100. A change in a r
 
 **Question.** Price rises 12.5%. Find the percent reduction in quantity affordable under the same budget, allowing fractional quantities.
 
-1. The price multiplier is 9/8, so quantity multiplies by 8/9.
-2. The reduction is 1−8/9=1/9 of the old quantity.
+1. **Find the new price multiplier.** The increase is 12.5% = 1/8, so one item costs 9/8 of its old price.
+2. **Use the fixed budget.** Quantity = budget ÷ price. When price multiplies by 9/8, affordable quantity multiplies by its reciprocal, 8/9.
+3. **Turn the shortfall into a percentage.** The loss in quantity is 1 − 8/9 = 1/9 of the original, or 11⅑%.
 
 **Answer:** 11⅑% fewer.

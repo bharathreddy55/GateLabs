@@ -20,8 +20,9 @@ An expression combines variables, constants and operations. A coefficient multip
 
 **Question.** Given x+y=13 and xy=36, find x²+y².
 
-1. Square the first equation: 169=x²+2xy+y².
-2. Subtract 2×36.
+1. **Expand the known square.** Use (x + y)² = x² + 2xy + y². The left side is 13² = 169.
+2. **Substitute the known product.** The cross term is 2xy = 2 × 36 = 72. Therefore 169 = x² + y² + 72.
+3. **Isolate the requested sum.** Subtract the cross term from 169 to get x² + y² = 97.
 
 **Answer:** 97.
 
@@ -29,8 +30,9 @@ An expression combines variables, constants and operations. A coefficient multip
 
 **Question.** Simplify (x²−25)/(x²−x−20) and state exclusions.
 
-1. Factor numerator as (x−5)(x+5), and denominator as (x−5)(x+4).
-2. The denominator excludes 5 and −4. Cancel the common factor x−5 only for allowed values.
+1. **Factor both polynomials.** Use the difference of squares in the numerator. For the denominator, −5 and 4 multiply to −20 and add to −1. Thus the factors are (x−5)(x+5) and (x−5)(x+4).
+2. **Record both restrictions.** The original denominator is zero at x = 5 and x = −4. Write down both before cancelling.
+3. **Cancel the common factor.** For the allowed values, divide numerator and denominator by x−5 to get (x+5)/(x+4). Both original exclusions still apply.
 
 **Answer:** (x+5)/(x+4), x≠5 and x≠−4.
 
@@ -38,8 +40,9 @@ An expression combines variables, constants and operations. A coefficient multip
 
 **Question.** Evaluate 103×97 using an identity.
 
-1. Rewrite as (100+3)(100−3).
-2. Use the difference of squares: 10000−9.
+1. **Write the factors around 100.** 103 is 100 + 3 and 97 is 100 − 3. Their offsets are equal in magnitude.
+2. **Apply the difference of squares.** The cross terms cancel when multiplying (a + b)(a − b), giving a² − b².
+3. **Evaluate the two squares.** Here 100² − 3² = 10,000 − 9 = 9,991.
 
 **Answer:** 9991.
 
@@ -47,7 +50,8 @@ An expression combines variables, constants and operations. A coefficient multip
 
 **Question.** Given x+1/x=5, find x²+1/x².
 
-1. Square both sides. The cross term 2x(1/x) equals 2.
-2. Subtract 2 from 25.
+1. **Square the given sum.** (x + 1/x)² is x² + 2x(1/x) + 1/x². The left side equals 5² = 25.
+2. **Simplify the cross term.** The given expression requires x ≠ 0. Therefore x(1/x) = 1 and the cross term is 2.
+3. **Isolate the target.** Subtract 2 from 25 to get x² + 1/x² = 23.
 
 **Answer:** 23.

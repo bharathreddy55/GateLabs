@@ -20,8 +20,9 @@ A table encodes facts at the intersection of a row and column. A value may be a 
 
 **Question.** Passenger counts in April and May were 3200 and 3680 at A, and 2800 and 3110 at B. Which station grew faster by percentage?
 
-1. A gained 480 on 3200, a rise of 15%.
-2. B gained 310 on 2800, about 11.1%. Each station has its own base.
+1. **Calculate A’s percentage growth.** A gained 3,680 − 3,200 = 480 passengers. Divide by its April count, 480/3,200 × 100% = 15%.
+2. **Calculate B’s growth on its own base.** B gained 3,110 − 2,800 = 310. Relative to its April count, that is 310/2,800 × 100% ≈ 11.07%.
+3. **Compare like measures.** A’s 15% exceeds B’s 11.07%. The comparison uses percentages with separate starting counts.
 
 **Answer:** A.
 
@@ -29,8 +30,9 @@ A table encodes facts at the intersection of a row and column. A value may be a 
 
 **Question.** Morning: 240 trains, 90% on time. Evening: 160 trains, 75% on time. Find overall punctuality.
 
-1. Convert to counts: 216 on time in morning and 120 in evening.
-2. Divide 336 on-time trains by 400 total. A simple mean of the two rates would weight the shifts equally.
+1. **Recover the morning on-time count.** Use the morning train count as the base, 240 × 90% = 216 on time.
+2. **Recover the evening on-time count.** Use the evening base, 160 × 75% = 120 on time. The two shift totals are unequal.
+3. **Combine both numerators and denominators.** There were 216 + 120 = 336 on-time trains out of 240 + 160 = 400. Divide to get 84%.
 
 **Answer:** 84%.
 
@@ -38,8 +40,9 @@ A table encodes facts at the intersection of a row and column. A value may be a 
 
 **Question.** A table lists 120 service requests on Monday, 140 on Tuesday and a three-day average of 135. Find Wednesday’s count.
 
-1. The total over three days must be 3×135=405.
-2. Subtract Monday and Tuesday’s total of 260.
+1. **Recover the required total.** Average = total ÷ number of days. A three-day average of 135 requires 3 × 135 = 405 requests.
+2. **Add the known days.** Monday and Tuesday jointly account for 120 + 140 = 260 requests.
+3. **Find and check the remainder.** Wednesday accounts for 405 − 260 = 145. Including it restores the required three-day total.
 
 **Answer:** 145.
 
@@ -47,7 +50,8 @@ A table encodes facts at the intersection of a row and column. A value may be a 
 
 **Question.** A running log shows 780 tickets by noon, 1120 by 2 pm, and 1620 by 5 pm. What share of tickets sold from noon to 5 pm came after 2 pm?
 
-1. The 2–5 pm interval added 1620−1120=500 tickets.
-2. The noon–5 pm interval added 1620−780=840. Compare 500 with 840.
+1. **Extract the after-2 sales.** Running totals include all tickets sold before the reading time. Subtract the 2 pm reading from the 5 pm reading, 1,620 − 1,120 = 500.
+2. **Extract all noon-to-5 sales.** Use the noon reading as the starting baseline for the full interval, 1,620 − 780 = 840.
+3. **Form the requested share.** Divide the later subinterval’s 500 by the whole interval’s 840. This reduces to 25/42, or about 59.5%.
 
 **Answer:** 25/42, about 59.5%.

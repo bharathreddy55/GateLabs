@@ -20,8 +20,9 @@ Trigonometry connects angles and side lengths. In a right triangle, the hypotenu
 
 **Question.** Given sin θ=5/13 for acute θ, find cos θ and tan θ.
 
-1. Take opposite=5, hypotenuse=13 and adjacent=√(169−25)=12.
-2. Use adjacent/hypotenuse and opposite/adjacent for the same angle.
+1. **Build a right triangle.** Sine is opposite/hypotenuse. Take those side lengths as 5 and 13, which preserve the ratio 5/13.
+2. **Find the remaining leg.** Using Pythagoras gives adjacent² = 13² − 5² = 144. Take the positive length 12.
+3. **Use the same reference angle.** Cosine is adjacent/hypotenuse = 12/13. Tangent is opposite/adjacent = 5/12.
 
 **Answer:** 12/13 and 5/12.
 
@@ -29,17 +30,19 @@ Trigonometry connects angles and side lengths. In a right triangle, the hypotenu
 
 **Question.** A person’s eye level is 1.6 m above the ground. From 18 m away the pole top has elevation 45°. Find the pole height.
 
-1. Opposite rise above eye level is 18×tan 45°=18 m.
-2. Add the 1.6 m between the eye line and ground.
+1. **Draw the line at eye level.** The angle of elevation is measured from the observer’s horizontal sight line. The 18 m ground distance is also the adjacent horizontal distance.
+2. **Find the rise above the eye.** Tangent = rise ÷ adjacent, so the rise is 18 × tan 45° = 18 m.
+3. **Add the eye height.** The pole starts at ground level, 1.6 m below the eye line. Its full height is 18 + 1.6 = 19.6 m.
 
 **Answer:** 19.6 m.
 
 ### Two stations of observation
 
-**Question.** From ground level on the same side, angles of elevation to a tower top are 60° and 30°. Observation points are 20 m apart. Find the height.
+**Question.** Two observation points at ground level lie on the same straight line from the base of a tower and on the same side of it. The points are 20 m apart, and their angles of elevation to the top are 60° and 30°. Find the height.
 
-1. For nearer distance x, height=x√3. At the farther point it is (x+20)/√3.
-2. Equality gives 3x=x+20, so x=10 m.
+1. **Name the two distances.** Let the nearer point be x metres from the base. Its angle is 60°, while the farther point at x + 20 metres sees 30°.
+2. **Write the same height twice.** Using tangent, h = x tan 60° = x√3. The farther point gives h = (x + 20) tan 30° = (x + 20)/√3.
+3. **Solve and substitute.** Equating heights gives 3x = x + 20, so x = 10 m. Substitute this into h = x√3.
 
 **Answer:** 10√3 m.
 
@@ -47,7 +50,8 @@ Trigonometry connects angles and side lengths. In a right triangle, the hypotenu
 
 **Question.** Evaluate 1−sin²30°+tan²45°.
 
-1. Use sin 30°=1/2 and tan 45°=1.
-2. Square before subtracting: 1−1/4+1.
+1. **Recall the exact ratios.** sin 30° = 1/2 and tan 45° = 1.
+2. **Square the ratios first.** sin²30° = (1/2)² = 1/4, while tan²45° = 1² = 1.
+3. **Combine the terms.** Now evaluate 1 − 1/4 + 1 = 2 − 1/4 = 7/4.
 
 **Answer:** 7/4.

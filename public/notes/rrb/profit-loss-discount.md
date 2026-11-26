@@ -20,8 +20,9 @@ Cost price (CP) is the seller’s cost, marked price (MP) is the list price, and
 
 **Question.** An item costs ₹960, is marked up 35% and is discounted 20%. Find profit percent.
 
-1. MP=960×1.35=₹1296. SP=1296×0.80=₹1036.80.
-2. Profit ₹76.80 is 76.80/960=0.08 of CP.
+1. **Mark up from the cost.** The marked price is 135% of ₹960, so it is 960 × 1.35 = ₹1,296.
+2. **Discount the marked price.** The buyer pays 80% of ₹1,296. The selling price is ₹1,036.80.
+3. **Measure profit against cost.** Profit is ₹1,036.80 − ₹960 = ₹76.80. Divide by ₹960 and multiply by 100% to get 8%.
 
 **Answer:** 8% profit.
 
@@ -29,8 +30,9 @@ Cost price (CP) is the seller’s cost, marked price (MP) is the list price, and
 
 **Question.** Cost is ₹850. What marked price gives a 20% profit after a 15% discount?
 
-1. Target SP=850×1.20=₹1020.
-2. The buyer pays 85% of MP, so MP=1020/0.85.
+1. **Find the required selling price.** A 20% gain means the seller needs 120% of the ₹850 cost, or 850 × 1.20 = ₹1,020.
+2. **Relate the sale to the marked price.** A 15% discount leaves 85% of the marked price. If M is the marked price, 0.85M = 1,020.
+3. **Solve and confirm.** M = 1,020 ÷ 0.85 = ₹1,200. Taking ₹180 off this price leaves the target ₹1,020.
 
 **Answer:** ₹1200.
 
@@ -38,8 +40,9 @@ Cost price (CP) is the seller’s cost, marked price (MP) is the list price, and
 
 **Question.** Two goods sell for ₹600 each, one at 20% gain and one at 20% loss. Find the overall result.
 
-1. Cost prices are 600/1.20=₹500 and 600/0.80=₹750.
-2. Total receipts are ₹1200 against ₹1250 spent, a loss of ₹50.
+1. **Recover each cost from its own multiplier.** The profit item sells for 1.2 times its cost, so its cost was 600 ÷ 1.2 = ₹500. The loss item sells at 0.8 times its cost, so its cost was ₹750.
+2. **Add receipts and costs.** The seller receives ₹1,200 against costs of ₹500 + ₹750 = ₹1,250. That makes a ₹50 loss.
+3. **Use the combined cost as the base.** Overall loss percentage is 50 ÷ 1,250 × 100% = 4%. Both equal selling prices conceal different cost bases.
 
 **Answer:** 4% loss.
 
@@ -47,7 +50,8 @@ Cost price (CP) is the seller’s cost, marked price (MP) is the list price, and
 
 **Question.** Which price is lower: 20% and then 10% off, or a single 29% off?
 
-1. Successive discounts retain 0.8×0.9=0.72 of MP.
-2. One discount retains 0.71. Compare amounts paid on the same marked price.
+1. **Find the retained fraction for two discounts.** A 20% discount leaves 0.8 of the marked price. The next discount leaves 0.9 of that reduced amount, so the buyer pays 0.8 × 0.9 = 0.72.
+2. **Find the retained fraction for one discount.** A 29% discount leaves 0.71 of the same marked price.
+3. **Compare amounts paid.** Since 0.71 is smaller than 0.72, the single discount wins. The difference is 0.01 of the marked price.
 
 **Answer:** The single 29% discount is cheaper by 1% of MP.

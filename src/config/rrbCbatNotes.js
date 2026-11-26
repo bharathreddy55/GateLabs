@@ -18,18 +18,31 @@ export const CBAT_NOTES = {
     exampleTitle:'Rotation versus mirror image',
     prompt:'Which figure cannot be made by rotating Figure A?',
     figures:[[0,4,8,9],[3,2,1,5],[1,5,8,9]],
-    solution:'Figure C. Figure B is a quarter-turn of A. Figure C mirrors A, putting its short arm on the opposite side after the long arms are aligned.',
+    exampleSteps:[
+      ["Anchor the long arm", "In Figure A, three shaded cells run down the left. Its fourth cell extends right from the bottom cell. Use that elbow and the direction of its short arm to identify the shape."],
+      ["Rotate A by one quarter-turn", "After a clockwise turn, the long arm runs along the top and the short arm points down from its left end. Slide it to the right and all four cells match Figure B."],
+      ["Check the apparent mirror", "Figure C has its long arm on the right and its short arm extends left at the bottom. Keeping the long arm vertical after a rotation either keeps A’s original elbow or moves it to the top. Neither result matches C."]
+    ],
+    solution:"Figure C.",
     models:[
       {
         title:'Same shape at a different grid position',
         prompt:'Figure X shades A1, A2 and B2. Figure Y shades B2, B3 and C3. Compare them with rows A to D and columns 1 to 4.',
-        steps:['Use the top-left filled cell as the anchor in each figure. In X, the others are one cell right of the anchor and then one down.','Y has the identical offsets from B2. Moving X down one row and right one column aligns all three cells.'],
+        steps:[
+          ["Find an anchor in each drawing", "Use A1 in X and B2 in Y. These are the leftmost cells in the top occupied row of each figure."],
+          ["Compare relative moves", "From A1, a step right reaches A2 and then a step down reaches B2. From B2 in Y, the same moves reach B3 and C3."],
+          ["Check the translation", "Moving every cell in X down one row and right one column maps A1 to B2, A2 to B3 and B2 to C3. A single move of the whole shape makes the match."]
+        ],
         answer:'They match by translation.'
       },
       {
         title:'Eliminate a shape by its junction',
         prompt:'A figure shades B1, B2, B3 and C2. Could it rotate into one shading A1, B1, C1 and C2?',
-        steps:['In the first figure the central B2 touches three neighbours by edges.','In the second, every cell has one or two edge-neighbours. Turning the grid cannot change an edge-neighbour count.'],
+        steps:[
+          ["Inspect the central cell", "In the first figure, B2 shares edges with B1, B3 and C2. That gives B2 three edge-neighbours."],
+          ["Trace the second figure", "Its cells form the chain A1–B1–C1–C2. Each end has one edge-neighbour and each interior cell has two."],
+          ["Use a property rotation preserves", "Turning a shape preserves which edges touch. The second figure has nowhere for the first figure’s three-way junction to land."]
+        ],
         answer:'No. The first has a three-way junction and the second has none.'
       }
     ],
@@ -54,18 +67,31 @@ export const CBAT_NOTES = {
     ],
     exampleTitle:'Filter and sum the target digits',
     prompt:'Add only the odd digits in 8 7 2 3 6 9 4 5 2 1.',
-    solution:'The matching digits are 7, 3, 9, 5 and 1. Group 7+3 and 9+1 into two tens, then add 5. The answer is 25.',
+    exampleSteps:[
+      ["Filter the digits", "The prompt asks for odd digits only. Reading left to right leaves 7, 3, 9, 5 and 1. The other five digits are even."],
+      ["Group convenient pairs", "The pairs 7+3 and 9+1 each make 10. The digit 5 remains outside the pairs."],
+      ["Add the values and check coverage", "The sum is 10+10+5=25. Each of the five matches appears in the calculation once."]
+    ],
+    solution:"25.",
     models:[
       {
         title:'Repeated targets across chunks',
         prompt:'Add the odd digits in 7 8 7 6 7 4 1 8 9 2 9 6.',
-        steps:['Read four digits at a time. The first chunk gives 7+7=14. The second gives 7+1=8.','The last chunk gives 9+9=18. Add the subtotals without dropping repeated values.'],
+        steps:[
+          ["Make three groups of four digits", "Group the line as (7 8 7 6), (7 4 1 8), and (9 2 9 6). Boundaries give you a place to resume scanning."],
+          ["Compute each subtotal", "The first group contributes 7+7=14, the second contributes 7+1=8, and the third contributes 9+9=18. Every repeated odd digit has its own contribution."],
+          ["Combine the subtotals", "Add 14+8=22, then add 18 to reach 40. A quick check counts six included positions across the three groups."]
+        ],
         answer:'14+8+18=40.'
       },
       {
         title:'Practise switching from sum to count',
         prompt:'In 0 5 2 0 7 4 8 1, give both the count and sum of even digits.',
-        steps:['The even targets are 0,2,0,4,8. Both zeroes are matches for the count.','Their summed values are 0+2+0+4+8. Keep the count and sum separate.'],
+        steps:[
+          ["Identify every even entry", "Keep 0, 2, 0, 4 and 8. Both zeroes qualify because zero is divisible by 2."],
+          ["Count the matches", "Each qualifying position contributes one, so the five entries give a count of five."],
+          ["Add their values separately", "Compute 0+2+0+4+8=14. Both zeroes add to the count and contribute zero to the sum."]
+        ],
         answer:'Five matches, sum 14.'
       }
     ],
@@ -91,18 +117,31 @@ export const CBAT_NOTES = {
     exampleTitle:'Shortest equal-length route and its house',
     prompt:'Every segment is equally long. Which numbered house lies on the shortest route from A to B?',
     map:{size:4,start:0,end:11,edges:[[0,1],[1,2],[2,6],[6,7],[7,11],[0,4],[4,8],[8,9],[9,10],[10,14],[14,15],[15,11]],houseCells:[9,6]},
-    solution:'House 2. The upper route goes right, right, down, right, down and takes five segments. The lower route goes past House 1 and takes seven.',
+    exampleSteps:[
+      ["Identify the two paths", "At A, the map allows one route to start to the right and one to start downward. Keep tracing actual road segments until each route reaches B."],
+      ["Count from A to B on both paths", "The upper route is right, right, down, right, down, for five segments. The lower route is down, down, right, right, down, right, up, for seven segments."],
+      ["Compare and locate the house", "All segments are equally long, so the upper route is shorter by two segments. Trace it again to find House 2 along the route."]
+    ],
+    solution:"House 2.",
     models:[
       {
         title:'Eliminate a branch blocked by a gap',
         prompt:'A, C and B appear along the top of a map, but C–B is closed. The open roads are A–C, A–D, D–E and E–B. House 3 is at C and House 5 is at E. Which house is on the shortest open route?',
-        steps:['A–C reaches a dead end because C–B is closed. Do not count the closed segment.','The open route is A–D–E–B, which passes E.'],
+        steps:[
+          ["Check whether the upper branch reaches B", "A–C is open, but the next link C–B is closed. The path through C cannot reach B without backtracking to A."],
+          ["Trace the connected alternative", "A–D, D–E and E–B are all open. Together they give a complete three-segment route to B."],
+          ["Read the house from that route", "The route includes E, which has House 5. House 3 is on the branch that ends at C."]
+        ],
         answer:'House 5.'
       },
       {
         title:'Variation with unequal lengths',
         prompt:'Two open routes are A–P–B with lengths 4 and 7, and A–Q–R–B with lengths 3, 3 and 4. Which is shorter by distance?',
-        steps:['A–P–B has two segments but total length 4+7=11.','A–Q–R–B has three segments and total length 3+3+4=10. The distances are explicitly unequal, so use the totals.'],
+        steps:[
+          ["Read the quantity being compared", "The prompt asks for total distance. With unequal lengths, count the length of each segment along a route."],
+          ["Add the lengths on both routes", "A–P–B covers 4+7=11 distance units. A–Q–R–B covers 3+3+4=10 distance units."],
+          ["Choose the lower total", "10 is one unit less than 11, so A–Q–R–B is shorter even though it uses three segments."]
+        ],
         answer:'A–Q–R–B, total length 10.'
       }
     ],
@@ -127,18 +166,31 @@ export const CBAT_NOTES = {
     ],
     exampleTitle:'Fixed slot, linked pair and gap',
     prompt:'Arrange K, M, P, R and T. T is last. P immediately follows M. K comes before R, and R comes before P. Exactly one task lies between K and M.',
-    solution:'K → R → M → P → T. Since K and R must precede P and M must be directly before P, P is fourth and M is third. K and R fill slots 1 and 2. R sits between K and M, satisfying the gap rule.',
+    exampleSteps:[
+      ["Place T and form a block", "Put T in slot 5. Since P immediately follows M, reserve adjacent slots for the pair M–P, in that order."],
+      ["Fit the predecessors before P", "K, R and M all come before P. With T already last, P must occupy slot 4 and M must be in slot 3."],
+      ["Fill and verify the remaining positions", "K precedes R, so assign K to slot 1 and R to slot 2. R is the only task between K and M, satisfying the final rule."]
+    ],
+    solution:"K → R → M → P → T.",
     models:[
       {
         title:'Place a chain backward from the last slot',
         prompt:'F, G, H and J take slots 1–4. G immediately follows F. J immediately follows G. H is before F. Give the order.',
-        steps:['F, G and J occupy a contiguous block in that order.','H must fit before the block, so the block occupies 2–4.'],
+        steps:[
+          ["Link the immediate neighbours", "G follows F immediately, and J follows G immediately. The three make the fixed block F–G–J."],
+          ["Find a place for H before the block", "If the block started in slot 1, H could only go after it. Starting it in slot 2 leaves slot 1 for H. Those are the only two starts for a three-item block in four slots."],
+          ["Verify the order", "H–F–G–J places H before F and keeps both pairs adjacent in the required direction."]
+        ],
         answer:'H → F → G → J.'
       },
       {
         title:'Check what is forced when two orders fit',
         prompt:'A, B, C and D take slots 1–4. C is last, B follows A somewhere later, and D is in slot 1 or 2. Must B be third?',
-        steps:['D is in one of the first two slots and C is fourth, so A and B fill two of slots 1–3 including slot 3.','Since B comes after A, B takes the later slot, which is 3 in both cases.'],
+        steps:[
+          ["Put C in the fixed last slot", "C takes slot 4. D can take slot 1 or slot 2, so slot 3 must go to A or B."],
+          ["Compare both cases", "With D first, A and B occupy slots 2 and 3. With D second, they occupy slots 1 and 3."],
+          ["Apply the order of A and B", "B follows A in both cases, so B takes the later open slot, which is slot 3. The position is forced even though the first two slots can vary."]
+        ],
         answer:'Yes. B is third whether D is first or second.'
       }
     ],
@@ -163,17 +215,30 @@ export const CBAT_NOTES = {
     ],
     exampleTitle:'Choose between two preferences',
     prompt:'When learning a new task, do you usually prefer written instructions or a live demonstration?',
-    solution:'Choose the option that best reflects your experience, or the middle option if both suit you equally and that response is offered.',
+    exampleSteps:[
+      ["Identify what the item asks you to compare", "The prompt asks which format you usually prefer when learning something unfamiliar. Focus on that situation while considering the choices."],
+      ["Recall comparable tasks", "Think of two or three new tasks you have learned. Consider which format you reached for first and which you would choose again in a similar situation."],
+      ["Map your preference to the offered choices", "Select written instructions or a live demonstration according to your experience. If the formats suit you equally, use a middle choice if the prompt offers one."]
+    ],
+    solution:"This practice prompt records your own preference.",
     models:[
       {
         title:'Agreement scale',
         prompt:'“I usually ask for clarification when instructions are ambiguous.” Select the level of agreement that best describes your usual behaviour.',
-        steps:['Identify the condition, ambiguous instructions, and the qualifier, usually.','Think of several comparable situations. Match your typical behaviour to the scale provided.']
+        steps:[
+          ["Identify the situation described", "Ambiguous instructions are the condition. The statement asks whether you usually seek clarification in that situation."],
+          ["Recall your usual behaviour", "Think of several cases when a task was unclear. Consider whether you tended to ask about it, look it up independently or proceed with your interpretation."],
+          ["Use the agreement scale", "Choose the offered level that best describes how closely the full statement matches your typical behaviour."]
+        ]
       },
       {
         title:'Frequency scale',
         prompt:'“When a plan changes, how often do you review the new sequence before continuing?”',
-        steps:['The prompt asks for frequency under a specific condition. Think about episodes when a plan actually changed.','Choose the offered frequency closest to what you typically do.']
+        steps:[
+          ["Identify the action and the condition", "The action is reviewing the new sequence before continuing. The condition is that a plan has changed."],
+          ["Recall occasions that meet the condition", "Think through a few plan changes. In each case, ask whether you actually reviewed the updated sequence before taking your next action."],
+          ["Choose the matching frequency", "Use the scale shown in the item to select the frequency closest to those occasions. Check the order of the response options before confirming."]
+        ]
       }
     ],
     mistake:'Searching for an answer key for these familiarisation items. They ask about your own preferences.',

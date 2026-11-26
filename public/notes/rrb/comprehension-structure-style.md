@@ -20,8 +20,9 @@ Structure is the sequence of jobs done by sentences and paragraphs, such as intr
 
 **Question.** “Automatic announcements are consistent. However, during disruptions they can lag behind decisions made on the platform. A manual update should remain available.” How is the argument organised?
 
-1. The first sentence concedes a benefit. “However” introduces a contrasting limitation.
-2. The final sentence recommends a backup because of the limitation.
+1. **Read the first sentence as a benefit.** The passage begins by recognising consistency as a strength of automatic announcements.
+2. **Follow the shift signalled by “however”.** The disruption example introduces a specific limitation. Automated updates can trail decisions already made on the platform.
+3. **Find the proposed action.** “Should remain available” recommends keeping a manual option to address that limitation. This gives benefit, limitation, then recommendation.
 
 **Answer:** Benefit, limitation, then recommendation.
 
@@ -29,8 +30,9 @@ Structure is the sequence of jobs done by sentences and paragraphs, such as intr
 
 **Question.** “The data suggest the repair may have reduced noise, though readings from additional sites are needed.” What is the tone?
 
-1. “Suggest” and “may” limit certainty. The clause about more readings keeps the finding open to revision.
-2. This is measured evaluation of evidence.
+1. **Identify words that qualify the claim.** The author says the data “suggest” that the repair “may” have reduced noise. Both words leave room for another outcome.
+2. **Read the condition on confidence.** The author asks for readings from more sites, showing what evidence would help test the tentative result.
+3. **Connect wording to tone.** The emphasis on readings makes the tone analytical. The qualifiers and request for additional evidence make it cautious.
 
 **Answer:** Cautious and analytical.
 
@@ -38,8 +40,9 @@ Structure is the sequence of jobs done by sentences and paragraphs, such as intr
 
 **Question.** “Small inefficiencies accumulate over a timetable. A two-minute turnaround delay repeated across six departures costs twelve minutes.” Why is the second sentence included?
 
-1. The first sentence gives a general claim.
-2. The calculation supplies a concrete illustration of how the repeated effect accumulates.
+1. **Find the general statement.** The first sentence says that small inefficiencies can add up across a timetable.
+2. **Trace the arithmetic in the example.** A two-minute delay happens six times. Multiplying 2 by 6 gives 12 minutes of accumulated delay in the example.
+3. **Name the sentence’s role.** The calculation turns the general idea into a concrete case the reader can check. It illustrates the claim.
 
 **Answer:** To illustrate the claim with a numerical example.
 
@@ -47,7 +50,8 @@ Structure is the sequence of jobs done by sentences and paragraphs, such as intr
 
 **Question.** A passage argues for reusing older station buildings. Its second paragraph notes that adapting them for accessibility can be costly, then describes phased upgrades and how these can spread the cost. What is that paragraph doing?
 
-1. The cost concern challenges the recommendation. The rest of the paragraph addresses it by explaining one response.
-2. The objection qualifies the proposal without replacing it.
+1. **Find the author’s position.** The passage supports reusing older station buildings.
+2. **Separate the objection from the reply.** The second paragraph concedes that accessibility work can be expensive. It then presents phased upgrades as a way to spread the cost over time.
+3. **Read the paragraph as one argument.** The cost concern is acknowledged, then addressed with a practical response. The paragraph supports the larger case by showing how to handle an objection.
 
 **Answer:** Acknowledging an objection and responding to it.

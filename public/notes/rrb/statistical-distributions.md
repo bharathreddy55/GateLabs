@@ -20,8 +20,9 @@ A distribution describes how values are spread out, often through a frequency ta
 
 **Question.** A band of width 5 has frequency density 4. Another of width 10 has density 3. Which has more readings?
 
-1. First area = 5×4=20 readings.
-2. Second area = 10×3=30 readings. Comparing bar heights alone would reverse the answer.
+1. **Use area for a density histogram.** The vertical scale is frequency density. A bar’s frequency is width × density.
+2. **Find both bar areas.** The first band represents 5 × 4 = 20 readings. The second represents 10 × 3 = 30 readings.
+3. **Compare frequencies.** The second band is lower in height and twice as wide. Its area is larger by 30 − 20 = 10 readings.
 
 **Answer:** The second band, by 10.
 
@@ -29,8 +30,9 @@ A distribution describes how values are spread out, often through a frequency ta
 
 **Question.** Cumulative counts below 10, 20, 30 and 40 are 8, 21, 37 and 48. Find the count from 20 inclusive to 30 exclusive and the median band.
 
-1. The 20–30 class adds 37−21=16 observations.
-2. Middle positions 24 and 25 lie after the first 21 and within the first 37.
+1. **Subtract cumulative boundaries.** Below 30 there are 37 readings, and below 20 there are 21. The class 20 ≤ x < 30 therefore contains 37 − 21 = 16.
+2. **Find the two central ranks.** The total is 48, so median positions are 24 and 25 in sorted order.
+3. **Locate the band containing those ranks.** They are after the first 21 readings and inside the first 37. Both are in the 20–30 band.
 
 **Answer:** 16 observations. Median band is 20–30.
 
@@ -38,8 +40,9 @@ A distribution describes how values are spread out, often through a frequency ta
 
 **Question.** Most times lie around 10–15 minutes, but increasingly sparse values stretch as far as 60 minutes on the high side. What shape is indicated?
 
-1. Look at the extended sparse tail rather than just the common range.
-2. The tail stretches toward larger values, which corresponds to the right on a standard axis.
+1. **Locate the bulk of the readings.** Most times cluster near 10–15 minutes, so that is where the distribution is concentrated.
+2. **Identify where the tail extends.** A few progressively sparser observations continue to 60 minutes, well above the main cluster.
+3. **Name the skew by its tail.** Larger values sit to the right on an increasing axis, giving a long right tail and right skew.
 
 **Answer:** Right-skewed.
 
@@ -47,7 +50,8 @@ A distribution describes how values are spread out, often through a frequency ta
 
 **Question.** A continuous symmetric distribution centred at 50 has 18% of its area between 50 and 60. What share lies between 40 and 60?
 
-1. 40–50 is the mirror of 50–60 about the centre.
-2. Equal areas of 18% add across the two halves.
+1. **Find the mirror interval.** Reflection around 50 sends the endpoints 50 and 60 to 50 and 40. Thus 40–50 mirrors 50–60.
+2. **Use symmetry of area.** The two sides of the curve mirror each other, giving another 18% in the interval 40–50.
+3. **Add the adjacent shares.** These intervals cover 40–60. The single point 50 has zero area in a continuous distribution, so the total is 18% + 18% = 36%.
 
 **Answer:** 36%.

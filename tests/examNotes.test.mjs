@@ -44,8 +44,15 @@ function checkHandnote(body, id) {
   assert.ok((study.match(/^- /gm) || []).length >= 2, id);
   assert.ok(models.length >= 4, id);
   for (const model of models) {
-    assert.match(model, /^\*\*Question\.\*\* .+\n\n1\. .+\n2\. .+/m, id);
-    assert.match(model, /^\*\*Answer:\*\* .+/m, id);
+    const [question, steps, answer] = model.trim().split('\n\n');
+    assert.match(question, /^\*\*Question\.\*\* .+$/, id);
+    const lines = steps.split('\n');
+    assert.ok(lines.length >= 3, id);
+    for (const [index, line] of lines.entries()) {
+      assert.match(line, /^\d+\. \*\*[^*]+\.\*\* .+$/, id);
+      assert.ok(line.startsWith(`${index + 1}. `), id);
+    }
+    assert.match(answer, /^\*\*Answer:\*\* .+$/, id);
   }
   return [concept.trim(), ...models.map(model => model.split('\n')[0])];
 }
@@ -105,8 +112,12 @@ test('all CBAT batteries have detailed lessons and brief recall cards', () => {
     assert.ok(note.rules.length >= 3 && note.method.length >= 3, id);
     assert.ok(note.exampleTitle && note.prompt && note.solution, id);
     assert.ok(note.models.length >= 2, id);
-    for (const { title, prompt, steps, answer } of note.models) {
-      assert.ok(title && prompt && steps.length >= 2, id);
+    for (const steps of [note.exampleSteps, ...note.models.map(model => model.steps)]) {
+      assert.ok(steps.length >= 3, id);
+      for (const [label, explanation] of steps) assert.ok(label && explanation, id);
+    }
+    for (const { title, prompt, answer } of note.models) {
+      assert.ok(title && prompt, id);
       assert.equal(Boolean(answer), id !== 'personality', id);
     }
     const svg = readFileSync(new URL(id + '.svg', visuals), 'utf8');

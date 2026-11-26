@@ -20,8 +20,9 @@ A measurement records a numerical value and a unit. A physical quantity keeps th
 
 **Question.** Convert 0.036 m³ to litres and cm³.
 
-1. Multiply cubic metres by 1,000 for litres.
-2. Multiply litres by 1,000 for cubic centimetres.
+1. **Convert cubic metres to litres.** 1 m³ = 1,000 L, so 0.036 m³ equals 0.036 × 1,000 = 36 L.
+2. **Convert litres to cubic centimetres.** 1 L = 1,000 cm³. Therefore 36 L equals 36 × 1,000 = 36,000 cm³.
+3. **Check with the cube of the length conversion.** Since 1 m = 100 cm, 1 m³ = 100³ cm³ = 1,000,000 cm³. Multiplying by 0.036 gives the same result.
 
 **Answer:** 36 L or 36,000 cm³.
 
@@ -29,8 +30,9 @@ A measurement records a numerical value and a unit. A physical quantity keeps th
 
 **Question.** Convert 2.7 g/cm³ to kg/m³.
 
-1. 2.7 g=0.0027 kg and 1 cm³=0.000001 m³.
-2. Divide 0.0027 by 0.000001.
+1. **Convert the numerator.** 2.7 g = 2.7 ÷ 1,000 = 0.0027 kg.
+2. **Cube the denominator’s conversion.** Since 1 cm = 0.01 m, one cubic centimetre is (0.01)³ m³ = 0.000001 m³.
+3. **Divide in the new units.** 0.0027 kg ÷ 0.000001 m³ = 2,700 kg/m³. The small converted denominator makes the numeric value larger.
 
 **Answer:** 2700 kg/m³.
 
@@ -38,8 +40,9 @@ A measurement records a numerical value and a unit. A physical quantity keeps th
 
 **Question.** Express one joule in SI base units.
 
-1. A joule equals a newton-metre.
-2. Replace N with kg·m/s² and multiply by one more metre.
+1. **Start from mechanical work.** Work = force × displacement along the force. One joule therefore equals 1 N·m.
+2. **Express the force in base units.** From F = ma, a newton is a kilogram times metres per second squared, or kg·m/s².
+3. **Include the displacement unit.** Multiply kg·m/s² by one additional metre, giving kg·m²/s².
 
 **Answer:** kg·m²/s².
 
@@ -47,7 +50,8 @@ A measurement records a numerical value and a unit. A physical quantity keeps th
 
 **Question.** A caliper reads +0.03 cm when closed and 1.82 cm on a rod. What is the corrected diameter?
 
-1. The positive zero reading means every indicated reading is 0.03 cm too high in this model.
-2. Subtract 0.03 cm from 1.82 cm.
+1. **Read the zero offset.** With the jaws closed the true reading is zero. A displayed +0.03 cm means readings are too high by 0.03 cm.
+2. **Apply the signed correction.** Corrected value = indicated value − zero reading. Here subtract the positive offset.
+3. **Calculate the diameter.** 1.82 cm − 0.03 cm = 1.79 cm, slightly below the displayed reading.
 
 **Answer:** 1.79 cm.

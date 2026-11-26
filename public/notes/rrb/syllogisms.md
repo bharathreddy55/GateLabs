@@ -20,8 +20,9 @@ A syllogism tests whether a conclusion is forced by statements about sets. Repre
 
 **Question.** All signal fitters are technicians. All technicians are trained staff. Does it follow that all signal fitters are trained staff?
 
-1. Put fitters inside technicians and technicians inside trained staff.
-2. Every fitter must lie inside the outer trained-staff set.
+1. **Draw the first containment.** Place the signal fitter set inside the technician set. Any fitter selected is therefore a technician.
+2. **Draw the second containment.** The technician set lies inside the trained staff set. The same selected fitter, being a technician, must be trained staff.
+3. **Read the forced conclusion.** The chain is fitter ⇒ technician ⇒ trained staff. It works for any member of the fitter set.
 
 **Answer:** Yes.
 
@@ -29,8 +30,9 @@ A syllogism tests whether a conclusion is forced by statements about sets. Repre
 
 **Question.** Some readers are editors. No editor is a trainee. What must follow about readers and trainees?
 
-1. Mark one existing member in the reader–editor overlap.
-2. The editor set lies entirely outside trainees, so that member is a reader outside the trainee set.
+1. **Use the existing witness.** “Some readers are editors” guarantees at least one person in both groups. Pick such a person.
+2. **Apply the exclusion.** No editor is a trainee, so this reader–editor is outside the trainee group.
+3. **State the conclusion at the right strength.** The witness is a reader outside the trainee set. This guarantees that some readers are not trainees, while other readers may still be trainees.
 
 **Answer:** Some readers are not trainees.
 
@@ -38,8 +40,9 @@ A syllogism tests whether a conclusion is forced by statements about sets. Repre
 
 **Question.** Some A are B and some B are C. Must some A be C?
 
-1. Use a member x of A∩B outside C and a separate member y of B∩C outside A.
-2. Both premises are true while A and C are disjoint in this arrangement.
+1. **Separate the two existence claims.** The first “some” may refer to x, a member of A and B. The second may refer to a different person y, in B and C.
+2. **Build a counterexample.** Take A = {x}, B = {x,y} and C = {y}. Both stated overlaps exist, but A and C are disjoint.
+3. **Test necessity.** One valid arrangement where the conclusion fails is enough to show it does not follow.
 
 **Answer:** No.
 
@@ -47,7 +50,8 @@ A syllogism tests whether a conclusion is forced by statements about sets. Repre
 
 **Question.** All freight engines are engines. Must all engines be freight engines?
 
-1. The premise places the freight-engine set inside the engine set.
-2. A passenger engine can sit inside the engine set but outside freight engines without violating the premise.
+1. **Translate the given direction.** Every freight engine lies in the broader engine set, so Freight ⇒ Engine.
+2. **Test the reverse direction.** A passenger engine can belong to the engine set without belonging to the freight-engine set. Adding it leaves the original statement true.
+3. **Judge the conclusion.** That counterexample rules out Engine ⇒ Freight as a guaranteed deduction.
 
 **Answer:** No, the direction cannot be reversed.

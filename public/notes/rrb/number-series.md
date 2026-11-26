@@ -20,8 +20,9 @@ A number series tests the intended rule that generates successive terms. A simpl
 
 **Question.** Find the next term: 5, 9, 15, 23, 33.
 
-1. First differences are 4,6,8,10.
-2. Continue the step increases by 2, so add 12 to 33.
+1. **Calculate the first differences.** Subtract each term from its successor to get 9−5=4, 15−9=6, 23−15=8 and 33−23=10.
+2. **Find the change in those differences.** Each jump is 2 larger than the previous one. Extending that pattern gives the next jump as 10+2=12.
+3. **Apply the new jump.** Add 12 to the last actual term, 33. The next term is 45.
 
 **Answer:** 45.
 
@@ -29,8 +30,9 @@ A number series tests the intended rule that generates successive terms. A simpl
 
 **Question.** Find the next term: 4, 30, 7, 25, 10, 20, 13.
 
-1. Odd positions are 4,7,10,13, rising by 3.
-2. The next term is in even position. Even values are 30,25,20, falling by 5.
+1. **Split the positions by parity.** Positions 1, 3, 5 and 7 give 4, 7, 10, 13. Positions 2, 4 and 6 give 30, 25, 20.
+2. **Find each track’s rule.** The odd-position track adds 3 each time. The even-position track subtracts 5 each time.
+3. **Extend the relevant track.** The blank is in position 8, an even position. Subtract 5 from the previous even-position value, 20, to get 15.
 
 **Answer:** 15.
 
@@ -38,8 +40,9 @@ A number series tests the intended rule that generates successive terms. A simpl
 
 **Question.** Find the next term: 3, 8, 18, 38, 78.
 
-1. Check the relation ×2+2, which produces 8,18,38 and 78 from their predecessors.
-2. Apply it once more: 2×78+2.
+1. **Compare the terms after doubling.** Doubling 3 gives 6, which is 2 short of 8. Doubling 8 gives 16, which is 2 short of 18.
+2. **Check the rule near the end.** 18×2+2=38 and 38×2+2=78, so the same adjustment works across the given terms.
+3. **Repeat the full operation.** Double 78 to get 156 and add 2 to obtain 158.
 
 **Answer:** 158.
 
@@ -47,8 +50,9 @@ A number series tests the intended rule that generates successive terms. A simpl
 
 **Question.** Complete 2, 5, 7, ?, 19, 31.
 
-1. 2+5=7 suggests that each subsequent term is the sum of the previous two. Then 5+7=12.
-2. Check 7+12=19 and 12+19=31.
+1. **Find a rule in the known terms.** The first two terms add to the third: 2+5=7. Try the rule that every term is the sum of the two terms before it.
+2. **Compute the missing term.** Using 5 and 7 as the preceding terms gives 5+7=12.
+3. **Check the rule on the far side.** The next two terms should be 7+12=19 and 12+19=31. Both match the given values.
 
 **Answer:** 12.
 
@@ -56,7 +60,8 @@ A number series tests the intended rule that generates successive terms. A simpl
 
 **Question.** One term is wrong: 4, 9, 16, 26, 36, 49. Correct it.
 
-1. Most values match successive squares 2² through 7².
-2. The fourth position should be 5²=25, which also restores the odd-number gaps 9 and 11 around it.
+1. **Recognise the perfect squares.** The early terms are 2²=4, 3²=9 and 4²=16. The later terms are 6²=36 and 7²=49.
+2. **Fill the missing square in order.** The value between 4² and 6² should be 5²=25. The listed 26 interrupts the consecutive-square pattern.
+3. **Check the adjacent gaps.** With 25 in its place, the jumps from 16 to 25 and 25 to 36 are 9 and 11, continuing the odd differences 5, 7, 9, 11, 13.
 
 **Answer:** Replace 26 with 25.

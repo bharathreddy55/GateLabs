@@ -462,7 +462,8 @@ try{
  assert.equal(await page.locator('[data-cbat-lesson]:visible').count(),5);
  assert.equal(await page.locator('#cbat-practice').isHidden(),true);
  await page.getByRole('button',{name:'Spatial Scanning',exact:true}).click();
- await page.getByText(/House 2\. The upper route/).waitFor();
+ await page.getByText('Count from A to B on both paths.').waitFor();
+ await page.getByText('Answer: House 2.', { exact:true }).waitFor();
  await page.getByRole('heading',{name:'Rules to remember'}).waitFor();
  const spatialLesson=page.locator('[data-cbat-lesson="spatial"]');
  assert.equal(await spatialLesson.getByRole('heading',{level:4}).count(),3);
@@ -475,7 +476,8 @@ try{
  await page.getByRole('heading',{name:'CBAT Detailed notes'}).waitFor();
  await page.getByRole('button',{name:'Practice sets',exact:true}).click();
  await page.getByRole('button',{name:'Read Intelligence notes'}).click();
- await page.getByText(/Figure C\. Figure B is a quarter-turn/).waitFor();
+ await page.getByText('Rotate A by one quarter-turn.').waitFor();
+ await page.getByText('Answer: Figure C.', { exact:true }).waitFor();
  await page.getByRole('button',{name:'Practice sets',exact:true}).click();
  await page.getByRole('button',{name:'Start Intelligence Set 1'}).click();
  await checkExamRoom();

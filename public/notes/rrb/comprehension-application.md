@@ -20,17 +20,19 @@ An inference is a conclusion supported by clues in the passage even if it is uns
 
 **Question.** The gate log shows the last worker left at 6 pm. A light sensor recorded movement at 6:15. The sensor detects animals as well as people. What can be inferred?
 
-1. Movement was recorded after the logged departure because 6:15 is later than 6 pm.
-2. The sensor’s detection range prevents identifying the source from this observation alone.
+1. **Put the events on a timeline.** The last worker left at 6 pm and the sensor registered movement at 6:15 pm. The record therefore shows a reading 15 minutes after the worker left.
+2. **Check what the instrument can distinguish.** The sensor responds to animals and to people. No added clue such as a camera or a second entry log identifies the source.
+3. **Limit the inference to what follows.** The log supports the timing and existence of the reading. A returning worker or an animal is possible, so the source remains undetermined.
 
 **Answer:** There was a movement reading after the worker left, and its source is undetermined.
 
 ### Apply a decision rule
 
-**Question.** A reading room permits group discussion if a group reserves a room and closes its door. Walk-ins can discuss in the courtyard. A group has reserved a room but leaves the door open. Does its discussion meet the indoor rule?
+**Question.** To discuss indoors, a group must reserve a room and close its door. Walk-ins can discuss in the courtyard. A group has reserved a room but leaves the door open. Does its discussion meet the indoor rule?
 
-1. The indoor rule has two jointly required conditions.
-2. Reservation meets the first, while the open door fails the second. The walk-in courtyard rule describes another location.
+1. **Write the conditions for indoor discussion.** The rule requires a reservation and a closed door. The word “and” means both conditions must hold for the same group.
+2. **Test the conditions separately.** The group meets the reservation requirement. The door is open, so it fails the second requirement.
+3. **Apply the rule for the correct location.** Courtyard access concerns a different location. The group can meet the stated indoor rule by closing the room door.
 
 **Answer:** No. The group must also close the room door.
 
@@ -38,8 +40,9 @@ An inference is a conclusion supported by clues in the passage even if it is uns
 
 **Question.** A report says a bicycle-sharing campaign reduced car traffic because car counts fell immediately after launch. Which finding would weaken the claim: a simultaneous bridge closure diverted traffic, or rainy weeks reduced bicycle use in another year?
 
-1. The causal claim uses a before/after fall to credit the campaign.
-2. A bridge closure during the measurement offers another reason why counts fell. An event in another year does not address this comparison.
+1. **Identify the claim and its evidence.** The report credits the campaign for a fall in car counts because that fall followed the launch.
+2. **Look for another cause at the same time.** A bridge closure can divert cars out of the counted area and also occurred when the counts fell. With those facts, the timing alone cannot isolate the campaign’s effect.
+3. **Compare the two proposed facts.** Rain affecting bicycle use in a different year does not account for the car counts during this campaign. The simultaneous diversion weakens the claim directly.
 
 **Answer:** The simultaneous bridge closure.
 
@@ -47,7 +50,8 @@ An inference is a conclusion supported by clues in the passage even if it is uns
 
 **Question.** Two shaded bus stops were cooler at noon than adjacent unshaded stops on a clear day. Can you infer shaded stops are cooler under every condition?
 
-1. Identify the tested conditions: two sites, clear weather and noon.
-2. No measurements cover other times or weather. A universal statement goes beyond the comparison.
+1. **Mark the observations the passage gives.** Only two shaded stops were compared with nearby unshaded ones, at noon on a clear day.
+2. **Check how far the claim goes.** “Every condition” includes other stops, times, seasons and weather. The passage supplies no comparisons under those conditions.
+3. **State the narrower inference.** The shaded stops were cooler in the observed noon comparison. Other conditions would need their own observations.
 
 **Answer:** Only the observed noon comparison is supported.

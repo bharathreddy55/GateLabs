@@ -20,8 +20,9 @@ Logic puzzles use several statements to restrict an arrangement. Different dimen
 
 **Question.** P, Q, R and S occupy floors 1–4. Q is immediately above P. R is above Q, and S is below P. Who lives on floor 3?
 
-1. S<P<Q<R gives a strict order across all four floors.
-2. Place them bottom to top. The middle adjacent block is P on 2 and Q on 3.
+1. **Combine the individual inequalities.** S is below P, Q is directly above P, and R is higher than Q. The order is S < P < Q < R.
+2. **Assign the four occupied floors.** The four people fill all floors 1–4. This strict order assigns S to 1, P to 2, Q to 3 and R to 4.
+3. **Verify the tight clue.** Q is exactly one floor above P, as required. Floor 3 is Q.
 
 **Answer:** Q.
 
@@ -29,8 +30,9 @@ Logic puzzles use several statements to restrict an arrangement. Different dimen
 
 **Question.** A, B and C take one each of red, blue and green. If A has blue, C has green. B has red and C does not have green. Find the colours.
 
-1. The conditional rules out blue for A because C lacks green.
-2. With B on red, A must take green. C takes the remaining blue.
+1. **Fix the certain colour.** B has red, leaving blue and green for A and C.
+2. **Apply the conditional.** If A has blue, C has green. The clue that C lacks green rules out A having blue.
+3. **Fill and verify the remaining colours.** A must take green and C blue. Each colour is used once, and the forbidden case never arises.
 
 **Answer:** A green, B red, C blue.
 
@@ -38,8 +40,9 @@ Logic puzzles use several statements to restrict an arrangement. Different dimen
 
 **Question.** On Monday, Tuesday and Wednesday, each of Jan, Kim and Lee presents one distinct topic: safety, scheduling or signals. Lee goes Wednesday. Signals is the day immediately after Kim. Jan covers safety. Who covers signals?
 
-1. Kim is either Monday or Tuesday. If Monday, Tuesday is signals, but Tuesday would then be Jan, who covers safety.
-2. So Kim is Tuesday, Jan Monday and Lee Wednesday. The day after Kim is Wednesday.
+1. **Fix Wednesday and consider Kim’s options.** Lee presents Wednesday. Kim therefore presents Monday or Tuesday, leaving the other day for Jan.
+2. **Eliminate Monday for Kim.** Then Signals would be on Tuesday. Jan would be the Tuesday speaker, but Jan’s topic is Safety.
+3. **Use the remaining schedule.** Kim presents Tuesday, so Signals is on Wednesday. Lee presents on Wednesday and therefore covers Signals.
 
 **Answer:** Lee.
 
@@ -47,7 +50,8 @@ Logic puzzles use several statements to restrict an arrangement. Different dimen
 
 **Question.** A, B, C and D take slots 1–4. C follows A somewhere later, B is not 1, and D is not adjacent to C. Could C be 4?
 
-1. If C=4 then D must be 1 or 2, avoiding slot 3.
-2. Try D=1, A=2 and B=3. All clues hold, which is enough for possibility.
+1. **Fix C in the proposed slot.** Assume C occupies slot 4. D cannot be adjacent to C, so D cannot take slot 3 and can take slot 1 or 2.
+2. **Construct a valid witness.** Put D in 1, A in 2, B in 3 and C in 4. This places A before C and keeps B out of slot 1.
+3. **Check the final constraint.** D in 1 is not adjacent to C in 4. One arrangement satisfying all the clues proves C can occupy slot 4.
 
 **Answer:** Yes, D–A–B–C is valid.

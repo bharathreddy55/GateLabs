@@ -20,8 +20,9 @@ Temperature describes thermal state and determines the direction of spontaneous 
 
 **Question.** Express 40 °C in kelvin and Fahrenheit.
 
-1. Add 273.15 to obtain the absolute temperature in kelvin.
-2. Multiply 40 by 9/5 and add 32 for Fahrenheit.
+1. **Convert Celsius to kelvin.** Kelvin uses the same size step as Celsius but starts at a different zero. Add 273.15 to 40 to get 313.15 K.
+2. **Convert Celsius to Fahrenheit.** Multiply the Celsius reading by 9/5 to change the scale size. This gives 40 × 9/5 = 72.
+3. **Account for Fahrenheit’s zero offset.** Add 32 to 72 to get 104 °F.
 
 **Answer:** 313.15 K and 104 °F.
 
@@ -29,8 +30,9 @@ Temperature describes thermal state and determines the direction of spontaneous 
 
 **Question.** How much heat raises 0.2 kg of ice from −10 °C to 0 °C and melts it? Use c=2100 J/(kg·K), L=334 kJ/kg.
 
-1. Warming takes 0.2×2100×10=4200 J.
-2. Melting takes 0.2×334=66.8 kJ. Add 4.2 kJ of warming.
+1. **Heat the solid to its melting point.** A 10 K rise for 0.2 kg of ice takes mcΔT = 0.2 × 2,100 × 10 = 4,200 J, or 4.2 kJ.
+2. **Melt it at 0 °C.** During melting, use latent heat mL because temperature stays constant. The heat needed is 0.2 × 334 = 66.8 kJ.
+3. **Add both stages in one unit.** The supplied heat totals 4.2 + 66.8 = 71 kJ.
 
 **Answer:** 71 kJ.
 
@@ -38,8 +40,9 @@ Temperature describes thermal state and determines the direction of spontaneous 
 
 **Question.** Mix 300 g water at 60 °C and 200 g at 20 °C. Ignore the container and heat loss. Find final temperature.
 
-1. Equal specific heat cancels in the heat balance. With T final, 300(60−T)=200(T−20).
-2. 500T=22,000, giving T closer to 60 °C due to greater warm mass.
+1. **Set up the heat balance.** In the insulated mixture, heat lost by the warm water equals heat gained by the cool water. Their common specific heat cancels.
+2. **Solve for the shared temperature.** Using T for the final temperature gives 300(60 − T) = 200(T − 20). Rearranging gives 500T = 22,000.
+3. **Check the result.** T = 44 °C falls between 20 °C and 60 °C. It is closer to 60 °C because there is more warm water.
 
 **Answer:** 44 °C.
 
@@ -47,7 +50,8 @@ Temperature describes thermal state and determines the direction of spontaneous 
 
 **Question.** Why can sunlight warm a station roof when the Sun and Earth are separated by vacuum?
 
-1. Conduction and convection need material in the intervening space.
-2. Electromagnetic waves carry energy through vacuum and the roof absorbs some of it.
+1. **Identify what crosses the gap.** The space between the Sun and Earth is largely vacuum. Heat mechanisms requiring matter cannot account for transfer across that gap.
+2. **Name the mechanism.** Thermal radiation carries energy as electromagnetic waves, which can travel through vacuum.
+3. **Explain the warming.** The roof absorbs some incident radiation, increasing its internal energy and raising its temperature.
 
 **Answer:** Thermal radiation is the relevant mechanism across the gap.

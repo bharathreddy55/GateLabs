@@ -20,8 +20,9 @@ Data sufficiency asks whether the supplied facts force a unique answer, or a def
 
 **Question.** Find x. I: x+y=11. II: y=4. Are they sufficient?
 
-1. I leaves several possibilities for x as y changes. II gives no value for x on its own.
-2. Together subtract 4 from 11 to get a unique x=7.
+1. **Test statement I on its own.** x + y = 11 leaves several pairs, such as (7,4) and (8,3). They give different answers for x.
+2. **Test statement II on its own.** y = 4 leaves x free. It gives no equation involving x without I.
+3. **Test both together.** Substitute y = 4 into x + y = 11. This forces x = 7, so the combination gives a unique value.
 
 **Answer:** Both together are sufficient, neither alone.
 
@@ -29,8 +30,9 @@ Data sufficiency asks whether the supplied facts force a unique answer, or a def
 
 **Question.** For positive x, find x. I: x²=49. II: x<10.
 
-1. I allows only the positive root 7. II allows many positive values, such as 4 and 8.
-2. Test I without borrowing the upper bound from II.
+1. **Use the domain in the stem.** We are asked for a positive x. This condition applies in both separate statement tests.
+2. **Test statement I.** x² = 49 gives roots +7 and −7. Only +7 is positive, so I fixes x.
+3. **Test statement II separately.** x < 10 allows many positive values, such as 4 and 8. Only I is sufficient by itself.
 
 **Answer:** I alone is sufficient.
 
@@ -38,8 +40,9 @@ Data sufficiency asks whether the supplied facts force a unique answer, or a def
 
 **Question.** Is n even? I: n is an odd integer. II: n is a multiple of 3.
 
-1. I forces “no” for every case. II allows 3 (odd) and 6 (even).
-2. Sufficiency refers to answering the question, regardless of whether the answer is yes or no.
+1. **Identify the kind of answer.** A sufficient statement must settle the yes/no question. It may settle it by proving “no”.
+2. **Test statement I.** Every odd integer is non-even, so I fixes the answer as no in all allowed cases.
+3. **Test statement II.** Multiples of 3 include both 3 and 6. They give different answers to the evenness question, so II alone is insufficient.
 
 **Answer:** I alone is sufficient.
 
@@ -47,7 +50,8 @@ Data sufficiency asks whether the supplied facts force a unique answer, or a def
 
 **Question.** Find 2x+2y. I: x+y=9. II: x−y=3.
 
-1. I gives the exact target after doubling, though x and y remain free.
-2. With II only, (3,0) and (4,1) give different sums.
+1. **Factor the requested expression.** The target is 2x + 2y = 2(x+y), so it depends on the sum of the variables.
+2. **Test statement I.** It supplies the sum, 9, so the target is 2 × 9 = 18 regardless of the individual values.
+3. **Test statement II.** Both (3,0) and (4,1) satisfy x − y = 3, but the target is 6 in the first case and 10 in the second. II alone fails.
 
 **Answer:** I alone is sufficient.

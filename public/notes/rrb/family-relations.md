@@ -20,8 +20,9 @@ Family-relation questions translate statements into a tree of people and known r
 
 **Question.** Dev says of a woman, “She is the only daughter of my mother’s only son.” Dev is male. How is she related to Dev?
 
-1. Dev is the only son of his mother, so that phrase identifies Dev.
-2. The woman is the daughter of that son.
+1. **Start with the speaker’s mother.** “My mother” is Dev’s mother. The question identifies Dev as male, so he is one of her sons.
+2. **Resolve the unique son.** She has only one son, so “my mother’s only son” must mean Dev himself.
+3. **Trace the final link.** The woman is that son’s daughter. From Dev’s point of view, she is his daughter.
 
 **Answer:** His daughter.
 
@@ -29,8 +30,9 @@ Family-relation questions translate statements into a tree of people and known r
 
 **Question.** A + B means A is B’s mother. A × B means A is B’s brother. What is P to R in P × Q + R?
 
-1. P × Q gives P as Q’s brother. Q + R makes Q the mother of R.
-2. Trace R up to mother Q, then across to Q’s brother P.
+1. **Decode the right-hand relation.** Q + R says Q is R’s mother. Start the family tree at R and move up to Q.
+2. **Decode the left-hand relation.** P × Q says P is Q’s brother. P is therefore male and in Q’s generation.
+3. **Return to R’s viewpoint.** P is the brother of R’s mother, which makes him R’s maternal uncle.
 
 **Answer:** P is R’s maternal uncle.
 
@@ -38,8 +40,9 @@ Family-relation questions translate statements into a tree of people and known r
 
 **Question.** A is B’s parent. C is A’s sibling. What can be said about C’s relation to B?
 
-1. C is in the same generation as B’s parent A.
-2. Nothing in “sibling” identifies C’s gender, so a specific aunt/uncle answer is unsupported.
+1. **Locate A first.** A is a parent of B, placing A one generation above B.
+2. **Move sideways to C.** C and A are siblings, so C is the sibling of B’s parent.
+3. **State exactly what is known.** The words “sibling” and “parent” leave gender unspecified. C can be B’s aunt or uncle.
 
 **Answer:** C is a sibling of B’s parent, either aunt or uncle.
 
@@ -47,7 +50,8 @@ Family-relation questions translate statements into a tree of people and known r
 
 **Question.** S is the daughter of T. T is the brother of U. What is U’s relation to S?
 
-1. T is S’s father because T is described as a brother.
-2. U is a sibling of S’s father. The gender of U is unspecified.
+1. **Locate S’s parent.** S is T’s daughter. T is described as U’s brother, establishing that T is male and therefore S’s father.
+2. **Move from the father to his sibling.** U and T share a sibling relationship. So U is on S’s paternal side.
+3. **Keep U’s gender open.** T being a brother establishes T’s gender alone. U could be S’s paternal aunt or uncle.
 
 **Answer:** A paternal aunt or uncle.

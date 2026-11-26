@@ -20,8 +20,9 @@ A bar chart compares sizes across categories. Grouped bars show several separate
 
 **Question.** Dispatch bars for Monday are 28 express and 42 local. Tuesday shows 33 express and 35 local. Which day has the higher express share?
 
-1. Monday’s share is 28/(28+42)=40%.
-2. Tuesday’s is 33/(33+35)=33/68, about 48.5%.
+1. **Find Monday’s total.** Monday combines 28 express and 42 local dispatches, so express is 28/(28+42) = 40% of its total.
+2. **Find Tuesday’s share on its own base.** Tuesday combines 33 express with 35 local, so express is 33/68, about 48.5%.
+3. **Compare the two proportions.** Tuesday’s express share is higher by about 8.5 percentage points.
 
 **Answer:** Tuesday.
 
@@ -29,8 +30,9 @@ A bar chart compares sizes across categories. Grouped bars show several separate
 
 **Question.** In a count stack, the first band ends at 180, the second ends at 315 and the top ends at 420. Find the second band’s share.
 
-1. Its own height is 315−180=135.
-2. Divide by the stack total 420 to get 9/28.
+1. **Locate the band boundaries.** The second band starts where the first ends, at 180, and finishes at 315. The value 315 includes the bands below it.
+2. **Find the band’s own count.** Subtract its bottom boundary from its top, 315 − 180 = 135.
+3. **Divide by the complete stack.** The total is 420. The band’s share is 135/420 × 100% ≈ 32.14%.
 
 **Answer:** About 32.14%.
 
@@ -38,8 +40,9 @@ A bar chart compares sizes across categories. Grouped bars show several separate
 
 **Question.** Digital shares are 40% at A and 35% at B. Totals are 300 and 480. Which has more digital transactions?
 
-1. A: 0.40×300=120.
-2. B: 0.35×480=168. A longer percentage band can still represent fewer transactions.
+1. **Recover A’s count.** Apply the 40% band to A’s 300 transactions, giving 120 digital transactions.
+2. **Recover B’s count.** Apply B’s 35% band to its larger base of 480, giving 168 digital transactions.
+3. **Compare like counts.** 168 − 120 = 48. B’s smaller percentage still represents more transactions because its whole is larger.
 
 **Answer:** B, by 48.
 
@@ -47,7 +50,8 @@ A bar chart compares sizes across categories. Grouped bars show several separate
 
 **Question.** One bar ends at 110 and the other at 130 on an axis beginning at 100. What is the actual percent increase from first to second?
 
-1. Read actual endpoints as 110 and 130. The plotted lengths above the axis are 10 and 30.
-2. Divide the real increase of 20 by the old value 110.
+1. **Read the true bar endpoints.** The axis begins at 100, but the actual values are 110 and 130. The visible heights above 100 are only 10 and 30.
+2. **Find the change.** The recorded value increases by 130 − 110 = 20 units.
+3. **Divide by the original reading.** The percentage increase is 20/110 × 100%, or about 18.18%. The base is 110, the original value.
 
 **Answer:** About 18.18%.

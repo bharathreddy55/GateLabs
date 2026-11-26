@@ -20,8 +20,9 @@ Speed is distance per unit time. Average speed measures total path length over t
 
 **Question.** A 180 m train at 54 km/h clears a platform in 22 seconds. Find the platform length.
 
-1. 54 km/h=15 m/s, so the train moves 330 m while clearing.
-2. Subtract 180 m of train length from the total.
+1. **Convert the speed.** Multiply 54 km/h by 5/18 to get 15 m/s. This matches the metres and seconds in the problem.
+2. **Find how far the train moves.** From the front entering to the rear exiting, the train moves past the entire platform plus its own length. In 22 seconds it travels 15 × 22 = 330 m.
+3. **Subtract the train length.** The platform contributes 330 − 180 = 150 m to the total clearing distance.
 
 **Answer:** 150 m.
 
@@ -29,8 +30,9 @@ Speed is distance per unit time. Average speed measures total path length over t
 
 **Question.** A truck leaves at 08:00 at 45 km/h. A van leaves at 08:40 at 65 km/h. When does it catch the truck?
 
-1. The truck’s initial lead is 45×40/60=30 km.
-2. Gap closes at 20 km/h, taking 1.5 hours from 08:40.
+1. **Find the truck’s head start.** Before the van leaves, the truck travels for 40 minutes, or 2/3 of an hour. Its lead is 45 × 2/3 = 30 km.
+2. **Find the closing speed.** Both vehicles travel in the same direction. The lead shrinks by 65 − 45 = 20 km each hour.
+3. **Count from the later start.** Closing the 30 km gap takes 30 ÷ 20 = 1.5 hours. Add 1 hour 30 minutes to 08:40 to get 10:10.
 
 **Answer:** 10:10.
 
@@ -38,8 +40,9 @@ Speed is distance per unit time. Average speed measures total path length over t
 
 **Question.** A bus covers 72 km at 48 km/h and stops for 15 minutes. Find trip average speed.
 
-1. Moving time is 72/48=1.5 hours. Total elapsed time is 1.75 hours.
-2. Divide 72 by 1.75 to get 288/7 km/h.
+1. **Calculate driving time.** The bus takes 72 ÷ 48 = 1.5 hours to cover the distance while moving.
+2. **Include the stop.** Fifteen minutes is 0.25 hour, so the whole trip lasts 1.5 + 0.25 = 1.75 hours.
+3. **Use elapsed time.** Average speed is 72 ÷ 1.75 = 288/7 km/h. This is about 41.14 km/h, below the moving speed of 48.
 
 **Answer:** About 41.14 km/h.
 
@@ -47,7 +50,8 @@ Speed is distance per unit time. Average speed measures total path length over t
 
 **Question.** Trains of 150 m and 210 m approach at 72 and 36 km/h. How long from nose-to-nose to fully clear?
 
-1. Relative speed is 108 km/h=30 m/s.
-2. They must clear 150+210=360 m relative to each other.
+1. **Add the approaching speeds.** The trains move towards each other, so relative speed is 72 + 36 = 108 km/h, or 30 m/s.
+2. **Add the lengths to be cleared.** After the fronts meet, the rears must also pass. The required relative travel is 150 + 210 = 360 m.
+3. **Divide distance by speed.** The crossing lasts 360 ÷ 30 = 12 seconds.
 
 **Answer:** 12 seconds.

@@ -20,8 +20,9 @@ A seating problem places people using order, relative directions and gaps. Strai
 
 **Question.** Five people A, B, C, D, E sit facing north in a row. C is in the middle, E is at the far right, A is immediately left of C, and D is between C and E. Find the order.
 
-1. Place C at 3, E at 5 and A at 2. D lies between slots 3 and 5, so D is at 4.
-2. The unused seat 1 belongs to B.
+1. **Fix the seats named outright.** Number the seats 1–5 from left to right. C takes seat 3 and E takes seat 5.
+2. **Apply the position clues.** The people face north, so A immediately to C’s left goes in seat 2. The only seat between C and E is seat 4, so D goes there.
+3. **Fill the remaining seat and verify.** B takes seat 1. Reading the row gives B–A–C–D–E, with A directly left of C and D between C and E.
 
 **Answer:** B–A–C–D–E from left to right.
 
@@ -29,8 +30,9 @@ A seating problem places people using order, relative directions and gaps. Strai
 
 **Question.** Six people sit in evenly spaced seats. B is opposite A, and C is one seat clockwise from B. How far clockwise from A is C?
 
-1. Fix A at index 0. Three steps clockwise reach the opposite seat B.
-2. One more clockwise step reaches C.
+1. **Measure opposition in seat moves.** There are six equally spaced seats, so the opposite seat is half a circle away, or three moves clockwise from A.
+2. **Add the move from B to C.** C is one further clockwise move beyond B. This places C 3+1=4 moves clockwise from A.
+3. **Check the alternative direction.** A full circuit is six moves. The remaining arc is 6−4=2 moves anticlockwise.
 
 **Answer:** Four seats clockwise, equivalent to two anticlockwise.
 
@@ -38,8 +40,9 @@ A seating problem places people using order, relative directions and gaps. Strai
 
 **Question.** Four people face the centre of a circle. B is to the immediate right of A, and C is opposite A. Who is immediately left of C?
 
-1. Place A at top. A faces down on the diagram, so A’s right points to the viewer’s left, where B sits.
-2. C is at the bottom and faces up. C’s left also points to the viewer’s left.
+1. **Choose a fixed view of the circle.** Put A in the top seat, facing down towards the centre. From that position A’s right points towards the left-hand seat on the page, so B sits there.
+2. **Place the opposite person.** C is at the bottom, facing up towards the centre. C’s own left now points towards the left-hand seat on the page.
+3. **Read the neighbour from C’s perspective.** C’s immediate left is the seat already occupied by B. Rotate the diagram mentally if A starts in a different position and the relative answer stays the same.
 
 **Answer:** B.
 
@@ -47,7 +50,8 @@ A seating problem places people using order, relative directions and gaps. Strai
 
 **Question.** In a row of six seats, P sits in seat 3. Exactly one person sits between P and Q. R is immediately to Q’s right, as seen from the front of the diagram. Seats are numbered left to right in that view. If R cannot be in seat 6, where is Q?
 
-1. Q is two positions from P, so it is either 1 or 5.
-2. Q at 5 puts R at 6, forbidden. Q at 1 places R at 2.
+1. **Translate the gap into a seat difference.** Exactly one person between P and Q means their seat numbers differ by two. With P in seat 3, Q could be in seat 1 or 5.
+2. **Check the right-neighbour clue in each case.** If Q is in seat 1, R is in seat 2. If Q is in seat 5, R is in seat 6, following the left-to-right numbering in the diagram.
+3. **Eliminate the forbidden case.** R cannot be in seat 6, so discard Q in seat 5. The remaining arrangement has Q in seat 1 and R in seat 2.
 
 **Answer:** Q is in seat 1.

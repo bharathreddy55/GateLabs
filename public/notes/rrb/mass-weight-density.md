@@ -20,8 +20,9 @@ Mass measures inertia and is measured in kilograms. Weight is the gravitational 
 
 **Question.** What does a 12 kg tool weigh where g=10 m/s² and where g=1.6 m/s²?
 
-1. Use W=mg at each location. The mass is 12 kg in both.
-2. Calculate 12×10 and 12×1.6.
+1. **Separate mass from weight.** The tool remains 12 kg at both locations. Its weight is the local gravitational force, given by W = mg.
+2. **Use the first field strength.** At g = 10 m/s², W = 12 × 10 = 120 N.
+3. **Use the second field strength.** At 1.6 m/s², W = 12 × 1.6 = 19.2 N. The lower gravity reduces the weight without changing the mass.
 
 **Answer:** 120 N and 19.2 N.
 
@@ -29,8 +30,9 @@ Mass measures inertia and is measured in kilograms. Weight is the gravitational 
 
 **Question.** A fully submerged 156 g stone raises water in a measuring cylinder from 90 to 150 mL. Find its density.
 
-1. Stone volume is the displacement, 60 mL=60 cm³.
-2. Divide 156 g by 60 cm³.
+1. **Read the displaced amount.** Subtract the initial cylinder reading from the final reading. The stone has displaced 150 − 90 = 60 mL.
+2. **Match the volume units.** The stone is fully submerged, so its volume equals that displaced amount. Since 1 mL = 1 cm³, its volume is 60 cm³.
+3. **Calculate density.** Average density is mass ÷ volume. Divide 156 g by 60 cm³ to get 2.6 g/cm³.
 
 **Answer:** 2.6 g/cm³.
 
@@ -38,8 +40,9 @@ Mass measures inertia and is measured in kilograms. Weight is the gravitational 
 
 **Question.** A sealed object of mass 360 g displaces 500 cm³ when fully immersed. Find its average density and whether it floats in water if released.
 
-1. Use the total displaced volume, so density=360/500=0.72 g/cm³.
-2. Water has density about 1 g/cm³. The object can displace its own mass before being fully submerged.
+1. **Use the object’s external volume.** Full immersion displaces 500 cm³. Include the hollow region when using the volume of the sealed object as a whole.
+2. **Find the average density.** Divide total mass by the displaced volume, 360 ÷ 500 = 0.72 g/cm³.
+3. **Compare with water.** Water is about 1 g/cm³. The object reaches a weight balance while only part of its volume is submerged, so it floats.
 
 **Answer:** 0.72 g/cm³, and it floats.
 
@@ -47,7 +50,8 @@ Mass measures inertia and is measured in kilograms. Weight is the gravitational 
 
 **Question.** A wooden block has density 650 kg/m³ and floats in water with density 1000 kg/m³. What fraction is submerged?
 
-1. At equilibrium ρwater×Vsubmerged×g equals ρblock×Vtotal×g.
-2. Cancel g and divide the densities: 650/1000.
+1. **Set up the floating balance.** The object’s weight equals the buoyant force. The weight of displaced water therefore equals the weight of the block.
+2. **Cancel common factors.** Writing ρwater × Vsubmerged × g = ρblock × Vtotal × g gives Vsubmerged/Vtotal = ρblock/ρwater.
+3. **Substitute the densities.** 650 ÷ 1,000 = 0.65, so 65% of the block’s volume is submerged.
 
 **Answer:** 65% of the volume.

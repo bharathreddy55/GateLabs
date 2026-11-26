@@ -42,6 +42,9 @@ const completedLabel = result => result.correct === null ? `${result.attempted}/
 const stationMaster = EXAM_CATALOG.find(exam=>exam.id==='rrb');
 const batteryIcons = {intelligence:'grid',attention:'edit',spatial:'chart',ordering:'file',personality:'users'};
 
+const workedSteps = steps =>
+  `<ol>${steps.map(([label, explanation])=>`<li><strong>${h(label)}.</strong> ${h(explanation)}</li>`).join('')}</ol>`;
+
 function studyNotes(){
   return `<section class="mock-library-section cbat-notes" id="cbat-study-notes" aria-labelledby="cbat-notes-heading" hidden>
     <div class="surface cbat-notes-intro">
@@ -76,11 +79,12 @@ function studyNotes(){
         <p>${h(note.prompt)}</p>
         ${note.map?streetMap(note.map):''}
         ${note.figures?`<div class="cbat-options cbat-figures">${note.figures.map((cells,index)=>`<div>Figure ${'ABC'[index]}${shape(cells)}</div>`).join('')}</div>`:''}
-        <p>${h(note.solution)}</p>
+        ${workedSteps(note.exampleSteps)}
+        <p>${id==='personality'?'':'<strong>Answer:</strong> '}${h(note.solution)}</p>
         ${note.models.map(model=>`
           <h4>${h(model.title)}</h4>
           <p>${h(model.prompt)}</p>
-          <ol>${model.steps.map(step=>`<li>${h(step)}</li>`).join('')}</ol>
+          ${workedSteps(model.steps)}
           ${model.answer?`<p><strong>Answer:</strong> ${h(model.answer)}</p>`:''}
         `).join('')}
       </details>`;
