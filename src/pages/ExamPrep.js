@@ -48,10 +48,36 @@ export function createExamPrep(examId){
  const mains = GROUP2_MAINS[examId];
  const base = EXAM_CATALOG.find(exam=>exam.id===(mains?'group2':examId));
  const meta = mains ? {...base,route:mains.route,name:mains.name,description:mains.sections.map(([section])=>section).join(' · ')} : base;
+ const notes=examNotes(examId);
+ const sections=EXAMS[examId].sections.map(([name,count,text])=>({
+   name,count,topics:(text||fallbackTopics[name]||'See the official syllabus for this section.').split(';').map(topic=>topic.trim())
+ }));
+ const totalTopics=sections.reduce((total,section)=>total+section.topics.length,0);
+ const linkedNotes=new Map();
+ for(const note of notes){
+   for(const topic of note.syllabus){
+     if(!linkedNotes.has(topic)) linkedNotes.set(topic,[]);
+     linkedNotes.get(topic).push(note.id);
+   }
+ }
  return {
   papers:[],activeTab:'overview',loadError:null,
-  cleanup(){stopCountdowns();},
+  cleanup(){stopCountdowns();this.revisionListener?.abort();},
   key(kind){return `exam-${kind}:${auth.currentUser?.uid}:${examId}`;},
+  syllabusRevision(){
+    const manual=new Set(read(this.key('progress')));
+    const revisedNotes=new Set(read(this.key('note-progress')));
+    const fromNotes=new Set();
+    for(const [topic,noteIds] of linkedNotes){
+      if(noteIds.every(id=>revisedNotes.has(id))) fromNotes.add(topic);
+    }
+    const counts=sections.map(({topics},i)=>topics.filter((_,j)=>{
+      const id=`${i}-${j}`;
+      return manual.has(id)||fromNotes.has(id);
+    }).length);
+    const completed=counts.reduce((total,count)=>total+count,0);
+    return {manual,fromNotes,counts,percent:totalTopics?Math.round(completed/totalTopics*100):0};
+  },
   async load(){if(this.loaded)return;if(!this.loading)this.loading=this.loadLibrary().finally(()=>this.loading=null);return this.loading;},
   async loadLibrary(){
     if(this.loaded)return;
@@ -103,10 +129,8 @@ export function createExamPrep(examId){
         }))
       ];
     }));
-    const progress=read(this.key('progress')),bookmarks=read(this.key('bookmarks'));
-    const sections=e.sections.map(([name,count,text])=>({name,count,topics:(text||fallbackTopics[name]||'See the official syllabus for this section.').split(';').map(t=>t.trim())}));
-    const totalTopics=sections.reduce((n,s)=>n+s.topics.length,0);
-    const percent=totalTopics?Math.round(progress.length/totalTopics*100):0;
+    const {manual,fromNotes,counts,percent}=this.syllabusRevision();
+    const bookmarks=read(this.key('bookmarks'));
     return `<section id="prep-${examId}" class="workspace-page exam-workspace">
       <header class="exam-page-heading" style="--workspace-exam:${meta.color}"><div class="exam-heading-main"><a href="#/exams" class="back-link">← All exams</a><div class="exam-heading-title"><span class="exam-symbol" style="--exam-color:${meta.color}" aria-hidden="true">${meta.symbol}</span><div><span class="eyebrow">${meta.category} · ${h(e.version)}</span><h1>${h(meta.name)}</h1></div></div><p>${h(meta.description)}</p></div><button class="ui-button primary" data-open-tab="mocks">Find a mock test ${icon('arrow')}</button></header>
       ${group2StageNav(examId)}
@@ -119,10 +143,10 @@ export function createExamPrep(examId){
       <div class="prep-panel" ${this.activeTab==='mocks'?'':'hidden'} role="tabpanel" id="panel-${examId}-mocks" aria-labelledby="tab-${examId}-mocks" data-panel="mocks">
         ${mockLibrary({exam:e,accent:meta.color,symbol:meta.symbol,papers:this.available,viewPaper:p=>this.paperView(p),renderPaper:p=>this.paperCard(p),attemptCount:(p,section)=>this.attemptCount(p,section),importPanel:this.importPanel(),loadError:this.loadError})}
       </div>
-      <div class="prep-panel" ${this.activeTab==='syllabus'?'':'hidden'} role="tabpanel" id="panel-${examId}-syllabus" aria-labelledby="tab-${examId}-syllabus" data-panel="syllabus"><div class="section-heading"><div><h2>Your syllabus checklist</h2><p>Check off topics as you revise them. Saved on this device for your account.</p></div><span id="syllabus-percent" class="subtle-tag">${percent}% complete</span></div>${sections.length?`<div class="syllabus-progress"><div style="width:${Math.min(100,percent)}%"></div></div>${sections.map((s,i)=>`<details class="surface syllabus-section"><summary><span>${h(s.name)}</span><small>${s.count} questions · <span data-section-progress="${i}">${s.topics.filter((_,j)=>progress.includes(`${i}-${j}`)).length}/${s.topics.length} revised</span></small></summary><div class="syllabus-topics">${s.topics.map((topic,j)=>`<label><input type="checkbox" data-topic="${i}-${j}" ${progress.includes(`${i}-${j}`)?'checked':''}><span>${h(topic)}</span></label>`).join('')}</div></details>`).join('')}`:`<div class="surface"><h2>GATE CS syllabus & planner</h2><p>Review subjects, track topic completion and organise your study notes.</p><a class="ui-button primary" href="#/study-planner">Open study planner ${icon('arrow')}</a></div>`}<a class="text-link" href="${e.source}" target="_blank" rel="noopener">Check the full official syllabus ↗</a>${examId==='sbi'?'<p class="muted">This checklist groups the main study areas. Refer to the official notice for the full syllabus and applicable language requirements.</p>':''}</div>
+      <div class="prep-panel" ${this.activeTab==='syllabus'?'':'hidden'} role="tabpanel" id="panel-${examId}-syllabus" aria-labelledby="tab-${examId}-syllabus" data-panel="syllabus"><div class="section-heading"><div><h2>Your syllabus checklist</h2><p>Check a topic directly, or mark all its linked notes revised. Saved on this device for your account.</p></div><span id="syllabus-percent" class="subtle-tag">${percent}% complete</span></div>${sections.length?`<div class="syllabus-progress"><div style="width:${Math.min(100,percent)}%"></div></div>${sections.map((s,i)=>`<details class="surface syllabus-section"><summary><span>${h(s.name)}</span><small>${s.count} questions · <span data-section-progress="${i}">${counts[i]}/${s.topics.length} revised</span></small></summary><div class="syllabus-topics">${s.topics.map((topic,j)=>`<label><input type="checkbox" data-topic="${i}-${j}" ${manual.has(`${i}-${j}`)?'checked':''}><span>${h(topic)} <small class="topic-note-coverage" data-topic-note-coverage ${fromNotes.has(`${i}-${j}`)?'':'hidden'}>Revised via notes</small></span></label>`).join('')}</div></details>`).join('')}`:`<div class="surface"><h2>GATE CS syllabus & planner</h2><p>Review subjects, track topic completion and organise your study notes.</p><a class="ui-button primary" href="#/study-planner">Open study planner ${icon('arrow')}</a></div>`}<a class="text-link" href="${e.source}" target="_blank" rel="noopener">Check the full official syllabus ↗</a>${examId==='sbi'?'<p class="muted">This checklist groups the main study areas. Refer to the official notice for the full syllabus and applicable language requirements.</p>':''}</div>
       <div class="prep-panel" ${this.activeTab==='papers'?'':'hidden'} role="tabpanel" id="panel-${examId}-papers" aria-labelledby="tab-${examId}-papers" data-panel="papers"><div class="section-heading"><div><h2>Previous papers & resources</h2><p>Keep historical papers alongside your current exam pattern.</p></div></div>${examId==='rrb'?'<div class="notice">No previous sitting of the standalone CEN 08/2026 exam was established in our research. Older NTPC papers cover some overlapping topics.</div>':''}${examId==='sbi'?`<p class="muted">These existing 2025 files are labelled memory-based. They are not verified official booklets.</p><div class="paper-grid">${this.available.filter(isPastPaper).map(p=>this.paperCard(p)).join('')}</div>`:examId==='gate'?`<a class="resource-row surface" href="#/pyq-mocks"><div>${icon('file')}<strong>GATE year-wise paper library</strong></div><span>Open library →</span></a>`:''}${relatedPapers(e)}<div class="resource-list">${(e.papers||[]).map(([label,url])=>`<a class="resource-row surface" href="${url}" target="_blank" rel="noopener"><div>${icon('file')}<strong>${h(label)}</strong></div><span>Open PDF / source ↗</span></a>`).join('')}</div><a class="text-link" href="${e.source}" target="_blank" rel="noopener">Official notification & rules ↗</a></div>
-      <div class="prep-panel" ${this.activeTab==='progress'?'':'hidden'} role="tabpanel" id="panel-${examId}-progress" aria-labelledby="tab-${examId}-progress" data-panel="progress">${this.syncState==='offline'?'<div class="notice" role="status">Cloud history is unavailable. Showing results saved on this device.</div>':''}<div class="section-heading"><div><h2>My progress</h2><p>Results and revision for ${h(meta.name)}.</p></div><a href="#/analytics">All exam results →</a></div><div class="home-stats"><div><span>Completed attempts</span><strong>${this.attempts.length}</strong></div><div><span>Syllabus revised</span><strong data-progress-percent>${percent}%</strong></div><div><span>Bookmarked questions</span><strong>${bookmarks.length}</strong></div></div><section class="surface"><h2>Revision coverage</h2><p class="muted">Last practice: ${this.attempts.length?new Date(Math.max(...this.attempts.map(a=>Date.parse(a.timestamp)||0))).toLocaleDateString('en-IN'):'No completed attempts'}</p>${sections.map((s,i)=>`<div class="topic-score"><span>${h(s.name)}</span><strong data-section-progress="${i}">${s.topics.filter((_,j)=>progress.includes(`${i}-${j}`)).length}/${s.topics.length} revised</strong></div>`).join('')}</section><section class="surface"><h2>Attempt history</h2>${this.attempts.length?this.attempts.map((a,i)=>`<button class="activity-row" data-attempt="${i}"><span class="activity-icon">${icon('chart')}</span><div><strong>${h(a.scope)}</strong><small>${new Date(a.timestamp).toLocaleDateString('en-IN')} · ${a.mode==='full'?'Full mock':'Section practice'}</small></div><b>${Number(a.score).toFixed(2)}<small> / ${a.totalPossibleMarks}</small></b>${icon('arrow')}</button>`).join(''):empty('Your first result is ahead','Take a mock or a section drill to begin tracking your progress.','<button class="ui-button" data-open-tab="mocks">Find a practice test</button>')}</section><div class="home-bottom"><section class="surface"><h2>Topics to revisit</h2>${this.weakTopics()}</section><section class="surface"><h2>Your bookmarks</h2><p>Save questions from your answer review and revisit them here.</p><button class="ui-button" id="bookmarks-${examId}" ${bookmarks.length?'':'disabled'}>Practise ${bookmarks.length} bookmarked questions</button></section></div></div>
-      ${notesPanel(examId,this.activeTab==='notes',examNotes(examId))}
+      <div class="prep-panel" ${this.activeTab==='progress'?'':'hidden'} role="tabpanel" id="panel-${examId}-progress" aria-labelledby="tab-${examId}-progress" data-panel="progress">${this.syncState==='offline'?'<div class="notice" role="status">Cloud history is unavailable. Showing results saved on this device.</div>':''}<div class="section-heading"><div><h2>My progress</h2><p>Results and revision for ${h(meta.name)}.</p></div><a href="#/analytics">All exam results →</a></div><div class="home-stats"><div><span>Completed attempts</span><strong>${this.attempts.length}</strong></div><div><span>Syllabus revised</span><strong data-progress-percent>${percent}%</strong></div><div><span>Bookmarked questions</span><strong>${bookmarks.length}</strong></div></div><section class="surface"><h2>Revision coverage</h2><p class="muted">Last practice: ${this.attempts.length?new Date(Math.max(...this.attempts.map(a=>Date.parse(a.timestamp)||0))).toLocaleDateString('en-IN'):'No completed attempts'}</p>${sections.map((s,i)=>`<div class="topic-score"><span>${h(s.name)}</span><strong data-section-progress="${i}">${counts[i]}/${s.topics.length} revised</strong></div>`).join('')}</section><section class="surface"><h2>Attempt history</h2>${this.attempts.length?this.attempts.map((a,i)=>`<button class="activity-row" data-attempt="${i}"><span class="activity-icon">${icon('chart')}</span><div><strong>${h(a.scope)}</strong><small>${new Date(a.timestamp).toLocaleDateString('en-IN')} · ${a.mode==='full'?'Full mock':'Section practice'}</small></div><b>${Number(a.score).toFixed(2)}<small> / ${a.totalPossibleMarks}</small></b>${icon('arrow')}</button>`).join(''):empty('Your first result is ahead','Take a mock or a section drill to begin tracking your progress.','<button class="ui-button" data-open-tab="mocks">Find a practice test</button>')}</section><div class="home-bottom"><section class="surface"><h2>Topics to revisit</h2>${this.weakTopics()}</section><section class="surface"><h2>Your bookmarks</h2><p>Save questions from your answer review and revisit them here.</p><button class="ui-button" id="bookmarks-${examId}" ${bookmarks.length?'':'disabled'}>Practise ${bookmarks.length} bookmarked questions</button></section></div></div>
+      ${notesPanel(examId,this.activeTab==='notes',notes)}
     </section>`;
   },
   paperView(p){
@@ -183,12 +207,52 @@ export function createExamPrep(examId){
     const root=document.getElementById(`prep-${examId}`);if(!root)return;
     localStorage.setItem('last-exam:'+auth.currentUser?.uid,examId);
     bindCountdowns();
-    bindExamNotes(root,examId,examNotes(examId),()=>this.selectTab('notes'),this.key('note-progress'));
+    const progressKey=this.key('progress'),noteKey=this.key('note-progress');
+    const topics=[...root.querySelectorAll('[data-topic]')];
+    const counters=[...root.querySelectorAll('[data-section-progress]')];
+    const syllabusPercent=root.querySelector('#syllabus-percent');
+    const progressPercent=root.querySelector('[data-progress-percent]');
+    const bar=root.querySelector('.syllabus-progress>div');
+    const refreshSyllabus=()=>{
+      const {manual,fromNotes,counts,percent}=this.syllabusRevision();
+      for(const input of topics){
+        input.checked=manual.has(input.dataset.topic);
+        input.closest('label').querySelector('[data-topic-note-coverage]').hidden=!fromNotes.has(input.dataset.topic);
+      }
+      for(const counter of counters){
+        const index=Number(counter.dataset.sectionProgress);
+        counter.textContent=`${counts[index]}/${sections[index].topics.length} revised`;
+      }
+      syllabusPercent.textContent=`${percent}% complete`;
+      progressPercent.textContent=`${percent}%`;
+      if(bar) bar.style.width=`${percent}%`;
+    };
+    const refreshNotes=bindExamNotes(root,examId,notes,()=>this.selectTab('notes'),noteKey,refreshSyllabus);
+    for(const input of topics){
+      input.onchange=()=>{
+        const manual=new Set(read(progressKey));
+        if(input.checked) manual.add(input.dataset.topic);
+        else manual.delete(input.dataset.topic);
+        try {
+          localStorage.setItem(progressKey,JSON.stringify([...manual]));
+        } catch {
+          showToast('Your device could not save this revision.','warning');
+        }
+        refreshSyllabus();
+      };
+    }
+    this.revisionListener?.abort();
+    this.revisionListener=new AbortController();
+    window.addEventListener('storage',event=>{
+      if(event.key!==null && event.key!==progressKey && event.key!==noteKey) return;
+      refreshNotes?.();
+      refreshSyllabus();
+    },{signal:this.revisionListener.signal});
+    refreshSyllabus();
     bindMockLibrary(root);
     root.querySelectorAll('[data-prep-tab]').forEach(el=>{el.onclick=()=>this.selectTab(el.dataset.prepTab);el.onkeydown=event=>{const buttons=[...root.querySelectorAll('[data-prep-tab]')],index=buttons.indexOf(el);let next;if(event.key==='ArrowRight')next=(index+1)%buttons.length;if(event.key==='ArrowLeft')next=(index+buttons.length-1)%buttons.length;if(event.key==='Home')next=0;if(event.key==='End')next=buttons.length-1;if(next!==undefined){event.preventDefault();this.selectTab(buttons[next].dataset.prepTab);buttons[next].focus();}};});
     root.querySelector('[data-tabs-next]')?.addEventListener('click',()=>{const index=tabs.findIndex(([key])=>key===this.activeTab);this.selectTab(tabs[(index+1)%tabs.length][0]);});
     root.querySelectorAll('[data-open-tab]').forEach(el=>el.onclick=()=>{this.selectTab(el.dataset.openTab);root.querySelector('[data-prep-tab][aria-selected="true"]')?.focus({preventScroll:true});root.querySelector('.prep-tabs').scrollIntoView({block:'start'});});
-    root.querySelectorAll('[data-topic]').forEach(el=>el.onchange=()=>{const items=[...root.querySelectorAll('[data-topic]:checked')].map(x=>x.dataset.topic);localStorage.setItem(this.key('progress'),JSON.stringify(items));const percent=Math.round(items.length/root.querySelectorAll('[data-topic]').length*100);root.querySelector('#syllabus-percent').textContent=percent+'% complete';root.querySelector('.syllabus-progress>div').style.width=percent+'%';root.querySelector('[data-progress-percent]').textContent=percent+'%';root.querySelectorAll('[data-section-progress]').forEach(counter=>{const section=counter.dataset.sectionProgress;const inputs=[...root.querySelectorAll('[data-topic]')].filter(input=>input.dataset.topic.startsWith(section+'-'));counter.textContent=inputs.filter(input=>input.checked).length+'/'+inputs.length+' revised';});});
     root.querySelectorAll('[data-paper]').forEach(el=>el.onclick=()=>{const p=this.available[Number(el.dataset.paper)];MockTest.startExam({examId,questions:p.questions,title:p.title,paperKey:this.paperKeys.get(p),full:p.full!==false,minutes:practiceMinutes(EXAMS[examId],p.questions.length)});});
     root.querySelectorAll('[data-section]').forEach(el=>el.onchange=()=>{if(el.value)this.startSection(Number(el.dataset.section),el.value);});
     root.querySelectorAll('[data-launch-section]').forEach(el=>el.onclick=()=>this.startSection(Number(el.dataset.launchSection),el.dataset.examSubject));

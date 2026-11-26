@@ -88,6 +88,62 @@ try{
      const calculation=reader.locator('li > br + code',{hasText:'9,999 − 39 = 9,960'});
      await calculation.waitFor();
      assert.match(await calculation.locator('..').innerText(),/Subtract that excess/);
+
+     const syllabus=page.locator('[data-panel=syllabus]');
+     const progress=page.locator('[data-panel=progress]');
+     const revised=reader.getByRole('checkbox',{name:'Mark this note revised'});
+     const checkCoverage=async (count,percent)=>{
+       assert.equal(await syllabus.locator('[data-section-progress="0"]').textContent(),count+'/20 revised');
+       assert.equal(await progress.locator('[data-section-progress="0"]').textContent(),count+'/20 revised');
+       assert.equal(await syllabus.locator('#syllabus-percent').textContent(),percent+'% complete');
+       assert.equal(await progress.locator('[data-progress-percent]').textContent(),percent+'%');
+       assert.equal(await syllabus.locator('.syllabus-progress>div').evaluate(bar=>bar.style.width),percent+'%');
+     };
+     await checkCoverage(0,0);
+     await revised.check();
+     await checkCoverage(1,3);
+     await page.reload();
+     await reader.getByRole('heading',{name:'Basics first',exact:true}).waitFor();
+     assert.ok(await revised.isChecked());
+     await checkCoverage(1,3);
+
+     await page.locator('[data-prep-tab=syllabus]').click();
+     await syllabus.locator('.syllabus-section summary').first().click();
+     const lcm=syllabus.locator('[data-syllabus-note-revised="lcm-hcf"]');
+     const lcmTopic=syllabus.locator('[data-topic="0-9"]');
+     const manualTopic=syllabus.locator('[data-topic="0-0"]');
+     const algebra=syllabus.locator('[data-syllabus-note-revised="algebra"]');
+     const equations=syllabus.locator('[data-syllabus-note-revised="linear-equations"]');
+     assert.ok(await lcm.isChecked());
+     assert.ok(await syllabus.locator('label:has([data-topic="0-9"]) [data-topic-note-coverage]').isVisible());
+     await lcmTopic.check();
+     await checkCoverage(1,3);
+     await lcmTopic.uncheck();
+     await checkCoverage(1,3);
+     await manualTopic.check();
+     await checkCoverage(2,5);
+     await algebra.check();
+     await checkCoverage(2,5);
+     await equations.check();
+     await checkCoverage(3,8);
+     await algebra.uncheck();
+     await lcm.uncheck();
+     await checkCoverage(1,3);
+     assert.ok(await manualTopic.isChecked());
+
+     const otherTab=await context.newPage();
+     try{
+       await otherTab.goto('http://127.0.0.1:3011/notes/rrb/lcm-hcf.md');
+       await otherTab.evaluate(()=>localStorage.setItem('exam-note-progress:exam-test-user:rrb',JSON.stringify(['lcm-hcf'])));
+       await page.waitForFunction(()=>document.querySelector('[data-progress-percent]').textContent==='5%');
+       assert.ok(await lcm.isChecked());
+       await checkCoverage(2,5);
+     }finally{
+       await otherTab.close();
+     }
+     await lcm.uncheck();
+     await manualTopic.uncheck();
+     await checkCoverage(0,0);
    }
    if(route==='gate'){assert.match(await page.locator('.countdown-date').innerText(),/2027-02-06/);assert.equal(await page.locator('.countdown-badge').textContent(),'Official exam window');assert.notEqual(await page.locator('.countdown-number').innerText(),'—');assert.match(await page.locator('.countdown-hint').innerText(),/CS-specific/);}
    assert.ok(await page.locator('.countdown-spotlight').evaluate(el=>el.getBoundingClientRect().top<document.querySelector('.prep-tab-strip').getBoundingClientRect().top),'Countdown must precede the tabs');

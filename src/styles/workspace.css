@@ -133,6 +133,13 @@ body,.app-shell,.landing-workspace{font-family:Inter,-apple-system,BlinkMacSyste
     border-radius: .4rem;
     background: var(--ws-soft);
 }
+.topic-note-coverage {
+    display: inline-block;
+    margin-inline-start: .35rem;
+    font-size: .8em;
+    font-weight: 700;
+    color: var(--ws-primary);
+}
 .exam-note [data-note-content] > h4 {
     margin-block: 1.25rem .375rem;
     color: var(--ws-text);

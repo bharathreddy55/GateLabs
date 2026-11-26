@@ -67,7 +67,7 @@ function formatNote(markdown) {
   }).join('');
 }
 
-export function bindExamNotes(root, examId, notes, selectTab, progressKey) {
+export function bindExamNotes(root, examId, notes, selectTab, progressKey, onRevisionChange) {
   if (!notes.length) return;
   const reader = root.querySelector('[data-note-reader]');
   const title = reader.querySelector('[data-note-title]');
@@ -83,12 +83,12 @@ export function bindExamNotes(root, examId, notes, selectTab, progressKey) {
   summary.className = 'surface';
   summary.innerHTML = '<h2>Detailed notes revision</h2><p data-note-progress></p>';
   progressPanel.querySelector('.home-stats').after(summary);
-  const revised = new Set(readStored(progressKey, []).filter(id => byId.has(id)));
   const progressCount = summary.querySelector('[data-note-progress]');
   let activeId;
   let request = 0;
 
   function syncRevision() {
+    const revised = new Set(readStored(progressKey, []).filter(id => byId.has(id)));
     progressCount.textContent = `${revised.size} of ${notes.length} notes revised`;
     revisionInput.checked = revised.has(activeId);
     for (const checkbox of root.querySelectorAll('[data-syllabus-note-revised]')) {
@@ -102,12 +102,11 @@ export function bindExamNotes(root, examId, notes, selectTab, progressKey) {
     else next.delete(id);
     try {
       localStorage.setItem(progressKey, JSON.stringify([...next]));
-      revised.clear();
-      for (const key of next) revised.add(key);
     } catch {
       status.textContent = 'Your device could not save this revision.';
     }
     syncRevision();
+    onRevisionChange?.();
   }
 
   revisionInput.onchange = () => changeRevision(activeId, revisionInput.checked);
@@ -219,4 +218,5 @@ export function bindExamNotes(root, examId, notes, selectTab, progressKey) {
   };
   const params = new URLSearchParams(location.hash.split('?')[1]);
   if (params.get('tab') === 'notes') open(params.get('note'), false);
+  return syncRevision;
 }
