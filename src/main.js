@@ -167,7 +167,6 @@ auth.onAuthStateChanged((user) => {
     clearStorageRecovery();
     const Practice=loadedPages.get('Practice');if(Practice){Practice.questions=[];Practice.isApplied=false;Practice.parsedQuestions=[];}
     const Assistant=loadedPages.get('Assistant');if(Assistant){Assistant.messages=[{role:'model',text:'Ask a study question or connect an AI provider in settings.'}];Assistant.draft='';Assistant.error='';Assistant.pending=false;}
-    const Formulas=loadedPages.get('Formulas');if(Formulas){Formulas.flippedCards={};Formulas.searchQuery='';}
     const Community=loadedPages.get('Community');if(Community){Community.activePostId=null;Community.posts=[];}
     const Dashboard=loadedPages.get('Dashboard');if(Dashboard)Dashboard.expandedNodes={};
     for(const page of loadedPages.values())page.cleanup?.();

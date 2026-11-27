@@ -8,6 +8,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
 import { escapeHtml } from '../src/utils/examEngine.js';
+import { renderFormulaCard } from '../src/components/FormulaCard.js';
 
 async function page(name,db={}) {
   const context=vm.createContext({console,localStorage:{getItem:()=>null},window:{location:{hash:''}},Date,JSON,Math,URLSearchParams});
@@ -26,9 +27,8 @@ test('assistant user and provider messages remain text',async()=>{
   const p=await page('Assistant');
   for(const role of ['user','model'])assert.ok(!p.renderMessageBubble({role,text:attack}).includes('<img'));
 });
-test('custom formulas cannot inject markup through title, body or LaTeX attributes',async()=>{
-  const p=await page('Formulas');
-  const html=p.renderFormulaCard({id:'custom-test',subject:attack,topic:attack,weightage:attack,concept:attack,mathLatex:attack,formula:attack});
+test('custom formulas cannot inject markup through title, body or LaTeX attributes',()=>{
+  const html=renderFormulaCard({id:'custom-test',subject:attack,topic:attack,concept:attack,mathLatex:attack,formula:attack});
   assert.ok(!html.includes('<img'));assert.ok(html.includes('&lt;img'));
 });
 test('practice questions and options remain text',async()=>{

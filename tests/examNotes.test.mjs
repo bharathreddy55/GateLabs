@@ -1,13 +1,30 @@
 import assert from 'node:assert/strict';
 import {readFileSync, readdirSync} from 'node:fs';
 import {test} from 'node:test';
+import katex from 'katex';
 import {EXAMS} from '../src/config/exams.js';
 import {CBAT_BATTERIES} from '../src/config/rrbCbat.js';
 import {CBAT_NOTES} from '../src/config/rrbCbatNotes.js';
 import {stationMasterRevision} from '../scripts/note-content/station-master-revision.mjs';
 import {buildStationMasterRevision} from '../scripts/render-revision-card.mjs';
+import {stationMasterFormulaDeck} from '../src/config/formulas/stationMaster.js';
 
 const catalogs = new URL('../src/config/notes/', import.meta.url);
+
+test('Station Master formula cards cover each detailed topic and use valid equations', () => {
+  const notes = JSON.parse(readFileSync(new URL('rrb.json', catalogs)));
+  const cards = Object.values(stationMasterFormulaDeck).flat();
+  const ids = new Set(cards.map(card => card.id));
+  const noteIds = new Set(notes.map(note => note.id));
+  assert.equal(ids.size, cards.length);
+  for (const id of noteIds) assert.ok(ids.has(id), id);
+  for (const card of cards) {
+    assert.ok(card.title && card.rule && card.trap && card.example.length >= 2, card.id);
+    assert.ok(card.math || card.expression, card.id);
+    if (card.math) katex.renderToString(card.math, {throwOnError:true, strict:'error'});
+    if (card.noteId) assert.ok(noteIds.has(card.noteId), card.id);
+  }
+});
 
 function checkRecallCard(svg, details, id) {
   assert.match(svg, /<svg .*viewBox=/, id);

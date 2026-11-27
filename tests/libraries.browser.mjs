@@ -42,6 +42,44 @@ page.on('console',m=>{if(m.type()==='warning'||m.type()==='error')console.log(m.
 const go=async route=>{await page.goto('http://127.0.0.1:3011/#/'+route);await ready();};
 try{
  await go('formulas');
+ const deckChoices=page.getByRole('group',{name:'Choose an exam'});
+ const formulas=page.locator('.formula-card');
+ const topics=page.getByLabel('Topic',{exact:true});
+ const stationMaster=deckChoices.getByRole('button',{name:/RRB Station Master/});
+ const gate=deckChoices.getByRole('button',{name:/GATE CS & IT/});
+ assert.equal(await deckChoices.getByRole('button').count(),4);
+ assert.equal(await stationMaster.getAttribute('aria-pressed'),'true');
+ assert.equal(await formulas.count(),59);
+ const expectedTopics=['All topics','Basic Maths','Basic Science','Logical Capability','Mental Reasoning','Data Analysis'];
+ assert.deepEqual(await topics.locator('option').allTextContents(),expectedTopics);
+ for(const topic of expectedTopics.slice(1)){
+   await topics.selectOption(topic);
+   const visible=await page.locator('.formula-card:visible').evaluateAll(nodes=>nodes.map(node=>node.dataset.formulaSubject));
+   assert.ok(visible.length>=8 && visible.every(subject=>subject===topic),topic);
+ }
+ await page.getByRole('textbox',{name:'Search formulas'}).fill('pie sector');
+ assert.equal(await page.locator('.formula-card:visible').count(),1);
+ const pie=page.locator('.formula-card:visible');
+ await pie.locator('summary').click();
+ assert.match(await pie.locator('.formula-worked').innerText(),/50 tickets/);
+ assert.equal(await pie.getByRole('link',{name:'Detailed notes'}).getAttribute('href'),'#/rrb-station-master?tab=notes&note=data-pie-charts');
+ await page.setViewportSize({width:320,height:844});
+ for (const dark of [false,true]) {
+   await page.evaluate(value=>document.documentElement.classList.toggle('dark',value),dark);
+   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+   assert.ok(await topics.evaluate(el=>getComputedStyle(el).backgroundColor===getComputedStyle(el.options[0]).backgroundColor));
+ }
+ await page.setViewportSize({width:1440,height:1000});
+
+ // Existing saved cards without an exam id belong to GATE.
+ await page.evaluate(()=>localStorage.setItem('gate_custom_formulas:qa-user',JSON.stringify([{
+   id:'old-card',subject:'Operating Systems',topic:'Scheduling',concept:'Old personal formula',formula:'Legacy formula contents.',isCustom:true
+ }])));
+ await gate.click();
+ assert.equal(await gate.getAttribute('aria-pressed'),'true');
+ assert.equal(await formulas.count(),17);
+ assert.equal(await page.getByRole('heading',{name:'Old personal formula'}).count(),1);
+ assert.equal(await page.getByRole('heading',{name:'Pie charts and sector angles'}).count(),0);
  await page.locator('.katex').first().waitFor();
  const disclosure=page.locator('.formula-card summary').first();await disclosure.focus();await page.keyboard.press('Enter');assert.equal(await page.locator('.formula-card details').first().getAttribute('open'),'');await page.keyboard.press('Enter');
  assert.ok(await page.locator('.formula-card').first().evaluate(el=>el.offsetHeight<450));
@@ -49,6 +87,39 @@ try{
  await page.evaluate(()=>{window.__formulaCard=document.querySelector('.formula-card');window.__formulaSearch=document.getElementById('formula-search');window.__formulaCard.querySelector('details').open=true;});
  await page.locator('#formula-search').fill('no-formula-will-match-9281');assert.equal(await page.locator('.formula-card:visible').count(),0);assert.equal(await page.locator('#formula-search-empty').isVisible(),true);
  await page.locator('#formula-search').fill('');assert.equal(await page.evaluate(()=>window.__formulaCard===document.querySelector('.formula-card')&&window.__formulaSearch===document.getElementById('formula-search')&&document.activeElement===window.__formulaSearch&&window.__formulaCard.querySelector('details').open),true);
+ await topics.selectOption('Operating Systems');
+ assert.equal(await page.locator('.formula-card:visible').count(),4);
+ for(const [exam,option,link] of [['APPSC Group 2','Indian Constitution','#/group2?tab=notes'],['SBI Clerk','Numerical Ability','#/sbi-clerk?tab=notes']]){
+   await deckChoices.getByRole('button',{name:new RegExp(exam)}).click();
+   assert.equal(await formulas.count(),0);
+   assert.ok(await page.getByRole('heading',{name:'No formula cards yet'}).isVisible());
+   await topics.selectOption(option);
+   assert.equal(await page.getByRole('link',{name:'Browse detailed notes'}).getAttribute('href'),link);
+ }
+ await stationMaster.click();
+ assert.equal(await topics.inputValue(),'');
+ assert.equal(await formulas.count(),59);
+ await topics.selectOption('Basic Science');
+ await page.getByRole('button',{name:'Add card',exact:true}).click();
+ const dialog=page.getByRole('dialog',{name:'Add a personal card'});
+ assert.equal(await dialog.getByLabel('Topic category').inputValue(),'Basic Science');
+ await page.keyboard.press('Escape');
+ await dialog.waitFor({state:'hidden'});
+ await page.getByRole('button',{name:'Add card',exact:true}).click();
+ await dialog.getByLabel('Topic name').fill('Motion');
+ await dialog.getByLabel('Card title').fill('My personal Station Master formula');
+ await dialog.getByLabel('Notes',{exact:true}).fill('Speed is distance divided by time.');
+ await dialog.getByRole('button',{name:'Save card'}).click();
+ await dialog.waitFor({state:'hidden'});
+ assert.equal(await topics.inputValue(),'personal');
+ assert.equal(await page.locator('.formula-card:visible').count(),1);
+ const saved=await page.evaluate(()=>JSON.parse(localStorage.getItem('gate_custom_formulas:qa-user')));
+ assert.equal(saved.at(-1).examId,'rrb');
+ await gate.click();
+ assert.equal(await page.getByRole('heading',{name:'My personal Station Master formula'}).count(),0);
+ await go('formulas?exam=rrb');
+ assert.equal(await formulas.count(),60);
+ assert.equal(await page.getByRole('heading',{name:'Old personal formula'}).count(),0);
  const result=await page.evaluate(async()=>{
  const {loadPdfDocument}=await import('/src/utils/documentLibraries.js');
  const parts=['%PDF-1.4\n'];const offsets=[0];
@@ -62,5 +133,5 @@ try{
  });
  const archived=await page.evaluate(async()=>{const archive=await import('/src/utils/attemptArchive.js'),backup=await import('/src/utils/completeBackup.js');const rows=Array.from({length:35},(_,i)=>({id:'archive-'+i,userId:'archive-alice',score:i,timestamp:new Date(2026,0,i+1).toISOString()}));if(!await archive.writeAttemptArchive('archive-alice',rows))throw Error('Archive write failed');await archive.writeAttemptArchive('archive-bob',[{id:'archive-0',userId:'archive-bob',score:99}]);const exported=await backup.exportCompleteBackup('archive-alice');await backup.importCompleteBackup(exported,'archive-restored');await archive.deleteArchivedAttempt('archive-alice','archive-0');return {alice:(await archive.readAttemptArchive('archive-alice')).length,bob:(await archive.readAttemptArchive('archive-bob'))[0].score,exported:exported.entries['exam-results'].length,restored:(await archive.readAttemptArchive('archive-restored')).length,cache:JSON.parse(localStorage.getItem('exam-results:archive-restored')).length,wrongOwner:await archive.writeAttemptArchive('archive-bob',rows)};});
  assert.deepEqual(archived,{alice:34,bob:99,exported:35,restored:35,cache:20,wrongOwner:false});
- assert.match(result.text,/Hello PDF/);assert.equal(result.readable,true);assert.deepEqual(errors,[]);console.log('PASS bundled math, real PDF extraction and readable invalid-PDF error with external CDNs denied');
+ assert.match(result.text,/Hello PDF/);assert.equal(result.readable,true);assert.deepEqual(errors,[]);console.log('PASS exam formula decks, filtering, personal cards, mobile and dark mode, bundled math and PDF extraction');
 }finally{await browser.close();await vite.close();}

@@ -30,10 +30,6 @@ body,.app-shell,.landing-workspace{font-family:Inter,-apple-system,BlinkMacSyste
 .dark{--ws-primary:var(--accent-link-dark,#9aafff);--ws-soft:var(--accent-soft,#252f49)}
 .ui-button.primary,.brand-mark,.btn-primary,.accent-gradient{background:var(--accent-from)!important;color:var(--accent-on,#fff)!important}
 .accent-text{color:var(--ws-primary)}
-.formula-card{display:flex;flex-direction:column;gap:14px;min-height:245px;height:auto;align-self:start;background:var(--ws-panel);color:var(--ws-text)}
-.formula-card header{display:flex;justify-content:space-between;gap:12px;font-size:13px;color:var(--ws-primary)}
-.formula-card h3{font-size:16px;font-weight:650}.formula-card p,.formula-explanation{font-size:14px;line-height:1.7}.formula-expression{padding:14px;overflow-x:auto;background:var(--ws-bg);border-radius:8px;min-height:48px}
-.formula-card summary{cursor:pointer;min-height:44px;padding:10px 0;font-size:14px;font-weight:600}.formula-explanation{white-space:pre-line;margin-bottom:16px;overflow-wrap:anywhere}
 .paper-filters{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:20px;align-items:end}.paper-filters label{font-size:13px;display:grid;gap:6px}.paper-filters select{min-height:44px;padding:8px;border:1px solid var(--ws-border);border-radius:8px;background:var(--ws-panel)}.paper-provenance summary{font-size:13px;cursor:pointer;padding:10px 0}.paper-card .muted{font-size:13px;line-height:1.6}
 .prep-tab-strip{display:flex;align-items:stretch;position:relative}.prep-tab-strip .prep-tabs{flex:1;min-width:0}.tab-continuation{display:none;flex-shrink:0;width:44px;color:var(--ws-primary);background:var(--ws-panel);border-left:1px solid var(--ws-border)}
 @media(max-width:700px){.tab-continuation{display:block}.prep-tab-strip:after{content:'';pointer-events:none;position:absolute;right:44px;top:0;bottom:0;width:18px;background:linear-gradient(90deg,transparent,var(--ws-bg))}}
