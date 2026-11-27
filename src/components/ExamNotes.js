@@ -39,7 +39,7 @@ export function notesPanel(examId, active, notes) {
   </section>`;
 }
 
-function formatNote(markdown) {
+export function formatNote(markdown) {
   const inline = text => h(text)
     .replace(/\*\*([^*\n]+)\*\*/g, '<strong>$1</strong>')
     .replace(/\x60([^\x60\n]+)\x60/g, '<code>$1</code>')

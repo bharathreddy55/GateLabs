@@ -130,13 +130,14 @@ try{
  await insights.getByRole('button',{name:'Per question',exact:true}).click();
  assert.match(await insights.locator('[data-insight-clock-label]').innerText(),/all 150 questions/);
  await insights.getByRole('button',{name:'Topics',exact:true}).click();
- const topic=groupPaper.questions[0].topic;
- const group=groupPaper.questions.filter(q=>q.topic===topic&&q.section===groupPaper.questions[0].section);
+ const topic=groupPaper.questions[1].topic;
  await insights.getByRole('searchbox',{name:'Find a topic'}).fill(topic);
  await insights.locator('[data-insight-group]').first().click();
  await insights.getByRole('button',{name:'Review these questions',exact:true}).click();
  assert.equal(await review.locator('[data-review-scope-name]').innerText(),topic);
- assert.equal(await review.locator('[data-review-question]').count(),group.length);
+ assert.deepEqual(await review.locator('[data-review-question]').evaluateAll(nodes=>nodes.map(node=>node.dataset.reviewQuestion)),['1']);
+ assert.match(await review.locator('[data-review-question="1"]').innerText(),/Great Bath/);
+ await review.getByRole('heading',{name:'Topic explanation',exact:true}).waitFor();
  await review.getByRole('button',{name:'Show all questions',exact:true}).click();
  assert.equal(await review.locator('[data-review-question]').count(),150);
  await review.locator('[data-review-question="0"]').click();
@@ -262,6 +263,14 @@ try{
    assert.equal(await page.locator('[data-question]').count(),100);
    const wrongAnswer=await page.evaluate(async()=>{const {MockTest}=await import('/src/pages/ExamRunner.js');return (MockTest.questions[0].correctAnswer+1)%4;});
    await page.locator(`[data-answer="${wrongAnswer}"]`).check();
+   if(model===3){
+     for(const index of [2,30]){
+       await openPalette();
+       await page.locator(`[data-question="${index}"]`).click();
+       const wrong = await page.evaluate(async i=>{const {MockTest}=await import('/src/pages/ExamRunner.js');return (MockTest.questions[i].correctAnswer+1)%4;},index);
+       await page.locator(`[data-answer="${wrong}"]`).check();
+     }
+   }
    if(model===2){
      await openPalette();
      await page.locator('[data-question="30"]').click();
@@ -276,8 +285,9 @@ try{
    }
    await page.getByRole('button',{name:'Submit test',exact:true}).click();
    await page.getByRole('heading',{name:'Exam complete',exact:true}).waitFor();
-   assert.match(await page.locator('#exam-root').innerText(),/0 correct · 1 wrong · 99 unanswered/);
-   assert.match(await page.locator('#exam-root').innerText(),/Marks deducted\s+0\.33/);
+   const resultText=await page.locator('#exam-root').innerText();
+   assert.match(resultText,model===3?/0 correct · 3 wrong · 97 unanswered/:/0 correct · 1 wrong · 99 unanswered/);
+   assert.match(resultText,model===3?/Marks deducted\s+1\b/:/Marks deducted\s+0\.33/);
    if(model===2){
      assert.equal(await insights.locator('.insight-overview').evaluate(el=>getComputedStyle(el).gridTemplateColumns.split(' ').length),1);
      await review.locator('[data-review-question="30"]').click();
@@ -304,13 +314,34 @@ try{
      assert.match(await passage.locator('.review-evidence').innerText(),/⇏ individual earnings/);
    }
    if(model===3){
-     await review.locator('[data-review-question="0"]').click();
+     const groupReview=insights.getByRole('button',{name:'Review these questions',exact:true});
+     await insights.locator('[data-insight-group]').filter({hasText:'Basic Science and Mathematics'}).click();
+     await groupReview.click();
+     assert.equal(await review.locator('[data-review-scope-name]').innerText(),'Basic Science and Mathematics');
+     const scoped=review.locator('[data-review-question]');
+     assert.deepEqual(await scoped.evaluateAll(nodes=>nodes.map(node=>node.dataset.reviewQuestion)),['0','2']);
+     assert.match(await scoped.nth(0).innerText(),/Concentration[\s\S]+A 40 L tank/);
+     assert.match(await scoped.nth(1).innerText(),/Combined averages[\s\S]+small depot/);
+     await scoped.nth(1).click();
+     await review.locator('.review-topic ul').waitFor();
+     assert.match(await review.locator('.review-topic').innerText(),/weighted mean/i);
+     await scoped.nth(0).click();
+     assert.match(await review.locator('.review-topic').innerText(),/each scoop has the same concentration/);
+     assert.equal(await review.getByRole('link',{name:'Read detailed notes'}).getAttribute('href'),'#/rrb-station-master?tab=notes&note=ratio-proportion');
+     assert.equal(await review.locator('.review-filters').isVisible(),false);
      const tank=review.locator('.review-solution');
      await tank.getByText('Imagine a big juice tank',{exact:true}).waitFor();
      assert.equal(await tank.locator('.review-steps li').count(),4);
      assert.match(await tank.locator('.review-steps li').nth(1).innerText(),/12 L − 3 L = 9 L/);
      assert.match(await tank.locator('.review-final-answer').innerText(),/35%/);
-     await review.locator('[data-review-question="30"]').click();
+     await insights.locator('[data-insight-group]').filter({hasText:'Logical Capability'}).click();
+     await groupReview.click();
+     assert.equal(await scoped.count(),0);
+     await review.getByRole('heading',{name:'No incorrect questions in this selection'}).waitFor();
+     await insights.locator('[data-insight-group]').filter({hasText:'Data Analysis'}).click();
+     await groupReview.click();
+     assert.deepEqual(await scoped.evaluateAll(nodes=>nodes.map(node=>node.dataset.reviewQuestion)),['30']);
+     assert.match(await review.locator('.review-topic').innerText(),/Multiply the target by the percentage and divide by 100/);
      const data=review.locator('[data-solution-layout=data]');
      const worked=data.getByRole('table',{name:'Actual output and gain by unit'});
      await worked.waitFor();
@@ -321,6 +352,9 @@ try{
      assert.match(await data.locator('.review-final-answer').innerText(),/\bA\b/);
      assert.ok(await worked.evaluate(el=>el.parentElement.getBoundingClientRect().right<=innerWidth));
      assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+     await review.getByRole('button',{name:'Show all questions',exact:true}).click();
+     assert.equal(await scoped.count(),100);
+     assert.equal(await review.locator('.review-topic').count(),0);
    }
    if(model>=11) await review.getByRole('heading',{name:'Step-by-step solution',exact:true}).waitFor();
    if(model===11){

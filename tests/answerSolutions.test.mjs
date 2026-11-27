@@ -4,6 +4,7 @@ import {test} from 'node:test';
 import {explainAnswer} from '../src/utils/answerSolutions.js';
 import {parseExamText} from '../src/utils/parseExamText.js';
 import {buildCbatSet} from '../src/utils/cbat.js';
+import {stationMasterReviewTopic} from '../src/utils/stationMasterReviewTopics.js';
 
 const rrbReview = {examId:'rrb'};
 
@@ -60,6 +61,19 @@ test('all published Station Master CBT items have a beginner introduction and a 
       assert.ok(typeof step === 'string' ? step.trim() : step.text || step.formula,q.id);
       if (step.quote) assert.ok(q.passage?.includes(step.quote),q.id);
     }
+  }
+});
+
+test('every published Station Master CBT mistake has a topic refresher',()=>{
+  const notes=JSON.parse(readFileSync('src/config/notes/rrb.json','utf8'));
+  const noteIds=new Set(notes.map(note=>note.id));
+  const papers=['rrb.json','challenges/rrb.json'].flatMap(file=>
+    JSON.parse(readFileSync('public/exams/'+file,'utf8')));
+  for (const question of papers.flatMap(paper=>paper.questions)) {
+    const topic=stationMasterReviewTopic(question);
+    assert.ok(topic?.title && (topic.summary || noteIds.has(topic.noteId)),question.id);
+    if (topic.noteId) assert.ok(noteIds.has(topic.noteId),question.id);
+    if (question.topic==='Arithmetic and basic science') assert.notEqual(topic.title,question.topic,question.id);
   }
 });
 

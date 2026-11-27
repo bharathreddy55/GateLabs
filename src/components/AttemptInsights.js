@@ -212,7 +212,9 @@ function mountGroups(card, responses, openReview) {
   };
   detail.onclick=event=>{
     const group=groups[selected];
-    if(group&&event.target.closest('[data-insight-review-group]')) openReview({indices:group.indices,label:group.name});
+    if(group&&event.target.closest('[data-insight-review-group]')) {
+      openReview({indices:group.indices,label:group.name,mistakesOnly:true});
+    }
   };
   redraw();
 }

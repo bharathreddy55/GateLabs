@@ -314,12 +314,47 @@
 .review-empty { padding: 24px; }
 .review-empty h3 { margin: 0 0 12px; }
 .review-empty p { margin: 0 0 10px; color: var(--ws-muted); }
+.review-filters[hidden], .review-legend[hidden] { display: none; }
+.review-mistakes .review-layout { grid-template-columns: minmax(220px, 310px) minmax(0, 1fr); }
+.review-mistakes .review-scope { margin-block: 14px; }
+.review-mistakes [data-review-scope-name] { font-weight: 700; }
+.review-palette.review-mistake-list {
+  grid-template-columns: minmax(0, 1fr);
+  max-height: min(62vh, 550px);
+  gap: 8px;
+}
+.answer-review .review-mistake-list button {
+  place-items: start;
+  gap: 3px;
+  height: auto;
+  padding: 10px 12px;
+  text-align: start;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.review-mistake-list strong { color: var(--ws-text); }
+.review-mistake-stem { color: var(--ws-muted); font-weight: 450; line-height: 1.4; }
+.review-topic {
+  margin-block: 16px;
+  padding: 14px 16px;
+  border: 1px solid var(--ws-border);
+  border-inline-start: 3px solid var(--review-accent);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--review-accent) 6%, var(--ws-panel));
+}
+.answer-review .review-topic h4 { margin: 0 0 4px; color: var(--review-accent); font-size: .8rem; }
+.answer-review .review-topic h5 { margin: 0; font: 700 1rem/1.4 var(--ws-display); }
+.answer-review .review-topic p, .answer-review .review-topic ul { margin: 8px 0; line-height: 1.55; }
+.review-topic ul { list-style: disc; padding-inline-start: 1.35em; }
+.review-topic li + li { margin-top: 4px; }
+.review-topic a { display: inline-block; margin-top: 2px; font-weight: 650; }
 .cbat-result { flex-wrap: wrap; }
 .cbat-result h2 { margin: 0 0 6px; }
 
 @media (max-width: 880px) {
-  .review-layout { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .review-layout, .review-mistakes .review-layout { grid-template-columns: minmax(0, 1fr); gap: 12px; }
   .review-palette { grid-template-columns: repeat(auto-fill, minmax(34px, 1fr)); max-height: 84px; }
+  .review-palette.review-mistake-list { max-height: min(40vh, 330px); }
 }
 @media (max-width: 520px) {
   .review-header { align-items: flex-start; flex-direction: column; }

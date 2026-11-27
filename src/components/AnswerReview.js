@@ -4,6 +4,7 @@ import { explainAnswer } from '../utils/answerSolutions.js';
 import { renderMath } from '../utils/documentLibraries.js';
 import { outcomeLabels as statuses } from '../utils/attemptInsights.js';
 import { renderExamTable, renderQuestionContext } from './QuestionView.js';
+import { loadReviewTopic, renderReviewTopic, reviewTopic } from './ReviewTopic.js';
 
 const filters = [['all','All answers'],['wrong','Incorrect'],['skipped','Unanswered'],['correct','Correct']];
 const optionLetter = index => String.fromCharCode(65 + Number(index));
@@ -76,8 +77,8 @@ function renderSteps(steps, layout) {
   return `<ol class="${className}">${steps.map(step => `<li>${renderStepContent(step)}</li>`).join('')}</ol>`;
 }
 
-function renderSolution(q, examId, battery, renderOption) {
-  const {approach,steps,reason,tip,finalAnswer,shortcut,picture,rule,working} = explainAnswer(q, {examId,battery});
+function renderSolution(q, examId, battery, renderOption, solution) {
+  const {approach,steps,reason,tip,finalAnswer,shortcut,picture,rule,working} = solution;
   if (!approach && !steps.length && !reason) return '<p class="review-note">A worked explanation is unavailable for this question.</p>';
   const isStationMaster = examId === 'rrb' || Boolean(battery);
   const layout = solutionLayout(q, examId);
@@ -143,7 +144,7 @@ export function mountAnswerReview(root, {
   </div>
   <div class="review-layout">
     <nav class="review-navigator" aria-label="Questions">
-      <div class="review-nav-heading"><strong>Questions</strong><span data-review-count role="status"></span></div>
+      <div class="review-nav-heading"><strong data-review-nav-title>Questions</strong><span data-review-count role="status"></span></div>
       <div class="review-palette" data-review-palette></div>
       <div class="review-legend">${Object.entries(statuses).map(([key,label])=>`<span data-outcome="${key}">${label}</span>`).join('')}
         ${supportsMarks?'<span data-review-marked>Marked for review</span>':''}
@@ -153,6 +154,7 @@ export function mountAnswerReview(root, {
   </div>`;
   const palette = root.querySelector('[data-review-palette]');
   const content = root.querySelector('[data-review-content]');
+  let mistakesOnly = false;
   let visible, cursor, savingMark = false;
 
   function select(index, focus) {
@@ -162,14 +164,16 @@ export function mountAnswerReview(root, {
     if (!item) {
       const markedFilter = state.filter === 'marked';
       content.innerHTML = `<div class="review-empty">
-        <h3>${markedFilter?'No questions marked for review':'No questions match this filter'}</h3>
+        <h3>${mistakesOnly?'No incorrect questions in this selection':markedFilter?'No questions marked for review':'No questions match this filter'}</h3>
         ${markedFilter&&toggleReviewMark?'<p>Use Mark for review on an answer card to add a violet dot.</p>':''}
-        <button type="button" class="ui-button" data-review-filter="all">Show all answers</button>
+        ${mistakesOnly?'':'<button type="button" class="ui-button" data-review-filter="all">Show all answers</button>'}
       </div>`;
       return;
     }
     state.index = item.index;
     const q = item.question;
+    const topic = mistakesOnly ? reviewTopic(q, examId) : null;
+    const solution = explainAnswer(q, {examId,battery});
     const saved = bookmarks.includes(q.id);
     palette.querySelector('[aria-current]')?.removeAttribute('aria-current');
     const current = palette.querySelector(`[data-review-question="${item.index}"]`);
@@ -189,7 +193,8 @@ export function mountAnswerReview(root, {
         <h3 class="review-question" tabindex="-1">${h(q.question)}</h3>
         ${renderContext(q)}
         ${renderAnswers(q,renderOption)}
-        ${renderSolution(q, examId, battery, renderOption)}
+        ${topic ? renderReviewTopic(topic, examId, solution) : ''}
+        ${renderSolution(q, examId, battery, renderOption, solution)}
         ${sourceReference(q)}
       </div>
       <footer class="review-card-footer">
@@ -198,6 +203,7 @@ export function mountAnswerReview(root, {
         <button type="button" class="ui-button primary" data-review-move="1" ${cursor===visible.length-1?'disabled':''}>Next <span aria-hidden="true">${icon('arrow')}</span></button>
       </footer>
     </article>`;
+    if (topic) loadReviewTopic(content.querySelector('[data-review-topic-summary]'), topic, examId);
     if (content.querySelector('.katex-render')) renderMath(content);
     if (focus) content.querySelector('.review-question').focus();
   }
@@ -211,18 +217,30 @@ export function mountAnswerReview(root, {
     visible = scopedItems.filter(item=>matches(item,filter));
     palette.innerHTML = visible.map(({question,index})=>{
       const marked = question.markedForReview === true;
+      const topic = mistakesOnly ? reviewTopic(question, examId) : null;
+      const label = topic
+        ? `Question ${index+1}, ${topic.title}. ${question.question}`
+        : `Question ${index+1}, ${statuses[question.status] ?? 'reviewed'}`;
       return `<button type="button" data-review-question="${index}" data-outcome="${h(question.status)}"${marked?' data-review-marked':''}
-        aria-label="Question ${index+1}, ${statuses[question.status] ?? 'reviewed'}${marked?', marked for review':''}">${index+1}</button>`;
+        aria-label="${h(label)}${marked?', marked for review':''}">${topic ? `<span>Question ${index+1}</span>
+          <strong>${h(topic.title)}</strong><span class="review-mistake-stem">${h(question.question)}</span>` : index+1}</button>`;
     }).join('');
     select(state.index,false);
   }
 
-  function setScope(indices,label) {
+  function setScope(indices,label,onlyWrong=false) {
+    mistakesOnly = Boolean(indices && onlyWrong);
+    state.scope = indices ? {indices,label,mistakesOnly} : undefined;
     const scope=root.querySelector('[data-review-scope]');
     scope.hidden=!indices;
     scope.querySelector('[data-review-scope-name]').textContent=label || '';
     const allowed=indices ? new Set(indices) : null;
-    scopedItems=allowed ? items.filter(item=>allowed.has(item.index)) : items;
+    scopedItems=allowed ? items.filter(item=>allowed.has(item.index) && (!mistakesOnly || matches(item,'wrong'))) : items;
+    palette.classList.toggle('review-mistake-list',mistakesOnly);
+    root.classList.toggle('review-mistakes',mistakesOnly);
+    root.querySelector('[data-review-nav-title]').textContent=mistakesOnly?'Incorrect questions':'Questions';
+    root.querySelector('.review-filters').hidden=mistakesOnly;
+    root.querySelector('.review-legend').hidden=mistakesOnly;
     updateCounts();
   }
 
@@ -263,7 +281,7 @@ export function mountAnswerReview(root, {
         applyFilter(state.filter);
         if (wasSelected) {
           const markButton=state.index===item.index && content.querySelector('[data-toggle-review-mark]');
-          (markButton || root.querySelector('.review-filters [aria-pressed="true"]'))?.focus({preventScroll:true});
+          (markButton || root.querySelector(mistakesOnly?'[data-review-clear-scope]':'.review-filters [aria-pressed="true"]'))?.focus({preventScroll:true});
         }
       } else {
         const current = content.querySelector('[data-toggle-review-mark]');
@@ -287,10 +305,11 @@ export function mountAnswerReview(root, {
       practise();
     }
   };
-  applyFilter(readFilter());
-  return ({filter='all',indices,label}={})=>{
-    setScope(indices,label);
-    applyFilter(filter);
+  setScope(state.scope?.indices,state.scope?.label,state.scope?.mistakesOnly);
+  applyFilter(mistakesOnly?'wrong':readFilter());
+  return ({filter='all',indices,label,mistakesOnly:onlyWrong}={})=>{
+    setScope(indices,label,onlyWrong);
+    applyFilter(mistakesOnly?'wrong':filter);
     root.querySelector('#answer-review-heading').focus({preventScroll:true});
     root.scrollIntoView({block:'start'});
   };
