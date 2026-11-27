@@ -42,7 +42,7 @@ const calculations = [
       step('Check that the bound can be achieved', `Assign ${maxQ} rejections among Q’s ${q} boxes and ${minP} among P’s ${p} boxes. Neither team exceeds its inspected count.`)
     ]];
   }],
-  [template(String.raw`H ranks #th in a preliminary list\. The final list removes two people originally above H and adds # new entries\. The number of new entries above H is half the new entries, rounded down\. What is H’s final rank\?`), ([rank, added]) => {
+  [template(String.raw`H ranks #(?:st|nd|rd|th) in a preliminary list\. The final list removes two people originally above H and adds # new entries\. The number of new entries above H is half the new entries, rounded down\. What is H’s final rank\?`), ([rank, added]) => {
     const above = Math.floor(added / 2), finalRank = rank - 2 + above;
     return [String(finalRank), [
       step('Remove the two higher ranks', 'Both removed people were ahead of H, so the rank number drops by two.', `${rank} − 2 = ${rank - 2}`),

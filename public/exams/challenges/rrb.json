@@ -403,7 +403,7 @@
         "section": "Basic Science and Mathematics",
         "subject": "Basic Science and Mathematics",
         "topic": "Discounts, profit and loss",
-        "question": "A supply shop buys a tool for ₹1300. It marks the tool up by 50% and offers a 20% discount on the marked price. What cash profit does it make?",
+        "question": "A supply shop buys a tool for ₹1300. It marks the tool up by 50% and offers a 20% discount on the marked price. How much profit does the shop make on the sale?",
         "options": [
           "260 rupees",
           "130 rupees",
@@ -413,12 +413,13 @@
         "correctAnswer": 0,
         "marks": 1,
         "type": "MCQ",
-        "explanation": "The marked price is 1.5 × ₹1300. The buyer pays 80% of that, giving 1.2 × cost. Subtract the purchase price to get 0.2 × ₹1300 = ₹260.",
+        "explanation": "The shop paid ₹1300. It adds half of that price to make the price on the tag. The tag shows 1.5 × ₹1300 = ₹1950. A 20% discount takes away 20 out of every 100 rupees on the tag. The buyer pays the remaining 80%, which is 0.8 × ₹1950 = ₹1560. The shop keeps the amount above what it paid. Subtract the cost from the money received. ₹1560 − ₹1300 = ₹260.",
         "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
         "solution": {
           "steps": [
-            "The marked price is 1.5 × ₹1300. The buyer pays 80% of that, giving 1.2 × cost.",
-            "Subtract the purchase price to get 0.2 × ₹1300 = ₹260."
+            "The shop paid ₹1300. It adds half of that price to make the price on the tag. The tag shows 1.5 × ₹1300 = ₹1950.",
+            "A 20% discount takes away 20 out of every 100 rupees on the tag. The buyer pays the remaining 80%, which is 0.8 × ₹1950 = ₹1560.",
+            "The shop keeps the amount above what it paid. Subtract the cost from the money received. ₹1560 − ₹1300 = ₹260."
           ]
         }
       },
@@ -427,7 +428,7 @@
         "section": "Basic Science and Mathematics",
         "subject": "Basic Science and Mathematics",
         "topic": "Average with a corrected entry",
-        "question": "A tally of 52 freight weights averages 110 kg. One entry was understated by 104 kg and another overstated by 52 kg. What is the corrected average?",
+        "question": "A set of 52 freight weights has a mean of 110 kg. One entry was understated by 104 kg and another overstated by 52 kg. What is the corrected average?",
         "options": [
           "109 kg",
           "111 kg",
@@ -437,12 +438,13 @@
         "correctAnswer": 1,
         "marks": 1,
         "type": "MCQ",
-        "explanation": "The correction to the combined total is +104 − 52 = 52 kg. There are still 52 readings, so the average rises by 1 kg.",
+        "explanation": "Think of the 52 weights as one pile. To recover the old total, multiply 52 by the old average of 110 kg. That gives 5720 kg. One entry is 104 kg too small, so add 104 kg. Another is 52 kg too big, so take 52 kg away. The new total is 5720 + 104 − 52 = 5772 kg. The number of entries is still 52. Share the new total equally across those entries. 5772 ÷ 52 = 111 kg.",
         "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
         "solution": {
           "steps": [
-            "The correction to the combined total is +104 − 52 = 52 kg.",
-            "There are still 52 readings, so the average rises by 1 kg."
+            "Think of the 52 weights as one pile. To recover the old total, multiply 52 by the old average of 110 kg. That gives 5720 kg.",
+            "One entry is 104 kg too small, so add 104 kg. Another is 52 kg too big, so take 52 kg away. The new total is 5720 + 104 − 52 = 5772 kg.",
+            "The number of entries is still 52. Share the new total equally across those entries. 5772 ÷ 52 = 111 kg."
           ]
         }
       },
@@ -461,12 +463,13 @@
         "correctAnswer": 3,
         "marks": 1,
         "type": "MCQ",
-        "explanation": "Use equal cost bases. The gain on one cost unit minus the loss on the other is 46% of one unit. The denominator is two cost units. Divide 46% by two.",
+        "explanation": "Both batches cost the same, so pretend each cost ₹100. The first earns ₹92 extra and the second loses ₹46. Take the loss away from the gain. You keep ₹92 − ₹46 = ₹46 extra. That extra money came from buying both batches for ₹200 altogether. Divide 46 by 200 and multiply by 100 to get 23%.",
         "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
         "solution": {
           "steps": [
-            "Use equal cost bases. The gain on one cost unit minus the loss on the other is 46% of one unit.",
-            "The denominator is two cost units. Divide 46% by two."
+            "Both batches cost the same, so pretend each cost ₹100. The first earns ₹92 extra and the second loses ₹46.",
+            "Take the loss away from the gain. You keep ₹92 − ₹46 = ₹46 extra.",
+            "That extra money came from buying both batches for ₹200 altogether. Divide 46 by 200 and multiply by 100 to get 23%."
           ]
         }
       },
@@ -485,12 +488,13 @@
         "correctAnswer": 2,
         "marks": 1,
         "type": "MCQ",
-        "explanation": "Add masses using density × volume, then divide by the total volume of 1500 cm³. The volume-weighted mean is (1 + 2 × 1.3) ÷ 3 = 1.2.",
+        "explanation": "Think of the mixture as three cups of 500 cm³ each. One cup is the first liquid and two cups are the second liquid. Each cubic centimetre of the first liquid has a mass of 1 g. Each cubic centimetre of the second has a mass of 1.3 g. Multiply each amount of liquid by its own density. Add those masses and divide by all 1500 cm³. The common cup size cancels, leaving (1 + 2 × 1.3) ÷ 3 = 1.2 g/cm³.",
         "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
         "solution": {
           "steps": [
-            "Add masses using density × volume, then divide by the total volume of 1500 cm³.",
-            "The volume-weighted mean is (1 + 2 × 1.3) ÷ 3 = 1.2."
+            "Think of the mixture as three cups of 500 cm³ each. One cup is the first liquid and two cups are the second liquid.",
+            "Each cubic centimetre of the first liquid has a mass of 1 g. Each cubic centimetre of the second has a mass of 1.3 g. Multiply each amount of liquid by its own density.",
+            "Add those masses and divide by all 1500 cm³. The common cup size cancels, leaving (1 + 2 × 1.3) ÷ 3 = 1.2 g/cm³."
           ]
         }
       },
@@ -523,7 +527,7 @@
         "section": "Basic Science and Mathematics",
         "subject": "Basic Science and Mathematics",
         "topic": "HCF and equal packs",
-        "question": "A stores clerk must split 184 red and 322 blue tags into as many identical packs as possible, using every tag. How many tags go in each pack?",
+        "question": "A stock clerk must split 184 red and 322 blue tags into as many identical packs as possible, using every tag. How many tags go in each pack?",
         "options": [
           "11 tags",
           "4 tags",
@@ -533,12 +537,13 @@
         "correctAnswer": 0,
         "marks": 1,
         "type": "MCQ",
-        "explanation": "The pack count divides both 184 and 322. Since 4 and 7 are coprime, the greatest such count is 46. Each pack has four red and seven blue tags.",
+        "explanation": "Every pack must receive the same number of red tags as the other packs. The same is true for blue tags. So the number of packs must divide both 184 and 322 exactly. Write the totals as 4 × 46 and 7 × 46. The 4 and 7 have no common factor bigger than 1, so 46 is the greatest number of packs you can make. Split the red tags across 46 packs to get 4 red tags per pack. Split the blue tags the same way to get 7 blue tags per pack. Add them. 4 + 7 = 11 tags.",
         "source": "https://rrb.indianrailways.gov.in/-/image/1793016771817CEN_08_2026_StationMaster.pdf/examsDocuments",
         "solution": {
           "steps": [
-            "The pack count divides both 184 and 322. Since 4 and 7 are coprime, the greatest such count is 46.",
-            "Each pack has four red and seven blue tags."
+            "Every pack must receive the same number of red tags as the other packs. The same is true for blue tags. So the number of packs must divide both 184 and 322 exactly.",
+            "Write the totals as 4 × 46 and 7 × 46. The 4 and 7 have no common factor bigger than 1, so 46 is the greatest number of packs you can make.",
+            "Split the red tags across 46 packs to get 4 red tags per pack. Split the blue tags the same way to get 7 blue tags per pack. Add them. 4 + 7 = 11 tags."
           ]
         }
       },

@@ -9,6 +9,7 @@ import fs from 'node:fs';
 import { EXAMS } from '../src/config/exams.js';
 import { logicalReasoning, reserveDeductions } from './rrb-logical.mjs';
 import { stationMasterExpansion } from './rrb-expansion/index.mjs';
+import { copyeditStationMaster } from '../src/utils/rrbCopyedit.js';
 const banks={group2:[],rrb:[]};
 function modelQuestion(exam,model,index,section,topic,question,answer,others,explanation,extra={}) {
   const seed=model>3?`${model}:${question}`:question;
@@ -118,7 +119,8 @@ for(let set=0;set<4;set++){
   const labels=['Passenger counts','Parcel dispatches','Ticket sales','Platform entries','Freight wagons','Enquiry desk visits'];
   const table=`${labels[set]} in one observation period (counts)\nStation A: ${a}\nStation B: ${b}\nStation C: ${c}\nStation D: ${d}`;
   const extra={table,figure:{type:['bar','line','pie','bar'][set],labels:['A','B','C','D'],values:[a,b,c,d],title:labels[set]+' by station'}};
-  add('rrb',1,'Tabular comparison',`Data set ${set+1}: what is the total count?`,a+b+c+d,[a+b+c,a+b+c+d+20,a+b+c+d-20],`Add ${a} + ${b} + ${c} + ${d}.`,extra);
+  add('rrb',1,'Tabular comparison',`Data set ${set+1}: what is the total count?`,a+b+c+d,[a+b+c,a+b+c+d+20,a+b+c+d-20],
+    `The table gives one count per station, so read all four stations. Station A has ${a}, B has ${b}, C has ${c} and D has ${d}. Put the four groups together. ${a} + ${b} + ${c} + ${d} = ${a+b+c+d}.`,extra);
   add('rrb',1,'Average',`Data set ${set+1}: what is the mean count per station?`,(a+b+c+d)/4,[(a+b+c+d)/4+10,(a+b+c+d)/4-10,(a+b+c+d)/4+5],'Divide the total for four stations by four.',extra);
   add('rrb',1,'Ratio',`Data set ${set+1}: which expression equals the ratio of A to D?`,`${a}/${d}`,[`${d}/${a}`,`${b}/${d}`,`${a}/${c}`],'Use A as numerator and D as denominator.',extra);
   add('rrb',1,'Change',`Data set ${set+1}: B increases by 50%. What is its new count?`,b*1.5,[b*2,b*1.1,b*1.25],`The new count is ${b} × 1.5.`,extra);
@@ -134,11 +136,11 @@ for(const [q,a,o,why] of [
 ])add('rrb',1,'Venn diagrams',q,a,o,why,venn);
 const distribution={table:'Ticket counters observed in one hour:\nTickets sold per counter: 10 | 20 | 30 | 40\nNumber of counters:        2 |  3 |  4 |  1',figure:{type:'bar',labels:['10','20','30','40'],values:[2,3,4,1],title:'Frequency distribution: counters by tickets sold'}};
 for(const [q,a,o,why] of [
- ['How many counters were observed in the ticket distribution?',10,[4,9,100],'Total frequency = 2 + 3 + 4 + 1.'],
- ['What fraction of all tickets was sold by counters that sold at least the modal number?', '2/3',['1/2','1/3','3/4'],'The modal count is 30. The four counters at 30 and one at 40 sold 160 of the 240 tickets.'],
- ['How many tickets did all observed counters sell in total?',240,[100,200,260],'Weighted total = 10×2 + 20×3 + 30×4 + 40×1.'],
- ['What is the mean tickets sold per observed counter?',24,[25,20,30],'Divide the weighted total of 240 by 10 counters.'],
- ['Can the observed counters’ total revenue be determined from ticket counts alone?','No, ticket prices are required',['Yes, it is ₹240','Yes, it is ₹24','Yes, it is ₹100'],'Counts alone do not specify the prices paid and therefore do not determine revenue.']
+ ['How many counters were observed in the ticket distribution?',10,[4,9,100],'The bottom row tells us how many counters are in each group. The ticket numbers tell us how many tickets one counter in a group sold. To count counters, add the four numbers in the bottom row. 2 + 3 + 4 + 1 = 10 counters.'],
+ ['What fraction of all tickets was sold by counters that sold at least the modal number?', '2/3',['1/2','1/3','3/4'],'The mode is the ticket number that shows up at the most counters. Four counters sold 30 each, so 30 is the mode. Count that group and the group that sold 40 each. Together they sold 4 × 30 + 1 × 40 = 160 tickets. All groups sold 240 tickets, so the fraction is 160 ÷ 240 = 2/3.'],
+ ['How many tickets did all observed counters sell in total?',240,[100,200,260],'Imagine a pile for each group of counters. Two counters sold 10 each, so that pile has 2 × 10 = 20 tickets. The other groups sold 3 × 20 = 60, 4 × 30 = 120 and 1 × 40 = 40. Add the four piles. 20 + 60 + 120 + 40 = 240 tickets.'],
+ ['What is the mean tickets sold per observed counter?',24,[25,20,30],'Find the total number of counters by adding 2 + 3 + 4 + 1 = 10. Multiply each group’s number of counters by the tickets each sold, then add those ticket totals. 2 × 10 + 3 × 20 + 4 × 30 + 1 × 40 = 240 tickets. Sharing 240 tickets evenly among 10 counters gives 240 ÷ 10 = 24 per counter.'],
+ ['Can the observed counters’ total revenue be determined from ticket counts alone?','No, ticket prices are required',['Yes, it is ₹240','Yes, it is ₹24','Yes, it is ₹100'],'The table tells us there were 240 tickets sold. Think of a ticket sold for ₹10 versus a ticket sold for ₹20. The ticket count is the same, but the money collected is different. We need the prices people paid to work out the total money.']
 ])add('rrb',1,'Statistical distributions and sufficiency',q,a,o,why,distribution);
 rows('rrb',2,'Logical reasoning',`
 All signals are devices. Some devices are electronic. Which conclusion must follow?|All signals are devices|All signals are electronic|Some signals are electronic|No signal is electronic|Only the first statement is guaranteed; the overlap with electronic devices is unspecified.
@@ -325,8 +327,9 @@ for(const [exam,questions] of Object.entries(banks)){
    const extension=stationMasterExpansion();
    const challengeFile='public/exams/challenges/rrb.json';
    const priorChallenges=JSON.parse(fs.readFileSync(challengeFile,'utf8')).filter(item=>item.title!==extension.challenge.title);
-   challengeOutput=[challengeFile,[...priorChallenges,extension.challenge]];
-   papers=[...papers.filter(item=>item.full!==false),...extension.papers,...papers.filter(item=>item.full===false),...extension.drills];
+   challengeOutput=[challengeFile,[...priorChallenges.map(paper=>({...paper,questions:paper.questions.map(copyeditStationMaster)})),extension.challenge]];
+   const edited=papers.map(paper=>({...paper,questions:paper.questions.map(copyeditStationMaster)}));
+   papers=[...edited.filter(item=>item.full!==false),...extension.papers,...edited.filter(item=>item.full===false),...extension.drills];
    if(crossPaperRepeats([...papers,...challengeOutput[1]]).length)throw Error('Repeated question prompts across Station Master papers');
  }
  for(const candidate of papers) {

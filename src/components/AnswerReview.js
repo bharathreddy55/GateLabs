@@ -5,6 +5,7 @@ import { renderMath } from '../utils/documentLibraries.js';
 import { outcomeLabels as statuses } from '../utils/attemptInsights.js';
 import { renderExamTable, renderQuestionContext } from './QuestionView.js';
 import { loadReviewTopic, renderReviewTopic, reviewTopic } from './ReviewTopic.js';
+import { copyeditStationMaster } from '../utils/rrbCopyedit.js';
 
 const filters = [['all','All answers'],['wrong','Incorrect'],['skipped','Unanswered'],['correct','Correct']];
 const optionLetter = index => String.fromCharCode(65 + Number(index));
@@ -78,7 +79,7 @@ function renderSteps(steps, layout) {
 }
 
 function renderSolution(q, examId, battery, renderOption, solution) {
-  const {approach,steps,reason,tip,finalAnswer,shortcut,picture,rule,working} = solution;
+  const {approach,steps,reason,tip,finalAnswer,shortcut,picture,rule,working,method} = solution;
   if (!approach && !steps.length && !reason) return '<p class="review-note">A worked explanation is unavailable for this question.</p>';
   const isStationMaster = examId === 'rrb' || Boolean(battery);
   const layout = solutionLayout(q, examId);
@@ -94,7 +95,7 @@ function renderSolution(q, examId, battery, renderOption, solution) {
     ${picture
       ? `<div class="review-approach"><strong>${h(picture.title)}</strong><p>${h(picture.text)}</p></div>`
       : approach ? `<div class="review-approach"><strong>Approach</strong><p>${h(approach)}</p></div>` : ''}
-    ${rule ? `<div class="review-rule"><h5>Formula</h5>${renderFormula(rule)}</div>` : ''}
+    ${rule && !method ? `<div class="review-rule"><h5>Formula</h5>${renderFormula(rule)}</div>` : ''}
     ${working ? `<div class="review-working">${renderExamTable(working, 'Worked table')}</div>` : ''}
     ${renderSteps(steps, layout)}
     ${reason ? `<p class="review-reason">${h(reason)}</p>` : ''}
@@ -103,6 +104,10 @@ function renderSolution(q, examId, battery, renderOption, solution) {
     </div>` : ''}
     ${shortcut ? `<aside class="review-shortcut"><strong>Exam shortcut</strong><p>${h(shortcut.text)}</p>${renderFormula(shortcut)}</aside>` : ''}
     ${tip ? `<aside class="review-tip">${icon('info')}<div><strong>Watch for</strong><p>${h(tip)}</p></div></aside>` : ''}
+    ${method ? `<div class="review-rule review-method">
+      <h5>${h(method.heading)}</h5>
+      ${method.equation ? renderFormula(method.equation) : `<p>${h(method.text)}</p>`}
+    </div>` : ''}
   </section>`;
 }
 
@@ -119,6 +124,7 @@ export function mountAnswerReview(root, {
   responses, state = {}, bookmarks = [], toggleBookmark, toggleReviewMark, practise, renderContext = renderQuestionContext, renderOption, examId, battery
 }) {
   if (!root) return;
+  const promptFor = question => examId === 'rrb' ? copyeditStationMaster(question).question : question.question;
   const items = responses.map((question,index)=>({question,index}));
   const supportsMarks = Boolean(toggleReviewMark) || responses.some(question=>question.markedForReview===true);
   const groups = [...filters];
@@ -190,7 +196,7 @@ export function mountAnswerReview(root, {
         ${toggleReviewMark ? `<button type="button" class="ui-button review-mark-toggle" data-toggle-review-mark aria-pressed="${q.markedForReview===true}" ${savingMark?'disabled':''}>${q.markedForReview===true?'Unmark for review':'Mark for review'}</button>` : ''}
       </div>
       <div class="review-card-body">
-        <h3 class="review-question" tabindex="-1">${h(q.question)}</h3>
+        <h3 class="review-question" tabindex="-1">${h(promptFor(q))}</h3>
         ${renderContext(q)}
         ${renderAnswers(q,renderOption)}
         ${topic ? renderReviewTopic(topic, examId, solution) : ''}
@@ -218,12 +224,13 @@ export function mountAnswerReview(root, {
     palette.innerHTML = visible.map(({question,index})=>{
       const marked = question.markedForReview === true;
       const topic = mistakesOnly ? reviewTopic(question, examId) : null;
+      const prompt = topic ? promptFor(question) : '';
       const label = topic
-        ? `Question ${index+1}, ${topic.title}. ${question.question}`
+        ? `Question ${index+1}, ${topic.title}. ${prompt}`
         : `Question ${index+1}, ${statuses[question.status] ?? 'reviewed'}`;
       return `<button type="button" data-review-question="${index}" data-outcome="${h(question.status)}"${marked?' data-review-marked':''}
         aria-label="${h(label)}${marked?', marked for review':''}">${topic ? `<span>Question ${index+1}</span>
-          <strong>${h(topic.title)}</strong><span class="review-mistake-stem">${h(question.question)}</span>` : index+1}</button>`;
+          <strong>${h(topic.title)}</strong><span class="review-mistake-stem">${h(prompt)}</span>` : index+1}</button>`;
     }).join('');
     select(state.index,false);
   }

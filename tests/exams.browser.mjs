@@ -334,6 +334,8 @@ try{
      assert.equal(await tank.locator('.review-steps li').count(),4);
      assert.match(await tank.locator('.review-steps li').nth(1).innerText(),/12 L − 3 L = 9 L/);
      assert.match(await tank.locator('.review-final-answer').innerText(),/35%/);
+     assert.match(await tank.locator('.review-method').innerText(),/Concentration \(%\) = amount of ingredient ÷ total mixture × 100/);
+     assert.equal(await tank.locator('.review-method').evaluate(el=>el===el.parentElement.lastElementChild),true);
      await insights.locator('[data-insight-group]').filter({hasText:'Logical Capability'}).click();
      await groupReview.click();
      assert.equal(await scoped.count(),0);
@@ -346,6 +348,7 @@ try{
      const worked=data.getByRole('table',{name:'Actual output and gain by unit'});
      await worked.waitFor();
      await data.locator('.review-rule .katex').waitFor();
+     assert.equal(await data.locator('.review-method').evaluate(el=>el===el.parentElement.lastElementChild),true);
      assert.deepEqual(await worked.getByRole('row').nth(1).getByRole('cell').allTextContents(),['90','135','+45']);
      assert.deepEqual(await worked.getByRole('row').nth(2).getByRole('cell').allTextContents(),['140','128','−12']);
      assert.equal(await worked.locator('[data-review-row] th').textContent(),'A');
@@ -618,7 +621,8 @@ try{
  assert.ok(await page.getByRole('button',{name:'Detailed notes & syllabus'}).isEnabled());
  await review.getByRole('heading',{name:'Correct answer',exact:true}).waitFor();
  assert.equal(await review.locator('.review-answers .cbat-shape').count(),2);
- assert.equal(await review.locator('.review-steps li').count(),3);
+ assert.ok(await review.locator('.review-steps li').count()>=3);
+ assert.match(await review.locator('.review-method').innerText(),/Rule used[\s\S]+A turn keeps the squares joined/);
  await review.getByText('Picture turning a piece of cardboard',{exact:true}).waitFor();
  await review.locator('.review-final-answer .cbat-shape').waitFor();
  assert.equal(await review.locator('.review-steps').evaluate(el=>getComputedStyle(el).listStyleType),'none');

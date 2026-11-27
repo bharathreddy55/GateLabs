@@ -1,3 +1,5 @@
+import { rrbReviewMethod } from './rrbReviewMethod.js';
+
 const picture = (title, text) => ({title, text});
 
 const pictures = [
@@ -73,6 +75,14 @@ const plainWords = [
   [/\bdistinct permutations\b/gi, 'different orders'],
   [/\bfixed capacity\b/gi, 'a limit that stays the same'],
   [/\battainable\b/gi, 'possible'],
+  [/\bdetermine the correct value\b/gi, 'find the number'],
+  [/\bthe two numbers are coprime\b/gi, 'the two numbers share only 1 as a factor'],
+  [/\bround only at the end\b/gi, 'keep the full number until the last step, then round it'],
+  [/\bof one unit of cost\b/gi, 'of the cost of one batch'],
+  [/\bparity\b/gi, 'whether the number is even or odd'],
+  [/\bcompute\b/gi, 'work out'],
+  [/\brecompute\b/gi, 'work out again'],
+  [/\bsubstitute\b/gi, 'put the number in place of the letter'],
   [/\bpaternal grandmother\b/gi, 'father’s mother'],
   [/\bmaternal grandmother\b/gi, 'mother’s mother'],
   [/\bresidual\b/gi, 'gap between the actual and predicted values'],
@@ -81,7 +91,8 @@ const plainWords = [
 
 function plainText(value) {
   if (typeof value !== 'string') return value;
-  return plainWords.reduce((result, [pattern, words]) => result.replace(pattern, words), value);
+  const simple = plainWords.reduce((result, [pattern, words]) => result.replace(pattern, words), value);
+  return /^[A-Z]/.test(value) ? simple[0].toUpperCase() + simple.slice(1) : simple;
 }
 
 function plainStep(step) {
@@ -118,10 +129,23 @@ function plainReadingClue(question) {
       text:'Read this line beside the thought just before it. Ask whether it adds a reason, shows an example or changes what the reader can conclude.'} : null;
   }
   const phrase=question.question.match(/[“"]([^”"]+)[”"]/);
-  if (!phrase) return null;
-  const quote=sentences.find(line=>line.includes(phrase[1]));
-  return quote ? {title:'Find the words in the story',quote,
-    text:'Read the words in this line as part of the whole thought. Use how the passage talks about them to work out what they mean here.'} : null;
+  if (phrase) {
+    const quote=sentences.find(line=>line.includes(phrase[1]));
+    if (quote) return {title:'Find the words in the story',quote,
+      text:'Read the words in this line as part of the whole thought. Use how the passage talks about them to work out what they mean here.'};
+  }
+  // Only quote a line when several concrete words also appear in the authored
+  // reasoning. Leave the answer's own reasoning in place after the clue.
+  const stopWords = new Set(['about','actual','after','another','answer','author','because','before','choice','claim','could','evidence','example','first','instead','other','passage','result','second','sentence','shows','that','their','there','these','think','those','through','which','while','would']);
+  const words = text => new Set((text.toLowerCase().match(/\b[a-z]{5,}\b/g) ?? []).filter(word=>!stopWords.has(word)));
+  const evidence = words(typeof question.explanation === 'string' ? question.explanation : '');
+  let quote, best = 2;
+  for (const line of sentences) {
+    const score = [...words(line)].filter(word=>evidence.has(word)).length;
+    if (score > best) { quote=line;best=score; }
+  }
+  return quote ? {title:'Start with a clue from the passage',quote,
+    text:'Read this part and look for the detail that helps answer the question. Follow the next step to see how that detail supports the answer.'} : null;
 }
 
 const dataPictures = [
@@ -143,13 +167,12 @@ const logicPictures = [
   [/nested conditions|applying a stated policy|exception|contrapositive/i, 'Turn the rule into a little checklist', 'Write what starts the rule and what has to happen next. Check whether the question says the required result happened, or whether it rules that result out.']
 ];
 
-function guidedSteps(steps, focused) {
-  if (!focused) return steps.map(plainStep);
+function guidedSteps(steps) {
   return steps.flatMap(raw=>{
     if (typeof raw !== 'string') return [plainStep(raw)];
     // The original author sometimes put two deductions on one line.
     // Keep decimals, quote text and symbolic chains intact.
-    const parts=raw.split(/;\s+(?=[A-Za-z])|(?<![\dA-Z])\.\s+(?=[A-Z][a-z]{2,}\b)/);
+    const parts=raw.split(/;\s+(?=[A-Za-z])|(?<!\b(?:Dr|Mr|Ms|No|St))(?<!\b[A-Z])(?<=[.!?])\s+(?=[A-Z][a-z]{2,}\b)/);
     return parts.map((part,index)=>{
       const text=part.trim();
       if (!text) return null;
@@ -171,7 +194,7 @@ export function stationMasterBeginner(question, solution, battery) {
       cue && picture(cue[1], cue[2])) ??
     sectionPictures[question.section];
   const steps = solution.steps.length ? solution.steps : solution.reason ? [solution.reason] : [];
-  const workedSteps=guidedSteps(steps, data||logic);
+  const workedSteps=guidedSteps(steps);
   if (logic && question.passage && /reading/i.test(question.topic ?? '') && !workedSteps.some(step=>step.quote)) {
     const clue=plainReadingClue(question);
     if (clue) workedSteps.unshift(clue);
@@ -180,6 +203,7 @@ export function stationMasterBeginner(question, solution, battery) {
     ...solution,
     picture:introduction,
     steps:workedSteps,
+    method:rrbReviewMethod(question, solution, battery),
     reason:solution.steps.length ? plainText(solution.reason) : '',
     tip:plainText(solution.tip)
   };

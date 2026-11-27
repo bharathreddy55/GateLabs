@@ -5,6 +5,7 @@ import {explainAnswer} from '../src/utils/answerSolutions.js';
 import {parseExamText} from '../src/utils/parseExamText.js';
 import {buildCbatSet} from '../src/utils/cbat.js';
 import {stationMasterReviewTopic} from '../src/utils/stationMasterReviewTopics.js';
+import {copyeditStationMaster} from '../src/utils/rrbCopyedit.js';
 
 const rrbReview = {examId:'rrb'};
 
@@ -57,6 +58,9 @@ test('all published Station Master CBT items have a beginner introduction and a 
     const solution=explainAnswer(q,rrbReview);
     assert.ok(solution.picture?.title && solution.picture?.text,q.id);
     assert.ok(solution.steps.length > 0,q.id);
+    assert.ok(solution.method?.heading && (solution.method.text || solution.method.equation?.formula),q.id);
+    if (q.section === 'Basic Science and Mathematics') assert.notEqual(solution.method.heading,'Check your answer',q.id);
+    assert.equal(copyeditStationMaster(q),q,q.id);
     for (const step of solution.steps) {
       assert.ok(typeof step === 'string' ? step.trim() : step.text || step.formula,q.id);
       if (step.quote) assert.ok(q.passage?.includes(step.quote),q.id);
@@ -77,11 +81,24 @@ test('every published Station Master CBT mistake has a topic refresher',()=>{
   }
 });
 
+test('formula recaps follow the problem, even when the topic tag is broad',()=>{
+  const questions=JSON.parse(readFileSync('public/exams/rrb.json','utf8')).flatMap(paper=>paper.questions);
+  for (const [topic, pattern] of [
+    ['Comparing clock frequency with a fixed maximum',/larger count − smaller count/],
+    ['Rank in a combined list',/removals ahead \+ additions ahead/],
+    ['Derived units',/kg\/\(m·s²\)/]
+  ]) {
+    const question=questions.find(q=>q.topic===topic);
+    assert.match(explainAnswer(question,rrbReview).method.text,pattern);
+  }
+});
+
 test('actual output walkthrough calculates every row from the targets and marks only the biggest gain',()=>{
   const papers=JSON.parse(readFileSync('public/exams/rrb.json','utf8'));
   const question=papers.flatMap(paper=>paper.questions).find(q=>q.id==='rrb-model3-31');
   const solution=explainAnswer(question,rrbReview);
   assert.match(solution.rule.formula,/target × percent attained ÷ 100/);
+  assert.deepEqual(solution.method.equation,solution.rule);
   assert.deepEqual(solution.working.headers,['Unit','Period 1 actual','Period 2 actual','Gain']);
   assert.deepEqual(solution.working.rows,[['A','90','135','+45'],['B','140','128','−12'],['C','90','110','+20'],['D','80','120','+40']]);
   assert.deepEqual(solution.working.highlight,[0]);

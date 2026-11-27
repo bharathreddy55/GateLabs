@@ -5,6 +5,7 @@ import { reasoning } from './logic.mjs';
 import { mental } from './mental.mjs';
 import { drillReading, reading } from './reading.mjs';
 import { science } from './science.mjs';
+import { copyeditStationMaster } from '../../src/utils/rrbCopyedit.js';
 
 const note='Original questions modelled on overlapping skills in the 2025 NTPC Graduate CBT papers and the CEN 08/2026 Station Master syllabus.';
 const format='Uses the indicative 30/30/20/20 Station Master distribution, with 100 questions in 120 minutes.';
@@ -34,13 +35,13 @@ function assemble(k,kind,number,review) {
   const questions=blocks.flatMap((rows,section)=>(full?rows:rows.slice(0,weights[section])).map((row,i)=>{
     const [topic,stem,key,wrong,explanation,{proves,...context}={}]=row;
     const [sectionName]=EXAMS.rrb.sections[section];
-    const question={
+    const question=copyeditStationMaster({
       id:`rrb-exp-${kind}-${number}-${section+1}-${i+1}`,
       section:sectionName, subject:sectionName, topic, question:stem,
       options:[key,...wrong].map(String), correctAnswer:0, marks:1, type:'MCQ',
       explanation, source:kind==='challenge'?EXAMS.rrb.source:'GateLabs original model question; '+EXAMS.rrb.source,
       ...context
-    };
+    });
     review.push({question,proves,editorialKey:String(key)});
     return question;
   }));
