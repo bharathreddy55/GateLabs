@@ -13,21 +13,9 @@ For 3 or 9, use the digit sum because 10 leaves remainder 1 under both divisors.
 
 **When to use it.** Use this in **Number Systems / Divisibility and Missing Digits** questions when the question gives a divisor such as 4, 8, 9 or 11 and asks which number or missing digit makes the whole number divisible.
 
-### Method B · Factor first when counting divisors
+**Key rule.** For 3 or 9 use the digit sum. For 4 use the last two digits, for 8 the last three and for 11 the difference of alternate digit sums.
 
-Write the number as a product of prime powers. Each exponent is an independent choice from 0 through that prime’s maximum. For even divisors require the exponent on 2 to be positive. For perfect-square divisors, every chosen exponent must be even.
-
-**When to use it.** Use this in **Number Systems / Counting Divisors** questions when asked how many divisors a number has, especially with a restriction such as even divisors or perfect-square divisors.
-
-### Method C · Use a cycle or a reduced denominator
-
-For the units digit of a power, multiply by the base repeatedly and keep the final digit. Reduce the exponent by the cycle length. For a decimal, reduce the fraction first. A terminating expansion is possible exactly when the reduced denominator divides some power of 10, which means only powers of 2 and 5 occur.
-
-**When to use it.** Use this in **Number Systems / Units Digits and Terminating Decimals** questions when a large power’s last digit is asked for, or a fraction must be classified as terminating or recurring.
-
-## Question models and worked examples
-
-### Missing digit under two conditions
+#### Type 1 · Missing digit under two conditions
 
 **Question.** Find the missing digit x in 74x2 so the number is divisible by both 4 and 9.
 
@@ -42,7 +30,38 @@ For the units digit of a power, multiply by the base repeatedly and keep the fin
 
 **Answer:** x = 5.
 
-### Remainder of powers
+### Method B · Factor first when counting divisors
+
+Write the number as a product of prime powers. Each exponent is an independent choice from 0 through that prime’s maximum. For even divisors require the exponent on 2 to be positive. For perfect-square divisors, every chosen exponent must be even.
+
+**When to use it.** Use this in **Number Systems / Counting Divisors** questions when asked how many divisors a number has, especially with a restriction such as even divisors or perfect-square divisors.
+
+**Key rule.** If n = pᵃqᵇ…, the number of positive divisors is (a + 1)(b + 1)… before applying restrictions.
+
+#### Type 1 · Restricted divisor count
+
+**Question.** How many positive even divisors does 360 have?
+
+**Picture it.** Think of 360 as a box of prime building blocks. A divisor is a smaller pile made from those blocks. Any pile with a block of 2 is even.
+
+1. **Prime-factor the number.** Write 360 = 8 × 45 = 2³ × 3² × 5. Every positive divisor has the form 2ᵃ × 3ᵇ × 5ᶜ, with each exponent at most the corresponding exponent in 360.\
+   `360 = 2³ × 3² × 5`
+2. **Require at least one factor of 2.** An even divisor needs a = 1, 2 or 3. That gives three choices. Choosing a = 0 would leave only odd prime factors.\
+   `a ∈ {1, 2, 3}`
+3. **Count the other choices.** The exponent of 3 can be 0, 1 or 2, and the exponent of 5 can be 0 or 1. A zero exponent leaves that prime out. These choices are independent, and each exponent combination gives a different divisor.\
+   `3 × 3 × 2 = 18`
+
+**Answer:** There are 3 × 3 × 2 = 18 positive even divisors.
+
+### Method C · Use a cycle or a reduced denominator
+
+For the units digit of a power, multiply by the base repeatedly and keep the final digit. Reduce the exponent by the cycle length. For a decimal, reduce the fraction first. A terminating expansion is possible exactly when the reduced denominator divides some power of 10, which means only powers of 2 and 5 occur.
+
+**When to use it.** Use this in **Number Systems / Units Digits and Terminating Decimals** questions when a large power’s last digit is asked for, or a fraction must be classified as terminating or recurring.
+
+**Key rule.** Use an exponent’s remainder modulo the last-digit cycle length. A reduced fraction terminates if its denominator has only prime factors 2 and 5.
+
+#### Type 1 · Remainder of powers
 
 **Question.** Find the remainder of 7⁸³+3⁴² divided by 10.
 
@@ -59,22 +78,7 @@ For the units digit of a power, multiply by the base repeatedly and keep the fin
 
 **Answer:** 2.
 
-### Restricted divisor count
-
-**Question.** How many positive even divisors does 360 have?
-
-**Picture it.** Think of 360 as a box of prime building blocks. A divisor is a smaller pile made from those blocks. Any pile with a block of 2 is even.
-
-1. **Prime-factor the number.** Write 360 = 8 × 45 = 2³ × 3² × 5. Every positive divisor has the form 2ᵃ × 3ᵇ × 5ᶜ, with each exponent at most the corresponding exponent in 360.\
-   `360 = 2³ × 3² × 5`
-2. **Require at least one factor of 2.** An even divisor needs a = 1, 2 or 3. That gives three choices. Choosing a = 0 would leave only odd prime factors.\
-   `a ∈ {1, 2, 3}`
-3. **Count the other choices.** The exponent of 3 can be 0, 1 or 2, and the exponent of 5 can be 0 or 1. A zero exponent leaves that prime out. These choices are independent, and each exponent combination gives a different divisor.\
-   `3 × 3 × 2 = 18`
-
-**Answer:** There are 3 × 3 × 2 = 18 positive even divisors.
-
-### Classifying a fraction
+#### Type 2 · Classifying a fraction
 
 **Question.** Does 42/168 terminate?
 

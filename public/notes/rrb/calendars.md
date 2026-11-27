@@ -13,21 +13,9 @@ Find end date minus start date and reduce modulo 7. Move forward by the remainin
 
 **When to use it.** Use this in **Calendars / Weekdays Within One Month** questions when the weekday of one date is known and the other date is in the same month.
 
-### Method B · Walk over month boundaries
+**Key rule.** Subtract the date numbers within a month, then use the remainder after division by seven to shift the known weekday.
 
-Use actual month lengths or name the boundary dates when the interval is short. February 28 → February 29 → March 1 is two shifts in a leap year.
-
-**When to use it.** Use this in **Calendars / Crossing Month Boundaries** questions when two dates are in different months and a short interval depends on the exact length of each month.
-
-### Method C · Handle century years before longer spans
-
-Apply the 400-year exception to a century. For longer date intervals, break the span into full years plus remaining days and count the leap days actually crossed.
-
-**When to use it.** Use this in **Calendars / Leap Years and Long Spans** questions when dates are years apart or the interval crosses February in a century year.
-
-## Question models and worked examples
-
-### Forward within a month
+#### Type 1 · Forward within a month
 
 **Question.** If 3 August is Tuesday, what weekday is 25 August?
 
@@ -42,7 +30,15 @@ Apply the 400-year exception to a century. For longer date intervals, break the 
 
 **Answer:** Wednesday.
 
-### Leap-year transition
+### Method B · Walk over month boundaries
+
+Use actual month lengths or name the boundary dates when the interval is short. February 28 → February 29 → March 1 is two shifts in a leap year.
+
+**When to use it.** Use this in **Calendars / Crossing Month Boundaries** questions when two dates are in different months and a short interval depends on the exact length of each month.
+
+**Key rule.** Across a month boundary, count days using each month’s actual length and include 29 February only in a leap year.
+
+#### Type 1 · Leap-year transition
 
 **Question.** If 28 February 2024 was Wednesday, what day was 1 March?
 
@@ -57,7 +53,15 @@ Apply the 400-year exception to a century. For longer date intervals, break the 
 
 **Answer:** Friday.
 
-### Century classification
+### Method C · Handle century years before longer spans
+
+Apply the 400-year exception to a century. For longer date intervals, break the span into full years plus remaining days and count the leap days actually crossed.
+
+**When to use it.** Use this in **Calendars / Leap Years and Long Spans** questions when dates are years apart or the interval crosses February in a century year.
+
+**Key rule.** A century year is a leap year only if divisible by 400. Across years, count the leap days actually crossed.
+
+#### Type 1 · Century classification
 
 **Question.** Which of 1900, 2000 and 2100 are leap years in the Gregorian calendar?
 
@@ -73,7 +77,7 @@ Apply the 400-year exception to a century. For longer date intervals, break the 
 
 **Answer:** 2000 only.
 
-### Same date following year
+#### Type 2 · Same date following year
 
 **Question.** If 15 March 2023 was Wednesday, what day was 15 March 2024?
 

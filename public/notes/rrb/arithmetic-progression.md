@@ -13,21 +13,9 @@ Subtract positions and values separately. Divide the value change by the number 
 
 **When to use it.** Use this in **Arithmetic Progressions / Finding the Common Difference** questions when you know the values at two positions in an equally spaced sequence and need its step or first term.
 
-### Method B · Translate a capacity to a sum
+**Key rule.** Common difference d = (aⱼ − aᵢ) ÷ (j − i). Then use aₙ = a₁ + (n − 1)d.
 
-Use Sₙ = n[2a+(n−1)d]/2. Solve for an admissible positive whole n when the problem is a count. Check by computing the last row and recalculating the sum.
-
-**When to use it.** Use this in **Arithmetic Progressions / Row Totals** questions when seats, objects or another count increase by a fixed amount per row and a total capacity is given or requested.
-
-### Method C · Treat a bound as an inequality
-
-For the first term strictly below a threshold, write a+(n−1)d < threshold. Dividing by a negative d reverses the inequality. Find the first admissible index and test its predecessor.
-
-**When to use it.** Use this in **Arithmetic Progressions / Threshold Terms** questions when asked for the first sequence term that crosses a limit or the last one that stays within it.
-
-## Question models and worked examples
-
-### Difference from two positions
+#### Type 1 · Difference from two positions
 
 **Question.** The 5th term is 23 and the 11th term is 47. Find the first and 20th.
 
@@ -42,7 +30,15 @@ For the first term strictly below a threshold, write a+(n−1)d < threshold. Div
 
 **Answer:** 7 and 83.
 
-### Sum of bounded multiples
+### Method B · Translate a capacity to a sum
+
+Use Sₙ = n[2a+(n−1)d]/2. Solve for an admissible positive whole n when the problem is a count. Check by computing the last row and recalculating the sum.
+
+**When to use it.** Use this in **Arithmetic Progressions / Row Totals** questions when seats, objects or another count increase by a fixed amount per row and a total capacity is given or requested.
+
+**Key rule.** Sum of n terms = n × (first term + last term) ÷ 2.
+
+#### Type 1 · Sum of bounded multiples
 
 **Question.** Sum all multiples of 7 between 30 and 100 inclusive.
 
@@ -57,7 +53,7 @@ For the first term strictly below a threshold, write a+(n−1)d < threshold. Div
 
 **Answer:** 665.
 
-### Number of terms from a sum
+#### Type 2 · Number of terms from a sum
 
 **Question.** Rows have 12, 15, 18, … seats, totalling 255. How many rows?
 
@@ -72,7 +68,15 @@ For the first term strictly below a threshold, write a+(n−1)d < threshold. Div
 
 **Answer:** 10 rows.
 
-### First value below a cutoff
+### Method C · Treat a bound as an inequality
+
+For the first term strictly below a threshold, write a+(n−1)d < threshold. Dividing by a negative d reverses the inequality. Find the first admissible index and test its predecessor.
+
+**When to use it.** Use this in **Arithmetic Progressions / Threshold Terms** questions when asked for the first sequence term that crosses a limit or the last one that stays within it.
+
+**Key rule.** Apply the bound to a₁ + (n − 1)d. Reverse the inequality when dividing by a negative d and check the nearest eligible indices.
+
+#### Type 1 · First value below a cutoff
 
 **Question.** Readings by check are 92, 85, 78, … cm. When is the level first below 40 cm?
 

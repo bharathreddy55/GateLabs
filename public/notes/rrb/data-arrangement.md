@@ -13,21 +13,9 @@ Write the fixed slots first and mark full groups. Turn an immediate pair into a 
 
 **When to use it.** Use this in **Data Arrangement / Fixed Positions and Blocks** questions when clues fix a slot or require two entries to occupy consecutive slots.
 
-### Method B · Use a capacity table for grouping
+**Key rule.** Place fixed entries first and treat immediate neighbours as one ordered block.
 
-Write total positions and used positions beside each group. A group with one free position cannot take a linked pair. Place the pair where it fits, then allocate leftover members.
-
-**When to use it.** Use this in **Data Arrangement / Group Capacity** questions when people or items must be split between groups of fixed sizes and some must stay together.
-
-### Method C · Branch on a requested placement
-
-Assume the proposed slot and run each clue. If every continuation violates a rule it is impossible. For “must be true,” look for a second valid layout where the claimed position changes.
-
-**When to use it.** Use this in **Data Arrangement / Possible and Forced Placements** questions when asked whether a candidate can fit in a position or must appear there in every valid arrangement.
-
-## Question models and worked examples
-
-### Assign by elimination
+#### Type 1 · Assign by elimination
 
 **Question.** Four deliveries A, B, C and D use slots 1–4, one each. C is at 4. B is immediately after A. D precedes A. Find the order.
 
@@ -39,7 +27,15 @@ Assume the proposed slot and run each clue. If every continuation violates a rul
 
 **Answer:** D, A, B, C.
 
-### Count per group
+### Method B · Use a capacity table for grouping
+
+Write total positions and used positions beside each group. A group with one free position cannot take a linked pair. Place the pair where it fits, then allocate leftover members.
+
+**When to use it.** Use this in **Data Arrangement / Group Capacity** questions when people or items must be split between groups of fixed sizes and some must stay together.
+
+**Key rule.** Free slots = capacity − slots already assigned. A linked group can go only where everyone in it fits.
+
+#### Type 1 · Count per group
 
 **Question.** Exactly two of A, B, C, D and E go to Morning and three to Evening. C is in Evening, E is in Morning, A and B are in the same shift. Who else is in Morning?
 
@@ -51,7 +47,15 @@ Assume the proposed slot and run each clue. If every continuation violates a rul
 
 **Answer:** D.
 
-### Find what could be true
+### Method C · Branch on a requested placement
+
+Assume the proposed slot and run each clue. If every continuation violates a rule it is impossible. For “must be true,” look for a second valid layout where the claimed position changes.
+
+**When to use it.** Use this in **Data Arrangement / Possible and Forced Placements** questions when asked whether a candidate can fit in a position or must appear there in every valid arrangement.
+
+**Key rule.** For ‘could’, find one complete valid layout. For ‘must’, try to build a complete layout where the claim fails.
+
+#### Type 1 · Find what could be true
 
 **Question.** Place A, B, C, D in slots 1–4. A precedes C and B is immediately before D. Could C occupy slot 3?
 
@@ -63,7 +67,7 @@ Assume the proposed slot and run each clue. If every continuation violates a rul
 
 **Answer:** No.
 
-### Fixed fact from multiple layouts
+#### Type 2 · Fixed fact from multiple layouts
 
 **Question.** Four events P, Q, R and S use consecutive slots. Q is last. P is before R. Is position 2 determined?
 

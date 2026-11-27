@@ -13,21 +13,9 @@ Write east or right as positive and the opposite as negative. Add signed segment
 
 **When to use it.** Use this in **Velocity and Motion / Distance and Displacement** questions when successive moves go in opposite directions and you need the final position, displacement or total distance.
 
-### Method B · Subtract the observer’s velocity
+**Key rule.** Displacement = sum of signed position changes. Distance = sum of their magnitudes.
 
-In “B relative to A,” take vB − vA. Check by imagining A stationary after subtracting vA from both objects. This also works for objects travelling in opposite directions.
-
-**When to use it.** Use this in **Relative Velocity / Moving Observers** questions when asked for one object’s motion as seen by another moving person or vehicle.
-
-### Method C · Use a velocity–time graph or constant acceleration
-
-A graph’s signed area gives displacement. Sum magnitudes for distance when the sign switches. At constant acceleration, the mean of initial and final velocities gives signed displacement when multiplied by time.
-
-**When to use it.** Use this in **Velocity and Motion / Graphs and Constant Acceleration** questions when a velocity–time graph or constant acceleration is given and you need distance or displacement over a time interval.
-
-## Question models and worked examples
-
-### Average speed and velocity
+#### Type 1 · Average speed and velocity
 
 **Question.** Run 80 m east then 50 m west in 26 s. Find the average speed and velocity.
 
@@ -43,7 +31,15 @@ A graph’s signed area gives displacement. Sum magnitudes for distance when the
 
 **Answer:** 5 m/s speed and 15/13 m/s east velocity.
 
-### Signed relative velocity
+### Method B · Subtract the observer’s velocity
+
+In “B relative to A,” take vB − vA. Check by imagining A stationary after subtracting vA from both objects. This also works for objects travelling in opposite directions.
+
+**When to use it.** Use this in **Relative Velocity / Moving Observers** questions when asked for one object’s motion as seen by another moving person or vehicle.
+
+**Key rule.** Velocity of B relative to A = vB − vA, using a single sign convention.
+
+#### Type 1 · Signed relative velocity
 
 **Question.** A travels east at 18 m/s and B west at 12 m/s. What is B’s velocity relative to A?
 
@@ -58,7 +54,15 @@ A graph’s signed area gives displacement. Sum magnitudes for distance when the
 
 **Answer:** 30 m/s west.
 
-### Constant braking
+### Method C · Use a velocity–time graph or constant acceleration
+
+A graph’s signed area gives displacement. Sum magnitudes for distance when the sign switches. At constant acceleration, the mean of initial and final velocities gives signed displacement when multiplied by time.
+
+**When to use it.** Use this in **Velocity and Motion / Graphs and Constant Acceleration** questions when a velocity–time graph or constant acceleration is given and you need distance or displacement over a time interval.
+
+**Key rule.** Signed area under a velocity–time graph gives displacement. With constant acceleration, displacement = (u + v)t ÷ 2.
+
+#### Type 1 · Constant braking
 
 **Question.** A vehicle slows uniformly from 20 m/s to rest in 5 s. Find acceleration and distance.
 
@@ -73,7 +77,7 @@ A graph’s signed area gives displacement. Sum magnitudes for distance when the
 
 **Answer:** −4 m/s² and 50 m.
 
-### Signed area of a velocity graph
+#### Type 2 · Signed area of a velocity graph
 
 **Question.** An object moves at +4 m/s for 3 s and then −2 m/s for 5 s. Find displacement and distance.
 

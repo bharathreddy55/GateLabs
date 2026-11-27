@@ -13,21 +13,32 @@ When only a percentage change is asked, start at 100. For +25% then −20%, that
 
 **When to use it.** Use this in **Percentages / Successive Change** questions when rises and falls act one after the other and you only need the overall percentage change.
 
+**Key rule.** Use 100 as the starting value for a percent-only problem. Multiply by 1 + r/100 for a rise or 1 − r/100 for a fall.
+
+#### Type 1 · Successive changes
+
+**Question.** Usage rises 25% then falls 20%. Find the net change.
+
+**Picture it.** Start with 100 counters. The first change leaves 125 counters. When you remove 20%, take that share out of the new pile.
+
+1. **Start with a base of 100.** Only the relative change matters. After rising 25%, the quantity becomes 100 × 1.25 = 125.\
+   `100 × 1.25 = 125`
+2. **Use the new base for the fall.** 20% of 125 is 25. Subtract it to get 125 − 25 = 100.\
+   `125 × 0.80 = 100`
+3. **Compare to the original.** The final amount equals the original. Equivalently, the combined multiplier is 1.25 × 0.80 = 1.\
+   `(100 − 100) ÷ 100 × 100% = 0%`
+
+**Answer:** 0%.
+
 ### Method B · Undo with division
 
 When the final amount is given, divide by the multiplier to recover the base. Subtracting the stated percentage of the new amount uses the wrong base.
 
 **When to use it.** Use this in **Percentages / Reverse Percentage** questions when the question gives the value after a rise or fall and asks for the original value.
 
-### Method C · Convert a friendly percentage to a fraction
+**Key rule.** Original amount = final amount ÷ the multiplier used to change it.
 
-12.5% is 1/8, so an increase multiplies by 9/8. Under fixed spend the inverse factor is 8/9. Fractions avoid early rounding on closely spaced options.
-
-**When to use it.** Use this in **Percentages / Fraction Shortcuts** questions when the rate is a familiar fraction such as 12.5%, or a price changes while total spending stays fixed.
-
-## Question models and worked examples
-
-### Reverse percentage
+#### Type 1 · Reverse percentage
 
 **Question.** After an 18% increase daily output is 354 units. What was it before?
 
@@ -42,20 +53,30 @@ When the final amount is given, divide by the multiplier to recover the base. Su
 
 **Answer:** 300 units.
 
-### Successive changes
+### Method C · Convert a friendly percentage to a fraction
 
-**Question.** Usage rises 25% then falls 20%. Find the net change.
+12.5% is 1/8, so an increase multiplies by 9/8. Under fixed spend the inverse factor is 8/9. Fractions avoid early rounding on closely spaced options.
 
-**Picture it.** Start with 100 counters. The first change leaves 125 counters. When you remove 20%, take that share out of the new pile.
+**When to use it.** Use this in **Percentages / Fraction Shortcuts** questions when the rate is a familiar fraction such as 12.5%, or a price changes while total spending stays fixed.
 
-1. **Start with a base of 100.** Only the relative change matters. After rising 25%, the quantity becomes 100 × 1.25 = 125.\
-   `100 × 1.25 = 125`
-2. **Use the new base for the fall.** 20% of 125 is 25. Subtract it to get 125 − 25 = 100.\
-   `125 × 0.80 = 100`
-3. **Compare to the original.** The final amount equals the original. Equivalently, the combined multiplier is 1.25 × 0.80 = 1.\
-   `(100 − 100) ÷ 100 × 100% = 0%`
+**Key rule.** A 12.5% rise is a factor of 9/8. At a fixed budget the affordable quantity changes by the inverse factor, 8/9.
 
-**Answer:** 0%.
+#### Type 1 · Fixed budget
+
+**Question.** Price rises 12.5%. Find the percent reduction in quantity affordable under the same budget, allowing fractional quantities.
+
+**Picture it.** Think of spending the same pocket money at a shop. When each item costs more, the old money buys fewer items. We want to know how many fewer.
+
+1. **Find the new price multiplier.** The increase is 12.5% = 1/8, so one item costs 9/8 of its old price.\
+   `12.5% = 1/8 ⇒ price factor 9/8`
+2. **Use the fixed budget.** Quantity = budget ÷ price. When price multiplies by 9/8, affordable quantity multiplies by its reciprocal, 8/9.\
+   `quantity factor = 1 ÷ (9/8) = 8/9`
+3. **Turn the shortfall into a percentage.** The loss in quantity is 1 − 8/9 = 1/9 of the original, or 11⅑%.\
+   `(1 − 8/9) × 100% = 11⅑%`
+
+**Answer:** 11⅑% fewer.
+
+## More worked problems
 
 ### Percentage points versus percent
 
@@ -71,21 +92,6 @@ When the final amount is given, divide by the multiplier to recover the base. Su
    `1/4 × 100% = 25%`
 
 **Answer:** Up 1 percentage point, or 25% relative to the old rate.
-
-### Fixed budget
-
-**Question.** Price rises 12.5%. Find the percent reduction in quantity affordable under the same budget, allowing fractional quantities.
-
-**Picture it.** Think of spending the same pocket money at a shop. When each item costs more, the old money buys fewer items. We want to know how many fewer.
-
-1. **Find the new price multiplier.** The increase is 12.5% = 1/8, so one item costs 9/8 of its old price.\
-   `12.5% = 1/8 ⇒ price factor 9/8`
-2. **Use the fixed budget.** Quantity = budget ÷ price. When price multiplies by 9/8, affordable quantity multiplies by its reciprocal, 8/9.\
-   `quantity factor = 1 ÷ (9/8) = 8/9`
-3. **Turn the shortfall into a percentage.** The loss in quantity is 1 − 8/9 = 1/9 of the original, or 11⅑%.\
-   `(1 − 8/9) × 100% = 11⅑%`
-
-**Answer:** 11⅑% fewer.
 
 ## Quick revision sheet
 

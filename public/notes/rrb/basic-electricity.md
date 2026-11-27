@@ -13,21 +13,9 @@ Add series resistances directly. In parallel add their reciprocals and invert. T
 
 **When to use it.** Use this in **Electricity / Series and Parallel Resistance** questions when the question asks for equivalent resistance or total current and the resistor groups share a path or the same two connection points.
 
-### Method B · Work back through a mixed network
+**Key rule.** Series resistances add. In parallel, add their reciprocals and invert. Use V = IR for the resulting resistor or each branch.
 
-Reduce the parallel pair, add the remaining series resistance and find loop current. Recover voltage across the reduced pair. Apply that shared voltage separately to the requested branch.
-
-**When to use it.** Use this in **Electricity / Mixed Circuits** questions when series and parallel parts appear together and the question asks for the current or voltage of a particular branch.
-
-### Method C · Find billable energy
-
-Convert watts to kW and multiply by all operating hours. If tariff is given, multiply the result in kWh by price per kWh after accounting for any specified fixed charges.
-
-**When to use it.** Use this in **Electricity / Energy Consumption and Tariffs** questions when appliance wattage and running time are given and you need energy in kWh or the cost.
-
-## Question models and worked examples
-
-### Series voltage divider
+#### Type 1 · Series voltage divider
 
 **Question.** A 6 Ω and a 3 Ω resistor are in series across 18 V. Find the drop across 6 Ω.
 
@@ -42,7 +30,7 @@ Convert watts to kW and multiply by all operating hours. If tariff is given, mul
 
 **Answer:** 12 V.
 
-### Parallel branches
+#### Type 2 · Parallel branches
 
 **Question.** A 6 Ω and a 3 Ω resistor are in parallel across 12 V. Find total current and resistance.
 
@@ -57,7 +45,15 @@ Convert watts to kW and multiply by all operating hours. If tariff is given, mul
 
 **Answer:** 6 A and 2 Ω.
 
-### Mixed network
+### Method B · Work back through a mixed network
+
+Reduce the parallel pair, add the remaining series resistance and find loop current. Recover voltage across the reduced pair. Apply that shared voltage separately to the requested branch.
+
+**When to use it.** Use this in **Electricity / Mixed Circuits** questions when series and parallel parts appear together and the question asks for the current or voltage of a particular branch.
+
+**Key rule.** Reduce the network, find the total current, then work back to the voltage across the parallel group and current in each branch.
+
+#### Type 1 · Mixed network
 
 **Question.** A 4 Ω resistor is in series with two parallel 6 Ω resistors across 14 V. Find current in one 6 Ω branch.
 
@@ -73,7 +69,15 @@ Convert watts to kW and multiply by all operating hours. If tariff is given, mul
 
 **Answer:** 1 A in each branch.
 
-### Power and billing units
+### Method C · Find billable energy
+
+Convert watts to kW and multiply by all operating hours. If tariff is given, multiply the result in kWh by price per kWh after accounting for any specified fixed charges.
+
+**When to use it.** Use this in **Electricity / Energy Consumption and Tariffs** questions when appliance wattage and running time are given and you need energy in kWh or the cost.
+
+**Key rule.** Energy in kWh = power in kW × time in hours. Energy charge = kWh × tariff per kWh.
+
+#### Type 1 · Power and billing units
 
 **Question.** A 500 W fan runs 4 hours daily for 6 days. How many units of electrical energy does it use if one unit is 1 kWh?
 

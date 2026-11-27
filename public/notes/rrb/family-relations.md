@@ -13,21 +13,9 @@ Replace “my” with the speaker’s name. Follow the chain one relationship at
 
 **When to use it.** Use this in **Family Relations / Pointing and Introductions** questions when a person describes someone with a phrase such as “the daughter of my mother’s only son”.
 
-### Method B · Decode relation pairs separately
+**Key rule.** Start with the speaker, replace pronouns with names and follow one relationship at a time.
 
-For P × Q + R, write one sentence for P × Q and a second for Q + R. Join the two facts at Q, then read from the viewpoint requested. These operators encode relationships, not arithmetic.
-
-**When to use it.** Use this in **Family Relations / Coded Relationships** questions when symbols such as + and × stand for family links and the problem asks how two names are related.
-
-### Method C · Track gender and branch separately
-
-“A brother of U” tells you the named brother’s gender. U remains unspecified. If the parent branch is known but the sibling’s gender is unknown, give both aunt and uncle options when appropriate.
-
-**When to use it.** Use this in **Family Relations / Missing Gender or Family Branch** questions when you can infer the generation or side of the family but the clues may leave the exact relation open.
-
-## Question models and worked examples
-
-### Pointing with a unique child
+#### Type 1 · Pointing with a unique child
 
 **Question.** Dev says of a woman, “She is the only daughter of my mother’s only son.” Dev is male. How is she related to Dev?
 
@@ -39,7 +27,15 @@ For P × Q + R, write one sentence for P × Q and a second for Q + R. Join the t
 
 **Answer:** His daughter.
 
-### Coded relation chain
+### Method B · Decode relation pairs separately
+
+For P × Q + R, write one sentence for P × Q and a second for Q + R. Join the two facts at Q, then read from the viewpoint requested. These operators encode relationships, not arithmetic.
+
+**When to use it.** Use this in **Family Relations / Coded Relationships** questions when symbols such as + and × stand for family links and the problem asks how two names are related.
+
+**Key rule.** Read each relationship separately and join the clues at the shared person. Read the final relationship in the direction asked.
+
+#### Type 1 · Coded relation chain
 
 **Question.** A + B means A is B’s mother. A × B means A is B’s brother. What is P to R in P × Q + R?
 
@@ -51,19 +47,7 @@ For P × Q + R, write one sentence for P × Q and a second for Q + R. Join the t
 
 **Answer:** P is R’s maternal uncle.
 
-### Unknown gender
-
-**Question.** A is B’s parent. C is A’s sibling. What can be said about C’s relation to B?
-
-**Picture it.** A is one step above B on the family tree. C stands beside A as a sibling. This tells you the family link while leaving the exact label open.
-
-1. **Locate A first.** A is a parent of B, placing A one generation above B.
-2. **Move sideways to C.** C and A are siblings, so C is the sibling of B’s parent.
-3. **State exactly what is known.** The words “sibling” and “parent” leave gender unspecified. C can be B’s aunt or uncle.
-
-**Answer:** C is a sibling of B’s parent, either aunt or uncle.
-
-### Reverse perspective
+#### Type 2 · Reverse perspective
 
 **Question.** S is the daughter of T. T is the brother of U. What is U’s relation to S?
 
@@ -74,6 +58,26 @@ For P × Q + R, write one sentence for P × Q and a second for Q + R. Join the t
 3. **Keep U’s gender open.** T being a brother establishes T’s gender alone. U could be S’s paternal aunt or uncle.
 
 **Answer:** A paternal aunt or uncle.
+
+### Method C · Track gender and branch separately
+
+“A brother of U” tells you the named brother’s gender. U remains unspecified. If the parent branch is known but the sibling’s gender is unknown, give both aunt and uncle options when appropriate.
+
+**When to use it.** Use this in **Family Relations / Missing Gender or Family Branch** questions when you can infer the generation or side of the family but the clues may leave the exact relation open.
+
+**Key rule.** Track generation, side of the family and gender separately. Use gender only when a clue establishes it.
+
+#### Type 1 · Unknown gender
+
+**Question.** A is B’s parent. C is A’s sibling. What can be said about C’s relation to B?
+
+**Picture it.** A is one step above B on the family tree. C stands beside A as a sibling. This tells you the family link while leaving the exact label open.
+
+1. **Locate A first.** A is a parent of B, placing A one generation above B.
+2. **Move sideways to C.** C and A are siblings, so C is the sibling of B’s parent.
+3. **State exactly what is known.** The words “sibling” and “parent” leave gender unspecified. C can be B’s aunt or uncle.
+
+**Answer:** C is a sibling of B’s parent, either aunt or uncle.
 
 ## Quick revision sheet
 

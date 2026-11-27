@@ -13,21 +13,9 @@ Write CP → MP → SP. Apply a markup to CP, then multiply MP by the fraction r
 
 **When to use it.** Use this in **Profit, Loss and Discount / Markup Followed by Discount** questions when the cost price and markup are given, then a discount is taken off the marked price.
 
-### Method B · Work backwards from a target
+**Key rule.** Markup multiplies cost price by 1 + markup rate. Each discount multiplies the current price by 1 − discount rate.
 
-Start by calculating the SP that provides the required profit or loss. If the discount is known, divide target SP by the fraction retained after discount to find MP.
-
-**When to use it.** Use this in **Profit, Loss and Discount / Target Selling Price** questions when a required profit or loss and a planned discount are given and the shopkeeper needs to choose a marked price.
-
-### Method C · Combine by totals
-
-When different items have equal SPs, recover each CP by division. Add receipts and costs separately. A gain and a loss of the same percent generally act on different costs.
-
-**When to use it.** Use this in **Profit and Loss / Multiple Sales** questions when items or batches have different gains and losses, often at the same selling price, and you need the result for all sales together.
-
-## Question models and worked examples
-
-### Markup and discount
+#### Type 1 · Markup and discount
 
 **Question.** An item costs ₹960, is marked up 35% and is discounted 20%. Find profit percent.
 
@@ -42,7 +30,30 @@ When different items have equal SPs, recover each CP by division. Add receipts a
 
 **Answer:** 8% profit.
 
-### Marking for a target profit
+#### Type 2 · Successive versus single discount
+
+**Question.** Which price is lower: 20% and then 10% off, or a single 29% off?
+
+**Picture it.** Picture 100 rupees on each tag. For two offers, take the second cut from the smaller tag. Compare how much money stays on each tag.
+
+1. **Find the retained fraction for two discounts.** A 20% discount leaves 0.8 of the marked price. The next discount leaves 0.9 of that reduced amount, so the buyer pays 0.8 × 0.9 = 0.72.\
+   `0.80 × 0.90 = 0.72`
+2. **Find the retained fraction for one discount.** A 29% discount leaves 0.71 of the same marked price.\
+   `1 − 0.29 = 0.71`
+3. **Compare amounts paid.** Since 0.71 is smaller than 0.72, the single discount wins. The difference is 0.01 of the marked price.\
+   `0.72 − 0.71 = 0.01 of MP`
+
+**Answer:** The single 29% discount is cheaper by 1% of MP.
+
+### Method B · Work backwards from a target
+
+Start by calculating the SP that provides the required profit or loss. If the discount is known, divide target SP by the fraction retained after discount to find MP.
+
+**When to use it.** Use this in **Profit, Loss and Discount / Target Selling Price** questions when a required profit or loss and a planned discount are given and the shopkeeper needs to choose a marked price.
+
+**Key rule.** Required marked price = target selling price ÷ (1 − discount rate), with the rate written as a decimal.
+
+#### Type 1 · Marking for a target profit
 
 **Question.** Cost is ₹850. What marked price gives a 20% profit after a 15% discount?
 
@@ -57,7 +68,15 @@ When different items have equal SPs, recover each CP by division. Add receipts a
 
 **Answer:** ₹1200.
 
-### Equal selling prices
+### Method C · Combine by totals
+
+When different items have equal SPs, recover each CP by division. Add receipts and costs separately. A gain and a loss of the same percent generally act on different costs.
+
+**When to use it.** Use this in **Profit and Loss / Multiple Sales** questions when items or batches have different gains and losses, often at the same selling price, and you need the result for all sales together.
+
+**Key rule.** Overall profit percentage = (total receipts − total cost) ÷ total cost × 100.
+
+#### Type 1 · Equal selling prices
 
 **Question.** Two goods sell for ₹600 each, one at 20% gain and one at 20% loss. Find the overall result.
 
@@ -71,21 +90,6 @@ When different items have equal SPs, recover each CP by division. Add receipts a
    `(1,200 − 1,250) ÷ 1,250 × 100% = −4%`
 
 **Answer:** 4% loss.
-
-### Successive versus single discount
-
-**Question.** Which price is lower: 20% and then 10% off, or a single 29% off?
-
-**Picture it.** Picture 100 rupees on each tag. For two offers, take the second cut from the smaller tag. Compare how much money stays on each tag.
-
-1. **Find the retained fraction for two discounts.** A 20% discount leaves 0.8 of the marked price. The next discount leaves 0.9 of that reduced amount, so the buyer pays 0.8 × 0.9 = 0.72.\
-   `0.80 × 0.90 = 0.72`
-2. **Find the retained fraction for one discount.** A 29% discount leaves 0.71 of the same marked price.\
-   `1 − 0.29 = 0.71`
-3. **Compare amounts paid.** Since 0.71 is smaller than 0.72, the single discount wins. The difference is 0.01 of the marked price.\
-   `0.72 − 0.71 = 0.01 of MP`
-
-**Answer:** The single 29% discount is cheaper by 1% of MP.
 
 ## Quick revision sheet
 

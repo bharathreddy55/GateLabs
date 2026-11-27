@@ -13,33 +13,9 @@ If a token can be in only X, Y or Z, make a row for each place and a column for 
 
 **When to use it.** Use this in **Binary Logic / Exactly One True Statement** questions when the prompt gives a small set of possible cases and specifies how many claims must be true.
 
-### Method B · Link a speaker to their statement
+**Key rule.** Make one row per possible case and keep only the rows with the required truth count. ‘Both off’ being false leaves every row with at least one on.
 
-A truth-teller’s statement must evaluate true and a liar’s statement false. Start by testing a claim that refers to its own speaker or to everyone. If the assigned speaker type disagrees with the statement’s truth value, discard that world.
-
-**When to use it.** Use this in **Binary Logic / Truth-tellers and Liars** questions when speakers’ statements give clues about who tells the truth and who lies.
-
-### Method C · Transform conditionals in the valid direction
-
-From P and P⇒Q, deduce Q. From ¬Q and P⇒Q, deduce ¬P. If Q is given, look for a counterexample with P false before claiming P.
-
-**When to use it.** Use this in **Binary Logic / Conditional Deductions** questions when the prompt gives an if–then rule and a fact about the condition or the result.
-
-## Question models and worked examples
-
-### Truth-teller and liar
-
-**Question.** A says “B is a liar.” B says “Both of us are liars.” Each always tells the truth or always lies. Determine their types.
-
-**Picture it.** Imagine giving each person a truth or lie card. Read what they say and see whether the card fits. A person's own words can rule out one of their cards.
-
-1. **Test B as truthful.** B claims that both people are liars. If B told the truth, that claim would make B a liar, a contradiction.
-2. **Reclassify B.** The contradiction rules out a truthful B. Thus B is a liar and the claim that both lie must be false.
-3. **Check A’s statement and the pair.** A correctly says B is a liar. With A truthful and B lying, “both are liars” is indeed false.
-
-**Answer:** A tells the truth and B lies.
-
-### Exactly one true claim
+#### Type 1 · Exactly one true claim
 
 **Question.** Exactly one of A’s “the token is in X” and B’s “the token is not in Y” is true. One token is in X, Y or Z. Where is it?
 
@@ -51,19 +27,7 @@ From P and P⇒Q, deduce Q. From ¬Q and P⇒Q, deduce ¬P. If Q is given, look 
 
 **Answer:** Z.
 
-### Contrapositive
-
-**Question.** If a signal is active, its indicator is lit. The indicator is unlit. What follows under this rule?
-
-**Picture it.** The rule says the active signal always lights the lamp. If the lamp is dark, the signal cannot be in a state that forces it to light.
-
-1. **Write the implication.** The rule is Active ⇒ Lit. Every active signal must have a lit indicator.
-2. **Test the fact given.** The indicator is unlit. An active signal in this situation would violate the rule.
-3. **Use the contrapositive.** Unlit ⇒ Inactive. Therefore the signal is inactive.
-
-**Answer:** The signal is inactive.
-
-### Negate a compound instruction
+#### Type 2 · Negate a compound instruction
 
 **Question.** What does it mean to say “It is false that both the alarm and its backup are off”?
 
@@ -74,6 +38,46 @@ From P and P⇒Q, deduce Q. From ¬Q and P⇒Q, deduce ¬P. If Q is given, look 
 3. **Express the shared condition.** All three possibilities have at least one device on. The wording permits both devices to be on.
 
 **Answer:** At least one of them is on.
+
+### Method B · Link a speaker to their statement
+
+A truth-teller’s statement must evaluate true and a liar’s statement false. Start by testing a claim that refers to its own speaker or to everyone. If the assigned speaker type disagrees with the statement’s truth value, discard that world.
+
+**When to use it.** Use this in **Binary Logic / Truth-tellers and Liars** questions when speakers’ statements give clues about who tells the truth and who lies.
+
+**Key rule.** A truth-teller’s claim must evaluate true. A liar’s claim must evaluate false. Use both checks on each candidate assignment.
+
+#### Type 1 · Truth-teller and liar
+
+**Question.** A says “B is a liar.” B says “Both of us are liars.” Each always tells the truth or always lies. Determine their types.
+
+**Picture it.** Imagine giving each person a truth or lie card. Read what they say and see whether the card fits. A person's own words can rule out one of their cards.
+
+1. **Test B as truthful.** B claims that both people are liars. If B told the truth, that claim would make B a liar, a contradiction.
+2. **Reclassify B.** The contradiction rules out a truthful B. Thus B is a liar and the claim that both lie must be false.
+3. **Check A’s statement and the pair.** A correctly says B is a liar. With A truthful and B lying, “both are liars” is indeed false.
+
+**Answer:** A tells the truth and B lies.
+
+### Method C · Transform conditionals in the valid direction
+
+From P and P⇒Q, deduce Q. From ¬Q and P⇒Q, deduce ¬P. If Q is given, look for a counterexample with P false before claiming P.
+
+**When to use it.** Use this in **Binary Logic / Conditional Deductions** questions when the prompt gives an if–then rule and a fact about the condition or the result.
+
+**Key rule.** If P implies Q, true P gives true Q and false Q gives false P.
+
+#### Type 1 · Contrapositive
+
+**Question.** If a signal is active, its indicator is lit. The indicator is unlit. What follows under this rule?
+
+**Picture it.** The rule says the active signal always lights the lamp. If the lamp is dark, the signal cannot be in a state that forces it to light.
+
+1. **Write the implication.** The rule is Active ⇒ Lit. Every active signal must have a lit indicator.
+2. **Test the fact given.** The indicator is unlit. An active signal in this situation would violate the rule.
+3. **Use the contrapositive.** Unlit ⇒ Inactive. Therefore the signal is inactive.
+
+**Answer:** The signal is inactive.
 
 ## Quick revision sheet
 

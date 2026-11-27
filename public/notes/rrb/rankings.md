@@ -13,21 +13,9 @@ Use left = N+1−right when N is known. Compare both positions in that system. I
 
 **When to use it.** Use this in **Rankings / Opposite-end Positions** questions when positions are measured from opposite ends and the question asks for a gap or for the total number of people.
 
-### Method B · Follow the seat on a swap
+**Key rule.** Left rank = total + 1 − right rank. People strictly between two distinct ranks = absolute difference − 1 after expressing both ranks from the same end.
 
-When A moves into B’s old seat, A’s new left rank can be combined with B’s old right rank. They refer to a single physical seat despite involving different names.
-
-**When to use it.** Use this in **Rankings / Swapping Positions** questions when people exchange places and the question mixes an old rank with a new rank.
-
-### Method C · Rebuild ranks after exits
-
-Start with counts ahead and behind. Remove the numbers from those two counts. Add one for the person to get each new rank and verify the sum equals the new N+1.
-
-**When to use it.** Use this in **Rankings / People Leaving a Line** questions when the prompt says how many people leave ahead of or behind a named person and you need the updated ranks.
-
-## Question models and worked examples
-
-### Total from two ends
+#### Type 1 · Total from two ends
 
 **Question.** K is 18th from the left and 27th from the right. How many people are in the line?
 
@@ -42,7 +30,7 @@ Start with counts ahead and behind. Remove the numbers from those two counts. Ad
 
 **Answer:** 44.
 
-### Distance between ranks
+#### Type 2 · Distance between ranks
 
 **Question.** In a line of 48, A is 14th from the left and B is 12th from the right. How many are between them?
 
@@ -57,7 +45,15 @@ Start with counts ahead and behind. Remove the numbers from those two counts. Ad
 
 **Answer:** 22.
 
-### Total after a swap
+### Method B · Follow the seat on a swap
+
+When A moves into B’s old seat, A’s new left rank can be combined with B’s old right rank. They refer to a single physical seat despite involving different names.
+
+**When to use it.** Use this in **Rankings / Swapping Positions** questions when people exchange places and the question mixes an old rank with a new rank.
+
+**Key rule.** After a swap, the new occupant’s rank belongs to the old occupant’s physical seat.
+
+#### Type 1 · Total after a swap
 
 **Question.** A is 9th from left and B is 16th from right. After exchanging seats A is 21st from left. Find total size.
 
@@ -72,7 +68,15 @@ Start with counts ahead and behind. Remove the numbers from those two counts. Ad
 
 **Answer:** 36.
 
-### Rank changes with exits
+### Method C · Rebuild ranks after exits
+
+Start with counts ahead and behind. Remove the numbers from those two counts. Add one for the person to get each new rank and verify the sum equals the new N+1.
+
+**When to use it.** Use this in **Rankings / People Leaving a Line** questions when the prompt says how many people leave ahead of or behind a named person and you need the updated ranks.
+
+**Key rule.** Subtract departures from the counts ahead and behind separately. The new rank from either end is the updated count on that side plus one.
+
+#### Type 1 · Rank changes with exits
 
 **Question.** D ranks 17th out of 40. Three people ahead of D and two behind leave. What are D’s ranks from the top and bottom now?
 

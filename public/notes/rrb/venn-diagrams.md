@@ -13,36 +13,9 @@ In a three-set diagram put the triple count in the centre first. Subtract it fro
 
 **When to use it.** Use this in **Venn Diagrams / Three-set Region Counts** questions when you know the count in all three sets and must find counts in pair-only or single-only regions.
 
-### Method B · Use inclusion–exclusion when only totals are given
+**Key rule.** Pair-only count = inclusive pair count − all-three count. Subtract the relevant overlapping regions to get the single-only count.
 
-For two sets add their counts and subtract their intersection. For three sets subtract all three inclusive pair intersections and add the triple once. The triple had been counted three times and then removed three times.
-
-**When to use it.** Use this in **Venn Diagrams / Counting at Least One** questions when set totals and overlaps are given and the question asks how many distinct members belong to any set.
-
-### Method C · Solve backward from neither or exactly
-
-Neither is the complement of the union. Recover union as total minus neither, then use the other totals to find overlap. For exactly two, sum just the three pair-only regions.
-
-**When to use it.** Use this in **Venn Diagrams / Neither and Exactly Two** questions when a count outside the sets helps recover an overlap, or when you must count members in precisely two sets.
-
-## Question models and worked examples
-
-### Two sets and neither
-
-**Question.** Of 120 applicants, 68 know Excel, 55 know SQL and 26 know both. How many know neither?
-
-**Picture it.** Draw two overlapping hoops. Some learners stand in both. Count them once when adding the hoops, then see how many are outside.
-
-1. **Count everyone in at least one set.** Adding 68 Excel users and 55 SQL users counts the 26 who know both twice.\
-   `68 + 55 = 123`
-2. **Correct the double-counting.** The union is 68 + 55 − 26 = 97 applicants who know at least one.\
-   `123 − 26 = 97`
-3. **Use the outside region.** There are 120 applicants overall. Knowing neither means sitting outside the union, giving 120 − 97 = 23.\
-   `120 − 97 = 23`
-
-**Answer:** 23.
-
-### Three sets and exactly two
+#### Type 1 · Three sets and exactly two
 
 **Question.** Pair intersections AB, AC, BC are 22, 17 and 15, each including 6 in all three. How many are in exactly two?
 
@@ -57,22 +30,7 @@ Neither is the complement of the union. Recover union as total minus neither, th
 
 **Answer:** 36.
 
-### Recover an overlap
-
-**Question.** Of 90 candidates, 54 cleared A, 47 cleared B and 12 cleared neither. How many cleared both?
-
-**Picture it.** Start with every candidate and set aside anyone who cleared neither. The group left is everyone in at least one hoop. Adding both hoop counts counts the middle people twice.
-
-1. **Use neither to recover the union.** Of 90 candidates, 12 cleared neither, leaving 90 − 12 = 78 who cleared at least one.\
-   `union = 90 − 12 = 78`
-2. **Add the individual totals.** The two reported totals add to 54 + 47 = 101. This counts people who cleared both twice.\
-   `54 + 47 = 101`
-3. **Find the double-counted group.** The excess over the union is 101 − 78 = 23, the number who cleared both.\
-   `101 − 78 = 23`
-
-**Answer:** 23.
-
-### Inside one set and nowhere else
+#### Type 2 · Inside one set and nowhere else
 
 **Question.** Totals for A, B and C are 46, 32 and 35. Inclusive pair intersections AB=12, AC=14 and BC=10, triple=5. How many belong only to A?
 
@@ -86,6 +44,52 @@ Neither is the complement of the union. Recover union as total minus neither, th
    `20 + 5 = 25`
 
 **Answer:** 25.
+
+### Method B · Use inclusion–exclusion when only totals are given
+
+For two sets add their counts and subtract their intersection. For three sets subtract all three inclusive pair intersections and add the triple once. The triple had been counted three times and then removed three times.
+
+**When to use it.** Use this in **Venn Diagrams / Counting at Least One** questions when set totals and overlaps are given and the question asks how many distinct members belong to any set.
+
+**Key rule.** Union of two sets = size of A + size of B − size of their intersection. For three sets, add back the triple after subtracting the three inclusive pair overlaps.
+
+#### Type 1 · Two sets and neither
+
+**Question.** Of 120 applicants, 68 know Excel, 55 know SQL and 26 know both. How many know neither?
+
+**Picture it.** Draw two overlapping hoops. Some learners stand in both. Count them once when adding the hoops, then see how many are outside.
+
+1. **Count everyone in at least one set.** Adding 68 Excel users and 55 SQL users counts the 26 who know both twice.\
+   `68 + 55 = 123`
+2. **Correct the double-counting.** The union is 68 + 55 − 26 = 97 applicants who know at least one.\
+   `123 − 26 = 97`
+3. **Use the outside region.** There are 120 applicants overall. Knowing neither means sitting outside the union, giving 120 − 97 = 23.\
+   `120 − 97 = 23`
+
+**Answer:** 23.
+
+### Method C · Solve backward from neither or exactly
+
+Neither is the complement of the union. Recover union as total minus neither, then use the other totals to find overlap. For exactly two, sum just the three pair-only regions.
+
+**When to use it.** Use this in **Venn Diagrams / Neither and Exactly Two** questions when a count outside the sets helps recover an overlap, or when you must count members in precisely two sets.
+
+**Key rule.** Union = total − neither. For two sets, overlap = size of A + size of B − union.
+
+#### Type 1 · Recover an overlap
+
+**Question.** Of 90 candidates, 54 cleared A, 47 cleared B and 12 cleared neither. How many cleared both?
+
+**Picture it.** Start with every candidate and set aside anyone who cleared neither. The group left is everyone in at least one hoop. Adding both hoop counts counts the middle people twice.
+
+1. **Use neither to recover the union.** Of 90 candidates, 12 cleared neither, leaving 90 − 12 = 78 who cleared at least one.\
+   `union = 90 − 12 = 78`
+2. **Add the individual totals.** The two reported totals add to 54 + 47 = 101. This counts people who cleared both twice.\
+   `54 + 47 = 101`
+3. **Find the double-counted group.** The excess over the union is 101 − 78 = 23, the number who cleared both.\
+   `101 − 78 = 23`
+
+**Answer:** 23.
 
 ## Quick revision sheet
 

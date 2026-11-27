@@ -13,21 +13,32 @@ Draw the shape and label each stated angle. With parallel lines, use the corresp
 
 **When to use it.** Use this in **Plane Geometry / Parallel Lines and Similar Triangles** questions when lines are marked parallel or you need to prove that two triangles have matching angles.
 
+**Key rule.** Use equal corresponding or alternate angles between parallel lines. Two equal angle pairs establish similarity.
+
+#### Type 1 · Parallel line and area
+
+**Question.** In ABC, D is on AB and E on AC with DE parallel to BC. AD:DB=2:3. Area of ABC is 125 cm². Find area of ADE.
+
+**Picture it.** Picture the small triangle as a resized photo of the big triangle. Find how much shorter one matching edge is. The picture shrinks in both width and height.
+
+1. **Establish similarity.** DE is parallel to BC. The matching angles at D and B, together with the angle at A, make ADE similar to ABC.\
+   `∠ADE = ∠ABC and ∠DAE = ∠BAC`
+2. **Find the matching side ratio.** AB includes both AD and DB. From AD:DB = 2:3, AD/AB = 2/(2+3) = 2/5.\
+   `AD/AB = 2/(2 + 3) = 2/5`
+3. **Square the side scale for area.** Both dimensions scale by 2/5, so the area scale is 4/25. The smaller area is 125 × 4/25 = 20 cm².\
+   `125 × (2/5)² = 20 cm²`
+
+**Answer:** 20 cm².
+
 ### Method B · Turn an angle sum into shares
 
 If two angles in ratio m:n add to S, one share is S/(m+n). In a regular polygon each exterior turn equals 180° minus one interior angle. The turns complete a full circuit.
 
 **When to use it.** Use this in **Plane Geometry / Angle Ratios and Polygons** questions when angles are given as a ratio with a known sum, or when a regular polygon’s interior and exterior angles are involved.
 
-### Method C · Identify the hypotenuse before using Pythagoras
+**Key rule.** When angles are in the ratio a:b with sum S, one share is S ÷ (a + b). A regular polygon’s exterior angle is 360° ÷ number of sides.
 
-The longest side lies opposite the right angle. At a tangent that side is the distance from the external point to the centre. Solve for the missing leg by subtracting squares.
-
-**When to use it.** Use this in **Plane Geometry / Right Triangles and Tangents** questions when a missing length lies in a right triangle, including the one formed by a radius and a tangent.
-
-## Question models and worked examples
-
-### Exterior angle with a ratio
+#### Type 1 · Exterior angle with a ratio
 
 **Question.** A triangle’s exterior angle is 132°. Its remote interior angles are in ratio 5:6. Find the three interior angles.
 
@@ -43,22 +54,7 @@ The longest side lies opposite the right angle. At a tangent that side is the di
 
 **Answer:** 60°, 72°, 48°.
 
-### Parallel line and area
-
-**Question.** In ABC, D is on AB and E on AC with DE parallel to BC. AD:DB=2:3. Area of ABC is 125 cm². Find area of ADE.
-
-**Picture it.** Picture the small triangle as a resized photo of the big triangle. Find how much shorter one matching edge is. The picture shrinks in both width and height.
-
-1. **Establish similarity.** DE is parallel to BC. The matching angles at D and B, together with the angle at A, make ADE similar to ABC.\
-   `∠ADE = ∠ABC and ∠DAE = ∠BAC`
-2. **Find the matching side ratio.** AB includes both AD and DB. From AD:DB = 2:3, AD/AB = 2/(2+3) = 2/5.\
-   `AD/AB = 2/(2 + 3) = 2/5`
-3. **Square the side scale for area.** Both dimensions scale by 2/5, so the area scale is 4/25. The smaller area is 125 × 4/25 = 20 cm².\
-   `125 × (2/5)² = 20 cm²`
-
-**Answer:** 20 cm².
-
-### Regular polygon
+#### Type 2 · Regular polygon
 
 **Question.** A regular polygon has an interior angle of 156°. Find its sides.
 
@@ -73,7 +69,15 @@ The longest side lies opposite the right angle. At a tangent that side is the di
 
 **Answer:** 15.
 
-### Tangent length
+### Method C · Identify the hypotenuse before using Pythagoras
+
+The longest side lies opposite the right angle. At a tangent that side is the distance from the external point to the centre. Solve for the missing leg by subtracting squares.
+
+**When to use it.** Use this in **Plane Geometry / Right Triangles and Tangents** questions when a missing length lies in a right triangle, including the one formed by a radius and a tangent.
+
+**Key rule.** A radius is perpendicular to its tangent at contact. In the resulting right triangle, tangent length = √(centre-to-point distance² − radius²).
+
+#### Type 1 · Tangent length
 
 **Question.** Distance from external point P to circle centre O is 13 cm, with radius 5 cm. Find the length to a touchpoint T.
 

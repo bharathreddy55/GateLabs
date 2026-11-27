@@ -13,21 +13,9 @@ For floors, write below to above in one direction. If four ordered items fill fo
 
 **When to use it.** Use this in **Logic Puzzles / Floors and Strict Order** questions when above, below, before or after clues can be joined into one ordered chain.
 
-### Method B · Use an elimination grid for categories
+**Key rule.** Write every strict order as part of one chain. Apply adjacency once the chain is in place.
 
-Make a row per person and mark impossible colours or topics. Place the fixed values. Carry exclusivity both ways so each fixed cell crosses out its row and column alternatives.
-
-**When to use it.** Use this in **Logic Puzzles / Matching People and Categories** questions when several people must each match one value from categories such as colours, topics or days.
-
-### Method C · Branch only on clues with few options
-
-Try the requested slot or the tightest condition first. Propagate its consequences until you find a completion or conflict. For a schedule with dates and topics, keep both columns attached to each date.
-
-**When to use it.** Use this in **Logic Puzzles / Testing Schedules and Candidates** questions when fixed clues alone leave several layouts and the question asks for a valid schedule or a possible placement.
-
-## Question models and worked examples
-
-### Floors and adjacency
+#### Type 1 · Floors and adjacency
 
 **Question.** P, Q, R and S occupy floors 1–4. Q is immediately above P. R is above Q, and S is below P. Who lives on floor 3?
 
@@ -39,7 +27,15 @@ Try the requested slot or the tightest condition first. Propagate its consequenc
 
 **Answer:** Q.
 
-### Conditional assignment
+### Method B · Use an elimination grid for categories
+
+Make a row per person and mark impossible colours or topics. Place the fixed values. Carry exclusivity both ways so each fixed cell crosses out its row and column alternatives.
+
+**When to use it.** Use this in **Logic Puzzles / Matching People and Categories** questions when several people must each match one value from categories such as colours, topics or days.
+
+**Key rule.** Give each person or slot a row and each available value a column. Cross out impossible matches whenever a new match is fixed.
+
+#### Type 1 · Conditional assignment
 
 **Question.** A, B and C take one each of red, blue and green. If A has blue, C has green. B has red and C does not have green. Find the colours.
 
@@ -51,7 +47,7 @@ Try the requested slot or the tightest condition first. Propagate its consequenc
 
 **Answer:** A green, B red, C blue.
 
-### Two-category scheduling
+#### Type 2 · Two-category scheduling
 
 **Question.** On Monday, Tuesday and Wednesday, each of Jan, Kim and Lee presents one distinct topic: safety, scheduling or signals. Lee goes Wednesday. Signals is the day immediately after Kim. Jan covers safety. Who covers signals?
 
@@ -63,7 +59,15 @@ Try the requested slot or the tightest condition first. Propagate its consequenc
 
 **Answer:** Lee.
 
-### Find a possible arrangement
+### Method C · Branch only on clues with few options
+
+Try the requested slot or the tightest condition first. Propagate its consequences until you find a completion or conflict. For a schedule with dates and topics, keep both columns attached to each date.
+
+**When to use it.** Use this in **Logic Puzzles / Testing Schedules and Candidates** questions when fixed clues alone leave several layouts and the question asks for a valid schedule or a possible placement.
+
+**Key rule.** Start with the tightest condition, extend each possible placement and keep only complete arrangements that satisfy every clue.
+
+#### Type 1 · Find a possible arrangement
 
 **Question.** A, B, C and D take slots 1–4. C follows A somewhere later, B is not 1, and D is not adjacent to C. Could C be 4?
 

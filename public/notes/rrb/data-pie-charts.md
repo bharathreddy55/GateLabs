@@ -13,21 +13,9 @@ For angle θ, write θ/360. Multiply by the overall count to get the sector coun
 
 **When to use it.** Use this in **Pie Charts / Sector Counts and Angles** questions when the total is known and you need to convert between a sector’s angle, percentage or count.
 
-### Method B · Recover a missing total
+**Key rule.** Sector fraction = sector angle ÷ 360°. Count = total × sector fraction. Add all labelled angles before finding an unlabelled angle.
 
-Calculate the known sector’s fraction p. Its count is p times the total, so divide the sector count by p. Check by multiplying the new total by p again.
-
-**When to use it.** Use this in **Pie Charts / Recovering the Whole** questions when a sector’s count and angle or percentage are given but the total is missing.
-
-### Method C · Align denominators on comparisons
-
-Convert every sector to its own count if asked “how many more.” If only proportions are requested, degrees can be compared directly because both use 360°.
-
-**When to use it.** Use this in **Pie Charts / Comparing Different Totals** questions when two charts describe different groups or years and the prompt asks for a difference in counts or shares.
-
-## Question models and worked examples
-
-### Convert an angle to count
+#### Type 1 · Convert an angle to count
 
 **Question.** A 72° sector represents emergency calls out of 1,850 total calls. How many are emergencies?
 
@@ -42,7 +30,30 @@ Convert every sector to its own count if asked “how many more.” If only prop
 
 **Answer:** 370.
 
-### Recover the whole
+#### Type 2 · Find the unlabelled sector
+
+**Question.** A pie chart’s labelled sectors are 35%, 30% and 72°. Find the remaining sector angle.
+
+**Picture it.** Some pieces are marked as percentages and one in degrees. Give them all the same kind of label before checking how much circle is left.
+
+1. **Use one unit for all sectors.** Convert the 72° sector to 72/360 × 100% = 20%. The other labels already use percent.\
+   `72/360 = 20%`
+2. **Find the unlabelled share.** The three displayed shares add to 35% + 30% + 20% = 85%, so 15% remains.\
+   `100% − 35% − 30% − 20% = 15%`
+3. **Convert that share back to degrees.** 15% of 360° is 0.15 × 360° = 54°.\
+   `0.15 × 360° = 54°`
+
+**Answer:** 54°.
+
+### Method B · Recover a missing total
+
+Calculate the known sector’s fraction p. Its count is p times the total, so divide the sector count by p. Check by multiplying the new total by p again.
+
+**When to use it.** Use this in **Pie Charts / Recovering the Whole** questions when a sector’s count and angle or percentage are given but the total is missing.
+
+**Key rule.** Whole = sector count ÷ sector fraction, with the fraction written as a decimal or a ratio.
+
+#### Type 1 · Recover the whole
 
 **Question.** A 54° maintenance sector represents 150 tasks. Find the total.
 
@@ -57,7 +68,15 @@ Convert every sector to its own count if asked “how many more.” If only prop
 
 **Answer:** 1000 tasks.
 
-### Compare charts with unequal totals
+### Method C · Align denominators on comparisons
+
+Convert every sector to its own count if asked “how many more.” If only proportions are requested, degrees can be compared directly because both use 360°.
+
+**When to use it.** Use this in **Pie Charts / Comparing Different Totals** questions when two charts describe different groups or years and the prompt asks for a difference in counts or shares.
+
+**Key rule.** Convert each sector using its own total before comparing counts. For shares, compare each sector as a fraction of its pie.
+
+#### Type 1 · Compare charts with unequal totals
 
 **Question.** A’s 90° sector of 800 tasks and B’s 72° sector of 1250 tasks represent inspections. Compare the counts.
 
@@ -71,21 +90,6 @@ Convert every sector to its own count if asked “how many more.” If only prop
    `250 − 200 = 50`
 
 **Answer:** B has 50 more.
-
-### Find the unlabelled sector
-
-**Question.** A pie chart’s labelled sectors are 35%, 30% and 72°. Find the remaining sector angle.
-
-**Picture it.** Some pieces are marked as percentages and one in degrees. Give them all the same kind of label before checking how much circle is left.
-
-1. **Use one unit for all sectors.** Convert the 72° sector to 72/360 × 100% = 20%. The other labels already use percent.\
-   `72/360 = 20%`
-2. **Find the unlabelled share.** The three displayed shares add to 35% + 30% + 20% = 85%, so 15% remains.\
-   `100% − 35% − 30% − 20% = 15%`
-3. **Convert that share back to degrees.** 15% of 360° is 0.15 × 360° = 54°.\
-   `0.15 × 360° = 54°`
-
-**Answer:** 54°.
 
 ## Quick revision sheet
 

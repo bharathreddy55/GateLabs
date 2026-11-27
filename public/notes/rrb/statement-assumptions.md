@@ -13,21 +13,9 @@ Write “because … therefore …” in your own words. Ask which condition mus
 
 **When to use it.** Use this in **Statements and Assumptions / Finding the Hidden Link** questions when a plan or claim follows a reason and you must identify what the speaker is taking for granted.
 
-### Method B · Negate the proposed assumption
+**Key rule.** State the evidence and the intended outcome in one sentence each. Ask what must be true for the first to support the second.
 
-Negate “some can be helped” to “none can be helped.” If the plan no longer has a mechanism, the assumption is necessary. Negating “every worker prefers evenings” permits some who prefer evenings, so the plan can still work.
-
-**When to use it.** Use this in **Statements and Assumptions / Testing a Candidate** questions when asked to choose a necessary assumption from options that include facts that merely help the argument.
-
-### Method C · Match the missing link to the argument type
-
-A survey needs a justified link from respondents to the stated population. A causal claim based on timing needs a reason to rule out an alternative that fully explains the effect. A plan needs a mechanism tying action to outcome.
-
-**When to use it.** Use this in **Statements and Assumptions / Surveys, Causes and Plans** questions when the type of argument tells you what to check, such as who a survey represents, what caused a change or how an action could help.
-
-## Question models and worked examples
-
-### Plan and feasibility
+#### Type 1 · Plan and feasibility
 
 **Question.** A station will open an extra staffed counter to shorten queues. What does the plan assume about capacity?
 
@@ -39,7 +27,15 @@ A survey needs a justified link from respondents to the stated population. A cau
 
 **Answer:** The extra counter can serve at least some customers in the queue.
 
-### Unnecessary absolute
+### Method B · Negate the proposed assumption
+
+Negate “some can be helped” to “none can be helped.” If the plan no longer has a mechanism, the assumption is necessary. Negating “every worker prefers evenings” permits some who prefer evenings, so the plan can still work.
+
+**When to use it.** Use this in **Statements and Assumptions / Testing a Candidate** questions when asked to choose a necessary assumption from options that include facts that merely help the argument.
+
+**Key rule.** Negate the candidate assumption and see whether the stated reasoning can still work in a realistic case.
+
+#### Type 1 · Unnecessary absolute
 
 **Question.** A library extends evening hours to reach more workers. Must it assume every worker prefers evening visits?
 
@@ -51,7 +47,15 @@ A survey needs a justified link from respondents to the stated population. A cau
 
 **Answer:** No. The plan needs some relevant demand, not universal preference.
 
-### Representativeness
+### Method C · Match the missing link to the argument type
+
+A survey needs a justified link from respondents to the stated population. A causal claim based on timing needs a reason to rule out an alternative that fully explains the effect. A plan needs a mechanism tying action to outcome.
+
+**When to use it.** Use this in **Statements and Assumptions / Surveys, Causes and Plans** questions when the type of argument tells you what to check, such as who a survey represents, what caused a change or how an action could help.
+
+**Key rule.** Match the gap to the claim. Surveys need representative evidence, causal claims need alternatives tested and plans need a workable link to the goal.
+
+#### Type 1 · Representativeness
 
 **Question.** A survey of only monthly-pass holders claims most station users want a changed timetable. What assumption bridges the sample and claim?
 
@@ -63,7 +67,7 @@ A survey needs a justified link from respondents to the stated population. A cau
 
 **Answer:** The sample is representative of all users’ timetable preferences.
 
-### Causal alternative
+#### Type 2 · Causal alternative
 
 **Question.** Delays fell after a new dispatch procedure. A report attributes the reduction to that procedure. What assumption is essential to the inference from timing alone?
 

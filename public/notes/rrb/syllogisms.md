@@ -13,21 +13,9 @@ Sketch the universal constraints first. Place a dot for each stated existence on
 
 **When to use it.** Use this in **Syllogisms / All, No and Some** questions when universal rules and existence claims must be combined to see which conclusions can follow.
 
-### Method B · Carry a given witness through the chain
+**Key rule.** Put the smaller set inside the larger set for ‘all’ and keep sets separate for ‘no’. Place a member only where its existence is given.
 
-If a dot is in A and A sits inside B, it is in B too. If B is disjoint from C, the same dot is outside C. State the result about that witness without upgrading it to all A.
-
-**When to use it.** Use this in **Syllogisms / Tracing an Existing Member** questions when a premise says some member belongs to a set and other rules tell you where that same member must or cannot be.
-
-### Method C · Build a minimal counterexample
-
-To test whether “some A are B” and “some B are C” force A∩C, try two distinct B members. Put one in A and the other in C, leaving A and C disjoint.
-
-**When to use it.** Use this in **Syllogisms / Testing an Uncertain Conclusion** questions when a conclusion links two sets and you need to see whether the premises allow one arrangement where the conclusion fails.
-
-## Question models and worked examples
-
-### Containment chain
+#### Type 1 · Containment chain
 
 **Question.** All signal fitters are technicians. All technicians are trained staff. Does it follow that all signal fitters are trained staff?
 
@@ -39,7 +27,15 @@ To test whether “some A are B” and “some B are C” force A∩C, try two d
 
 **Answer:** Yes.
 
-### Existence propagated through separation
+### Method B · Carry a given witness through the chain
+
+If a dot is in A and A sits inside B, it is in B too. If B is disjoint from C, the same dot is outside C. State the result about that witness without upgrading it to all A.
+
+**When to use it.** Use this in **Syllogisms / Tracing an Existing Member** questions when a premise says some member belongs to a set and other rules tell you where that same member must or cannot be.
+
+**Key rule.** When a premise gives an existing member, carry that same member through each containment or exclusion rule.
+
+#### Type 1 · Existence propagated through separation
 
 **Question.** Some readers are editors. No editor is a trainee. What must follow about readers and trainees?
 
@@ -51,7 +47,15 @@ To test whether “some A are B” and “some B are C” force A∩C, try two d
 
 **Answer:** Some readers are not trainees.
 
-### Two marks and an unsupported overlap
+### Method C · Build a minimal counterexample
+
+To test whether “some A are B” and “some B are C” force A∩C, try two distinct B members. Put one in A and the other in C, leaving A and C disjoint.
+
+**When to use it.** Use this in **Syllogisms / Testing an Uncertain Conclusion** questions when a conclusion links two sets and you need to see whether the premises allow one arrangement where the conclusion fails.
+
+**Key rule.** A single allowed arrangement where the conclusion fails is enough to show the premises do not force it.
+
+#### Type 1 · Two marks and an unsupported overlap
 
 **Question.** Some A are B and some B are C. Must some A be C?
 
@@ -63,7 +67,7 @@ To test whether “some A are B” and “some B are C” force A∩C, try two d
 
 **Answer:** No.
 
-### Reverse containment
+#### Type 2 · Reverse containment
 
 **Question.** All freight engines are engines. Must all engines be freight engines?
 

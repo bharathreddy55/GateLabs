@@ -13,21 +13,9 @@ Draw the fulcrum and direction of each force. At equilibrium the clockwise momen
 
 **When to use it.** Use this in **Levers and Simple Machines / Moments** questions when a lever, beam or balance is held still and you need a missing force or distance from the pivot.
 
-### Method B · Compare force and distance ratios
+**Key rule.** Moment = force × perpendicular distance from the pivot. At equilibrium, total clockwise moment = total anticlockwise moment.
 
-Use MA = load/effort and VR = effort distance/load distance. Efficiency = MA/VR when the force distances align as in the question. For a ramp, effort distance is along the ramp while the load’s useful rise is vertical.
-
-**When to use it.** Use this in **Levers and Simple Machines / Mechanical Advantage and Efficiency** questions when load and effort or their travel distances are given for a machine such as a ramp or lever.
-
-### Method C · Track supporting strands in a simple pulley
-
-When n rope segments supporting the moving block each shorten by the rise h, the free end must move nh. Multiply free-end movement by effort for input work and load rise by load for useful work.
-
-**When to use it.** Use this in **Levers and Simple Machines / Pulleys** questions when a rope supports a moving block on several strands and the question asks how far the free end or load moves.
-
-## Question models and worked examples
-
-### Lever moments
+#### Type 1 · Lever moments
 
 **Question.** A 300 N load acts 0.2 m from the pivot. How much perpendicular effort at 0.75 m on the opposite side balances it?
 
@@ -42,7 +30,7 @@ When n rope segments supporting the moving block each shorten by the rise h, the
 
 **Answer:** 80 N.
 
-### Lever class from layout
+#### Type 2 · Lever class from layout
 
 **Question.** In a wheelbarrow the wheel axle is the fulcrum, load sits between axle and hands, and hands lift the handles. Classify it.
 
@@ -54,7 +42,15 @@ When n rope segments supporting the moving block each shorten by the rise h, the
 
 **Answer:** Class II.
 
-### Inclined plane efficiency
+### Method B · Compare force and distance ratios
+
+Use MA = load/effort and VR = effort distance/load distance. Efficiency = MA/VR when the force distances align as in the question. For a ramp, effort distance is along the ramp while the load’s useful rise is vertical.
+
+**When to use it.** Use this in **Levers and Simple Machines / Mechanical Advantage and Efficiency** questions when load and effort or their travel distances are given for a machine such as a ramp or lever.
+
+**Key rule.** Mechanical advantage = load ÷ effort. Efficiency = useful work ÷ input work, or mechanical advantage ÷ velocity ratio.
+
+#### Type 1 · Inclined plane efficiency
 
 **Question.** A 240 N load rises 1 m along a 5 m ramp using 60 N along the ramp. Find MA and efficiency.
 
@@ -69,7 +65,15 @@ When n rope segments supporting the moving block each shorten by the rise h, the
 
 **Answer:** MA 4, efficiency 80%.
 
-### Pulley with loss
+### Method C · Track supporting strands in a simple pulley
+
+When n rope segments supporting the moving block each shorten by the rise h, the free end must move nh. Multiply free-end movement by effort for input work and load rise by load for useful work.
+
+**When to use it.** Use this in **Levers and Simple Machines / Pulleys** questions when a rope supports a moving block on several strands and the question asks how far the free end or load moves.
+
+**Key rule.** If n vertical rope segments support the moving block in a simple pulley, free-end travel = n × rise of the load.
+
+#### Type 1 · Pulley with loss
 
 **Question.** A moving block is supported by four rope segments. The 320 N load needs 100 N effort and rises 2 m. Find rope pulled and efficiency.
 

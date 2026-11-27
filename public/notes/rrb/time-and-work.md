@@ -13,21 +13,9 @@ Calculate the output before a worker leaves or joins. Remove that completed port
 
 **When to use it.** Use this in **Time and Work / Changing Teams** questions when a worker joins or leaves after a stated number of days and you need to find when the remaining job finishes.
 
-### Method B · Give each pipe a signed rate
+**Key rule.** Completed work = rate × time for each shift. Add completed portions and divide the final remaining work by the rate in the last shift.
 
-Measure every contribution per hour. A fill pipe is positive and a leak is negative. If net rate is zero or negative, the tank cannot fill from empty while that setup continues.
-
-**When to use it.** Use this in **Pipes and Cisterns / Inlets and Leaks** questions when one or more pipes fill a tank while a drain, outlet or leak empties it.
-
-### Method C · Solve for a missing contributor
-
-Turn together-time and solo-time into rates first. Subtract the known contributor from the total rate. Then invert the remaining rate to get the solo time.
-
-**When to use it.** Use this in **Time and Work / Pipes and Cisterns** questions when the working time of one person or pipe is unknown and the combined time and another contributor’s solo time are given.
-
-## Question models and worked examples
-
-### Worker leaves
+#### Type 1 · Worker leaves
 
 **Question.** A needs 12 days alone and B needs 18. They work together four days before A leaves. When is the job done?
 
@@ -43,22 +31,7 @@ Turn together-time and solo-time into rates first. Subtract the known contributo
 
 **Answer:** 12 days in total.
 
-### Tank and leak
-
-**Question.** A tap fills a tank in eight hours and a leak empties it in 24 hours. How long from empty with both open?
-
-**Picture it.** One tap puts water in and one hole lets it out. Only the water added after the leak is taken away can raise the level.
-
-1. **Express both rates in the same units.** Treat the tank as 24 units. The tap fills 24 ÷ 8 = 3 units/hour. The leak removes 24 ÷ 24 = 1 unit/hour.\
-   `24 ÷ 8 = 3, 24 ÷ 24 = 1 unit/hour`
-2. **Find the net fill rate.** Both act during the same hour, so net gain is 3 − 1 = 2 units/hour.\
-   `3 − 1 = 2 units/hour`
-3. **Find time for the whole tank.** Starting empty, 24 units must be gained. At 2 per hour, the time is 24 ÷ 2 = 12 hours.\
-   `24 ÷ 2 = 12 hours`
-
-**Answer:** 12 hours.
-
-### Alternating work
+#### Type 2 · Alternating work
 
 **Question.** A and B can complete a job in six and eight days respectively. They alternate days starting with A. Find finish time.
 
@@ -73,7 +46,38 @@ Turn together-time and solo-time into rates first. Subtract the known contributo
 
 **Answer:** 6¾ days.
 
-### Recover a worker’s rate
+### Method B · Give each pipe a signed rate
+
+Measure every contribution per hour. A fill pipe is positive and a leak is negative. If net rate is zero or negative, the tank cannot fill from empty while that setup continues.
+
+**When to use it.** Use this in **Pipes and Cisterns / Inlets and Leaks** questions when one or more pipes fill a tank while a drain, outlet or leak empties it.
+
+**Key rule.** Net fill rate = sum of inlet rates − sum of outlet rates. Time to fill = remaining fraction ÷ net fill rate when it is positive.
+
+#### Type 1 · Tank and leak
+
+**Question.** A tap fills a tank in eight hours and a leak empties it in 24 hours. How long from empty with both open?
+
+**Picture it.** One tap puts water in and one hole lets it out. Only the water added after the leak is taken away can raise the level.
+
+1. **Express both rates in the same units.** Treat the tank as 24 units. The tap fills 24 ÷ 8 = 3 units/hour. The leak removes 24 ÷ 24 = 1 unit/hour.\
+   `24 ÷ 8 = 3, 24 ÷ 24 = 1 unit/hour`
+2. **Find the net fill rate.** Both act during the same hour, so net gain is 3 − 1 = 2 units/hour.\
+   `3 − 1 = 2 units/hour`
+3. **Find time for the whole tank.** Starting empty, 24 units must be gained. At 2 per hour, the time is 24 ÷ 2 = 12 hours.\
+   `24 ÷ 2 = 12 hours`
+
+**Answer:** 12 hours.
+
+### Method C · Solve for a missing contributor
+
+Turn together-time and solo-time into rates first. Subtract the known contributor from the total rate. Then invert the remaining rate to get the solo time.
+
+**When to use it.** Use this in **Time and Work / Pipes and Cisterns** questions when the working time of one person or pipe is unknown and the combined time and another contributor’s solo time are given.
+
+**Key rule.** Unknown rate = combined rate − known rate. If the unknown rate is positive, solo time = 1 ÷ unknown rate for one complete job.
+
+#### Type 1 · Recover a worker’s rate
 
 **Question.** Together A and B take 10 days. A alone takes 15. How long for B alone?
 

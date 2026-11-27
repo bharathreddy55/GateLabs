@@ -13,21 +13,9 @@ Write what the passage recorded and what it left unknown. For a sensor, ask what
 
 **When to use it.** Use this in **Reading Comprehension / Warranted Inference** questions when asked what can be concluded from an observation and the alternatives suggest different possible explanations.
 
-### Method B · Create a condition checklist
+**Key rule.** Separate what was observed from what might explain it. Draw only the inference supported by the text.
 
-Write each requirement in its own slot. Mark which the given case satisfies, fails or leaves unknown. Apply only the rule for the setting asked about.
-
-**When to use it.** Use this in **Reading Comprehension / Applying a Rule** questions when a passage supplies a policy or set of criteria and the question gives a new case to check.
-
-### Method C · Match alternatives to the claim they would challenge
-
-To weaken a causal argument, a competing cause should be comparable in time and affect the same outcome. To reject an overbroad inference, point to a meaningful place, time or population outside the evidence.
-
-**When to use it.** Use this in **Reading Comprehension / Weakening and Scope** questions when an option introduces an alternative cause or tests whether evidence from one setting supports a wider claim.
-
-## Question models and worked examples
-
-### Inference from timing
+#### Type 1 · Inference from timing
 
 **Question.** The gate log shows the last worker left at 6 pm. A light sensor recorded movement at 6:15. The sensor detects animals as well as people. What can be inferred?
 
@@ -39,7 +27,15 @@ To weaken a causal argument, a competing cause should be comparable in time and 
 
 **Answer:** There was a movement reading after the worker left, and its source is undetermined.
 
-### Apply a decision rule
+### Method B · Create a condition checklist
+
+Write each requirement in its own slot. Mark which the given case satisfies, fails or leaves unknown. Apply only the rule for the setting asked about.
+
+**When to use it.** Use this in **Reading Comprehension / Applying a Rule** questions when a passage supplies a policy or set of criteria and the question gives a new case to check.
+
+**Key rule.** Break the rule into individual conditions and check each against the new case before deciding where the rule leads.
+
+#### Type 1 · Apply a decision rule
 
 **Question.** To discuss indoors, a group must reserve a room and close its door. Walk-ins can discuss in the courtyard. A group has reserved a room but leaves the door open. Does its discussion meet the indoor rule?
 
@@ -51,7 +47,15 @@ To weaken a causal argument, a competing cause should be comparable in time and 
 
 **Answer:** No. The group must also close the room door.
 
-### Weaken a causal claim
+### Method C · Match alternatives to the claim they would challenge
+
+To weaken a causal argument, a competing cause should be comparable in time and affect the same outcome. To reject an overbroad inference, point to a meaningful place, time or population outside the evidence.
+
+**When to use it.** Use this in **Reading Comprehension / Weakening and Scope** questions when an option introduces an alternative cause or tests whether evidence from one setting supports a wider claim.
+
+**Key rule.** A weakening fact must challenge the same claim. A scope objection identifies who, where or when falls outside the evidence.
+
+#### Type 1 · Weaken a causal claim
 
 **Question.** A report says a bicycle-sharing campaign reduced car traffic because car counts fell immediately after launch. Which finding would weaken the claim: a simultaneous bridge closure diverted traffic, or rainy weeks reduced bicycle use in another year?
 
@@ -63,7 +67,7 @@ To weaken a causal argument, a competing cause should be comparable in time and 
 
 **Answer:** The simultaneous bridge closure.
 
-### Scope of a conclusion
+#### Type 2 · Scope of a conclusion
 
 **Question.** Two shaded bus stops were cooler at noon than adjacent unshaded stops on a clear day. Can you infer shaded stops are cooler under every condition?
 

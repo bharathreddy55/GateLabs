@@ -13,36 +13,9 @@ Break the process into temperature changes and phase changes. Use mcΔT for each
 
 **When to use it.** Use this in **Heat and Temperature / Phase Changes** questions when a substance warms or cools and also melts, freezes, boils or condenses along the way.
 
-### Method B · Balance an insulated mixture
+**Key rule.** Use Q = mcΔT while temperature changes and Q = mL during each change of phase. Add the energy for all stages.
 
-Set heat lost by warm material equal to heat gained by cooler material, with a single final temperature. For the same material with no phase change, its specific heat cancels and mass determines the weights.
-
-**When to use it.** Use this in **Heat and Temperature / Calorimetry** questions when warm and cool substances are mixed in an insulated setup and the question asks for their final temperature.
-
-### Method C · Convert temperatures by scale and offset
-
-K = °C + 273.15 and °F = (9/5)°C + 32. For a temperature difference the offset cancels, so a Celsius change equals the Kelvin change and multiplies by 9/5 for Fahrenheit.
-
-**When to use it.** Use this in **Heat and Temperature / Temperature Scales** questions when converting a reading or a temperature difference between Celsius, Fahrenheit and Kelvin.
-
-## Question models and worked examples
-
-### Convert a temperature
-
-**Question.** Express 40 °C in kelvin and Fahrenheit.
-
-**Picture it.** Imagine three thermometers showing the same cup. The cup does not change because the marks change. Each scale has its own number at the starting line.
-
-1. **Convert Celsius to kelvin.** Kelvin uses the same size step as Celsius but starts at a different zero. Add 273.15 to 40 to get 313.15 K.\
-   `40 + 273.15 = 313.15 K`
-2. **Convert Celsius to Fahrenheit.** Multiply the Celsius reading by 9/5 to change the scale size. This gives 40 × 9/5 = 72.\
-   `40 × 9/5 = 72`
-3. **Account for Fahrenheit’s zero offset.** Add 32 to 72 to get 104 °F.\
-   `72 + 32 = 104 °F`
-
-**Answer:** 313.15 K and 104 °F.
-
-### Warm and then melt ice
+#### Type 1 · Warm and then melt ice
 
 **Question.** How much heat raises 0.2 kg of ice from −10 °C to 0 °C and melts it? Use c=2100 J/(kg·K), L=334 kJ/kg.
 
@@ -57,7 +30,15 @@ K = °C + 273.15 and °F = (9/5)°C + 32. For a temperature difference the offse
 
 **Answer:** 71 kJ.
 
-### Insulated mixture
+### Method B · Balance an insulated mixture
+
+Set heat lost by warm material equal to heat gained by cooler material, with a single final temperature. For the same material with no phase change, its specific heat cancels and mass determines the weights.
+
+**When to use it.** Use this in **Heat and Temperature / Calorimetry** questions when warm and cool substances are mixed in an insulated setup and the question asks for their final temperature.
+
+**Key rule.** For an insulated mixture without phase changes, sum heat lost by warm substances = sum heat gained by cooler ones.
+
+#### Type 1 · Insulated mixture
 
 **Question.** Mix 300 g water at 60 °C and 200 g at 20 °C. Ignore the container and heat loss. Find final temperature.
 
@@ -71,6 +52,31 @@ K = °C + 273.15 and °F = (9/5)°C + 32. For a temperature difference the offse
    `20 °C < 44 °C < 60 °C`
 
 **Answer:** 44 °C.
+
+### Method C · Convert temperatures by scale and offset
+
+K = °C + 273.15 and °F = (9/5)°C + 32. For a temperature difference the offset cancels, so a Celsius change equals the Kelvin change and multiplies by 9/5 for Fahrenheit.
+
+**When to use it.** Use this in **Heat and Temperature / Temperature Scales** questions when converting a reading or a temperature difference between Celsius, Fahrenheit and Kelvin.
+
+**Key rule.** K = °C + 273.15 and °F = 9°C/5 + 32. For differences only, Δ°F = 9Δ°C/5.
+
+#### Type 1 · Convert a temperature
+
+**Question.** Express 40 °C in kelvin and Fahrenheit.
+
+**Picture it.** Imagine three thermometers showing the same cup. The cup does not change because the marks change. Each scale has its own number at the starting line.
+
+1. **Convert Celsius to kelvin.** Kelvin uses the same size step as Celsius but starts at a different zero. Add 273.15 to 40 to get 313.15 K.\
+   `40 + 273.15 = 313.15 K`
+2. **Convert Celsius to Fahrenheit.** Multiply the Celsius reading by 9/5 to change the scale size. This gives 40 × 9/5 = 72.\
+   `40 × 9/5 = 72`
+3. **Account for Fahrenheit’s zero offset.** Add 32 to 72 to get 104 °F.\
+   `72 + 32 = 104 °F`
+
+**Answer:** 313.15 K and 104 °F.
+
+## More worked problems
 
 ### Heat transfer mechanism
 

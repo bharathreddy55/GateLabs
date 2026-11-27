@@ -47,8 +47,12 @@ export function formatNote(markdown) {
   return markdown.trim().split(/\r?\n\s*\r?\n/).map(block => {
     if (block.startsWith('**Picture it.** ')) return `<p class="exam-note-picture">${inline(block)}</p>`;
     if (block.startsWith('**When to use it.** ')) return `<p class="exam-note-method-use">${inline(block)}</p>`;
+    if (block.startsWith('**Key rule.** ') || block.startsWith('**Formula.** ')) {
+      return `<p class="exam-note-key-rule">${inline(block)}</p>`;
+    }
     if (block.startsWith('## ')) return `<h4>${inline(block.slice(3))}</h4>`;
     if (block.startsWith('### ')) return `<h5>${inline(block.slice(4))}</h5>`;
+    if (block.startsWith('#### ')) return `<h6 class="exam-note-problem-type">${inline(block.slice(5))}</h6>`;
     const lines = block.split(/\r?\n/);
     if (lines.length > 2 && lines.every(line => line.startsWith('| ') && line.endsWith(' |'))
       && /^\|(?: *:?-+:? *\|)+$/.test(lines[1])) {

@@ -71,7 +71,7 @@ try{
    await page.locator('[data-prep-tab=notes]').click();
    const notesTab=page.locator('[data-panel=notes]');
    await notesTab.locator('[data-note-id]').first().click();
-   await notesTab.getByRole('heading',{name:route==='rrb-station-master'?'Question models and worked examples':'Worked example',exact:true}).waitFor();
+   await notesTab.getByRole('heading',{name:route==='rrb-station-master'?'Methods and when to use them':'Worked example',exact:true}).waitFor();
    assert.ok(await notesTab.getByRole('link',{name:'Open in Notion'}).isVisible());
    const visual=notesTab.getByRole('img',{name:/Visual study guide for/});
    await visual.waitFor();
@@ -223,7 +223,15 @@ try{
  assert.equal(await methodCues.count(),3);
  assert.match(await methodCues.last().innerText(),/Time and Work \/ Pipes and Cisterns questions when the working time of one person or pipe is unknown/);
  assert.equal(await methodCues.last().evaluate(el=>el.previousElementSibling.previousElementSibling.textContent),'Method C · Solve for a missing contributor');
+ await handnote.getByRole('heading',{name:'Type 1 · Recover a worker’s rate',exact:true}).waitFor();
+ await handnote.locator('.exam-note-key-rule',{hasText:'Unknown rate = combined rate − known rate'}).waitFor();
  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2));
+ await page.goto('http://127.0.0.1:3011/#/rrb-station-master?tab=notes&note=lcm-hcf');
+ await handnote.getByRole('heading',{name:'Method E · HCF and LCM of fractions and decimals',exact:true}).waitFor();
+ await handnote.getByRole('heading',{name:'Type 4 · LCM of decimals',exact:true}).waitFor();
+ await handnote.getByRole('columnheader',{name:'Formula or steps'}).waitFor();
+ await handnote.locator('.exam-note-key-rule',{hasText:'Decimal LCM = LCM of the scaled integers'}).waitFor();
+ assert.match(await handnote.innerText(),/Answer: 3\.6\./);
  await page.goto('http://127.0.0.1:3011/#/sbi-clerk?tab=notes&note=english-reading');
  const readingGuide=page.getByRole('img',{name:'Visual study guide for English Reading Comprehension'});
  await readingGuide.waitFor();

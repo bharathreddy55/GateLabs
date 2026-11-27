@@ -13,21 +13,9 @@ Treat a reduced sine or cosine as a scaled pair of side lengths. Use Pythagoras 
 
 **When to use it.** Use this in **Trigonometry / Converting Ratios** questions when one trigonometric ratio of an acute angle is given and the question asks for another ratio.
 
-### Method B · Work from a horizontal through the observer
+**Key rule.** Use sin θ = opposite ÷ hypotenuse, cos θ = adjacent ÷ hypotenuse and tan θ = opposite ÷ adjacent with the same angle.
 
-Use the horizontal distance as the adjacent leg and the rise above the eye as the opposite leg. Add the observer’s eye height to get the total object height when both stand on the same level.
-
-**When to use it.** Use this in **Trigonometry / Heights and Distances** questions when an angle of elevation or depression and a horizontal distance are given, sometimes with the observer’s eye height.
-
-### Method C · Equate two expressions for one height
-
-When nearer and farther observations are on the same line from the base, call their distances x and x plus the known gap. Both tangent expressions give the same vertical height. Solve the distance equation first.
-
-**When to use it.** Use this in **Trigonometry / Two Observations** questions when the same object is seen at two angles from positions a known distance apart on the same straight line.
-
-## Question models and worked examples
-
-### Find remaining ratios
+#### Type 1 · Find remaining ratios
 
 **Question.** Given sin θ=5/13 for acute θ, find cos θ and tan θ.
 
@@ -42,7 +30,30 @@ When nearer and farther observations are on the same line from the base, call th
 
 **Answer:** 12/13 and 5/12.
 
-### Observer height
+#### Type 2 · Exact value and identity
+
+**Question.** Evaluate 1−sin²30°+tan²45°.
+
+**Picture it.** Think of sin and tan as short names for certain side ratios. Look up the triangle ratio for each given angle, then square each value before adding or subtracting.
+
+1. **Recall the exact ratios.** sin 30° = 1/2 and tan 45° = 1.\
+   `sin 30° = 1/2, tan 45° = 1`
+2. **Square the ratios first.** sin²30° = (1/2)² = 1/4, while tan²45° = 1² = 1.\
+   `sin² 30° = 1/4, tan² 45° = 1`
+3. **Combine the terms.** Now evaluate 1 − 1/4 + 1 = 2 − 1/4 = 7/4.\
+   `1 − 1/4 + 1 = 7/4`
+
+**Answer:** 7/4.
+
+### Method B · Work from a horizontal through the observer
+
+Use the horizontal distance as the adjacent leg and the rise above the eye as the opposite leg. Add the observer’s eye height to get the total object height when both stand on the same level.
+
+**When to use it.** Use this in **Trigonometry / Heights and Distances** questions when an angle of elevation or depression and a horizontal distance are given, sometimes with the observer’s eye height.
+
+**Key rule.** Height above eye level = horizontal distance × tan(elevation angle). Add eye height when the observer and object base are on level ground.
+
+#### Type 1 · Observer height
 
 **Question.** A person’s eye level is 1.6 m above the ground. From 18 m away the pole top has elevation 45°. Find the pole height.
 
@@ -57,7 +68,15 @@ When nearer and farther observations are on the same line from the base, call th
 
 **Answer:** 19.6 m.
 
-### Two stations of observation
+### Method C · Equate two expressions for one height
+
+When nearer and farther observations are on the same line from the base, call their distances x and x plus the known gap. Both tangent expressions give the same vertical height. Solve the distance equation first.
+
+**When to use it.** Use this in **Trigonometry / Two Observations** questions when the same object is seen at two angles from positions a known distance apart on the same straight line.
+
+**Key rule.** For two points on the same side of the base, set x × tan(near angle) = (x + gap) × tan(far angle) when the observation heights match.
+
+#### Type 1 · Two stations of observation
 
 **Question.** Two observation points at ground level lie on the same straight line from the base of a tower and on the same side of it. The points are 20 m apart, and their angles of elevation to the top are 60° and 30°. Find the height.
 
@@ -72,21 +91,6 @@ When nearer and farther observations are on the same line from the base, call th
    `h = 10√3 m`
 
 **Answer:** 10√3 m.
-
-### Exact value and identity
-
-**Question.** Evaluate 1−sin²30°+tan²45°.
-
-**Picture it.** Think of sin and tan as short names for certain side ratios. Look up the triangle ratio for each given angle, then square each value before adding or subtracting.
-
-1. **Recall the exact ratios.** sin 30° = 1/2 and tan 45° = 1.\
-   `sin 30° = 1/2, tan 45° = 1`
-2. **Square the ratios first.** sin²30° = (1/2)² = 1/4, while tan²45° = 1² = 1.\
-   `sin² 30° = 1/4, tan² 45° = 1`
-3. **Combine the terms.** Now evaluate 1 − 1/4 + 1 = 2 − 1/4 = 7/4.\
-   `1 − 1/4 + 1 = 7/4`
-
-**Answer:** 7/4.
 
 ## Quick revision sheet
 

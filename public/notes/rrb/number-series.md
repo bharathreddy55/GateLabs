@@ -13,21 +13,9 @@ Write each first difference above its gap. If the jumps change systematically, t
 
 **When to use it.** Use this in **Number Series / Changing Gaps** questions when a sequence grows or shrinks and the differences between neighbouring terms may follow their own pattern.
 
-### Method B · Make two scratch rows for alternation
+**Key rule.** Write successive differences first. If gaps do not settle the pattern, check second differences, ratios or multiply-and-adjust rules.
 
-Separate positions 1,3,5 and 2,4,6. Determine each track’s step, then use the one containing the blank. An apparent combined jump need not fit either rule.
-
-**When to use it.** Use this in **Number Series / Alternating Patterns** questions when odd and even positions appear to follow different rules.
-
-### Method C · Verify over the blank from both sides
-
-For a missing or wrong term, find a simple rule that fits the known terms. Insert the candidate and check both neighbouring transitions and all available checkpoints.
-
-**When to use it.** Use this in **Number Series / Missing or Incorrect Interior Terms** questions when the blank or suspected error lies between known terms and you can test the rule on both sides.
-
-## Question models and worked examples
-
-### Second differences
+#### Type 1 · Second differences
 
 **Question.** Find the next term: 5, 9, 15, 23, 33.
 
@@ -42,7 +30,30 @@ For a missing or wrong term, find a simple rule that fits the known terms. Inser
 
 **Answer:** 45.
 
-### Alternating tracks
+#### Type 2 · Multiply and adjust
+
+**Question.** Find the next term: 3, 8, 18, 38, 78.
+
+**Picture it.** Try doubling one number. Look at how much more you still need to reach the next. See whether that extra amount stays the same.
+
+1. **Compare the terms after doubling.** Doubling 3 gives 6, which is 2 short of 8. Doubling 8 gives 16, which is 2 short of 18.\
+   `8 − 2 × 3 = 2 and 18 − 2 × 8 = 2`
+2. **Check the rule near the end.** 18×2+2=38 and 38×2+2=78, so the same adjustment works across the given terms.\
+   `18 × 2 + 2 = 38 and 38 × 2 + 2 = 78`
+3. **Repeat the full operation.** Double 78 to get 156 and add 2 to obtain 158.\
+   `78 × 2 + 2 = 158`
+
+**Answer:** 158.
+
+### Method B · Make two scratch rows for alternation
+
+Separate positions 1,3,5 and 2,4,6. Determine each track’s step, then use the one containing the blank. An apparent combined jump need not fit either rule.
+
+**When to use it.** Use this in **Number Series / Alternating Patterns** questions when odd and even positions appear to follow different rules.
+
+**Key rule.** Split the sequence into odd and even positions. Extend the track that contains the missing term.
+
+#### Type 1 · Alternating tracks
 
 **Question.** Find the next term: 4, 30, 7, 25, 10, 20, 13.
 
@@ -58,22 +69,15 @@ For a missing or wrong term, find a simple rule that fits the known terms. Inser
 
 **Answer:** 15.
 
-### Multiply and adjust
+### Method C · Verify over the blank from both sides
 
-**Question.** Find the next term: 3, 8, 18, 38, 78.
+For a missing or wrong term, find a simple rule that fits the known terms. Insert the candidate and check both neighbouring transitions and all available checkpoints.
 
-**Picture it.** Try doubling one number. Look at how much more you still need to reach the next. See whether that extra amount stays the same.
+**When to use it.** Use this in **Number Series / Missing or Incorrect Interior Terms** questions when the blank or suspected error lies between known terms and you can test the rule on both sides.
 
-1. **Compare the terms after doubling.** Doubling 3 gives 6, which is 2 short of 8. Doubling 8 gives 16, which is 2 short of 18.\
-   `8 − 2 × 3 = 2 and 18 − 2 × 8 = 2`
-2. **Check the rule near the end.** 18×2+2=38 and 38×2+2=78, so the same adjustment works across the given terms.\
-   `18 × 2 + 2 = 38 and 38 × 2 + 2 = 78`
-3. **Repeat the full operation.** Double 78 to get 156 and add 2 to obtain 158.\
-   `78 × 2 + 2 = 158`
+**Key rule.** Check a proposed value against the transitions on both sides of the gap and against every known checkpoint.
 
-**Answer:** 158.
-
-### Missing term across both neighbours
+#### Type 1 · Missing term across both neighbours
 
 **Question.** Complete 2, 5, 7, ?, 19, 31.
 
@@ -88,7 +92,7 @@ For a missing or wrong term, find a simple rule that fits the known terms. Inser
 
 **Answer:** 12.
 
-### Identify the wrong term
+#### Type 2 · Identify the wrong term
 
 **Question.** One term is wrong: 4, 9, 16, 26, 36, 49. Correct it.
 

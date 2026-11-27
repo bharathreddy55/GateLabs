@@ -13,21 +13,9 @@ At 8:20 the hour hand is 10° past 8. Find both absolute positions before subtra
 
 **When to use it.** Use this in **Clocks / Angle at a Given Time** questions when an exact time such as 8:20 is given and you need the angle between the hands.
 
-### Method B · Solve a signed gap
+**Key rule.** After m minutes past hour h on a 12-hour dial, the minute hand is at 6m° and the hour hand is at (30h + 0.5m)°. The two arcs add to 360°.
 
-During a fixed hour, hour angle minus minute angle is 30H − 5.5m. Coincidence corresponds to 0 modulo 360°. A right angle can occur at signed gaps ±90° or equivalent values modulo 360°, such as ±270°.
-
-**When to use it.** Use this in **Clocks / Finding a Time from an Angle** questions when the required condition is overlap, a right angle or another gap and the time is the unknown.
-
-### Method C · Check the target hour and turn minutes into seconds
-
-Keep solutions in the requested interval, usually 0 ≤ m < 60. Use the question’s wording for exact endpoints. Multiply the fractional part of a minute by 60 to report seconds.
-
-**When to use it.** Use this in **Clocks / Valid Times within One Hour** questions when an angle equation gives several times or a fractional minute and the answer must fall within a stated hour.
-
-## Question models and worked examples
-
-### Angle at a stated time
+#### Type 1 · Angle at a stated time
 
 **Question.** What is the smaller angle at 8:20?
 
@@ -42,7 +30,31 @@ Keep solutions in the requested interval, usually 0 ≤ m < 60. Use the question
 
 **Answer:** 130°.
 
-### Coincidence
+#### Type 2 · Smaller and larger arc
+
+**Question.** Find both angles at 11:10.
+
+**Picture it.** You can travel between the two clock hands around either side of the face. The two routes always add up to one full circle.
+
+1. **Locate the hour and minute hands.** The hour hand is at 11 × 30° + 10 × 0.5° = 335°. The minute hand is at 10 × 6° = 60°.\
+   `hour = 11 × 30° + 10 × 0.5° = 335°`\
+   `minute = 10 × 6° = 60°`
+2. **Find one gap.** The difference between those angles is 335° − 60° = 275°.\
+   `335° − 60° = 275°`
+3. **Find the other route around the dial.** The two arcs total 360°, so the complementary arc is 360° − 275° = 85°.\
+   `360° − 275° = 85°`
+
+**Answer:** 85° smaller, 275° larger.
+
+### Method B · Solve a signed gap
+
+During a fixed hour, hour angle minus minute angle is 30H − 5.5m. Coincidence corresponds to 0 modulo 360°. A right angle can occur at signed gaps ±90° or equivalent values modulo 360°, such as ±270°.
+
+**When to use it.** Use this in **Clocks / Finding a Time from an Angle** questions when the required condition is overlap, a right angle or another gap and the time is the unknown.
+
+**Key rule.** Signed gap = 30h − 5.5m degrees. For overlap, solve for a gap of 0° modulo 360°.
+
+#### Type 1 · Coincidence
 
 **Question.** When between 2:00 and 3:00 do the hands overlap?
 
@@ -58,7 +70,15 @@ Keep solutions in the requested interval, usually 0 ≤ m < 60. Use the question
 
 **Answer:** About 2:10:54.5.
 
-### Right angle with two solutions
+### Method C · Check the target hour and turn minutes into seconds
+
+Keep solutions in the requested interval, usually 0 ≤ m < 60. Use the question’s wording for exact endpoints. Multiply the fractional part of a minute by 60 to report seconds.
+
+**When to use it.** Use this in **Clocks / Valid Times within One Hour** questions when an angle equation gives several times or a fractional minute and the answer must fall within a stated hour.
+
+**Key rule.** Keep only solutions inside the stated interval. Multiply the fractional part of a minute by 60 to convert it to seconds.
+
+#### Type 1 · Right angle with two solutions
 
 **Question.** When between 4:00 and 5:00 do the hands make right angles?
 
@@ -75,22 +95,6 @@ Keep solutions in the requested interval, usually 0 ≤ m < 60. Use the question
    `38 min + (2/11) × 60 s ≈ 38 min 10.9 s`
 
 **Answer:** About 4:05:27.3 and 4:38:10.9.
-
-### Smaller and larger arc
-
-**Question.** Find both angles at 11:10.
-
-**Picture it.** You can travel between the two clock hands around either side of the face. The two routes always add up to one full circle.
-
-1. **Locate the hour and minute hands.** The hour hand is at 11 × 30° + 10 × 0.5° = 335°. The minute hand is at 10 × 6° = 60°.\
-   `hour = 11 × 30° + 10 × 0.5° = 335°`\
-   `minute = 10 × 6° = 60°`
-2. **Find one gap.** The difference between those angles is 335° − 60° = 275°.\
-   `335° − 60° = 275°`
-3. **Find the other route around the dial.** The two arcs total 360°, so the complementary arc is 360° − 275° = 85°.\
-   `360° − 275° = 85°`
-
-**Answer:** 85° smaller, 275° larger.
 
 ## Quick revision sheet
 

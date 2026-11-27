@@ -13,21 +13,9 @@ Use ordered pairs for a draw sequence or if you will multiply branch probabiliti
 
 **When to use it.** Use this in **Probability / Counting Equally Likely Outcomes** questions when you draw, choose or arrange items and must decide whether different orders count as different outcomes.
 
-### Method B · Translate key words before solving
+**Key rule.** Count equally likely outcomes on the same basis. For two fair distinguishable dice there are 6 × 6 = 36 ordered results.
 
-“Both” requires the two conditions on the same outcome. “Exactly one” excludes zero and two. “At least one” includes all positive counts and often becomes 1 minus the none case.
-
-**When to use it.** Use this in **Probability / Exactly, At Least and Both** questions when wording such as “exactly one”, “at least one” or “both” defines which results count.
-
-### Method C · Pick inclusion–exclusion or a tree
-
-For OR with overlap, add both event probabilities then subtract the shared cases once. For successive draws, follow the branch, update the counts and multiply. Add disjoint branches if several orders qualify.
-
-**When to use it.** Use this in **Probability / Overlap and Successive Draws** questions when two events can happen together or when a later draw depends on what happened in an earlier draw.
-
-## Question models and worked examples
-
-### Two dice with a fixed sum
+#### Type 1 · Two dice with a fixed sum
 
 **Question.** Two fair six-sided dice are rolled. Find P(sum = 9).
 
@@ -42,7 +30,15 @@ For OR with overlap, add both event probabilities then subtract the shared cases
 
 **Answer:** 1/9.
 
-### At least one
+### Method B · Translate key words before solving
+
+“Both” requires the two conditions on the same outcome. “Exactly one” excludes zero and two. “At least one” includes all positive counts and often becomes 1 minus the none case.
+
+**When to use it.** Use this in **Probability / Exactly, At Least and Both** questions when wording such as “exactly one”, “at least one” or “both” defines which results count.
+
+**Key rule.** At least one = 1 − P(none). Exactly one of two events includes either one happening alone.
+
+#### Type 1 · At least one
 
 **Question.** Three independent fair coin tosses are made. Find the chance of at least one head.
 
@@ -57,38 +53,7 @@ For OR with overlap, add both event probabilities then subtract the shared cases
 
 **Answer:** 7/8.
 
-### Two draws without replacement
-
-**Question.** A bag has 5 red and 3 blue balls. Find the chance of drawing two red without replacement.
-
-**Picture it.** The first red ball stays in your hand. When you reach into the bag again, there is one less red ball and one less ball altogether.
-
-1. **Find the first-draw chance.** There are five red balls among eight total, so the first draw is red with probability 5/8.\
-   `P(first red) = 5/8`
-2. **Update after a red is removed.** Because the first ball stays out, four red balls remain among seven total. The chance of another red on this branch is 4/7.\
-   `P(second red given first red) = 4/7`
-3. **Multiply along the branch.** Both conditions must hold in order. Multiply 5/8 × 4/7 = 20/56 = 5/14.\
-   `5/8 × 4/7 = 20/56 = 5/14`
-
-**Answer:** 5/14.
-
-### Overlapping events
-
-**Question.** A number from 1 through 30 is picked uniformly. Find the probability it is a multiple of 3 or 5.
-
-**Picture it.** Picture circling multiples of 3 in blue and multiples of 5 in red. Numbers circled in both colours should still be counted only once.
-
-1. **Count each group separately.** There are 30 ÷ 3 = 10 multiples of 3 and 30 ÷ 5 = 6 multiples of 5.\
-   `multiples of 3: 10. Multiples of 5: 6.`
-2. **Correct the overlap.** Numbers divisible by both are multiples of 15. The two cases, 15 and 30, appear in both counts, so subtract them once.\
-   `multiples of 15: 2`\
-   `10 + 6 − 2 = 14`
-3. **Divide by all possible draws.** There are 10 + 6 − 2 = 14 qualifying numbers out of 30 equally likely choices. This reduces to 7/15.\
-   `14/30 = 7/15`
-
-**Answer:** 7/15.
-
-### Exactly one red without replacement
+#### Type 2 · Exactly one red without replacement
 
 **Question.** A box has 5 red, 4 blue and 3 green tokens. Two are drawn without replacement. What is the probability that exactly one is red?
 
@@ -106,6 +71,45 @@ For OR with overlap, add both event probabilities then subtract the shared cases
    `(5/12 × 7/11) + (7/12 × 5/11) = 35/66`
 
 **Answer:** 35/66, approximately 53.03%.
+
+### Method C · Pick inclusion–exclusion or a tree
+
+For OR with overlap, add both event probabilities then subtract the shared cases once. For successive draws, follow the branch, update the counts and multiply. Add disjoint branches if several orders qualify.
+
+**When to use it.** Use this in **Probability / Overlap and Successive Draws** questions when two events can happen together or when a later draw depends on what happened in an earlier draw.
+
+**Key rule.** For overlap, P(A or B) = P(A) + P(B) − P(A and B). For successive draws, multiply probabilities along each path and add disjoint matching paths.
+
+#### Type 1 · Two draws without replacement
+
+**Question.** A bag has 5 red and 3 blue balls. Find the chance of drawing two red without replacement.
+
+**Picture it.** The first red ball stays in your hand. When you reach into the bag again, there is one less red ball and one less ball altogether.
+
+1. **Find the first-draw chance.** There are five red balls among eight total, so the first draw is red with probability 5/8.\
+   `P(first red) = 5/8`
+2. **Update after a red is removed.** Because the first ball stays out, four red balls remain among seven total. The chance of another red on this branch is 4/7.\
+   `P(second red given first red) = 4/7`
+3. **Multiply along the branch.** Both conditions must hold in order. Multiply 5/8 × 4/7 = 20/56 = 5/14.\
+   `5/8 × 4/7 = 20/56 = 5/14`
+
+**Answer:** 5/14.
+
+#### Type 2 · Overlapping events
+
+**Question.** A number from 1 through 30 is picked uniformly. Find the probability it is a multiple of 3 or 5.
+
+**Picture it.** Picture circling multiples of 3 in blue and multiples of 5 in red. Numbers circled in both colours should still be counted only once.
+
+1. **Count each group separately.** There are 30 ÷ 3 = 10 multiples of 3 and 30 ÷ 5 = 6 multiples of 5.\
+   `multiples of 3: 10. Multiples of 5: 6.`
+2. **Correct the overlap.** Numbers divisible by both are multiples of 15. The two cases, 15 and 30, appear in both counts, so subtract them once.\
+   `multiples of 15: 2`\
+   `10 + 6 − 2 = 14`
+3. **Divide by all possible draws.** There are 10 + 6 − 2 = 14 qualifying numbers out of 30 equally likely choices. This reduces to 7/15.\
+   `14/30 = 7/15`
+
+**Answer:** 7/15.
 
 ## Quick revision sheet
 

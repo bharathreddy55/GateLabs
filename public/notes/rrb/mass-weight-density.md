@@ -13,21 +13,9 @@ Read whether a value is in kg or N before applying a formula. Weight changes in 
 
 **When to use it.** Use this in **Mass, Weight and Density / Gravity** questions when you must find mass from weight or compare an object’s weight at places with different gravitational field strengths.
 
-### Method B · Use the total external volume
+**Key rule.** Weight W = mg. Rearrange to m = W ÷ g when weight is given.
 
-For a sealed hollow body, divide its total mass by its outside volume. An air-filled space raises the external volume without adding much mass, which can lower the average density below the fluid’s.
-
-**When to use it.** Use this in **Mass, Weight and Density / Hollow Bodies** questions when asked for bulk density or whether a sealed container with an air space will float.
-
-### Method C · Balance buoyancy for flotation
-
-Set ρfluid × g × Vsub equal to ρobject × g × Vtotal. Cancelling g gives a ratio of submerged to total volume. Only apply the floating-fraction formula to a floating object in equilibrium.
-
-**When to use it.** Use this in **Mass, Weight and Density / Floating Fraction** questions when a body floats at rest and you need the fraction submerged, the fluid density or the floating body’s average density.
-
-## Question models and worked examples
-
-### Two gravitational fields
+#### Type 1 · Two gravitational fields
 
 **Question.** What does a 12 kg tool weigh where g=10 m/s² and where g=1.6 m/s²?
 
@@ -42,7 +30,15 @@ Set ρfluid × g × Vsub equal to ρobject × g × Vtotal. Cancelling g gives a 
 
 **Answer:** 120 N and 19.2 N.
 
-### Density by displacement
+### Method B · Use the total external volume
+
+For a sealed hollow body, divide its total mass by its outside volume. An air-filled space raises the external volume without adding much mass, which can lower the average density below the fluid’s.
+
+**When to use it.** Use this in **Mass, Weight and Density / Hollow Bodies** questions when asked for bulk density or whether a sealed container with an air space will float.
+
+**Key rule.** Density = mass ÷ volume. Use the outside volume for a sealed hollow body and measured displacement for a fully submerged body.
+
+#### Type 1 · Density by displacement
 
 **Question.** A fully submerged 156 g stone raises water in a measuring cylinder from 90 to 150 mL. Find its density.
 
@@ -57,7 +53,7 @@ Set ρfluid × g × Vsub equal to ρobject × g × Vtotal. Cancelling g gives a 
 
 **Answer:** 2.6 g/cm³.
 
-### Average density with a hollow centre
+#### Type 2 · Average density with a hollow centre
 
 **Question.** A sealed object of mass 360 g displaces 500 cm³ when fully immersed. Find its average density and whether it floats in water if released.
 
@@ -72,7 +68,15 @@ Set ρfluid × g × Vsub equal to ρobject × g × Vtotal. Cancelling g gives a 
 
 **Answer:** 0.72 g/cm³, and it floats.
 
-### Floating fraction
+### Method C · Balance buoyancy for flotation
+
+Set ρfluid × g × Vsub equal to ρobject × g × Vtotal. Cancelling g gives a ratio of submerged to total volume. Only apply the floating-fraction formula to a floating object in equilibrium.
+
+**When to use it.** Use this in **Mass, Weight and Density / Floating Fraction** questions when a body floats at rest and you need the fraction submerged, the fluid density or the floating body’s average density.
+
+**Key rule.** For flotation at rest, Vsub ÷ Vtotal = average object density ÷ fluid density.
+
+#### Type 1 · Floating fraction
 
 **Question.** A wooden block has density 650 kg/m³ and floats in water with density 1000 kg/m³. What fraction is submerged?
 

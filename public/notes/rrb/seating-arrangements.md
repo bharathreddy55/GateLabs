@@ -13,21 +13,9 @@ Fill a fixed end, middle or named position first. Treat immediate pairs as order
 
 **When to use it.** Use this in **Seating Arrangements / Linear Rows** questions when an end or middle seat is fixed or a clue requires specific people to sit together.
 
-### Method B · Fix rotation in a circle
+**Key rule.** Place the fixed person first and treat named immediate neighbours as a block in the stated order.
 
-If no absolute seat is fixed, put the reference person at the top since rotating everyone together preserves relative clues. Mark the person’s facing direction before translating a handed direction into a clockwise or anticlockwise step.
-
-**When to use it.** Use this in **Seating Arrangements / Circular Tables** questions when the seats have no fixed numbers and left or right depends on which way each person faces.
-
-### Method C · Check both sides of an unsigned gap
-
-If Q is two seats from P, test P−2 and P+2 where they exist. Apply all other clues to each and cross out any incompatible candidate. Verify a surviving arrangement rather than guessing from the more natural view.
-
-**When to use it.** Use this in **Seating Arrangements / Gaps without Direction** questions when the question gives a seat gap between two people without telling you who sits on which side.
-
-## Question models and worked examples
-
-### Linear row with a fixed end
+#### Type 1 · Linear row with a fixed end
 
 **Question.** Five people A, B, C, D, E sit facing north in a row. C is in the middle, E is at the far right, A is immediately left of C, and D is between C and E. Find the order.
 
@@ -42,7 +30,15 @@ If Q is two seats from P, test P−2 and P+2 where they exist. Apply all other c
 
 **Answer:** B–A–C–D–E from left to right.
 
-### Circular opposition
+### Method B · Fix rotation in a circle
+
+If no absolute seat is fixed, put the reference person at the top since rotating everyone together preserves relative clues. Mark the person’s facing direction before translating a handed direction into a clockwise or anticlockwise step.
+
+**When to use it.** Use this in **Seating Arrangements / Circular Tables** questions when the seats have no fixed numbers and left or right depends on which way each person faces.
+
+**Key rule.** Fix one seat if only relative positions are given around the circle. Record facing direction before reading left or right.
+
+#### Type 1 · Circular opposition
 
 **Question.** Six people sit in evenly spaced seats. B is opposite A, and C is one seat clockwise from B. How far clockwise from A is C?
 
@@ -57,7 +53,7 @@ If Q is two seats from P, test P−2 and P+2 where they exist. Apply all other c
 
 **Answer:** Four seats clockwise, equivalent to two anticlockwise.
 
-### Facing sets the direction
+#### Type 2 · Facing sets the direction
 
 **Question.** Four people face the centre of a circle. B is to the immediate right of A, and C is opposite A. Who is immediately left of C?
 
@@ -69,7 +65,15 @@ If Q is two seats from P, test P−2 and P+2 where they exist. Apply all other c
 
 **Answer:** B.
 
-### Gap and both cases
+### Method C · Check both sides of an unsigned gap
+
+If Q is two seats from P, test P−2 and P+2 where they exist. Apply all other clues to each and cross out any incompatible candidate. Verify a surviving arrangement rather than guessing from the more natural view.
+
+**When to use it.** Use this in **Seating Arrangements / Gaps without Direction** questions when the question gives a seat gap between two people without telling you who sits on which side.
+
+**Key rule.** An unsigned gap gives candidates on both sides of the anchor. Test each allowed position against every other clue.
+
+#### Type 1 · Gap and both cases
 
 **Question.** In a row of six seats, P sits in seat 3. Exactly one person sits between P and Q. R is immediately to Q’s right, as seen from the front of the diagram. Seats are numbered left to right in that view. If R cannot be in seat 6, where is Q?
 

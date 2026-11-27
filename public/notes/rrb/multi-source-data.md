@@ -13,21 +13,9 @@ Use a small scratch table with entity, time, count and base. Join a rate or rule
 
 **When to use it.** Use this in **Multi-source Data Analysis / Combining Rates and Counts** questions when a table and a chart give different parts of the same calculation, such as a total in one source and its rate in another.
 
-### Method B · Follow the group within the group
+**Key rule.** Match the entity, period and units across sources first. Then compute count = rate × its matching base, using the rate as a decimal.
 
-Start at the whole, find the first subgroup, and then take the share of that subgroup. To answer what percent of the original whole the result represents, divide by the overall total.
-
-**When to use it.** Use this in **Multi-source Data Analysis / Nested Groups** questions when a question gives a percentage of a subgroup and asks what the result represents out of the original whole.
-
-### Method C · Make two possible examples if data look incomplete
-
-Keep each disclosed figure fixed and vary the missing value. If two plausible values give different answers, the sources do not determine a unique result.
-
-**When to use it.** Use this in **Multi-source Data Analysis / Missing Information** questions when asked whether combined sources determine a unique answer and an input appears to be missing.
-
-## Question models and worked examples
-
-### Text rule plus volumes
+#### Type 1 · Text rule plus volumes
 
 **Question.** A table gives 800 weekday and 500 weekend bookings. A notice gives cancellation rates of 5% and 12% respectively. How many bookings remain?
 
@@ -42,22 +30,7 @@ Keep each disclosed figure fixed and vary the missing value. If two plausible va
 
 **Answer:** 1200 bookings.
 
-### Chart share and nested subgroup
-
-**Question.** A chart shows digital sales are 60% of 2,500 tickets. A note says 40% of digital sales used the mobile app. Find app bookings and their share of all sales.
-
-**Picture it.** Picture a big box of all tickets with a smaller box of digital tickets inside. App tickets are a smaller box within that one.
-
-1. **Find the first subgroup.** Digital sales make up 60% of all 2,500 tickets. Thus the digital subgroup contains 2,500 × 0.60 = 1,500 tickets.\
-   `2,500 × 0.60 = 1,500 digital`
-2. **Use the correct base for app sales.** The 40% applies only to the digital subgroup, so 1,500 × 0.40 = 600 app tickets.\
-   `1,500 × 0.40 = 600 app`
-3. **Express that count as a share of all sales.** Divide 600 by the overall 2,500 and convert to a percent. Equivalently, multiply the nested shares 0.60 × 0.40 = 0.24.\
-   `600/2,500 = 0.24 = 24%`
-
-**Answer:** 600 tickets, 24% of all sales.
-
-### Compare rates using a second source
+#### Type 2 · Compare rates using a second source
 
 **Question.** A table lists 45 faults at Depot A and 36 at B. A second table gives 900 machines at A and 600 at B. Which fault count per 100 machines is lower?
 
@@ -72,7 +45,38 @@ Keep each disclosed figure fixed and vary the missing value. If two plausible va
 
 **Answer:** A, with 5 faults per 100 machines.
 
-### Spot incompatible evidence
+### Method B · Follow the group within the group
+
+Start at the whole, find the first subgroup, and then take the share of that subgroup. To answer what percent of the original whole the result represents, divide by the overall total.
+
+**When to use it.** Use this in **Multi-source Data Analysis / Nested Groups** questions when a question gives a percentage of a subgroup and asks what the result represents out of the original whole.
+
+**Key rule.** A share within a share multiplies the two proportions. Keep track of which whole the final answer must refer to.
+
+#### Type 1 · Chart share and nested subgroup
+
+**Question.** A chart shows digital sales are 60% of 2,500 tickets. A note says 40% of digital sales used the mobile app. Find app bookings and their share of all sales.
+
+**Picture it.** Picture a big box of all tickets with a smaller box of digital tickets inside. App tickets are a smaller box within that one.
+
+1. **Find the first subgroup.** Digital sales make up 60% of all 2,500 tickets. Thus the digital subgroup contains 2,500 × 0.60 = 1,500 tickets.\
+   `2,500 × 0.60 = 1,500 digital`
+2. **Use the correct base for app sales.** The 40% applies only to the digital subgroup, so 1,500 × 0.40 = 600 app tickets.\
+   `1,500 × 0.40 = 600 app`
+3. **Express that count as a share of all sales.** Divide 600 by the overall 2,500 and convert to a percent. Equivalently, multiply the nested shares 0.60 × 0.40 = 0.24.\
+   `600/2,500 = 0.24 = 24%`
+
+**Answer:** 600 tickets, 24% of all sales.
+
+### Method C · Make two possible examples if data look incomplete
+
+Keep each disclosed figure fixed and vary the missing value. If two plausible values give different answers, the sources do not determine a unique result.
+
+**When to use it.** Use this in **Multi-source Data Analysis / Missing Information** questions when asked whether combined sources determine a unique answer and an input appears to be missing.
+
+**Key rule.** List the values required by the target calculation. If a missing value can change the result while every stated number stays fixed, the answer is undetermined.
+
+#### Type 1 · Spot incompatible evidence
 
 **Question.** A chart gives travel for four stations combined. A table lists Station C’s capacity. Can you determine Station C’s utilisation from these alone?
 

@@ -13,21 +13,9 @@ Identify direction, then whether the form is linear or curved, then how tightly 
 
 **When to use it.** Use this in **Scatter Plots / Trend, Strength and Outliers** questions when asked to describe the overall association or spot a point that departs from the pattern.
 
-### Method B · Separate estimate from observation
+**Key rule.** Describe direction, form and strength, then look for unusual points. Use the points themselves to support each observation.
 
-For a fitted-line estimate, use two points on the fitted line to find its slope. For a residual, compare the predicted value and the actual observation at exactly the same x.
-
-**When to use it.** Use this in **Scatter Plots / Predictions and Residuals** questions when a fitted line is shown and you need an estimated value or the difference between observed and predicted values.
-
-### Method C · Test claims with a rival explanation
-
-When asked whether a pattern establishes causation, think of a plausible variable that could influence both measurements. Confounding explains why the plotted association alone cannot decide the causal direction.
-
-**When to use it.** Use this in **Scatter Plots / Association and Causation** questions when a question asks whether a plotted relationship shows that one variable causes the other.
-
-## Question models and worked examples
-
-### Read direction and form
+#### Type 1 · Read direction and form
 
 **Question.** Points are near (1,9), (2,7), (3,6), (4,4), (5,3). Describe the pattern.
 
@@ -40,7 +28,15 @@ When asked whether a pattern establishes causation, think of a plausible variabl
 
 **Answer:** Negative, roughly linear association.
 
-### Residual and outlier
+### Method B · Separate estimate from observation
+
+For a fitted-line estimate, use two points on the fitted line to find its slope. For a residual, compare the predicted value and the actual observation at exactly the same x.
+
+**When to use it.** Use this in **Scatter Plots / Predictions and Residuals** questions when a fitted line is shown and you need an estimated value or the difference between observed and predicted values.
+
+**Key rule.** Residual = observed y − fitted y at the same x. Use the fitted line for a prediction.
+
+#### Type 1 · Residual and outlier
 
 **Question.** A trend line predicts 22 faults at x=8. The plotted value is 35. Find the residual and interpret its sign.
 
@@ -54,7 +50,7 @@ When asked whether a pattern establishes causation, think of a plausible variabl
 
 **Answer:** +13 faults.
 
-### Slope and interpolation
+#### Type 2 · Slope and interpolation
 
 **Question.** A fitted straight line passes through (2,15) and (6,27). Estimate y at x=4.
 
@@ -69,7 +65,15 @@ When asked whether a pattern establishes causation, think of a plausible variabl
 
 **Answer:** 21.
 
-### Correlation and causal claim
+### Method C · Test claims with a rival explanation
+
+When asked whether a pattern establishes causation, think of a plausible variable that could influence both measurements. Confounding explains why the plotted association alone cannot decide the causal direction.
+
+**When to use it.** Use this in **Scatter Plots / Association and Causation** questions when a question asks whether a plotted relationship shows that one variable causes the other.
+
+**Key rule.** For a causal claim, check whether another variable could plausibly affect both measurements.
+
+#### Type 1 · Correlation and causal claim
 
 **Question.** Stores with more staff have higher daily sales. Does the scatter plot alone show that adding staff raises sales?
 

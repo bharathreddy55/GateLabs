@@ -13,21 +13,9 @@ Write a few words naming what changed or why the paragraph is there. Combine tho
 
 **When to use it.** Use this in **Reading Comprehension / Whole-passage Main Idea** questions when asked what the passage is mainly about and every paragraph adds a different detail or stage.
 
-### Method B · Target the requested detail
+**Key rule.** Summarise each paragraph’s role in a few words and combine the roles into the passage’s central claim.
 
-Circle the named entity and condition before scanning. Find the exact sentence, then check adjacent lines for an exception. If a museum’s cafe and galleries have different hours, keep their facts in separate rows.
-
-**When to use it.** Use this in **Reading Comprehension / Supporting Details** questions when the question asks for a stated fact about a particular person, place, time or condition.
-
-### Method C · Compare titles and summaries against the full passage
-
-Discard choices that name a single example or expand beyond the evidence. The best option should account for the central result, including any contrast that matters to it.
-
-**When to use it.** Use this in **Reading Comprehension / Best Title or Summary** questions when several choices are true in part and you need the one broad enough to cover the whole passage.
-
-## Question models and worked examples
-
-### Main point across contrasting details
+#### Type 1 · Main point across contrasting details
 
 **Question.** A park installed brighter lights to help visitors after sunset. Insects clustered near the new lamps, and walkers reported glare. The council switched to shielded lighting along paths and left the wetland dark. What is the main idea?
 
@@ -39,7 +27,15 @@ Discard choices that name a single example or expand beyond the evidence. The be
 
 **Answer:** The park adjusted its lighting to improve visibility while addressing glare and ecological effects.
 
-### Supporting detail with a qualifier
+### Method B · Target the requested detail
+
+Circle the named entity and condition before scanning. Find the exact sentence, then check adjacent lines for an exception. If a museum’s cafe and galleries have different hours, keep their facts in separate rows.
+
+**When to use it.** Use this in **Reading Comprehension / Supporting Details** questions when the question asks for a stated fact about a particular person, place, time or condition.
+
+**Key rule.** Locate the named detail and read the surrounding lines for its time, scope, exception or qualification.
+
+#### Type 1 · Supporting detail with a qualifier
 
 **Question.** A museum opens at 9 am on weekdays. On Wednesdays the public galleries open at 11 to allow school groups early access. The cafe still opens at 9. When can a member of the public enter the galleries on Wednesday?
 
@@ -51,7 +47,15 @@ Discard choices that name a single example or expand beyond the evidence. The be
 
 **Answer:** At 11 am.
 
-### Best title
+### Method C · Compare titles and summaries against the full passage
+
+Discard choices that name a single example or expand beyond the evidence. The best option should account for the central result, including any contrast that matters to it.
+
+**When to use it.** Use this in **Reading Comprehension / Best Title or Summary** questions when several choices are true in part and you need the one broad enough to cover the whole passage.
+
+**Key rule.** Choose the title or summary that covers the main claim and its necessary qualifications across the passage.
+
+#### Type 1 · Best title
 
 **Question.** A study compared three ways of restoring a stream. Concrete barriers redirected water briefly. Rooted native plants held soil through the monsoon, and their benefits grew as they established. Choose a title: “Monsoon Rainfall”, “Using Native Plants to Stabilise Stream Banks”, or “How Concrete Is Made”.
 
@@ -63,7 +67,7 @@ Discard choices that name a single example or expand beyond the evidence. The be
 
 **Answer:** “Using Native Plants to Stabilise Stream Banks”.
 
-### Preserve a qualification in a summary
+#### Type 2 · Preserve a qualification in a summary
 
 **Question.** Bread baked in an insulated oven cooled more slowly than bread from an uninsulated one. The difference was detectable indoors, but outdoors strong wind reduced it. Summarise the finding.
 

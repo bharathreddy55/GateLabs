@@ -13,21 +13,9 @@ Copy only the relevant rows and name the two quantities you need. Keep a base co
 
 **When to use it.** Use this in **Data Analysis / Comparing Table Values** questions when a table contains several stations, periods or rates and the question concerns only specific rows or columns.
 
-### Method B · Recover missing totals
+**Key rule.** For each rate, keep its numerator and its own base together. For a pooled rate, divide the sum of the numerators by the sum of those bases.
 
-If an average and its count are given, multiply them to find the implied sum. Subtract all known entries. Check that the new total reproduces the stated average.
-
-**When to use it.** Use this in **Data Analysis / Missing Table Entries** questions when a table leaves one value or subtotal blank but gives an average, the number of entries and the remaining values.
-
-### Method C · Work from the requested period
-
-For a change use (new − old)/old. For an interval share from a running log, subtract its two endpoint totals for the numerator and separately subtract the endpoints of the full period.
-
-**When to use it.** Use this in **Data Analysis / Period Changes and Running Totals** questions when the question compares two dates or asks for one interval’s share from cumulative readings.
-
-## Question models and worked examples
-
-### Column comparison and percent change
+#### Type 1 · Column comparison and percent change
 
 **Question.** Passenger counts in April and May were 3200 and 3680 at A, and 2800 and 3110 at B. Which station grew faster by percentage?
 
@@ -42,7 +30,7 @@ For a change use (new − old)/old. For an interval share from a running log, su
 
 **Answer:** A.
 
-### Overall rate from rows
+#### Type 2 · Overall rate from rows
 
 **Question.** Morning: 240 trains, 90% on time. Evening: 160 trains, 75% on time. Find overall punctuality.
 
@@ -57,7 +45,15 @@ For a change use (new − old)/old. For an interval share from a running log, su
 
 **Answer:** 84%.
 
-### Find a missing row count
+### Method B · Recover missing totals
+
+If an average and its count are given, multiply them to find the implied sum. Subtract all known entries. Check that the new total reproduces the stated average.
+
+**When to use it.** Use this in **Data Analysis / Missing Table Entries** questions when a table leaves one value or subtotal blank but gives an average, the number of entries and the remaining values.
+
+**Key rule.** Missing value = (given average × number of entries) − sum of the known entries.
+
+#### Type 1 · Find a missing row count
 
 **Question.** A table lists 120 service requests on Monday, 140 on Tuesday and a three-day average of 135. Find Wednesday’s count.
 
@@ -72,7 +68,15 @@ For a change use (new − old)/old. For an interval share from a running log, su
 
 **Answer:** 145.
 
-### Cumulative figures
+### Method C · Work from the requested period
+
+For a change use (new − old)/old. For an interval share from a running log, subtract its two endpoint totals for the numerator and separately subtract the endpoints of the full period.
+
+**When to use it.** Use this in **Data Analysis / Period Changes and Running Totals** questions when the question compares two dates or asks for one interval’s share from cumulative readings.
+
+**Key rule.** Amount during an interval = cumulative amount at its end − cumulative amount at its start. Relative change = (new − old) ÷ old.
+
+#### Type 1 · Cumulative figures
 
 **Question.** A running log shows 780 tickets by noon, 1120 by 2 pm, and 1620 by 5 pm. What share of tickets sold from noon to 5 pm came after 2 pm?
 

@@ -13,21 +13,9 @@ An angled pull contributes its component along the path. Draw friction opposite 
 
 **When to use it.** Use this in **Work, Power and Energy / Work by Several Forces** questions when motion involves an angled push or pull, friction or multiple forces whose work must be added.
 
-### Method B · Use the change in kinetic energy
+**Key rule.** Work by a constant force is Fs cos θ. Add each force’s signed work to find the total.
 
-If mass and speeds are supplied, compare the kinetic energy before and after. This gives net work even if the separate forces are unknown. Constant speed means zero change in kinetic energy.
-
-**When to use it.** Use this in **Work, Power and Energy / Work–Energy Theorem** questions when mass and initial and final speeds are given and the question asks for the net work.
-
-### Method C · Separate input and output
-
-For a motor lifting steadily, useful work is mgh. Divide by time for useful output power. Divide that output by efficiency as a decimal to recover the larger input.
-
-**When to use it.** Use this in **Work, Power and Energy / Motor Efficiency** questions when a machine lifts a load or does other useful work and you must find input power, output power or efficiency.
-
-## Question models and worked examples
-
-### Oblique pull against friction
+#### Type 1 · Oblique pull against friction
 
 **Question.** Pull an object 10 m horizontally with 50 N at 60° above horizontal. Friction is 8 N. Find the net work if the other forces are vertical.
 
@@ -42,7 +30,30 @@ For a motor lifting steadily, useful work is mgh. Divide by time for useful outp
 
 **Answer:** 170 J.
 
-### Kinetic energy from net work
+#### Type 2 · Constant speed and signed work
+
+**Question.** A crate slides 6 m at steady speed with a 25 N horizontal push and 25 N friction. Find work by each force and net work.
+
+**Picture it.** One push helps the crate travel and the other force pushes back. They move through the same distance in opposite senses, so one amount of work cancels the other.
+
+1. **Calculate the push work.** The push and displacement point the same way, giving +25 × 6 = +150 J.\
+   `+25 × 6 = +150 J`
+2. **Calculate the friction work.** Friction points opposite the motion, giving −25 × 6 = −150 J. Vertical forces, if included, do zero work on the horizontal trip.\
+   `−25 × 6 = −150 J`
+3. **Check the total.** The two contributions cancel, giving 0 J. This agrees with steady speed, since the change in kinetic energy is zero.\
+   `150 − 150 = 0 J`
+
+**Answer:** Push +150 J, friction −150 J, net 0 J.
+
+### Method B · Use the change in kinetic energy
+
+If mass and speeds are supplied, compare the kinetic energy before and after. This gives net work even if the separate forces are unknown. Constant speed means zero change in kinetic energy.
+
+**When to use it.** Use this in **Work, Power and Energy / Work–Energy Theorem** questions when mass and initial and final speeds are given and the question asks for the net work.
+
+**Key rule.** Net work = ½m(v² − u²), where u and v are the initial and final speeds.
+
+#### Type 1 · Kinetic energy from net work
 
 **Question.** A 4 kg cart speeds up from 3 to 7 m/s. Find the net work.
 
@@ -57,7 +68,15 @@ For a motor lifting steadily, useful work is mgh. Divide by time for useful outp
 
 **Answer:** 80 J.
 
-### Lift, power and efficiency
+### Method C · Separate input and output
+
+For a motor lifting steadily, useful work is mgh. Divide by time for useful output power. Divide that output by efficiency as a decimal to recover the larger input.
+
+**When to use it.** Use this in **Work, Power and Energy / Motor Efficiency** questions when a machine lifts a load or does other useful work and you must find input power, output power or efficiency.
+
+**Key rule.** Useful power = useful work ÷ time. Input power = output power ÷ efficiency written as a decimal.
+
+#### Type 1 · Lift, power and efficiency
 
 **Question.** A motor raises 60 kg through 8 m in 12 s at constant speed. Use g=10 m/s² and efficiency 80%. Find input power.
 
@@ -72,20 +91,7 @@ For a motor lifting steadily, useful work is mgh. Divide by time for useful outp
 
 **Answer:** 500 W input.
 
-### Constant speed and signed work
-
-**Question.** A crate slides 6 m at steady speed with a 25 N horizontal push and 25 N friction. Find work by each force and net work.
-
-**Picture it.** One push helps the crate travel and the other force pushes back. They move through the same distance in opposite senses, so one amount of work cancels the other.
-
-1. **Calculate the push work.** The push and displacement point the same way, giving +25 × 6 = +150 J.\
-   `+25 × 6 = +150 J`
-2. **Calculate the friction work.** Friction points opposite the motion, giving −25 × 6 = −150 J. Vertical forces, if included, do zero work on the horizontal trip.\
-   `−25 × 6 = −150 J`
-3. **Check the total.** The two contributions cancel, giving 0 J. This agrees with steady speed, since the change in kinetic energy is zero.\
-   `150 − 150 = 0 J`
-
-**Answer:** Push +150 J, friction −150 J, net 0 J.
+## More worked problems
 
 ### Electrical energy use
 

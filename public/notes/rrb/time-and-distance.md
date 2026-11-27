@@ -13,21 +13,9 @@ A train clears a point once its rear reaches that point, so it travels its full 
 
 **When to use it.** Use this in **Time, Speed and Distance / Train Crossings** questions when a train must completely pass a pole, platform, bridge or another train.
 
-### Method B · Start the catch-up clock when both are moving
+**Key rule.** Crossing time = total length to clear ÷ relative speed. Include the length of each train in a complete passing problem.
 
-Calculate the lead before the second vehicle starts. Divide this gap by the closing speed. Add that time to the later departure. If the follower is no faster, the gap does not close under constant speeds.
-
-**When to use it.** Use this in **Time, Speed and Distance / Catch-up Problems** questions when two travellers move in the same direction and one gets a head start before the other leaves.
-
-### Method C · Build a timeline for average speed
-
-For each segment compute time = distance ÷ speed. Convert minutes to hours or vice versa before adding. Divide the total distance by the sum of all times, including specified stops.
-
-**When to use it.** Use this in **Time, Speed and Distance / Average Speed** questions when the question asks for the speed over a complete trip with several legs, different speeds or specified stops.
-
-## Question models and worked examples
-
-### Train and platform
+#### Type 1 · Train and platform
 
 **Question.** A 180 m train at 54 km/h clears a platform in 22 seconds. Find the platform length.
 
@@ -42,7 +30,30 @@ For each segment compute time = distance ÷ speed. Convert minutes to hours or v
 
 **Answer:** 150 m.
 
-### Delayed catch-up
+#### Type 2 · Passing trains
+
+**Question.** Trains of 150 m and 210 m approach at 72 and 36 km/h. How long from nose-to-nose to fully clear?
+
+**Picture it.** Imagine two long trains sliding past each other. Until the back ends are clear, their full lengths must pass. Because both trains move, they close the gap together.
+
+1. **Add the approaching speeds.** The trains move towards each other, so relative speed is 72 + 36 = 108 km/h, or 30 m/s.\
+   `(72 + 36) × 5/18 = 30 m/s`
+2. **Add the lengths to be cleared.** After the fronts meet, the rears must also pass. The required relative travel is 150 + 210 = 360 m.\
+   `150 + 210 = 360 m`
+3. **Divide distance by speed.** The crossing lasts 360 ÷ 30 = 12 seconds.\
+   `360 ÷ 30 = 12 s`
+
+**Answer:** 12 seconds.
+
+### Method B · Start the catch-up clock when both are moving
+
+Calculate the lead before the second vehicle starts. Divide this gap by the closing speed. Add that time to the later departure. If the follower is no faster, the gap does not close under constant speeds.
+
+**When to use it.** Use this in **Time, Speed and Distance / Catch-up Problems** questions when two travellers move in the same direction and one gets a head start before the other leaves.
+
+**Key rule.** Catch-up time after the later start = initial lead ÷ (follower speed − leader speed), if the follower is faster.
+
+#### Type 1 · Delayed catch-up
 
 **Question.** A truck leaves at 08:00 at 45 km/h. A van leaves at 08:40 at 65 km/h. When does it catch the truck?
 
@@ -59,7 +70,15 @@ For each segment compute time = distance ÷ speed. Convert minutes to hours or v
 
 **Answer:** 10:10.
 
-### Average speed with a stop
+### Method C · Build a timeline for average speed
+
+For each segment compute time = distance ÷ speed. Convert minutes to hours or vice versa before adding. Divide the total distance by the sum of all times, including specified stops.
+
+**When to use it.** Use this in **Time, Speed and Distance / Average Speed** questions when the question asks for the speed over a complete trip with several legs, different speeds or specified stops.
+
+**Key rule.** Time for a moving leg = distance ÷ speed. Average speed = total distance ÷ (all travel times + any specified stops).
+
+#### Type 1 · Average speed with a stop
 
 **Question.** A bus covers 72 km at 48 km/h and stops for 15 minutes. Find trip average speed.
 
@@ -74,21 +93,6 @@ For each segment compute time = distance ÷ speed. Convert minutes to hours or v
    `72 ÷ 1.75 ≈ 41.14 km/h`
 
 **Answer:** About 41.14 km/h.
-
-### Passing trains
-
-**Question.** Trains of 150 m and 210 m approach at 72 and 36 km/h. How long from nose-to-nose to fully clear?
-
-**Picture it.** Imagine two long trains sliding past each other. Until the back ends are clear, their full lengths must pass. Because both trains move, they close the gap together.
-
-1. **Add the approaching speeds.** The trains move towards each other, so relative speed is 72 + 36 = 108 km/h, or 30 m/s.\
-   `(72 + 36) × 5/18 = 30 m/s`
-2. **Add the lengths to be cleared.** After the fronts meet, the rears must also pass. The required relative travel is 150 + 210 = 360 m.\
-   `150 + 210 = 360 m`
-3. **Divide distance by speed.** The crossing lasts 360 ÷ 30 = 12 seconds.\
-   `360 ÷ 30 = 12 s`
-
-**Answer:** 12 seconds.
 
 ## Quick revision sheet
 

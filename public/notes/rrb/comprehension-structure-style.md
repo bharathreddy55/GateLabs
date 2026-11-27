@@ -13,21 +13,9 @@ Read it in sequence and label its job with one phrase, such as benefit, limitati
 
 **When to use it.** Use this in **Reading Comprehension / Organisation** questions when asked how a sentence or paragraph develops the argument, such as by adding evidence, a contrast or a next step.
 
-### Method B · Cite two clues for tone
+**Key rule.** Label the role of each relevant sentence, such as benefit, contrast, limitation or conclusion, in the order it appears.
 
-Pick one word about confidence and one about the author’s approach. “May” signals caution. Comparing readings and requesting more data shows an analytical approach.
-
-**When to use it.** Use this in **Reading Comprehension / Tone and Attitude** questions when asked how the author feels about a claim or how strongly the author expresses it.
-
-### Method C · Ask what changes if the sentence is removed
-
-If only the concrete case disappears while the main claim survives, the sentence illustrates. If an objection and reply disappear together, the paragraph was addressing resistance to a claim.
-
-**When to use it.** Use this in **Reading Comprehension / Purpose of an Example or Objection** questions when asked why the author included a particular example, comparison or objection.
-
-## Question models and worked examples
-
-### Concession followed by judgment
+#### Type 1 · Concession followed by judgment
 
 **Question.** “Automatic announcements are consistent. However, during disruptions they can lag behind decisions made on the platform. A manual update should remain available.” How is the argument organised?
 
@@ -39,7 +27,15 @@ If only the concrete case disappears while the main claim survives, the sentence
 
 **Answer:** Benefit, limitation, then recommendation.
 
-### Infer tone from qualifiers
+### Method B · Cite two clues for tone
+
+Pick one word about confidence and one about the author’s approach. “May” signals caution. Comparing readings and requesting more data shows an analytical approach.
+
+**When to use it.** Use this in **Reading Comprehension / Tone and Attitude** questions when asked how the author feels about a claim or how strongly the author expresses it.
+
+**Key rule.** Use wording about certainty and the author’s treatment of evidence together to identify tone.
+
+#### Type 1 · Infer tone from qualifiers
 
 **Question.** “The data suggest the repair may have reduced noise, though readings from additional sites are needed.” What is the tone?
 
@@ -51,7 +47,15 @@ If only the concrete case disappears while the main claim survives, the sentence
 
 **Answer:** Cautious and analytical.
 
-### Function of a specific example
+### Method C · Ask what changes if the sentence is removed
+
+If only the concrete case disappears while the main claim survives, the sentence illustrates. If an objection and reply disappear together, the paragraph was addressing resistance to a claim.
+
+**When to use it.** Use this in **Reading Comprehension / Purpose of an Example or Objection** questions when asked why the author included a particular example, comparison or objection.
+
+**Key rule.** Imagine removing the sentence or paragraph and ask whether the passage loses an example, objection, reply or other part of its reasoning.
+
+#### Type 1 · Function of a specific example
 
 **Question.** “Small inefficiencies accumulate over a timetable. A two-minute turnaround delay repeated across six departures costs twelve minutes.” Why is the second sentence included?
 
@@ -64,7 +68,7 @@ If only the concrete case disappears while the main claim survives, the sentence
 
 **Answer:** To illustrate the claim with a numerical example.
 
-### Role of a counterargument
+#### Type 2 · Role of a counterargument
 
 **Question.** A passage argues for reusing older station buildings. Its second paragraph notes that adapting them for accessibility can be costly, then describes phased upgrades and how these can spread the cost. What is that paragraph doing?
 

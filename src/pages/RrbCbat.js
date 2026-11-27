@@ -58,6 +58,7 @@ function studyNotes(){
     </div>
     ${CBAT_BATTERIES.map(({id,title})=>{
       const note=CBAT_NOTES[id];
+      const typeLabel=id==='personality'?'Prompt type':'Problem type';
       return `<details class="surface cbat-note" data-cbat-lesson="${id}">
         <summary>${h(title)}</summary>
         <figure class="exam-note-visual">
@@ -72,18 +73,19 @@ function studyNotes(){
         <h3>Rules to remember</h3>
         <ul>${note.rules.map(rule=>`<li>${h(rule)}</li>`).join('')}</ul>
         <h3>Methods and when to use them</h3>
-        <ol>${note.method.map(step=>`<li>${h(step)}</li>`).join('')}</ol>
         <p class="exam-note-method-use"><strong>When to use it.</strong> Use this for <strong>${h(note.methodUse.type)}</strong> ${h(note.methodUse.when)}.</p>
+        <p class="exam-note-key-rule"><strong>Key rule.</strong> ${h(note.methodUse.rule)}</p>
+        <ol>${note.method.map(step=>`<li>${h(step)}</li>`).join('')}</ol>
         <h3>${id==='personality'?'Prompt models and examples':'Question models and worked examples'}</h3>
-        <h4>${h(note.exampleTitle)}</h4>
+        <h4>${typeLabel} 1 · ${h(note.exampleTitle)}</h4>
         <p>${h(note.prompt)}</p>
         ${note.map?streetMap(note.map):''}
         ${note.figures?`<div class="cbat-options cbat-figures">${note.figures.map((cells,index)=>`<div>Figure ${'ABC'[index]}${shape(cells)}</div>`).join('')}</div>`:''}
         <p class="exam-note-picture"><strong>Picture it.</strong> ${h(note.examplePicture)}</p>
         ${workedSteps(note.exampleSteps)}
         <p>${id==='personality'?'':'<strong>Answer:</strong> '}${h(note.solution)}</p>
-        ${note.models.map(model=>`
-          <h4>${h(model.title)}</h4>
+        ${note.models.map((model,index)=>`
+          <h4>${typeLabel} ${index+2} · ${h(model.title)}</h4>
           <p>${h(model.prompt)}</p>
           <p class="exam-note-picture"><strong>Picture it.</strong> ${h(model.picture)}</p>
           ${workedSteps(model.steps)}

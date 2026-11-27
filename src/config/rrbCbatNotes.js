@@ -3,7 +3,8 @@ export const CBAT_NOTES = {
     skill:'Figure comparison, rotation, and spotting the odd shape.',
     methodUse:{
       type:'Figure Comparison / Rotation and Reflection',
-      when:'when several grid figures look alike and you must find the one that cannot match by turning or sliding'
+      when:'when several grid figures look alike and you must find the one that cannot match by turning or sliding',
+      rule:'Line up one distinctive feature and compare the remaining cells after each permitted turn. A turn preserves which cells share an edge.'
     },
     basics:[
       ["Cell and edge","A filled cell is one square. Edge-neighbours share a side. A diagonal touch leaves those cells disconnected in an edge comparison."],
@@ -73,7 +74,8 @@ export const CBAT_NOTES = {
     skill:'Filtering distractors and adding only the digits the prompt specifies.',
     methodUse:{
       type:'Selective Attention / Digit Filtering',
-      when:'when a long row contains both target digits and distractors and the instructions ask you to add or count only the targets'
+      when:'when a long row contains both target digits and distractors and the instructions ask you to add or count only the targets',
+      rule:'Count one for each qualifying position if asked how many. Add each qualifying digit’s value if asked for the sum.'
     },
     basics:[
       ["Target and distractor","The instruction defines the qualifying entries. In an odd-digit row, 7 is a target and 8 is a distractor. A new instruction can reverse which digits apply."],
@@ -142,7 +144,8 @@ export const CBAT_NOTES = {
     skill:'Following connected routes, respecting barriers, and finding the marked building on the shortest route.',
     methodUse:{
       type:'Spatial Scanning / Shortest Routes',
-      when:'when a street map gives more than one way to reach the finish and you must identify a numbered building on the shortest valid route'
+      when:'when a street map gives more than one way to reach the finish and you must identify a numbered building on the shortest valid route',
+      rule:'Compare complete open routes from start to finish. Count the segments if they are equal in length or add the labelled distances if they differ.'
     },
     basics:[
       ["Junction and segment","A junction is a point you can visit. A segment is an open connection between two consecutive points on the route."],
@@ -212,7 +215,8 @@ export const CBAT_NOTES = {
     skill:'Applying a set of instructions about sequence, fixed positions, and adjacency.',
     methodUse:{
       type:'Information Ordering / Sequence Constraints',
-      when:'when several possible orders are offered and clues specify fixed positions, immediate neighbours or gaps between tasks'
+      when:'when several possible orders are offered and clues specify fixed positions, immediate neighbours or gaps between tasks',
+      rule:'Treat immediate neighbours as an ordered block. Every rule must hold in the final sequence.'
     },
     basics:[
       ["Position","Write one numbered slot per instruction or item. “Last” anchors an item at the highest slot number."],
@@ -281,7 +285,8 @@ export const CBAT_NOTES = {
     skill:'Becoming familiar with self-report prompts and their response options.',
     methodUse:{
       type:'Personality / Self-report Prompts',
-      when:'when a prompt asks which response best describes your usual preferences or behaviour'
+      when:'when a prompt asks which response best describes your usual preferences or behaviour',
+      rule:'Read the question and the response scale together, then choose the answer that reflects how you usually behave in that situation.'
     },
     basics:[
       ["Self-report item","A self-report prompt asks you to describe your own preference or behaviour from the options supplied."],

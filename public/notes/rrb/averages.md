@@ -13,21 +13,9 @@ Multiply each group’s mean by its headcount. Add those totals and divide by co
 
 **When to use it.** Use this in **Averages / Combined or Corrected Mean** questions when you are given group sizes and means, or when a member is added, removed or replaced.
 
-### Method B · Balance around the target
+**Key rule.** Group total = mean × group size. For a corrected entry, add the replacement and subtract the old value from that total.
 
-A member in a group averaging 52 is 8 below target 60 on average. One in a group averaging 66 is 6 above. Matching total shortage and excess solves for an unknown group size.
-
-**When to use it.** Use this in **Averages / Target Mean** questions when two group means lie on opposite sides of a given overall mean and you need their size ratio or an unknown headcount.
-
-### Method C · Choose the right denominator
-
-With equal distances at positive speeds u and v, use 2uv/(u+v). With equal times, use (u+v)/2. With stops or unequal distances, rebuild each travel time and use the general rule.
-
-**When to use it.** Use this in **Averages / Average Speed** questions when a journey gives different speeds and the prompt specifies equal distances, equal times or stop durations.
-
-## Question models and worked examples
-
-### Two unequal groups
+#### Type 1 · Two unequal groups
 
 **Question.** 24 candidates average 63 and 36 average 73. Find the combined mean.
 
@@ -42,7 +30,7 @@ With equal distances at positive speeds u and v, use 2uv/(u+v). With equal times
 
 **Answer:** 69.
 
-### Correct a mean
+#### Type 2 · Correct a mean
 
 **Question.** The mean of 16 values is recorded as 42. One entry of 58 should be 38. Find the corrected mean.
 
@@ -57,7 +45,15 @@ With equal distances at positive speeds u and v, use 2uv/(u+v). With equal times
 
 **Answer:** 40.75.
 
-### Recover a group size
+### Method B · Balance around the target
+
+A member in a group averaging 52 is 8 below target 60 on average. One in a group averaging 66 is 6 above. Matching total shortage and excess solves for an unknown group size.
+
+**When to use it.** Use this in **Averages / Target Mean** questions when two group means lie on opposite sides of a given overall mean and you need their size ratio or an unknown headcount.
+
+**Key rule.** For two groups on opposite sides of a target mean, total shortfall = total excess.
+
+#### Type 1 · Recover a group size
 
 **Question.** 18 members average 52, a second group averages 66, and the combined mean is 60. How many are in the second group?
 
@@ -72,7 +68,15 @@ With equal distances at positive speeds u and v, use 2uv/(u+v). With equal times
 
 **Answer:** 24 members.
 
-### Equal-distance average speed
+### Method C · Choose the right denominator
+
+With equal distances at positive speeds u and v, use 2uv/(u+v). With equal times, use (u+v)/2. With stops or unequal distances, rebuild each travel time and use the general rule.
+
+**When to use it.** Use this in **Averages / Average Speed** questions when a journey gives different speeds and the prompt specifies equal distances, equal times or stop durations.
+
+**Key rule.** Average speed = total distance ÷ total elapsed time. For two equal distances at positive speeds u and v, this is 2uv ÷ (u + v).
+
+#### Type 1 · Equal-distance average speed
 
 **Question.** A van covers 60 km at 40 km/h and returns at 60 km/h. Find average speed.
 

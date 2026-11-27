@@ -582,6 +582,8 @@ try{
  const spatialLesson=page.locator('[data-cbat-lesson="spatial"]');
  assert.equal(await spatialLesson.getByRole('heading',{level:4}).count(),3);
  assert.match(await spatialLesson.locator('.exam-note-method-use').innerText(),/Spatial Scanning \/ Shortest Routes.*shortest valid route/);
+ assert.match(await spatialLesson.locator('.exam-note-key-rule').innerText(),/Compare complete open routes/);
+ assert.match(await spatialLesson.getByRole('heading',{level:4}).first().innerText(),/^Problem type 1 · /);
  await spatialLesson.getByRole('columnheader',{name:'Use this rule'}).waitFor();
  await spatialLesson.locator('li > br + code',{hasText:'7 − 5 = 2 segments saved'}).waitFor();
  assert.match(await spatialLesson.innerText(),/total length 10/);

@@ -13,21 +13,9 @@ Write the indices under each letter. Check whether differences are constant, gro
 
 **When to use it.** Use this in **Letter Series / Alphabet Shifts** questions when single letters change by a fixed or changing number of alphabet places, including a possible wrap around Z.
 
-### Method B · Split pairs and alternate positions
+**Key rule.** Use A = 1 through Z = 26 and write the step sizes. Wrap after 26 when the pattern continues beyond Z.
 
-For pairs such as BC, EF and HI, read first letters down one column and second letters down another. For interleaving, label each term’s position and read the two tracks independently.
-
-**When to use it.** Use this in **Letter Series / Pairs and Alternating Tracks** questions when terms come in letter pairs or every second term appears to follow its own sequence.
-
-### Method C · Index a periodic block directly
-
-Divide the requested position by the block length. Full blocks use quotient × length characters. A nonzero remainder gives the next block’s position. When it is zero, use the end of the last complete block.
-
-**When to use it.** Use this in **Letter Series / Repeating Blocks** questions when a short letter pattern repeats and the question asks for a faraway position.
-
-## Question models and worked examples
-
-### Increasing shifts with wrap
+#### Type 1 · Increasing shifts with wrap
 
 **Question.** Find the next letter: M, P, T, Y, ?
 
@@ -43,7 +31,15 @@ Divide the requested position by the block length. Full blocks use quotient × l
 
 **Answer:** E.
 
-### Parallel columns
+### Method B · Split pairs and alternate positions
+
+For pairs such as BC, EF and HI, read first letters down one column and second letters down another. For interleaving, label each term’s position and read the two tracks independently.
+
+**When to use it.** Use this in **Letter Series / Pairs and Alternating Tracks** questions when terms come in letter pairs or every second term appears to follow its own sequence.
+
+**Key rule.** Separate the first and second letters of each pair, or separate alternating positions, and solve each track independently.
+
+#### Type 1 · Parallel columns
 
 **Question.** Complete BC, EF, HI, KL, ?
 
@@ -58,7 +54,7 @@ Divide the requested position by the block length. Full blocks use quotient × l
 
 **Answer:** NO.
 
-### Interleaved opposite shifts
+#### Type 2 · Interleaved opposite shifts
 
 **Question.** Complete A, Z, C, X, E, V, ?
 
@@ -73,7 +69,15 @@ Divide the requested position by the block length. Full blocks use quotient × l
 
 **Answer:** G.
 
-### Index a repeated block
+### Method C · Index a periodic block directly
+
+Divide the requested position by the block length. Full blocks use quotient × length characters. A nonzero remainder gives the next block’s position. When it is zero, use the end of the last complete block.
+
+**When to use it.** Use this in **Letter Series / Repeating Blocks** questions when a short letter pattern repeats and the question asks for a faraway position.
+
+**Key rule.** Divide the one-based position by block length. The remainder gives the position inside a block, with zero meaning the block’s last letter.
+
+#### Type 1 · Index a repeated block
 
 **Question.** The block AABC repeats. What is the 38th letter?
 

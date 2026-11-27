@@ -13,21 +13,9 @@ Write the plain letters above the code. Test standard shifts and wrapping before
 
 **When to use it.** Use this in **Coding and Decoding / Single-letter Shifts** questions when an example gives the original and coded form of a word and individual letters may move by a pattern.
 
-### Method B · Carry out composite instructions in order
+**Key rule.** Compare corresponding plain and coded letters, including any wraparound. Inverse shifts decode a uniform shift.
 
-For “reverse then shift,” write the reversed word first. Number those positions before applying odd/even shifts. Classify vowels and consonants using the letters to which the stated rule applies.
-
-**When to use it.** Use this in **Coding and Decoding / Multiple Operations** questions when the instructions combine steps such as reversing a word, shifting positions or treating vowels and consonants differently.
-
-### Method C · Use phrase intersections
-
-Find the shared word between two phrases, then the shared token. A unique overlap and a one-to-one coding rule lock the match. If several words overlap, a third phrase is needed to distinguish them.
-
-**When to use it.** Use this in **Coding and Decoding / Shared Words and Tokens** questions when coded phrases overlap and you need to identify which token matches a specific word.
-
-## Question models and worked examples
-
-### Decode a uniform shift
+#### Type 1 · Decode a uniform shift
 
 **Question.** Each letter is shifted forward by two, wrapping after Z. Decode TCKN.
 
@@ -42,7 +30,15 @@ Find the shared word between two phrases, then the shared token. A unique overla
 
 **Answer:** RAIL.
 
-### Reverse then alternate
+### Method B · Carry out composite instructions in order
+
+For “reverse then shift,” write the reversed word first. Number those positions before applying odd/even shifts. Classify vowels and consonants using the letters to which the stated rule applies.
+
+**When to use it.** Use this in **Coding and Decoding / Multiple Operations** questions when the instructions combine steps such as reversing a word, shifting positions or treating vowels and consonants differently.
+
+**Key rule.** Apply the instructions one at a time in their stated order. To undo several operations, reverse their order.
+
+#### Type 1 · Reverse then alternate
 
 **Question.** Reverse RAIL, then shift odd positions forward one and even positions back one. Give the code.
 
@@ -58,19 +54,7 @@ Find the shared word between two phrases, then the shared token. A unique overla
 
 **Answer:** MHBQ.
 
-### Common token across phrases
-
-**Question.** “blue signal ready” becomes “pa ku ne” and “signal open” becomes “za ku”; order is unspecified and each word has a distinct token. Find the code for signal.
-
-**Picture it.** Imagine each word always wears one secret name tag. One word appears in both sentences. Look for the one tag that appears in both codes.
-
-1. **Find the repeated word.** The two phrases share just one word, “signal.” Because the code may rearrange the tokens, compare which tokens repeat across the phrases.
-2. **Intersect the token sets.** The first code contains pa, ku and ne. The second contains za and ku. Only ku appears in both.
-3. **Match the shared word to the shared token.** Each word has a distinct token, so the only possible code for “signal” is ku.
-
-**Answer:** ku.
-
-### Conditional word code
+#### Type 2 · Conditional word code
 
 **Question.** Shift vowels one letter forward and consonants one letter back, with wrap. Encode TRAIN.
 
@@ -84,6 +68,26 @@ Find the shared word between two phrases, then the shared token. A unique overla
    `S Q B J M ⇒ SQBJM`
 
 **Answer:** SQBJM.
+
+### Method C · Use phrase intersections
+
+Find the shared word between two phrases, then the shared token. A unique overlap and a one-to-one coding rule lock the match. If several words overlap, a third phrase is needed to distinguish them.
+
+**When to use it.** Use this in **Coding and Decoding / Shared Words and Tokens** questions when coded phrases overlap and you need to identify which token matches a specific word.
+
+**Key rule.** A unique common word and a unique common token identify each other when the code is one-to-one.
+
+#### Type 1 · Common token across phrases
+
+**Question.** “blue signal ready” becomes “pa ku ne” and “signal open” becomes “za ku”; order is unspecified and each word has a distinct token. Find the code for signal.
+
+**Picture it.** Imagine each word always wears one secret name tag. One word appears in both sentences. Look for the one tag that appears in both codes.
+
+1. **Find the repeated word.** The two phrases share just one word, “signal.” Because the code may rearrange the tokens, compare which tokens repeat across the phrases.
+2. **Intersect the token sets.** The first code contains pa, ku and ne. The second contains za and ku. Only ku appears in both.
+3. **Match the shared word to the shared token.** Each word has a distinct token, so the only possible code for “signal” is ku.
+
+**Answer:** ku.
 
 ## Quick revision sheet
 

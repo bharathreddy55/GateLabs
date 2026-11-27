@@ -13,21 +13,9 @@ Find each interval width from axis boundaries, then multiply the width by its he
 
 **When to use it.** Use this in **Statistical Distributions / Density Histograms** questions when the vertical axis shows frequency density, especially if the bins are different widths.
 
-### Method B · Locate central ranks with fewer details
+**Key rule.** With frequency density on the vertical axis, class frequency = bin width × frequency density.
 
-Find total n from the last cumulative count. Identify ranks (n+1)/2 for odd n or n/2 and n/2+1 for even n. Read where those ranks fall. Grouped counts can locate the middle class without giving an exact median.
-
-**When to use it.** Use this in **Statistical Distributions / Median and Cumulative Counts** questions when the data are grouped or cumulative and you need to locate the middle observation or class.
-
-### Method C · Decide what the shape supports
-
-Find the crowded region and look for the longer sparse tail. With a symmetric continuous curve, reflect endpoints across the centre and add matching areas. A single endpoint has no area.
-
-**When to use it.** Use this in **Statistical Distributions / Shape and Tail Area** questions when asked to describe skew or use the symmetry of a continuous curve to compare probabilities.
-
-## Question models and worked examples
-
-### Unequal-width histogram
+#### Type 1 · Unequal-width histogram
 
 **Question.** A band of width 5 has frequency density 4. Another of width 10 has density 3. Which has more readings?
 
@@ -42,7 +30,15 @@ Find the crowded region and look for the longer sparse tail. With a symmetric co
 
 **Answer:** The second band, by 10.
 
-### Recover a class and median band
+### Method B · Locate central ranks with fewer details
+
+Find total n from the last cumulative count. Identify ranks (n+1)/2 for odd n or n/2 and n/2+1 for even n. Read where those ranks fall. Grouped counts can locate the middle class without giving an exact median.
+
+**When to use it.** Use this in **Statistical Distributions / Median and Cumulative Counts** questions when the data are grouped or cumulative and you need to locate the middle observation or class.
+
+**Key rule.** Find n from the final cumulative count, then locate each middle rank at the first running total that reaches it.
+
+#### Type 1 · Recover a class and median band
 
 **Question.** Cumulative counts below 10, 20, 30 and 40 are 8, 21, 37 and 48. Find the count from 20 inclusive to 30 exclusive and the median band.
 
@@ -57,7 +53,15 @@ Find the crowded region and look for the longer sparse tail. With a symmetric co
 
 **Answer:** 16 observations. Median band is 20–30.
 
-### Recognise skew
+### Method C · Decide what the shape supports
+
+Find the crowded region and look for the longer sparse tail. With a symmetric continuous curve, reflect endpoints across the centre and add matching areas. A single endpoint has no area.
+
+**When to use it.** Use this in **Statistical Distributions / Shape and Tail Area** questions when asked to describe skew or use the symmetry of a continuous curve to compare probabilities.
+
+**Key rule.** Skew follows the longer tail. In a symmetric continuous distribution, mirror-image intervals around the centre have the same probability.
+
+#### Type 1 · Recognise skew
 
 **Question.** Most times lie around 10–15 minutes, but increasingly sparse values stretch as far as 60 minutes on the high side. What shape is indicated?
 
@@ -69,7 +73,7 @@ Find the crowded region and look for the longer sparse tail. With a symmetric co
 
 **Answer:** Right-skewed.
 
-### Symmetric curve area
+#### Type 2 · Symmetric curve area
 
 **Question.** A continuous symmetric distribution centred at 50 has 18% of its area between 50 and 60. What share lies between 40 and 60?
 

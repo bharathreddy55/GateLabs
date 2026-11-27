@@ -13,21 +13,9 @@ Subtract the y coordinates and divide by the x distance. Compare rates in the sa
 
 **When to use it.** Use this in **Line Graphs / Rates over Unequal Intervals** questions when asked which interval changes faster or how much the plotted quantity changes per unit of time.
 
-### Method B · Use the named endpoints
+**Key rule.** Rate of change = vertical change ÷ horizontal change. Compare slopes in the same units.
 
-For net change across several intervals use final minus initial, regardless of intermediate rises or falls. For a relative change divide that net difference by the initial amount.
-
-**When to use it.** Use this in **Line Graphs / Net and Relative Change** questions when the prompt names an initial and final point and asks for their overall change despite rises and falls in between.
-
-### Method C · Walk along a straight segment
-
-Compute slope m = ∆y/∆x. Multiply by how far the requested x is from the nearer known starting x, then add that increment to its y.
-
-**When to use it.** Use this in **Line Graphs / Interpolation** questions when the requested x-value falls between two labelled points on a straight segment.
-
-## Question models and worked examples
-
-### Steepest rise with uneven intervals
+#### Type 1 · Steepest rise with uneven intervals
 
 **Question.** Figures are 90 on day 0, 110 on day 2 and 134 on day 6. Which interval has faster daily growth?
 
@@ -42,22 +30,7 @@ Compute slope m = ∆y/∆x. Multiply by how far the requested x is from the nea
 
 **Answer:** Days 0–2.
 
-### Net change versus interval change
-
-**Question.** A series reads 80 in April, 100 in May and 90 in June. Find net percent change April to June.
-
-**Picture it.** Cover the May point with your finger. You can still compare where the graph starts in April and where it ends in June.
-
-1. **Choose the requested endpoints.** Net change from April to June compares April’s 80 with June’s 90. May’s intermediate peak is outside that endpoint calculation.\
-   `April = 80, June = 90`
-2. **Find the signed change.** June − April = 90 − 80 = +10 units.\
-   `90 − 80 = +10`
-3. **Use April as the base.** 10/80 × 100% = 12.5%. The positive difference makes this an increase.\
-   `10/80 × 100% = 12.5%`
-
-**Answer:** 12.5% increase.
-
-### Rate from a cumulative graph
+#### Type 2 · Rate from a cumulative graph
 
 **Question.** Cumulative calls rise from 50 at 9:00 to 170 at 11:00 and 245 at 12:00. Which interval had more calls per hour?
 
@@ -72,7 +45,38 @@ Compute slope m = ∆y/∆x. Multiply by how far the requested x is from the nea
 
 **Answer:** 11–12.
 
-### Interpolation
+### Method B · Use the named endpoints
+
+For net change across several intervals use final minus initial, regardless of intermediate rises or falls. For a relative change divide that net difference by the initial amount.
+
+**When to use it.** Use this in **Line Graphs / Net and Relative Change** questions when the prompt names an initial and final point and asks for their overall change despite rises and falls in between.
+
+**Key rule.** Net change = ending value − starting value. Relative change divides that difference by the starting value.
+
+#### Type 1 · Net change versus interval change
+
+**Question.** A series reads 80 in April, 100 in May and 90 in June. Find net percent change April to June.
+
+**Picture it.** Cover the May point with your finger. You can still compare where the graph starts in April and where it ends in June.
+
+1. **Choose the requested endpoints.** Net change from April to June compares April’s 80 with June’s 90. May’s intermediate peak is outside that endpoint calculation.\
+   `April = 80, June = 90`
+2. **Find the signed change.** June − April = 90 − 80 = +10 units.\
+   `90 − 80 = +10`
+3. **Use April as the base.** 10/80 × 100% = 12.5%. The positive difference makes this an increase.\
+   `10/80 × 100% = 12.5%`
+
+**Answer:** 12.5% increase.
+
+### Method C · Walk along a straight segment
+
+Compute slope m = ∆y/∆x. Multiply by how far the requested x is from the nearer known starting x, then add that increment to its y.
+
+**When to use it.** Use this in **Line Graphs / Interpolation** questions when the requested x-value falls between two labelled points on a straight segment.
+
+**Key rule.** On a straight segment, y at x = known y + slope × (x − known x).
+
+#### Type 1 · Interpolation
 
 **Question.** A straight segment connects (10 min, 40 L) and (18 min, 72 L). Estimate volume at 15 min.
 

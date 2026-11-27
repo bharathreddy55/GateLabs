@@ -13,21 +13,9 @@ In linked ratios align the shared quantity before stitching the ratios together.
 
 **When to use it.** Use this in **Ratio and Proportion / Linked Ratios** questions when two ratios share a middle quantity, such as A:B and B:C, and you need A:B:C.
 
-### Method B · Turn shares into an equation
+**Key rule.** Multiply each linked ratio by a factor that makes its shared term equal in both ratios.
 
-Write stocks in a:b as ak and bk. If a transfer moves x from first to second, subtract x from one and add it to the other. Their total stays fixed and the gap changes by 2x.
-
-**When to use it.** Use this in **Ratio and Proportion / Transfers** questions when two shares start in a given ratio and moving an amount between them creates a new ratio or difference.
-
-### Method C · Use a per-unit rate or weighted share
-
-For variable workers and time, compute output per worker per day, then scale to the requested staffing and output. In a mixture, compute solute in each input and combine, using mass weights for mass concentration.
-
-**When to use it.** Use this in **Ratio and Proportion / Work Output and Mixtures** questions when workforce and days change together, or when mixing quantities with different concentrations.
-
-## Question models and worked examples
-
-### Linked ratios
+#### Type 1 · Linked ratios
 
 **Question.** A:B=3:4 and B:C=6:5. Split ₹1,860 between them.
 
@@ -43,7 +31,15 @@ For variable workers and time, compute output per worker per day, then scale to 
 
 **Answer:** ₹540, ₹720, ₹600.
 
-### Ratio after a transfer
+### Method B · Turn shares into an equation
+
+Write stocks in a:b as ak and bk. If a transfer moves x from first to second, subtract x from one and add it to the other. Their total stays fixed and the gap changes by 2x.
+
+**When to use it.** Use this in **Ratio and Proportion / Transfers** questions when two shares start in a given ratio and moving an amount between them creates a new ratio or difference.
+
+**Key rule.** Write a:b as ak and bk. If x moves from the first share to the second, the new amounts are ak − x and bk + x.
+
+#### Type 1 · Ratio after a transfer
 
 **Question.** Stocks are in ratio 7:5. Transfer 24 units from the first to the second and they become equal. Find the originals.
 
@@ -58,7 +54,15 @@ For variable workers and time, compute output per worker per day, then scale to 
 
 **Answer:** 168 and 120.
 
-### Inverse and direct variation
+### Method C · Use a per-unit rate or weighted share
+
+For variable workers and time, compute output per worker per day, then scale to the requested staffing and output. In a mixture, compute solute in each input and combine, using mass weights for mass concentration.
+
+**When to use it.** Use this in **Ratio and Proportion / Work Output and Mixtures** questions when workforce and days change together, or when mixing quantities with different concentrations.
+
+**Key rule.** Per-unit rate = output ÷ (workers × time). Mixture concentration = total amount of solute ÷ total amount of mixture.
+
+#### Type 1 · Inverse and direct variation
 
 **Question.** Eight workers mark 120 m in six days. How many days for 12 workers to mark 210 m at the same output per worker?
 
@@ -73,7 +77,7 @@ For variable workers and time, compute output per worker per day, then scale to 
 
 **Answer:** 7 days.
 
-### Weighted mixture
+#### Type 2 · Weighted mixture
 
 **Question.** Mix 30% and 50% solutions in a 3:2 mass ratio. Find the resulting concentration.
 
@@ -88,7 +92,7 @@ For variable workers and time, compute output per worker per day, then scale to 
 
 **Answer:** 38%.
 
-### Replace part of a well-mixed tank
+#### Type 3 · Replace part of a well-mixed tank
 
 **Question.** A 40 L tank contains a well-mixed 30% solution. Ten litres are removed and replaced by 10 L of a 50% solution. What is the final concentration?
 

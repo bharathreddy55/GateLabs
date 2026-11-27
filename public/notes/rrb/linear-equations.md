@@ -13,21 +13,9 @@ Name present ages before translating the past or future. Subtract or add years t
 
 **When to use it.** Use this in **Linear Equations / Age Problems** questions when a statement compares ages now, a few years ago or several years from now.
 
-### Method B · Use the total to remove one variable
+**Key rule.** Age t years from now = present age + t. Use a negative t for the past.
 
-If x of 54 tickets are expensive, the cheaper count is 54−x. Multiply each count by its price and use revenue to solve. Alternatively, compare actual revenue to the cost of pricing every ticket at the cheaper rate.
-
-**When to use it.** Use this in **Linear Equations / Tickets and Prices** questions when the number of items and total bill are known but the split between two prices is unknown.
-
-### Method C · Clear fractions and check the equality
-
-Multiply the entire equation by the smallest common denominator. Distribute before bringing like terms together. Substitute into the original to catch a sign or omitted term.
-
-**When to use it.** Use this in **Linear Equations / Fractional Coefficients** questions when the unknown appears in terms with different denominators.
-
-## Question models and worked examples
-
-### Ages across years
+#### Type 1 · Ages across years
 
 **Question.** A is 8 years older than B. Four years ago A was twice B’s age. Find their present ages.
 
@@ -43,7 +31,15 @@ Multiply the entire equation by the smallest common denominator. Distribute befo
 
 **Answer:** A is 20, B is 12.
 
-### Ticket count and price
+### Method B · Use the total to remove one variable
+
+If x of 54 tickets are expensive, the cheaper count is 54−x. Multiply each count by its price and use revenue to solve. Alternatively, compare actual revenue to the cost of pricing every ticket at the cheaper rate.
+
+**When to use it.** Use this in **Linear Equations / Tickets and Prices** questions when the number of items and total bill are known but the split between two prices is unknown.
+
+**Key rule.** If x items have higher price H and the remaining N − x cost L, total revenue = Hx + L(N − x).
+
+#### Type 1 · Ticket count and price
 
 **Question.** 54 tickets at ₹30 or ₹50 bring in ₹2,060. How many of each?
 
@@ -59,7 +55,15 @@ Multiply the entire equation by the smallest common denominator. Distribute befo
 
 **Answer:** 32 at ₹30 and 22 at ₹50.
 
-### Clear fractions
+### Method C · Clear fractions and check the equality
+
+Multiply the entire equation by the smallest common denominator. Distribute before bringing like terms together. Substitute into the original to catch a sign or omitted term.
+
+**When to use it.** Use this in **Linear Equations / Fractional Coefficients** questions when the unknown appears in terms with different denominators.
+
+**Key rule.** Multiply each term on both sides by the common denominator. After simplifying, an identity can leave multiple solutions, while a contradiction leaves none.
+
+#### Type 1 · Clear fractions
 
 **Question.** Solve (x−2)/3+(x+1)/4=7.
 
@@ -74,7 +78,7 @@ Multiply the entire equation by the smallest common denominator. Distribute befo
 
 **Answer:** 89/7.
 
-### Dependent equations
+#### Type 2 · Dependent equations
 
 **Question.** Do x+y=12 and 3x+3y=36 determine x and y uniquely?
 

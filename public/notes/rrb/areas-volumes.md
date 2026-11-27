@@ -13,21 +13,9 @@ For a constant border x around a rectangle, add 2x to each outside dimension, fi
 
 **When to use it.** Use this in **Mensuration / Borders and Shaded Areas** questions when asked for the area of a path, frame or ring between an inner and an outer boundary.
 
-### Method B · List physical surfaces before adding
+**Key rule.** Border area = outer area − inner area. An annular sector uses the angle fraction θ ÷ 360° of that difference.
 
-An open-top cylinder uses one circular base and one curved wall. A closed one uses two bases. A cone has slant height along its surface but perpendicular height in its volume formula.
-
-**When to use it.** Use this in **Mensuration / Surface Area** questions when the question asks how much material, paint or covering is needed and tells you which faces are open or closed.
-
-### Method C · Convert volume before dividing by area
-
-When a container has a uniform cross-section, height of a layer is volume divided by base area. Use 1 L = 1000 cm³ to combine litre amounts with centimetre dimensions.
-
-**When to use it.** Use this in **Mensuration / Liquid Depth** questions when a volume of liquid is poured into a container with a constant cross-section and you need its new height.
-
-## Question models and worked examples
-
-### Path around a rectangle
+#### Type 1 · Path around a rectangle
 
 **Question.** A 20 m by 14 m garden has a 1 m wide path outside all four edges. Find path area.
 
@@ -42,7 +30,7 @@ When a container has a uniform cross-section, height of a layer is volume divide
 
 **Answer:** 72 m².
 
-### Annular sector
+#### Type 2 · Annular sector
 
 **Question.** A 90° sector has outer radius 10 cm and inner radius 6 cm removed. Find remaining area.
 
@@ -57,7 +45,15 @@ When a container has a uniform cross-section, height of a layer is volume divide
 
 **Answer:** 16π cm².
 
-### Open cylindrical container
+### Method B · List physical surfaces before adding
+
+An open-top cylinder uses one circular base and one curved wall. A closed one uses two bases. A cone has slant height along its surface but perpendicular height in its volume formula.
+
+**When to use it.** Use this in **Mensuration / Surface Area** questions when the question asks how much material, paint or covering is needed and tells you which faces are open or closed.
+
+**Key rule.** For an open-top cylinder, include πr² for the base plus 2πrh for the curved wall.
+
+#### Type 1 · Open cylindrical container
 
 **Question.** An open-top cylinder has radius 7 cm and height 10 cm. How much sheet area is needed, ignoring overlaps?
 
@@ -72,7 +68,15 @@ When a container has a uniform cross-section, height of a layer is volume divide
 
 **Answer:** 189π cm².
 
-### Transfer and capacity
+### Method C · Convert volume before dividing by area
+
+When a container has a uniform cross-section, height of a layer is volume divided by base area. Use 1 L = 1000 cm³ to combine litre amounts with centimetre dimensions.
+
+**When to use it.** Use this in **Mensuration / Liquid Depth** questions when a volume of liquid is poured into a container with a constant cross-section and you need its new height.
+
+**Key rule.** For a uniform cross-section, filled height = volume ÷ base area. Convert 1 L to 1,000 cm³ when using cm² for the base.
+
+#### Type 1 · Transfer and capacity
 
 **Question.** A tank base is 80 by 50 cm. Pour in 24 L. How far does the water level rise?
 
@@ -87,7 +91,7 @@ When a container has a uniform cross-section, height of a layer is volume divide
 
 **Answer:** 6 cm.
 
-### Comparing solids in the same space
+#### Type 2 · Comparing solids in the same space
 
 **Question.** A cone and a cylinder have radius 3 cm and height 8 cm. What volume is unfilled if the cone’s contents are poured into the cylinder?
 

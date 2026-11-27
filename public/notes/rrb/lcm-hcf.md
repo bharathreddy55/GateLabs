@@ -13,39 +13,9 @@ For HCF, take the smallest power of each prime, counting an absent prime as powe
 
 **When to use it.** Use this in **LCM and HCF / Prime Factors** questions when the numbers have manageable prime factors and you need the LCM, HCF or both.
 
-### Method B · Division for HCF
+**Key rule.** HCF takes the smallest exponent of each prime, including zero when absent. LCM takes the largest exponent.
 
-Divide the larger number by the smaller, then divide the previous divisor by the remainder. A common factor of the previous pair also divides the remainder, so the HCF stays the same. Stop at remainder zero and take the last divisor. For three inputs, find the HCF of the first two and take the HCF of that result and the third.
-
-**When to use it.** Use this in **LCM and HCF / Euclidean Division** questions when asked for the HCF of two or more numbers whose prime factors are hard to spot.
-
-### Method C · Ladder for LCM
-
-Write the inputs in a row. At each stage divide every entry that the chosen prime divides and carry the other entries down. A prime can divide just one of the entries. Once all entries are 1, multiply the primes you used.
-
-**When to use it.** Use this in **LCM and HCF / Ladder Division** questions when you need the least common multiple of several numbers at once, such as intervals that need to line up.
-
-### Two-number identity and ratios
-
-For positive a and b, a × b = HCF(a,b) × LCM(a,b). This works for a pair. If the reduced ratio is m:n and the HCF is h, the numbers are mh and nh. Their LCM is mnh because the parts remaining after removing h are co-prime.
-
-**When to use it.** Use this in **LCM and HCF / Two-Number Relationships** questions when you are given an HCF, an LCM, a number, or a reduced ratio and need to recover information about the pair.
-
-### Fractions and decimals
-
-Reduce positive fractions first. A common denominator lets you treat their numerators as counts in one unit. Equivalently, fraction HCF is HCF of numerators divided by LCM of denominators, and fraction LCM uses LCM of numerators divided by HCF of denominators. For decimals, multiply all inputs by the same power of 10, solve with integers, then divide the result by that power of 10.
-
-**When to use it.** Use this in **LCM and HCF / Fractions and Decimals** questions when the inputs are fractions or decimals and the question asks for their HCF or LCM.
-
-### Remainder problems
-
-Write N = dq + r, with 0 ≤ r < d. If the dividend N is known, subtract r before checking what d can divide. If the divisors are known and share a remainder r, N − r is a common multiple. Select the multiple using the question’s range. If every divisor exceeds its remainder by k, N + k is the common multiple.
-
-**When to use it.** Use this in **LCM and HCF / Remainder Constraints** questions when the same number leaves a specified remainder for several divisors, or the possible divisors must leave stated remainders.
-
-## Question models and worked examples
-
-### Largest equal pieces
+#### Type 1 · Largest equal pieces
 
 **Question.** Cut ropes of 84, 126 and 210 m into the longest identical whole-metre lengths. Find length and count.
 
@@ -59,7 +29,7 @@ Write N = dq + r, with 0 ≤ r < d. If the dividend N is known, subtract r befor
 
 **Answer:** 42 m per piece, 10 pieces.
 
-### Repeating signals
+#### Type 2 · Repeating signals
 
 **Question.** Lights flash together at 10:00, then every 18, 24 and 40 seconds. When are they next together?
 
@@ -74,38 +44,15 @@ Write N = dq + r, with 0 ≤ r < d. If the dividend N is known, subtract r befor
 
 **Answer:** 10:06.
 
-### Same remainder
+### Method B · Division for HCF
 
-**Question.** Find the greatest divisor giving remainder 5 for each of 149, 197 and 245.
+Divide the larger number by the smaller, then divide the previous divisor by the remainder. A common factor of the previous pair also divides the remainder, so the HCF stays the same. Stop at remainder zero and take the last divisor. For three inputs, find the HCF of the first two and take the HCF of that result and the third.
 
-**Picture it.** Imagine putting the same five spare counters aside from each pile. The counters still on the table must split evenly into groups of the unknown size.
+**When to use it.** Use this in **LCM and HCF / Euclidean Division** questions when asked for the HCF of two or more numbers whose prime factors are hard to spot.
 
-1. **Remove the required remainder.** If division leaves 5, subtracting 5 gives an exact multiple of the divisor. The adjusted numbers are 144, 192 and 240.\
-   `149 − 5 = 144, 197 − 5 = 192, 245 − 5 = 240`
-2. **Find their greatest common divisor.** 192 − 144 = 48 and 240 − 192 = 48, so every common divisor divides 48. All three adjusted numbers are divisible by 48.\
-   `GCD(144, 192, 240) = 48`
-3. **Check the original remainders.** 149 = 3 × 48 + 5, 197 = 4 × 48 + 5 and 245 = 5 × 48 + 5. Since 5 < 48, these are valid remainders.\
-   `149 = 48 × 3 + 5, 197 = 48 × 4 + 5, 245 = 48 × 5 + 5`
+**Key rule.** HCF(a, b) = HCF(b, remainder of a ÷ b). Stop at a zero remainder and use the last nonzero divisor.
 
-**Answer:** 48.
-
-### Recover a number
-
-**Question.** HCF=12, LCM=240 and one number is 48. Find the other.
-
-**Picture it.** Think of two whole numbers as sharing the same bundle size. Their product also matches the product of their biggest shared factor and smallest shared multiple.
-
-1. **Use the two-number identity.** For positive integers, HCF × LCM equals their product. Here the product is 12 × 240 = 2,880.\
-   `12 × 240 = 2,880`
-2. **Isolate the missing number.** Divide the product by the known number 48, obtaining 2,880 ÷ 48 = 60.\
-   `2,880 ÷ 48 = 60`
-3. **Verify both conditions.** 48 = 12 × 4 and 60 = 12 × 5. The co-factors 4 and 5 are coprime, giving HCF 12 and LCM 12 × 4 × 5 = 240.\
-   `12 × 4 = 48, 12 × 5 = 60`\
-   `12 × 4 × 5 = 240`
-
-**Answer:** 60.
-
-### HCF by repeated division
+#### Type 1 · HCF by repeated division
 
 **Question.** Find the HCF of 48 and 18 without listing all their factors.
 
@@ -120,7 +67,15 @@ Write N = dq + r, with 0 ≤ r < d. If the dividend N is known, subtract r befor
 
 **Answer:** 6.
 
-### LCM by ladder
+### Method C · Ladder for LCM
+
+Write the inputs in a row. At each stage divide every entry that the chosen prime divides and carry the other entries down. A prime can divide just one of the entries. Once all entries are 1, multiply the primes you used.
+
+**When to use it.** Use this in **LCM and HCF / Ladder Division** questions when you need the least common multiple of several numbers at once, such as intervals that need to line up.
+
+**Key rule.** Divide each divisible entry by the chosen prime and carry the others forward. Multiply the ladder divisors once all entries reach 1.
+
+#### Type 1 · LCM by ladder
 
 **Question.** Find LCM(12, 15, 20).
 
@@ -137,7 +92,137 @@ Write N = dq + r, with 0 ≤ r < d. If the dividend N is known, subtract r befor
 
 **Answer:** 60.
 
-### HCF and LCM of fractions
+#### Type 2 · Largest four-digit common multiple
+
+**Question.** Find the largest four-digit number divisible by 12, 15 and 20.
+
+**Picture it.** Picture stepping along the multiples of 60 toward a ceiling of 9,999. If the ceiling falls between steps, walk back to the last step below it.
+
+1. **Find the common step.** A valid number must be a multiple of the LCM.\
+   `LCM(12, 15, 20) = 60`
+2. **Divide the endpoint.** The remainder is how far 9,999 lies above the previous multiple.\
+   `9,999 = 60 × 166 + 39`
+3. **Subtract that excess.** The next multiple is out of range.\
+   `9,999 − 39 = 9,960`\
+   `9,960 + 60 = 10,020`
+
+**Answer:** 9,960.
+
+#### Type 3 · Return to a marked point
+
+**Question.** Three runners start together and take 10, 15 and 20 minutes per lap. When are all three next at the starting line?
+
+**Picture it.** Each runner can only appear back at the line after a whole number of their own laps. Look for the first time all three have finished whole laps.
+
+1. **Count whole laps.** Each runner is at the line after any positive multiple of their own lap time.
+2. **Find the first shared time.** The necessary prime powers are 2², 3 and 5.\
+   `LCM(10, 15, 20) = 2² × 3 × 5 = 60 min`
+3. **Check the lap counts.** All runners have finished whole laps.\
+   `60 ÷ 10 = 6, 60 ÷ 15 = 4, 60 ÷ 20 = 3`
+
+**Answer:** 60 minutes after the start.
+
+### Method D · Two-number identity and ratios
+
+For positive a and b, a × b = HCF(a,b) × LCM(a,b). This works for a pair. If the reduced ratio is m:n and the HCF is h, the numbers are mh and nh. Their LCM is mnh because the parts remaining after removing h are co-prime.
+
+**When to use it.** Use this in **LCM and HCF / Two-Number Relationships** questions when you are given an HCF, an LCM, a number, or a reduced ratio and need to recover information about the pair.
+
+**Key rule.** For two positive integers, a × b = HCF(a, b) × LCM(a, b). If the reduced ratio is m:n and the HCF is h, the numbers are mh and nh.
+
+#### Type 1 · Recover a number
+
+**Question.** HCF=12, LCM=240 and one number is 48. Find the other.
+
+**Picture it.** Think of two whole numbers as sharing the same bundle size. Their product also matches the product of their biggest shared factor and smallest shared multiple.
+
+1. **Use the two-number identity.** For positive integers, HCF × LCM equals their product. Here the product is 12 × 240 = 2,880.\
+   `12 × 240 = 2,880`
+2. **Isolate the missing number.** Divide the product by the known number 48, obtaining 2,880 ÷ 48 = 60.\
+   `2,880 ÷ 48 = 60`
+3. **Verify both conditions.** 48 = 12 × 4 and 60 = 12 × 5. The co-factors 4 and 5 are coprime, giving HCF 12 and LCM 12 × 4 × 5 = 240.\
+   `12 × 4 = 48, 12 × 5 = 60`\
+   `12 × 4 × 5 = 240`
+
+**Answer:** 60.
+
+### Method E · HCF and LCM of fractions and decimals
+
+Reduce positive fractions first. A common denominator lets you treat their numerators as counts in one unit. Equivalently, fraction HCF is HCF of numerators divided by LCM of denominators, and fraction LCM uses LCM of numerators divided by HCF of denominators. For decimals, multiply all inputs by the same power of 10, solve with integers, then divide the result by that power of 10.
+
+**When to use it.** Use this in **LCM and HCF / Fractions and Decimals** questions when the inputs are fractions or decimals and the question asks for their HCF or LCM.
+
+**Key rule.** Reduce fractions first. For decimals, use one power of 10 for every input and divide the integer HCF or LCM by that same factor.
+
+#### Type 1 · HCF of fractions
+
+**Question.** Find the HCF of 2/3 and 4/9.
+
+**Formula.** HCF of fractions = HCF of numerators ÷ LCM of denominators
+
+**Picture it.** Imagine both fractions as pieces of the same-sized whole. In ninths, 2/3 is 6 pieces and 4/9 is 4 pieces. Find the largest equal bundle that fits both.
+
+1. **Reduce each fraction.** 2/3 and 4/9 are already in simplest form. The numerators are 2 and 4, and the denominators are 3 and 9.\
+   `(2, 4) over (3, 9)`
+2. **Match each pair to the formula.** The largest number that divides 2 and 4 is 2. The first common multiple of 3 and 9 is 9.\
+   `HCF(2, 4) = 2 and LCM(3, 9) = 9`
+3. **Divide and check.** The result is 2/9. The given fractions contain 3 and 2 whole multiples of 2/9, so it fits both.\
+   `(2/3) ÷ (2/9) = 3 and (4/9) ÷ (2/9) = 2`
+
+**Answer:** 2/9.
+
+#### Type 2 · LCM of fractions
+
+**Question.** Find the LCM of 2/3 and 4/9.
+
+**Formula.** LCM of fractions = LCM of numerators ÷ HCF of denominators
+
+**Picture it.** Imagine each fraction as the length of a small strip. Lay copies of each strip end to end. The LCM is the first length both lines reach together.
+
+1. **Start with reduced fractions.** Both fractions are already reduced. Apply the LCM rule to numerators 2 and 4, and the HCF rule to denominators 3 and 9.\
+   `LCM(2, 4) = 4 and HCF(3, 9) = 3`
+2. **Put the two results together.** Divide the LCM of the numerators by the HCF of the denominators.\
+   `4 ÷ 3 = 4/3`
+3. **Check the multiples.** The result contains two copies of 2/3 and three copies of 4/9. Using one copy of 2/3 cannot work because it is only 1½ copies of 4/9.\
+   `2 × (2/3) = 3 × (4/9) = 4/3`
+
+**Answer:** 4/3.
+
+#### Type 3 · HCF of decimals
+
+**Question.** Find the HCF of 1.2 and 1.8.
+
+**Formula.** Decimal HCF = HCF of the scaled integers ÷ the common scale
+
+**Picture it.** Count everything in tenths. The two amounts are 12 tenths and 18 tenths. Find the biggest bundle of tenths that fits both amounts exactly.
+
+1. **Choose one common scale.** Both decimals have one decimal place, so multiply each by 10.\
+   `1.2 × 10 = 12 and 1.8 × 10 = 18`
+2. **Find the integer HCF.** 12 = 2 × 6 and 18 = 3 × 6. Since 2 and 3 share only 1, the HCF is 6.\
+   `HCF(12, 18) = 6`
+3. **Undo the scale and check.** Divide 6 by the same factor of 10. Two copies of 0.6 give 1.2, and three copies give 1.8.\
+   `6 ÷ 10 = 0.6`
+
+**Answer:** 0.6.
+
+#### Type 4 · LCM of decimals
+
+**Question.** Find the LCM of 1.2 and 1.8.
+
+**Formula.** Decimal LCM = LCM of the scaled integers ÷ the common scale
+
+**Picture it.** Think of two lights flashing every 1.2 and 1.8 seconds. Count in tenths of a second to find the first time they flash together again.
+
+1. **Convert both to integers.** Multiply both decimals by 10 so they are counts of the same unit.\
+   `1.2 × 10 = 12 and 1.8 × 10 = 18`
+2. **Find the integer LCM.** The first multiples of 12 are 12, 24, 36, and the first multiples of 18 are 18, 36. The first common multiple is 36.\
+   `LCM(12, 18) = 36`
+3. **Undo the scale and check.** Divide 36 by 10. The result is three copies of 1.2 and two copies of 1.8.\
+   `36 ÷ 10 = 3.6`
+
+**Answer:** 3.6.
+
+#### Type 5 · HCF and LCM of fractions
 
 **Question.** Find the HCF and LCM of 2/3, 4/9 and 5/6.
 
@@ -153,7 +238,7 @@ Write N = dq + r, with 0 ≤ r < d. If the dividend N is known, subtract r befor
 
 **Answer:** HCF = 1/18, LCM = 20/3.
 
-### Decimal HCF
+#### Type 6 · Decimal HCF
 
 **Question.** Find the greatest positive size that fits exactly into 0.60, 0.90 and 1.20.
 
@@ -168,7 +253,53 @@ Write N = dq + r, with 0 ≤ r < d. If the dividend N is known, subtract r befor
 
 **Answer:** 0.30.
 
-### Common remainder with a lower bound
+#### Type 7 · Decimals with different numbers of places
+
+**Question.** Find the HCF and LCM of 0.36 and 1.2.
+
+**Picture it.** Write 1.2 as 1.20. Now both numbers are counts of hundredths, so you can use the same-sized pieces for both.
+
+1. **Choose a scale that works for both inputs.** Multiplying by 10 would leave 0.36 as 3.6. Multiply both by 100 to get 36 and 120.
+2. **Find the two integer results.** The HCF of 36 and 120 is 12 because 36 = 3 × 12 and 120 = 10 × 12. Their LCM is 36 × 120 ÷ 12 = 360.
+3. **Undo the scale and check.** The HCF is 12 ÷ 100 = 0.12, and the LCM is 360 ÷ 100 = 3.6. The two inputs are 3 and 10 copies of 0.12. Ten copies of 0.36 and three copies of 1.2 give 3.6.
+
+**Answer:** HCF = 0.12, LCM = 3.6.
+
+**Fractions and decimals at a glance**
+
+| Problem type | Formula or steps |
+| --- | --- |
+| HCF of reduced fractions | HCF of numerators ÷ LCM of denominators |
+| LCM of reduced fractions | LCM of numerators ÷ HCF of denominators |
+| HCF of decimals | Scale to integers → find HCF → divide by the scale |
+| LCM of decimals | Scale to integers → find LCM → divide by the scale |
+
+**Exam check.** Reduce each fraction first. When decimal lengths differ, use the power of 10 that makes every input an integer. For 0.36 and 1.2, use 100 for both.
+
+### Method F · Remainder problems
+
+Write N = dq + r, with 0 ≤ r < d. If the dividend N is known, subtract r before checking what d can divide. If the divisors are known and share a remainder r, N − r is a common multiple. Select the multiple using the question’s range. If every divisor exceeds its remainder by k, N + k is the common multiple.
+
+**When to use it.** Use this in **LCM and HCF / Remainder Constraints** questions when the same number leaves a specified remainder for several divisors, or the possible divisors must leave stated remainders.
+
+**Key rule.** A remainder r on division by d means d divides N − r, with 0 ≤ r < d. If all d − r equal k, every d divides N + k.
+
+#### Type 1 · Same remainder
+
+**Question.** Find the greatest divisor giving remainder 5 for each of 149, 197 and 245.
+
+**Picture it.** Imagine putting the same five spare counters aside from each pile. The counters still on the table must split evenly into groups of the unknown size.
+
+1. **Remove the required remainder.** If division leaves 5, subtracting 5 gives an exact multiple of the divisor. The adjusted numbers are 144, 192 and 240.\
+   `149 − 5 = 144, 197 − 5 = 192, 245 − 5 = 240`
+2. **Find their greatest common divisor.** 192 − 144 = 48 and 240 − 192 = 48, so every common divisor divides 48. All three adjusted numbers are divisible by 48.\
+   `GCD(144, 192, 240) = 48`
+3. **Check the original remainders.** 149 = 3 × 48 + 5, 197 = 4 × 48 + 5 and 245 = 5 × 48 + 5. Since 5 < 48, these are valid remainders.\
+   `149 = 48 × 3 + 5, 197 = 48 × 4 + 5, 245 = 48 × 5 + 5`
+
+**Answer:** 48.
+
+#### Type 2 · Common remainder with a lower bound
 
 **Question.** Find the smallest number greater than 12 leaving remainder 5 on division by 6, 8 and 12.
 
@@ -183,7 +314,7 @@ Write N = dq + r, with 0 ≤ r < d. If the dividend N is known, subtract r befor
 
 **Answer:** 29.
 
-### Constant gap
+#### Type 3 · Constant gap
 
 **Question.** Find the least positive integer leaving remainders 3, 4, 5 on division by 4, 5, 6 respectively.
 
@@ -198,7 +329,7 @@ Write N = dq + r, with 0 ≤ r < d. If the dividend N is known, subtract r befor
 
 **Answer:** 59.
 
-### Remainders larger than the candidate divisor
+#### Type 4 · Remainders larger than the candidate divisor
 
 **Question.** Does a positive integer divide 62, 132 and 237 with respective remainders 6, 6 and 5?
 
@@ -213,7 +344,7 @@ Write N = dq + r, with 0 ≤ r < d. If the dividend N is known, subtract r befor
 
 **Answer:** No such divisor exists.
 
-### Known valid remainders
+#### Type 5 · Known valid remainders
 
 **Question.** Find the greatest positive divisor that leaves remainders 4, 6 and 5 when dividing 60, 90 and 117, respectively.
 
@@ -230,7 +361,7 @@ Write N = dq + r, with 0 ≤ r < d. If the dividend N is known, subtract r befor
 
 **Answer:** 28.
 
-### Unknown common remainder
+#### Type 6 · Unknown common remainder
 
 **Question.** Find the largest divisor that leaves the same remainder when dividing 43, 91 and 183. The remainder is unknown.
 
@@ -245,36 +376,6 @@ Write N = dq + r, with 0 ≤ r < d. If the dividend N is known, subtract r befor
    `43 = 4 × 10 + 3, 91 = 4 × 22 + 3, 183 = 4 × 45 + 3`
 
 **Answer:** 4.
-
-### Largest four-digit common multiple
-
-**Question.** Find the largest four-digit number divisible by 12, 15 and 20.
-
-**Picture it.** Picture stepping along the multiples of 60 toward a ceiling of 9,999. If the ceiling falls between steps, walk back to the last step below it.
-
-1. **Find the common step.** A valid number must be a multiple of the LCM.\
-   `LCM(12, 15, 20) = 60`
-2. **Divide the endpoint.** The remainder is how far 9,999 lies above the previous multiple.\
-   `9,999 = 60 × 166 + 39`
-3. **Subtract that excess.** The next multiple is out of range.\
-   `9,999 − 39 = 9,960`\
-   `9,960 + 60 = 10,020`
-
-**Answer:** 9,960.
-
-### Return to a marked point
-
-**Question.** Three runners start together and take 10, 15 and 20 minutes per lap. When are all three next at the starting line?
-
-**Picture it.** Each runner can only appear back at the line after a whole number of their own laps. Look for the first time all three have finished whole laps.
-
-1. **Count whole laps.** Each runner is at the line after any positive multiple of their own lap time.
-2. **Find the first shared time.** The necessary prime powers are 2², 3 and 5.\
-   `LCM(10, 15, 20) = 2² × 3 × 5 = 60 min`
-3. **Check the lap counts.** All runners have finished whole laps.\
-   `60 ÷ 10 = 6, 60 ÷ 15 = 4, 60 ÷ 20 = 3`
-
-**Answer:** 60 minutes after the start.
 
 ## Quick revision sheet
 

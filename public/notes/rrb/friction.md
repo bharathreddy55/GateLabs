@@ -13,21 +13,9 @@ If a block stays still, find the force needed to balance the applied force. Comp
 
 **When to use it.** Use this in **Friction / Static or Sliding** questions when the question asks whether a resting object will start moving or asks for friction below the slipping threshold.
 
-### Method B · Find normal force from perpendicular balance
+**Key rule.** Static friction balances the force trying to slide the object, up to μₛN.
 
-On level ground with a pull upward and no vertical acceleration, N = mg − pull’s vertical component. Draw the vertical forces before using μₖN. For sliding acceleration, subtract friction along the motion and divide net force by mass.
-
-**When to use it.** Use this in **Friction / Angled Pulls and Normal Force** questions when an applied force has a vertical component or the contact force is needed before finding sliding friction.
-
-### Method C · Resolve gravity on a slope
-
-Use perpendicular weight component mg cos θ and downhill component mg sin θ. At the threshold of slipping, μₛmg cos θ = mg sin θ, so the minimum coefficient is tan θ.
-
-**When to use it.** Use this in **Friction / Inclined Planes** questions when a block is on a slope and you must find whether it slides or the minimum friction coefficient to hold it.
-
-## Question models and worked examples
-
-### Static friction below the limit
+#### Type 1 · Static friction below the limit
 
 **Question.** A block has normal force 100 N and μₛ=0.4. A horizontal 24 N push fails to move it. Find friction.
 
@@ -42,7 +30,15 @@ Use perpendicular weight component mg cos θ and downhill component mg sin θ. A
 
 **Answer:** 24 N opposite the push.
 
-### Sliding acceleration
+### Method B · Find normal force from perpendicular balance
+
+On level ground with a pull upward and no vertical acceleration, N = mg − pull’s vertical component. Draw the vertical forces before using μₖN. For sliding acceleration, subtract friction along the motion and divide net force by mass.
+
+**When to use it.** Use this in **Friction / Angled Pulls and Normal Force** questions when an applied force has a vertical component or the contact force is needed before finding sliding friction.
+
+**Key rule.** Find N from perpendicular force balance first. Sliding friction has magnitude μₖN in this model.
+
+#### Type 1 · Sliding acceleration
 
 **Question.** A 10 kg block slides on level ground, g=10 and μₖ=0.25. If pushed horizontally with 40 N in its direction of motion, what is the acceleration?
 
@@ -57,7 +53,7 @@ Use perpendicular weight component mg cos θ and downhill component mg sin θ. A
 
 **Answer:** 1.5 m/s² in the direction of motion.
 
-### Angled pull and normal force
+#### Type 2 · Angled pull and normal force
 
 **Question.** A 20 kg crate slides on level ground. An angled rope pulls upward with a 40 N vertical component. With g=10 and μₖ=0.3, find kinetic friction.
 
@@ -72,7 +68,15 @@ Use perpendicular weight component mg cos θ and downhill component mg sin θ. A
 
 **Answer:** 48 N against sliding.
 
-### Incline threshold
+### Method C · Resolve gravity on a slope
+
+Use perpendicular weight component mg cos θ and downhill component mg sin θ. At the threshold of slipping, μₛmg cos θ = mg sin θ, so the minimum coefficient is tan θ.
+
+**When to use it.** Use this in **Friction / Inclined Planes** questions when a block is on a slope and you must find whether it slides or the minimum friction coefficient to hold it.
+
+**Key rule.** On a simple incline with no other applied force, the slipping threshold is μₛ = tan θ.
+
+#### Type 1 · Incline threshold
 
 **Question.** A block sits on a 30° slope. What is the smallest μₛ that can hold it, with no other applied force?
 

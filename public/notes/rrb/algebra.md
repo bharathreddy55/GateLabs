@@ -13,21 +13,9 @@ If x+y and xy are given, use (x+y)² = x² + 2xy + y². Isolate the unknown part
 
 **When to use it.** Use this in **Algebra / Identities** questions when the question gives the sum and product of two numbers and asks for a related expression such as the sum of their squares.
 
-### Method B · Factor before simplifying fractions
+**Key rule.** x² + y² = (x + y)² − 2xy.
 
-Use the difference of squares or look for factors of the constant whose sum is the middle coefficient for a monic quadratic. Cancel common factors only on the original domain.
-
-**When to use it.** Use this in **Algebra / Rational Expressions** questions when a numerator and denominator contain polynomial expressions that may share factors.
-
-### Method C · Use a convenient centre
-
-For factors equally far from a round value a, write them as a+b and a−b. Their product is a²−b². With x+1/x, the cross term on squaring becomes 2 because x is nonzero.
-
-**When to use it.** Use this in **Algebra / Symmetric Factors and Reciprocals** questions when two factors sit equally far above and below a convenient number, or when squaring an expression such as x + 1/x.
-
-## Question models and worked examples
-
-### Hidden middle term
+#### Type 1 · Hidden middle term
 
 **Question.** Given x+y=13 and xy=36, find x²+y².
 
@@ -42,7 +30,15 @@ For factors equally far from a round value a, write them as a+b and a−b. Their
 
 **Answer:** 97.
 
-### Simplify with restrictions
+### Method B · Factor before simplifying fractions
+
+Use the difference of squares or look for factors of the constant whose sum is the middle coefficient for a monic quadratic. Cancel common factors only on the original domain.
+
+**When to use it.** Use this in **Algebra / Rational Expressions** questions when a numerator and denominator contain polynomial expressions that may share factors.
+
+**Key rule.** Factor numerator and denominator, then cancel shared factors while keeping the original restrictions on x.
+
+#### Type 1 · Simplify with restrictions
 
 **Question.** Simplify (x²−25)/(x²−x−20) and state exclusions.
 
@@ -58,7 +54,15 @@ For factors equally far from a round value a, write them as a+b and a−b. Their
 
 **Answer:** (x+5)/(x+4), x≠5 and x≠−4.
 
-### Efficient product
+### Method C · Use a convenient centre
+
+For factors equally far from a round value a, write them as a+b and a−b. Their product is a²−b². With x+1/x, the cross term on squaring becomes 2 because x is nonzero.
+
+**When to use it.** Use this in **Algebra / Symmetric Factors and Reciprocals** questions when two factors sit equally far above and below a convenient number, or when squaring an expression such as x + 1/x.
+
+**Key rule.** For factors equally far from a centre, use (a + b)(a − b) = a² − b². For x ≠ 0, (x + 1/x)² = x² + 2 + 1/x².
+
+#### Type 1 · Efficient product
 
 **Question.** Evaluate 103×97 using an identity.
 
@@ -73,7 +77,7 @@ For factors equally far from a round value a, write them as a+b and a−b. Their
 
 **Answer:** 9991.
 
-### Reciprocal expression
+#### Type 2 · Reciprocal expression
 
 **Question.** Given x+1/x=5, find x²+1/x².
 

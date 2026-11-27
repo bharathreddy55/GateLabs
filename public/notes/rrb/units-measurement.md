@@ -13,21 +13,9 @@ Multiply by a ratio equal to one, choosing the orientation that cancels the old 
 
 **When to use it.** Use this in **Units and Measurements / Unit Conversion** questions when lengths, areas, volumes or compound units such as density are given in different units.
 
-### Method B · Expand the derived unit
+**Key rule.** For area or volume, square or cube the linear conversion factor. Convert the numerator and denominator separately for compound units.
 
-Start from a physical equation. For mechanical work, use force times displacement. Express force as mass times acceleration, then multiply by metres to get kg·m²/s².
-
-**When to use it.** Use this in **Units and Measurements / Derived SI Units** questions when you need to express a quantity such as work or pressure in base units, or check that a formula is dimensionally consistent.
-
-### Method C · Separate resolution from offset
-
-Resolution is the smallest change shown. Zero error is a systematic shift that can occur even with fine resolution. Correct the offset before rounding to instrument precision.
-
-**When to use it.** Use this in **Units and Measurements / Instrument Error** questions when a scale has a nonzero reading at zero, or you must distinguish that offset from the size of its smallest reading increment.
-
-## Question models and worked examples
-
-### Convert volume units
+#### Type 1 · Convert volume units
 
 **Question.** Convert 0.036 m³ to litres and cm³.
 
@@ -42,7 +30,7 @@ Resolution is the smallest change shown. Zero error is a systematic shift that c
 
 **Answer:** 36 L or 36,000 cm³.
 
-### Convert a compound unit
+#### Type 2 · Convert a compound unit
 
 **Question.** Convert 2.7 g/cm³ to kg/m³.
 
@@ -57,7 +45,15 @@ Resolution is the smallest change shown. Zero error is a systematic shift that c
 
 **Answer:** 2700 kg/m³.
 
-### Identify derived dimensions
+### Method B · Expand the derived unit
+
+Start from a physical equation. For mechanical work, use force times displacement. Express force as mass times acceleration, then multiply by metres to get kg·m²/s².
+
+**When to use it.** Use this in **Units and Measurements / Derived SI Units** questions when you need to express a quantity such as work or pressure in base units, or check that a formula is dimensionally consistent.
+
+**Key rule.** Start with a defining equation. Work = force × distance, so 1 J = 1 N·m = 1 kg·m²/s².
+
+#### Type 1 · Identify derived dimensions
 
 **Question.** Express one joule in SI base units.
 
@@ -72,7 +68,15 @@ Resolution is the smallest change shown. Zero error is a systematic shift that c
 
 **Answer:** kg·m²/s².
 
-### Correct zero error
+### Method C · Separate resolution from offset
+
+Resolution is the smallest change shown. Zero error is a systematic shift that can occur even with fine resolution. Correct the offset before rounding to instrument precision.
+
+**When to use it.** Use this in **Units and Measurements / Instrument Error** questions when a scale has a nonzero reading at zero, or you must distinguish that offset from the size of its smallest reading increment.
+
+**Key rule.** Corrected reading = displayed reading − zero reading. Resolution is the smallest increment the instrument displays.
+
+#### Type 1 · Correct zero error
 
 **Question.** A caliper reads +0.03 cm when closed and 1.82 cm on a rod. What is the corrected diameter?
 
