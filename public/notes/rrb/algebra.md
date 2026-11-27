@@ -11,13 +11,19 @@
 
 If x+y and xy are given, use (x+y)² = x² + 2xy + y². Isolate the unknown part directly. You can often find it without finding x and y individually.
 
+**When to use it.** Use this in **Algebra / Identities** questions when the question gives the sum and product of two numbers and asks for a related expression such as the sum of their squares.
+
 ### Method B · Factor before simplifying fractions
 
 Use the difference of squares or look for factors of the constant whose sum is the middle coefficient for a monic quadratic. Cancel common factors only on the original domain.
 
+**When to use it.** Use this in **Algebra / Rational Expressions** questions when a numerator and denominator contain polynomial expressions that may share factors.
+
 ### Method C · Use a convenient centre
 
 For factors equally far from a round value a, write them as a+b and a−b. Their product is a²−b². With x+1/x, the cross term on squaring becomes 2 because x is nonzero.
+
+**When to use it.** Use this in **Algebra / Symmetric Factors and Reciprocals** questions when two factors sit equally far above and below a convenient number, or when squaring an expression such as x + 1/x.
 
 ## Question models and worked examples
 

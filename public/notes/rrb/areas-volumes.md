@@ -11,13 +11,19 @@
 
 For a constant border x around a rectangle, add 2x to each outside dimension, find the outer area and subtract the inner one. Check corner squares are included once.
 
+**When to use it.** Use this in **Mensuration / Borders and Shaded Areas** questions when asked for the area of a path, frame or ring between an inner and an outer boundary.
+
 ### Method B · List physical surfaces before adding
 
 An open-top cylinder uses one circular base and one curved wall. A closed one uses two bases. A cone has slant height along its surface but perpendicular height in its volume formula.
 
+**When to use it.** Use this in **Mensuration / Surface Area** questions when the question asks how much material, paint or covering is needed and tells you which faces are open or closed.
+
 ### Method C · Convert volume before dividing by area
 
 When a container has a uniform cross-section, height of a layer is volume divided by base area. Use 1 L = 1000 cm³ to combine litre amounts with centimetre dimensions.
+
+**When to use it.** Use this in **Mensuration / Liquid Depth** questions when a volume of liquid is poured into a container with a constant cross-section and you need its new height.
 
 ## Question models and worked examples
 

@@ -11,13 +11,19 @@
 
 Draw the fulcrum and direction of each force. At equilibrium the clockwise moments equal anticlockwise moments. Multiply by the perpendicular arm rather than any slanted length from the pivot.
 
+**When to use it.** Use this in **Levers and Simple Machines / Moments** questions when a lever, beam or balance is held still and you need a missing force or distance from the pivot.
+
 ### Method B · Compare force and distance ratios
 
 Use MA = load/effort and VR = effort distance/load distance. Efficiency = MA/VR when the force distances align as in the question. For a ramp, effort distance is along the ramp while the load’s useful rise is vertical.
 
+**When to use it.** Use this in **Levers and Simple Machines / Mechanical Advantage and Efficiency** questions when load and effort or their travel distances are given for a machine such as a ramp or lever.
+
 ### Method C · Track supporting strands in a simple pulley
 
 When n rope segments supporting the moving block each shorten by the rise h, the free end must move nh. Multiply free-end movement by effort for input work and load rise by load for useful work.
+
+**When to use it.** Use this in **Levers and Simple Machines / Pulleys** questions when a rope supports a moving block on several strands and the question asks how far the free end or load moves.
 
 ## Question models and worked examples
 

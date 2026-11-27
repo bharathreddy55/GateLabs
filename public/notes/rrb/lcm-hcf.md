@@ -11,25 +11,37 @@
 
 For HCF, take the smallest power of each prime, counting an absent prime as power zero. For LCM, take the largest power of each prime. For 12 = 2² × 3 and 18 = 2 × 3², HCF = 2 × 3 = 6 and LCM = 2² × 3² = 36. Think shared blocks for HCF and enough blocks for every input for LCM.
 
+**When to use it.** Use this in **LCM and HCF / Prime Factors** questions when the numbers have manageable prime factors and you need the LCM, HCF or both.
+
 ### Method B · Division for HCF
 
 Divide the larger number by the smaller, then divide the previous divisor by the remainder. A common factor of the previous pair also divides the remainder, so the HCF stays the same. Stop at remainder zero and take the last divisor. For three inputs, find the HCF of the first two and take the HCF of that result and the third.
+
+**When to use it.** Use this in **LCM and HCF / Euclidean Division** questions when asked for the HCF of two or more numbers whose prime factors are hard to spot.
 
 ### Method C · Ladder for LCM
 
 Write the inputs in a row. At each stage divide every entry that the chosen prime divides and carry the other entries down. A prime can divide just one of the entries. Once all entries are 1, multiply the primes you used.
 
+**When to use it.** Use this in **LCM and HCF / Ladder Division** questions when you need the least common multiple of several numbers at once, such as intervals that need to line up.
+
 ### Two-number identity and ratios
 
 For positive a and b, a × b = HCF(a,b) × LCM(a,b). This works for a pair. If the reduced ratio is m:n and the HCF is h, the numbers are mh and nh. Their LCM is mnh because the parts remaining after removing h are co-prime.
+
+**When to use it.** Use this in **LCM and HCF / Two-Number Relationships** questions when you are given an HCF, an LCM, a number, or a reduced ratio and need to recover information about the pair.
 
 ### Fractions and decimals
 
 Reduce positive fractions first. A common denominator lets you treat their numerators as counts in one unit. Equivalently, fraction HCF is HCF of numerators divided by LCM of denominators, and fraction LCM uses LCM of numerators divided by HCF of denominators. For decimals, multiply all inputs by the same power of 10, solve with integers, then divide the result by that power of 10.
 
+**When to use it.** Use this in **LCM and HCF / Fractions and Decimals** questions when the inputs are fractions or decimals and the question asks for their HCF or LCM.
+
 ### Remainder problems
 
 Write N = dq + r, with 0 ≤ r < d. If the dividend N is known, subtract r before checking what d can divide. If the divisors are known and share a remainder r, N − r is a common multiple. Select the multiple using the question’s range. If every divisor exceeds its remainder by k, N + k is the common multiple.
+
+**When to use it.** Use this in **LCM and HCF / Remainder Constraints** questions when the same number leaves a specified remainder for several divisors, or the possible divisors must leave stated remainders.
 
 ## Question models and worked examples
 

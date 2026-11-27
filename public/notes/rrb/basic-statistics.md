@@ -11,13 +11,19 @@
 
 Multiply each value by its frequency to recover its contribution to the sum. Add frequencies to recover the observation count. If the question asks for mode, read the highest frequency and return its value.
 
+**When to use it.** Use this in **Statistics / Frequency Tables** questions when repeated observations are listed as values and counts and you need the total, mean or mode.
+
 ### Method B · Locate ranks with cumulative frequencies
 
 Compute the needed middle rank or ranks first. Add frequencies in numerical order and find the first cumulative total reaching each rank. If the middle pair lie in different values, average those values.
 
+**When to use it.** Use this in **Statistics / Median from Frequencies** questions when the data are given as counts and you must find the middle value without writing out every observation.
+
 ### Method C · Track what a transformation preserves
 
 Adding a constant c to each value adds c to its mean and median. Because both endpoints move equally, the range is unchanged. For a one-entry replacement the total changes by the entry difference and the ordering must be rechecked.
+
+**When to use it.** Use this in **Statistics / Changes to a Dataset** questions when every entry is shifted by the same amount or a single observation is corrected and you need updated statistics.
 
 ## Question models and worked examples
 

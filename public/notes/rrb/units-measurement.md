@@ -11,13 +11,19 @@
 
 Multiply by a ratio equal to one, choosing the orientation that cancels the old unit. For density convert mass and volume separately before dividing. Treat cm³ as three factors of cm.
 
+**When to use it.** Use this in **Units and Measurements / Unit Conversion** questions when lengths, areas, volumes or compound units such as density are given in different units.
+
 ### Method B · Expand the derived unit
 
 Start from a physical equation. For mechanical work, use force times displacement. Express force as mass times acceleration, then multiply by metres to get kg·m²/s².
 
+**When to use it.** Use this in **Units and Measurements / Derived SI Units** questions when you need to express a quantity such as work or pressure in base units, or check that a formula is dimensionally consistent.
+
 ### Method C · Separate resolution from offset
 
 Resolution is the smallest change shown. Zero error is a systematic shift that can occur even with fine resolution. Correct the offset before rounding to instrument precision.
+
+**When to use it.** Use this in **Units and Measurements / Instrument Error** questions when a scale has a nonzero reading at zero, or you must distinguish that offset from the size of its smallest reading increment.
 
 ## Question models and worked examples
 

@@ -11,13 +11,19 @@
 
 Fill a fixed end, middle or named position first. Treat immediate pairs as ordered blocks and test only where both seats fit. Use the remaining exact gap to place other people.
 
+**When to use it.** Use this in **Seating Arrangements / Linear Rows** questions when an end or middle seat is fixed or a clue requires specific people to sit together.
+
 ### Method B · Fix rotation in a circle
 
 If no absolute seat is fixed, put the reference person at the top since rotating everyone together preserves relative clues. Mark the person’s facing direction before translating a handed direction into a clockwise or anticlockwise step.
 
+**When to use it.** Use this in **Seating Arrangements / Circular Tables** questions when the seats have no fixed numbers and left or right depends on which way each person faces.
+
 ### Method C · Check both sides of an unsigned gap
 
 If Q is two seats from P, test P−2 and P+2 where they exist. Apply all other clues to each and cross out any incompatible candidate. Verify a surviving arrangement rather than guessing from the more natural view.
+
+**When to use it.** Use this in **Seating Arrangements / Gaps without Direction** questions when the question gives a seat gap between two people without telling you who sits on which side.
 
 ## Question models and worked examples
 

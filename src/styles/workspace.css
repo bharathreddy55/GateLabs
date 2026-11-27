@@ -129,6 +129,13 @@ body,.app-shell,.landing-workspace{font-family:Inter,-apple-system,BlinkMacSyste
     border-radius: .4rem;
     background: var(--ws-soft);
 }
+.exam-note-method-use {
+    padding: .55rem .75rem;
+    border-inline-start: 3px solid var(--ws-primary);
+    border-radius: .35rem;
+    background: color-mix(in srgb, var(--ws-primary) 8%, var(--ws-panel));
+    color: var(--ws-text);
+}
 .topic-note-coverage {
     display: inline-block;
     margin-inline-start: .35rem;

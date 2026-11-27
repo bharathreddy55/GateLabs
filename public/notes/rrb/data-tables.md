@@ -11,13 +11,19 @@
 
 Copy only the relevant rows and name the two quantities you need. Keep a base column beside its rate column. This helps avoid borrowing a denominator from a different station or month.
 
+**When to use it.** Use this in **Data Analysis / Comparing Table Values** questions when a table contains several stations, periods or rates and the question concerns only specific rows or columns.
+
 ### Method B · Recover missing totals
 
 If an average and its count are given, multiply them to find the implied sum. Subtract all known entries. Check that the new total reproduces the stated average.
 
+**When to use it.** Use this in **Data Analysis / Missing Table Entries** questions when a table leaves one value or subtotal blank but gives an average, the number of entries and the remaining values.
+
 ### Method C · Work from the requested period
 
 For a change use (new − old)/old. For an interval share from a running log, subtract its two endpoint totals for the numerator and separately subtract the endpoints of the full period.
+
+**When to use it.** Use this in **Data Analysis / Period Changes and Running Totals** questions when the question compares two dates or asks for one interval’s share from cumulative readings.
 
 ## Question models and worked examples
 

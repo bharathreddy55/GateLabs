@@ -11,13 +11,19 @@
 
 Calculate the output before a worker leaves or joins. Remove that completed portion. Divide the remainder by the rate after the change.
 
+**When to use it.** Use this in **Time and Work / Changing Teams** questions when a worker joins or leaves after a stated number of days and you need to find when the remaining job finishes.
+
 ### Method B · Give each pipe a signed rate
 
 Measure every contribution per hour. A fill pipe is positive and a leak is negative. If net rate is zero or negative, the tank cannot fill from empty while that setup continues.
 
+**When to use it.** Use this in **Pipes and Cisterns / Inlets and Leaks** questions when one or more pipes fill a tank while a drain, outlet or leak empties it.
+
 ### Method C · Solve for a missing contributor
 
 Turn together-time and solo-time into rates first. Subtract the known contributor from the total rate. Then invert the remaining rate to get the solo time.
+
+**When to use it.** Use this in **Time and Work / Pipes and Cisterns** questions when the working time of one person or pipe is unknown and the combined time and another contributor’s solo time are given.
 
 ## Question models and worked examples
 

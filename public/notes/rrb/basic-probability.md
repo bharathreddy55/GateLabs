@@ -11,13 +11,19 @@
 
 Use ordered pairs for a draw sequence or if you will multiply branch probabilities. Use combinations for a group selected without order. Keep the denominator and numerator on the same basis.
 
+**When to use it.** Use this in **Probability / Counting Equally Likely Outcomes** questions when you draw, choose or arrange items and must decide whether different orders count as different outcomes.
+
 ### Method B · Translate key words before solving
 
 “Both” requires the two conditions on the same outcome. “Exactly one” excludes zero and two. “At least one” includes all positive counts and often becomes 1 minus the none case.
 
+**When to use it.** Use this in **Probability / Exactly, At Least and Both** questions when wording such as “exactly one”, “at least one” or “both” defines which results count.
+
 ### Method C · Pick inclusion–exclusion or a tree
 
 For OR with overlap, add both event probabilities then subtract the shared cases once. For successive draws, follow the branch, update the counts and multiply. Add disjoint branches if several orders qualify.
+
+**When to use it.** Use this in **Probability / Overlap and Successive Draws** questions when two events can happen together or when a later draw depends on what happened in an earlier draw.
 
 ## Question models and worked examples
 

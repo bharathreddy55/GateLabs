@@ -216,6 +216,14 @@ try{
  await handnote.getByRole('columnheader',{name:'Use this rule'}).waitFor();
  assert.match(await handnote.innerText(),/500 W input/);
  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2));
+ await page.goto('http://127.0.0.1:3011/#/rrb-station-master?tab=notes&note=time-and-work');
+ const missingContributor=handnote.getByRole('heading',{name:'Method C · Solve for a missing contributor'});
+ await missingContributor.waitFor();
+ const methodCues=handnote.locator('.exam-note-method-use');
+ assert.equal(await methodCues.count(),3);
+ assert.match(await methodCues.last().innerText(),/Time and Work \/ Pipes and Cisterns questions when the working time of one person or pipe is unknown/);
+ assert.equal(await methodCues.last().evaluate(el=>el.previousElementSibling.previousElementSibling.textContent),'Method C · Solve for a missing contributor');
+ assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2));
  await page.goto('http://127.0.0.1:3011/#/sbi-clerk?tab=notes&note=english-reading');
  const readingGuide=page.getByRole('img',{name:'Visual study guide for English Reading Comprehension'});
  await readingGuide.waitFor();

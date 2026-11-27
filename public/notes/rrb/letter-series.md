@@ -11,13 +11,19 @@
 
 Write the indices under each letter. Check whether differences are constant, growing or alternating. A sequence crossing Z can continue its pattern even though the index resets to 1.
 
+**When to use it.** Use this in **Letter Series / Alphabet Shifts** questions when single letters change by a fixed or changing number of alphabet places, including a possible wrap around Z.
+
 ### Method B · Split pairs and alternate positions
 
 For pairs such as BC, EF and HI, read first letters down one column and second letters down another. For interleaving, label each term’s position and read the two tracks independently.
 
+**When to use it.** Use this in **Letter Series / Pairs and Alternating Tracks** questions when terms come in letter pairs or every second term appears to follow its own sequence.
+
 ### Method C · Index a periodic block directly
 
 Divide the requested position by the block length. Full blocks use quotient × length characters. A nonzero remainder gives the next block’s position. When it is zero, use the end of the last complete block.
+
+**When to use it.** Use this in **Letter Series / Repeating Blocks** questions when a short letter pattern repeats and the question asks for a faraway position.
 
 ## Question models and worked examples
 

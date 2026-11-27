@@ -581,6 +581,7 @@ try{
  await page.getByRole('heading',{name:'Rules to remember'}).waitFor();
  const spatialLesson=page.locator('[data-cbat-lesson="spatial"]');
  assert.equal(await spatialLesson.getByRole('heading',{level:4}).count(),3);
+ assert.match(await spatialLesson.locator('.exam-note-method-use').innerText(),/Spatial Scanning \/ Shortest Routes.*shortest valid route/);
  await spatialLesson.getByRole('columnheader',{name:'Use this rule'}).waitFor();
  await spatialLesson.locator('li > br + code',{hasText:'7 − 5 = 2 segments saved'}).waitFor();
  assert.match(await spatialLesson.innerText(),/total length 10/);

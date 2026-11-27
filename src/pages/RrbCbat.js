@@ -73,6 +73,7 @@ function studyNotes(){
         <ul>${note.rules.map(rule=>`<li>${h(rule)}</li>`).join('')}</ul>
         <h3>Methods and when to use them</h3>
         <ol>${note.method.map(step=>`<li>${h(step)}</li>`).join('')}</ol>
+        <p class="exam-note-method-use"><strong>When to use it.</strong> Use this for <strong>${h(note.methodUse.type)}</strong> ${h(note.methodUse.when)}.</p>
         <h3>${id==='personality'?'Prompt models and examples':'Question models and worked examples'}</h3>
         <h4>${h(note.exampleTitle)}</h4>
         <p>${h(note.prompt)}</p>

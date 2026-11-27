@@ -11,13 +11,19 @@
 
 Find each interval width from axis boundaries, then multiply the width by its height. This permits true count comparisons when intervals have unequal widths.
 
+**When to use it.** Use this in **Statistical Distributions / Density Histograms** questions when the vertical axis shows frequency density, especially if the bins are different widths.
+
 ### Method B · Locate central ranks with fewer details
 
 Find total n from the last cumulative count. Identify ranks (n+1)/2 for odd n or n/2 and n/2+1 for even n. Read where those ranks fall. Grouped counts can locate the middle class without giving an exact median.
 
+**When to use it.** Use this in **Statistical Distributions / Median and Cumulative Counts** questions when the data are grouped or cumulative and you need to locate the middle observation or class.
+
 ### Method C · Decide what the shape supports
 
 Find the crowded region and look for the longer sparse tail. With a symmetric continuous curve, reflect endpoints across the centre and add matching areas. A single endpoint has no area.
+
+**When to use it.** Use this in **Statistical Distributions / Shape and Tail Area** questions when asked to describe skew or use the symmetry of a continuous curve to compare probabilities.
 
 ## Question models and worked examples
 

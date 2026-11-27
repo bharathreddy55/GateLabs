@@ -11,13 +11,19 @@
 
 Write the plain letters above the code. Test standard shifts and wrapping before trying a complex rule. If the prompt asks to decode, re-encode the candidate to check it.
 
+**When to use it.** Use this in **Coding and Decoding / Single-letter Shifts** questions when an example gives the original and coded form of a word and individual letters may move by a pattern.
+
 ### Method B · Carry out composite instructions in order
 
 For “reverse then shift,” write the reversed word first. Number those positions before applying odd/even shifts. Classify vowels and consonants using the letters to which the stated rule applies.
 
+**When to use it.** Use this in **Coding and Decoding / Multiple Operations** questions when the instructions combine steps such as reversing a word, shifting positions or treating vowels and consonants differently.
+
 ### Method C · Use phrase intersections
 
 Find the shared word between two phrases, then the shared token. A unique overlap and a one-to-one coding rule lock the match. If several words overlap, a third phrase is needed to distinguish them.
+
+**When to use it.** Use this in **Coding and Decoding / Shared Words and Tokens** questions when coded phrases overlap and you need to identify which token matches a specific word.
 
 ## Question models and worked examples
 

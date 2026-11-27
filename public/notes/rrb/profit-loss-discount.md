@@ -11,13 +11,19 @@
 
 Write CP → MP → SP. Apply a markup to CP, then multiply MP by the fraction remaining after discount. Finally compute the profit rate using the original CP.
 
+**When to use it.** Use this in **Profit, Loss and Discount / Markup Followed by Discount** questions when the cost price and markup are given, then a discount is taken off the marked price.
+
 ### Method B · Work backwards from a target
 
 Start by calculating the SP that provides the required profit or loss. If the discount is known, divide target SP by the fraction retained after discount to find MP.
 
+**When to use it.** Use this in **Profit, Loss and Discount / Target Selling Price** questions when a required profit or loss and a planned discount are given and the shopkeeper needs to choose a marked price.
+
 ### Method C · Combine by totals
 
 When different items have equal SPs, recover each CP by division. Add receipts and costs separately. A gain and a loss of the same percent generally act on different costs.
+
+**When to use it.** Use this in **Profit and Loss / Multiple Sales** questions when items or batches have different gains and losses, often at the same selling price, and you need the result for all sales together.
 
 ## Question models and worked examples
 

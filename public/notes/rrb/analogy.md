@@ -11,13 +11,19 @@
 
 Say “a barometer measures pressure,” then substitute “an odometer measures ….” This filters closely related words that have different roles.
 
+**When to use it.** Use this in **Analogies / Word Relationships** questions when a question pairs two words and asks which choice repeats the same relationship in the same direction.
+
 ### Method B · Test a short numeric rule
 
 Try a difference, factor or familiar square or cube. Verify the candidate against every shown pair using the same operations and constants. Then substitute the new input.
 
+**When to use it.** Use this in **Analogies / Number Pairs** questions when the examples use numbers and you need an arithmetic rule that works for every pair shown.
+
 ### Method C · Align letters by position
 
 Write the two words one above the other. Count shifts with A=1 to Z=26, including wrap if specified. Check whether all positions follow one pattern before applying it to the target.
+
+**When to use it.** Use this in **Analogies / Letter Pairs** questions when both sides contain letters or strings of equal length and the clue is in how their positions change.
 
 ## Question models and worked examples
 

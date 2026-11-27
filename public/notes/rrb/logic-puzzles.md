@@ -11,13 +11,19 @@
 
 For floors, write below to above in one direction. If four ordered items fill four distinct floors, the chain fixes their positions. Verify the strict adjacency after placement.
 
+**When to use it.** Use this in **Logic Puzzles / Floors and Strict Order** questions when above, below, before or after clues can be joined into one ordered chain.
+
 ### Method B · Use an elimination grid for categories
 
 Make a row per person and mark impossible colours or topics. Place the fixed values. Carry exclusivity both ways so each fixed cell crosses out its row and column alternatives.
 
+**When to use it.** Use this in **Logic Puzzles / Matching People and Categories** questions when several people must each match one value from categories such as colours, topics or days.
+
 ### Method C · Branch only on clues with few options
 
 Try the requested slot or the tightest condition first. Propagate its consequences until you find a completion or conflict. For a schedule with dates and topics, keep both columns attached to each date.
+
+**When to use it.** Use this in **Logic Puzzles / Testing Schedules and Candidates** questions when fixed clues alone leave several layouts and the question asks for a valid schedule or a possible placement.
 
 ## Question models and worked examples
 

@@ -11,13 +11,19 @@
 
 Read it in sequence and label its job with one phrase, such as benefit, limitation or action. If an option swaps the order or invents missing evidence, compare it to your labels.
 
+**When to use it.** Use this in **Reading Comprehension / Organisation** questions when asked how a sentence or paragraph develops the argument, such as by adding evidence, a contrast or a next step.
+
 ### Method B · Cite two clues for tone
 
 Pick one word about confidence and one about the author’s approach. “May” signals caution. Comparing readings and requesting more data shows an analytical approach.
 
+**When to use it.** Use this in **Reading Comprehension / Tone and Attitude** questions when asked how the author feels about a claim or how strongly the author expresses it.
+
 ### Method C · Ask what changes if the sentence is removed
 
 If only the concrete case disappears while the main claim survives, the sentence illustrates. If an objection and reply disappear together, the paragraph was addressing resistance to a claim.
+
+**When to use it.** Use this in **Reading Comprehension / Purpose of an Example or Objection** questions when asked why the author included a particular example, comparison or objection.
 
 ## Question models and worked examples
 

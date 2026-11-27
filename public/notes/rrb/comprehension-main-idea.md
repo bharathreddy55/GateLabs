@@ -11,13 +11,19 @@
 
 Write a few words naming what changed or why the paragraph is there. Combine those jobs into one sentence that fits the beginning and end. For a problem–response passage, include both the problem and what addressed it.
 
+**When to use it.** Use this in **Reading Comprehension / Whole-passage Main Idea** questions when asked what the passage is mainly about and every paragraph adds a different detail or stage.
+
 ### Method B · Target the requested detail
 
 Circle the named entity and condition before scanning. Find the exact sentence, then check adjacent lines for an exception. If a museum’s cafe and galleries have different hours, keep their facts in separate rows.
 
+**When to use it.** Use this in **Reading Comprehension / Supporting Details** questions when the question asks for a stated fact about a particular person, place, time or condition.
+
 ### Method C · Compare titles and summaries against the full passage
 
 Discard choices that name a single example or expand beyond the evidence. The best option should account for the central result, including any contrast that matters to it.
+
+**When to use it.** Use this in **Reading Comprehension / Best Title or Summary** questions when several choices are true in part and you need the one broad enough to cover the whole passage.
 
 ## Question models and worked examples
 

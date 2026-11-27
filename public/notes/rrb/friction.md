@@ -11,13 +11,19 @@
 
 If a block stays still, find the force needed to balance the applied force. Compare that force with μₛN. Substituting the maximum for an ordinary static case overstates the friction.
 
+**When to use it.** Use this in **Friction / Static or Sliding** questions when the question asks whether a resting object will start moving or asks for friction below the slipping threshold.
+
 ### Method B · Find normal force from perpendicular balance
 
 On level ground with a pull upward and no vertical acceleration, N = mg − pull’s vertical component. Draw the vertical forces before using μₖN. For sliding acceleration, subtract friction along the motion and divide net force by mass.
 
+**When to use it.** Use this in **Friction / Angled Pulls and Normal Force** questions when an applied force has a vertical component or the contact force is needed before finding sliding friction.
+
 ### Method C · Resolve gravity on a slope
 
 Use perpendicular weight component mg cos θ and downhill component mg sin θ. At the threshold of slipping, μₛmg cos θ = mg sin θ, so the minimum coefficient is tan θ.
+
+**When to use it.** Use this in **Friction / Inclined Planes** questions when a block is on a slope and you must find whether it slides or the minimum friction coefficient to hold it.
 
 ## Question models and worked examples
 

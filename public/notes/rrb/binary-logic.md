@@ -11,13 +11,19 @@
 
 If a token can be in only X, Y or Z, make a row for each place and a column for each claim. For “exactly one,” retain rows with one T. This automatically handles claims containing a negation.
 
+**When to use it.** Use this in **Binary Logic / Exactly One True Statement** questions when the prompt gives a small set of possible cases and specifies how many claims must be true.
+
 ### Method B · Link a speaker to their statement
 
 A truth-teller’s statement must evaluate true and a liar’s statement false. Start by testing a claim that refers to its own speaker or to everyone. If the assigned speaker type disagrees with the statement’s truth value, discard that world.
 
+**When to use it.** Use this in **Binary Logic / Truth-tellers and Liars** questions when speakers’ statements give clues about who tells the truth and who lies.
+
 ### Method C · Transform conditionals in the valid direction
 
 From P and P⇒Q, deduce Q. From ¬Q and P⇒Q, deduce ¬P. If Q is given, look for a counterexample with P false before claiming P.
+
+**When to use it.** Use this in **Binary Logic / Conditional Deductions** questions when the prompt gives an if–then rule and a fact about the condition or the result.
 
 ## Question models and worked examples
 

@@ -11,13 +11,19 @@
 
 Subtract the y coordinates and divide by the x distance. Compare rates in the same units, such as calls per hour. Avoid comparing the raw increases when intervals have unequal length.
 
+**When to use it.** Use this in **Line Graphs / Rates over Unequal Intervals** questions when asked which interval changes faster or how much the plotted quantity changes per unit of time.
+
 ### Method B · Use the named endpoints
 
 For net change across several intervals use final minus initial, regardless of intermediate rises or falls. For a relative change divide that net difference by the initial amount.
 
+**When to use it.** Use this in **Line Graphs / Net and Relative Change** questions when the prompt names an initial and final point and asks for their overall change despite rises and falls in between.
+
 ### Method C · Walk along a straight segment
 
 Compute slope m = ∆y/∆x. Multiply by how far the requested x is from the nearer known starting x, then add that increment to its y.
+
+**When to use it.** Use this in **Line Graphs / Interpolation** questions when the requested x-value falls between two labelled points on a straight segment.
 
 ## Question models and worked examples
 

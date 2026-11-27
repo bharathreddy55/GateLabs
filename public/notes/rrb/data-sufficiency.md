@@ -11,13 +11,19 @@
 
 For 2x+2y, rewrite the target as 2(x+y). Knowing the sum can determine it even though x and y individually vary. Avoid solving irrelevant unknowns.
 
+**When to use it.** Use this in **Data Sufficiency / Determining an Expression** questions when the question asks for a combination such as x + y and the statements may fix that expression even though the individual values vary.
+
 ### Method B · Treat yes and no alike
 
 If a statement forces no for every admissible case, it is sufficient for a yes/no question. If both yes and no remain possible, give one witness for each to disprove sufficiency.
 
+**When to use it.** Use this in **Data Sufficiency / Yes-or-No Questions** questions when the target is whether a property holds and you need to check if every allowed case gives the same response.
+
 ### Method C · Combine deliberately
 
 If neither statement works alone, test their intersection. Watch for contradictions with the domain. Map the result to the choices shown, since option letters can vary between papers.
+
+**When to use it.** Use this in **Data Sufficiency / Combining Statements** questions when neither statement gives a unique answer by itself and you must test what the two statements fix together.
 
 ## Question models and worked examples
 

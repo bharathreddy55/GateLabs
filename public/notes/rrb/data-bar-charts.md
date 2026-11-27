@@ -11,13 +11,19 @@
 
 Check axis ticks and their spacing. If the baseline is above zero, take the actual values from the numeric labels. Use those values for percent changes.
 
+**When to use it.** Use this in **Bar Charts / Axis and Scale** questions when the baseline is above zero, ticks jump by more than one unit or the question asks for a difference or percent change.
+
 ### Method B · Recover a segment from boundaries
 
 For a middle band, record its lower and upper coordinates. Subtract to get the band count. Divide by the full stack only if a share of the group is asked.
 
+**When to use it.** Use this in **Bar Charts / Stacked Segments** questions when the target category sits in the middle or at the top of a stack and only the segment boundaries are readable.
+
 ### Method C · Choose share or count explicitly
 
 For shares, divide each subgroup by its own whole. For counts shown as shares, multiply by that group’s total. Only then compare like measures.
+
+**When to use it.** Use this in **Bar Charts / Counts versus Proportions** questions when groups have different totals or the bars display percentages and you must compare underlying counts.
 
 ## Question models and worked examples
 

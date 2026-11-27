@@ -11,13 +11,19 @@
 
 Sketch the universal constraints first. Place a dot for each stated existence only where the rules allow. The same dot may serve more than one premise when allowed, but two separate premises can require different dots.
 
+**When to use it.** Use this in **Syllogisms / All, No and Some** questions when universal rules and existence claims must be combined to see which conclusions can follow.
+
 ### Method B · Carry a given witness through the chain
 
 If a dot is in A and A sits inside B, it is in B too. If B is disjoint from C, the same dot is outside C. State the result about that witness without upgrading it to all A.
 
+**When to use it.** Use this in **Syllogisms / Tracing an Existing Member** questions when a premise says some member belongs to a set and other rules tell you where that same member must or cannot be.
+
 ### Method C · Build a minimal counterexample
 
 To test whether “some A are B” and “some B are C” force A∩C, try two distinct B members. Put one in A and the other in C, leaving A and C disjoint.
+
+**When to use it.** Use this in **Syllogisms / Testing an Uncertain Conclusion** questions when a conclusion links two sets and you need to see whether the premises allow one arrangement where the conclusion fails.
 
 ## Question models and worked examples
 

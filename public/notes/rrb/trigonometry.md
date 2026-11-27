@@ -11,13 +11,19 @@
 
 Treat a reduced sine or cosine as a scaled pair of side lengths. Use Pythagoras to fill in the third side. Then form the requested ratio using the same reference angle.
 
+**When to use it.** Use this in **Trigonometry / Converting Ratios** questions when one trigonometric ratio of an acute angle is given and the question asks for another ratio.
+
 ### Method B · Work from a horizontal through the observer
 
 Use the horizontal distance as the adjacent leg and the rise above the eye as the opposite leg. Add the observer’s eye height to get the total object height when both stand on the same level.
 
+**When to use it.** Use this in **Trigonometry / Heights and Distances** questions when an angle of elevation or depression and a horizontal distance are given, sometimes with the observer’s eye height.
+
 ### Method C · Equate two expressions for one height
 
 When nearer and farther observations are on the same line from the base, call their distances x and x plus the known gap. Both tangent expressions give the same vertical height. Solve the distance equation first.
+
+**When to use it.** Use this in **Trigonometry / Two Observations** questions when the same object is seen at two angles from positions a known distance apart on the same straight line.
 
 ## Question models and worked examples
 

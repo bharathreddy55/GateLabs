@@ -11,13 +11,19 @@
 
 Write the fixed slots first and mark full groups. Turn an immediate pair into a two-slot block. Test only starts where the full block fits.
 
+**When to use it.** Use this in **Data Arrangement / Fixed Positions and Blocks** questions when clues fix a slot or require two entries to occupy consecutive slots.
+
 ### Method B · Use a capacity table for grouping
 
 Write total positions and used positions beside each group. A group with one free position cannot take a linked pair. Place the pair where it fits, then allocate leftover members.
 
+**When to use it.** Use this in **Data Arrangement / Group Capacity** questions when people or items must be split between groups of fixed sizes and some must stay together.
+
 ### Method C · Branch on a requested placement
 
 Assume the proposed slot and run each clue. If every continuation violates a rule it is impossible. For “must be true,” look for a second valid layout where the claimed position changes.
+
+**When to use it.** Use this in **Data Arrangement / Possible and Forced Placements** questions when asked whether a candidate can fit in a position or must appear there in every valid arrangement.
 
 ## Question models and worked examples
 

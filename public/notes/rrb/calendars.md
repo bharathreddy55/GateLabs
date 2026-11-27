@@ -11,13 +11,19 @@
 
 Find end date minus start date and reduce modulo 7. Move forward by the remaining number of weekdays. For a date before the anchor, move backward by the elapsed difference.
 
+**When to use it.** Use this in **Calendars / Weekdays Within One Month** questions when the weekday of one date is known and the other date is in the same month.
+
 ### Method B · Walk over month boundaries
 
 Use actual month lengths or name the boundary dates when the interval is short. February 28 → February 29 → March 1 is two shifts in a leap year.
 
+**When to use it.** Use this in **Calendars / Crossing Month Boundaries** questions when two dates are in different months and a short interval depends on the exact length of each month.
+
 ### Method C · Handle century years before longer spans
 
 Apply the 400-year exception to a century. For longer date intervals, break the span into full years plus remaining days and count the leap days actually crossed.
+
+**When to use it.** Use this in **Calendars / Leap Years and Long Spans** questions when dates are years apart or the interval crosses February in a century year.
 
 ## Question models and worked examples
 

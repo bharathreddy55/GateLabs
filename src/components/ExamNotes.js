@@ -46,6 +46,7 @@ export function formatNote(markdown) {
     .replace(/\\\r?\n[ \t]*/g, '<br>');
   return markdown.trim().split(/\r?\n\s*\r?\n/).map(block => {
     if (block.startsWith('**Picture it.** ')) return `<p class="exam-note-picture">${inline(block)}</p>`;
+    if (block.startsWith('**When to use it.** ')) return `<p class="exam-note-method-use">${inline(block)}</p>`;
     if (block.startsWith('## ')) return `<h4>${inline(block.slice(3))}</h4>`;
     if (block.startsWith('### ')) return `<h5>${inline(block.slice(4))}</h5>`;
     const lines = block.split(/\r?\n/);

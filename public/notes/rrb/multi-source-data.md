@@ -11,13 +11,19 @@
 
 Use a small scratch table with entity, time, count and base. Join a rate or rule only to the row it covers. Convert any percentage to a count before adding different groups.
 
+**When to use it.** Use this in **Multi-source Data Analysis / Combining Rates and Counts** questions when a table and a chart give different parts of the same calculation, such as a total in one source and its rate in another.
+
 ### Method B · Follow the group within the group
 
 Start at the whole, find the first subgroup, and then take the share of that subgroup. To answer what percent of the original whole the result represents, divide by the overall total.
 
+**When to use it.** Use this in **Multi-source Data Analysis / Nested Groups** questions when a question gives a percentage of a subgroup and asks what the result represents out of the original whole.
+
 ### Method C · Make two possible examples if data look incomplete
 
 Keep each disclosed figure fixed and vary the missing value. If two plausible values give different answers, the sources do not determine a unique result.
+
+**When to use it.** Use this in **Multi-source Data Analysis / Missing Information** questions when asked whether combined sources determine a unique answer and an input appears to be missing.
 
 ## Question models and worked examples
 

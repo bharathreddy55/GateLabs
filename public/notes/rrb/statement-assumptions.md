@@ -11,13 +11,19 @@
 
 Write “because … therefore …” in your own words. Ask which condition must connect those two statements. For a new counter to affect a queue, it must serve at least part of that queue.
 
+**When to use it.** Use this in **Statements and Assumptions / Finding the Hidden Link** questions when a plan or claim follows a reason and you must identify what the speaker is taking for granted.
+
 ### Method B · Negate the proposed assumption
 
 Negate “some can be helped” to “none can be helped.” If the plan no longer has a mechanism, the assumption is necessary. Negating “every worker prefers evenings” permits some who prefer evenings, so the plan can still work.
 
+**When to use it.** Use this in **Statements and Assumptions / Testing a Candidate** questions when asked to choose a necessary assumption from options that include facts that merely help the argument.
+
 ### Method C · Match the missing link to the argument type
 
 A survey needs a justified link from respondents to the stated population. A causal claim based on timing needs a reason to rule out an alternative that fully explains the effect. A plan needs a mechanism tying action to outcome.
+
+**When to use it.** Use this in **Statements and Assumptions / Surveys, Causes and Plans** questions when the type of argument tells you what to check, such as who a survey represents, what caused a change or how an action could help.
 
 ## Question models and worked examples
 

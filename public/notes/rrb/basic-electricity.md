@@ -11,13 +11,19 @@
 
 Add series resistances directly. In parallel add their reciprocals and invert. The equivalent positive resistance of a parallel group is smaller than any branch resistance.
 
+**When to use it.** Use this in **Electricity / Series and Parallel Resistance** questions when the question asks for equivalent resistance or total current and the resistor groups share a path or the same two connection points.
+
 ### Method B · Work back through a mixed network
 
 Reduce the parallel pair, add the remaining series resistance and find loop current. Recover voltage across the reduced pair. Apply that shared voltage separately to the requested branch.
 
+**When to use it.** Use this in **Electricity / Mixed Circuits** questions when series and parallel parts appear together and the question asks for the current or voltage of a particular branch.
+
 ### Method C · Find billable energy
 
 Convert watts to kW and multiply by all operating hours. If tariff is given, multiply the result in kWh by price per kWh after accounting for any specified fixed charges.
+
+**When to use it.** Use this in **Electricity / Energy Consumption and Tariffs** questions when appliance wattage and running time are given and you need energy in kWh or the cost.
 
 ## Question models and worked examples
 

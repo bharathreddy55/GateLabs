@@ -11,13 +11,19 @@
 
 Use left = N+1−right when N is known. Compare both positions in that system. If both end ranks refer to one person and N is missing, add and subtract one.
 
+**When to use it.** Use this in **Rankings / Opposite-end Positions** questions when positions are measured from opposite ends and the question asks for a gap or for the total number of people.
+
 ### Method B · Follow the seat on a swap
 
 When A moves into B’s old seat, A’s new left rank can be combined with B’s old right rank. They refer to a single physical seat despite involving different names.
 
+**When to use it.** Use this in **Rankings / Swapping Positions** questions when people exchange places and the question mixes an old rank with a new rank.
+
 ### Method C · Rebuild ranks after exits
 
 Start with counts ahead and behind. Remove the numbers from those two counts. Add one for the person to get each new rank and verify the sum equals the new N+1.
+
+**When to use it.** Use this in **Rankings / People Leaving a Line** questions when the prompt says how many people leave ahead of or behind a named person and you need the updated ranks.
 
 ## Question models and worked examples
 

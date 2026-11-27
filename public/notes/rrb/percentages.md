@@ -11,13 +11,19 @@
 
 When only a percentage change is asked, start at 100. For +25% then −20%, that shows the second step removes 20% of 125, which is 25.
 
+**When to use it.** Use this in **Percentages / Successive Change** questions when rises and falls act one after the other and you only need the overall percentage change.
+
 ### Method B · Undo with division
 
 When the final amount is given, divide by the multiplier to recover the base. Subtracting the stated percentage of the new amount uses the wrong base.
 
+**When to use it.** Use this in **Percentages / Reverse Percentage** questions when the question gives the value after a rise or fall and asks for the original value.
+
 ### Method C · Convert a friendly percentage to a fraction
 
 12.5% is 1/8, so an increase multiplies by 9/8. Under fixed spend the inverse factor is 8/9. Fractions avoid early rounding on closely spaced options.
+
+**When to use it.** Use this in **Percentages / Fraction Shortcuts** questions when the rate is a familiar fraction such as 12.5%, or a price changes while total spending stays fixed.
 
 ## Question models and worked examples
 

@@ -11,13 +11,19 @@
 
 Write each first difference above its gap. If the jumps change systematically, take a second difference. When a jump table fails, test ratios or simple multiply-and-adjust rules.
 
+**When to use it.** Use this in **Number Series / Changing Gaps** questions when a sequence grows or shrinks and the differences between neighbouring terms may follow their own pattern.
+
 ### Method B · Make two scratch rows for alternation
 
 Separate positions 1,3,5 and 2,4,6. Determine each track’s step, then use the one containing the blank. An apparent combined jump need not fit either rule.
 
+**When to use it.** Use this in **Number Series / Alternating Patterns** questions when odd and even positions appear to follow different rules.
+
 ### Method C · Verify over the blank from both sides
 
 For a missing or wrong term, find a simple rule that fits the known terms. Insert the candidate and check both neighbouring transitions and all available checkpoints.
+
+**When to use it.** Use this in **Number Series / Missing or Incorrect Interior Terms** questions when the blank or suspected error lies between known terms and you can test the rule on both sides.
 
 ## Question models and worked examples
 

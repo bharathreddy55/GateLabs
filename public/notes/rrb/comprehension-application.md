@@ -11,13 +11,19 @@
 
 Write what the passage recorded and what it left unknown. For a sensor, ask what types of event can trigger it before attributing an observed reading to someone.
 
+**When to use it.** Use this in **Reading Comprehension / Warranted Inference** questions when asked what can be concluded from an observation and the alternatives suggest different possible explanations.
+
 ### Method B · Create a condition checklist
 
 Write each requirement in its own slot. Mark which the given case satisfies, fails or leaves unknown. Apply only the rule for the setting asked about.
 
+**When to use it.** Use this in **Reading Comprehension / Applying a Rule** questions when a passage supplies a policy or set of criteria and the question gives a new case to check.
+
 ### Method C · Match alternatives to the claim they would challenge
 
 To weaken a causal argument, a competing cause should be comparable in time and affect the same outcome. To reject an overbroad inference, point to a meaningful place, time or population outside the evidence.
+
+**When to use it.** Use this in **Reading Comprehension / Weakening and Scope** questions when an option introduces an alternative cause or tests whether evidence from one setting supports a wider claim.
 
 ## Question models and worked examples
 

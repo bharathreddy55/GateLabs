@@ -11,13 +11,19 @@
 
 Break the process into temperature changes and phase changes. Use mcΔT for each warming or cooling segment and mL for a phase transition. Convert every energy term to the same unit before adding.
 
+**When to use it.** Use this in **Heat and Temperature / Phase Changes** questions when a substance warms or cools and also melts, freezes, boils or condenses along the way.
+
 ### Method B · Balance an insulated mixture
 
 Set heat lost by warm material equal to heat gained by cooler material, with a single final temperature. For the same material with no phase change, its specific heat cancels and mass determines the weights.
 
+**When to use it.** Use this in **Heat and Temperature / Calorimetry** questions when warm and cool substances are mixed in an insulated setup and the question asks for their final temperature.
+
 ### Method C · Convert temperatures by scale and offset
 
 K = °C + 273.15 and °F = (9/5)°C + 32. For a temperature difference the offset cancels, so a Celsius change equals the Kelvin change and multiplies by 9/5 for Fahrenheit.
+
+**When to use it.** Use this in **Heat and Temperature / Temperature Scales** questions when converting a reading or a temperature difference between Celsius, Fahrenheit and Kelvin.
 
 ## Question models and worked examples
 

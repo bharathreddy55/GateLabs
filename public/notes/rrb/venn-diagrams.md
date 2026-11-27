@@ -11,13 +11,19 @@
 
 In a three-set diagram put the triple count in the centre first. Subtract it from every inclusive pair. Then find each single-only number by removing the pair-only regions and the centre from that set total.
 
+**When to use it.** Use this in **Venn Diagrams / Three-set Region Counts** questions when you know the count in all three sets and must find counts in pair-only or single-only regions.
+
 ### Method B · Use inclusion–exclusion when only totals are given
 
 For two sets add their counts and subtract their intersection. For three sets subtract all three inclusive pair intersections and add the triple once. The triple had been counted three times and then removed three times.
 
+**When to use it.** Use this in **Venn Diagrams / Counting at Least One** questions when set totals and overlaps are given and the question asks how many distinct members belong to any set.
+
 ### Method C · Solve backward from neither or exactly
 
 Neither is the complement of the union. Recover union as total minus neither, then use the other totals to find overlap. For exactly two, sum just the three pair-only regions.
+
+**When to use it.** Use this in **Venn Diagrams / Neither and Exactly Two** questions when a count outside the sets helps recover an overlap, or when you must count members in precisely two sets.
 
 ## Question models and worked examples
 

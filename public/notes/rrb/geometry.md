@@ -11,13 +11,19 @@
 
 Draw the shape and label each stated angle. With parallel lines, use the corresponding or alternate interior relationships to find matching angles, then prove similarity by two angles.
 
+**When to use it.** Use this in **Plane Geometry / Parallel Lines and Similar Triangles** questions when lines are marked parallel or you need to prove that two triangles have matching angles.
+
 ### Method B · Turn an angle sum into shares
 
 If two angles in ratio m:n add to S, one share is S/(m+n). In a regular polygon each exterior turn equals 180° minus one interior angle. The turns complete a full circuit.
 
+**When to use it.** Use this in **Plane Geometry / Angle Ratios and Polygons** questions when angles are given as a ratio with a known sum, or when a regular polygon’s interior and exterior angles are involved.
+
 ### Method C · Identify the hypotenuse before using Pythagoras
 
 The longest side lies opposite the right angle. At a tangent that side is the distance from the external point to the centre. Solve for the missing leg by subtracting squares.
+
+**When to use it.** Use this in **Plane Geometry / Right Triangles and Tangents** questions when a missing length lies in a right triangle, including the one formed by a radius and a tangent.
 
 ## Question models and worked examples
 

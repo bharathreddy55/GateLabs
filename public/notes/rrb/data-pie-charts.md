@@ -11,13 +11,19 @@
 
 For angle θ, write θ/360. Multiply by the overall count to get the sector count. To find angle from a count, take count/whole and multiply by 360°.
 
+**When to use it.** Use this in **Pie Charts / Sector Counts and Angles** questions when the total is known and you need to convert between a sector’s angle, percentage or count.
+
 ### Method B · Recover a missing total
 
 Calculate the known sector’s fraction p. Its count is p times the total, so divide the sector count by p. Check by multiplying the new total by p again.
 
+**When to use it.** Use this in **Pie Charts / Recovering the Whole** questions when a sector’s count and angle or percentage are given but the total is missing.
+
 ### Method C · Align denominators on comparisons
 
 Convert every sector to its own count if asked “how many more.” If only proportions are requested, degrees can be compared directly because both use 360°.
+
+**When to use it.** Use this in **Pie Charts / Comparing Different Totals** questions when two charts describe different groups or years and the prompt asks for a difference in counts or shares.
 
 ## Question models and worked examples
 

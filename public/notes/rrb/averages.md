@@ -11,13 +11,19 @@
 
 Multiply each group’s mean by its headcount. Add those totals and divide by combined headcount. If two groups are the same size, their two means can be averaged directly.
 
+**When to use it.** Use this in **Averages / Combined or Corrected Mean** questions when you are given group sizes and means, or when a member is added, removed or replaced.
+
 ### Method B · Balance around the target
 
 A member in a group averaging 52 is 8 below target 60 on average. One in a group averaging 66 is 6 above. Matching total shortage and excess solves for an unknown group size.
 
+**When to use it.** Use this in **Averages / Target Mean** questions when two group means lie on opposite sides of a given overall mean and you need their size ratio or an unknown headcount.
+
 ### Method C · Choose the right denominator
 
 With equal distances at positive speeds u and v, use 2uv/(u+v). With equal times, use (u+v)/2. With stops or unequal distances, rebuild each travel time and use the general rule.
+
+**When to use it.** Use this in **Averages / Average Speed** questions when a journey gives different speeds and the prompt specifies equal distances, equal times or stop durations.
 
 ## Question models and worked examples
 

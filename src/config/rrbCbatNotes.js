@@ -1,6 +1,10 @@
 export const CBAT_NOTES = {
   intelligence:{
     skill:'Figure comparison, rotation, and spotting the odd shape.',
+    methodUse:{
+      type:'Figure Comparison / Rotation and Reflection',
+      when:'when several grid figures look alike and you must find the one that cannot match by turning or sliding'
+    },
     basics:[
       ["Cell and edge","A filled cell is one square. Edge-neighbours share a side. A diagonal touch leaves those cells disconnected in an edge comparison."],
       ["Translation","A slide adds the same row and column offsets to every cell. Relative offsets stay unchanged."],
@@ -67,6 +71,10 @@ export const CBAT_NOTES = {
   },
   attention:{
     skill:'Filtering distractors and adding only the digits the prompt specifies.',
+    methodUse:{
+      type:'Selective Attention / Digit Filtering',
+      when:'when a long row contains both target digits and distractors and the instructions ask you to add or count only the targets'
+    },
     basics:[
       ["Target and distractor","The instruction defines the qualifying entries. In an odd-digit row, 7 is a target and 8 is a distractor. A new instruction can reverse which digits apply."],
       ["Count and sum","A count adds one per match. A sum adds each match’s printed value. The same row can give different results."],
@@ -132,6 +140,10 @@ export const CBAT_NOTES = {
   },
   spatial:{
     skill:'Following connected routes, respecting barriers, and finding the marked building on the shortest route.',
+    methodUse:{
+      type:'Spatial Scanning / Shortest Routes',
+      when:'when a street map gives more than one way to reach the finish and you must identify a numbered building on the shortest valid route'
+    },
     basics:[
       ["Junction and segment","A junction is a point you can visit. A segment is an open connection between two consecutive points on the route."],
       ["Obstacle","A closure removes an edge from the usable network. A visually close junction is reachable only if the map actually links it."],
@@ -198,6 +210,10 @@ export const CBAT_NOTES = {
   },
   ordering:{
     skill:'Applying a set of instructions about sequence, fixed positions, and adjacency.',
+    methodUse:{
+      type:'Information Ordering / Sequence Constraints',
+      when:'when several possible orders are offered and clues specify fixed positions, immediate neighbours or gaps between tasks'
+    },
     basics:[
       ["Position","Write one numbered slot per instruction or item. “Last” anchors an item at the highest slot number."],
       ["Precedence","“X before Y” means X has a smaller slot number. There may be any number of items between them."],
@@ -263,6 +279,10 @@ export const CBAT_NOTES = {
   },
   personality:{
     skill:'Becoming familiar with self-report prompts and their response options.',
+    methodUse:{
+      type:'Personality / Self-report Prompts',
+      when:'when a prompt asks which response best describes your usual preferences or behaviour'
+    },
     basics:[
       ["Self-report item","A self-report prompt asks you to describe your own preference or behaviour from the options supplied."],
       ["Condition","A phrase such as “when a plan changes” limits which experiences are relevant. Read that part before thinking of examples."],

@@ -11,13 +11,19 @@
 
 An angled pull contributes its component along the path. Draw friction opposite sliding and assign the sign directly. Sum individual works to get net work.
 
+**When to use it.** Use this in **Work, Power and Energy / Work by Several Forces** questions when motion involves an angled push or pull, friction or multiple forces whose work must be added.
+
 ### Method B · Use the change in kinetic energy
 
 If mass and speeds are supplied, compare the kinetic energy before and after. This gives net work even if the separate forces are unknown. Constant speed means zero change in kinetic energy.
 
+**When to use it.** Use this in **Work, Power and Energy / Work–Energy Theorem** questions when mass and initial and final speeds are given and the question asks for the net work.
+
 ### Method C · Separate input and output
 
 For a motor lifting steadily, useful work is mgh. Divide by time for useful output power. Divide that output by efficiency as a decimal to recover the larger input.
+
+**When to use it.** Use this in **Work, Power and Energy / Motor Efficiency** questions when a machine lifts a load or does other useful work and you must find input power, output power or efficiency.
 
 ## Question models and worked examples
 

@@ -11,13 +11,19 @@
 
 Identify direction, then whether the form is linear or curved, then how tightly the points follow it. Look for an unusual point before treating the overall slope as representative.
 
+**When to use it.** Use this in **Scatter Plots / Trend, Strength and Outliers** questions when asked to describe the overall association or spot a point that departs from the pattern.
+
 ### Method B · Separate estimate from observation
 
 For a fitted-line estimate, use two points on the fitted line to find its slope. For a residual, compare the predicted value and the actual observation at exactly the same x.
 
+**When to use it.** Use this in **Scatter Plots / Predictions and Residuals** questions when a fitted line is shown and you need an estimated value or the difference between observed and predicted values.
+
 ### Method C · Test claims with a rival explanation
 
 When asked whether a pattern establishes causation, think of a plausible variable that could influence both measurements. Confounding explains why the plotted association alone cannot decide the causal direction.
+
+**When to use it.** Use this in **Scatter Plots / Association and Causation** questions when a question asks whether a plotted relationship shows that one variable causes the other.
 
 ## Question models and worked examples
 

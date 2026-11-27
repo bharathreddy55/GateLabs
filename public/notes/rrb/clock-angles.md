@@ -11,13 +11,19 @@
 
 At 8:20 the hour hand is 10° past 8. Find both absolute positions before subtracting, then use the smaller arc. Using 30H alone leaves out the motion during the hour.
 
+**When to use it.** Use this in **Clocks / Angle at a Given Time** questions when an exact time such as 8:20 is given and you need the angle between the hands.
+
 ### Method B · Solve a signed gap
 
 During a fixed hour, hour angle minus minute angle is 30H − 5.5m. Coincidence corresponds to 0 modulo 360°. A right angle can occur at signed gaps ±90° or equivalent values modulo 360°, such as ±270°.
 
+**When to use it.** Use this in **Clocks / Finding a Time from an Angle** questions when the required condition is overlap, a right angle or another gap and the time is the unknown.
+
 ### Method C · Check the target hour and turn minutes into seconds
 
 Keep solutions in the requested interval, usually 0 ≤ m < 60. Use the question’s wording for exact endpoints. Multiply the fractional part of a minute by 60 to report seconds.
+
+**When to use it.** Use this in **Clocks / Valid Times within One Hour** questions when an angle equation gives several times or a fractional minute and the answer must fall within a stated hour.
 
 ## Question models and worked examples
 

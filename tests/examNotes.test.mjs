@@ -58,7 +58,18 @@ function checkHandnote(body, id) {
   const [concept, methods, exampleSection, recap, tips] = body.split(/^## .+\n\n/gm).slice(1);
   const models = exampleSection.split(/^### .+\n\n/gm).slice(1);
   assert.ok((concept.match(/^- /gm) || []).length >= 4, id);
-  assert.ok((methods.match(/^### /gm) || []).length >= 3, id);
+  const methodBlocks = methods.trim().split(/\n\n(?=### )/);
+  assert.ok(methodBlocks.length >= 3, id);
+  const cues = new Set();
+  for (const method of methodBlocks) {
+    const [heading, ...paragraphs] = method.split('\n\n');
+    const cue = paragraphs.pop();
+    assert.match(heading, /^### .+$/, id);
+    assert.ok(paragraphs.length && paragraphs.every(paragraph => !paragraph.includes('**When to use it.**')), id);
+    assert.match(cue, /^\*\*When to use it\.\*\* Use this in \*\*[^*]+\*\* questions when .+\.$/, heading);
+    assert.ok(!cues.has(cue), heading);
+    cues.add(cue);
+  }
   assert.ok(recap.trim().split('\n').length >= 6, id);
   assert.match(recap, /^\| When you see \| Use this rule \|\n\| --- \| --- \|$/m, id);
   assert.ok((tips.match(/^- /gm) || []).length >= 3, id);
@@ -135,6 +146,7 @@ test('all CBAT batteries have detailed lessons and brief recall cards', () => {
     assert.ok(note.basics.length >= 4 && note.review.length >= 4 && note.drill, id);
     assert.ok(note.details.every(paragraph => paragraph.split(/\s+/).length >= 45), id);
     assert.ok(note.rules.length >= 3 && note.method.length >= 3, id);
+    assert.ok(note.methodUse.type && note.methodUse.when.startsWith('when '), id);
     assert.ok(note.exampleTitle && note.prompt && note.examplePicture && note.solution, id);
     assert.ok(note.models.length >= 2, id);
     for (const steps of [note.exampleSteps, ...note.models.map(model => model.steps)]) {

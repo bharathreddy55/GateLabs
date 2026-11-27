@@ -11,13 +11,19 @@
 
 For 3 or 9, use the digit sum because 10 leaves remainder 1 under both divisors. For 4, use the last two digits because 100 is divisible by 4. For 8, use the last three. For 11, test whether the alternate digit sums differ by a multiple of 11, including zero.
 
+**When to use it.** Use this in **Number Systems / Divisibility and Missing Digits** questions when the question gives a divisor such as 4, 8, 9 or 11 and asks which number or missing digit makes the whole number divisible.
+
 ### Method B · Factor first when counting divisors
 
 Write the number as a product of prime powers. Each exponent is an independent choice from 0 through that prime’s maximum. For even divisors require the exponent on 2 to be positive. For perfect-square divisors, every chosen exponent must be even.
 
+**When to use it.** Use this in **Number Systems / Counting Divisors** questions when asked how many divisors a number has, especially with a restriction such as even divisors or perfect-square divisors.
+
 ### Method C · Use a cycle or a reduced denominator
 
 For the units digit of a power, multiply by the base repeatedly and keep the final digit. Reduce the exponent by the cycle length. For a decimal, reduce the fraction first. A terminating expansion is possible exactly when the reduced denominator divides some power of 10, which means only powers of 2 and 5 occur.
+
+**When to use it.** Use this in **Number Systems / Units Digits and Terminating Decimals** questions when a large power’s last digit is asked for, or a fraction must be classified as terminating or recurring.
 
 ## Question models and worked examples
 

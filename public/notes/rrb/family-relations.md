@@ -11,13 +11,19 @@
 
 Replace “my” with the speaker’s name. Follow the chain one relationship at a time. If the speaker is male and his mother has only one son, that son is the speaker.
 
+**When to use it.** Use this in **Family Relations / Pointing and Introductions** questions when a person describes someone with a phrase such as “the daughter of my mother’s only son”.
+
 ### Method B · Decode relation pairs separately
 
 For P × Q + R, write one sentence for P × Q and a second for Q + R. Join the two facts at Q, then read from the viewpoint requested. These operators encode relationships, not arithmetic.
 
+**When to use it.** Use this in **Family Relations / Coded Relationships** questions when symbols such as + and × stand for family links and the problem asks how two names are related.
+
 ### Method C · Track gender and branch separately
 
 “A brother of U” tells you the named brother’s gender. U remains unspecified. If the parent branch is known but the sibling’s gender is unknown, give both aunt and uncle options when appropriate.
+
+**When to use it.** Use this in **Family Relations / Missing Gender or Family Branch** questions when you can infer the generation or side of the family but the clues may leave the exact relation open.
 
 ## Question models and worked examples
 

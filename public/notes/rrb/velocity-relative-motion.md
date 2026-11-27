@@ -11,13 +11,19 @@
 
 Write east or right as positive and the opposite as negative. Add signed segments to get displacement. For distance, add their absolute lengths.
 
+**When to use it.** Use this in **Velocity and Motion / Distance and Displacement** questions when successive moves go in opposite directions and you need the final position, displacement or total distance.
+
 ### Method B · Subtract the observer’s velocity
 
 In “B relative to A,” take vB − vA. Check by imagining A stationary after subtracting vA from both objects. This also works for objects travelling in opposite directions.
 
+**When to use it.** Use this in **Relative Velocity / Moving Observers** questions when asked for one object’s motion as seen by another moving person or vehicle.
+
 ### Method C · Use a velocity–time graph or constant acceleration
 
 A graph’s signed area gives displacement. Sum magnitudes for distance when the sign switches. At constant acceleration, the mean of initial and final velocities gives signed displacement when multiplied by time.
+
+**When to use it.** Use this in **Velocity and Motion / Graphs and Constant Acceleration** questions when a velocity–time graph or constant acceleration is given and you need distance or displacement over a time interval.
 
 ## Question models and worked examples
 

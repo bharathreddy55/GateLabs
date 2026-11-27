@@ -11,13 +11,19 @@
 
 Name present ages before translating the past or future. Subtract or add years to each person’s age. Apply expressions such as twice to the whole relevant age.
 
+**When to use it.** Use this in **Linear Equations / Age Problems** questions when a statement compares ages now, a few years ago or several years from now.
+
 ### Method B · Use the total to remove one variable
 
 If x of 54 tickets are expensive, the cheaper count is 54−x. Multiply each count by its price and use revenue to solve. Alternatively, compare actual revenue to the cost of pricing every ticket at the cheaper rate.
 
+**When to use it.** Use this in **Linear Equations / Tickets and Prices** questions when the number of items and total bill are known but the split between two prices is unknown.
+
 ### Method C · Clear fractions and check the equality
 
 Multiply the entire equation by the smallest common denominator. Distribute before bringing like terms together. Substitute into the original to catch a sign or omitted term.
+
+**When to use it.** Use this in **Linear Equations / Fractional Coefficients** questions when the unknown appears in terms with different denominators.
 
 ## Question models and worked examples
 

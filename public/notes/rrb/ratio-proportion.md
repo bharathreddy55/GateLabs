@@ -11,13 +11,19 @@
 
 In linked ratios align the shared quantity before stitching the ratios together. For 3:4 and 6:5, make the shared value 12 by scaling the first pair by 3 and the second by 2.
 
+**When to use it.** Use this in **Ratio and Proportion / Linked Ratios** questions when two ratios share a middle quantity, such as A:B and B:C, and you need A:B:C.
+
 ### Method B · Turn shares into an equation
 
 Write stocks in a:b as ak and bk. If a transfer moves x from first to second, subtract x from one and add it to the other. Their total stays fixed and the gap changes by 2x.
 
+**When to use it.** Use this in **Ratio and Proportion / Transfers** questions when two shares start in a given ratio and moving an amount between them creates a new ratio or difference.
+
 ### Method C · Use a per-unit rate or weighted share
 
 For variable workers and time, compute output per worker per day, then scale to the requested staffing and output. In a mixture, compute solute in each input and combine, using mass weights for mass concentration.
+
+**When to use it.** Use this in **Ratio and Proportion / Work Output and Mixtures** questions when workforce and days change together, or when mixing quantities with different concentrations.
 
 ## Question models and worked examples
 

@@ -11,13 +11,19 @@
 
 A train clears a point once its rear reaches that point, so it travels its full length. To clear a platform, the front travels train length plus platform length. Two trains passing each other have to clear both lengths.
 
+**When to use it.** Use this in **Time, Speed and Distance / Train Crossings** questions when a train must completely pass a pole, platform, bridge or another train.
+
 ### Method B · Start the catch-up clock when both are moving
 
 Calculate the lead before the second vehicle starts. Divide this gap by the closing speed. Add that time to the later departure. If the follower is no faster, the gap does not close under constant speeds.
 
+**When to use it.** Use this in **Time, Speed and Distance / Catch-up Problems** questions when two travellers move in the same direction and one gets a head start before the other leaves.
+
 ### Method C · Build a timeline for average speed
 
 For each segment compute time = distance ÷ speed. Convert minutes to hours or vice versa before adding. Divide the total distance by the sum of all times, including specified stops.
+
+**When to use it.** Use this in **Time, Speed and Distance / Average Speed** questions when the question asks for the speed over a complete trip with several legs, different speeds or specified stops.
 
 ## Question models and worked examples
 
