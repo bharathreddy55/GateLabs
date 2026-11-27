@@ -455,8 +455,62 @@ try{
  await page.locator('#prep-group2-mains-2').waitFor();
  await page.goto('http://127.0.0.1:3011/#/analytics');await page.locator('#analytics-exam-filter').waitFor();
  await page.locator('#analytics-exam-filter').selectOption('group2');
- await page.locator('#analytics-exam-filter').waitFor();
- assert.equal(await page.locator('#analytics-exam-filter').inputValue(),'group2');
+ const savedAttempts=await page.evaluate(async()=>{
+  const {getAttemptRecords}=await import('/src/utils/attemptRepository.js');
+  return (await getAttemptRecords()).attempts;
+ });
+ const retakes=savedAttempts.filter(a=>a.examId==='group2'&&a.scope===groupPaper.title&&a.mode==='full');
+ assert.equal(retakes.length,2);
+ assert.notEqual(retakes[0].score,retakes[1].score);
+ for(const [index,attempt] of retakes.entries()){
+  const link=page.locator(`.attempt-card[data-attempt-id="${attempt.id}"] .attempt-report-link`);
+  await link.waitFor();
+  if(index===0) await link.press('Enter');
+  else await link.click();
+  await insights.getByRole('heading',{name:'Result breakdown',exact:true}).waitFor();
+  assert.equal(await page.evaluate(()=>new URLSearchParams(location.hash.split('?')[1]).get('attempt')),attempt.id);
+  assert.equal(await page.locator('.exam-summary-title').first().textContent(),attempt.scope);
+  assert.equal(await page.locator('.exam-summary-metrics dd').first().textContent(),`${attempt.score.toFixed(2)} / ${attempt.totalPossibleMarks}`);
+  assert.equal(await page.locator('#exam-root time').getAttribute('datetime'),attempt.timestamp);
+  assert.equal(await page.locator('.review-palette [data-review-marked]').count(),attempt.responses.filter(q=>q.markedForReview).length);
+  if(index===0) await page.getByRole('link',{name:'Back to attempt history'}).click();
+  else await page.goBack();
+  await page.locator('#analytics-exam-filter').waitFor();
+  assert.equal(await page.locator('#analytics-exam-filter').inputValue(),'group2');
+ }
+ await page.locator('#analytics-exam-filter').selectOption('rrb');
+ const stationReport=savedAttempts.find(a=>a.examId==='rrb'&&a.scope.endsWith('Practice model 3'));
+ const stationHistoryRow=page.locator(`.attempt-card[data-attempt-id="${stationReport.id}"]`);
+ const stationLink=stationHistoryRow.locator('.attempt-report-link');
+ const stationSummary=stationHistoryRow.getByText('0 correct · 3 wrong · 97 skipped');
+ await stationSummary.scrollIntoViewIfNeeded();
+ const stationSummaryBox=await stationSummary.boundingBox();
+ await page.mouse.click(stationSummaryBox.x+10,stationSummaryBox.y+stationSummaryBox.height/2);
+ await review.getByRole('heading',{name:'Answer review',exact:true}).waitFor();
+ assert.match(await page.locator('#exam-root').innerText(),/0 correct · 3 wrong · 97 unanswered/);
+ await page.reload();
+ await insights.getByRole('heading',{name:'Result breakdown',exact:true}).waitFor();
+ assert.equal(await page.locator('.exam-summary-title').first().innerText(),stationReport.scope);
+ assert.ok(await page.getByRole('link',{name:'Back to attempt history'}).isVisible());
+ await page.goto('http://127.0.0.1:3011/#/mock-test?attempt=missing-result');
+ await page.getByRole('heading',{name:'Result unavailable',exact:true}).waitFor();
+ await page.getByRole('link',{name:'Back to attempt history'}).click();
+ await stationLink.click();
+ await review.getByRole('heading',{name:'Answer review',exact:true}).waitFor();
+ await page.evaluate(()=>{
+  const key='gate_attempts:exam-test-user',rows=JSON.parse(localStorage.getItem(key));
+  rows.push({id:'legacy & result+1',userId:'exam-test-user',scope:'Older saved mock',mode:'Full-Length',
+    timestamp:'2025-04-19T05:30:00.000Z',timeSpentSeconds:2400,score:7,totalPossibleMarks:10,
+    accuracy:80,correctCount:8,wrongCount:2,skippedCount:0,negativeMarks:1});
+  localStorage.setItem(key,JSON.stringify(rows));
+ });
+ await page.getByRole('link',{name:'Back to attempt history'}).click();
+ const legacyLink=page.getByRole('link',{name:/View report for Older saved mock/});
+ assert.equal(await legacyLink.getAttribute('href'),'#/analytics?id=legacy%20%26%20result%2B1');
+ await legacyLink.click();
+ const legacyHeading=page.getByRole('heading',{name:'Older saved mock — Analysis',exact:true});
+ await legacyHeading.waitFor();
+ assert.ok(await legacyHeading.evaluate(el=>document.activeElement===el));
  await page.goto('http://127.0.0.1:3011/#/analytics?id='+encodeURIComponent(result.id));
  await page.getByRole('link',{name:'Open result charts',exact:true}).click();
  await insights.getByRole('heading',{name:'Result breakdown',exact:true}).waitFor();

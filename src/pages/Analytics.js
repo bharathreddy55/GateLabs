@@ -8,6 +8,10 @@ import { db, SUBJECT_SYLLABUS } from '../config/firebase';
 import { showToast } from '../utils/toast';
 import { Chart } from 'chart.js/auto';
 
+function hasFullReport(attempt) {
+  return Object.hasOwn(EXAMS, attempt.examId) && Array.isArray(attempt.responses) && attempt.responses.length > 0;
+}
+
 export const Analytics = {
   cleanup(){this.pieChart?.destroy();this.pieChart=null;},
   // State
@@ -23,14 +27,13 @@ export const Analytics = {
     const queryParams = new URLSearchParams(urlHash.split('?')[1] || '');
     const urlAttemptId = queryParams.get('id');
 
-    if (!urlAttemptId) { this.viewMode='list';this.activeAttemptId=null; }
-    if (urlAttemptId) {
-      this.viewMode = 'detail';
-      this.activeAttemptId = urlAttemptId;
-    }
+    const changedAttempt = this.activeAttemptId !== urlAttemptId;
+    if (changedAttempt) this.activeReviewFilter = 'all';
+    this.viewMode = urlAttemptId ? 'detail' : 'list';
+    this.activeAttemptId = urlAttemptId;
 
     if (this.viewMode === 'detail' && this.activeAttemptId) {
-      return this.renderAttemptDetail(this.activeAttemptId);
+      return this.renderAttemptDetail(this.activeAttemptId, changedAttempt);
     }
     return this.renderAttemptList();
   },
@@ -39,7 +42,7 @@ export const Analytics = {
   // ATTEMPT LIST VIEW
   // ─────────────────────────────────────────────────────────────
   async renderAttemptList() {
-    const allAttempts = (await getAttemptRecords()).attempts.map(safeAttempt);
+    const allAttempts = (await getAttemptRecords()).attempts;
     const attempts = this.examFilter ? allAttempts.filter(a=>a.examId===this.examFilter || (this.examFilter==='legacy'&&!a.examId)) : allAttempts;
 
     if (attempts.length === 0) {
@@ -75,7 +78,7 @@ export const Analytics = {
     attempts.forEach(a => (a.mistakes || []).forEach(m => {
       subjectMistakeCounts[m.subject] = (subjectMistakeCounts[m.subject] || 0) + 1;
     }));
-    const weakestSubject = Object.keys(subjectMistakeCounts).sort((a, b) => subjectMistakeCounts[b] - subjectMistakeCounts[a])[0];
+    const weakestSubject = escapeHtml(Object.keys(subjectMistakeCounts).sort((a, b) => subjectMistakeCounts[b] - subjectMistakeCounts[a])[0]);
 
     return `
       <div class="flex flex-col gap-8">
@@ -117,7 +120,10 @@ export const Analytics = {
             <i class="fa-solid fa-history mr-2 text-primary-500"></i>Attempt History
           </h4>
           <div class="flex flex-col gap-3" id="attempts-list-container">
-            ${attempts.map((att, i) => {
+            ${attempts.map((record, i) => {
+              const att = safeAttempt(record);
+              const id = encodeURIComponent(record.id);
+              const href = hasFullReport(record) ? '#/mock-test?attempt=' + id + '&amp;from=history' : '#/analytics?id=' + id;
               const date = new Date(att.timestamp);
               const dateStr = date.toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' });
               const timeStr = date.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit' });
@@ -129,9 +135,10 @@ export const Analytics = {
               const mistakeCount = att.mistakes?.length || 0;
               
               return `
-              <div class="glass-panel rounded-2xl overflow-hidden border border-slate-200/60 dark:border-slate-800/60 hover:border-primary-500/40 transition-all duration-200 hover:shadow-lg hover:shadow-primary-500/5 group cursor-pointer attempt-card"
+              <div class="glass-panel rounded-2xl overflow-hidden border border-slate-200/60 dark:border-slate-800/60 hover:border-primary-500/40 transition-all duration-200 hover:shadow-lg hover:shadow-primary-500/5 group attempt-card"
                    data-attempt-id="${att.id}">
-                <div class="flex items-center gap-4 p-5">
+                <a href="${href}" class="attempt-report-link flex items-center gap-4 p-5"
+                   aria-label="View report for ${att.scope || 'Mock Test'} on ${dateStr} at ${timeStr}">
                   
                   <!-- Attempt number badge -->
                   <div class="flex-shrink-0 h-11 w-11 rounded-xl bg-gradient-to-br from-primary-500 to-indigo-600 flex items-center justify-center text-white font-display font-extrabold text-sm shadow-md shadow-primary-500/20">
@@ -177,7 +184,7 @@ export const Analytics = {
                     <!-- Arrow icon -->
                     <i class="fa-solid fa-chevron-right text-slate-300 dark:text-slate-600 group-hover:text-primary-500 group-hover:translate-x-1 transition-all"></i>
                   </div>
-                </div>
+                </a>
 
                 <!-- Progress bar -->
                 <div class="h-1 bg-slate-100 dark:bg-slate-800">
@@ -190,7 +197,7 @@ export const Analytics = {
                     ${att.correctCount} correct · ${att.wrongCount} wrong · ${att.skippedCount} skipped
                   </span>
                   <button class="delete-attempt-btn flex items-center gap-1.5 text-[11px] font-bold text-rose-400 hover:text-rose-600 dark:text-rose-500 dark:hover:text-rose-400 transition-colors px-2 py-1 rounded-lg hover:bg-rose-50 dark:hover:bg-rose-950/20"
-                          data-attempt-id="${att.id}" onclick="event.stopPropagation()">
+                          type="button" data-attempt-id="${att.id}">
                     <i class="fa-solid fa-trash-can"></i> Delete
                   </button>
                 </div>
@@ -206,7 +213,7 @@ export const Analytics = {
   // ─────────────────────────────────────────────────────────────
   // ATTEMPT DETAIL VIEW
   // ─────────────────────────────────────────────────────────────
-  async renderAttemptDetail(attemptId) {
+  async renderAttemptDetail(attemptId, focusReport) {
     const attempts = (await getAttemptRecords()).attempts;
     const found = attempts.find(a => a.id === attemptId);
     const att = found ? safeAttempt(found) : null;
@@ -215,7 +222,7 @@ export const Analytics = {
       return `
         <div class="glass-panel p-8 rounded-2xl text-center">
           <i class="fa-solid fa-triangle-exclamation text-rose-500 text-3xl mb-4"></i>
-          <h4 class="font-display font-bold text-lg text-slate-800 dark:text-white">Attempt Not Found</h4>
+          <h4 tabindex="-1" ${focusReport ? 'data-focus-attempt-report' : ''} class="font-display font-bold text-lg text-slate-800 dark:text-white">Attempt Not Found</h4>
           <p class="text-xs text-slate-400 mt-1">We couldn't retrieve this mock test attempt.</p>
           <button id="btn-back-to-list" class="inline-flex mt-4 px-4 py-2 bg-primary-600 text-white rounded-lg text-xs font-semibold">
             ← Back to Attempts
@@ -230,7 +237,7 @@ export const Analytics = {
     const minutes = Math.floor(att.timeSpentSeconds / 60);
     const seconds = att.timeSpentSeconds % 60;
     const accuracy = att.accuracy || 0;
-    const hasResultCharts = Object.hasOwn(EXAMS, found.examId) && Array.isArray(found.responses) && found.responses.length > 0;
+    const hasResultCharts = hasFullReport(found);
 
     // Subject breakdown from mistakes
     const subjectBreakdown = {};
@@ -249,7 +256,7 @@ export const Analytics = {
               <i class="fa-solid fa-arrow-left"></i>
             </button>
             <div>
-              <h3 class="font-display font-bold text-xl text-slate-900 dark:text-white">${att.scope || 'Mock Test'} — Analysis</h3>
+              <h3 tabindex="-1" ${focusReport ? 'data-focus-attempt-report' : ''} class="font-display font-bold text-xl text-slate-900 dark:text-white">${att.scope || 'Mock Test'} — Analysis</h3>
               <p class="text-xs text-slate-400 mt-0.5">${dateStr} · ${timeStr}</p>
             </div>
           </div>
@@ -532,6 +539,7 @@ export const Analytics = {
 
   init() {
     const host=document.getElementById('sub-page-container');
+    host?.querySelector('[data-focus-attempt-report]')?.focus();
     if(this.viewMode==='list' && host && !document.getElementById('analytics-exam-filter')){
       const panel=document.createElement('div');panel.className='exam-hub exam-card';
       panel.innerHTML='<label>Exam <select id="analytics-exam-filter"><option value="">All exams</option>'+Object.values(EXAMS).map(e=>'<option value="'+e.id+'">'+e.name+'</option>').join('')+'<option value="legacy">Legacy / unclassified</option></select></label><button id="import-legacy-attempts">Recover older device history</button>';
@@ -580,16 +588,6 @@ export const Analytics = {
       }
     });
 
-    // Attempt cards — click to open detail
-    document.querySelectorAll('.attempt-card').forEach(card => {
-      card.addEventListener('click', () => {
-        const id = card.getAttribute('data-attempt-id');
-        this.viewMode = 'detail';
-        this.activeAttemptId = id;
-        this.refresh();
-      });
-    });
-
     // Delete buttons on list view
     document.querySelectorAll('.delete-attempt-btn').forEach(btn => {
       btn.addEventListener('click', async (e) => {
@@ -619,10 +617,11 @@ export const Analytics = {
     // Render Subject Pie Chart
     const canvas = document.getElementById('attemptPieChart');
     if (canvas && this.viewMode === 'detail' && this.activeAttemptId) {
+      const id = this.activeAttemptId;
       (async () => {
         const attempts = (await getAttemptRecords()).attempts;
-        const att = attempts.find(a => a.id === this.activeAttemptId);
-        if (!att) return;
+        const att = attempts.find(a => a.id === id);
+        if (!att || !canvas.isConnected) return;
 
         const subjectSummary = {};
         const responses = att.responses || [];
@@ -717,10 +716,12 @@ export const Analytics = {
 
   async refresh() {
     const mainNode = document.getElementById('sub-page-container');
-    if (mainNode) {
-      mainNode.innerHTML = await this.render();
-      this.init();
-    }
+    const hash = location.hash;
+    if (!mainNode) return;
+    const html = await this.render();
+    if (!mainNode.isConnected || location.hash !== hash) return;
+    mainNode.innerHTML = html;
+    this.init();
   },
 
   generateFocusAdvice(att) {

@@ -25,7 +25,7 @@ export const MockTest = {
   startExam({examId, questions, title, full=true, minutes, paperKey}) {
     const errors=validatePaper(examId,questions,full);
     if(errors.length) { showToast(errors.slice(0,3).join(' · '),'error'); return false; }
-    this.stop(); this.result=null;this.resultError=null;this.saveMessage=null;
+    this.stop(); this.result=null;this.saveMessage=null;
     const duration=full?EXAMS[examId].minutes:(minutes??EXAMS[examId].minutes);
     if(!Number.isFinite(duration)||duration<=0){showToast('Invalid test duration','error');return false;}
     this.pending={examId,questions,title,full,minutes:duration,ruleVersion:EXAMS[examId].version,ownerId:auth.currentUser?.uid,paperKey};
@@ -37,8 +37,7 @@ export const MockTest = {
   reviewId(){return new URLSearchParams(location.hash.split('?')[1]||'').get('attempt');},
   render() {
     const requested=this.reviewId();
-    if(requested&&this.result?.id!==requested&&!this.resultError)return '<section id="exam-root" class="workspace-loading" role="status">Loading your result…</section>';
-    if(this.resultError)return '<section id="exam-root" class="exam-hub"><h1>Result unavailable</h1><p>Your result may not be saved on this device or account. Check your connection and attempt history.</p><a href="#/analytics">Open attempt history</a></section>';
+    if(requested&&this.result?.id!==requested)return '<section id="exam-root" class="workspace-loading" data-load-attempt role="status">Loading your result…</section>';
     if(this.result) return this.renderResult();
     if(!this.isTesting) return this.renderBriefing();
     return this.renderCbt();
@@ -77,11 +76,14 @@ export const MockTest = {
   renderResult() {
     const result = this.result;
     const returnRoute=EXAMS[result.examId]?.route||EXAM_CATALOG.find(exam=>exam.id===result.examId)?.route||'exams';
+    const fromHistory=new URLSearchParams(location.hash.split('?')[1]).get('from')==='history';
+    const attemptedAt=Date.parse(result.timestamp);
     return `<section id="exam-root" class="exam-hub exam-results">
       <header class="exam-summary-header">
         <p class="eyebrow">${result.mode==='full'?'Full mock':'Section practice'} · ${Math.floor((result.timeSpentSeconds||0)/60)} min ${(result.timeSpentSeconds||0)%60} sec</p>
-        <h1>Exam complete</h1>
+        <h1 tabindex="-1">Exam complete</h1>
         <p class="exam-summary-title">${h(result.scope)}</p>
+        ${fromHistory && Number.isFinite(attemptedAt) ? `<time class="exam-summary-title" datetime="${new Date(attemptedAt).toISOString()}">${h(new Date(attemptedAt).toLocaleString('en-IN',{dateStyle:'medium',timeStyle:'short'}))}</time>` : ''}
         <dl class="exam-summary-metrics">
           <div><dt>Score</dt><dd>${result.score.toFixed(2)} <small>/ ${result.totalPossibleMarks}</small></dd></div>
           <div><dt>Attempted accuracy</dt><dd>${result.accuracy.toFixed(1)}%</dd></div>
@@ -93,6 +95,7 @@ export const MockTest = {
         <p id="result-save-status" role="status">${h(this.saveMessage||'Saved on this device.')}</p>
         <div class="button-row">
           <button id="open-answer-review" class="ui-button" type="button">Review answers</button>
+          ${fromHistory ? '<a href="#/analytics">Back to attempt history</a>' : ''}
           <a href="#/${returnRoute}">Return to preparation</a>
           <button id="retry-save">Retry cloud sync</button>
           <button id="export-result">Export result</button>
@@ -213,12 +216,19 @@ export const MockTest = {
     return this.visited[q.id] ? 'unanswered' : 'unvisited';
   },
   async init() {
-    const requested=this.reviewId();
-    if(requested&&this.result?.id!==requested){
-      if(this.restoringReview)return;this.restoringReview=true;
-      this.saveMessage=null;
-      try{const {attempts}=await getAttemptRecords();this.result=attempts.find(a=>a.id===requested&&Array.isArray(a.responses));this.ownerId=auth.currentUser?.uid;this.pending=null;if(!this.result)this.resultError=true;}catch{this.resultError=true;}
-      finally{this.restoringReview=false;this.refresh();}return;
+    const loader=document.querySelector('#exam-root[data-load-attempt]');
+    if(loader){
+      const requested=this.reviewId(), hash=location.hash, uid=auth.currentUser?.uid;
+      const {attempts}=await getAttemptRecords().catch(()=>({attempts:[]}));
+      if(!loader.isConnected || location.hash!==hash || auth.currentUser?.uid!==uid) return;
+      const result=attempts.find(a=>a.id===requested&&Array.isArray(a.responses)&&a.responses.length>0);
+      if(!result){
+        loader.outerHTML='<section id="exam-root" class="exam-hub"><h1>Result unavailable</h1><p>This attempt could not be loaded from your device or account.</p><a href="#/analytics">Back to attempt history</a></section>';
+        return;
+      }
+      this.result=result;this.ownerId=uid;this.pending=null;this.saveMessage=null;
+      this.refresh();
+      return;
     }
     document.getElementById('begin-exam')?.addEventListener('click',()=>this.begin());
     document.querySelectorAll('[data-answer]').forEach(el=>el.addEventListener('change',()=>{
@@ -265,6 +275,9 @@ export const MockTest = {
       const refreshInsights=()=>mountAttemptInsights(insightsRoot,this.result,openReview);
       const openReview=this.initAnswerReview(reviewRoot,refreshInsights);
       refreshInsights();
+      if (document.querySelector('#exam-root a[href="#/analytics"]')) {
+        document.querySelector('#exam-root h1').focus({preventScroll:true});
+      }
     }
     bind('open-answer-review',()=>{
       reviewRoot.querySelector('h2').focus({preventScroll:true});

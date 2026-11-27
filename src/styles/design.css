@@ -272,6 +272,11 @@
 .landing-exams article p { line-height: 1.5; }
 .landing-workspace > .workspace-footer { margin: auto; max-width: 1240px; }
 
+.attempt-card { position: relative; }
+.attempt-report-link::after { content: ''; position: absolute; inset: 0; z-index: 1; }
+.attempt-report-link:focus-visible { outline-offset: -4px; }
+.attempt-card .delete-attempt-btn { position: relative; z-index: 2; }
+
 @media (max-width: 1280px) {
   .landing-intro { margin-inline: 24px; }
 }
